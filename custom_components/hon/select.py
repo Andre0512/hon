@@ -1,0 +1,95 @@
+"""Support for Tuya select."""
+from __future__ import annotations
+
+from pyhon import HonConnection
+from pyhon.device import HonDevice
+from pyhon.parameter import HonParameterFixed
+
+from config.custom_components.hon import HonCoordinator
+from config.custom_components.hon.hon import HonEntity
+from homeassistant.components.select import SelectEntity, SelectEntityDescription
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.core import callback
+from homeassistant.helpers.entity import EntityCategory
+
+DOMAIN = "hon"
+
+SELECTS = {
+    "WM": (
+        SelectEntityDescription(
+            key="spinSpeed",
+            name="Spin speed",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:numeric"
+        ),
+        SelectEntityDescription(
+            key="temp",
+            name="Temperature",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:thermometer"
+        ),
+        SelectEntityDescription(
+            key="program",
+            name="Programme",
+            entity_category=EntityCategory.CONFIG
+        ),
+    )
+}
+
+
+async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
+    hon: HonConnection = hass.data[DOMAIN][entry.unique_id]
+    coordinators = hass.data[DOMAIN]["coordinators"]
+    appliances = []
+    for device in hon.devices:
+        if device.mac_address in coordinators:
+            coordinator = hass.data[DOMAIN]["coordinators"][device.mac_address]
+        else:
+            coordinator = HonCoordinator(hass, device)
+            hass.data[DOMAIN]["coordinators"][device.mac_address] = coordinator
+        await coordinator.async_config_entry_first_refresh()
+
+        if descriptions := SELECTS.get(device.appliance_type_name):
+            for description in descriptions:
+                appliances.extend([
+                    HonSelectEntity(hass, coordinator, entry, device, description)]
+                )
+
+    async_add_entities(appliances)
+
+
+class HonSelectEntity(HonEntity, SelectEntity):
+    def __init__(self, hass, coordinator, entry, device: HonDevice, description) -> None:
+        super().__init__(hass, entry, coordinator, device)
+
+        self._coordinator = coordinator
+        self._device = device
+        self._data = device.settings[description.key]
+        self.entity_description = description
+        self._attr_unique_id = f"{super().unique_id}{description.key}"
+
+        if not isinstance(self._data, HonParameterFixed):
+            self._attr_options: list[str] = self._data.values
+        else:
+            self._attr_options = [self._data.value]
+
+    @property
+    def current_option(self) -> str | None:
+        value = self._data.value
+        if value is None or value not in self._attr_options:
+            return None
+        return value
+
+    async def async_select_option(self, option: str) -> None:
+        self._data.value = option
+        await self.coordinator.async_request_refresh()
+
+    @callback
+    def _handle_coordinator_update(self):
+        self._data = self._device.settings[self.entity_description.key]
+        if not isinstance(self._data, HonParameterFixed):
+            self._attr_options: list[str] = self._data.values
+        else:
+            self._attr_options = [self._data.value]
+        self._attr_native_value = self._data.value
+        self.async_write_ha_state()

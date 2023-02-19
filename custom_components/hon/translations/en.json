@@ -1,0 +1,14 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "hOn",
+                "description": "Please enters your hOn credentials",
+                "data": {
+                    "email": "Email Address",
+                    "password": "Password"
+                }
+            }
+        }
+    }
+}
