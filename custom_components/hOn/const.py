@@ -3,5 +3,6 @@ DOMAIN = "hon"
 PLATFORMS = [
     "sensor",
     "select",
-    "number"
+    "number",
+    "button"
 ]

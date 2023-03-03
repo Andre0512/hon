@@ -9,11 +9,13 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
 )
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import UnitOfEnergy, UnitOfVolume, UnitOfMass
 from homeassistant.core import callback
+from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.typing import StateType
-from custom_components import HonCoordinator
+
 from .const import DOMAIN
-from custom_components.hon import HonEntity
+from .hon import HonCoordinator, HonEntity
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -24,12 +26,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Total Power",
             device_class=SensorDeviceClass.ENERGY,
             state_class=SensorStateClass.TOTAL_INCREASING,
+            native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR
         ),
         SensorEntityDescription(
             key="totalWaterUsed",
             name="Total Water",
             device_class=SensorDeviceClass.WATER,
             state_class=SensorStateClass.TOTAL_INCREASING,
+            native_unit_of_measurement=UnitOfVolume.LITERS
         ),
         SensorEntityDescription(
             key="totalWashCycle",
@@ -48,6 +52,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Current Water Used",
             state_class=SensorStateClass.MEASUREMENT,
             icon="mdi:water"
+        ),
+        SensorEntityDescription(
+            key="startProgram.weight",
+            name="Weight",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfMass.KILOGRAMS,
+            icon="mdi:weight-kilogram"
         ),
     )
 }
@@ -85,9 +97,9 @@ class HonSensorEntity(HonEntity, SensorEntity):
 
     @property
     def native_value(self) -> StateType:
-        return self._device.attributes.get(self.entity_description.key, "")
+        return self._device.data.get(self.entity_description.key, "")
 
     @callback
     def _handle_coordinator_update(self):
-        self._attr_native_value = self._device.attributes.get(self.entity_description.key, "")
+        self._attr_native_value = self._device.data.get(self.entity_description.key, "")
         self.async_write_ha_state()

@@ -5,31 +5,34 @@ from pyhon import HonConnection
 from pyhon.device import HonDevice
 from pyhon.parameter import HonParameterFixed
 
-from config.custom_components.hon import HonCoordinator
-from config.custom_components.hon.hon import HonEntity
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import UnitOfTemperature, REVOLUTIONS_PER_MINUTE
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
+
+from .hon import HonEntity, HonCoordinator
 
 DOMAIN = "hon"
 
 SELECTS = {
     "WM": (
         SelectEntityDescription(
-            key="spinSpeed",
+            key="startProgram.spinSpeed",
             name="Spin speed",
             entity_category=EntityCategory.CONFIG,
-            icon="mdi:numeric"
+            icon="mdi:numeric",
+            unit_of_measurement=REVOLUTIONS_PER_MINUTE
         ),
         SelectEntityDescription(
-            key="temp",
+            key="startProgram.temp",
             name="Temperature",
             entity_category=EntityCategory.CONFIG,
-            icon="mdi:thermometer"
+            icon="mdi:thermometer",
+            unit_of_measurement=UnitOfTemperature.CELSIUS
         ),
         SelectEntityDescription(
-            key="program",
+            key="startProgram.program",
             name="Programme",
             entity_category=EntityCategory.CONFIG
         ),

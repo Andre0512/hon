@@ -1,8 +1,15 @@
+import logging
+from datetime import timedelta
+
 from pyhon.device import HonDevice
 
-from .const import DOMAIN
 from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
+from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
+
+from .const import DOMAIN
+
+_LOGGER = logging.getLogger(__name__)
 
 
 class HonEntity(CoordinatorEntity):
@@ -19,7 +26,6 @@ class HonEntity(CoordinatorEntity):
 
     @property
     def device_info(self):
-        """Return a device description for device registry."""
         return DeviceInfo(
             identifiers={(DOMAIN, self._device.mac_address)},
             manufacturer=self._device.brand,
@@ -27,3 +33,13 @@ class HonEntity(CoordinatorEntity):
             model=self._device.model_name,
             sw_version=self._device.fw_version,
         )
+
+
+class HonCoordinator(DataUpdateCoordinator):
+    def __init__(self, hass, device: HonDevice):
+        """Initialize my coordinator."""
+        super().__init__(hass, _LOGGER, name=device.mac_address, update_interval=timedelta(seconds=30))
+        self._device = device
+
+    async def _async_update_data(self):
+        await self._device.update()

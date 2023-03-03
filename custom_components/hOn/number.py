@@ -8,39 +8,43 @@ from homeassistant.components.number import (
     NumberEntityDescription,
 )
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import UnitOfTime
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
-from custom_components import DOMAIN, HonCoordinator
-from custom_components.hon import HonEntity
+
+from .const import DOMAIN
+from .hon import HonEntity, HonCoordinator
 
 NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
     "WM": (
         NumberEntityDescription(
-            key="delayStatus",
-            name="delayStatus",
+            key="startProgram.delayStatus",
+            name="Delay Status",
             entity_category=EntityCategory.CONFIG
         ),
         NumberEntityDescription(
-            key="delayTime",
-            name="delayTime",
+            key="startProgram.delayTime",
+            name="Delay Time",
             icon="mdi:timer",
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfTime.MINUTES
+        ),
+        NumberEntityDescription(
+            key="startProgram.haier_SoakPrewashSelection",
+            name="Soak Prewash Selection",
             entity_category=EntityCategory.CONFIG
         ),
         NumberEntityDescription(
-            key="haier_SoakPrewashSelection",
-            name="haier_SoakPrewashSelection",
+            key="startProgram.rinseIterations",
+            name="Rinse Iterations",
             entity_category=EntityCategory.CONFIG
         ),
         NumberEntityDescription(
-            key="rinseIterations",
-            name="rinseIterations",
-            entity_category=EntityCategory.CONFIG
-        ),
-        NumberEntityDescription(
-            key="mainWashTime",
-            name="mainWashTime",
+            key="startProgram.mainWashTime",
+            name="Main Wash Time",
             icon="mdi:timer",
-            entity_category=EntityCategory.CONFIG
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfTime.MINUTES
         ),
     ),
 }
