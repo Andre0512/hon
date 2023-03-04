@@ -38,3 +38,12 @@ async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry):
         hass.async_create_task(
             hass.config_entries.async_forward_entry_setup(entry, platform)
         )
+    return True
+
+
+async def async_unload_entry(hass, entry: ConfigEntry) -> bool:
+    unload = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
+    if unload:
+        if not hass.data[DOMAIN]:
+            hass.data.pop(DOMAIN, None)
+    return unload

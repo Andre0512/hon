@@ -18,21 +18,11 @@ from .hon import HonEntity, HonCoordinator
 NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
     "WM": (
         NumberEntityDescription(
-            key="startProgram.delayStatus",
-            name="Delay Status",
-            entity_category=EntityCategory.CONFIG
-        ),
-        NumberEntityDescription(
             key="startProgram.delayTime",
             name="Delay Time",
             icon="mdi:timer",
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES
-        ),
-        NumberEntityDescription(
-            key="startProgram.haier_SoakPrewashSelection",
-            name="Soak Prewash Selection",
-            entity_category=EntityCategory.CONFIG
         ),
         NumberEntityDescription(
             key="startProgram.rinseIterations",

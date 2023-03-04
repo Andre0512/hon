@@ -9,7 +9,7 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import UnitOfEnergy, UnitOfVolume, UnitOfMass
+from homeassistant.const import UnitOfEnergy, UnitOfVolume, UnitOfMass, UnitOfPower
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.typing import StateType
@@ -45,6 +45,8 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="currentElectricityUsed",
             name="Current Electricity Used",
             state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.POWER,
+            native_unit_of_measurement=UnitOfPower.KILO_WATT,
             icon="mdi:lightning-bolt"
         ),
         SensorEntityDescription(
@@ -60,6 +62,16 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfMass.KILOGRAMS,
             icon="mdi:weight-kilogram"
+        ),
+        SensorEntityDescription(
+            key="machMode",
+            name="Mode",
+            translation_key="mode"
+        ),
+        SensorEntityDescription(
+            key="errors",
+            name="Last Error",
+            translation_key="errors"
         ),
     )
 }

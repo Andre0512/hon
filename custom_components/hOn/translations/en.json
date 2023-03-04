@@ -1,14 +1,32 @@
 {
-    "config": {
-        "step": {
-            "user": {
-                "title": "hOn",
-                "description": "Please enters your hOn credentials",
-                "data": {
-                    "email": "Email Address",
-                    "password": "Password"
-                }
-            }
+  "config": {
+    "step": {
+      "user": {
+        "title": "hOn",
+        "description": "Please enters your hOn credentials",
+        "data": {
+          "email": "Email Address",
+          "password": "Password"
         }
+      }
     }
+  },
+  "entity": {
+    "sensor": {
+      "mode": {
+        "state": {
+          "1": "Ready",
+          "2": "Running",
+          "5": "Scheduled",
+          "6": "Error",
+          "7": "Finished"
+        }
+      },
+      "errors": {
+        "00": "No error",
+        "100000000000": "E2: Check if the door is closed",
+        "8000000000000": "E4: Check the water supply"
+      }
+    }
+  }
 }
