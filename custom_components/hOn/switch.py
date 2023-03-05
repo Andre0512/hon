@@ -63,9 +63,10 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := SWITCHES.get(device.appliance_type_name):
             for description in descriptions:
-                appliances.extend([
-                    HonSwitchEntity(hass, coordinator, entry, device, description)]
-                )
+                if device.data.get(description.key) is not None or device.commands.get(description.key) is not None:
+                    appliances.extend([
+                        HonSwitchEntity(hass, coordinator, entry, device, description)]
+                    )
 
     async_add_entities(appliances)
 
@@ -84,7 +85,6 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         if self.entity_category == EntityCategory.CONFIG:
             return self._device.settings[self.entity_description.key].typology == "fixed"
         return True
-
 
     @property
     def is_on(self) -> bool | None:

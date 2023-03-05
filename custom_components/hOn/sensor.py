@@ -57,7 +57,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         ),
         SensorEntityDescription(
             key="startProgram.weight",
-            name="Weight",
+            name="Suggested weight",
             state_class=SensorStateClass.MEASUREMENT,
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfMass.KILOGRAMS,
@@ -65,14 +65,17 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         ),
         SensorEntityDescription(
             key="machMode",
-            name="Mode",
+            name="Machine Last Status",
+            icon="mdi:information",
             translation_key="mode"
         ),
         SensorEntityDescription(
             key="errors",
             name="Last Error",
+            icon="mdi:math-log",
             translation_key="errors"
         ),
+
     )
 }
 
@@ -91,6 +94,8 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := SENSORS.get(device.appliance_type_name):
             for description in descriptions:
+                if not device.data.get(description.key):
+                    continue
                 appliances.extend([
                     HonSensorEntity(hass, coordinator, entry, device, description)]
                 )

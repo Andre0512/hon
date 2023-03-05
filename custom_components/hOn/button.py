@@ -10,16 +10,6 @@ from .hon import HonCoordinator, HonEntity
 BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
     "WM": (
         ButtonEntityDescription(
-            key="startProgram",
-            name="Start Program",
-            icon="mdi:play",
-        ),
-        ButtonEntityDescription(
-            key="stopProgram",
-            name="Stop Program",
-            icon="mdi:stop",
-        ),
-        ButtonEntityDescription(
             key="pauseProgram",
             name="Pause Program",
             icon="mdi:pause",
@@ -47,6 +37,8 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := BUTTONS.get(device.appliance_type_name):
             for description in descriptions:
+                if not device.commands.get(description.key):
+                    continue
                 appliances.extend([
                     HonButtonEntity(hass, coordinator, entry, device, description)]
                 )

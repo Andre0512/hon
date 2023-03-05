@@ -23,9 +23,11 @@
         }
       },
       "errors": {
-        "00": "No error",
-        "100000000000": "E2: Check if the door is closed",
-        "8000000000000": "E4: Check the water supply"
+        "state": {
+          "00": "No error",
+          "100000000000": "E2: Check if the door is closed",
+          "8000000000000": "E4: Check the water supply"
+        }
       }
     }
   }

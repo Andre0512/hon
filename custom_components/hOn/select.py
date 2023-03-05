@@ -54,10 +54,11 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := SELECTS.get(device.appliance_type_name):
             for description in descriptions:
+                if not device.data.get(description.key):
+                    continue
                 appliances.extend([
                     HonSelectEntity(hass, coordinator, entry, device, description)]
                 )
-
     async_add_entities(appliances)
 
 
