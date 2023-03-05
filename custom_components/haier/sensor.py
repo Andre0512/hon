@@ -9,7 +9,7 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import UnitOfEnergy, UnitOfVolume, UnitOfMass, UnitOfPower
+from homeassistant.const import UnitOfEnergy, UnitOfVolume, UnitOfMass, UnitOfPower, UnitOfTime
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.typing import StateType
@@ -75,7 +75,20 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:math-log",
             translation_key="errors"
         ),
-
+        SensorEntityDescription(
+            key="remainingTimeMM",
+            name="Remaining Time",
+            icon="mdi:timer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        SensorEntityDescription(
+            key="spinSpeed",
+            name="Spin Speed",
+            icon="mdi:timer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
     )
 }
 
