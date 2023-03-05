@@ -1,0 +1,10 @@
+{
+  "domain": "haier",
+  "name": "Haier hOn",
+  "codeowners": ["@Andre0512"],
+  "config_flow": true,
+  "documentation": "https://github.com/Andre0512/haier/",
+  "iot_class": "cloud_polling",
+  "requirements": ["pyhOn==0.2.4"],
+  "version": "0.1.1"
+}

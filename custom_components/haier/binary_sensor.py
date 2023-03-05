@@ -35,7 +35,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="doorLockStatus",
             name="Door Locked",
             device_class=BinarySensorDeviceClass.DOOR,
-            on_value="1",
+            on_value="0",
         ),
     )
 }

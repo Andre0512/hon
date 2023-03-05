@@ -1,10 +1,11 @@
-# hOn
+# Haier hOn
 Home Assistant component supporting hOn cloud.
 
 ## Installation
-1. Installing via HACS
+#### Installing via HACS
+1. You need to have installed [HACS](https://hacs.xyz/)
 2. Go to HACS->Integrations
-3. Add this repo into your HACS custom repositories
+3. Add this repo (`https://github.com/Andre0512/haier.git`) into your HACS custom repositories
 4. Search for Haier hOn and Download it
 5. Restart your HomeAssistant
 6. Go to Settings->Devices & Services

@@ -1,4 +1,3 @@
-"""Support for Tuya select."""
 from __future__ import annotations
 
 from pyhon import HonConnection
@@ -11,9 +10,8 @@ from homeassistant.const import UnitOfTemperature, REVOLUTIONS_PER_MINUTE
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 
+from .const import DOMAIN
 from .hon import HonEntity, HonCoordinator
-
-DOMAIN = "hon"
 
 SELECTS = {
     "WM": (

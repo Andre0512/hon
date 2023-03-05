@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "hOn",
+        "title": "Haier hOn",
         "description": "Please enters your hOn credentials",
         "data": {
           "email": "Email Address",
@@ -15,8 +15,10 @@
     "sensor": {
       "mode": {
         "state": {
+          "0": "Disconnected",
           "1": "Ready",
           "2": "Running",
+          "3": "Paused",
           "5": "Scheduled",
           "6": "Error",
           "7": "Finished"

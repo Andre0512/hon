@@ -1,13 +1,11 @@
-from collections.abc import Callable, Coroutine
 from dataclasses import dataclass
 from typing import Any
-
-from pyhon import HonConnection
-from pyhon.device import HonDevice
 
 from homeassistant.components.switch import SwitchEntityDescription, SwitchEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory
+from pyhon import HonConnection
+from pyhon.device import HonDevice
 
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity

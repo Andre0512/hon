@@ -1,4 +1,4 @@
-DOMAIN = "hon"
+DOMAIN = "haier"
 
 PLATFORMS = [
     "sensor",
