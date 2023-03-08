@@ -20,19 +20,20 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
         NumberEntityDescription(
             key="startProgram.delayTime",
             name="Delay Time",
-            icon="mdi:timer",
+            icon="mdi:timer-plus",
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES
         ),
         NumberEntityDescription(
             key="startProgram.rinseIterations",
             name="Rinse Iterations",
+            icon="mdi:rotate-right",
             entity_category=EntityCategory.CONFIG
         ),
         NumberEntityDescription(
             key="startProgram.mainWashTime",
             name="Main Wash Time",
-            icon="mdi:timer",
+            icon="mdi:clock-start",
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES
         ),
@@ -52,7 +53,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             hass.data[DOMAIN]["coordinators"][device.mac_address] = coordinator
         await coordinator.async_config_entry_first_refresh()
 
-        if descriptions := NUMBERS.get(device.appliance_type_name):
+        if descriptions := NUMBERS.get(device.appliance_type):
             for description in descriptions:
                 appliances.extend([
                     HonNumberEntity(hass, coordinator, entry, device, description)]
@@ -66,6 +67,7 @@ class HonNumberEntity(HonEntity, NumberEntity):
         super().__init__(hass, entry, coordinator, device)
 
         self._coordinator = coordinator
+        self._device = device
         self._data = device.settings[description.key]
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"
@@ -77,18 +79,18 @@ class HonNumberEntity(HonEntity, NumberEntity):
 
     @property
     def native_value(self) -> float | None:
-        return self._data.value
+        return self._device.get(self.entity_description.key)
 
     async def async_set_native_value(self, value: float) -> None:
-        self._data.value = value
+        self._device.settings[self.entity_description.key].value = value
         await self.coordinator.async_request_refresh()
 
     @callback
     def _handle_coordinator_update(self):
-        self._data = self._device.settings[self.entity_description.key]
-        if isinstance(self._data, HonParameterRange):
-            self._attr_native_max_value = self._data.max
-            self._attr_native_min_value = self._data.min
-            self._attr_native_step = self._data.step
-        self._attr_native_value = self._data.value
+        setting = self._device.settings[self.entity_description.key]
+        if isinstance(setting, HonParameterRange):
+            self._attr_native_max_value = setting.max
+            self._attr_native_min_value = setting.min
+            self._attr_native_step = setting.step
+        self._attr_native_value = setting.value
         self.async_write_ha_state()

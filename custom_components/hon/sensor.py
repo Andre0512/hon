@@ -65,13 +65,13 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         ),
         SensorEntityDescription(
             key="machMode",
-            name="Machine Last Status",
+            name="Machine Status",
             icon="mdi:information",
             translation_key="mode"
         ),
         SensorEntityDescription(
             key="errors",
-            name="Last Error",
+            name="Error",
             icon="mdi:math-log",
             translation_key="errors"
         ),
@@ -105,9 +105,9 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             hass.data[DOMAIN]["coordinators"][device.mac_address] = coordinator
         await coordinator.async_config_entry_first_refresh()
 
-        if descriptions := SENSORS.get(device.appliance_type_name):
+        if descriptions := SENSORS.get(device.appliance_type):
             for description in descriptions:
-                if not device.data.get(description.key):
+                if not device.get(description.key):
                     continue
                 appliances.extend([
                     HonSensorEntity(hass, coordinator, entry, device, description)]
@@ -127,9 +127,9 @@ class HonSensorEntity(HonEntity, SensorEntity):
 
     @property
     def native_value(self) -> StateType:
-        return self._device.data.get(self.entity_description.key, "")
+        return self._device.get(self.entity_description.key, "")
 
     @callback
     def _handle_coordinator_update(self):
-        self._attr_native_value = self._device.data.get(self.entity_description.key, "")
+        self._attr_native_value = self._device.get(self.entity_description.key, "")
         self.async_write_ha_state()

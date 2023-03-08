@@ -28,10 +28,10 @@ class HonEntity(CoordinatorEntity):
     def device_info(self):
         return DeviceInfo(
             identifiers={(DOMAIN, self._device.mac_address)},
-            manufacturer=self._device.brand,
+            manufacturer=self._device.get("brand", ""),
             name=self._device.nick_name if self._device.nick_name else self._device.model_name,
             model=self._device.model_name,
-            sw_version=self._device.fw_version,
+            sw_version=self._device.get("fwVersion", ""),
         )
 
 

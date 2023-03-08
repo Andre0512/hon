@@ -50,9 +50,9 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             hass.data[DOMAIN]["coordinators"][device.mac_address] = coordinator
         await coordinator.async_config_entry_first_refresh()
 
-        if descriptions := SELECTS.get(device.appliance_type_name):
+        if descriptions := SELECTS.get(device.appliance_type):
             for description in descriptions:
-                if not device.data.get(description.key):
+                if not device.get(description.key):
                     continue
                 appliances.extend([
                     HonSelectEntity(hass, coordinator, entry, device, description)]
@@ -66,32 +66,31 @@ class HonSelectEntity(HonEntity, SelectEntity):
 
         self._coordinator = coordinator
         self._device = device
-        self._data = device.settings[description.key]
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"
 
-        if not isinstance(self._data, HonParameterFixed):
-            self._attr_options: list[str] = self._data.values
+        if not isinstance(self._device.settings[description.key], HonParameterFixed):
+            self._attr_options: list[str] = device.settings[description.key].values
         else:
-            self._attr_options = [self._data.value]
+            self._attr_options: list[str] = [device.settings[description.key].value]
 
     @property
     def current_option(self) -> str | None:
-        value = self._data.value
+        value = self._device.settings[self.entity_description.key].value
         if value is None or value not in self._attr_options:
             return None
         return value
 
     async def async_select_option(self, option: str) -> None:
-        self._data.value = option
+        self._device.settings[self.entity_description.key].value = option
         await self.coordinator.async_request_refresh()
 
     @callback
     def _handle_coordinator_update(self):
-        self._data = self._device.settings[self.entity_description.key]
-        if not isinstance(self._data, HonParameterFixed):
-            self._attr_options: list[str] = self._data.values
+        setting = self._device.settings[self.entity_description.key]
+        if not isinstance(self._device.settings[self.entity_description.key], HonParameterFixed):
+            self._attr_options: list[str] = setting.values
         else:
-            self._attr_options = [self._data.value]
-        self._attr_native_value = self._data.value
+            self._attr_options = [setting.value]
+        self._attr_native_value = setting.value
         self.async_write_ha_state()

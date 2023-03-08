@@ -26,14 +26,14 @@ class HonBinarySensorEntityDescription(HonBinarySensorEntityDescriptionMixin, Bi
 BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
     "WM": (
         HonBinarySensorEntityDescription(
-            key="lastConnEvent.category",
+            key="attributes.lastConnEvent.category",
             name="Connection",
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
         ),
         HonBinarySensorEntityDescription(
             key="doorLockStatus",
-            name="Door Locked",
+            name="Door",
             device_class=BinarySensorDeviceClass.DOOR,
             on_value="0",
         ),
@@ -53,9 +53,9 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             hass.data[DOMAIN]["coordinators"][device.mac_address] = coordinator
         await coordinator.async_config_entry_first_refresh()
 
-        if descriptions := BINARY_SENSORS.get(device.appliance_type_name):
+        if descriptions := BINARY_SENSORS.get(device.appliance_type):
             for description in descriptions:
-                if not device.data.get(description.key):
+                if not device.get(description.key):
                     _LOGGER.info("Can't setup %s", description.key)
                     continue
                 appliances.extend([
@@ -78,9 +78,9 @@ class HonBinarySensorEntity(HonEntity, BinarySensorEntity):
 
     @property
     def is_on(self) -> bool:
-        return self._device.data.get(self.entity_description.key, "") == self.entity_description.on_value
+        return self._device.get(self.entity_description.key, "") == self.entity_description.on_value
 
     @callback
     def _handle_coordinator_update(self):
-        self._attr_native_value = self._device.data.get(self.entity_description.key, "")
+        self._attr_native_value = self._device.get(self.entity_description.key, "") == self.entity_description.on_value
         self.async_write_ha_state()

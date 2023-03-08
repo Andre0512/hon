@@ -9,16 +9,16 @@ from .hon import HonCoordinator, HonEntity
 
 BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
     "WM": (
-        ButtonEntityDescription(
-            key="pauseProgram",
-            name="Pause Program",
-            icon="mdi:pause",
-        ),
-        ButtonEntityDescription(
-            key="resumeProgram",
-            name="Resume Program",
-            icon="mdi:play-pause",
-        ),
+        # ButtonEntityDescription(
+        #     key="pauseProgram",
+        #     name="Pause Program",
+        #     icon="mdi:pause",
+        # ),
+        # ButtonEntityDescription(
+        #     key="resumeProgram",
+        #     name="Resume Program",
+        #     icon="mdi:play-pause",
+        # ),
     ),
 }
 
@@ -35,7 +35,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             hass.data[DOMAIN]["coordinators"][device.mac_address] = coordinator
         await coordinator.async_config_entry_first_refresh()
 
-        if descriptions := BUTTONS.get(device.appliance_type_name):
+        if descriptions := BUTTONS.get(device.appliance_type):
             for description in descriptions:
                 if not device.commands.get(description.key):
                     continue

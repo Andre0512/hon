@@ -27,20 +27,29 @@ class HonSwitchEntityDescription(HonSwitchEntityDescriptionMixin,
 SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
     "WM": (
         HonSwitchEntityDescription(
-            key="startProgram",
-            name="Start Program",
-            icon="mdi:play",
+            key="active",
+            name="Washing Machine",
+            icon="mdi:washing-machine",
             turn_on_key="startProgram",
             turn_off_key="stopProgram",
         ),
         HonSwitchEntityDescription(
+            key="pause",
+            name="Pause Washing Machine",
+            icon="mdi:pause",
+            turn_on_key="pauseProgram",
+            turn_off_key="resumeProgram",
+        ),
+        HonSwitchEntityDescription(
             key="startProgram.delayStatus",
             name="Delay Status",
+            icon="mdi:timer-check",
             entity_category=EntityCategory.CONFIG
         ),
         HonSwitchEntityDescription(
             key="startProgram.haier_SoakPrewashSelection",
             name="Soak Prewash Selection",
+            icon="mdi:tshirt-crew",
             entity_category=EntityCategory.CONFIG
         ),
     ),
@@ -59,9 +68,9 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             hass.data[DOMAIN]["coordinators"][device.mac_address] = coordinator
         await coordinator.async_config_entry_first_refresh()
 
-        if descriptions := SWITCHES.get(device.appliance_type_name):
+        if descriptions := SWITCHES.get(device.appliance_type):
             for description in descriptions:
-                if device.data.get(description.key) is not None or device.commands.get(description.key) is not None:
+                if device.get(description.key) is not None or device.commands.get(description.key) is not None:
                     appliances.extend([
                         HonSwitchEntity(hass, coordinator, entry, device, description)]
                     )
@@ -81,7 +90,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
 
     def available(self) -> bool:
         if self.entity_category == EntityCategory.CONFIG:
-            return self._device.settings[self.entity_description.key].typology == "fixed"
+            return self._device.settings[self.entity_description.key].typology != "fixed"
         return True
 
     @property
@@ -90,7 +99,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         if self.entity_category == EntityCategory.CONFIG:
             setting = self._device.settings[self.entity_description.key]
             return setting.value == "1" or hasattr(setting, "min") and setting.value != setting.min
-        return self._device.data.get(self.entity_description.key, "")
+        return self._device.get(self.entity_description.key, False)
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         if self.entity_category == EntityCategory.CONFIG:
