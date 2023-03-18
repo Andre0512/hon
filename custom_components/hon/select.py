@@ -35,6 +35,28 @@ SELECTS = {
             entity_category=EntityCategory.CONFIG,
             translation_key="programs"
         ),
+    ),
+    "WD": (
+        SelectEntityDescription(
+            key="startProgram.spinSpeed",
+            name="Spin speed",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:numeric",
+            unit_of_measurement=REVOLUTIONS_PER_MINUTE
+        ),
+        SelectEntityDescription(
+            key="startProgram.temp",
+            name="Temperature",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:thermometer",
+            unit_of_measurement=UnitOfTemperature.CELSIUS
+        ),
+        SelectEntityDescription(
+            key="startProgram.program",
+            name="Program",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="programs"
+        ),
     )
 }
 

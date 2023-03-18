@@ -38,6 +38,28 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTime.MINUTES
         ),
     ),
+    "WD": (
+        NumberEntityDescription(
+            key="startProgram.delayTime",
+            name="Delay Time",
+            icon="mdi:timer-plus",
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfTime.MINUTES
+        ),
+        NumberEntityDescription(
+            key="startProgram.rinseIterations",
+            name="Rinse Iterations",
+            icon="mdi:rotate-right",
+            entity_category=EntityCategory.CONFIG
+        ),
+        NumberEntityDescription(
+            key="startProgram.mainWashTime",
+            name="Main Wash Time",
+            icon="mdi:clock-start",
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfTime.MINUTES
+        ),
+    ),
 }
 
 

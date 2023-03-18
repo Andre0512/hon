@@ -53,6 +53,34 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG
         ),
     ),
+    "WD": (
+        HonSwitchEntityDescription(
+            key="active",
+            name="Washing Machine",
+            icon="mdi:washing-machine",
+            turn_on_key="startProgram",
+            turn_off_key="stopProgram",
+        ),
+        HonSwitchEntityDescription(
+            key="pause",
+            name="Pause Washing Machine",
+            icon="mdi:pause",
+            turn_on_key="pauseProgram",
+            turn_off_key="resumeProgram",
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.delayStatus",
+            name="Delay Status",
+            icon="mdi:timer-check",
+            entity_category=EntityCategory.CONFIG
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.haier_SoakPrewashSelection",
+            name="Soak Prewash Selection",
+            icon="mdi:tshirt-crew",
+            entity_category=EntityCategory.CONFIG
+        ),
+    ),
 }
 
 

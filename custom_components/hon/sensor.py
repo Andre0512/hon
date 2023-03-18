@@ -9,7 +9,14 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import UnitOfEnergy, UnitOfVolume, UnitOfMass, UnitOfPower, UnitOfTime
+from homeassistant.const import (
+    REVOLUTIONS_PER_MINUTE,
+    UnitOfEnergy,
+    UnitOfVolume,
+    UnitOfMass,
+    UnitOfPower,
+    UnitOfTime
+)
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.typing import StateType
@@ -85,9 +92,79 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         SensorEntityDescription(
             key="spinSpeed",
             name="Spin Speed",
+            icon="mdi:fast-forward-outline",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=REVOLUTIONS_PER_MINUTE,
+        ),
+    ),
+    "WD": (
+        SensorEntityDescription(
+            key="totalElectricityUsed",
+            name="Total Power",
+            device_class=SensorDeviceClass.ENERGY,
+            state_class=SensorStateClass.TOTAL_INCREASING,
+            native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR
+        ),
+        SensorEntityDescription(
+            key="totalWaterUsed",
+            name="Total Water",
+            device_class=SensorDeviceClass.WATER,
+            state_class=SensorStateClass.TOTAL_INCREASING,
+            native_unit_of_measurement=UnitOfVolume.LITERS
+        ),
+        SensorEntityDescription(
+            key="totalWashCycle",
+            name="Total Wash Cycle",
+            state_class=SensorStateClass.TOTAL_INCREASING,
+            icon="mdi:counter"
+        ),
+        SensorEntityDescription(
+            key="currentElectricityUsed",
+            name="Current Electricity Used",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.POWER,
+            native_unit_of_measurement=UnitOfPower.KILO_WATT,
+            icon="mdi:lightning-bolt"
+        ),
+        SensorEntityDescription(
+            key="currentWaterUsed",
+            name="Current Water Used",
+            state_class=SensorStateClass.MEASUREMENT,
+            icon="mdi:water"
+        ),
+        SensorEntityDescription(
+            key="startProgram.weight",
+            name="Suggested weight",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfMass.KILOGRAMS,
+            icon="mdi:weight-kilogram"
+        ),
+        SensorEntityDescription(
+            key="machMode",
+            name="Machine Status",
+            icon="mdi:information",
+            translation_key="mode"
+        ),
+        SensorEntityDescription(
+            key="errors",
+            name="Error",
+            icon="mdi:math-log",
+            translation_key="errors"
+        ),
+        SensorEntityDescription(
+            key="remainingTimeMM",
+            name="Remaining Time",
             icon="mdi:timer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        SensorEntityDescription(
+            key="spinSpeed",
+            name="Spin Speed",
+            icon="mdi:fast-forward-outline",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=REVOLUTIONS_PER_MINUTE,
         ),
     )
 }
