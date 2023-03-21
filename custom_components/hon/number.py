@@ -65,7 +65,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             name="Anti-Crease time",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:timer",
-			native_unit_of_measurement=UnitOfTime.MINUTES
+            native_unit_of_measurement=UnitOfTime.MINUTES
         ),
         NumberEntityDescription(
             key="startProgram.sterilizationStatus",
