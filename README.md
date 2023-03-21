@@ -3,6 +3,10 @@
 
 Home Assistant component supporting devices of Haier's mobile app **hOn**.
 
+## Supported Appliances
+- Washing Machine
+- Tumble Dryer
+
 ## Installation
 #### Installing via HACS
 1. You need to have installed [HACS](https://hacs.xyz/)
@@ -61,14 +65,11 @@ Any kind of contribution is welcome!
 - If you want to have some states humanreadable, have a look at the `translation_key` parameter of the `EntityDescription`
 - If you need to implement some more logic, create a pull request to the underlying library. There we collect special requirements in the `appliances` directory.
 
-## Supported Appliances
-- Washing Machine
-
 ## Tested Devices
-- Haier WD90
+- Haier WD90-B14TEAM5
+- Haier HD80-A3959
 
 ## About this Repo
 The existing integrations missed some features from the app I liked to have in HomeAssistant.
 I tried to create a pull request, but in the structures of these existing repos, I find it hard to fit in my needs, so I basically rewrote everything. 
 I moved the api related stuff into the package [pyhOn](https://github.com/Andre0512/pyhOn).
-
