@@ -35,6 +35,14 @@ SELECTS = {
             entity_category=EntityCategory.CONFIG,
             translation_key="programs"
         ),
+    ),
+    "TD": (
+        SelectEntityDescription(
+            key="startProgram.program",
+            name="Program",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="programs"
+        ),
     )
 }
 
