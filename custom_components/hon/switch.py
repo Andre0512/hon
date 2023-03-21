@@ -53,6 +53,22 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG
         ),
     ),
+    "TD": (
+        HonSwitchEntityDescription(
+            key="active",
+            name="Tumble Dryer",
+            icon="mdi:tumble-dryer",
+            turn_on_key="startProgram",
+            turn_off_key="stopProgram",
+        ),
+        HonSwitchEntityDescription(
+            key="pause",
+            name="Pause Tumble Dryer",
+            icon="mdi:pause",
+            turn_on_key="pauseProgram",
+            turn_off_key="resumeProgram",
+        ),
+    ),
 }
 
 

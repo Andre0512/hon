@@ -89,6 +89,58 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
+    ),
+    "TD": (
+        SensorEntityDescription(
+            key="machMode",
+            name="Machine Status",
+            icon="mdi:information",
+            translation_key="mode"
+        ),
+        SensorEntityDescription(
+            key="errors",
+            name="Error",
+            icon="mdi:math-log",
+            translation_key="errors"
+        ),
+        SensorEntityDescription(
+            key="remainingTimeMM",
+            name="Remaining Time",
+            icon="mdi:timer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        SensorEntityDescription(
+            key="delayTime",
+            name="Start Time",
+            icon="mdi:clock-start",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        SensorEntityDescription(
+            key="prCode",
+            name="Program",
+            icon="mdi:tumble-dryer",
+            translation_key="tumbledryerprogram"
+        ),
+        SensorEntityDescription(
+            key="prPhase",
+            name="Program Phase",
+            icon="mdi:tumble-dryer",
+            translation_key="tumbledryerprogramphase"
+        ),
+        SensorEntityDescription(
+            key="dryLevel",
+            name="Dry level",
+            icon="mdi:hair-dryer",
+            translation_key="tumbledryerdrylevel"
+        ),
+        SensorEntityDescription(
+            key="tempLevel",
+            name="Temperature level",
+            icon="mdi:thermometer",
+            translation_key="tumbledryertemplevel"
+        ),
     )
 }
 
