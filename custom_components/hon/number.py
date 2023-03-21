@@ -38,6 +38,42 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTime.MINUTES
         ),
     ),
+    "TD": (
+        NumberEntityDescription(
+            key="startProgram.delayTime",
+            name="Delay time",
+            icon="mdi:timer-plus",
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfTime.MINUTES
+        ),
+        NumberEntityDescription(
+            key="startProgram.dryLevel",
+            name="Dry level",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:hair-dryer",
+            translation_key="tumbledryerdrylevel"
+        ),
+        NumberEntityDescription(
+            key="startProgram.tempLevel",
+            name="Temperature level",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:thermometer",
+            translation_key="tumbledryertemplevel"
+        ),
+        NumberEntityDescription(
+            key="startProgram.antiCreaseTime",
+            name="Anti-Crease time",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:timer",
+			native_unit_of_measurement=UnitOfTime.MINUTES
+        ),
+        NumberEntityDescription(
+            key="startProgram.sterilizationStatus",
+            name="Sterilization status",
+            icon="mdi:clock-start",
+            entity_category=EntityCategory.CONFIG
+        ),
+    ),
 }
 
 
