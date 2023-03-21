@@ -37,6 +37,20 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.DOOR,
             on_value="0",
         ),
+    ),
+    "TD": (
+        HonBinarySensorEntityDescription(
+            key="attributes.lastConnEvent.category",
+            name="Connection",
+            device_class=BinarySensorDeviceClass.CONNECTIVITY,
+            on_value="CONNECTED",
+        ),
+        HonBinarySensorEntityDescription(
+            key="doorStatus",
+            name="Door",
+            device_class=BinarySensorDeviceClass.DOOR,
+            on_value="1",
+        ),
     )
 }
 
