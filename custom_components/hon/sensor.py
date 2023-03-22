@@ -85,7 +85,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         SensorEntityDescription(
             key="spinSpeed",
             name="Spin Speed",
-            icon="mdi:timer",
+            icon="mdi:speedometer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
         ),

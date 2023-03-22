@@ -27,15 +27,22 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
     "WM": (
         HonBinarySensorEntityDescription(
             key="attributes.lastConnEvent.category",
-            name="Connection",
+            name="Remote Control",
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
+            icon="mdi:remote"
         ),
         HonBinarySensorEntityDescription(
             key="doorLockStatus",
+            name="Door Lock",
+            device_class=BinarySensorDeviceClass.LOCK,
+            on_value="0",
+        ),
+        HonBinarySensorEntityDescription(
+            key="doorStatus",
             name="Door",
             device_class=BinarySensorDeviceClass.DOOR,
-            on_value="0",
+            on_value="1",
         ),
     ),
     "TD": (
