@@ -6,7 +6,7 @@ from pyhon.parameter import HonParameterFixed
 
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import UnitOfTemperature, REVOLUTIONS_PER_MINUTE
+from homeassistant.const import UnitOfTemperature, UnitOfTime, REVOLUTIONS_PER_MINUTE
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 
@@ -42,6 +42,13 @@ SELECTS = {
             name="Program",
             entity_category=EntityCategory.CONFIG,
             translation_key="programs"
+        ),
+        SelectEntityDescription(
+            key="startProgram.dryTimeMM",
+            name="Time",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:timer",
+            unit_of_measurement=UnitOfTime.MINUTES
         ),
     )
 }
