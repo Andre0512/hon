@@ -1,24 +1,26 @@
 # Haier hOn
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration)
 
-Home Assistant component supporting devices of Haier's mobile app **hOn**.
-
+Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home appliances like washing machines.
 ## Supported Appliances
 - Washing Machine
 - Tumble Dryer
 
+
 ## Installation
-#### Installing via HACS
-1. You need to have installed [HACS](https://hacs.xyz/)
-2. Go to HACS->Integrations
-3. Add this repo (`https://github.com/Andre0512/hon.git`) into your HACS custom repositories
-4. Search for Haier hOn and Download it
-5. Restart your HomeAssistant
-6. Go to Settings->Devices & Services
-7. Shift reload your browser
-8. Click Add Integration
-9. Search for Haier hOn 
-10. Type your username used in the hOn App and hit submit
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
+
+**Method 1:** [HACS](https://hacs.xyz/) > Integrations > Add Integration > **Haier hOn** > Install  
+
+**Method 2.** Manually copy `hon` folder from [latest release](https://github.com/Andre0512/hon/releases/latest) to `/config/custom_components` folder.
+
+## Configuration
+
+[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=hon)
+
+Settings > Devices & Services > Add Integration > **Haier hOn**
+
+If the integration is not in the list, you need to clear the browser cache.
 
 ## Contribute
 Any kind of contribution is welcome!
