@@ -74,6 +74,15 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG
         ),
     ),
+    "WD": (
+        NumberEntityDescription(
+            key="startProgram.delayTime",
+            name="Delay Time",
+            icon="mdi:timer-plus",
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfTime.MINUTES
+        ),
+    ),
 }
 
 

@@ -1,3 +1,5 @@
+import logging
+
 from dataclasses import dataclass
 from typing import Any
 
@@ -10,6 +12,7 @@ from pyhon.device import HonDevice
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity
 
+_LOGGER = logging.getLogger(__name__)
 
 @dataclass
 class HonSwitchEntityDescriptionMixin:
@@ -69,6 +72,22 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             turn_off_key="resumeProgram",
         ),
     ),
+    "WD": (
+        HonSwitchEntityDescription(
+            key="active",
+            name="Washing Machine",
+            icon="mdi:washing-machine",
+            turn_on_key="startProgram",
+            turn_off_key="stopProgram",
+        ),
+        HonSwitchEntityDescription(
+            key="pause",
+            name="Pause Washing Machine",
+            icon="mdi:pause",
+            turn_on_key="pauseProgram",
+            turn_off_key="resumeProgram",
+        ),
+    ),
 }
 
 
@@ -90,6 +109,8 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
                     appliances.extend([
                         HonSwitchEntity(hass, coordinator, entry, device, description)]
                     )
+                else:
+                    _LOGGER.warning("[%s] Can't setup %s", device.appliance_type, description.key)
 
     async_add_entities(appliances)
 
