@@ -50,6 +50,20 @@ SELECTS = {
             icon="mdi:timer",
             unit_of_measurement=UnitOfTime.MINUTES
         ),
+    ),
+    "OV": (
+        SelectEntityDescription(
+            key="startProgram.program",
+            name="Program",
+            entity_category=EntityCategory.CONFIG,
+        ),
+
+        SelectEntityDescription(
+            key="startProgram.preheatStatus",
+            name="Preheat",
+            entity_category=EntityCategory.CONFIG
+        ),
+
     )
 }
 

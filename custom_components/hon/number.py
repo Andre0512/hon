@@ -8,7 +8,7 @@ from homeassistant.components.number import (
     NumberEntityDescription,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import UnitOfTime
+from homeassistant.const import UnitOfTime, UnitOfTemperature
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 
@@ -74,6 +74,31 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG
         ),
     ),
+
+    "OV": (
+        NumberEntityDescription(
+            key="startProgram.delayTime",
+            name="Delay time",
+            icon="mdi:timer-plus",
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfTime.MINUTES
+        ),
+        NumberEntityDescription(
+            key="startProgram.tempSel",
+            name="Target Temperature",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:thermometer",
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS
+        ),
+
+        NumberEntityDescription(
+            key="startProgram.prTime",
+            name="Program Duration",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:timelapse",
+            native_unit_of_measurement=UnitOfTime.MINUTES
+        ),
+    )
 }
 
 

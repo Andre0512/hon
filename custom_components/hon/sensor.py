@@ -141,7 +141,35 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:thermometer",
             translation_key="tumbledryertemplevel"
         ),
+    ),
+
+    "OV": (
+        SensorEntityDescription(
+            key="remainingTimeMM",
+            name="Remaining Time",
+            icon="mdi:timer",
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        SensorEntityDescription(
+            key="delayTime",
+            name="Start Time",
+            icon="mdi:clock-start",
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+
+        SensorEntityDescription(
+            key="temp",
+            name="Temperature",
+            icon="mdi:thermometer",
+        ),
+
+        SensorEntityDescription(
+            key="tempSel",
+            name="Temperature Selected",
+            icon="mdi:thermometer",
+        ),
     )
+
 }
 
 

@@ -58,6 +58,32 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.DOOR,
             on_value="1",
         ),
+    ),
+
+    "OV": (
+        HonBinarySensorEntityDescription(
+            key="attributes.lastConnEvent.category",
+            name="Online",
+            device_class=BinarySensorDeviceClass.CONNECTIVITY,
+            on_value="CONNECTED",
+            icon="mdi:wifi"
+        ),
+
+        HonBinarySensorEntityDescription(
+            key="attributes.parameters.remoteCtrValid",
+            name="On",
+            device_class=BinarySensorDeviceClass.CONNECTIVITY,
+            on_value="1",
+            icon="mdi:remote"
+        ),
+        HonBinarySensorEntityDescription(
+            key="attributes.parameters.onOffStatus",
+            name="On",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value="1",
+            icon="mdi:power-cycle"
+        ),
+
     )
 }
 
