@@ -1,27 +1,13 @@
-from pyhon import HonConnection
-from pyhon.device import HonDevice
-
 from homeassistant.components.button import ButtonEntityDescription, ButtonEntity
 from homeassistant.config_entries import ConfigEntry
+from pyhon import HonConnection
+from pyhon.device import HonDevice
 
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity
 
 BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
-    "WM": (
-        # ButtonEntityDescription(
-        #     key="pauseProgram",
-        #     name="Pause Program",
-        #     icon="mdi:pause",
-        # ),
-        # ButtonEntityDescription(
-        #     key="resumeProgram",
-        #     name="Resume Program",
-        #     icon="mdi:play-pause",
-        # ),
-    ),
-
-    "OV":(
+    "OV": (
         ButtonEntityDescription(
             key="startProgram",
             name="Start Program",

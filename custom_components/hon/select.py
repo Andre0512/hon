@@ -92,8 +92,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := SELECTS.get(device.appliance_type):
             for description in descriptions:
-                if not device.get(description.key):
-                    _LOGGER.warning("[%s] Can't setup %s", device.appliance_type, description.key)
+                if not device.settings.get(description.key):
                     continue
                 appliances.extend([
                     HonSelectEntity(hass, coordinator, entry, device, description)]

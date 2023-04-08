@@ -14,6 +14,7 @@ from .hon import HonCoordinator, HonEntity
 
 _LOGGER = logging.getLogger(__name__)
 
+
 @dataclass
 class HonSwitchEntityDescriptionMixin:
     turn_on_key: str = ""
@@ -22,8 +23,8 @@ class HonSwitchEntityDescriptionMixin:
 
 @dataclass
 class HonSwitchEntityDescription(HonSwitchEntityDescriptionMixin,
-    SwitchEntityDescription
-):
+                                 SwitchEntityDescription
+                                 ):
     pass
 
 
@@ -153,5 +154,3 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
             self.async_write_ha_state()
         else:
             await self._device.commands[self.entity_description.turn_off_key].send()
-
-

@@ -1,26 +1,27 @@
 # Haier hOn
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration)
-
+[![GitHub manifest version (path)](https://img.shields.io/github/manifest-json/v/andre0512/hon?color=g&filename=custom_components%2Fhon%2Fmanifest.json)](https://github.com/Andre0512/hon/releases/latest)
+[![Home Assistant installs](https://img.shields.io/badge/dynamic/json?color=41BDF5&label=usage&suffix=%20installs&cacheSeconds=15600&url=https://analytics.home-assistant.io/custom_integrations.json&query=$.hon.total)](https://analytics.home-assistant.io/)  
 Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home appliances like washing machines.
 ## Supported Appliances
-- Washing Machine
 - Tumble Dryer
-
+- Washer Dryer
+- Washing Machine
+- Oven
 
 ## Installation
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
+**Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
 
-**Method 1:** [HACS](https://hacs.xyz/) > Integrations > Add Integration > **Haier hOn** > Install  
+**Method 2:** [HACS](https://hacs.xyz/) > Integrations > Add Integration > **Haier hOn** > Install  
 
-**Method 2.** Manually copy `hon` folder from [latest release](https://github.com/Andre0512/hon/releases/latest) to `/config/custom_components` folder.
+**Method 3:** Manually copy `hon` folder from [latest release](https://github.com/Andre0512/hon/releases/latest) to `config/custom_components` folder.
 
 ## Configuration
 
-[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=hon)
+**Method 1**: [![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=hon)
 
-Settings > Devices & Services > Add Integration > **Haier hOn**
-
-If the integration is not in the list, you need to clear the browser cache.
+**Method 2**: Settings > Devices & Services > Add Integration > **Haier hOn**  
+_If the integration is not in the list, you need to clear the browser cache._
 
 ## Contribute
 Any kind of contribution is welcome!
@@ -70,6 +71,8 @@ Any kind of contribution is welcome!
 ## Tested Devices
 - Haier WD90-B14TEAM5
 - Haier HD80-A3959
+- Haier HWO60SM2F3XH
+- Hoover H-WASH 500
 
 ## About this Repo
 The existing integrations missed some features from the app I liked to have in HomeAssistant.
