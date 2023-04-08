@@ -59,7 +59,43 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             on_value="1",
         ),
     ),
-
+    "WD": (
+        HonBinarySensorEntityDescription(
+            key="attributes.lastConnEvent.category",
+            name="Remote Control",
+            device_class=BinarySensorDeviceClass.CONNECTIVITY,
+            on_value="CONNECTED",
+            icon="mdi:remote"
+        ),
+        HonBinarySensorEntityDescription(
+            key="startProgram.prewash",
+            name="Pre Wash",
+        ),
+        HonBinarySensorEntityDescription(
+            key="extraRinse1",
+            name="Extra Rinse 1",
+        ),
+        HonBinarySensorEntityDescription(
+            key="extraRinse2",
+            name="Extra Rinse 2",
+        ),
+        HonBinarySensorEntityDescription(
+            key="extraRinse3",
+            name="Extra Rinse 3",
+        ),
+        HonBinarySensorEntityDescription(
+            key="goodNight",
+            name="Good Night Mode",
+        ),
+        HonBinarySensorEntityDescription(
+            key="acquaplus",
+            name="Acqua Plus",
+        ),
+        HonBinarySensorEntityDescription(
+            key="anticrease",
+            name="Anti-Crease",
+        ),
+    ),
     "OV": (
         HonBinarySensorEntityDescription(
             key="attributes.lastConnEvent.category",
@@ -68,7 +104,6 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             on_value="CONNECTED",
             icon="mdi:wifi"
         ),
-
         HonBinarySensorEntityDescription(
             key="attributes.parameters.remoteCtrValid",
             name="On",
@@ -83,8 +118,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             on_value="1",
             icon="mdi:power-cycle"
         ),
-
-    )
+    ),
 }
 
 
@@ -103,7 +137,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
         if descriptions := BINARY_SENSORS.get(device.appliance_type):
             for description in descriptions:
                 if not device.get(description.key):
-                    _LOGGER.info("Can't setup %s", description.key)
+                    _LOGGER.warning("[%s] Can't setup %s", device.appliance_type, description.key)
                     continue
                 appliances.extend([
                     HonBinarySensorEntity(hass, coordinator, entry, device, description)]

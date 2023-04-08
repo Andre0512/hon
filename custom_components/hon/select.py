@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import logging
+
 from pyhon import HonConnection
 from pyhon.device import HonDevice
 from pyhon.parameter import HonParameterFixed
@@ -12,6 +14,8 @@ from homeassistant.helpers.entity import EntityCategory
 
 from .const import DOMAIN
 from .hon import HonEntity, HonCoordinator
+
+_LOGGER = logging.getLogger(__name__)
 
 SELECTS = {
     "WM": (
@@ -51,20 +55,25 @@ SELECTS = {
             unit_of_measurement=UnitOfTime.MINUTES
         ),
     ),
+    "WD": (
+        SelectEntityDescription(
+            key="startProgram.program",
+            name="Program",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="programs"
+        ),
     "OV": (
         SelectEntityDescription(
             key="startProgram.program",
             name="Program",
             entity_category=EntityCategory.CONFIG,
         ),
-
         SelectEntityDescription(
             key="startProgram.preheatStatus",
             name="Preheat",
             entity_category=EntityCategory.CONFIG
         ),
-
-    )
+    ),
 }
 
 
@@ -83,6 +92,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
         if descriptions := SELECTS.get(device.appliance_type):
             for description in descriptions:
                 if not device.get(description.key):
+                    _LOGGER.warning("[%s] Can't setup %s", device.appliance_type, description.key)
                     continue
                 appliances.extend([
                     HonSelectEntity(hass, coordinator, entry, device, description)]
