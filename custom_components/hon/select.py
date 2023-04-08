@@ -62,6 +62,7 @@ SELECTS = {
             entity_category=EntityCategory.CONFIG,
             translation_key="programs"
         ),
+    ),
     "OV": (
         SelectEntityDescription(
             key="startProgram.program",
