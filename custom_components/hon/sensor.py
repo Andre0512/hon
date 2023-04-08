@@ -9,7 +9,15 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import UnitOfEnergy, UnitOfVolume, UnitOfMass, UnitOfPower, UnitOfTime
+from homeassistant.const import (
+    REVOLUTIONS_PER_MINUTE,
+    UnitOfEnergy,
+    UnitOfVolume,
+    UnitOfMass,
+    UnitOfPower,
+    UnitOfTime,
+    UnitOfTemperature
+)
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.typing import StateType
@@ -142,7 +150,60 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             translation_key="tumbledryertemplevel"
         ),
     ),
-
+    "WD": (
+        SensorEntityDescription(
+            key="machMode",
+            name="Machine Status",
+            icon="mdi:information",
+            translation_key="mode"
+        ),
+        SensorEntityDescription(
+            key="spinSpeed",
+            name="Spin Speed",
+            icon="mdi:fast-forward-outline",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=REVOLUTIONS_PER_MINUTE,
+        ),
+        SensorEntityDescription(
+            key="remainingTimeMM",
+            name="Remaining Time",
+            icon="mdi:timer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        SensorEntityDescription(
+            key="prCode",
+            name="Current Program",
+            icon="mdi:tumble-dryer",
+        ),
+        SensorEntityDescription(
+            key="prPhase",
+            name="Program Phase",
+            icon="mdi:tumble-dryer",
+        ),
+        SensorEntityDescription(
+            key="dryLevel",
+            name="Dry level",
+            icon="mdi:hair-dryer",
+        ),
+        SensorEntityDescription(
+            key="dirtyLevel",
+            name="Dirt level",
+            icon="mdi:liquid-spot",
+        ),
+        SensorEntityDescription(
+            key="steamLevel",
+            name="Steam level",
+            icon="mdi:smoke",
+        ),
+        SensorEntityDescription(
+            key="temp",
+            name="Current Temperature",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+    ),
     "OV": (
         SensorEntityDescription(
             key="remainingTimeMM",
@@ -154,22 +215,18 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="delayTime",
             name="Start Time",
             icon="mdi:clock-start",
-            native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
-
         SensorEntityDescription(
             key="temp",
             name="Temperature",
             icon="mdi:thermometer",
         ),
-
         SensorEntityDescription(
             key="tempSel",
             name="Temperature Selected",
             icon="mdi:thermometer",
         ),
-    )
-
+    ),
 }
 
 
@@ -188,6 +245,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
         if descriptions := SENSORS.get(device.appliance_type):
             for description in descriptions:
                 if not device.get(description.key):
+                    _LOGGER.warning("[%s] Can't setup %s", device.appliance_type, description.key)
                     continue
                 appliances.extend([
                     HonSensorEntity(hass, coordinator, entry, device, description)]
