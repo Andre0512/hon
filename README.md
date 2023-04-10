@@ -70,7 +70,7 @@ Any kind of contribution is welcome!
 #### Tips and Tricks
 - If you want to have some states humanreadable, have a look at the `translation_key` parameter of the `EntityDescription`.
 - If you need to implement some more logic, create a pull request to the underlying library. There we collect special requirements in the `appliances` directory.
-- Use [pyhOn](https://github.com/Andre0512/pyhOn)s translate command to read out the official translations 
+- Use [pyhOn's translate command](https://github.com/Andre0512/pyhOn#translation) to read out the official translations 
 
 ## Tested Devices
 - Haier WD90-B14TEAM5
