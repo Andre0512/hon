@@ -1,5 +1,4 @@
 {
     "name": "Haier hOn",
-    "render_readme": true,
     "homeassistant": "2023.2.0"
 }

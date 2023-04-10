@@ -16,6 +16,8 @@ Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home ap
 
 **Method 3:** Manually copy `hon` folder from [latest release](https://github.com/Andre0512/hon/releases/latest) to `config/custom_components` folder.
 
+_Restart Home Assistant_
+
 ## Configuration
 
 **Method 1**: [![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=hon)
@@ -65,8 +67,9 @@ Any kind of contribution is welcome!
 5. Create a [pull request](https://github.com/Andre0512/hon/pulls)
 
 #### Tips and Tricks
-- If you want to have some states humanreadable, have a look at the `translation_key` parameter of the `EntityDescription`
+- If you want to have some states humanreadable, have a look at the `translation_key` parameter of the `EntityDescription`.
 - If you need to implement some more logic, create a pull request to the underlying library. There we collect special requirements in the `appliances` directory.
+- Use [pyhOn](https://github.com/Andre0512/pyhOn)s translate command to read out the official translations 
 
 ## Tested Devices
 - Haier WD90-B14TEAM5
