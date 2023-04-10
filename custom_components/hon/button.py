@@ -38,15 +38,17 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             for description in descriptions:
                 if not device.commands.get(description.key):
                     continue
-                appliances.extend([
-                    HonButtonEntity(hass, coordinator, entry, device, description)]
+                appliances.extend(
+                    [HonButtonEntity(hass, coordinator, entry, device, description)]
                 )
 
     async_add_entities(appliances)
 
 
 class HonButtonEntity(HonEntity, ButtonEntity):
-    def __init__(self, hass, coordinator, entry, device: HonAppliance, description) -> None:
+    def __init__(
+        self, hass, coordinator, entry, device: HonAppliance, description
+    ) -> None:
         super().__init__(hass, entry, coordinator, device)
 
         self._coordinator = coordinator

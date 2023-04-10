@@ -16,7 +16,7 @@ from homeassistant.const import (
     UnitOfMass,
     UnitOfPower,
     UnitOfTime,
-    UnitOfTemperature
+    UnitOfTemperature,
 )
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
@@ -34,20 +34,20 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Total Power",
             device_class=SensorDeviceClass.ENERGY,
             state_class=SensorStateClass.TOTAL_INCREASING,
-            native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR
+            native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         ),
         SensorEntityDescription(
             key="totalWaterUsed",
             name="Total Water",
             device_class=SensorDeviceClass.WATER,
             state_class=SensorStateClass.TOTAL_INCREASING,
-            native_unit_of_measurement=UnitOfVolume.LITERS
+            native_unit_of_measurement=UnitOfVolume.LITERS,
         ),
         SensorEntityDescription(
             key="totalWashCycle",
             name="Total Wash Cycle",
             state_class=SensorStateClass.TOTAL_INCREASING,
-            icon="mdi:counter"
+            icon="mdi:counter",
         ),
         SensorEntityDescription(
             key="currentElectricityUsed",
@@ -55,13 +55,13 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             state_class=SensorStateClass.MEASUREMENT,
             device_class=SensorDeviceClass.POWER,
             native_unit_of_measurement=UnitOfPower.KILO_WATT,
-            icon="mdi:lightning-bolt"
+            icon="mdi:lightning-bolt",
         ),
         SensorEntityDescription(
             key="currentWaterUsed",
             name="Current Water Used",
             state_class=SensorStateClass.MEASUREMENT,
-            icon="mdi:water"
+            icon="mdi:water",
         ),
         SensorEntityDescription(
             key="startProgram.weight",
@@ -69,19 +69,16 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             state_class=SensorStateClass.MEASUREMENT,
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfMass.KILOGRAMS,
-            icon="mdi:weight-kilogram"
+            icon="mdi:weight-kilogram",
         ),
         SensorEntityDescription(
             key="machMode",
             name="Machine Status",
             icon="mdi:information",
-            translation_key="mode"
+            translation_key="mode",
         ),
         SensorEntityDescription(
-            key="errors",
-            name="Error",
-            icon="mdi:math-log",
-            translation_key="errors"
+            key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
         ),
         SensorEntityDescription(
             key="remainingTimeMM",
@@ -103,13 +100,10 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="machMode",
             name="Machine Status",
             icon="mdi:information",
-            translation_key="mode"
+            translation_key="mode",
         ),
         SensorEntityDescription(
-            key="errors",
-            name="Error",
-            icon="mdi:math-log",
-            translation_key="errors"
+            key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
         ),
         SensorEntityDescription(
             key="remainingTimeMM",
@@ -129,25 +123,25 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="prCode",
             name="Program",
             icon="mdi:tumble-dryer",
-            translation_key="tumbledryerprogram"
+            translation_key="tumbledryerprogram",
         ),
         SensorEntityDescription(
             key="prPhase",
             name="Program Phase",
             icon="mdi:tumble-dryer",
-            translation_key="tumbledryerprogramphase"
+            translation_key="tumbledryerprogramphase",
         ),
         SensorEntityDescription(
             key="dryLevel",
             name="Dry level",
             icon="mdi:hair-dryer",
-            translation_key="tumbledryerdrylevel"
+            translation_key="tumbledryerdrylevel",
         ),
         SensorEntityDescription(
             key="tempLevel",
             name="Temperature level",
             icon="mdi:thermometer",
-            translation_key="tumbledryertemplevel"
+            translation_key="tumbledryertemplevel",
         ),
     ),
     "WD": (
@@ -155,7 +149,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="machMode",
             name="Machine Status",
             icon="mdi:information",
-            translation_key="mode"
+            translation_key="mode",
         ),
         SensorEntityDescription(
             key="spinSpeed",
@@ -245,10 +239,12 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
         if descriptions := SENSORS.get(device.appliance_type):
             for description in descriptions:
                 if not device.get(description.key):
-                    _LOGGER.warning("[%s] Can't setup %s", device.appliance_type, description.key)
+                    _LOGGER.warning(
+                        "[%s] Can't setup %s", device.appliance_type, description.key
+                    )
                     continue
-                appliances.extend([
-                    HonSensorEntity(hass, coordinator, entry, device, description)]
+                appliances.extend(
+                    [HonSensorEntity(hass, coordinator, entry, device, description)]
                 )
 
     async_add_entities(appliances)

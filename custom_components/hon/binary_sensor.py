@@ -3,8 +3,11 @@ from dataclasses import dataclass
 
 from pyhon import Hon
 
-from homeassistant.components.binary_sensor import BinarySensorEntityDescription, BinarySensorDeviceClass, \
-    BinarySensorEntity
+from homeassistant.components.binary_sensor import (
+    BinarySensorEntityDescription,
+    BinarySensorDeviceClass,
+    BinarySensorEntity,
+)
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
 from .const import DOMAIN
@@ -19,7 +22,9 @@ class HonBinarySensorEntityDescriptionMixin:
 
 
 @dataclass
-class HonBinarySensorEntityDescription(HonBinarySensorEntityDescriptionMixin, BinarySensorEntityDescription):
+class HonBinarySensorEntityDescription(
+    HonBinarySensorEntityDescriptionMixin, BinarySensorEntityDescription
+):
     pass
 
 
@@ -30,7 +35,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Remote Control",
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
-            icon="mdi:remote"
+            icon="mdi:remote",
         ),
         HonBinarySensorEntityDescription(
             key="doorLockStatus",
@@ -65,7 +70,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Remote Control",
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
-            icon="mdi:remote"
+            icon="mdi:remote",
         ),
         HonBinarySensorEntityDescription(
             key="startProgram.prewash",
@@ -102,21 +107,21 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Online",
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
-            icon="mdi:wifi"
+            icon="mdi:wifi",
         ),
         HonBinarySensorEntityDescription(
             key="attributes.parameters.remoteCtrValid",
             name="On",
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="1",
-            icon="mdi:remote"
+            icon="mdi:remote",
         ),
         HonBinarySensorEntityDescription(
             key="attributes.parameters.onOffStatus",
             name="On",
             device_class=BinarySensorDeviceClass.RUNNING,
             on_value="1",
-            icon="mdi:power-cycle"
+            icon="mdi:power-cycle",
         ),
     ),
 }
@@ -137,10 +142,16 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
         if descriptions := BINARY_SENSORS.get(device.appliance_type):
             for description in descriptions:
                 if not device.get(description.key):
-                    _LOGGER.warning("[%s] Can't setup %s", device.appliance_type, description.key)
+                    _LOGGER.warning(
+                        "[%s] Can't setup %s", device.appliance_type, description.key
+                    )
                     continue
-                appliances.extend([
-                    HonBinarySensorEntity(hass, coordinator, entry, device, description)]
+                appliances.extend(
+                    [
+                        HonBinarySensorEntity(
+                            hass, coordinator, entry, device, description
+                        )
+                    ]
                 )
 
     async_add_entities(appliances)
@@ -159,9 +170,15 @@ class HonBinarySensorEntity(HonEntity, BinarySensorEntity):
 
     @property
     def is_on(self) -> bool:
-        return self._device.get(self.entity_description.key, "") == self.entity_description.on_value
+        return (
+            self._device.get(self.entity_description.key, "")
+            == self.entity_description.on_value
+        )
 
     @callback
     def _handle_coordinator_update(self):
-        self._attr_native_value = self._device.get(self.entity_description.key, "") == self.entity_description.on_value
+        self._attr_native_value = (
+            self._device.get(self.entity_description.key, "")
+            == self.entity_description.on_value
+        )
         self.async_write_ha_state()

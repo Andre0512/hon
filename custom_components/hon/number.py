@@ -22,20 +22,20 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             name="Delay Time",
             icon="mdi:timer-plus",
             entity_category=EntityCategory.CONFIG,
-            native_unit_of_measurement=UnitOfTime.MINUTES
+            native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
         NumberEntityDescription(
             key="startProgram.rinseIterations",
             name="Rinse Iterations",
             icon="mdi:rotate-right",
-            entity_category=EntityCategory.CONFIG
+            entity_category=EntityCategory.CONFIG,
         ),
         NumberEntityDescription(
             key="startProgram.mainWashTime",
             name="Main Wash Time",
             icon="mdi:clock-start",
             entity_category=EntityCategory.CONFIG,
-            native_unit_of_measurement=UnitOfTime.MINUTES
+            native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
     ),
     "TD": (
@@ -44,34 +44,34 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             name="Delay time",
             icon="mdi:timer-plus",
             entity_category=EntityCategory.CONFIG,
-            native_unit_of_measurement=UnitOfTime.MINUTES
+            native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
         NumberEntityDescription(
             key="startProgram.dryLevel",
             name="Dry level",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:hair-dryer",
-            translation_key="tumbledryerdrylevel"
+            translation_key="tumbledryerdrylevel",
         ),
         NumberEntityDescription(
             key="startProgram.tempLevel",
             name="Temperature level",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
-            translation_key="tumbledryertemplevel"
+            translation_key="tumbledryertemplevel",
         ),
         NumberEntityDescription(
             key="startProgram.antiCreaseTime",
             name="Anti-Crease time",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:timer",
-            native_unit_of_measurement=UnitOfTime.MINUTES
+            native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
         NumberEntityDescription(
             key="startProgram.sterilizationStatus",
             name="Sterilization status",
             icon="mdi:clock-start",
-            entity_category=EntityCategory.CONFIG
+            entity_category=EntityCategory.CONFIG,
         ),
     ),
     "WD": (
@@ -80,7 +80,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             name="Delay Time",
             icon="mdi:timer-plus",
             entity_category=EntityCategory.CONFIG,
-            native_unit_of_measurement=UnitOfTime.MINUTES
+            native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
     ),
     "OV": (
@@ -89,22 +89,21 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             name="Delay time",
             icon="mdi:timer-plus",
             entity_category=EntityCategory.CONFIG,
-            native_unit_of_measurement=UnitOfTime.MINUTES
+            native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
         NumberEntityDescription(
             key="startProgram.tempSel",
             name="Target Temperature",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
-            native_unit_of_measurement=UnitOfTemperature.CELSIUS
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
         ),
-
         NumberEntityDescription(
             key="startProgram.prTime",
             name="Program Duration",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:timelapse",
-            native_unit_of_measurement=UnitOfTime.MINUTES
+            native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
     ),
 }
@@ -126,8 +125,8 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             for description in descriptions:
                 if not device.settings.get(description.key):
                     continue
-                appliances.extend([
-                    HonNumberEntity(hass, coordinator, entry, device, description)]
+                appliances.extend(
+                    [HonNumberEntity(hass, coordinator, entry, device, description)]
                 )
 
     async_add_entities(appliances)

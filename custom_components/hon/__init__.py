@@ -28,7 +28,9 @@ CONFIG_SCHEMA = vol.Schema(
 
 async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry):
     session = aiohttp_client.async_get_clientsession(hass)
-    hon = await Hon(entry.data["email"], entry.data["password"], session=session).create()
+    hon = await Hon(
+        entry.data["email"], entry.data["password"], session=session
+    ).create()
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.unique_id] = hon
     hass.data[DOMAIN]["coordinators"] = {}

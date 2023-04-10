@@ -22,9 +22,9 @@ class HonSwitchEntityDescriptionMixin:
 
 
 @dataclass
-class HonSwitchEntityDescription(HonSwitchEntityDescriptionMixin,
-                                 SwitchEntityDescription
-                                 ):
+class HonSwitchEntityDescription(
+    HonSwitchEntityDescriptionMixin, SwitchEntityDescription
+):
     pass
 
 
@@ -48,13 +48,13 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             key="startProgram.delayStatus",
             name="Delay Status",
             icon="mdi:timer-check",
-            entity_category=EntityCategory.CONFIG
+            entity_category=EntityCategory.CONFIG,
         ),
         HonSwitchEntityDescription(
             key="startProgram.haier_SoakPrewashSelection",
             name="Soak Prewash Selection",
             icon="mdi:tshirt-crew",
-            entity_category=EntityCategory.CONFIG
+            entity_category=EntityCategory.CONFIG,
         ),
     ),
     "TD": (
@@ -106,12 +106,17 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := SWITCHES.get(device.appliance_type):
             for description in descriptions:
-                if device.get(description.key) is not None or device.commands.get(description.key) is not None:
-                    appliances.extend([
-                        HonSwitchEntity(hass, coordinator, entry, device, description)]
+                if (
+                    device.get(description.key) is not None
+                    or device.commands.get(description.key) is not None
+                ):
+                    appliances.extend(
+                        [HonSwitchEntity(hass, coordinator, entry, device, description)]
                     )
                 else:
-                    _LOGGER.warning("[%s] Can't setup %s", device.appliance_type, description.key)
+                    _LOGGER.warning(
+                        "[%s] Can't setup %s", device.appliance_type, description.key
+                    )
 
     async_add_entities(appliances)
 
@@ -119,7 +124,14 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 class HonSwitchEntity(HonEntity, SwitchEntity):
     entity_description: HonSwitchEntityDescription
 
-    def __init__(self, hass, coordinator, entry, device: HonAppliance, description: HonSwitchEntityDescription) -> None:
+    def __init__(
+        self,
+        hass,
+        coordinator,
+        entry,
+        device: HonAppliance,
+        description: HonSwitchEntityDescription,
+    ) -> None:
         super().__init__(hass, entry, coordinator, device)
         self._coordinator = coordinator
         self._device = device
@@ -128,7 +140,9 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
 
     def available(self) -> bool:
         if self.entity_category == EntityCategory.CONFIG:
-            return self._device.settings[self.entity_description.key].typology != "fixed"
+            return (
+                self._device.settings[self.entity_description.key].typology != "fixed"
+            )
         return True
 
     @property
@@ -136,7 +150,11 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         """Return True if entity is on."""
         if self.entity_category == EntityCategory.CONFIG:
             setting = self._device.settings[self.entity_description.key]
-            return setting.value == "1" or hasattr(setting, "min") and setting.value != setting.min
+            return (
+                setting.value == "1"
+                or hasattr(setting, "min")
+                and setting.value != setting.min
+            )
         return self._device.get(self.entity_description.key, False)
 
     async def async_turn_on(self, **kwargs: Any) -> None:

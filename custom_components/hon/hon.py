@@ -29,7 +29,9 @@ class HonEntity(CoordinatorEntity):
         return DeviceInfo(
             identifiers={(DOMAIN, self._device.mac_address)},
             manufacturer=self._device.get("brand", ""),
-            name=self._device.nick_name if self._device.nick_name else self._device.model_name,
+            name=self._device.nick_name
+            if self._device.nick_name
+            else self._device.model_name,
             model=self._device.model_name,
             sw_version=self._device.get("fwVersion", ""),
         )
@@ -38,7 +40,12 @@ class HonEntity(CoordinatorEntity):
 class HonCoordinator(DataUpdateCoordinator):
     def __init__(self, hass, device: HonAppliance):
         """Initialize my coordinator."""
-        super().__init__(hass, _LOGGER, name=device.mac_address, update_interval=timedelta(seconds=30))
+        super().__init__(
+            hass,
+            _LOGGER,
+            name=device.mac_address,
+            update_interval=timedelta(seconds=30),
+        )
         self._device = device
 
     async def _async_update_data(self):

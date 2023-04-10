@@ -24,20 +24,20 @@ SELECTS = {
             name="Spin speed",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:numeric",
-            unit_of_measurement=REVOLUTIONS_PER_MINUTE
+            unit_of_measurement=REVOLUTIONS_PER_MINUTE,
         ),
         SelectEntityDescription(
             key="startProgram.temp",
             name="Temperature",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
-            unit_of_measurement=UnitOfTemperature.CELSIUS
+            unit_of_measurement=UnitOfTemperature.CELSIUS,
         ),
         SelectEntityDescription(
             key="startProgram.program",
             name="Program",
             entity_category=EntityCategory.CONFIG,
-            translation_key="programs"
+            translation_key="programs",
         ),
     ),
     "TD": (
@@ -45,14 +45,14 @@ SELECTS = {
             key="startProgram.program",
             name="Program",
             entity_category=EntityCategory.CONFIG,
-            translation_key="programs"
+            translation_key="programs",
         ),
         SelectEntityDescription(
             key="startProgram.dryTimeMM",
             name="Time",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:timer",
-            unit_of_measurement=UnitOfTime.MINUTES
+            unit_of_measurement=UnitOfTime.MINUTES,
         ),
     ),
     "WD": (
@@ -60,7 +60,7 @@ SELECTS = {
             key="startProgram.program",
             name="Program",
             entity_category=EntityCategory.CONFIG,
-            translation_key="programs"
+            translation_key="programs",
         ),
     ),
     "OV": (
@@ -72,7 +72,7 @@ SELECTS = {
         SelectEntityDescription(
             key="startProgram.preheatStatus",
             name="Preheat",
-            entity_category=EntityCategory.CONFIG
+            entity_category=EntityCategory.CONFIG,
         ),
     ),
 }
@@ -94,14 +94,16 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             for description in descriptions:
                 if not device.settings.get(description.key):
                     continue
-                appliances.extend([
-                    HonSelectEntity(hass, coordinator, entry, device, description)]
+                appliances.extend(
+                    [HonSelectEntity(hass, coordinator, entry, device, description)]
                 )
     async_add_entities(appliances)
 
 
 class HonSelectEntity(HonEntity, SelectEntity):
-    def __init__(self, hass, coordinator, entry, device: HonAppliance, description) -> None:
+    def __init__(
+        self, hass, coordinator, entry, device: HonAppliance, description
+    ) -> None:
         super().__init__(hass, entry, coordinator, device)
 
         self._coordinator = coordinator
@@ -128,7 +130,9 @@ class HonSelectEntity(HonEntity, SelectEntity):
     @callback
     def _handle_coordinator_update(self):
         setting = self._device.settings[self.entity_description.key]
-        if not isinstance(self._device.settings[self.entity_description.key], HonParameterFixed):
+        if not isinstance(
+            self._device.settings[self.entity_description.key], HonParameterFixed
+        ):
             self._attr_options: list[str] = setting.values
         else:
             self._attr_options = [setting.value]
