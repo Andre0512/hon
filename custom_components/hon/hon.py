@@ -1,7 +1,7 @@
 import logging
 from datetime import timedelta
 
-from pyhon.device import HonDevice
+from pyhon.appliance import HonAppliance
 
 from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
@@ -15,7 +15,7 @@ _LOGGER = logging.getLogger(__name__)
 class HonEntity(CoordinatorEntity):
     _attr_has_entity_name = True
 
-    def __init__(self, hass, entry, coordinator, device: HonDevice) -> None:
+    def __init__(self, hass, entry, coordinator, device: HonAppliance) -> None:
         super().__init__(coordinator)
 
         self._hon = hass.data[DOMAIN][entry.unique_id]
@@ -36,7 +36,7 @@ class HonEntity(CoordinatorEntity):
 
 
 class HonCoordinator(DataUpdateCoordinator):
-    def __init__(self, hass, device: HonDevice):
+    def __init__(self, hass, device: HonAppliance):
         """Initialize my coordinator."""
         super().__init__(hass, _LOGGER, name=device.mac_address, update_interval=timedelta(seconds=30))
         self._device = device

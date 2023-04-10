@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import logging
 
-from pyhon import HonConnection
-from pyhon.device import HonDevice
+from pyhon import Hon
+from pyhon.appliance import HonAppliance
 from pyhon.parameter import HonParameterFixed
 
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
@@ -79,10 +79,10 @@ SELECTS = {
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
-    hon: HonConnection = hass.data[DOMAIN][entry.unique_id]
+    hon: Hon = hass.data[DOMAIN][entry.unique_id]
     coordinators = hass.data[DOMAIN]["coordinators"]
     appliances = []
-    for device in hon.devices:
+    for device in hon.appliances:
         if device.mac_address in coordinators:
             coordinator = hass.data[DOMAIN]["coordinators"][device.mac_address]
         else:
@@ -101,7 +101,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
 
 class HonSelectEntity(HonEntity, SelectEntity):
-    def __init__(self, hass, coordinator, entry, device: HonDevice, description) -> None:
+    def __init__(self, hass, coordinator, entry, device: HonAppliance, description) -> None:
         super().__init__(hass, entry, coordinator, device)
 
         self._coordinator = coordinator

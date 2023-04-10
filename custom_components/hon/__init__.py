@@ -1,7 +1,7 @@
 import logging
 
 import voluptuous as vol
-from pyhon import HonConnection
+from pyhon import Hon
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_EMAIL, CONF_PASSWORD
@@ -28,8 +28,7 @@ CONFIG_SCHEMA = vol.Schema(
 
 async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry):
     session = aiohttp_client.async_get_clientsession(hass)
-    hon = HonConnection(entry.data["email"], entry.data["password"], session)
-    await hon.setup()
+    hon = await Hon(entry.data["email"], entry.data["password"], session=session).create()
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.unique_id] = hon
     hass.data[DOMAIN]["coordinators"] = {}

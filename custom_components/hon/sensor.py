@@ -1,6 +1,6 @@
 import logging
 
-from pyhon import HonConnection
+from pyhon import Hon
 
 from homeassistant.components.sensor import (
     SensorEntity,
@@ -231,10 +231,10 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
-    hon: HonConnection = hass.data[DOMAIN][entry.unique_id]
+    hon: Hon = hass.data[DOMAIN][entry.unique_id]
     coordinators = hass.data[DOMAIN]["coordinators"]
     appliances = []
-    for device in hon.devices:
+    for device in hon.appliances:
         if device.mac_address in coordinators:
             coordinator = hass.data[DOMAIN]["coordinators"][device.mac_address]
         else:

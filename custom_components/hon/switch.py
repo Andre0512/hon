@@ -6,8 +6,8 @@ from typing import Any
 from homeassistant.components.switch import SwitchEntityDescription, SwitchEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory
-from pyhon import HonConnection
-from pyhon.device import HonDevice
+from pyhon import Hon
+from pyhon.appliance import HonAppliance
 
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity
@@ -93,10 +93,10 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
-    hon: HonConnection = hass.data[DOMAIN][entry.unique_id]
+    hon: Hon = hass.data[DOMAIN][entry.unique_id]
     coordinators = hass.data[DOMAIN]["coordinators"]
     appliances = []
-    for device in hon.devices:
+    for device in hon.appliances:
         if device.mac_address in coordinators:
             coordinator = hass.data[DOMAIN]["coordinators"][device.mac_address]
         else:
@@ -119,7 +119,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 class HonSwitchEntity(HonEntity, SwitchEntity):
     entity_description: HonSwitchEntityDescription
 
-    def __init__(self, hass, coordinator, entry, device: HonDevice, description: HonSwitchEntityDescription) -> None:
+    def __init__(self, hass, coordinator, entry, device: HonAppliance, description: HonSwitchEntityDescription) -> None:
         super().__init__(hass, entry, coordinator, device)
         self._coordinator = coordinator
         self._device = device
