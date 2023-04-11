@@ -10,6 +10,7 @@ Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home ap
 - Washing Machine
 - Oven
 
+
 ## Installation
 **Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
 
@@ -26,14 +27,34 @@ _Restart Home Assistant_
 **Method 2**: Settings > Devices & Services > Add Integration > **Haier hOn**  
 _If the integration is not in the list, you need to clear the browser cache._
 
+
+
 ## Contribute
 Any kind of contribution is welcome!
-#### Add appliances or additional attributes
+### Read out device data
+If you want to make a request for adding new appliances or additional attributes and don't want to use the command line, here is how you can read out your device data.
+For every device exists a hidden button which can be used to log all info of your appliance.
+1. Enable the "Log Device Info" button  
+   _This button can be found in the diagnostic section of your device or in the entity overview if "show disabled entities" is enabled._
+2. Press the button
+3. Go to Settings > System > Logs, click _load full logs_ and scroll down  
+   _The formatting is messy if you not load full logs_
+4. Here you can find all data which can be read out via the api
+   ```yaml
+   data:
+     appliance:
+       applianceId: 12-34-56-78-90-ab#2022-10-25T19:47:11Z
+       applianceModelId: 1569 
+       ...
+   ```
+5. Copy this data and create a [new issue](https://github.com/Andre0512/hon/issues/new) with your request
+
+### Add appliances or additional attributes
 1. Install [pyhOn](https://github.com/Andre0512/pyhOn)
    ```commandline
     $ pip install pyhOn
     ```
-2. Use the commandline tool to read out all appliance data from your account
+2. Use the command line tool to read out all appliance data from your account
     ```commandline
     $ pyhOn
     User for hOn account: user.name@example.com
