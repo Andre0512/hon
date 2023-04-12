@@ -29,5 +29,11 @@ _If the integration is not in the list, you need to clear the browser cache._
 Want to help us to support more appliances? Or add more sensors? Or help with translating? Or beautify some icons or captions? 
 Check out the [project on GitHub](https://github.com/Andre0512/hon), every contribution is welcome!
 
+## Useful Links
 
+* [GitHub repository](https://github.com/Andre0512/hon) (please add a star if you like this integration!)
+* [pyhOn library](https://github.com/Andre0512/pyhOn)
+* [Release notes](https://github.com/Andre0512/hon/releases)
+* [Discussion and help](https://github.com/Andre0512/hon/discussions)
+* [Issues](https://github.com/Andre0512/hon/issues)
 
