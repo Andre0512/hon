@@ -1,4 +1,6 @@
 {
     "name": "Haier hOn",
-    "homeassistant": "2023.2.0"
+    "homeassistant": "2023.2.0",
+    "zip_release": true,
+    "filename": "haier_hon.zip"
 }
