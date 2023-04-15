@@ -68,11 +68,20 @@ SELECTS = {
             key="startProgram.program",
             name="Program",
             entity_category=EntityCategory.CONFIG,
+            translation_key="programs",
         ),
         SelectEntityDescription(
             key="startProgram.preheatStatus",
             name="Preheat",
             entity_category=EntityCategory.CONFIG,
+        ),
+    ),
+    "IV": (
+        SelectEntityDescription(
+            key="startProgram.program",
+            name="Program",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="programs",
         ),
     ),
 }

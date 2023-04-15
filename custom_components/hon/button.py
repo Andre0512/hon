@@ -25,7 +25,14 @@ BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
             name="Stop Program",
             icon="mdi:power-off",
         ),
-    )
+    ),
+    "IV": (
+        ButtonEntityDescription(
+            key="startProgram",
+            name="Start Program",
+            icon="mdi:pot-steam",
+        ),
+    ),
 }
 
 

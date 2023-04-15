@@ -9,7 +9,7 @@ Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home ap
 - Washer Dryer
 - Washing Machine
 - Oven
-
+- Hob
 
 ## Installation
 **Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)

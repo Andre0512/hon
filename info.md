@@ -9,6 +9,7 @@ Support for home appliances of Haier's mobile app hOn.
 - Washer Dryer
 - Washing Machine
 - Oven
+- Hob
 
 ## Tested Appliances
 - Haier WD90-B14TEAM5

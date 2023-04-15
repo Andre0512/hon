@@ -106,6 +106,20 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
     ),
+    "IV": (
+        NumberEntityDescription(
+            key="startProgram.temp",
+            name="Temperature",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:thermometer",
+        ),
+        NumberEntityDescription(
+            key="startProgram.powerManagement",
+            name="Power Management",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:timelapse",
+        ),
+    ),
 }
 
 

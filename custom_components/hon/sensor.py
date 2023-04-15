@@ -221,6 +221,22 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:thermometer",
         ),
     ),
+    "IV": (
+        SensorEntityDescription(
+            key="remainingTimeMM",
+            name="Remaining Time",
+            icon="mdi:timer",
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        SensorEntityDescription(
+            key="temp",
+            name="Temperature",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        SensorEntityDescription(key="errors", name="Error", icon="mdi:math-log"),
+    ),
 }
 
 
