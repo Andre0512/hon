@@ -104,14 +104,14 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
     "OV": (
         HonBinarySensorEntityDescription(
             key="attributes.lastConnEvent.category",
-            name="Online",
+            name="Connection",
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
             icon="mdi:wifi",
         ),
         HonBinarySensorEntityDescription(
             key="attributes.parameters.remoteCtrValid",
-            name="On",
+            name="Remote Control",
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="1",
             icon="mdi:remote",
@@ -122,6 +122,41 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.RUNNING,
             on_value="1",
             icon="mdi:power-cycle",
+        ),
+    ),
+    "IV": (
+        HonBinarySensorEntityDescription(
+            key="attributes.lastConnEvent.category",
+            name="Connection",
+            device_class=BinarySensorDeviceClass.CONNECTIVITY,
+            on_value="CONNECTED",
+            icon="mdi:wifi",
+        ),
+        HonBinarySensorEntityDescription(
+            key="attributes.parameters.remoteCtrValid",
+            name="Remote Control",
+            device_class=BinarySensorDeviceClass.CONNECTIVITY,
+            on_value="1",
+            icon="mdi:remote",
+        ),
+        HonBinarySensorEntityDescription(
+            key="attributes.parameters.onOffStatus",
+            name="On",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value="1",
+            icon="mdi:power-cycle",
+        ),
+        HonBinarySensorEntityDescription(
+            key="hotStatus",
+            name="Hot Status",
+            device_class=BinarySensorDeviceClass.HEAT,
+            on_value="1",
+        ),
+        HonBinarySensorEntityDescription(
+            key="hobLockStatus",
+            name="Hob Lock",
+            device_class=BinarySensorDeviceClass.LOCK,
+            on_value="0",
         ),
     ),
 }
