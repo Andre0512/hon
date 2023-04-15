@@ -167,11 +167,11 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
     coordinators = hass.data[DOMAIN]["coordinators"]
     appliances = []
     for device in hon.appliances:
-        if device.mac_address in coordinators:
-            coordinator = hass.data[DOMAIN]["coordinators"][device.mac_address]
+        if device.unique_id in coordinators:
+            coordinator = hass.data[DOMAIN]["coordinators"][device.unique_id]
         else:
             coordinator = HonCoordinator(hass, device)
-            hass.data[DOMAIN]["coordinators"][device.mac_address] = coordinator
+            hass.data[DOMAIN]["coordinators"][device.unique_id] = coordinator
         await coordinator.async_config_entry_first_refresh()
 
         if descriptions := BINARY_SENSORS.get(device.appliance_type):

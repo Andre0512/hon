@@ -22,12 +22,12 @@ class HonEntity(CoordinatorEntity):
         self._hass = hass
         self._device = device
 
-        self._attr_unique_id = self._device.mac_address
+        self._attr_unique_id = self._device.unique_id
 
     @property
     def device_info(self):
         return DeviceInfo(
-            identifiers={(DOMAIN, self._device.mac_address)},
+            identifiers={(DOMAIN, self._device.unique_id)},
             manufacturer=self._device.get("brand", ""),
             name=self._device.nick_name
             if self._device.nick_name
@@ -43,7 +43,7 @@ class HonCoordinator(DataUpdateCoordinator):
         super().__init__(
             hass,
             _LOGGER,
-            name=device.mac_address,
+            name=device.unique_id,
             update_interval=timedelta(seconds=30),
         )
         self._device = device
