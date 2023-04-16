@@ -8,6 +8,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory
 from pyhon import Hon
 from pyhon.appliance import HonAppliance
+from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity

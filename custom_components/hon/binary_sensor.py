@@ -124,7 +124,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             icon="mdi:power-cycle",
         ),
     ),
-    "IV": (
+    "IH": (
         HonBinarySensorEntityDescription(
             key="attributes.lastConnEvent.category",
             name="Connection",

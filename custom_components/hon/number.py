@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from pyhon import Hon
-from pyhon.parameter import HonParameterRange
+from pyhon.parameter.range import HonParameterRange
 
 from homeassistant.components.number import (
     NumberEntity,
@@ -106,7 +106,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
     ),
-    "IV": (
+    "IH": (
         NumberEntityDescription(
             key="startProgram.temp",
             name="Temperature",

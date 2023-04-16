@@ -4,7 +4,7 @@ import logging
 
 from pyhon import Hon
 from pyhon.appliance import HonAppliance
-from pyhon.parameter import HonParameterFixed
+from pyhon.parameter.fixed import HonParameterFixed
 
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
@@ -76,7 +76,7 @@ SELECTS = {
             entity_category=EntityCategory.CONFIG,
         ),
     ),
-    "IV": (
+    "IH": (
         SelectEntityDescription(
             key="startProgram.program",
             name="Program",
