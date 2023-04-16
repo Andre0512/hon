@@ -221,7 +221,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:thermometer",
         ),
     ),
-    "IV": (
+    "IH": (
         SensorEntityDescription(
             key="remainingTimeMM",
             name="Remaining Time",

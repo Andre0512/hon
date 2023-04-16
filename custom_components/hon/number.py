@@ -106,7 +106,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
     ),
-    "IV": (
+    "IH": (
         NumberEntityDescription(
             key="startProgram.temp",
             name="Temperature",

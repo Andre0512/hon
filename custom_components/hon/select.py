@@ -71,7 +71,7 @@ SELECTS = {
             translation_key="programs",
         ),
     ),
-    "IV": (
+    "IH": (
         SelectEntityDescription(
             key="startProgram.program",
             name="Program",
