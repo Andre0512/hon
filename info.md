@@ -5,18 +5,18 @@
 Support for home appliances of Haier's mobile app hOn. 
 
 ## Supported Appliances
-- Tumble Dryer
-- Washer Dryer
-- Washing Machine
-- Oven
-- Hob
+- [Washing Machine](https://github.com/Andre0512/hon#washing-machine)
+- [Tumble Dryer](https://github.com/Andre0512/hon#tumble-dryer)
+- [Washer Dryer](https://github.com/Andre0512/hon#washer-dryer)
+- [Oven](https://github.com/Andre0512/hon#oven)
+- [Hob](https://github.com/Andre0512/hon#hob)
+- [Dish Washer](https://github.com/Andre0512/hon#dish-washer)
 
 ## Tested Appliances
 - Haier WD90-B14TEAM5
 - Haier HD80-A3959
 - Haier HWO60SM2F3XH
 - Hoover H-WASH 500
-
 
 ## Configuration
 
@@ -25,13 +25,11 @@ Support for home appliances of Haier's mobile app hOn.
 **Method 2**: Settings > Devices & Services > Add Integration > **Haier hOn**  
 _If the integration is not in the list, you need to clear the browser cache._
 
-
 ## Contribute
 Want to help us to support more appliances? Or add more sensors? Or help with translating? Or beautify some icons or captions? 
 Check out the [project on GitHub](https://github.com/Andre0512/hon), every contribution is welcome!
 
 ## Useful Links
-
 * [GitHub repository](https://github.com/Andre0512/hon) (please add a star if you like this integration!)
 * [pyhOn library](https://github.com/Andre0512/pyhOn)
 * [Release notes](https://github.com/Andre0512/hon/releases)
