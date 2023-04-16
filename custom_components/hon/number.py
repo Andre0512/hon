@@ -120,6 +120,21 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             icon="mdi:timelapse",
         ),
     ),
+    "DW": (
+        NumberEntityDescription(
+            key="startProgram.delayTime",
+            name="Delay time",
+            icon="mdi:timer-plus",
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        NumberEntityDescription(
+            key="startProgram.waterHard",
+            name="Water hard",
+            icon="mdi:water",
+            entity_category=EntityCategory.CONFIG,
+        ),
+    ),
 }
 
 

@@ -159,6 +159,34 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             on_value="0",
         ),
     ),
+    "DW": (
+        HonBinarySensorEntityDescription(
+            key="saltStatus",
+            name="Salt",
+            device_class=BinarySensorDeviceClass.PROBLEM,
+            on_value="1",
+            icon="mdi:shaker-outline",
+        ),
+        HonBinarySensorEntityDescription(
+            key="rinseAidStatus",
+            name="Rinse Aid",
+            device_class=BinarySensorDeviceClass.PROBLEM,
+            on_value="1",
+            icon="mdi:spray-bottle",
+        ),
+        HonBinarySensorEntityDescription(
+            key="attributes.lastConnEvent.category",
+            name="Connection",
+            device_class=BinarySensorDeviceClass.CONNECTIVITY,
+            on_value="CONNECTED",
+        ),
+        HonBinarySensorEntityDescription(
+            key="doorStatus",
+            name="Door",
+            device_class=BinarySensorDeviceClass.DOOR,
+            on_value="1",
+        ),
+    ),
 }
 
 

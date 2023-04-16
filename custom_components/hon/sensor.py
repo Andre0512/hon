@@ -21,6 +21,7 @@ from homeassistant.const import (
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.typing import StateType
+from homeassistant.const import PERCENTAGE
 
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity
@@ -236,6 +237,69 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
         ),
         SensorEntityDescription(key="errors", name="Error", icon="mdi:math-log"),
+    ),
+    "DW": (
+        SensorEntityDescription(
+            key="startProgram.ecoIndex",
+            name="Eco Index",
+            icon="mdi:sprout",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.CONFIG,
+        ),
+        SensorEntityDescription(
+            key="startProgram.waterEfficiency",
+            name="Water Efficiency",
+            icon="mdi:water",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.CONFIG,
+        ),
+        SensorEntityDescription(
+            key="startProgram.waterSaving",
+            name="Water Saving",
+            icon="mdi:water-percent",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=PERCENTAGE,
+            entity_category=EntityCategory.CONFIG,
+        ),
+        SensorEntityDescription(
+            key="startProgram.temp",
+            name="Temperature",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            entity_category=EntityCategory.CONFIG,
+        ),
+        SensorEntityDescription(
+            key="startProgram.energyLabel",
+            name="Energy Label",
+            icon="mdi:lightning-bolt-circle",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.CONFIG,
+        ),
+        SensorEntityDescription(
+            key="startProgram.remainingTime",
+            name="Time",
+            icon="mdi:timer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+            entity_category=EntityCategory.CONFIG,
+        ),
+        SensorEntityDescription(
+            key="machMode",
+            name="Machine Status",
+            icon="mdi:information",
+            translation_key="mode_dw",
+        ),
+        SensorEntityDescription(
+            key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
+        ),
+        SensorEntityDescription(
+            key="remainingTimeMM",
+            name="Remaining Time",
+            icon="mdi:timer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
     ),
 }
 

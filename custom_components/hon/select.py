@@ -84,6 +84,14 @@ SELECTS = {
             translation_key="programs",
         ),
     ),
+    "DW": (
+        SelectEntityDescription(
+            key="startProgram.program",
+            name="Program",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="programs_dw",
+        ),
+    ),
 }
 
 

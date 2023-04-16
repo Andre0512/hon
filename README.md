@@ -5,11 +5,12 @@
 [![Home Assistant installs](https://img.shields.io/badge/dynamic/json?color=blue&label=usage&suffix=%20installs&cacheSeconds=15600&url=https://analytics.home-assistant.io/custom_integrations.json&query=$.hon.total)](https://analytics.home-assistant.io/)  
 Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home appliances like washing machines.
 ## Supported Appliances
+- Washing Machine
 - Tumble Dryer
 - Washer Dryer
-- Washing Machine
 - Oven
 - Hob
+- Dish Washer
 
 ## Installation
 **Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
