@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from pyhon import Hon
-from pyhon.parameter import HonParameterRange
+from pyhon.parameter.range import HonParameterRange
 
 from homeassistant.components.number import (
     NumberEntity,

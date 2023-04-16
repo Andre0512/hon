@@ -73,6 +73,17 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             turn_off_key="resumeProgram",
         ),
     ),
+
+    "OV": (
+        HonSwitchEntityDescription(
+            key="active",
+            name="Oven",
+            icon="mdi:toaster-oven",
+            turn_on_key="startProgram",
+            turn_off_key="stopProgram",
+        ),
+    ),
+
     "WD": (
         HonSwitchEntityDescription(
             key="active",
