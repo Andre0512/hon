@@ -105,11 +105,12 @@ I tried to create a pull request, but in the structures of these existing repos,
 I moved the api related stuff into the package [pyhOn](https://github.com/Andre0512/pyhOn).
 
 ## Appliance Features
+
 ### Dish washer
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Dish Washer | `mdi:dishwasher` | `switch` | `active` |
+| Dish Washer | `mdi:dishwasher` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -138,6 +139,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Remaining Time | `mdi:timer` | `sensor` | `remainingTimeMM` |
 | Rinse Aid | `mdi:spray-bottle` | `binary_sensor` | `rinseAidStatus` |
 | Salt | `mdi:shaker-outline` | `binary_sensor` | `saltStatus` |
+
 ### Hob
 #### Controls
 | Name | Icon | Entity | Key |
@@ -160,6 +162,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Remaining Time | `mdi:timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `mdi:remote` | `binary_sensor` | `attributes.parameters.remoteCtrValid` |
 | Temperature | `mdi:thermometer` | `sensor` | `temp` |
+
 ### Oven
 #### Controls
 | Name | Icon | Entity | Key |
@@ -184,12 +187,13 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Start Time | `mdi:clock-start` | `sensor` | `delayTime` |
 | Temperature | `mdi:thermometer` | `sensor` | `temp` |
 | Temperature Selected | `mdi:thermometer` | `sensor` | `tempSel` |
+
 ### Tumble dryer
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Pause Tumble Dryer | `mdi:pause` | `switch` | `pause` |
-| Tumble Dryer | `mdi:tumble-dryer` | `switch` | `active` |
+| Pause Tumble Dryer | `mdi:pause` | `switch` | `pauseProgram` / `resumeProgram` |
+| Tumble Dryer | `mdi:tumble-dryer` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -213,12 +217,13 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Remaining Time | `mdi:timer` | `sensor` | `remainingTimeMM` |
 | Start Time | `mdi:clock-start` | `sensor` | `delayTime` |
 | Temperature level | `mdi:thermometer` | `sensor` | `tempLevel` |
+
 ### Washer dryer
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Pause Washing Machine | `mdi:pause` | `switch` | `pause` |
-| Washing Machine | `mdi:washing-machine` | `switch` | `active` |
+| Pause Washing Machine | `mdi:pause` | `switch` | `pauseProgram` / `resumeProgram` |
+| Washing Machine | `mdi:washing-machine` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -244,12 +249,13 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Remote Control | `mdi:remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
 | Spin Speed | `mdi:fast-forward-outline` | `sensor` | `spinSpeed` |
 | Steam level | `mdi:smoke` | `sensor` | `steamLevel` |
+
 ### Washing machine
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Pause Washing Machine | `mdi:pause` | `switch` | `pause` |
-| Washing Machine | `mdi:washing-machine` | `switch` | `active` |
+| Pause Washing Machine | `mdi:pause` | `switch` | `pauseProgram` / `resumeProgram` |
+| Washing Machine | `mdi:washing-machine` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
