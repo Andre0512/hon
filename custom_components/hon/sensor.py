@@ -55,7 +55,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Current Electricity Used",
             state_class=SensorStateClass.MEASUREMENT,
             device_class=SensorDeviceClass.POWER,
-            native_unit_of_measurement=UnitOfPower.KILO_WATT_HOUR,
+            native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
             icon="mdi:lightning-bolt",
         ),
         SensorEntityDescription(
@@ -171,7 +171,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Current Electricity Used",
             state_class=SensorStateClass.MEASUREMENT,
             device_class=SensorDeviceClass.POWER,
-            native_unit_of_measurement=UnitOfPower.KILO_WATT_HOUR,
+            native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
             icon="mdi:lightning-bolt",
         ),
         SensorEntityDescription(
@@ -279,6 +279,12 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
         ),
         SensorEntityDescription(key="errors", name="Error", icon="mdi:math-log"),
+        SensorEntityDescription(
+            key="power",
+            name="Power",
+            icon="mdi:lightning-bolt",
+            state_class=SensorStateClass.MEASUREMENT,
+        ),
     ),
     "DW": (
         SensorEntityDescription(

@@ -153,6 +153,9 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             on_value="1",
         ),
         HonBinarySensorEntityDescription(
+            key="panStatus", name="Pan Status", on_value="1", icon="mdi:pot-mix"
+        ),
+        HonBinarySensorEntityDescription(
             key="hobLockStatus",
             name="Hob Lock",
             device_class=BinarySensorDeviceClass.LOCK,
