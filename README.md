@@ -1,8 +1,8 @@
 # Haier hOn
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://hacs.xyz)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/Andre0512/hon?color=green)](https://github.com/Andre0512/hon/releases/latest)
-![GitHub](https://img.shields.io/github/license/Andre0512/hon?color=red)
-[![Home Assistant installs](https://img.shields.io/badge/dynamic/json?color=blue&label=usage&suffix=%20installs&cacheSeconds=15600&url=https://analytics.home-assistant.io/custom_integrations.json&query=$.hon.total)](https://analytics.home-assistant.io/)  
+[![GitHub](https://img.shields.io/github/license/Andre0512/hon?color=red)](https://github.com/Andre0512/hon/blob/main/LICENSE)
+[![GitHub all releases](https://img.shields.io/github/downloads/Andre0512/hon/total?color=blue)](https://tooomm.github.io/github-release-stats/?username=Andre0512&repository=hon)  
 Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home appliances like washing machines.
 
 ## Supported Appliances
@@ -159,6 +159,8 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Hob Lock |  | `binary_sensor` | `hobLockStatus` |
 | Hot Status |  | `binary_sensor` | `hotStatus` |
 | On | `mdi:power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
+| Pan Status | `mdi:pot-mix` | `binary_sensor` | `panStatus` |
+| Power | `mdi:lightning-bolt` | `sensor` | `power` |
 | Remaining Time | `mdi:timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `mdi:remote` | `binary_sensor` | `attributes.parameters.remoteCtrValid` |
 | Temperature | `mdi:thermometer` | `sensor` | `temp` |
@@ -229,13 +231,16 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | --- | --- | --- | --- |
 | Delay Time | `mdi:timer-plus` | `number` | `startProgram.delayTime` |
 | Program |  | `select` | `startProgram.program` |
+| Suggested weight | `mdi:weight-kilogram` | `sensor` | `startProgram.weight` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Acqua Plus |  | `binary_sensor` | `acquaplus` |
 | Anti-Crease |  | `binary_sensor` | `anticrease` |
+| Current Electricity Used | `mdi:lightning-bolt` | `sensor` | `currentElectricityUsed` |
 | Current Program | `mdi:tumble-dryer` | `sensor` | `prCode` |
 | Current Temperature | `mdi:thermometer` | `sensor` | `temp` |
+| Current Water Used | `mdi:water` | `sensor` | `currentWaterUsed` |
 | Dirt level | `mdi:liquid-spot` | `sensor` | `dirtyLevel` |
 | Dry level | `mdi:hair-dryer` | `sensor` | `dryLevel` |
 | Extra Rinse 1 |  | `binary_sensor` | `extraRinse1` |
@@ -249,6 +254,9 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Remote Control | `mdi:remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
 | Spin Speed | `mdi:fast-forward-outline` | `sensor` | `spinSpeed` |
 | Steam level | `mdi:smoke` | `sensor` | `steamLevel` |
+| Total Power |  | `sensor` | `totalElectricityUsed` |
+| Total Wash Cycle | `mdi:counter` | `sensor` | `totalWashCycle` |
+| Total Water |  | `sensor` | `totalWaterUsed` |
 
 ### Washing machine
 #### Controls

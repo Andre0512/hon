@@ -1,7 +1,7 @@
 # Haier hOn
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/Andre0512/hon?color=green)](https://github.com/Andre0512/hon/releases/latest)
-![GitHub](https://img.shields.io/github/license/Andre0512/hon?color=red)
-[![Home Assistant installs](https://img.shields.io/badge/dynamic/json?color=blue&label=usage&suffix=%20installs&cacheSeconds=15600&url=https://analytics.home-assistant.io/custom_integrations.json&query=$.hon.total)](https://analytics.home-assistant.io/)  
+[![GitHub](https://img.shields.io/github/license/Andre0512/hon?color=red)](https://github.com/Andre0512/hon/blob/main/LICENSE)
+[![GitHub all releases](https://img.shields.io/github/downloads/Andre0512/hon/total?color=blue)](https://tooomm.github.io/github-release-stats/?username=Andre0512&repository=hon)  
 Support for home appliances of Haier's mobile app hOn. 
 
 ## Supported Appliances
