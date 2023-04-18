@@ -55,7 +55,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Current Electricity Used",
             state_class=SensorStateClass.MEASUREMENT,
             device_class=SensorDeviceClass.POWER,
-            native_unit_of_measurement=UnitOfPower.KILO_WATT,
+            native_unit_of_measurement=UnitOfPower.KILO_WATT_HOUR,
             icon="mdi:lightning-bolt",
         ),
         SensorEntityDescription(
@@ -146,6 +146,48 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         ),
     ),
     "WD": (
+        SensorEntityDescription(
+            key="totalElectricityUsed",
+            name="Total Power",
+            device_class=SensorDeviceClass.ENERGY,
+            state_class=SensorStateClass.TOTAL_INCREASING,
+            native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
+        ),
+        SensorEntityDescription(
+            key="totalWaterUsed",
+            name="Total Water",
+            device_class=SensorDeviceClass.WATER,
+            state_class=SensorStateClass.TOTAL_INCREASING,
+            native_unit_of_measurement=UnitOfVolume.LITERS,
+        ),
+        SensorEntityDescription(
+            key="totalWashCycle",
+            name="Total Wash Cycle",
+            state_class=SensorStateClass.TOTAL_INCREASING,
+            icon="mdi:counter",
+        ),
+        SensorEntityDescription(
+            key="currentElectricityUsed",
+            name="Current Electricity Used",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.POWER,
+            native_unit_of_measurement=UnitOfPower.KILO_WATT_HOUR,
+            icon="mdi:lightning-bolt",
+        ),
+        SensorEntityDescription(
+            key="currentWaterUsed",
+            name="Current Water Used",
+            state_class=SensorStateClass.MEASUREMENT,
+            icon="mdi:water",
+        ),
+        SensorEntityDescription(
+            key="startProgram.weight",
+            name="Suggested weight",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfMass.KILOGRAMS,
+            icon="mdi:weight-kilogram",
+        ),
         SensorEntityDescription(
             key="machMode",
             name="Machine Status",
