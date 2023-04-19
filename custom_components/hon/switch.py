@@ -82,6 +82,13 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             turn_on_key="startProgram",
             turn_off_key="stopProgram",
         ),
+
+        HonSwitchEntityDescription(
+            key="startProgram.preheatStatus",
+            name="Preheat",
+            icon="mdi:thermometer-chevron-up",
+            entity_category=EntityCategory.CONFIG,
+        ),
     ),
 
     "WD": (
