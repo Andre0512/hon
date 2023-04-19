@@ -98,6 +98,9 @@ For every device exists a hidden button which can be used to log all info of you
 - Haier HD80-A3959
 - Haier HWO60SM2F3XH
 - Hoover H-WASH 500
+- Candy CIS633SCTTWIFI
+- Haier XIB 3B2SFS-80
+- Haier XIB 6B2D3FB
 
 ## About this Repo
 The existing integrations missed some features from the app I liked to have in HomeAssistant.
