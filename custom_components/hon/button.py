@@ -14,18 +14,6 @@ from .hon import HonCoordinator, HonEntity
 _LOGGER = logging.getLogger(__name__)
 
 BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
-    "OV": (
-        ButtonEntityDescription(
-            key="startProgram",
-            name="Start Program",
-            icon="mdi:power-cycle",
-        ),
-        ButtonEntityDescription(
-            key="stopProgram",
-            name="Stop Program",
-            icon="mdi:power-off",
-        ),
-    ),
     "IH": (
         ButtonEntityDescription(
             key="startProgram",
