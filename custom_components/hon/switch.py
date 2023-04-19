@@ -1,5 +1,4 @@
 import logging
-
 from dataclasses import dataclass
 from typing import Any
 
@@ -101,6 +100,51 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             turn_off_key="resumeProgram",
         ),
     ),
+    "DW": (
+        HonSwitchEntityDescription(
+            key="active",
+            name="Dish Washer",
+            icon="mdi:dishwasher",
+            turn_on_key="startProgram",
+            turn_off_key="stopProgram",
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.extraDry",
+            name="Extra Dry",
+            icon="mdi:hair-dryer",
+            entity_category=EntityCategory.CONFIG,
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.halfLoad",
+            name="Half Load",
+            icon="mdi:fraction-one-half",
+            entity_category=EntityCategory.CONFIG,
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.openDoor",
+            name="Open Door",
+            icon="mdi:door-open",
+            entity_category=EntityCategory.CONFIG,
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.threeInOne",
+            name="Three in One",
+            icon="mdi:numeric-3-box-outline",
+            entity_category=EntityCategory.CONFIG,
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.ecoExpress",
+            name="Eco Express",
+            icon="mdi:sprout",
+            entity_category=EntityCategory.CONFIG,
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.addDish",
+            name="Add Dish",
+            icon="mdi:silverware-fork-knife",
+            entity_category=EntityCategory.CONFIG,
+        ),
+    ),
 }
 
 
@@ -150,13 +194,6 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"
 
-    def available(self) -> bool:
-        if self.entity_category == EntityCategory.CONFIG:
-            return (
-                self._device.settings[self.entity_description.key].typology != "fixed"
-            )
-        return True
-
     @property
     def is_on(self) -> bool | None:
         """Return True if entity is on."""
@@ -172,7 +209,9 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
     async def async_turn_on(self, **kwargs: Any) -> None:
         if self.entity_category == EntityCategory.CONFIG:
             setting = self._device.settings[self.entity_description.key]
-            setting.value = setting.max
+            setting.value = (
+                setting.max if isinstance(setting, HonParameterRange) else "1"
+            )
             self.async_write_ha_state()
         else:
             await self._device.commands[self.entity_description.turn_on_key].send()
@@ -180,7 +219,9 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
     async def async_turn_off(self, **kwargs: Any) -> None:
         if self.entity_category == EntityCategory.CONFIG:
             setting = self._device.settings[self.entity_description.key]
-            setting.value = setting.min
+            setting.value = (
+                setting.min if isinstance(setting, HonParameterRange) else "0"
+            )
             self.async_write_ha_state()
         else:
             await self._device.commands[self.entity_description.turn_off_key].send()
