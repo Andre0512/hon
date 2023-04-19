@@ -172,13 +172,12 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Start Program | `mdi:power-cycle` | `button` | `startProgram` |
-| Stop Program | `mdi:power-off` | `button` | `stopProgram` |
+| Oven | `mdi:toaster-oven` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Delay time | `mdi:timer-plus` | `number` | `startProgram.delayTime` |
-| Preheat |  | `select` | `startProgram.preheatStatus` |
+| Preheat | `mdi:thermometer-chevron-up` | `switch` | `startProgram.preheatStatus` |
 | Program |  | `select` | `startProgram.program` |
 | Program Duration | `mdi:timelapse` | `number` | `startProgram.prTime` |
 | Target Temperature | `mdi:thermometer` | `number` | `startProgram.tempSel` |
