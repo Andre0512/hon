@@ -102,6 +102,29 @@ For every device exists a hidden button which can be used to log all info of you
 - Haier XIB 3B2SFS-80
 - Haier XIB 6B2D3FB
 
+## Supported Languages
+Translation of internal names like programs are available for all languages which are official supported by the hOn app:
+* Chinese
+* Croatian
+* Czech
+* Dutch
+* English
+* French
+* German
+* Greek
+* Hebrew
+* Italian
+* Polish
+* Portuguese
+* Romanian
+* Russian
+* Serbian
+* Slovak
+* Slovenian
+* Spanish
+* Turkish
+
+
 ## About this Repo
 The existing integrations missed some features from the app I liked to have in HomeAssistant.
 I tried to create a pull request, but in the structures of these existing repos, I find it hard to fit in my needs, so I basically rewrote everything. 

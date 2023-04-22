@@ -4,26 +4,27 @@ from pathlib import Path
 
 from pyhon import HonAPI
 
+# These languages are official supported by hOn
 LANGUAGES = [
-    "cs",
-    "de",
-    "el",
-    "en",
-    "es",
-    "fr",
-    "he",
-    "hr",
-    "it",
-    "nl",
-    "pl",
-    "pt",
-    "ro",
-    "ru",
-    "sk",
-    "sl",
-    "sr",
-    "tr",
-    "zh",
+    "cs",  # Czech
+    "de",  # German
+    "el",  # Greek
+    "en",  # English
+    "es",  # Spanish
+    "fr",  # French
+    "he",  # Hebrew
+    "hr",  # Croatian
+    "it",  # Italian
+    "nl",  # Dutch
+    "pl",  # Polish
+    "pt",  # Portuguese
+    "ro",  # Romanian
+    "ru",  # Russian
+    "sk",  # Slovak
+    "sl",  # Slovenian
+    "sr",  # Serbian
+    "tr",  # Turkish
+    "zh",  # Chinese
 ]
 
 WASHING_PR_PHASE = {
