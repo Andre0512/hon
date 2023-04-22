@@ -65,6 +65,19 @@
                     "5": "Klaar",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Niet drogen",
+                    "1": "Strijken",
+                    "2": "Kastdroog",
+                    "3": "Kastdroog",
+                    "4": "Extra droog",
+                    "12": "Strijken",
+                    "13": "Kastdroog",
+                    "14": "Klaar om te dragen",
+                    "15": "Extra droog"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "Wol/Fijne was 49'",
                     "wool_dry": "Wol drogen",
                     "wool_soft_care": "Wol & Soft Care"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Niet drogen",
+                    "1": "Strijken",
+                    "2": "Kastdroog",
+                    "3": "Kastdroog",
+                    "4": "Extra droog",
+                    "12": "Strijken",
+                    "13": "Kastdroog",
+                    "14": "Klaar om te dragen",
+                    "15": "Extra droog"
                 }
             }
         }

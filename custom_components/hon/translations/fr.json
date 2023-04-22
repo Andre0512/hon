@@ -65,6 +65,19 @@
                     "5": "Pr\u00eat",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Pas de s\u00e9chage",
+                    "1": "Fer",
+                    "2": "Pr\u00eat \u00e0 ranger",
+                    "3": "Pr\u00eat \u00e0 ranger",
+                    "4": "Extra sec",
+                    "12": "Fer",
+                    "13": "Pr\u00eat \u00e0 ranger",
+                    "14": "Pr\u00eat \u00e0 porter",
+                    "15": "Extra sec"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "Laine/D\u00e9licat 49'",
                     "wool_dry": "S\u00e9chage de la laine",
                     "wool_soft_care": "Laine & Soin Doux"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Pas de s\u00e9chage",
+                    "1": "Fer",
+                    "2": "Pr\u00eat \u00e0 ranger",
+                    "3": "Pr\u00eat \u00e0 ranger",
+                    "4": "Extra sec",
+                    "12": "Fer",
+                    "13": "Pr\u00eat \u00e0 ranger",
+                    "14": "Pr\u00eat \u00e0 porter",
+                    "15": "Extra sec"
                 }
             }
         }

@@ -65,6 +65,19 @@
                     "5": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "\u05dc\u05dc\u05d0 \u05d9\u05d9\u05d1\u05d5\u05e9",
+                    "1": "\u05d1\u05bc\u05b7\u05e8\u05d6\u05b6\u05dc",
+                    "2": "\u05dc\u05d0 \u05dc\u05d9\u05d9\u05d1\u05e9 \u05d1\u05e8\u05d6\u05dc",
+                    "3": "\u05d0\u05e8\u05d5\u05df \u05d9\u05d1\u05e9",
+                    "4": "\u05d9\u05d1\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3",
+                    "12": "\u05d1\u05bc\u05b7\u05e8\u05d6\u05b6\u05dc",
+                    "13": "\u05d0\u05e8\u05d5\u05df \u05d9\u05d1\u05e9",
+                    "14": "Ready to wear",
+                    "15": "\u05d9\u05d1\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3"
+                }
             }
         },
         "select": {
@@ -302,6 +315,19 @@
                     "wool_and_delicates_49": "Wool/Delicates 49'",
                     "wool_dry": "\u05e6\u05de\u05e8 \u05d9\u05d1\u05e9",
                     "wool_soft_care": "Wool & Soft Care"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "\u05dc\u05dc\u05d0 \u05d9\u05d9\u05d1\u05d5\u05e9",
+                    "1": "\u05d1\u05bc\u05b7\u05e8\u05d6\u05b6\u05dc",
+                    "2": "\u05dc\u05d0 \u05dc\u05d9\u05d9\u05d1\u05e9 \u05d1\u05e8\u05d6\u05dc",
+                    "3": "\u05d0\u05e8\u05d5\u05df \u05d9\u05d1\u05e9",
+                    "4": "\u05d9\u05d1\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3",
+                    "12": "\u05d1\u05bc\u05b7\u05e8\u05d6\u05b6\u05dc",
+                    "13": "\u05d0\u05e8\u05d5\u05df \u05d9\u05d1\u05e9",
+                    "14": "Ready to wear",
+                    "15": "\u05d9\u05d1\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3"
                 }
             }
         }

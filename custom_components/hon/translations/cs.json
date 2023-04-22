@@ -65,6 +65,19 @@
                     "5": "P\u0159ipraveno",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Bez su\u0161en\u00ed",
+                    "1": "\u017dehlen\u00ed",
+                    "2": "Do sk\u0159\u00edn\u011b",
+                    "3": "Do sk\u0159\u00edn\u011b",
+                    "4": "Extra such\u00e9",
+                    "12": "\u017dehlen\u00ed",
+                    "13": "Do sk\u0159\u00edn\u011b",
+                    "14": "P\u0159ipraveno k oble\u010den\u00ed",
+                    "15": "Extra such\u00e9"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "Vlna/Jemn\u00e9 49'",
                     "wool_dry": "Vlna - such\u00e9",
                     "wool_soft_care": "Vlna & M\u0115kk\u00e1 P\u00e9\u010de"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Bez su\u0161en\u00ed",
+                    "1": "\u017dehlen\u00ed",
+                    "2": "Do sk\u0159\u00edn\u011b",
+                    "3": "Do sk\u0159\u00edn\u011b",
+                    "4": "Extra such\u00e9",
+                    "12": "\u017dehlen\u00ed",
+                    "13": "Do sk\u0159\u00edn\u011b",
+                    "14": "P\u0159ipraveno k oble\u010den\u00ed",
+                    "15": "Extra such\u00e9"
                 }
             }
         }

@@ -49,28 +49,13 @@
                     "103": "Remote"
                 }
             },
-            "tumbledryerprogramphase": {
-                "state": {
-                    "0": "Waiting",
-                    "2": "Drying",
-                    "3": "Cooldown",
-                    "11": "11"
-                }
-            },
+
             "tumbledryertemplevel": {
                 "state": {
                     "1": "Cool",
                     "2": "Low temperature L-1",
                     "3": "Middle temperature L-2",
                     "4": "High temperature L-3"
-                }
-            },
-            "tumbledryerdrylevel": {
-                "state": {
-                    "3": "Cupboard dry",
-                    "12": "Ready to Iron H-1",
-                    "13": "Ready to Store H-2",
-                    "14": "Extra Dry H-3"
                 }
             },
             "mode_dw": {
@@ -147,9 +132,35 @@
                     "5": "Ready",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "No drying",
+                    "1": "Iron dry",
+                    "2": "Hang",
+                    "3": "Cupboard Dry",
+                    "4": "Extra dry",
+                    "12": "Iron dry",
+                    "13": "Cupboard Dry",
+                    "14": "Ready to wear",
+                    "15": "Extra dry"
+                }
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "0": "No drying",
+                    "1": "Iron dry",
+                    "2": "Hang",
+                    "3": "Cupboard Dry",
+                    "4": "Extra dry",
+                    "12": "Iron dry",
+                    "13": "Cupboard Dry",
+                    "14": "Ready to wear",
+                    "15": "Extra dry"
+                }
+            },
             "programs_dw": {
                 "state": {
                     "59_min": "Rapid 59'",

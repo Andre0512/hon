@@ -65,6 +65,19 @@
                     "5": "\u5c31\u7eea",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "\u4e0d\u70d8\u5e72",
+                    "1": "\u71a8\u70eb",
+                    "2": "\u8863\u67dc\u5c31\u7eea",
+                    "3": "\u8863\u67dc\u5c31\u7eea",
+                    "4": "\u7279\u5e72",
+                    "12": "\u71a8\u70eb",
+                    "13": "\u8863\u67dc\u5c31\u7eea",
+                    "14": "\u53ef\u7a7f",
+                    "15": "\u7279\u5e72"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "\u7f8a\u6bdb",
                     "wool_dry": "\u7f8a\u6bdb\u8863\u7269\u70d8\u5e72",
                     "wool_soft_care": "\u7f8a\u6bdb"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "\u4e0d\u70d8\u5e72",
+                    "1": "\u71a8\u70eb",
+                    "2": "\u8863\u67dc\u5c31\u7eea",
+                    "3": "\u8863\u67dc\u5c31\u7eea",
+                    "4": "\u7279\u5e72",
+                    "12": "\u71a8\u70eb",
+                    "13": "\u8863\u67dc\u5c31\u7eea",
+                    "14": "\u53ef\u7a7f",
+                    "15": "\u7279\u5e72"
                 }
             }
         }

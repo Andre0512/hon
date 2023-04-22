@@ -65,6 +65,19 @@
                     "5": "Bereit",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Keine Trocknung",
+                    "1": "B\u00fcgeln",
+                    "2": "W\u00e4sche fertig",
+                    "3": "W\u00e4sche fertig",
+                    "4": "Extra trocken",
+                    "12": "B\u00fcgeln",
+                    "13": "W\u00e4sche fertig",
+                    "14": "Bereit zum Anziehen",
+                    "15": "Extra trocken"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "Wolle/Feinw\u00e4sche 49'",
                     "wool_dry": "Wolle trocknen",
                     "wool_soft_care": "Wolle & Soft Care"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Keine Trocknung",
+                    "1": "B\u00fcgeln",
+                    "2": "W\u00e4sche fertig",
+                    "3": "W\u00e4sche fertig",
+                    "4": "Extra trocken",
+                    "12": "B\u00fcgeln",
+                    "13": "W\u00e4sche fertig",
+                    "14": "Bereit zum Anziehen",
+                    "15": "Extra trocken"
                 }
             }
         }

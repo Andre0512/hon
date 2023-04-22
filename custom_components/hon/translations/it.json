@@ -49,28 +49,12 @@
                     "103": "Controllo Remoto"
                 }
             },
-            "tumbledryerprogramphase": {
-                "state": {
-                    "0": "In Attesa",
-                    "2": "Asciugatura",
-                    "3": "Raffreddamento",
-                    "11": "11"
-                }
-            },
             "tumbledryertemplevel": {
                 "state": {
                     "1": "Freddo",
                     "2": "Bassa temperatura L-1",
                     "3": "Media temperature L-2",
                     "4": "Alta temperature L-3"
-                }
-            },
-            "tumbledryerdrylevel": {
-                "state": {
-                    "3": "Armadio",
-                    "12": "Pronto Stiro",
-                    "13": "Pronto Armadio",
-                    "14": "Extra Dry H-3"
                 }
             },
             "washing_modes": {
@@ -136,6 +120,19 @@
                     "4": "Asciugatura",
                     "5": "Pronta",
                     "6": "Risciacquo caldo "
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Nessuna asciugatura",
+                    "1": "Stiro facile",
+                    "2": "Appendere",
+                    "3": "Armadio",
+                    "4": "Extra asciutto",
+                    "12": "Stiro facile",
+                    "13": "Armadio",
+                    "14": "Pronto da indossare",
+                    "15": "Extra asciutto"
                 }
             }
         },
@@ -776,6 +773,19 @@
                     "wool_and_delicates_49": "Lana e Delicati 49'",
                     "wool_dry": "Asciugatura Lana",
                     "wool_soft_care": "Lana e Soft Care"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Nessuna asciugatura",
+                    "1": "Stiro facile",
+                    "2": "Appendere",
+                    "3": "Armadio",
+                    "4": "Extra asciutto",
+                    "12": "Stiro facile",
+                    "13": "Armadio",
+                    "14": "Pronto da indossare",
+                    "15": "Extra asciutto"
                 }
             }
         }

@@ -65,6 +65,19 @@
                     "5": "Preg\u0103tit",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "F\u0103r\u0103 uscare",
+                    "1": "C\u0103lcare",
+                    "2": "\u0218ifonier preg\u0103tit",
+                    "3": "\u0218ifonier preg\u0103tit",
+                    "4": "Uscare suplimentar\u0103",
+                    "12": "C\u0103lcare",
+                    "13": "\u0218ifonier preg\u0103tit",
+                    "14": "Gata de purtat",
+                    "15": "Uscare suplimentar\u0103"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "L\u00e2n\u0103/Delicate 49'",
                     "wool_dry": "Uscarea l\u00e2nii",
                     "wool_soft_care": "L\u00e2n\u0103 & \u00cengrijire Bl\u00e2nd\u0103"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "F\u0103r\u0103 uscare",
+                    "1": "C\u0103lcare",
+                    "2": "\u0218ifonier preg\u0103tit",
+                    "3": "\u0218ifonier preg\u0103tit",
+                    "4": "Uscare suplimentar\u0103",
+                    "12": "C\u0103lcare",
+                    "13": "\u0218ifonier preg\u0103tit",
+                    "14": "Gata de purtat",
+                    "15": "Uscare suplimentar\u0103"
                 }
             }
         }

@@ -65,6 +65,19 @@
                     "5": "Gotowe",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Bez suszenia",
+                    "1": "Prasowanie",
+                    "2": "Gotowe do garderoby",
+                    "3": "Gotowe do garderoby",
+                    "4": "Ekstra suchy",
+                    "12": "Prasowanie",
+                    "13": "Gotowe do garderoby",
+                    "14": "Gotowe do w\u0142o\u017cenia",
+                    "15": "Ekstra suchy"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "We\u0142na/Delikatne 49'",
                     "wool_dry": "Suszenie we\u0142ny",
                     "wool_soft_care": "We\u0142na & Soft Care"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Bez suszenia",
+                    "1": "Prasowanie",
+                    "2": "Gotowe do garderoby",
+                    "3": "Gotowe do garderoby",
+                    "4": "Ekstra suchy",
+                    "12": "Prasowanie",
+                    "13": "Gotowe do garderoby",
+                    "14": "Gotowe do w\u0142o\u017cenia",
+                    "15": "Ekstra suchy"
                 }
             }
         }

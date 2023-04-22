@@ -65,6 +65,19 @@
                     "5": "Listo",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Sin secado",
+                    "1": "Planchar",
+                    "2": "Listo para guardar",
+                    "3": "Listo para guardar",
+                    "4": "Extraseco",
+                    "12": "Planchar",
+                    "13": "Listo para guardar",
+                    "14": "Listo para llevar",
+                    "15": "Extraseco"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "Lana/Delicados 49'",
                     "wool_dry": "Secado lana",
                     "wool_soft_care": "Lana & Soft Care"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Sin secado",
+                    "1": "Planchar",
+                    "2": "Listo para guardar",
+                    "3": "Listo para guardar",
+                    "4": "Extraseco",
+                    "12": "Planchar",
+                    "13": "Listo para guardar",
+                    "14": "Listo para llevar",
+                    "15": "Extraseco"
                 }
             }
         }

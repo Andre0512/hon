@@ -65,6 +65,19 @@
                     "5": "Pripravljen",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Brez su\u0161enja",
+                    "1": "Likanje",
+                    "2": "Suho za omaro",
+                    "3": "Suho za omaro",
+                    "4": "Zelo suho",
+                    "12": "Likanje",
+                    "13": "Suho za omaro",
+                    "14": "Pripravljeno za uporabo",
+                    "15": "Zelo suho"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "Volna/Ob\u010dutljive tkanine 49'",
                     "wool_dry": "Su\u0161enje volne",
                     "wool_soft_care": "Volna & Nega Za Mehkobo"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Brez su\u0161enja",
+                    "1": "Likanje",
+                    "2": "Suho za omaro",
+                    "3": "Suho za omaro",
+                    "4": "Zelo suho",
+                    "12": "Likanje",
+                    "13": "Suho za omaro",
+                    "14": "Pripravljeno za uporabo",
+                    "15": "Zelo suho"
                 }
             }
         }

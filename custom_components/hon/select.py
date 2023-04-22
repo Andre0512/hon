@@ -54,6 +54,13 @@ SELECTS = {
             icon="mdi:timer",
             unit_of_measurement=UnitOfTime.MINUTES,
         ),
+        SelectEntityDescription(
+            key="startProgram.dryLevel",
+            name="Dry level",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:hair-dryer",
+            translation_key="dry_levels",
+        ),
     ),
     "WD": (
         SelectEntityDescription(
@@ -130,10 +137,10 @@ class HonSelectEntity(HonEntity, SelectEntity):
 
     @property
     def current_option(self) -> str | None:
-        value = self._device.settings[self.entity_description.key].value
-        if value is None or value not in self._attr_options:
+        value = self._device.settings.get(self.entity_description.key)
+        if value is None or value.value not in self._attr_options:
             return None
-        return value
+        return value.value
 
     async def async_select_option(self, option: str) -> None:
         self._device.settings[self.entity_description.key].value = option
@@ -141,12 +148,13 @@ class HonSelectEntity(HonEntity, SelectEntity):
 
     @callback
     def _handle_coordinator_update(self):
-        setting = self._device.settings[self.entity_description.key]
-        if not isinstance(
-            self._device.settings[self.entity_description.key], HonParameterFixed
-        ):
-            self._attr_options: list[str] = setting.values
+        setting = self._device.settings.get(self.entity_description.key)
+        if setting is None:
+            self._attr_available = False
+            self._attr_options: list[str] = []
+            self._attr_native_value = None
         else:
-            self._attr_options = [setting.value]
-        self._attr_native_value = setting.value
+            self._attr_available = True
+            self._attr_options: list[str] = setting.values
+            self._attr_native_value = setting.value
         self.async_write_ha_state()

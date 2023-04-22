@@ -47,13 +47,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTime.MINUTES,
         ),
         NumberEntityDescription(
-            key="startProgram.dryLevel",
-            name="Dry level",
-            entity_category=EntityCategory.CONFIG,
-            icon="mdi:hair-dryer",
-            translation_key="tumbledryerdrylevel",
-        ),
-        NumberEntityDescription(
             key="startProgram.tempLevel",
             name="Temperature level",
             entity_category=EntityCategory.CONFIG,

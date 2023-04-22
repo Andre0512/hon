@@ -65,6 +65,19 @@
                     "5": "Haz\u0131r",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Kurutma yok",
+                    "1": "\u00dct\u00fc",
+                    "2": "Gard\u0131rop haz\u0131r",
+                    "3": "Gard\u0131rop haz\u0131r",
+                    "4": "Ekstra kurutma",
+                    "12": "\u00dct\u00fc",
+                    "13": "Gard\u0131rop haz\u0131r",
+                    "14": "Giyilmeye haz\u0131r",
+                    "15": "Ekstra kurutma"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "Y\u00fcnl\u00fc/Hassas 49'",
                     "wool_dry": "Y\u00fcnl\u00fc kurutma",
                     "wool_soft_care": "Y\u00fcnl\u00fc & Hassas"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Kurutma yok",
+                    "1": "\u00dct\u00fc",
+                    "2": "Gard\u0131rop haz\u0131r",
+                    "3": "Gard\u0131rop haz\u0131r",
+                    "4": "Ekstra kurutma",
+                    "12": "\u00dct\u00fc",
+                    "13": "Gard\u0131rop haz\u0131r",
+                    "14": "Giyilmeye haz\u0131r",
+                    "15": "Ekstra kurutma"
                 }
             }
         }

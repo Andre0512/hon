@@ -86,12 +86,27 @@ DISHWASHER_PR_PHASE = {
     6: "WASHING_CMD&CTRL.PHASE_HOT_RINSE.TITLE",
 }
 
+TUMBLE_DRYER_DRY_LEVEL = {
+    0: "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.NO_DRY",
+    1: "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OPTIONS_VALUES_DESCRIPTION.IRON_DRY",
+    2: "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.NO_DRY_IRON_TITLE",
+    3: "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.CUPBOARD_DRY_TITLE",
+    4: "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.EXTRA_DRY_TITLE",
+    12: "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OPTIONS_VALUES_DESCRIPTION.IRON_DRY",
+    13: "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.CUPBOARD_DRY_TITLE",
+    14: "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.READY_TO_WEAR_TITLE",
+    15: "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.EXTRA_DRY_TITLE",
+}
+
 SENSOR = {
     "washing_modes": MACH_MODE,
     "program_phases_wm": WASHING_PR_PHASE,
     "program_phases_td": TUMBLE_DRYER_PR_PHASE,
     "program_phases_dw": DISHWASHER_PR_PHASE,
+    "dry_levels": TUMBLE_DRYER_DRY_LEVEL,
 }
+
+SELECT = {"dry_levels": TUMBLE_DRYER_DRY_LEVEL}
 
 PROGRAMS = {
     "programs_dw": "PROGRAMS.DW",
@@ -158,6 +173,14 @@ def load_keys(full_key, json_data):
     }
 
 
+def add_data(old, original, fallback, data, name, entity="sensor"):
+    sensor = old.setdefault("entity", {}).setdefault(entity, {})
+    for number, phase in data.items():
+        state = sensor.setdefault(name, {}).setdefault("state", {})
+        if key := load_key(phase, original, fallback):
+            state[str(number)] = key
+
+
 def main():
     hass = load_hass_translations()
     hon = load_hon_translations()
@@ -167,11 +190,9 @@ def main():
         original = load_json(hon.get(language, ""))
         old = load_json(hass.get(language, ""))
         for name, data in SENSOR.items():
-            sensor = old.setdefault("entity", {}).setdefault("sensor", {})
-            for number, phase in data.items():
-                state = sensor.setdefault(name, {}).setdefault("state", {})
-                if key := load_key(phase, original, fallback):
-                    state[str(number)] = key
+            add_data(old, original, fallback, data, name)
+        for name, data in SELECT.items():
+            add_data(old, original, fallback, data, name, "select")
         for name, program in PROGRAMS.items():
             select = old.setdefault("entity", {}).setdefault("select", {})
             select.setdefault(name, {})["state"] = load_keys(program, original)

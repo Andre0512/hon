@@ -142,7 +142,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="dryLevel",
             name="Dry level",
             icon="mdi:hair-dryer",
-            translation_key="tumbledryerdrylevel",
+            translation_key="dry_levels",
         ),
         SensorEntityDescription(
             key="tempLevel",

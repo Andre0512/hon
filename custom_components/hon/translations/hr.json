@@ -65,6 +65,19 @@
                     "5": "Spremno",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Bez su\u0161enja",
+                    "1": "Suho za gla\u010danje",
+                    "2": "Suho za spremanje",
+                    "3": "Suho za spremanje",
+                    "4": "Potpuno suho",
+                    "12": "Suho za gla\u010danje",
+                    "13": "Suho za spremanje",
+                    "14": "Spremno za no\u0161enje",
+                    "15": "Potpuno suho"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "Vuna/Osjetljivo 49'",
                     "wool_dry": "Suha vuna",
                     "wool_soft_care": "Vuna & Mekana Njega"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Bez su\u0161enja",
+                    "1": "Suho za gla\u010danje",
+                    "2": "Suho za spremanje",
+                    "3": "Suho za spremanje",
+                    "4": "Potpuno suho",
+                    "12": "Suho za gla\u010danje",
+                    "13": "Suho za spremanje",
+                    "14": "Spremno za no\u0161enje",
+                    "15": "Potpuno suho"
                 }
             }
         }

@@ -65,6 +65,19 @@
                     "5": "Pronto",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Sem secagem",
+                    "1": "Engomar",
+                    "2": "Guarda-Roupa pronto",
+                    "3": "Guarda-Roupa pronto",
+                    "4": "Extra seco",
+                    "12": "Engomar",
+                    "13": "Guarda-Roupa pronto",
+                    "14": "Pronto a usar",
+                    "15": "Extra seco"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "L\u00e3s/Delicados 49'",
                     "wool_dry": "Secagem de l\u00e3s",
                     "wool_soft_care": "L\u00e3s & Cuidado Suavidade"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Sem secagem",
+                    "1": "Engomar",
+                    "2": "Guarda-Roupa pronto",
+                    "3": "Guarda-Roupa pronto",
+                    "4": "Extra seco",
+                    "12": "Engomar",
+                    "13": "Guarda-Roupa pronto",
+                    "14": "Pronto a usar",
+                    "15": "Extra seco"
                 }
             }
         }

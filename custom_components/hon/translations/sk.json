@@ -65,6 +65,19 @@
                     "5": "Pripraven\u00e9",
                     "6": "Hot rinse"
                 }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Bez su\u0161enia",
+                    "1": "\u017dehlenie",
+                    "2": "\u0160atn\u00edk pripraven\u00fd",
+                    "3": "\u0160atn\u00edk pripraven\u00fd",
+                    "4": "Extra su\u0161enie",
+                    "12": "\u017dehlenie",
+                    "13": "\u0160atn\u00edk pripraven\u00fd",
+                    "14": "Hotov\u00e9 na nosenie",
+                    "15": "Extra su\u0161enie"
+                }
             }
         },
         "select": {
@@ -704,6 +717,19 @@
                     "wool_and_delicates_49": "Vlna/Jemn\u00e9 49'",
                     "wool_dry": "Vlna such\u00e1",
                     "wool_soft_care": "Vlna & M\u00e4kk\u00e1 starostlivost"
+                }
+            },
+            "dry_levels": {
+                "state": {
+                    "0": "Bez su\u0161enia",
+                    "1": "\u017dehlenie",
+                    "2": "\u0160atn\u00edk pripraven\u00fd",
+                    "3": "\u0160atn\u00edk pripraven\u00fd",
+                    "4": "Extra su\u0161enie",
+                    "12": "\u017dehlenie",
+                    "13": "\u0160atn\u00edk pripraven\u00fd",
+                    "14": "Hotov\u00e9 na nosenie",
+                    "15": "Extra su\u0161enie"
                 }
             }
         }
