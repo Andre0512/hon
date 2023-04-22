@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Klaar",
+                    "1": "Klaar",
+                    "3": "Pauze",
+                    "4": "Gepland",
+                    "5": "Gepland",
+                    "6": "Fout",
+                    "7": "Klaar"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Klaar",
+                    "1": "Wassen",
+                    "2": "Wassen",
+                    "3": "Centrifugeren",
+                    "4": "Spoelen",
+                    "5": "Spoelen",
+                    "6": "Spoelen",
+                    "7": "Drogen",
+                    "9": "Stoom",
+                    "10": "Klaar",
+                    "11": "Centrifugeren",
+                    "12": "Wegen ",
+                    "13": "Wegen ",
+                    "14": "Wassen",
+                    "15": "Wassen",
+                    "16": "Wassen",
+                    "17": "Spoelen",
+                    "18": "Spoelen",
+                    "19": "Gepland",
+                    "20": "Fris houden",
+                    "24": "Opfrissen",
+                    "25": "Wassen",
+                    "26": "Verwarming",
+                    "27": "Wassen"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Klaar",
+                    "1": "Drogen",
+                    "2": "Drogen",
+                    "3": "Afkoelen",
+                    "13": "Afkoelen",
+                    "14": "Drogen",
+                    "15": "Drogen",
+                    "16": "Afkoelen",
+                    "18": "Fris houden",
+                    "19": "Drogen",
+                    "20": "Drogen"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Klaar",
+                    "1": "Voorwassen",
+                    "2": "Wassen",
+                    "3": "Spoelen",
+                    "4": "Drogen",
+                    "5": "Klaar",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

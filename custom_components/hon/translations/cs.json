@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "P\u0159ipraveno",
+                    "1": "P\u0159ipraveno",
+                    "3": "Pozastavit",
+                    "4": "Napl\u00e1nov\u00e1no",
+                    "5": "Napl\u00e1nov\u00e1no",
+                    "6": "Chyba",
+                    "7": "P\u0159ipraveno"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "P\u0159ipraveno",
+                    "1": "Pran\u00ed",
+                    "2": "Pran\u00ed",
+                    "3": "Odst\u0159e\u010fov\u00e1n\u00ed",
+                    "4": "M\u00e1ch\u00e1n\u00ed",
+                    "5": "M\u00e1ch\u00e1n\u00ed",
+                    "6": "M\u00e1ch\u00e1n\u00ed",
+                    "7": "Su\u0161en\u00ed",
+                    "9": "P\u00e1ra",
+                    "10": "P\u0159ipraveno",
+                    "11": "Odst\u0159e\u010fov\u00e1n\u00ed",
+                    "12": "V\u00e1\u017een\u00ed ",
+                    "13": "V\u00e1\u017een\u00ed ",
+                    "14": "Pran\u00ed",
+                    "15": "Pran\u00ed",
+                    "16": "Pran\u00ed",
+                    "17": "M\u00e1ch\u00e1n\u00ed",
+                    "18": "M\u00e1ch\u00e1n\u00ed",
+                    "19": "Napl\u00e1nov\u00e1no",
+                    "20": "Keep Fresh",
+                    "24": "Osv\u011b\u017een\u00ed",
+                    "25": "Pran\u00ed",
+                    "26": "Oh\u0159ev",
+                    "27": "Pran\u00ed"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "P\u0159ipraveno",
+                    "1": "Su\u0161en\u00ed",
+                    "2": "Su\u0161en\u00ed",
+                    "3": "Vychladnut\u00ed",
+                    "13": "Vychladnut\u00ed",
+                    "14": "Su\u0161en\u00ed",
+                    "15": "Su\u0161en\u00ed",
+                    "16": "Vychladnut\u00ed",
+                    "18": "Keep Fresh",
+                    "19": "Su\u0161en\u00ed",
+                    "20": "Su\u0161en\u00ed"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "P\u0159ipraveno",
+                    "1": "P\u0159edp\u00edrka",
+                    "2": "Pran\u00ed",
+                    "3": "M\u00e1ch\u00e1n\u00ed",
+                    "4": "Su\u0161en\u00ed",
+                    "5": "P\u0159ipraveno",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

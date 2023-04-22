@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Haz\u0131r",
+                    "1": "Haz\u0131r",
+                    "3": "Duraklat",
+                    "4": "Planland\u0131",
+                    "5": "Planland\u0131",
+                    "6": "Hata",
+                    "7": "Haz\u0131r"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Haz\u0131r",
+                    "1": "Y\u0131kama",
+                    "2": "Y\u0131kama",
+                    "3": "S\u0131kma",
+                    "4": "Durulama",
+                    "5": "Durulama",
+                    "6": "Durulama",
+                    "7": "Kurutma",
+                    "9": "Buhar",
+                    "10": "Haz\u0131r",
+                    "11": "S\u0131kma",
+                    "12": "Tartma ",
+                    "13": "Tartma ",
+                    "14": "Y\u0131kama",
+                    "15": "Y\u0131kama",
+                    "16": "Y\u0131kama",
+                    "17": "Durulama",
+                    "18": "Durulama",
+                    "19": "Planland\u0131",
+                    "20": "Tazeleme",
+                    "24": "Tazeleme",
+                    "25": "Y\u0131kama",
+                    "26": "Is\u0131tma",
+                    "27": "Y\u0131kama"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Haz\u0131r",
+                    "1": "Kurutma",
+                    "2": "Kurutma",
+                    "3": "So\u011futma",
+                    "13": "So\u011futma",
+                    "14": "Kurutma",
+                    "15": "Kurutma",
+                    "16": "So\u011futma",
+                    "18": "Tazeleme",
+                    "19": "Kurutma",
+                    "20": "Kurutma"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Haz\u0131r",
+                    "1": "\u00d6n Y\u0131kama",
+                    "2": "Y\u0131kama",
+                    "3": "Durulama",
+                    "4": "Kurutma",
+                    "5": "Haz\u0131r",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

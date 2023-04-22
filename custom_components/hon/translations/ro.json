@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Preg\u0103tit",
+                    "1": "Preg\u0103tit",
+                    "3": "Pauz\u0103",
+                    "4": "Programat",
+                    "5": "Programat",
+                    "6": "Eroare",
+                    "7": "Preg\u0103tit"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Preg\u0103tit",
+                    "1": "Sp\u0103lare",
+                    "2": "Sp\u0103lare",
+                    "3": "Stoarcere",
+                    "4": "Cl\u0103tire",
+                    "5": "Cl\u0103tire",
+                    "6": "Cl\u0103tire",
+                    "7": "Uscare",
+                    "9": "Abur",
+                    "10": "Preg\u0103tit",
+                    "11": "Stoarcere",
+                    "12": "C\u00e2nt\u0103rire ",
+                    "13": "C\u00e2nt\u0103rire ",
+                    "14": "Sp\u0103lare",
+                    "15": "Sp\u0103lare",
+                    "16": "Sp\u0103lare",
+                    "17": "Cl\u0103tire",
+                    "18": "Cl\u0103tire",
+                    "19": "Programat",
+                    "20": "Men\u021binere prospe\u021bime",
+                    "24": "Re\u00eemprosp\u0103tare",
+                    "25": "Sp\u0103lare",
+                    "26": "\u00cenc\u0103lzire",
+                    "27": "Sp\u0103lare"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Preg\u0103tit",
+                    "1": "Uscare",
+                    "2": "Uscare",
+                    "3": "R\u0103cire",
+                    "13": "R\u0103cire",
+                    "14": "Uscare",
+                    "15": "Uscare",
+                    "16": "R\u0103cire",
+                    "18": "Men\u021binere prospe\u021bime",
+                    "19": "Uscare",
+                    "20": "Uscare"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Preg\u0103tit",
+                    "1": "Presp\u0103lare",
+                    "2": "Sp\u0103lare",
+                    "3": "Cl\u0103tire",
+                    "4": "Uscare",
+                    "5": "Preg\u0103tit",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

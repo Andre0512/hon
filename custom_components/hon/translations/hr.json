@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Spremno",
+                    "1": "Spremno",
+                    "3": "Zaustavi",
+                    "4": "Zakazano",
+                    "5": "Zakazano",
+                    "6": "Gre\u0161ka",
+                    "7": "Spremno"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Spremno",
+                    "1": "Pranje",
+                    "2": "Pranje",
+                    "3": "Okretaj",
+                    "4": "Ispiranje",
+                    "5": "Ispiranje",
+                    "6": "Ispiranje",
+                    "7": "Su\u0161enje",
+                    "9": "Para",
+                    "10": "Spremno",
+                    "11": "Okretaj",
+                    "12": "Mjerenje te\u017eine ",
+                    "13": "Mjerenje te\u017eine ",
+                    "14": "Pranje",
+                    "15": "Pranje",
+                    "16": "Pranje",
+                    "17": "Ispiranje",
+                    "18": "Ispiranje",
+                    "19": "Zakazano",
+                    "20": "Odr\u017eavanje svje\u017eine",
+                    "24": "Protiv neugodnih mirisa",
+                    "25": "Pranje",
+                    "26": "Grijanje",
+                    "27": "Pranje"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Spremno",
+                    "1": "Su\u0161enje",
+                    "2": "Su\u0161enje",
+                    "3": "Hla\u0111enje",
+                    "13": "Hla\u0111enje",
+                    "14": "Su\u0161enje",
+                    "15": "Su\u0161enje",
+                    "16": "Hla\u0111enje",
+                    "18": "Odr\u017ei svje\u017eim",
+                    "19": "Su\u0161enje",
+                    "20": "Su\u0161enje"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Spremno",
+                    "1": "Pretpranje",
+                    "2": "Pranje",
+                    "3": "Ispiranje",
+                    "4": "Su\u0161enje",
+                    "5": "Spremno",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

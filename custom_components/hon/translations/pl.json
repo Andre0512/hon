@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Gotowe",
+                    "1": "Gotowe",
+                    "3": "Zatrzymaj",
+                    "4": "Zaplanowane",
+                    "5": "Zaplanowane",
+                    "6": "B\u0142\u0105d",
+                    "7": "Gotowe"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Gotowe",
+                    "1": "Pranie",
+                    "2": "Pranie",
+                    "3": "Wirowanie",
+                    "4": "P\u0142ukanie",
+                    "5": "P\u0142ukanie",
+                    "6": "P\u0142ukanie",
+                    "7": "Suszenie",
+                    "9": "Para",
+                    "10": "Gotowe",
+                    "11": "Wirowanie",
+                    "12": "Wa\u017cenie ",
+                    "13": "Wa\u017cenie ",
+                    "14": "Pranie",
+                    "15": "Pranie",
+                    "16": "Pranie",
+                    "17": "P\u0142ukanie",
+                    "18": "P\u0142ukanie",
+                    "19": "Zaplanowane",
+                    "20": "Utrzymaj \u015bwie\u017co\u015b\u0107",
+                    "24": "Od\u015bwie\u017canie",
+                    "25": "Pranie",
+                    "26": "Ogrzewanie",
+                    "27": "Pranie"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Gotowe",
+                    "1": "Suszenie",
+                    "2": "Suszenie",
+                    "3": "Ch\u0142odzenie",
+                    "13": "Ch\u0142odzenie",
+                    "14": "Suszenie",
+                    "15": "Suszenie",
+                    "16": "Ch\u0142odzenie",
+                    "18": "Utrzymaj \u015bwie\u017co\u015b\u0107",
+                    "19": "Suszenie",
+                    "20": "Suszenie"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Gotowe",
+                    "1": "Zmywanie wst\u0119pne",
+                    "2": "Pranie",
+                    "3": "P\u0142ukanie",
+                    "4": "Suszenie",
+                    "5": "Gotowe",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

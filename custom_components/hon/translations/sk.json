@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Pripraven\u00e9",
+                    "1": "Pripraven\u00e9",
+                    "3": "Pozastavi\u0165",
+                    "4": "Napl\u00e1novan\u00e9",
+                    "5": "Napl\u00e1novan\u00e9",
+                    "6": "Chyba",
+                    "7": "Pripraven\u00e9"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Pripraven\u00e9",
+                    "1": "Pranie",
+                    "2": "Pranie",
+                    "3": "Odstre\u010fovanie",
+                    "4": "Oplachovanie",
+                    "5": "Oplachovanie",
+                    "6": "Oplachovanie",
+                    "7": "Su\u0161enie",
+                    "9": "Para",
+                    "10": "Pripraven\u00e9",
+                    "11": "Odstre\u010fovanie",
+                    "12": "V\u00e1\u017eenie ",
+                    "13": "V\u00e1\u017eenie ",
+                    "14": "Pranie",
+                    "15": "Pranie",
+                    "16": "Pranie",
+                    "17": "Oplachovanie",
+                    "18": "Oplachovanie",
+                    "19": "Napl\u00e1novan\u00e9",
+                    "20": "Uchova\u0165 svie\u017ee",
+                    "24": "Osvie\u017eenie",
+                    "25": "Pranie",
+                    "26": "Ohrev",
+                    "27": "Pranie"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Pripraven\u00e9",
+                    "1": "Su\u0161enie",
+                    "2": "Su\u0161enie",
+                    "3": "Schladi\u0165",
+                    "13": "Schladi\u0165",
+                    "14": "Su\u0161enie",
+                    "15": "Su\u0161enie",
+                    "16": "Schladi\u0165",
+                    "18": "Uchova\u0165 svie\u017ee",
+                    "19": "Su\u0161enie",
+                    "20": "Su\u0161enie"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Pripraven\u00e9",
+                    "1": "Predpierka",
+                    "2": "Pranie",
+                    "3": "Oplachovanie",
+                    "4": "Su\u0161enie",
+                    "5": "Pripraven\u00e9",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

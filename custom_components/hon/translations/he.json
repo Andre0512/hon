@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "1": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "3": "\u05d4\u05b7\u05e4\u05e1\u05b8\u05e7\u05b8\u05d4",
+                    "4": "\u05de\u05ea\u05d5\u05d6\u05de\u05df",
+                    "5": "\u05de\u05ea\u05d5\u05d6\u05de\u05df",
+                    "6": "\u05e9\u05c1\u05b0\u05d2\u05b4\u05d9\u05d0\u05b8\u05d4",
+                    "7": "\u05de\u05d5\u05bc\u05db\u05b8\u05df"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "1": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "2": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "3": "Spin",
+                    "4": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "5": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "6": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "7": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1",
+                    "9": "\u05e7\u05b4\u05d9\u05d8\u05d5\u05b9\u05e8",
+                    "10": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "11": "Spin",
+                    "12": "Weighing ",
+                    "13": "Weighing ",
+                    "14": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "15": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "16": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "17": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "18": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "19": "\u05de\u05ea\u05d5\u05d6\u05de\u05df",
+                    "20": "\u05e9\u05de\u05d5\u05e8 \u05e2\u05dc \u05d8\u05e8\u05d9\u05d5\u05ea",
+                    "24": "Refresh",
+                    "25": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "26": "Heating",
+                    "27": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "1": "Drying",
+                    "2": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1",
+                    "3": "Cooldown",
+                    "13": "Cooldown",
+                    "14": "Drying",
+                    "15": "Drying",
+                    "16": "Cooldown",
+                    "18": "Keep Fresh",
+                    "19": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1",
+                    "20": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "1": "Prewash",
+                    "2": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "3": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "4": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1",
+                    "5": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

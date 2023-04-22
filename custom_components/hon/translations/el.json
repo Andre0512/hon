@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "\u0395\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2",
+                    "1": "\u0395\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2",
+                    "3": "\u03a0\u03b1\u03cd\u03c3\u03b7",
+                    "4": "\u03a0\u03c1\u03bf\u03b3\u03c1\u03b1\u03bc\u03bc\u03b1\u03c4\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf\u03c2",
+                    "5": "\u03a0\u03c1\u03bf\u03b3\u03c1\u03b1\u03bc\u03bc\u03b1\u03c4\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf\u03c2",
+                    "6": "\u039b\u03ac\u03b8\u03bf\u03c2",
+                    "7": "\u0395\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "\u0395\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2",
+                    "1": "\u03a0\u03bb\u03cd\u03c3\u03b7",
+                    "2": "\u03a0\u03bb\u03cd\u03c3\u03b7",
+                    "3": "\u03a3\u03c4\u03cd\u03c8\u03b9\u03bc\u03bf",
+                    "4": "\u039e\u03ad\u03b2\u03b3\u03b1\u03bb\u03bc\u03b1",
+                    "5": "\u039e\u03ad\u03b2\u03b3\u03b1\u03bb\u03bc\u03b1",
+                    "6": "\u039e\u03ad\u03b2\u03b3\u03b1\u03bb\u03bc\u03b1",
+                    "7": "\u03a3\u03c4\u03ad\u03b3\u03bd\u03c9\u03bc\u03b1",
+                    "9": "\u0391\u03c4\u03bc\u03cc\u03c2",
+                    "10": "\u0395\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2",
+                    "11": "\u03a3\u03c4\u03cd\u03c8\u03b9\u03bc\u03bf",
+                    "12": "\u0396\u03cd\u03b3\u03b9\u03c3\u03bc\u03b1 ",
+                    "13": "\u0396\u03cd\u03b3\u03b9\u03c3\u03bc\u03b1 ",
+                    "14": "\u03a0\u03bb\u03cd\u03c3\u03b7",
+                    "15": "\u03a0\u03bb\u03cd\u03c3\u03b7",
+                    "16": "\u03a0\u03bb\u03cd\u03c3\u03b7",
+                    "17": "\u039e\u03ad\u03b2\u03b3\u03b1\u03bb\u03bc\u03b1",
+                    "18": "\u039e\u03ad\u03b2\u03b3\u03b1\u03bb\u03bc\u03b1",
+                    "19": "\u03a0\u03c1\u03bf\u03b3\u03c1\u03b1\u03bc\u03bc\u03b1\u03c4\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf\u03c2",
+                    "20": "\u039a\u03c1\u03b1\u03c4\u03ae\u03c3\u03c4\u03b5 \u03c4\u03b7 \u03c6\u03c1\u03b5\u03c3\u03ba\u03ac\u03b4\u03b1",
+                    "24": "\u03a6\u03c1\u03b5\u03c3\u03ba\u03ac\u03c1\u03b9\u03c3\u03bc\u03b1",
+                    "25": "\u03a0\u03bb\u03cd\u03c3\u03b7",
+                    "26": "\u0398\u03ad\u03c1\u03bc\u03b1\u03bd\u03c3\u03b7",
+                    "27": "\u03a0\u03bb\u03cd\u03c3\u03b7"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "\u0395\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2",
+                    "1": "\u03a3\u03c4\u03ad\u03b3\u03bd\u03c9\u03bc\u03b1",
+                    "2": "\u03a3\u03c4\u03ad\u03b3\u03bd\u03c9\u03bc\u03b1",
+                    "3": "\u03a0\u03b5\u03c1\u03af\u03bf\u03b4\u03bf\u03c2 \u03b1\u03bd\u03b1\u03bc\u03bf\u03bd\u03ae\u03c2",
+                    "13": "\u03a0\u03b5\u03c1\u03af\u03bf\u03b4\u03bf\u03c2 \u03b1\u03bd\u03b1\u03bc\u03bf\u03bd\u03ae\u03c2",
+                    "14": "\u03a3\u03c4\u03ad\u03b3\u03bd\u03c9\u03bc\u03b1",
+                    "15": "\u03a3\u03c4\u03ad\u03b3\u03bd\u03c9\u03bc\u03b1",
+                    "16": "\u03a0\u03b5\u03c1\u03af\u03bf\u03b4\u03bf\u03c2 \u03b1\u03bd\u03b1\u03bc\u03bf\u03bd\u03ae\u03c2",
+                    "18": "\u039a\u03c1\u03b1\u03c4\u03ae\u03c3\u03c4\u03b5 \u03c4\u03b7 \u03c6\u03c1\u03b5\u03c3\u03ba\u03ac\u03b4\u03b1",
+                    "19": "\u03a3\u03c4\u03ad\u03b3\u03bd\u03c9\u03bc\u03b1",
+                    "20": "\u03a3\u03c4\u03ad\u03b3\u03bd\u03c9\u03bc\u03b1"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "\u0395\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2",
+                    "1": "\u03a0\u03c1\u03cc\u03c0\u03bb\u03c5\u03c3\u03b7",
+                    "2": "\u03a0\u03bb\u03cd\u03c3\u03b7",
+                    "3": "\u039e\u03ad\u03b2\u03b3\u03b1\u03bb\u03bc\u03b1",
+                    "4": "\u03a3\u03c4\u03ad\u03b3\u03bd\u03c9\u03bc\u03b1",
+                    "5": "\u0395\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

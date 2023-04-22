@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Listo",
+                    "1": "Listo",
+                    "3": "Pausa",
+                    "4": "Programado",
+                    "5": "Programado",
+                    "6": "Error",
+                    "7": "Listo"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Listo",
+                    "1": "Lavado",
+                    "2": "Lavado",
+                    "3": "Centrifugado",
+                    "4": "Aclarado",
+                    "5": "Aclarado",
+                    "6": "Aclarado",
+                    "7": "Secado",
+                    "9": "Vapor",
+                    "10": "Listo",
+                    "11": "Centrifugado",
+                    "12": "Peso ",
+                    "13": "Peso ",
+                    "14": "Lavado",
+                    "15": "Lavado",
+                    "16": "Lavado",
+                    "17": "Aclarado",
+                    "18": "Aclarado",
+                    "19": "Programado",
+                    "20": "Ropa fresca",
+                    "24": "Refrescar",
+                    "25": "Lavado",
+                    "26": "Calentamiento",
+                    "27": "Lavado"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Listo",
+                    "1": "Secado",
+                    "2": "Secado",
+                    "3": "Enfriar",
+                    "13": "Enfriar",
+                    "14": "Secado",
+                    "15": "Secado",
+                    "16": "Enfriar",
+                    "18": "Ropa fresca",
+                    "19": "Secado",
+                    "20": "Secado"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Listo",
+                    "1": "Prelavado",
+                    "2": "Lavado",
+                    "3": "Aclarado",
+                    "4": "Secado",
+                    "5": "Listo",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

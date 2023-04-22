@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Pr\u00eat",
+                    "1": "Pr\u00eat",
+                    "3": "Pause",
+                    "4": "Planifi\u00e9",
+                    "5": "Planifi\u00e9",
+                    "6": "Erreur",
+                    "7": "Pr\u00eat"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Pr\u00eat",
+                    "1": "Lavage",
+                    "2": "Lavage",
+                    "3": "Essorage",
+                    "4": "Rin\u00e7age",
+                    "5": "Rin\u00e7age",
+                    "6": "Rin\u00e7age",
+                    "7": "S\u00e9chage",
+                    "9": "Vapeur d'eau",
+                    "10": "Pr\u00eat",
+                    "11": "Essorage",
+                    "12": "Calcul du poids ",
+                    "13": "Calcul du poids ",
+                    "14": "Lavage",
+                    "15": "Lavage",
+                    "16": "Lavage",
+                    "17": "Rin\u00e7age",
+                    "18": "Rin\u00e7age",
+                    "19": "Planifi\u00e9",
+                    "20": "Keep Fresh",
+                    "24": "Rafra\u00eechissement",
+                    "25": "Lavage",
+                    "26": "Chauffage",
+                    "27": "Lavage"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Pr\u00eat",
+                    "1": "S\u00e9chage",
+                    "2": "S\u00e9chage",
+                    "3": "Refroidissement",
+                    "13": "Refroidissement",
+                    "14": "S\u00e9chage",
+                    "15": "S\u00e9chage",
+                    "16": "Refroidissement",
+                    "18": "Keep Fresh",
+                    "19": "S\u00e9chage",
+                    "20": "S\u00e9chage"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Pr\u00eat",
+                    "1": "Pr\u00e9lavage",
+                    "2": "Lavage",
+                    "3": "Rin\u00e7age",
+                    "4": "S\u00e9chage",
+                    "5": "Pr\u00eat",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

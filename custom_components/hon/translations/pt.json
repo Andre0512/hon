@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Pronto",
+                    "1": "Pronto",
+                    "3": "Pausa",
+                    "4": "Agendado",
+                    "5": "Agendado",
+                    "6": "Erro",
+                    "7": "Pronto"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Pronto",
+                    "1": "Lavar",
+                    "2": "Lavar",
+                    "3": "Centrifugar",
+                    "4": "Lavagem",
+                    "5": "Lavagem",
+                    "6": "Lavagem",
+                    "7": "Secagem",
+                    "9": "Vapor",
+                    "10": "Pronto",
+                    "11": "Centrifugar",
+                    "12": "Pesagem ",
+                    "13": "Pesagem ",
+                    "14": "Lavar",
+                    "15": "Lavar",
+                    "16": "Lavar",
+                    "17": "Lavagem",
+                    "18": "Lavagem",
+                    "19": "Agendado",
+                    "20": "Manter Fresco",
+                    "24": "Refrescar",
+                    "25": "Lavar",
+                    "26": "Aquecimento",
+                    "27": "Lavar"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Pronto",
+                    "1": "Secagem",
+                    "2": "Secagem",
+                    "3": "Arrefecimento",
+                    "13": "Arrefecimento",
+                    "14": "Secagem",
+                    "15": "Secagem",
+                    "16": "Arrefecimento",
+                    "18": "Manter Fresco",
+                    "19": "Secagem",
+                    "20": "Secagem"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Pronto",
+                    "1": "Pr\u00e9-lavagem",
+                    "2": "Lavar",
+                    "3": "Lavagem",
+                    "4": "Secagem",
+                    "5": "Pronto",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

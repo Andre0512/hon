@@ -26,7 +26,7 @@
             "errors": {
                 "state": {
                     "00": "Nessun Errore",
-                    "100000000000": "E2: Controllare se la porta è chiusa correttamente",
+                    "100000000000": "E2: Controllare se la porta \u00e8 chiusa correttamente",
                     "8000000000000": "E4: Controllare l'approvvigionamento idrico"
                 }
             },
@@ -72,13 +72,78 @@
                     "13": "Pronto Armadio",
                     "14": "Extra Dry H-3"
                 }
+            },
+            "washing_modes": {
+                "state": {
+                    "0": "Pronta",
+                    "1": "Pronta",
+                    "3": "Pausa",
+                    "4": "Pianificato",
+                    "5": "Pianificato",
+                    "6": "Errore",
+                    "7": "Pronta"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Pronta",
+                    "1": "Lavaggio",
+                    "2": "Lavaggio",
+                    "3": "Centrifuga",
+                    "4": "Risciacqui",
+                    "5": "Risciacqui",
+                    "6": "Risciacqui",
+                    "7": "Asciugatura",
+                    "9": "Vapore",
+                    "10": "Pronta",
+                    "11": "Centrifuga",
+                    "12": "Pesatura",
+                    "13": "Pesatura",
+                    "14": "Lavaggio",
+                    "15": "Lavaggio",
+                    "16": "Lavaggio",
+                    "17": "Risciacqui",
+                    "18": "Risciacqui",
+                    "19": "Pianificato",
+                    "20": "Keep Fresh",
+                    "24": "Rinfresca",
+                    "25": "Lavaggio",
+                    "26": "Riscaldamento",
+                    "27": "Lavaggio"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Pronta",
+                    "1": "Asciugatura",
+                    "2": "Asciugatura",
+                    "3": "Raffreddamento",
+                    "13": "Raffreddamento",
+                    "14": "Asciugatura",
+                    "15": "Asciugatura",
+                    "16": "Raffreddamento",
+                    "18": "Keep Fresh",
+                    "19": "Asciugatura",
+                    "20": "Asciugatura"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Pronta",
+                    "1": "Prelavaggio",
+                    "2": "Lavaggio",
+                    "3": "Risciacqui",
+                    "4": "Asciugatura",
+                    "5": "Pronta",
+                    "6": "Risciacquo caldo "
+                }
             }
         },
         "select": {
             "programs": {
                 "state": {
-                    "20_degrees_coloured_cottons": "20° Colorati e Cotone",
-                    "20_degrees_new_energy_label": "20°C",
+                    "20_degrees_coloured_cottons": "20\u00b0 Colorati e Cotone",
+                    "20_degrees_new_energy_label": "20\u00b0C",
                     "active_steam": "Vapore",
                     "active_wash": "Lavaggio attivo",
                     "active_wash_steam": "Lavaggio attivo + Vapore",
@@ -89,7 +154,7 @@
                     "all_in_one_59_steam": "Lavaggio attivo + Vapore",
                     "autocare": "Autocare",
                     "autoclean": "Pulizia del tamburo",
-                    "baby_60": "Bambino 60°C",
+                    "baby_60": "Bambino 60\u00b0C",
                     "care_14": "Rapido 14'",
                     "care_30": "Rapido 30'",
                     "care_44": "Rapido 44'",
@@ -115,7 +180,7 @@
                     "fresh_care_steam": "Fresh Care + Vapore",
                     "handwash_wool": "Lavaggio A Mano + Lana",
                     "high_dry": "Asciugatura Alta",
-                    "hqd_20_degrees": "Cotone 20℃",
+                    "hqd_20_degrees": "Cotone 20\u2103",
                     "hqd_allergy": "Anti allergenici",
                     "hqd_autoclean": "Pulizia del tamburo",
                     "hqd_babycare": "Bambino",
@@ -178,14 +243,14 @@
                     "hqd_wool": "Lana",
                     "hqd_working_suit": "Completo da lavoro",
                     "hygiene_59": "Igiene Plus 59'",
-                    "hygiene_60": "Igiene 60°C",
+                    "hygiene_60": "Igiene 60\u00b0C",
                     "hygiene_plus_59": "Igiene Plus 59'",
                     "hygiene_plus_59_min": "Igiene Plus 59'",
                     "hygiene_pro _49_MIN": "Igiene Pro 49'",
                     "hygiene_pro_49_min": "Igiene Pro 49'",
                     "hygiene_pro_steam": "Hygiene Pro + Vapore",
-                    "intensive_40": "Intensivo 40°C",
-                    "intensive_40_steam": "Intensivo 40°C + Vapore",
+                    "intensive_40": "Intensivo 40\u00b0C",
+                    "intensive_40_steam": "Intensivo 40\u00b0C + Vapore",
                     "iot_active_steam": "Vapore",
                     "iot_active_wash_steam": "Active Wash + Vapore",
                     "iot_allergy_care_pro": "Allergy Care Pro",
@@ -204,7 +269,7 @@
                     "iot_dry_cotton_dry": "Asciugatura cotone",
                     "iot_dry_cuddly_toys": "Peluches",
                     "iot_dry_curtains": "Tende",
-                    "iot_dry_dehumidifier": "Rimuovi umidità",
+                    "iot_dry_dehumidifier": "Rimuovi umidit\u00e0",
                     "iot_dry_delicates_antiallergy": "Antiallergia Delicati",
                     "iot_dry_delicate_tablecloths": "Tovaglie delicate",
                     "iot_dry_denim_jeans": "Denim - Jeans",
@@ -225,7 +290,7 @@
                     "iot_easy_iron": "Stiro Facile",
                     "iot_fresh_care_steam": "Fresh Care + Vapore",
                     "iot_hygiene_pro_steam": "Hygiene Pro + Vapore",
-                    "iot_intensive_40_steam": "Intensivo 40°C + Vapore",
+                    "iot_intensive_40_steam": "Intensivo 40\u00b0C + Vapore",
                     "iot_mixed_steam": "Misti + Vapore",
                     "iot_mix_and_colour_59_steam": "Misti e Colorati 59' + Vapore",
                     "iot_perfect_cotton_59_steam": "Cotone Perfetto 59' + Vapore",

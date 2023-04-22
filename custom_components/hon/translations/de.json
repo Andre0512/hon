@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Bereit",
+                    "1": "Bereit",
+                    "3": "Anhalten",
+                    "4": "Geplant",
+                    "5": "Geplant",
+                    "6": "Fehler",
+                    "7": "Bereit"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Bereit",
+                    "1": "Waschen",
+                    "2": "Waschen",
+                    "3": "Schleudern",
+                    "4": "Sp\u00fclen",
+                    "5": "Sp\u00fclen",
+                    "6": "Sp\u00fclen",
+                    "7": "Trocknen",
+                    "9": "Dampf",
+                    "10": "Bereit",
+                    "11": "Schleudern",
+                    "12": "Wiegen ",
+                    "13": "Wiegen ",
+                    "14": "Waschen",
+                    "15": "Waschen",
+                    "16": "Waschen",
+                    "17": "Sp\u00fclen",
+                    "18": "Sp\u00fclen",
+                    "19": "Geplant",
+                    "20": "Auffrischen",
+                    "24": "Auffrischen",
+                    "25": "Waschen",
+                    "26": "Heizung",
+                    "27": "Waschen"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Bereit",
+                    "1": "Trocknen",
+                    "2": "Trocknen",
+                    "3": "Abk\u00fchlen",
+                    "13": "Abk\u00fchlen",
+                    "14": "Trocknen",
+                    "15": "Trocknen",
+                    "16": "Abk\u00fchlen",
+                    "18": "Auffrischen",
+                    "19": "Trocknen",
+                    "20": "Trocknen"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Bereit",
+                    "1": "Vorwaschen",
+                    "2": "Waschen",
+                    "3": "Sp\u00fclen",
+                    "4": "Trocknen",
+                    "5": "Bereit",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}

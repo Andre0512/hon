@@ -1,3 +1,4 @@
 __pycache__/
-scripts/test.py
 .idea/
+scripts/translations/
+scripts/test*

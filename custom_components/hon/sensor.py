@@ -31,6 +31,12 @@ _LOGGER = logging.getLogger(__name__)
 SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
     "WM": (
         SensorEntityDescription(
+            key="prPhase",
+            name="Program Phase",
+            icon="mdi:washing-machine",
+            translation_key="program_phases_wm",
+        ),
+        SensorEntityDescription(
             key="totalElectricityUsed",
             name="Total Power",
             device_class=SensorDeviceClass.ENERGY,
@@ -76,7 +82,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="machMode",
             name="Machine Status",
             icon="mdi:information",
-            translation_key="mode",
+            translation_key="washing_modes",
         ),
         SensorEntityDescription(
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
@@ -101,7 +107,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="machMode",
             name="Machine Status",
             icon="mdi:information",
-            translation_key="mode",
+            translation_key="washing_modes",
         ),
         SensorEntityDescription(
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
@@ -129,8 +135,8 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         SensorEntityDescription(
             key="prPhase",
             name="Program Phase",
-            icon="mdi:tumble-dryer",
-            translation_key="tumbledryerprogramphase",
+            icon="mdi:washing-machine",
+            translation_key="program_phases_td",
         ),
         SensorEntityDescription(
             key="dryLevel",
@@ -192,7 +198,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="machMode",
             name="Machine Status",
             icon="mdi:information",
-            translation_key="mode",
+            translation_key="washing_modes",
         ),
         SensorEntityDescription(
             key="spinSpeed",
@@ -216,7 +222,8 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         SensorEntityDescription(
             key="prPhase",
             name="Program Phase",
-            icon="mdi:tumble-dryer",
+            icon="mdi:washing-machine",
+            translation_key="program_phases_wm",
         ),
         SensorEntityDescription(
             key="dryLevel",
@@ -336,7 +343,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="machMode",
             name="Machine Status",
             icon="mdi:information",
-            translation_key="mode_dw",
+            translation_key="washing_modes",
         ),
         SensorEntityDescription(
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
@@ -347,6 +354,12 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:timer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        SensorEntityDescription(
+            key="prPhase",
+            name="Program Phase",
+            icon="mdi:washing-machine",
+            translation_key="program_phases_dw",
         ),
     ),
 }

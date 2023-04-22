@@ -1,0 +1,71 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "0": "Pripravljen",
+                    "1": "Pripravljen",
+                    "3": "Premor",
+                    "4": "Na\u010drtovano",
+                    "5": "Na\u010drtovano",
+                    "6": "Napaka",
+                    "7": "Pripravljen"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "0": "Pripravljen",
+                    "1": "Pranje",
+                    "2": "Pranje",
+                    "3": "O\u017eemanje",
+                    "4": "Izpiranje",
+                    "5": "Izpiranje",
+                    "6": "Izpiranje",
+                    "7": "Su\u0161enje",
+                    "9": "Para",
+                    "10": "Pripravljen",
+                    "11": "O\u017eemanje",
+                    "12": "Tehtanje ",
+                    "13": "Tehtanje ",
+                    "14": "Pranje",
+                    "15": "Pranje",
+                    "16": "Pranje",
+                    "17": "Izpiranje",
+                    "18": "Izpiranje",
+                    "19": "Na\u010drtovano",
+                    "20": "Ohranjanje sve\u017eine",
+                    "24": "Osve\u017eitev",
+                    "25": "Pranje",
+                    "26": "Ogrevanje",
+                    "27": "Pranje"
+                }
+            },
+            "program_phases_td": {
+                "state": {
+                    "0": "Pripravljen",
+                    "1": "Su\u0161enje",
+                    "2": "Su\u0161enje",
+                    "3": "Hlajenje",
+                    "13": "Hlajenje",
+                    "14": "Su\u0161enje",
+                    "15": "Su\u0161enje",
+                    "16": "Hlajenje",
+                    "18": "Ohrani sve\u017ee",
+                    "19": "Su\u0161enje",
+                    "20": "Su\u0161enje"
+                }
+            },
+            "program_phases_dw": {
+                "state": {
+                    "0": "Pripravljen",
+                    "1": "Predpranje",
+                    "2": "Pranje",
+                    "3": "Izpiranje",
+                    "4": "Su\u0161enje",
+                    "5": "Pripravljen",
+                    "6": "Hot rinse"
+                }
+            }
+        }
+    }
+}
