@@ -162,6 +162,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Door |  | `binary_sensor` | `doorStatus` |
 | Error | `mdi:math-log` | `sensor` | `errors` |
 | Machine Status | `mdi:information` | `sensor` | `machMode` |
+| Program Phase | `mdi:washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `mdi:timer` | `sensor` | `remainingTimeMM` |
 | Rinse Aid | `mdi:spray-bottle` | `binary_sensor` | `rinseAidStatus` |
 | Salt | `mdi:shaker-outline` | `binary_sensor` | `saltStatus` |
@@ -224,11 +225,11 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Anti-Crease time | `mdi:timer` | `number` | `startProgram.antiCreaseTime` |
+| Anti-Crease | `mdi:timer` | `switch` | `startProgram.antiCreaseTime` |
 | Delay time | `mdi:timer-plus` | `number` | `startProgram.delayTime` |
-| Dry level | `mdi:hair-dryer` | `number` | `startProgram.dryLevel` |
+| Dry level | `mdi:hair-dryer` | `select` | `startProgram.dryLevel` |
 | Program |  | `select` | `startProgram.program` |
-| Sterilization status | `mdi:clock-start` | `number` | `startProgram.sterilizationStatus` |
+| Sterilization | `mdi:clock-start` | `switch` | `startProgram.sterilizationStatus` |
 | Temperature level | `mdi:thermometer` | `number` | `startProgram.tempLevel` |
 | Time | `mdi:timer` | `select` | `startProgram.dryTimeMM` |
 #### Sensors
@@ -240,7 +241,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Error | `mdi:math-log` | `sensor` | `errors` |
 | Machine Status | `mdi:information` | `sensor` | `machMode` |
 | Program | `mdi:tumble-dryer` | `sensor` | `prCode` |
-| Program Phase | `mdi:tumble-dryer` | `sensor` | `prPhase` |
+| Program Phase | `mdi:washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `mdi:timer` | `sensor` | `remainingTimeMM` |
 | Start Time | `mdi:clock-start` | `sensor` | `delayTime` |
 | Temperature level | `mdi:thermometer` | `sensor` | `tempLevel` |
@@ -274,7 +275,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Good Night Mode |  | `binary_sensor` | `goodNight` |
 | Machine Status | `mdi:information` | `sensor` | `machMode` |
 | Pre Wash |  | `binary_sensor` | `startProgram.prewash` |
-| Program Phase | `mdi:tumble-dryer` | `sensor` | `prPhase` |
+| Program Phase | `mdi:washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `mdi:timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `mdi:remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
 | Spin Speed | `mdi:fast-forward-outline` | `sensor` | `spinSpeed` |
@@ -310,6 +311,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Door Lock |  | `binary_sensor` | `doorLockStatus` |
 | Error | `mdi:math-log` | `sensor` | `errors` |
 | Machine Status | `mdi:information` | `sensor` | `machMode` |
+| Program Phase | `mdi:washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `mdi:timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `mdi:remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
 | Spin Speed | `mdi:speedometer` | `sensor` | `spinSpeed` |
