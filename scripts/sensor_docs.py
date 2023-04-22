@@ -1,5 +1,11 @@
+#!/usr/bin/env python
+
 import re
+import sys
 from pathlib import Path
+
+if __name__ == "__main__":
+    sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from custom_components.hon.binary_sensor import BINARY_SENSORS
 from custom_components.hon.button import BUTTONS
