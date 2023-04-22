@@ -1,5 +1,6 @@
 import asyncio
 import json
+import re
 from pathlib import Path
 
 from pyhon import HonAPI
@@ -146,13 +147,14 @@ def load_key(full_key, json_data, fallback=None):
 
 
 def load_keys(full_key, json_data):
-    blacklist = ["description", "\n", "_recipe_", "_guided_"]
+    blacklist = ["description", "_recipe_", "_guided_"]
     first, last = full_key.split(".")
     data = json_data.get(first, {}).get(last, {})
     return {
         key.lower(): value
         for key, value in data.items()
         if not any(b in key.lower() for b in blacklist)
+        and re.findall("^[a-z0-9-_]+$", key.lower())
     }
 
 
