@@ -104,25 +104,25 @@ For every device exists a hidden button which can be used to log all info of you
 
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:
-* Chinese
-* Croatian
-* Czech
-* Dutch
-* English
-* French
-* German
-* Greek
-* Hebrew
-* Italian
-* Polish
-* Portuguese
-* Romanian
-* Russian
-* Serbian
-* Slovak
-* Slovenian
-* Spanish
-* Turkish
+* 🇨🇳 Chinese
+* 🇭🇷 Croatian
+* 🇨🇿 Czech
+* 🇳🇱 Dutch
+* 🇬🇧 English
+* 🇫🇷 French
+* 🇩🇪 German
+* 🇬🇷 Greek
+* 🇮🇱 Hebrew
+* 🇮🇹 Italian
+* 🇵🇱 Polish
+* 🇵🇹 Portuguese
+* 🇷🇴 Romanian
+* 🇷🇺 Russian
+* 🇷🇸 Serbian
+* 🇸🇰 Slovak
+* 🇸🇮 Slovenian
+* 🇪🇸 Spanish
+* 🇹🇷 Turkish
 
 
 ## About this Repo
