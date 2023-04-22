@@ -53,19 +53,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             icon="mdi:thermometer",
             translation_key="tumbledryertemplevel",
         ),
-        NumberEntityDescription(
-            key="startProgram.antiCreaseTime",
-            name="Anti-Crease time",
-            entity_category=EntityCategory.CONFIG,
-            icon="mdi:timer",
-            native_unit_of_measurement=UnitOfTime.MINUTES,
-        ),
-        NumberEntityDescription(
-            key="startProgram.sterilizationStatus",
-            name="Sterilization status",
-            icon="mdi:clock-start",
-            entity_category=EntityCategory.CONFIG,
-        ),
     ),
     "WD": (
         NumberEntityDescription(

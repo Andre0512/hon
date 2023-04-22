@@ -72,6 +72,18 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             turn_on_key="pauseProgram",
             turn_off_key="resumeProgram",
         ),
+        HonSwitchEntityDescription(
+            key="startProgram.sterilizationStatus",
+            name="Sterilization",
+            icon="mdi:clock-start",
+            entity_category=EntityCategory.CONFIG,
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.antiCreaseTime",
+            name="Anti-Crease",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:timer",
+        ),
     ),
     "OV": (
         HonSwitchEntityDescription(
