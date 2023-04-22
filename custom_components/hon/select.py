@@ -37,7 +37,7 @@ SELECTS = {
             key="startProgram.program",
             name="Program",
             entity_category=EntityCategory.CONFIG,
-            translation_key="programs",
+            translation_key="programs_wm",
         ),
     ),
     "TD": (
@@ -45,7 +45,7 @@ SELECTS = {
             key="startProgram.program",
             name="Program",
             entity_category=EntityCategory.CONFIG,
-            translation_key="programs",
+            translation_key="programs_td",
         ),
         SelectEntityDescription(
             key="startProgram.dryTimeMM",
@@ -60,7 +60,7 @@ SELECTS = {
             key="startProgram.program",
             name="Program",
             entity_category=EntityCategory.CONFIG,
-            translation_key="programs",
+            translation_key="programs_wm",
         ),
     ),
     "OV": (
@@ -68,7 +68,7 @@ SELECTS = {
             key="startProgram.program",
             name="Program",
             entity_category=EntityCategory.CONFIG,
-            translation_key="programs",
+            translation_key="programs_ov",
         ),
     ),
     "IH": (
@@ -76,7 +76,7 @@ SELECTS = {
             key="startProgram.program",
             name="Program",
             entity_category=EntityCategory.CONFIG,
-            translation_key="programs",
+            translation_key="programs_ih",
         ),
     ),
     "DW": (

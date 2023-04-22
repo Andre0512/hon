@@ -91,6 +91,14 @@ SENSOR = {
     "program_phases_dw": DISHWASHER_PR_PHASE,
 }
 
+PROGRAMS = {
+    "programs_dw": "PROGRAMS.DW",
+    "programs_ih": "PROGRAMS.IH",
+    "programs_ov": "PROGRAMS.OV",
+    "programs_td": "PROGRAMS.TD",
+    "programs_wm": "PROGRAMS.WM_WD",
+}
+
 
 async def check_translation_files(translations):
     for language in LANGUAGES:
@@ -136,6 +144,17 @@ def load_key(full_key, json_data, fallback=None):
     return result or ""
 
 
+def load_keys(full_key, json_data):
+    blacklist = ["description", "\n", "_recipe_", "_guided_"]
+    first, last = full_key.split(".")
+    data = json_data.get(first, {}).get(last, {})
+    return {
+        key.lower(): value
+        for key, value in data.items()
+        if not any(b in key.lower() for b in blacklist)
+    }
+
+
 def main():
     hass = load_hass_translations()
     hon = load_hon_translations()
@@ -150,6 +169,9 @@ def main():
                 state = sensor.setdefault(name, {}).setdefault("state", {})
                 if key := load_key(phase, original, fallback):
                     state[str(number)] = key
+        for name, program in PROGRAMS.items():
+            select = old.setdefault("entity", {}).setdefault("select", {})
+            select.setdefault(name, {})["state"] = load_keys(program, original)
         save_json(base_path / f"{language}.json", old)
 
 
