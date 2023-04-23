@@ -38,7 +38,8 @@
                     "25": "Pranie",
                     "26": "Ohrev",
                     "27": "Pranie"
-                }
+                },
+                "name": "F\u00e1za"
             },
             "program_phases_td": {
                 "state": {
@@ -53,7 +54,8 @@
                     "18": "Uchova\u0165 svie\u017ee",
                     "19": "Su\u0161enie",
                     "20": "Su\u0161enie"
-                }
+                },
+                "name": "F\u00e1za"
             },
             "program_phases_dw": {
                 "state": {
@@ -64,7 +66,8 @@
                     "4": "Su\u0161enie",
                     "5": "Pripraven\u00e9",
                     "6": "Hot rinse"
-                }
+                },
+                "name": "F\u00e1za"
             },
             "dry_levels": {
                 "state": {
@@ -77,7 +80,44 @@
                     "13": "\u0160atn\u00edk pripraven\u00fd",
                     "14": "Hotov\u00e9 na nosenie",
                     "15": "Extra su\u0161enie"
-                }
+                },
+                "name": "Su\u0161enie"
+            },
+            "anti_crease": {
+                "name": "Proti pokr\u010deniu"
+            },
+            "power": {
+                "name": "\u00darove\u0148 v\u00fdkonu"
+            },
+            "remaining_time": {
+                "name": "Zost\u00e1vaj\u00faci \u010das"
+            },
+            "temperature": {
+                "name": "Teplota"
+            },
+            "water_efficiency": {
+                "name": "\u00da\u010dinnos\u0165 vody"
+            },
+            "water_saving": {
+                "name": "\u00daspora vody"
+            },
+            "duration": {
+                "name": "Trvanie"
+            },
+            "target_temperature": {
+                "name": "Cie\u013eov\u00e1 teplota"
+            },
+            "spin_speed": {
+                "name": "Odstre\u010fovanie"
+            },
+            "steam_leve": {
+                "name": "\u00darove\u0148 nastavenia pary"
+            },
+            "dirt_level": {
+                "name": "\u00darove\u0148 zne\u010distenia"
+            },
+            "delay_time": {
+                "name": "Napl\u00e1nova\u0165"
             }
         },
         "select": {
@@ -178,7 +218,8 @@
                     "universal": "Univerz\u00e1lne 60 \u00b0C",
                     "universal_plus": "Univerz\u00e1lne Plus 70 \u00b0C",
                     "zoom_39": "Zoom 39 min"
-                }
+                },
+                "name": "Program"
             },
             "programs_ih": {
                 "state": {
@@ -217,7 +258,8 @@
                     "iot_standard_keep_warm": "Udr\u017eiavanie tepla",
                     "iot_standard_melting": "Topi\u0165",
                     "iot_standard_simmering": "Slab\u00e9 vrenie"
-                }
+                },
+                "name": "Program"
             },
             "programs_ov": {
                 "state": {
@@ -272,7 +314,8 @@
                     "water_discharge": "Odtok vody",
                     "white_meat": "Biele m\u00e4so",
                     "white_meat_steam": "Biele m\u00e4so varen\u00e9 v pare"
-                }
+                },
+                "name": "Program"
             },
             "programs_td": {
                 "state": {
@@ -408,7 +451,8 @@
                     "woolmark": "Woolmark",
                     "xxl_load": "XXL n\u00e1pl\u0148",
                     "zoom_59": "Zoom 59"
-                }
+                },
+                "name": "Program"
             },
             "programs_wm": {
                 "state": {
@@ -717,7 +761,8 @@
                     "wool_and_delicates_49": "Vlna/Jemn\u00e9 49'",
                     "wool_dry": "Vlna such\u00e1",
                     "wool_soft_care": "Vlna & M\u00e4kk\u00e1 starostlivost"
-                }
+                },
+                "name": "Program"
             },
             "dry_levels": {
                 "state": {
@@ -730,7 +775,154 @@
                     "13": "\u0160atn\u00edk pripraven\u00fd",
                     "14": "Hotov\u00e9 na nosenie",
                     "15": "Extra su\u0161enie"
-                }
+                },
+                "name": "Su\u0161enie"
+            },
+            "spin_speed": {
+                "name": "Odstre\u010fovanie"
+            },
+            "temperature": {
+                "name": "Teplota"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Proti pokr\u010deniu"
+            },
+            "add_dish": {
+                "name": ""
+            },
+            "eco_express": {
+                "name": "Eko"
+            },
+            "extra_dry": {
+                "name": "Extra su\u0161enie"
+            },
+            "half_load": {
+                "name": "Polovi\u010dn\u00e9 naplnenie"
+            },
+            "open_door": {
+                "name": "Otvori\u0165 dvere"
+            },
+            "three_in_one": {
+                "name": "3\u00a0v\u00a01"
+            },
+            "preheat": {
+                "name": "Predhria\u0165"
+            },
+            "dish_washer": {
+                "name": "Um\u00fdva\u010dka riadu"
+            },
+            "tumble_dryer": {
+                "name": "Bubnov\u00e1 su\u0161i\u010dka"
+            },
+            "washing_machine": {
+                "name": "Pr\u00e1\u010dka"
+            },
+            "washer_dryer": {
+                "name": "Pr\u00e1\u010dka so su\u0161i\u010dkou"
+            },
+            "oven": {
+                "name": "R\u00fara na pe\u010denie"
+            },
+            "prewash": {
+                "name": "Predum\u00fdvanie"
+            },
+            "pause": {
+                "name": "Pozastavi\u0165"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Uzamknutie dver\u00ed"
+            },
+            "extra_rinse_1": {
+                "name": "+ 1 oplachovanie"
+            },
+            "extra_rinse_2": {
+                "name": "+ 2 oplachovania"
+            },
+            "extra_rinse_3": {
+                "name": "+ 3 oplachovania"
+            },
+            "good_night": {
+                "name": "Dobr\u00fa noc"
+            },
+            "anti_crease": {
+                "name": "Proti pokr\u010deniu"
+            },
+            "aqua_plus": {
+                "name": "Aquaplus"
+            },
+            "spin_speed": {
+                "name": "Odstre\u010fovanie"
+            },
+            "programs_dw": {
+                "name": "Program"
+            },
+            "programs_ih": {
+                "name": "Program"
+            },
+            "programs_ov": {
+                "name": "Program"
+            },
+            "programs_td": {
+                "name": "Program"
+            },
+            "programs_wm": {
+                "name": "Program"
+            },
+            "still_hot": {
+                "name": "St\u00e1le hor\u00face"
+            },
+            "pan_status": {
+                "name": "Panvica"
+            },
+            "remote_control": {
+                "name": "Dia\u013ekov\u00e9 ovl\u00e1danie"
+            },
+            "rinse_aid": {
+                "name": "\u00darove\u0148 prostriedku na oplachovanie"
+            },
+            "salt_level": {
+                "name": "\u00darove\u0148 soli"
+            },
+            "door_open": {
+                "name": "Otvoren\u00e9 dvere"
+            },
+            "connection": {
+                "name": "Pripojenie"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Spr\u00e1va v\u00fdkonu"
+            },
+            "temperature": {
+                "name": "Teplota"
+            },
+            "delay_time": {
+                "name": "Napl\u00e1nova\u0165"
+            },
+            "water_hard": {
+                "name": "Tvrdos\u0165 vody"
+            },
+            "program_duration": {
+                "name": "Trvanie programu"
+            },
+            "target_temperature": {
+                "name": "Cie\u013eov\u00e1 teplota"
+            },
+            "rinse_iterations": {
+                "name": "Po\u010det pl\u00e1kan\u00ed"
+            },
+            "wash_time": {
+                "name": "\u010cas prania"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Induk\u010dn\u00e1 varn\u00e1 doska"
             }
         }
     }

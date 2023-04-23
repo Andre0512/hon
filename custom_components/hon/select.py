@@ -25,6 +25,7 @@ SELECTS = {
             entity_category=EntityCategory.CONFIG,
             icon="mdi:numeric",
             unit_of_measurement=REVOLUTIONS_PER_MINUTE,
+            translation_key="spin_speed",
         ),
         SelectEntityDescription(
             key="startProgram.temp",
@@ -32,6 +33,7 @@ SELECTS = {
             entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
             unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
         ),
         SelectEntityDescription(
             key="startProgram.program",

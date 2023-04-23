@@ -36,12 +36,14 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
             icon="mdi:remote",
+            translation_key="remote_control",
         ),
         HonBinarySensorEntityDescription(
             key="doorLockStatus",
             name="Door Lock",
             device_class=BinarySensorDeviceClass.LOCK,
             on_value="0",
+            translation_key="door_lock",
         ),
         HonBinarySensorEntityDescription(
             key="doorStatus",
@@ -56,6 +58,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Connection",
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
+            translation_key="connection",
         ),
         HonBinarySensorEntityDescription(
             key="doorStatus",
@@ -71,34 +74,29 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
             icon="mdi:remote",
+            translation_key="remote_control",
         ),
         HonBinarySensorEntityDescription(
             key="startProgram.prewash",
             name="Pre Wash",
         ),
         HonBinarySensorEntityDescription(
-            key="extraRinse1",
-            name="Extra Rinse 1",
+            key="extraRinse1", name="Extra Rinse 1", translation_key="extra_rinse_1"
         ),
         HonBinarySensorEntityDescription(
-            key="extraRinse2",
-            name="Extra Rinse 2",
+            key="extraRinse2", name="Extra Rinse 2", translation_key="extra_rinse_2"
         ),
         HonBinarySensorEntityDescription(
-            key="extraRinse3",
-            name="Extra Rinse 3",
+            key="extraRinse3", name="Extra Rinse 3", translation_key="extra_rinse_3"
         ),
         HonBinarySensorEntityDescription(
-            key="goodNight",
-            name="Good Night Mode",
+            key="goodNight", name="Good Night Mode", translation_key="good_night"
         ),
         HonBinarySensorEntityDescription(
-            key="acquaplus",
-            name="Acqua Plus",
+            key="acquaplus", name="Acqua Plus", translation_key="aqua_plus"
         ),
         HonBinarySensorEntityDescription(
-            key="anticrease",
-            name="Anti-Crease",
+            key="anticrease", name="Anti-Crease", translation_key="anti_crease"
         ),
     ),
     "OV": (
@@ -108,6 +106,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
             icon="mdi:wifi",
+            translation_key="connection",
         ),
         HonBinarySensorEntityDescription(
             key="attributes.parameters.remoteCtrValid",
@@ -115,6 +114,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="1",
             icon="mdi:remote",
+            translation_key="remote_control",
         ),
         HonBinarySensorEntityDescription(
             key="attributes.parameters.onOffStatus",
@@ -131,6 +131,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
             icon="mdi:wifi",
+            translation_key="connection",
         ),
         HonBinarySensorEntityDescription(
             key="attributes.parameters.remoteCtrValid",
@@ -138,6 +139,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="1",
             icon="mdi:remote",
+            translation_key="remote_control",
         ),
         HonBinarySensorEntityDescription(
             key="attributes.parameters.onOffStatus",
@@ -151,9 +153,14 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Hot Status",
             device_class=BinarySensorDeviceClass.HEAT,
             on_value="1",
+            translation_key="still_hot",
         ),
         HonBinarySensorEntityDescription(
-            key="panStatus", name="Pan Status", on_value="1", icon="mdi:pot-mix"
+            key="panStatus",
+            name="Pan Status",
+            on_value="1",
+            icon="mdi:pot-mix",
+            translation_key="pan_status",
         ),
         HonBinarySensorEntityDescription(
             key="hobLockStatus",
@@ -169,6 +176,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.PROBLEM,
             on_value="1",
             icon="mdi:shaker-outline",
+            translation_key="salt_level",
         ),
         HonBinarySensorEntityDescription(
             key="rinseAidStatus",
@@ -176,18 +184,21 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.PROBLEM,
             on_value="1",
             icon="mdi:spray-bottle",
+            translation_key="rinse_aid",
         ),
         HonBinarySensorEntityDescription(
             key="attributes.lastConnEvent.category",
             name="Connection",
             device_class=BinarySensorDeviceClass.CONNECTIVITY,
             on_value="CONNECTED",
+            translation_key="connection",
         ),
         HonBinarySensorEntityDescription(
             key="doorStatus",
             name="Door",
             device_class=BinarySensorDeviceClass.DOOR,
             on_value="1",
+            translation_key="door_open",
         ),
     ),
 }

@@ -38,7 +38,8 @@
                     "25": "Pranie",
                     "26": "Ogrzewanie",
                     "27": "Pranie"
-                }
+                },
+                "name": "Faza"
             },
             "program_phases_td": {
                 "state": {
@@ -53,7 +54,8 @@
                     "18": "Utrzymaj \u015bwie\u017co\u015b\u0107",
                     "19": "Suszenie",
                     "20": "Suszenie"
-                }
+                },
+                "name": "Faza"
             },
             "program_phases_dw": {
                 "state": {
@@ -64,7 +66,8 @@
                     "4": "Suszenie",
                     "5": "Gotowe",
                     "6": "Hot rinse"
-                }
+                },
+                "name": "Faza"
             },
             "dry_levels": {
                 "state": {
@@ -77,7 +80,44 @@
                     "13": "Gotowe do garderoby",
                     "14": "Gotowe do w\u0142o\u017cenia",
                     "15": "Ekstra suchy"
-                }
+                },
+                "name": "Suszenie"
+            },
+            "anti_crease": {
+                "name": "Przeciw gnieceniu"
+            },
+            "power": {
+                "name": "Poziom mocy"
+            },
+            "remaining_time": {
+                "name": "Pozosta\u0142y czas"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "water_efficiency": {
+                "name": "Wydajno\u015b\u0107 zu\u017cycia wody"
+            },
+            "water_saving": {
+                "name": "Oszcz\u0119dno\u015b\u0107 wody"
+            },
+            "duration": {
+                "name": "Czas trwania"
+            },
+            "target_temperature": {
+                "name": "Temperatura docelowa"
+            },
+            "spin_speed": {
+                "name": "Wirowanie"
+            },
+            "steam_leve": {
+                "name": "Poziom pary"
+            },
+            "dirt_level": {
+                "name": "Stopie\u0144 zabrudzenia"
+            },
+            "delay_time": {
+                "name": "Zaplanuj"
             }
         },
         "select": {
@@ -178,7 +218,8 @@
                     "universal": "Uniwersalne 60\u00b0C",
                     "universal_plus": "Uniwersalne Plus 70\u00b0C",
                     "zoom_39": "Zoom 39 min"
-                }
+                },
+                "name": "Program"
             },
             "programs_ih": {
                 "state": {
@@ -217,7 +258,8 @@
                     "iot_standard_keep_warm": "Podtrzymanie ciep\u0142a",
                     "iot_standard_melting": "Roztapianie",
                     "iot_standard_simmering": "Duszenie"
-                }
+                },
+                "name": "Program"
             },
             "programs_ov": {
                 "state": {
@@ -272,7 +314,8 @@
                     "water_discharge": "Odp\u0142yw wody",
                     "white_meat": "Bia\u0142e mi\u0119so",
                     "white_meat_steam": "Bia\u0142e mi\u0119so gotowane na parze"
-                }
+                },
+                "name": "Program"
             },
             "programs_td": {
                 "state": {
@@ -408,7 +451,8 @@
                     "woolmark": "Woolmark",
                     "xxl_load": "XXL Load",
                     "zoom_59": "Zoom 59"
-                }
+                },
+                "name": "Program"
             },
             "programs_wm": {
                 "state": {
@@ -717,7 +761,8 @@
                     "wool_and_delicates_49": "We\u0142na/Delikatne 49'",
                     "wool_dry": "Suszenie we\u0142ny",
                     "wool_soft_care": "We\u0142na & Soft Care"
-                }
+                },
+                "name": "Program"
             },
             "dry_levels": {
                 "state": {
@@ -730,7 +775,154 @@
                     "13": "Gotowe do garderoby",
                     "14": "Gotowe do w\u0142o\u017cenia",
                     "15": "Ekstra suchy"
-                }
+                },
+                "name": "Suszenie"
+            },
+            "spin_speed": {
+                "name": "Wirowanie"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Przeciw gnieceniu"
+            },
+            "add_dish": {
+                "name": ""
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Ekstra suchy"
+            },
+            "half_load": {
+                "name": "Po\u0142owa wsadu"
+            },
+            "open_door": {
+                "name": "Otw\u00f3rz drzwi"
+            },
+            "three_in_one": {
+                "name": "3 w 1"
+            },
+            "preheat": {
+                "name": "Wst\u0119pne nagrzewanie"
+            },
+            "dish_washer": {
+                "name": "Zmywarka"
+            },
+            "tumble_dryer": {
+                "name": "Suszarka b\u0119bnowa"
+            },
+            "washing_machine": {
+                "name": "Pralka"
+            },
+            "washer_dryer": {
+                "name": "Pralkosuszarka"
+            },
+            "oven": {
+                "name": "Piekarnik"
+            },
+            "prewash": {
+                "name": "Mycie wst\u0119pne"
+            },
+            "pause": {
+                "name": "Pauza"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Drzwi s\u0105 zablokowane"
+            },
+            "extra_rinse_1": {
+                "name": "+1 p\u0142ukanie"
+            },
+            "extra_rinse_2": {
+                "name": "+2 p\u0142ukania"
+            },
+            "extra_rinse_3": {
+                "name": "+3 p\u0142ukania"
+            },
+            "good_night": {
+                "name": "Dobranoc"
+            },
+            "anti_crease": {
+                "name": "Przeciw gnieceniu"
+            },
+            "aqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "Wirowanie"
+            },
+            "programs_dw": {
+                "name": "Program"
+            },
+            "programs_ih": {
+                "name": "Program"
+            },
+            "programs_ov": {
+                "name": "Program"
+            },
+            "programs_td": {
+                "name": "Program"
+            },
+            "programs_wm": {
+                "name": "Program"
+            },
+            "still_hot": {
+                "name": "Nadal gor\u0105ce"
+            },
+            "pan_status": {
+                "name": "Patelnia"
+            },
+            "remote_control": {
+                "name": "Zdalne sterowanie"
+            },
+            "rinse_aid": {
+                "name": "Poziom nab\u0142yszczacza"
+            },
+            "salt_level": {
+                "name": "Poziom soli"
+            },
+            "door_open": {
+                "name": "Drzwi otwarte"
+            },
+            "connection": {
+                "name": "Po\u0142\u0105czenie"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Zarz\u0105dzanie zasilaniem"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "delay_time": {
+                "name": "Zaplanuj"
+            },
+            "water_hard": {
+                "name": "Twardo\u015b\u0107 wody"
+            },
+            "program_duration": {
+                "name": "Czas trwania programu"
+            },
+            "target_temperature": {
+                "name": "Temperatura docelowa"
+            },
+            "rinse_iterations": {
+                "name": "Ilo\u015b\u0107 p\u0142uka\u0144"
+            },
+            "wash_time": {
+                "name": "Czas prania"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "P\u0142yta indukcyjna"
             }
         }
     }

@@ -36,6 +36,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:washing-machine",
             turn_on_key="startProgram",
             turn_off_key="stopProgram",
+            translation_key="washing_machine",
         ),
         HonSwitchEntityDescription(
             key="pause",
@@ -43,6 +44,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:pause",
             turn_on_key="pauseProgram",
             turn_off_key="resumeProgram",
+            translation_key="pause",
         ),
         HonSwitchEntityDescription(
             key="startProgram.delayStatus",
@@ -55,6 +57,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             name="Soak Prewash Selection",
             icon="mdi:tshirt-crew",
             entity_category=EntityCategory.CONFIG,
+            translation_key="prewash",
         ),
     ),
     "TD": (
@@ -64,6 +67,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:tumble-dryer",
             turn_on_key="startProgram",
             turn_off_key="stopProgram",
+            translation_key="tumble_dryer",
         ),
         HonSwitchEntityDescription(
             key="pause",
@@ -71,6 +75,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:pause",
             turn_on_key="pauseProgram",
             turn_off_key="resumeProgram",
+            translation_key="pause",
         ),
         HonSwitchEntityDescription(
             key="startProgram.sterilizationStatus",
@@ -83,6 +88,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             name="Anti-Crease",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:timer",
+            translation_key="anti_crease",
         ),
     ),
     "OV": (
@@ -92,12 +98,14 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:toaster-oven",
             turn_on_key="startProgram",
             turn_off_key="stopProgram",
+            translation_key="oven",
         ),
         HonSwitchEntityDescription(
             key="startProgram.preheatStatus",
             name="Preheat",
             icon="mdi:thermometer-chevron-up",
             entity_category=EntityCategory.CONFIG,
+            translation_key="preheat",
         ),
     ),
     "WD": (
@@ -107,6 +115,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:washing-machine",
             turn_on_key="startProgram",
             turn_off_key="stopProgram",
+            translation_key="washer_dryer",
         ),
         HonSwitchEntityDescription(
             key="pause",
@@ -114,6 +123,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:pause",
             turn_on_key="pauseProgram",
             turn_off_key="resumeProgram",
+            translation_key="pause",
         ),
     ),
     "DW": (
@@ -123,42 +133,49 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:dishwasher",
             turn_on_key="startProgram",
             turn_off_key="stopProgram",
+            translation_key="dish_washer",
         ),
         HonSwitchEntityDescription(
             key="startProgram.extraDry",
             name="Extra Dry",
             icon="mdi:hair-dryer",
             entity_category=EntityCategory.CONFIG,
+            translation_key="extra_dry",
         ),
         HonSwitchEntityDescription(
             key="startProgram.halfLoad",
             name="Half Load",
             icon="mdi:fraction-one-half",
             entity_category=EntityCategory.CONFIG,
+            translation_key="half_load",
         ),
         HonSwitchEntityDescription(
             key="startProgram.openDoor",
             name="Open Door",
             icon="mdi:door-open",
             entity_category=EntityCategory.CONFIG,
+            translation_key="open_door",
         ),
         HonSwitchEntityDescription(
             key="startProgram.threeInOne",
             name="Three in One",
             icon="mdi:numeric-3-box-outline",
             entity_category=EntityCategory.CONFIG,
+            translation_key="three_in_one",
         ),
         HonSwitchEntityDescription(
             key="startProgram.ecoExpress",
             name="Eco Express",
             icon="mdi:sprout",
             entity_category=EntityCategory.CONFIG,
+            translation_key="eco",
         ),
         HonSwitchEntityDescription(
             key="startProgram.addDish",
             name="Add Dish",
             icon="mdi:silverware-fork-knife",
             entity_category=EntityCategory.CONFIG,
+            translation_key="add_dish",
         ),
     ),
 }

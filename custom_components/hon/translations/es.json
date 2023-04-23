@@ -38,7 +38,8 @@
                     "25": "Lavado",
                     "26": "Calentamiento",
                     "27": "Lavado"
-                }
+                },
+                "name": "Fase"
             },
             "program_phases_td": {
                 "state": {
@@ -53,7 +54,8 @@
                     "18": "Ropa fresca",
                     "19": "Secado",
                     "20": "Secado"
-                }
+                },
+                "name": "Fase"
             },
             "program_phases_dw": {
                 "state": {
@@ -64,7 +66,8 @@
                     "4": "Secado",
                     "5": "Listo",
                     "6": "Hot rinse"
-                }
+                },
+                "name": "Fase"
             },
             "dry_levels": {
                 "state": {
@@ -77,7 +80,44 @@
                     "13": "Listo para guardar",
                     "14": "Listo para llevar",
                     "15": "Extraseco"
-                }
+                },
+                "name": "Secado"
+            },
+            "anti_crease": {
+                "name": "Antiarrugas"
+            },
+            "power": {
+                "name": "Nivel de potencia"
+            },
+            "remaining_time": {
+                "name": "Tiempo restante"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "water_efficiency": {
+                "name": "Eficiencia h\u00eddrica"
+            },
+            "water_saving": {
+                "name": "Ahorro de agua"
+            },
+            "duration": {
+                "name": "Duraci\u00f3n"
+            },
+            "target_temperature": {
+                "name": "Temperatura deseada"
+            },
+            "spin_speed": {
+                "name": "Centrifugado"
+            },
+            "steam_leve": {
+                "name": "Nivel de vapor"
+            },
+            "dirt_level": {
+                "name": "Nivel de suciedad"
+            },
+            "delay_time": {
+                "name": "Programar"
             }
         },
         "select": {
@@ -178,7 +218,8 @@
                     "universal": "Universal 60 \u00b0C",
                     "universal_plus": "Universal Plus 70 \u00b0C",
                     "zoom_39": "Zoom 39 min"
-                }
+                },
+                "name": "Programa"
             },
             "programs_ih": {
                 "state": {
@@ -217,7 +258,8 @@
                     "iot_standard_keep_warm": "Keep Warm",
                     "iot_standard_melting": "Fundir",
                     "iot_standard_simmering": "Cocer a fuego lento"
-                }
+                },
+                "name": "Programa"
             },
             "programs_ov": {
                 "state": {
@@ -272,7 +314,8 @@
                     "water_discharge": "Drenaje del agua",
                     "white_meat": "Carne blanca",
                     "white_meat_steam": "Carne blanca al vapor"
-                }
+                },
+                "name": "Programa"
             },
             "programs_td": {
                 "state": {
@@ -408,7 +451,8 @@
                     "woolmark": "Woolmark",
                     "xxl_load": "Carga XXL",
                     "zoom_59": "Zoom 59"
-                }
+                },
+                "name": "Programa"
             },
             "programs_wm": {
                 "state": {
@@ -717,7 +761,8 @@
                     "wool_and_delicates_49": "Lana/Delicados 49'",
                     "wool_dry": "Secado lana",
                     "wool_soft_care": "Lana & Soft Care"
-                }
+                },
+                "name": "Programa"
             },
             "dry_levels": {
                 "state": {
@@ -730,7 +775,154 @@
                     "13": "Listo para guardar",
                     "14": "Listo para llevar",
                     "15": "Extraseco"
-                }
+                },
+                "name": "Secado"
+            },
+            "spin_speed": {
+                "name": "Centrifugado"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Antiarrugas"
+            },
+            "add_dish": {
+                "name": ""
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Extraseco"
+            },
+            "half_load": {
+                "name": "Media carga"
+            },
+            "open_door": {
+                "name": "Puerta abierta"
+            },
+            "three_in_one": {
+                "name": "3 en 1"
+            },
+            "preheat": {
+                "name": "Precalentamiento"
+            },
+            "dish_washer": {
+                "name": "Lavavajillas"
+            },
+            "tumble_dryer": {
+                "name": "Secadora"
+            },
+            "washing_machine": {
+                "name": "Lavadora"
+            },
+            "washer_dryer": {
+                "name": "Lavadora secadora"
+            },
+            "oven": {
+                "name": "Horno"
+            },
+            "prewash": {
+                "name": "Pre-lavado"
+            },
+            "pause": {
+                "name": "Pausa"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Bloqueo de la puerta"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Aclarado"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Aclarados"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Aclarados"
+            },
+            "good_night": {
+                "name": "Buenas noches"
+            },
+            "anti_crease": {
+                "name": "Antiarrugas"
+            },
+            "aqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "Centrifugado"
+            },
+            "programs_dw": {
+                "name": "Programa"
+            },
+            "programs_ih": {
+                "name": "Programa"
+            },
+            "programs_ov": {
+                "name": "Programa"
+            },
+            "programs_td": {
+                "name": "Programa"
+            },
+            "programs_wm": {
+                "name": "Programa"
+            },
+            "still_hot": {
+                "name": "Todav\u00eda caliente"
+            },
+            "pan_status": {
+                "name": "Sart\u00e9n"
+            },
+            "remote_control": {
+                "name": "Control remoto"
+            },
+            "rinse_aid": {
+                "name": "Nivel del agente de enjuague"
+            },
+            "salt_level": {
+                "name": "Nivel de sal"
+            },
+            "door_open": {
+                "name": "Puerta abierta"
+            },
+            "connection": {
+                "name": "Conexi\u00f3n"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Control de la energ\u00eda"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "delay_time": {
+                "name": "Programar"
+            },
+            "water_hard": {
+                "name": "Dureza del agua"
+            },
+            "program_duration": {
+                "name": "Duraci\u00f3n del programa"
+            },
+            "target_temperature": {
+                "name": "Temperatura deseada"
+            },
+            "rinse_iterations": {
+                "name": "N\u00famero de enjuagues"
+            },
+            "wash_time": {
+                "name": "Tiempo de lavado"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Placa de inducci\u00f3n"
             }
         }
     }

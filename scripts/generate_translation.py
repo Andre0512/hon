@@ -118,6 +118,83 @@ PROGRAMS = {
     "programs_wm": "PROGRAMS.WM_WD",
 }
 
+NAMES = {
+    "switch": {
+        "anti_crease": "HDRY_CMD&CTRL.PROGRAM_CYCLE_DETAIL.ANTICREASE_TITLE",
+        "add_dish": "DW_CMD&CTRL.c.ADD_DISH",
+        "eco_express": "DW_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.ECO",
+        "extra_dry": "DW_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.EXTRA_DRY",
+        "half_load": "DW_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.HALF_LOAD",
+        "open_door": "DW_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.OPEN_DOOR",
+        "three_in_one": "DW_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.THREE_IN_ONE",
+        "preheat": "OV.PROGRAM_DETAIL.PREHEAT",
+        "dish_washer": "GLOBALS.APPLIANCES_NAME.DW",
+        "tumble_dryer": "GLOBALS.APPLIANCES_NAME.TD",
+        "washing_machine": "GLOBALS.APPLIANCES_NAME.WM",
+        "washer_dryer": "GLOBALS.APPLIANCES_NAME.WD",
+        "oven": "GLOBALS.APPLIANCES_NAME.OV",
+        "prewash": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.PREWASH",
+        "pause": "GENERAL.PAUSE_PROGRAM",
+    },
+    "binary_sensor": {
+        "door_lock": "WASHING_CMD&CTRL.CHECK_UP_RESULTS.DOOR_LOCK",
+        "extra_rinse_1": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.EXTRARINSE1",
+        "extra_rinse_2": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.EXTRARINSE2",
+        "extra_rinse_3": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.EXTRARINSE3",
+        "good_night": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.GOODNIGHT",
+        "anti_crease": "HDRY_CMD&CTRL.PROGRAM_CYCLE_DETAIL.ANTICREASE_TITLE",
+        "aqua_plus": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.ACQUAPLUS",
+        "spin_speed": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.SPINSPEED",
+        "still_hot": "IH.COILS_STATUS.STILL_HOT",
+        "pan_status": "IH.COILS_STATUS.PAN",
+        "remote_control": "OV.SUPPORT.REMOTE_CONTROL",
+        "rinse_aid": "DW_CMD&CTRL.MAINTENANCE.CONSUMABLE_LEVELS_ICON_RINSE_AID",
+        "salt_level": "DW_CMD&CTRL.MAINTENANCE.CONSUMABLE_LEVELS_ICON_SALT",
+        "door_open": "GLOBALS.APPLIANCE_STATUS.DOOR_OPEN",
+        "connection": "GLOBALS.GENERAL.CONNECT",
+    },
+    "button": {
+        "induction_hob": "GLOBALS.APPLIANCES_NAME.IH",
+    },
+    "select": {
+        "dry_levels": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.DRYING",
+        "spin_speed": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.SPINSPEED",
+        "temperature": "IH.COMMON.TEMPERATURE",
+        "programs_dw": "WC.SET_PROGRAM.PROGRAM",
+        "programs_ih": "WC.SET_PROGRAM.PROGRAM",
+        "programs_ov": "WC.SET_PROGRAM.PROGRAM",
+        "programs_td": "WC.SET_PROGRAM.PROGRAM",
+        "programs_wm": "WC.SET_PROGRAM.PROGRAM",
+    },
+    "sensor": {
+        "dry_levels": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.DRYING",
+        "power": "OV.RECIPE_DETAIL.POWER_LEVEL",
+        "remaining_time": "ENROLLMENT_COMMON.GENERAL.REMAINING_TIME",
+        "temperature": "IH.COMMON.TEMPERATURE",
+        "water_efficiency": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_RESULT.WATER_EFFICIENCY",
+        "water_saving": "STATISTICS.SMART_AI_CYCLE.WATER_SAVING",
+        "duration": "WASHING_CMD&CTRL.DRAWER_PROGRAM_FILTERS.DURATION",
+        "target_temperature": "IH.COOKING_DETAIL.TEMPERATURE_TARGETING",
+        "spin_speed": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.SPINSPEED",
+        "steam_leve": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.STEAM_LEVEL",
+        "dirt_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.DIRTY_LEVEL",
+        "program_phases_wm": "WASHING_CMD&CTRL.STATISTICS_GRAPHIC_INSTANT_CONSUMPTION.PHASE",
+        "program_phases_td": "WASHING_CMD&CTRL.STATISTICS_GRAPHIC_INSTANT_CONSUMPTION.PHASE",
+        "program_phases_dw": "WASHING_CMD&CTRL.STATISTICS_GRAPHIC_INSTANT_CONSUMPTION.PHASE",
+        "delay_time": "WASHING_CMD&CTRL.COMMANDS.SCHEDULE",
+    },
+    "number": {
+        "power_management": "HINTS.COOKING_WITH_INDUCTION.POWER_MANAGEMENT",
+        "temperature": "IH.COMMON.TEMPERATURE",
+        "delay_time": "WASHING_CMD&CTRL.COMMANDS.SCHEDULE",
+        "water_hard": "WASHING_CMD&CTRL.DASHBOARD_MENU_MORE_SETTINGS_WATER.TITLE",
+        "program_duration": "OV.PROGRAM_DETAIL.PROGRAM_DURATION",
+        "target_temperature": "IH.COOKING_DETAIL.TEMPERATURE_TARGETING",
+        "rinse_iterations": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL.DRAWER_HEADER_RINSE",
+        "wash_time": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL.WASHING_TIME",
+    },
+}
+
 
 async def check_translation_files(translations):
     for language in LANGUAGES:
@@ -198,6 +275,10 @@ def main():
         for name, program in PROGRAMS.items():
             select = old.setdefault("entity", {}).setdefault("select", {})
             select.setdefault(name, {})["state"] = load_keys(program, original)
+        for entity, data in NAMES.items():
+            for name, key in data.items():
+                select = old.setdefault("entity", {}).setdefault(entity, {})
+                select.setdefault(name, {})["name"] = load_key(key, original, fallback)
         save_json(base_path / f"{language}.json", old)
 
 

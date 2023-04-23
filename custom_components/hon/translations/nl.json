@@ -38,7 +38,8 @@
                     "25": "Wassen",
                     "26": "Verwarming",
                     "27": "Wassen"
-                }
+                },
+                "name": "Fase"
             },
             "program_phases_td": {
                 "state": {
@@ -53,7 +54,8 @@
                     "18": "Fris houden",
                     "19": "Drogen",
                     "20": "Drogen"
-                }
+                },
+                "name": "Fase"
             },
             "program_phases_dw": {
                 "state": {
@@ -64,7 +66,8 @@
                     "4": "Drogen",
                     "5": "Klaar",
                     "6": "Hot rinse"
-                }
+                },
+                "name": "Fase"
             },
             "dry_levels": {
                 "state": {
@@ -77,7 +80,44 @@
                     "13": "Kastdroog",
                     "14": "Klaar om te dragen",
                     "15": "Extra droog"
-                }
+                },
+                "name": "Drogen"
+            },
+            "anti_crease": {
+                "name": "Kreukherstellend"
+            },
+            "power": {
+                "name": "Vermogensniveau"
+            },
+            "remaining_time": {
+                "name": "Resterende tijd"
+            },
+            "temperature": {
+                "name": "Temperatuur"
+            },
+            "water_efficiency": {
+                "name": "Effici\u00ebnt waterverbruik"
+            },
+            "water_saving": {
+                "name": "Waterbesparing"
+            },
+            "duration": {
+                "name": "Duur"
+            },
+            "target_temperature": {
+                "name": "Doeltemperatuur"
+            },
+            "spin_speed": {
+                "name": "Centrifugeren"
+            },
+            "steam_leve": {
+                "name": "Stoomniveau"
+            },
+            "dirt_level": {
+                "name": "Vuilheid"
+            },
+            "delay_time": {
+                "name": "Plannen"
             }
         },
         "select": {
@@ -178,7 +218,8 @@
                     "universal": "Universeel 60\u00b0C",
                     "universal_plus": "Universeel Plus 70\u00b0C",
                     "zoom_39": "Zoom 39 min"
-                }
+                },
+                "name": "Programma"
             },
             "programs_ih": {
                 "state": {
@@ -217,7 +258,8 @@
                     "iot_standard_keep_warm": "Warm houden",
                     "iot_standard_melting": "Smelten",
                     "iot_standard_simmering": "Simmering"
-                }
+                },
+                "name": "Programma"
             },
             "programs_ov": {
                 "state": {
@@ -272,7 +314,8 @@
                     "water_discharge": "Waterafvoer",
                     "white_meat": "Wit vlees",
                     "white_meat_steam": "Gestoomd wit vlees"
-                }
+                },
+                "name": "Programma"
             },
             "programs_td": {
                 "state": {
@@ -408,7 +451,8 @@
                     "woolmark": "Wol",
                     "xxl_load": "XXL Lading",
                     "zoom_59": "Zoom\u00a059"
-                }
+                },
+                "name": "Programma"
             },
             "programs_wm": {
                 "state": {
@@ -717,7 +761,8 @@
                     "wool_and_delicates_49": "Wol/Fijne was 49'",
                     "wool_dry": "Wol drogen",
                     "wool_soft_care": "Wol & Soft Care"
-                }
+                },
+                "name": "Programma"
             },
             "dry_levels": {
                 "state": {
@@ -730,7 +775,154 @@
                     "13": "Kastdroog",
                     "14": "Klaar om te dragen",
                     "15": "Extra droog"
-                }
+                },
+                "name": "Drogen"
+            },
+            "spin_speed": {
+                "name": "Centrifugeren"
+            },
+            "temperature": {
+                "name": "Temperatuur"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Kreukherstellend"
+            },
+            "add_dish": {
+                "name": ""
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Extra droog"
+            },
+            "half_load": {
+                "name": "Halve lading"
+            },
+            "open_door": {
+                "name": "Open deur"
+            },
+            "three_in_one": {
+                "name": "3 in 1"
+            },
+            "preheat": {
+                "name": "Voorverwarmen"
+            },
+            "dish_washer": {
+                "name": "Vaatwasser"
+            },
+            "tumble_dryer": {
+                "name": "Droogtrommel"
+            },
+            "washing_machine": {
+                "name": "Wasmachine"
+            },
+            "washer_dryer": {
+                "name": "Was-droogcombinatie"
+            },
+            "oven": {
+                "name": "Oven"
+            },
+            "prewash": {
+                "name": "Voorwas"
+            },
+            "pause": {
+                "name": "Pauze"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Deurvergrendeling"
+            },
+            "extra_rinse_1": {
+                "name": "+1 keer spoelen"
+            },
+            "extra_rinse_2": {
+                "name": "+2 keer spoelen"
+            },
+            "extra_rinse_3": {
+                "name": "+3 keer spoelen"
+            },
+            "good_night": {
+                "name": "Goede nacht"
+            },
+            "anti_crease": {
+                "name": "Kreukherstellend"
+            },
+            "aqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "Centrifugeren"
+            },
+            "programs_dw": {
+                "name": "Programma"
+            },
+            "programs_ih": {
+                "name": "Programma"
+            },
+            "programs_ov": {
+                "name": "Programma"
+            },
+            "programs_td": {
+                "name": "Programma"
+            },
+            "programs_wm": {
+                "name": "Programma"
+            },
+            "still_hot": {
+                "name": "Nog heet"
+            },
+            "pan_status": {
+                "name": "Pan"
+            },
+            "remote_control": {
+                "name": "Afstandsbediening"
+            },
+            "rinse_aid": {
+                "name": "Niveau glansspoelmiddel"
+            },
+            "salt_level": {
+                "name": "Niveau zout"
+            },
+            "door_open": {
+                "name": "Deur open"
+            },
+            "connection": {
+                "name": "Verbinding"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Vermogensbeheer"
+            },
+            "temperature": {
+                "name": "Temperatuur"
+            },
+            "delay_time": {
+                "name": "Plannen"
+            },
+            "water_hard": {
+                "name": "Waterhardheid"
+            },
+            "program_duration": {
+                "name": "Programmaduur"
+            },
+            "target_temperature": {
+                "name": "Doeltemperatuur"
+            },
+            "rinse_iterations": {
+                "name": "Aantal spoelbeurten"
+            },
+            "wash_time": {
+                "name": "Wastijd"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Inductiekookplaat"
             }
         }
     }

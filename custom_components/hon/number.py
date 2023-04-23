@@ -23,12 +23,14 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             icon="mdi:timer-plus",
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="delay_time",
         ),
         NumberEntityDescription(
             key="startProgram.rinseIterations",
             name="Rinse Iterations",
             icon="mdi:rotate-right",
             entity_category=EntityCategory.CONFIG,
+            translation_key="rinse_iterations",
         ),
         NumberEntityDescription(
             key="startProgram.mainWashTime",
@@ -36,6 +38,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             icon="mdi:clock-start",
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="wash_time",
         ),
     ),
     "TD": (
@@ -45,6 +48,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             icon="mdi:timer-plus",
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="delay_time",
         ),
         NumberEntityDescription(
             key="startProgram.tempLevel",
@@ -61,6 +65,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             icon="mdi:timer-plus",
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="delay_time",
         ),
     ),
     "OV": (
@@ -70,6 +75,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             icon="mdi:timer-plus",
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="delay_time",
         ),
         NumberEntityDescription(
             key="startProgram.tempSel",
@@ -77,6 +83,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="target_temperature",
         ),
         NumberEntityDescription(
             key="startProgram.prTime",
@@ -84,6 +91,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG,
             icon="mdi:timelapse",
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="program_duration",
         ),
     ),
     "IH": (
@@ -92,12 +100,14 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             name="Temperature",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
+            translation_key="temperature",
         ),
         NumberEntityDescription(
             key="startProgram.powerManagement",
             name="Power Management",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:timelapse",
+            translation_key="power_management",
         ),
     ),
     "DW": (
@@ -107,12 +117,14 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             icon="mdi:timer-plus",
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="delay_time",
         ),
         NumberEntityDescription(
             key="startProgram.waterHard",
             name="Water hard",
             icon="mdi:water",
             entity_category=EntityCategory.CONFIG,
+            translation_key="water_hard",
         ),
     ),
 }

@@ -38,7 +38,8 @@
                     "25": "\u6d17\u6da4",
                     "26": "\u52a0\u70ed",
                     "27": "\u6d17\u6da4"
-                }
+                },
+                "name": "\u9636\u6bb5"
             },
             "program_phases_td": {
                 "state": {
@@ -53,7 +54,8 @@
                     "18": "\u4fdd\u6301\u6e05\u65b0",
                     "19": "\u70d8\u5e72",
                     "20": "\u70d8\u5e72"
-                }
+                },
+                "name": "\u9636\u6bb5"
             },
             "program_phases_dw": {
                 "state": {
@@ -64,7 +66,8 @@
                     "4": "\u70d8\u5e72",
                     "5": "\u5c31\u7eea",
                     "6": "Hot rinse"
-                }
+                },
+                "name": "\u9636\u6bb5"
             },
             "dry_levels": {
                 "state": {
@@ -77,7 +80,44 @@
                     "13": "\u8863\u67dc\u5c31\u7eea",
                     "14": "\u53ef\u7a7f",
                     "15": "\u7279\u5e72"
-                }
+                },
+                "name": "\u70d8\u5e72"
+            },
+            "anti_crease": {
+                "name": "\u6297\u76b1"
+            },
+            "power": {
+                "name": "\u529f\u7387\u7ea7"
+            },
+            "remaining_time": {
+                "name": "\u5269\u4f59\u65f6\u95f4"
+            },
+            "temperature": {
+                "name": "\u6e29\u5ea6"
+            },
+            "water_efficiency": {
+                "name": "\u7528\u6c34\u6548\u7387"
+            },
+            "water_saving": {
+                "name": "\u8282\u6c34"
+            },
+            "duration": {
+                "name": "\u6301\u7eed\u65f6\u95f4"
+            },
+            "target_temperature": {
+                "name": "\u76ee\u6807\u6e29\u5ea6"
+            },
+            "spin_speed": {
+                "name": "\u7529\u5e72"
+            },
+            "steam_leve": {
+                "name": "\u84b8\u6c7d\u6863\u4f4d"
+            },
+            "dirt_level": {
+                "name": "\u810f\u6c61\u7a0b\u5ea6"
+            },
+            "delay_time": {
+                "name": "\u8ba1\u5212"
             }
         },
         "select": {
@@ -178,7 +218,8 @@
                     "universal": "\u901a\u752860\u00b0C",
                     "universal_plus": "\u901a\u7528+ 70\u00b0C",
                     "zoom_39": "Zoom 39 min"
-                }
+                },
+                "name": "\u7a0b\u5e8f"
             },
             "programs_ih": {
                 "state": {
@@ -217,7 +258,8 @@
                     "iot_standard_keep_warm": "\u4fdd\u6e29",
                     "iot_standard_melting": "\u878d\u5316",
                     "iot_standard_simmering": "Simmering"
-                }
+                },
+                "name": "\u7a0b\u5e8f"
             },
             "programs_ov": {
                 "state": {
@@ -272,7 +314,8 @@
                     "water_discharge": "\u6392\u6c34",
                     "white_meat": "\u767d\u8089",
                     "white_meat_steam": "\u84b8\u716e\u7684\u767d\u8089"
-                }
+                },
+                "name": "\u7a0b\u5e8f"
             },
             "programs_td": {
                 "state": {
@@ -408,7 +451,8 @@
                     "woolmark": "Woolmark",
                     "xxl_load": "XXL Load",
                     "zoom_59": "\u7f29\u653e 59"
-                }
+                },
+                "name": "\u7a0b\u5e8f"
             },
             "programs_wm": {
                 "state": {
@@ -717,7 +761,8 @@
                     "wool_and_delicates_49": "\u7f8a\u6bdb",
                     "wool_dry": "\u7f8a\u6bdb\u8863\u7269\u70d8\u5e72",
                     "wool_soft_care": "\u7f8a\u6bdb"
-                }
+                },
+                "name": "\u7a0b\u5e8f"
             },
             "dry_levels": {
                 "state": {
@@ -730,7 +775,154 @@
                     "13": "\u8863\u67dc\u5c31\u7eea",
                     "14": "\u53ef\u7a7f",
                     "15": "\u7279\u5e72"
-                }
+                },
+                "name": "\u70d8\u5e72"
+            },
+            "spin_speed": {
+                "name": "\u7529\u5e72"
+            },
+            "temperature": {
+                "name": "\u6e29\u5ea6"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "\u6297\u76b1"
+            },
+            "add_dish": {
+                "name": ""
+            },
+            "eco_express": {
+                "name": "\u8282\u80fd"
+            },
+            "extra_dry": {
+                "name": "\u7279\u5e72"
+            },
+            "half_load": {
+                "name": "\u534a\u8f7d"
+            },
+            "open_door": {
+                "name": "\u5f00\u95e8"
+            },
+            "three_in_one": {
+                "name": "\u4e09\u5408\u4e00"
+            },
+            "preheat": {
+                "name": "\u9884\u70ed"
+            },
+            "dish_washer": {
+                "name": "\u6d17\u7897\u673a"
+            },
+            "tumble_dryer": {
+                "name": "\u6eda\u7b52\u70d8\u5e72\u673a"
+            },
+            "washing_machine": {
+                "name": "\u6d17\u8863\u673a"
+            },
+            "washer_dryer": {
+                "name": "\u6d17\u8863\u70d8\u5e72\u4e24\u7528\u673a"
+            },
+            "oven": {
+                "name": "\u70e4\u7089"
+            },
+            "prewash": {
+                "name": "\u9884\u6d17"
+            },
+            "pause": {
+                "name": "\u6682\u505c"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "\u95e8\u9501"
+            },
+            "extra_rinse_1": {
+                "name": "+1 \u6b21\u6f02\u6d17"
+            },
+            "extra_rinse_2": {
+                "name": "+2 \u6b21\u6f02\u6d17"
+            },
+            "extra_rinse_3": {
+                "name": "+3 \u6b21\u6f02\u6d17"
+            },
+            "good_night": {
+                "name": "\u665a\u5b89"
+            },
+            "anti_crease": {
+                "name": "\u6297\u76b1"
+            },
+            "aqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "\u7529\u5e72"
+            },
+            "programs_dw": {
+                "name": "\u7a0b\u5e8f"
+            },
+            "programs_ih": {
+                "name": "\u7a0b\u5e8f"
+            },
+            "programs_ov": {
+                "name": "\u7a0b\u5e8f"
+            },
+            "programs_td": {
+                "name": "\u7a0b\u5e8f"
+            },
+            "programs_wm": {
+                "name": "\u7a0b\u5e8f"
+            },
+            "still_hot": {
+                "name": "\u4ecd\u7136\u70ed"
+            },
+            "pan_status": {
+                "name": "\u70e4\u76d8"
+            },
+            "remote_control": {
+                "name": "\u8fdc\u7a0b\u63a7\u5236"
+            },
+            "rinse_aid": {
+                "name": "\u6f02\u6d17\u52a9\u5242\u6db2\u4f4d"
+            },
+            "salt_level": {
+                "name": "\u76d0\u6c34\u5e73"
+            },
+            "door_open": {
+                "name": "\u95e8\u6253\u5f00"
+            },
+            "connection": {
+                "name": "\u8fde\u63a5"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "\u7535\u6e90\u7ba1\u7406"
+            },
+            "temperature": {
+                "name": "\u6e29\u5ea6"
+            },
+            "delay_time": {
+                "name": "\u8ba1\u5212"
+            },
+            "water_hard": {
+                "name": "\u6c34\u7684\u786c\u5ea6"
+            },
+            "program_duration": {
+                "name": "\u7a0b\u5e8f\u6301\u7eed\u65f6\u95f4"
+            },
+            "target_temperature": {
+                "name": "\u76ee\u6807\u6e29\u5ea6"
+            },
+            "rinse_iterations": {
+                "name": "\u6f02\u6d17\u6b21\u6570"
+            },
+            "wash_time": {
+                "name": "\u6e05\u6d17\u65f6\u95f4"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "\u7535\u78c1\u7089"
             }
         }
     }

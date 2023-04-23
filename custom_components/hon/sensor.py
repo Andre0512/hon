@@ -93,6 +93,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:timer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="remaining_time",
         ),
         SensorEntityDescription(
             key="spinSpeed",
@@ -100,6 +101,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:speedometer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="spin_speed",
         ),
     ),
     "TD": (
@@ -118,6 +120,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:timer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="remaining_time",
         ),
         SensorEntityDescription(
             key="delayTime",
@@ -125,6 +128,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:clock-start",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="delay_time",
         ),
         SensorEntityDescription(
             key="prCode",
@@ -206,6 +210,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:fast-forward-outline",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=REVOLUTIONS_PER_MINUTE,
+            translation_key="spin_speed",
         ),
         SensorEntityDescription(
             key="remainingTimeMM",
@@ -213,6 +218,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:timer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="remaining_time",
         ),
         SensorEntityDescription(
             key="prCode",
@@ -229,16 +235,19 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="dryLevel",
             name="Dry level",
             icon="mdi:hair-dryer",
+            translation_key="dry_levels",
         ),
         SensorEntityDescription(
             key="dirtyLevel",
             name="Dirt level",
             icon="mdi:liquid-spot",
+            translation_key="dirt_level",
         ),
         SensorEntityDescription(
             key="steamLevel",
             name="Steam level",
             icon="mdi:smoke",
+            translation_key="steam_level",
         ),
         SensorEntityDescription(
             key="temp",
@@ -246,6 +255,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:thermometer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
         ),
     ),
     "OV": (
@@ -254,21 +264,27 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Remaining Time",
             icon="mdi:timer",
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="remaining_time",
         ),
         SensorEntityDescription(
             key="delayTime",
             name="Start Time",
             icon="mdi:clock-start",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="delay_time",
         ),
         SensorEntityDescription(
             key="temp",
             name="Temperature",
             icon="mdi:thermometer",
+            translation_key="temperature",
         ),
         SensorEntityDescription(
             key="tempSel",
             name="Temperature Selected",
             icon="mdi:thermometer",
+            translation_key="target_temperature",
         ),
     ),
     "IH": (
@@ -277,6 +293,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Remaining Time",
             icon="mdi:timer",
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="remaining_time",
         ),
         SensorEntityDescription(
             key="temp",
@@ -284,6 +301,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:thermometer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
         ),
         SensorEntityDescription(key="errors", name="Error", icon="mdi:math-log"),
         SensorEntityDescription(
@@ -291,6 +309,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Power",
             icon="mdi:lightning-bolt",
             state_class=SensorStateClass.MEASUREMENT,
+            translation_key="power",
         ),
     ),
     "DW": (
@@ -307,6 +326,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:water",
             state_class=SensorStateClass.MEASUREMENT,
             entity_category=EntityCategory.CONFIG,
+            translation_key="water_efficiency",
         ),
         SensorEntityDescription(
             key="startProgram.waterSaving",
@@ -315,6 +335,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=PERCENTAGE,
             entity_category=EntityCategory.CONFIG,
+            translation_key="water_saving",
         ),
         SensorEntityDescription(
             key="startProgram.temp",
@@ -323,6 +344,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             entity_category=EntityCategory.CONFIG,
+            translation_key="temperature",
         ),
         SensorEntityDescription(
             key="startProgram.energyLabel",
@@ -338,6 +360,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
             entity_category=EntityCategory.CONFIG,
+            translation_key="duration",
         ),
         SensorEntityDescription(
             key="machMode",
@@ -354,6 +377,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:timer",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="remaining_time",
         ),
         SensorEntityDescription(
             key="prPhase",

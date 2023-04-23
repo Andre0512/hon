@@ -38,7 +38,8 @@
                     "25": "Pranje",
                     "26": "Ogrevanje",
                     "27": "Pranje"
-                }
+                },
+                "name": "Faza"
             },
             "program_phases_td": {
                 "state": {
@@ -53,7 +54,8 @@
                     "18": "Ohrani sve\u017ee",
                     "19": "Su\u0161enje",
                     "20": "Su\u0161enje"
-                }
+                },
+                "name": "Faza"
             },
             "program_phases_dw": {
                 "state": {
@@ -64,7 +66,8 @@
                     "4": "Su\u0161enje",
                     "5": "Pripravljen",
                     "6": "Hot rinse"
-                }
+                },
+                "name": "Faza"
             },
             "dry_levels": {
                 "state": {
@@ -77,7 +80,44 @@
                     "13": "Suho za omaro",
                     "14": "Pripravljeno za uporabo",
                     "15": "Zelo suho"
-                }
+                },
+                "name": "Su\u0161enje"
+            },
+            "anti_crease": {
+                "name": "Proti me\u010dkanju"
+            },
+            "power": {
+                "name": "Stopnja mo\u010di"
+            },
+            "remaining_time": {
+                "name": "Time remaining"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "water_efficiency": {
+                "name": "U\u010dinkovita raba vode"
+            },
+            "water_saving": {
+                "name": "Privar\u010devana voda"
+            },
+            "duration": {
+                "name": "Trajanje"
+            },
+            "target_temperature": {
+                "name": "Ciljna temperatura"
+            },
+            "spin_speed": {
+                "name": "O\u017eemanje"
+            },
+            "steam_leve": {
+                "name": "Koli\u010dina pare"
+            },
+            "dirt_level": {
+                "name": "Stopnja umazanije"
+            },
+            "delay_time": {
+                "name": "Urnik"
             }
         },
         "select": {
@@ -178,7 +218,8 @@
                     "universal": "Univerzalno 60 \u00b0C",
                     "universal_plus": "Univerzalni Plus 70 \u00b0C",
                     "zoom_39": "Zoom 39 min"
-                }
+                },
+                "name": "Program"
             },
             "programs_ih": {
                 "state": {
@@ -217,7 +258,8 @@
                     "iot_standard_keep_warm": "Ohranjanje toplote",
                     "iot_standard_melting": "Taljenje",
                     "iot_standard_simmering": "Rahlo vretje"
-                }
+                },
+                "name": "Program"
             },
             "programs_ov": {
                 "state": {
@@ -272,7 +314,8 @@
                     "water_discharge": "Odtok za vodo",
                     "white_meat": "Belo meso",
                     "white_meat_steam": "Soparjeno belo meso"
-                }
+                },
+                "name": "Program"
             },
             "programs_td": {
                 "state": {
@@ -408,7 +451,8 @@
                     "woolmark": "Woolmark",
                     "xxl_load": "Zelo veliki kosi perila",
                     "zoom_59": "Zoom 59"
-                }
+                },
+                "name": "Program"
             },
             "programs_wm": {
                 "state": {
@@ -717,7 +761,8 @@
                     "wool_and_delicates_49": "Volna/Ob\u010dutljive tkanine 49'",
                     "wool_dry": "Su\u0161enje volne",
                     "wool_soft_care": "Volna & Nega Za Mehkobo"
-                }
+                },
+                "name": "Program"
             },
             "dry_levels": {
                 "state": {
@@ -730,7 +775,154 @@
                     "13": "Suho za omaro",
                     "14": "Pripravljeno za uporabo",
                     "15": "Zelo suho"
-                }
+                },
+                "name": "Su\u0161enje"
+            },
+            "spin_speed": {
+                "name": "O\u017eemanje"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Proti me\u010dkanju"
+            },
+            "add_dish": {
+                "name": ""
+            },
+            "eco_express": {
+                "name": "Var\u010dno"
+            },
+            "extra_dry": {
+                "name": "Zelo suho"
+            },
+            "half_load": {
+                "name": "Napolnjeno do polovice"
+            },
+            "open_door": {
+                "name": "Odpri vrata"
+            },
+            "three_in_one": {
+                "name": "3 v 1"
+            },
+            "preheat": {
+                "name": "Predhodno segrevanje"
+            },
+            "dish_washer": {
+                "name": "Pomivalni stroj"
+            },
+            "tumble_dryer": {
+                "name": "Su\u0161ilni stroj"
+            },
+            "washing_machine": {
+                "name": "Pralni stroj"
+            },
+            "washer_dryer": {
+                "name": "Pralno-su\u0161ilni stroj"
+            },
+            "oven": {
+                "name": "Pe\u010dica"
+            },
+            "prewash": {
+                "name": "Predpranje"
+            },
+            "pause": {
+                "name": "Premor"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Zaklepanje vrat"
+            },
+            "extra_rinse_1": {
+                "name": " + 1 izpiranje"
+            },
+            "extra_rinse_2": {
+                "name": " + 2 izpiranji"
+            },
+            "extra_rinse_3": {
+                "name": " + 3 izpiranja"
+            },
+            "good_night": {
+                "name": "Lahko no\u010d"
+            },
+            "anti_crease": {
+                "name": "Proti me\u010dkanju"
+            },
+            "aqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "O\u017eemanje"
+            },
+            "programs_dw": {
+                "name": "Program"
+            },
+            "programs_ih": {
+                "name": "Program"
+            },
+            "programs_ov": {
+                "name": "Program"
+            },
+            "programs_td": {
+                "name": "Program"
+            },
+            "programs_wm": {
+                "name": "Program"
+            },
+            "still_hot": {
+                "name": "\u0160e vedno vro\u010de"
+            },
+            "pan_status": {
+                "name": "Posoda"
+            },
+            "remote_control": {
+                "name": "Daljinsko upravljanje"
+            },
+            "rinse_aid": {
+                "name": "Nivo sredstva za sijaj"
+            },
+            "salt_level": {
+                "name": "Nivo soli"
+            },
+            "door_open": {
+                "name": "Door open"
+            },
+            "connection": {
+                "name": "Connection"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Upravljanje mo\u010di"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "delay_time": {
+                "name": "Urnik"
+            },
+            "water_hard": {
+                "name": "Trdota vode"
+            },
+            "program_duration": {
+                "name": "\u010cas trajanja programa"
+            },
+            "target_temperature": {
+                "name": "Ciljna temperatura"
+            },
+            "rinse_iterations": {
+                "name": "\u0160tevilo izpiranj"
+            },
+            "wash_time": {
+                "name": "\u010cas pranja"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Indukcijska kuhalna plo\u0161\u010da"
             }
         }
     }

@@ -38,7 +38,8 @@
                     "25": "Lavar",
                     "26": "Aquecimento",
                     "27": "Lavar"
-                }
+                },
+                "name": "Fase"
             },
             "program_phases_td": {
                 "state": {
@@ -53,7 +54,8 @@
                     "18": "Manter Fresco",
                     "19": "Secagem",
                     "20": "Secagem"
-                }
+                },
+                "name": "Fase"
             },
             "program_phases_dw": {
                 "state": {
@@ -64,7 +66,8 @@
                     "4": "Secagem",
                     "5": "Pronto",
                     "6": "Hot rinse"
-                }
+                },
+                "name": "Fase"
             },
             "dry_levels": {
                 "state": {
@@ -77,7 +80,44 @@
                     "13": "Guarda-Roupa pronto",
                     "14": "Pronto a usar",
                     "15": "Extra seco"
-                }
+                },
+                "name": "Secagem"
+            },
+            "anti_crease": {
+                "name": "Anti-vincos"
+            },
+            "power": {
+                "name": "N\u00edvel de pot\u00eancia"
+            },
+            "remaining_time": {
+                "name": "Tempo restante"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "water_efficiency": {
+                "name": "Efici\u00eancia da \u00e1gua"
+            },
+            "water_saving": {
+                "name": "Poupan\u00e7a de \u00e1gua"
+            },
+            "duration": {
+                "name": "Dura\u00e7\u00e3o"
+            },
+            "target_temperature": {
+                "name": "Temperatura alvo"
+            },
+            "spin_speed": {
+                "name": "Centrifugar"
+            },
+            "steam_leve": {
+                "name": "N\u00edvel de vapor"
+            },
+            "dirt_level": {
+                "name": "N\u00edvel de sujidade"
+            },
+            "delay_time": {
+                "name": "Agendar"
             }
         },
         "select": {
@@ -178,7 +218,8 @@
                     "universal": "Universal 60 \u00b0C",
                     "universal_plus": "Universal plus 70 \u00b0C",
                     "zoom_39": "Zoom 39 min"
-                }
+                },
+                "name": "Programa"
             },
             "programs_ih": {
                 "state": {
@@ -217,7 +258,8 @@
                     "iot_standard_keep_warm": "Manter quente",
                     "iot_standard_melting": "Derreter",
                     "iot_standard_simmering": "Simmering"
-                }
+                },
+                "name": "Programa"
             },
             "programs_ov": {
                 "state": {
@@ -272,7 +314,8 @@
                     "water_discharge": "Drenagem de \u00e1gua",
                     "white_meat": "Carne branca",
                     "white_meat_steam": "Carne branca cozinhada a vapor"
-                }
+                },
+                "name": "Programa"
             },
             "programs_td": {
                 "state": {
@@ -408,7 +451,8 @@
                     "woolmark": "Woolmark",
                     "xxl_load": "Carga XXL",
                     "zoom_59": "Zoom 59"
-                }
+                },
+                "name": "Programa"
             },
             "programs_wm": {
                 "state": {
@@ -717,7 +761,8 @@
                     "wool_and_delicates_49": "L\u00e3s/Delicados 49'",
                     "wool_dry": "Secagem de l\u00e3s",
                     "wool_soft_care": "L\u00e3s & Cuidado Suavidade"
-                }
+                },
+                "name": "Programa"
             },
             "dry_levels": {
                 "state": {
@@ -730,7 +775,154 @@
                     "13": "Guarda-Roupa pronto",
                     "14": "Pronto a usar",
                     "15": "Extra seco"
-                }
+                },
+                "name": "Secagem"
+            },
+            "spin_speed": {
+                "name": "Centrifugar"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Anti-vincos"
+            },
+            "add_dish": {
+                "name": ""
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Extra seco"
+            },
+            "half_load": {
+                "name": "Meia carga"
+            },
+            "open_door": {
+                "name": "Abrir porta"
+            },
+            "three_in_one": {
+                "name": "3 em 1"
+            },
+            "preheat": {
+                "name": "Pr\u00e9-aquecimento"
+            },
+            "dish_washer": {
+                "name": "M\u00e1quina de lavar loi\u00e7a"
+            },
+            "tumble_dryer": {
+                "name": "M\u00e1quina de secar"
+            },
+            "washing_machine": {
+                "name": "M\u00e1quina de lavar"
+            },
+            "washer_dryer": {
+                "name": "M\u00e1quina de lavar e secar"
+            },
+            "oven": {
+                "name": "Forno"
+            },
+            "prewash": {
+                "name": "Pr\u00e9-lavagem"
+            },
+            "pause": {
+                "name": "Pausa"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Fecho da porta"
+            },
+            "extra_rinse_1": {
+                "name": "+1 enxaguamento"
+            },
+            "extra_rinse_2": {
+                "name": "+2 enxaguamentos"
+            },
+            "extra_rinse_3": {
+                "name": "+3 enxaguamentos"
+            },
+            "good_night": {
+                "name": "Boa Noite"
+            },
+            "anti_crease": {
+                "name": "Anti-vincos"
+            },
+            "aqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "Centrifugar"
+            },
+            "programs_dw": {
+                "name": "Programa"
+            },
+            "programs_ih": {
+                "name": "Programa"
+            },
+            "programs_ov": {
+                "name": "Programa"
+            },
+            "programs_td": {
+                "name": "Programa"
+            },
+            "programs_wm": {
+                "name": "Programa"
+            },
+            "still_hot": {
+                "name": "Ainda quente"
+            },
+            "pan_status": {
+                "name": "Frigideira"
+            },
+            "remote_control": {
+                "name": "Controlo remoto"
+            },
+            "rinse_aid": {
+                "name": "N\u00edvel de Abrilhantador"
+            },
+            "salt_level": {
+                "name": "N\u00edvel de sal"
+            },
+            "door_open": {
+                "name": "Porta aberta"
+            },
+            "connection": {
+                "name": "Conex\u00e3o"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Gest\u00e3o de energia"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "delay_time": {
+                "name": "Agendar"
+            },
+            "water_hard": {
+                "name": "Dureza da \u00e1gua"
+            },
+            "program_duration": {
+                "name": "Dura\u00e7\u00e3o do programa"
+            },
+            "target_temperature": {
+                "name": "Temperatura alvo"
+            },
+            "rinse_iterations": {
+                "name": "N\u00famero de enxaguamentos"
+            },
+            "wash_time": {
+                "name": "Tempo de lavagem"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Placa de indu\u00e7\u00e3o"
             }
         }
     }

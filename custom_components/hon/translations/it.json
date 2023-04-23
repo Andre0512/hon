@@ -94,7 +94,8 @@
                     "25": "Lavaggio",
                     "26": "Riscaldamento",
                     "27": "Lavaggio"
-                }
+                },
+                "name": "Fase"
             },
             "program_phases_td": {
                 "state": {
@@ -109,7 +110,8 @@
                     "18": "Keep Fresh",
                     "19": "Asciugatura",
                     "20": "Asciugatura"
-                }
+                },
+                "name": "Fase"
             },
             "program_phases_dw": {
                 "state": {
@@ -120,7 +122,8 @@
                     "4": "Asciugatura",
                     "5": "Pronta",
                     "6": "Risciacquo caldo "
-                }
+                },
+                "name": "Fase"
             },
             "dry_levels": {
                 "state": {
@@ -133,7 +136,44 @@
                     "13": "Armadio",
                     "14": "Pronto da indossare",
                     "15": "Extra asciutto"
-                }
+                },
+                "name": "Tipo Asciugatura"
+            },
+            "anti_crease": {
+                "name": "Antipieghe "
+            },
+            "power": {
+                "name": "Livello di potenza"
+            },
+            "remaining_time": {
+                "name": "Tempo rimanente"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "water_efficiency": {
+                "name": "Efficienza idrica"
+            },
+            "water_saving": {
+                "name": "Risparmio acqua"
+            },
+            "duration": {
+                "name": "Durata"
+            },
+            "target_temperature": {
+                "name": "Temperatura terget"
+            },
+            "spin_speed": {
+                "name": "Centrifuga"
+            },
+            "steam_leve": {
+                "name": "Livello vapore"
+            },
+            "dirt_level": {
+                "name": "Livello di sporco"
+            },
+            "delay_time": {
+                "name": "Ritarda avvio"
             }
         },
         "select": {
@@ -234,7 +274,8 @@
                     "universal": "Universale 60\u00b0C",
                     "universal_plus": "Universale Plus 70\u00b0C",
                     "zoom_39": "Zoom 39 min"
-                }
+                },
+                "name": "Programma"
             },
             "programs_ih": {
                 "state": {
@@ -273,7 +314,8 @@
                     "iot_standard_keep_warm": "Mantenimento",
                     "iot_standard_melting": "Fusione",
                     "iot_standard_simmering": "Ebollizione Lenta"
-                }
+                },
+                "name": "Programma"
             },
             "programs_ov": {
                 "state": {
@@ -328,7 +370,8 @@
                     "water_discharge": "Scarico d'acqua",
                     "white_meat": "Carne bianca",
                     "white_meat_steam": "Carne bianca a vapore"
-                }
+                },
+                "name": "Programma"
             },
             "programs_td": {
                 "state": {
@@ -464,7 +507,8 @@
                     "woolmark": "Lana",
                     "xxl_load": "Carico XXL",
                     "zoom_59": "Zoom 59"
-                }
+                },
+                "name": "Programma"
             },
             "programs_wm": {
                 "state": {
@@ -773,7 +817,8 @@
                     "wool_and_delicates_49": "Lana e Delicati 49'",
                     "wool_dry": "Asciugatura Lana",
                     "wool_soft_care": "Lana e Soft Care"
-                }
+                },
+                "name": "Programma"
             },
             "dry_levels": {
                 "state": {
@@ -786,7 +831,154 @@
                     "13": "Armadio",
                     "14": "Pronto da indossare",
                     "15": "Extra asciutto"
-                }
+                },
+                "name": "Tipo Asciugatura"
+            },
+            "spin_speed": {
+                "name": "Centrifuga"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Antipieghe "
+            },
+            "add_dish": {
+                "name": ""
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Extra asciutto"
+            },
+            "half_load": {
+                "name": "Mezzo carico"
+            },
+            "open_door": {
+                "name": "Apri porta"
+            },
+            "three_in_one": {
+                "name": "3 in 1"
+            },
+            "preheat": {
+                "name": "Preriscaldo"
+            },
+            "dish_washer": {
+                "name": "Lavastoviglie"
+            },
+            "tumble_dryer": {
+                "name": "Asciugatrice"
+            },
+            "washing_machine": {
+                "name": "Lavatrice"
+            },
+            "washer_dryer": {
+                "name": "Lavasciuga"
+            },
+            "oven": {
+                "name": "Forno"
+            },
+            "prewash": {
+                "name": "Prelavaggio"
+            },
+            "pause": {
+                "name": "Pausa"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Dispositivo blocco porta"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Risciacquo"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Risciacqui"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Risciacqui"
+            },
+            "good_night": {
+                "name": "Buona notte"
+            },
+            "anti_crease": {
+                "name": "Antipieghe "
+            },
+            "aqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "Centrifuga"
+            },
+            "programs_dw": {
+                "name": "Programma"
+            },
+            "programs_ih": {
+                "name": "Programma"
+            },
+            "programs_ov": {
+                "name": "Programma"
+            },
+            "programs_td": {
+                "name": "Programma"
+            },
+            "programs_wm": {
+                "name": "Programma"
+            },
+            "still_hot": {
+                "name": "Ancora caldo"
+            },
+            "pan_status": {
+                "name": "Pentola"
+            },
+            "remote_control": {
+                "name": "Controllo remoto"
+            },
+            "rinse_aid": {
+                "name": "Livello Brillantante"
+            },
+            "salt_level": {
+                "name": "Livello Sale"
+            },
+            "door_open": {
+                "name": "Porta aperta"
+            },
+            "connection": {
+                "name": "Connessione"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Power management"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "delay_time": {
+                "name": "Ritarda avvio"
+            },
+            "water_hard": {
+                "name": "Durezza acqua"
+            },
+            "program_duration": {
+                "name": "Durata programma"
+            },
+            "target_temperature": {
+                "name": "Temperatura terget"
+            },
+            "rinse_iterations": {
+                "name": "Numero risciacqui"
+            },
+            "wash_time": {
+                "name": "Intensit\u00e0 di lavaggio"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Piano cottura a induzione"
             }
         }
     }

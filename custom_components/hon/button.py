@@ -19,6 +19,7 @@ BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
             key="startProgram",
             name="Start Program",
             icon="mdi:pot-steam",
+            translation_key="induction_hob",
         ),
     ),
 }

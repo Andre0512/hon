@@ -38,7 +38,8 @@
                     "25": "Waschen",
                     "26": "Heizung",
                     "27": "Waschen"
-                }
+                },
+                "name": "Phase"
             },
             "program_phases_td": {
                 "state": {
@@ -53,7 +54,8 @@
                     "18": "Auffrischen",
                     "19": "Trocknen",
                     "20": "Trocknen"
-                }
+                },
+                "name": "Phase"
             },
             "program_phases_dw": {
                 "state": {
@@ -64,7 +66,8 @@
                     "4": "Trocknen",
                     "5": "Bereit",
                     "6": "Hot rinse"
-                }
+                },
+                "name": "Phase"
             },
             "dry_levels": {
                 "state": {
@@ -77,7 +80,44 @@
                     "13": "W\u00e4sche fertig",
                     "14": "Bereit zum Anziehen",
                     "15": "Extra trocken"
-                }
+                },
+                "name": "Trocknen"
+            },
+            "anti_crease": {
+                "name": "Knitterschutz"
+            },
+            "power": {
+                "name": "Leistungsstufe"
+            },
+            "remaining_time": {
+                "name": "Verbleibende Zeit"
+            },
+            "temperature": {
+                "name": "Temperatur"
+            },
+            "water_efficiency": {
+                "name": "Wasserverbrauch"
+            },
+            "water_saving": {
+                "name": "Wasserersparnis"
+            },
+            "duration": {
+                "name": "Dauer"
+            },
+            "target_temperature": {
+                "name": "Zieltemperatur"
+            },
+            "spin_speed": {
+                "name": "Schleudern"
+            },
+            "steam_leve": {
+                "name": "Dampfstufe"
+            },
+            "dirt_level": {
+                "name": "Verschmutzungsgrad"
+            },
+            "delay_time": {
+                "name": "Zeitplan"
             }
         },
         "select": {
@@ -178,7 +218,8 @@
                     "universal": "Universal 60\u00b0C",
                     "universal_plus": "Universal Plus 70 \u00b0C",
                     "zoom_39": "Zoom 39 min"
-                }
+                },
+                "name": "Programm"
             },
             "programs_ih": {
                 "state": {
@@ -217,7 +258,8 @@
                     "iot_standard_keep_warm": "Warmhalten",
                     "iot_standard_melting": "Schmelzen",
                     "iot_standard_simmering": "Simmering"
-                }
+                },
+                "name": "Programm"
             },
             "programs_ov": {
                 "state": {
@@ -272,7 +314,8 @@
                     "water_discharge": "Wasserabfluss",
                     "white_meat": "Wei\u00dfes Fleisch",
                     "white_meat_steam": "Dampfgegartes wei\u00dfes Fleisch"
-                }
+                },
+                "name": "Programm"
             },
             "programs_td": {
                 "state": {
@@ -408,7 +451,8 @@
                     "woolmark": "Wolle",
                     "xxl_load": "XXL-Beladung",
                     "zoom_59": "Zoom 59"
-                }
+                },
+                "name": "Programm"
             },
             "programs_wm": {
                 "state": {
@@ -717,7 +761,8 @@
                     "wool_and_delicates_49": "Wolle/Feinw\u00e4sche 49'",
                     "wool_dry": "Wolle trocknen",
                     "wool_soft_care": "Wolle & Soft Care"
-                }
+                },
+                "name": "Programm"
             },
             "dry_levels": {
                 "state": {
@@ -730,7 +775,154 @@
                     "13": "W\u00e4sche fertig",
                     "14": "Bereit zum Anziehen",
                     "15": "Extra trocken"
-                }
+                },
+                "name": "Trocknen"
+            },
+            "spin_speed": {
+                "name": "Schleudern"
+            },
+            "temperature": {
+                "name": "Temperatur"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Knitterschutz"
+            },
+            "add_dish": {
+                "name": ""
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Extra trocken"
+            },
+            "half_load": {
+                "name": "Halbe Ladung"
+            },
+            "open_door": {
+                "name": "T\u00fcr offen"
+            },
+            "three_in_one": {
+                "name": "3-in-1"
+            },
+            "preheat": {
+                "name": "Vorheizen"
+            },
+            "dish_washer": {
+                "name": "Geschirrsp\u00fclmaschine"
+            },
+            "tumble_dryer": {
+                "name": "Trockner"
+            },
+            "washing_machine": {
+                "name": "Waschmaschine"
+            },
+            "washer_dryer": {
+                "name": "Waschtrockner"
+            },
+            "oven": {
+                "name": "Ofen"
+            },
+            "prewash": {
+                "name": "Vorsp\u00fclen"
+            },
+            "pause": {
+                "name": "Anhalten"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "T\u00fcrsperre"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Sp\u00fclgang"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Sp\u00fclg\u00e4nge"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Sp\u00fclg\u00e4nge"
+            },
+            "good_night": {
+                "name": "Gute Nacht"
+            },
+            "anti_crease": {
+                "name": "Knitterschutz"
+            },
+            "aqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "Schleudern"
+            },
+            "programs_dw": {
+                "name": "Programm"
+            },
+            "programs_ih": {
+                "name": "Programm"
+            },
+            "programs_ov": {
+                "name": "Programm"
+            },
+            "programs_td": {
+                "name": "Programm"
+            },
+            "programs_wm": {
+                "name": "Programm"
+            },
+            "still_hot": {
+                "name": "Noch hei\u00df"
+            },
+            "pan_status": {
+                "name": "Pfanne"
+            },
+            "remote_control": {
+                "name": "Fernsteuerung"
+            },
+            "rinse_aid": {
+                "name": "Klarsp\u00fclerstand"
+            },
+            "salt_level": {
+                "name": "Salz-F\u00fcllstand"
+            },
+            "door_open": {
+                "name": "T\u00fcr offen"
+            },
+            "connection": {
+                "name": "Verbinden"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Energieverwaltung"
+            },
+            "temperature": {
+                "name": "Temperatur"
+            },
+            "delay_time": {
+                "name": "Zeitplan"
+            },
+            "water_hard": {
+                "name": "Wasserh\u00e4rte"
+            },
+            "program_duration": {
+                "name": "Programmdauer"
+            },
+            "target_temperature": {
+                "name": "Zieltemperatur"
+            },
+            "rinse_iterations": {
+                "name": "Anzahl Sp\u00fclg\u00e4nge"
+            },
+            "wash_time": {
+                "name": "Waschdauer"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Induktionskochfeld"
             }
         }
     }

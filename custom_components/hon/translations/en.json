@@ -104,7 +104,8 @@
                     "25": "Wash",
                     "26": "Heating",
                     "27": "Wash"
-                }
+                },
+                "name": "Phase"
             },
             "program_phases_td": {
                 "state": {
@@ -119,7 +120,8 @@
                     "18": "Keep Fresh",
                     "19": "Drying",
                     "20": "Drying"
-                }
+                },
+                "name": "Phase"
             },
             "program_phases_dw": {
                 "state": {
@@ -130,7 +132,8 @@
                     "4": "Drying",
                     "5": "Ready",
                     "6": "Hot rinse"
-                }
+                },
+                "name": "Phase"
             },
             "dry_levels": {
                 "state": {
@@ -143,7 +146,88 @@
                     "13": "Cupboard Dry",
                     "14": "Ready to wear",
                     "15": "Extra dry"
-                }
+                },
+                "name": "Drying Type"
+            },
+            "power": {
+                "name": "Power level"
+            },
+            "remaining_time": {
+                "name": "Time remaining"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
+            "water_efficiency": {
+                "name": "Water efficiency"
+            },
+            "water_saving": {
+                "name": "Water savings"
+            },
+            "duration": {
+                "name": "Duration"
+            },
+            "target_temperature": {
+                "name": "Target temperature"
+            },
+            "spin_speed": {
+                "name": "Spin"
+            },
+            "steam_leve": {
+                "name": "Steam Level"
+            },
+            "dirt_level": {
+                "name": "Dirt level"
+            },
+            "delay_time": {
+                "name": "Delay start"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Anticrease"
+            },
+            "add_dish": {
+                "name": ""
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Extra dry"
+            },
+            "half_load": {
+                "name": "Half load"
+            },
+            "open_door": {
+                "name": "Open door"
+            },
+            "three_in_one": {
+                "name": "3 in 1"
+            },
+            "preheat": {
+                "name": "Preheat"
+            },
+            "dish_washer": {
+                "name": "Dish washer"
+            },
+            "tumble_dryer": {
+                "name": "Tumble dryer"
+            },
+            "washing_machine": {
+                "name": "Washing machine"
+            },
+            "washer_dryer": {
+                "name": "Washer dryer"
+            },
+            "oven": {
+                "name": "Oven"
+            },
+            "prewash": {
+                "name": "Pre-wash "
+            },
+            "pause": {
+                "name": "Pause"
             }
         },
         "select": {
@@ -158,7 +242,8 @@
                     "13": "Cupboard Dry",
                     "14": "Ready to wear",
                     "15": "Extra dry"
-                }
+                },
+                "name": "Drying Type"
             },
             "programs_dw": {
                 "state": {
@@ -262,7 +347,8 @@
                     "universal_plus": "Universal Plus 70\u00b0C",
                     "zone_wash": "Flex Zone Wash",
                     "zoom_39": "Zoom 39 min"
-                }
+                },
+                "name": "Program"
             },
             "programs_ih": {
                 "state": {
@@ -301,7 +387,8 @@
                     "iot_standard_keep_warm": "Keep Warm",
                     "iot_standard_melting": "Melting",
                     "iot_standard_simmering": "Simmering"
-                }
+                },
+                "name": "Program"
             },
             "programs_ov": {
                 "state": {
@@ -359,7 +446,8 @@
                     "water_discharge": "Water Drain",
                     "white_meat": "White Meat",
                     "white_meat_steam": "Steam-cooked white meat"
-                }
+                },
+                "name": "Program"
             },
             "programs_td": {
                 "state": {
@@ -495,7 +583,8 @@
                     "woolmark": "Wool",
                     "xxl_load": "XXL Load",
                     "zoom_59": "Zoom 59"
-                }
+                },
+                "name": "Program"
             },
             "programs_wm": {
                 "state": {
@@ -804,7 +893,107 @@
                     "wool_and_delicates_49": "Wool and Delicates 49'",
                     "wool_dry": "Wool Dry",
                     "wool_soft_care": "Wool and Soft Care"
-                }
+                },
+                "name": "Program"
+            },
+            "spin_speed": {
+                "name": "Spin"
+            },
+            "temperature": {
+                "name": "Temperature"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Door lock"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Rinse"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Rinses"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Rinses"
+            },
+            "good_night": {
+                "name": "Good Night"
+            },
+            "anti_crease": {
+                "name": "Anticrease"
+            },
+            "aqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "Spin"
+            },
+            "programs_dw": {
+                "name": "Program"
+            },
+            "programs_ih": {
+                "name": "Program"
+            },
+            "programs_ov": {
+                "name": "Program"
+            },
+            "programs_td": {
+                "name": "Program"
+            },
+            "programs_wm": {
+                "name": "Program"
+            },
+            "still_hot": {
+                "name": "Still hot"
+            },
+            "pan_status": {
+                "name": "Pan"
+            },
+            "remote_control": {
+                "name": "Remote control"
+            },
+            "rinse_aid": {
+                "name": "Rinse Aid level"
+            },
+            "salt_level": {
+                "name": "Salt level"
+            },
+            "door_open": {
+                "name": "Door open"
+            },
+            "connection": {
+                "name": "Connection"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Power management"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
+            "delay_time": {
+                "name": "Delay start"
+            },
+            "water_hard": {
+                "name": "Water hardness"
+            },
+            "program_duration": {
+                "name": "Program duration"
+            },
+            "target_temperature": {
+                "name": "Target temperature"
+            },
+            "rinse_iterations": {
+                "name": "Number of rinses"
+            },
+            "wash_time": {
+                "name": "Washing intensity"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Induction Hob"
             }
         }
     }
