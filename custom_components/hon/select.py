@@ -147,7 +147,7 @@ class HonSelectEntity(HonEntity, SelectEntity):
 
     async def async_select_option(self, option: str) -> None:
         self._device.settings[self.entity_description.key].value = option
-        await self.coordinator.async_request_refresh()
+        await self.coordinator.async_refresh()
 
     @callback
     def _handle_coordinator_update(self):

@@ -180,7 +180,7 @@ class HonNumberEntity(HonEntity, NumberEntity):
 
     async def async_set_native_value(self, value: float) -> None:
         self._device.settings[self.entity_description.key].value = value
-        await self.coordinator.async_request_refresh()
+        await self.coordinator.async_refresh()
 
     @callback
     def _handle_coordinator_update(self):

@@ -253,6 +253,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
                 setting.max if isinstance(setting, HonParameterRange) else "1"
             )
             self.async_write_ha_state()
+            await self.coordinator.async_refresh()
         else:
             await self._device.commands[self.entity_description.turn_on_key].send()
 
@@ -263,5 +264,6 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
                 setting.min if isinstance(setting, HonParameterRange) else "0"
             )
             self.async_write_ha_state()
+            await self.coordinator.async_refresh()
         else:
             await self._device.commands[self.entity_description.turn_off_key].send()
