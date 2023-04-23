@@ -6,6 +6,6 @@
   "documentation": "https://github.com/Andre0512/hon/",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/Andre0512/hon/issues",
- "requirements": ["pyhOn==0.8.4"],
-  "version": "0.7.0-beta.3"
+ "requirements": ["pyhOn==0.8.5"],
+  "version": "0.7.0-beta.4"
 }
