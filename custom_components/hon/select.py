@@ -51,10 +51,11 @@ SELECTS = {
         ),
         SelectEntityDescription(
             key="startProgram.dryTimeMM",
-            name="Time",
+            name="Dry Time",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:timer",
             unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="dry_time",
         ),
         SelectEntityDescription(
             key="startProgram.dryLevel",

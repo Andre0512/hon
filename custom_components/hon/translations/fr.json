@@ -81,7 +81,7 @@
                     "14": "Pr\u00eat \u00e0 porter",
                     "15": "Extra sec"
                 },
-                "name": "S\u00e9chage"
+                "name": "Niveau de s\u00e9chage"
             },
             "anti_crease": {
                 "name": "Anti-pli"
@@ -117,7 +117,22 @@
                 "name": "Niveau de salet\u00e9"
             },
             "delay_time": {
-                "name": "Planifiez"
+                "name": "D\u00e9marrage Diff\u00e9r\u00e9"
+            },
+            "dry_time": {
+                "name": "Temps de s\u00e9chage"
+            },
+            "suggested_load": {
+                "name": "Capacit\u00e9 de charge"
+            },
+            "energy_label": {
+                "name": "Efficacit\u00e9 \u00e9nerg\u00e9tique"
+            },
+            "det_dust": {
+                "name": "Poudre"
+            },
+            "det_liquid": {
+                "name": "Liquide"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "Pr\u00eat \u00e0 porter",
                     "15": "Extra sec"
                 },
-                "name": "S\u00e9chage"
+                "name": "Niveau de s\u00e9chage"
             },
             "spin_speed": {
                 "name": "Essorage"
             },
             "temperature": {
                 "name": "Temp\u00e9rature"
+            },
+            "dry_time": {
+                "name": "Temps de s\u00e9chage"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Pause"
+            },
+            "keep_fresh": {
+                "name": "Garder la fra\u00eecheur"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "Porte ouverte"
             },
             "connection": {
-                "name": "Connexion"
+                "name": "Connexion de l\u2019appareil"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "Temp\u00e9rature"
             },
             "delay_time": {
-                "name": "Planifiez"
+                "name": "D\u00e9marrage Diff\u00e9r\u00e9"
             },
             "water_hard": {
                 "name": "Duret\u00e9 de l'eau"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "Dur\u00e9e de lavage"
+            },
+            "dry_time": {
+                "name": "Temps de s\u00e9chage"
             }
         },
         "button": {

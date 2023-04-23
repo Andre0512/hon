@@ -81,7 +81,7 @@
                     "14": "Bereit zum Anziehen",
                     "15": "Extra trocken"
                 },
-                "name": "Trocknen"
+                "name": "Trocknungsstufe"
             },
             "anti_crease": {
                 "name": "Knitterschutz"
@@ -117,7 +117,22 @@
                 "name": "Verschmutzungsgrad"
             },
             "delay_time": {
-                "name": "Zeitplan"
+                "name": "Einschaltverz\u00f6gerung"
+            },
+            "dry_time": {
+                "name": "Trocknungsdauer"
+            },
+            "suggested_load": {
+                "name": "Ladekapazit\u00e4t"
+            },
+            "energy_label": {
+                "name": "Energieeffizienz"
+            },
+            "det_dust": {
+                "name": "Pulver"
+            },
+            "det_liquid": {
+                "name": "Fl\u00fcssigwaschmittel"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "Bereit zum Anziehen",
                     "15": "Extra trocken"
                 },
-                "name": "Trocknen"
+                "name": "Trocknungsstufe"
             },
             "spin_speed": {
                 "name": "Schleudern"
             },
             "temperature": {
                 "name": "Temperatur"
+            },
+            "dry_time": {
+                "name": "Trocknungsdauer"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Anhalten"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "T\u00fcr offen"
             },
             "connection": {
-                "name": "Verbinden"
+                "name": "Ger\u00e4teverbindung"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "Temperatur"
             },
             "delay_time": {
-                "name": "Zeitplan"
+                "name": "Einschaltverz\u00f6gerung"
             },
             "water_hard": {
                 "name": "Wasserh\u00e4rte"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "Waschdauer"
+            },
+            "dry_time": {
+                "name": "Trocknungsdauer"
             }
         },
         "button": {

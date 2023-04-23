@@ -81,7 +81,7 @@
                     "14": "P\u0159ipraveno k oble\u010den\u00ed",
                     "15": "Extra such\u00e9"
                 },
-                "name": "Su\u0161en\u00ed"
+                "name": "\u00darove\u0148 su\u0161en\u00ed"
             },
             "anti_crease": {
                 "name": "Proti poma\u010dk\u00e1n\u00ed"
@@ -117,7 +117,22 @@
                 "name": "M\u00edra zne\u010di\u0161t\u011bn\u00ed"
             },
             "delay_time": {
-                "name": "Napl\u00e1novat"
+                "name": "Odlo\u017een\u00e9 spu\u0161t\u011bn\u00ed"
+            },
+            "dry_time": {
+                "name": "Doba su\u0161en\u00ed"
+            },
+            "suggested_load": {
+                "name": "Kapacita n\u00e1pln\u011b"
+            },
+            "energy_label": {
+                "name": "Energetick\u00e1 \u00fa\u010dinnost"
+            },
+            "det_dust": {
+                "name": "Pr\u00e1\u0161ky"
+            },
+            "det_liquid": {
+                "name": "Tekut\u00e9 prost\u0159edky"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "P\u0159ipraveno k oble\u010den\u00ed",
                     "15": "Extra such\u00e9"
                 },
-                "name": "Su\u0161en\u00ed"
+                "name": "\u00darove\u0148 su\u0161en\u00ed"
             },
             "spin_speed": {
                 "name": "Odst\u0159e\u010fov\u00e1n\u00ed"
             },
             "temperature": {
                 "name": "Teplota"
+            },
+            "dry_time": {
+                "name": "Doba su\u0161en\u00ed"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Pozastavit"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "Otev\u0159en\u00e1 dv\u00ed\u0159ka"
             },
             "connection": {
-                "name": "P\u0159ipojen\u00ed"
+                "name": "P\u0159ipojen\u00ed spot\u0159ebi\u010de"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "Teplota"
             },
             "delay_time": {
-                "name": "Napl\u00e1novat"
+                "name": "Odlo\u017een\u00e9 spu\u0161t\u011bn\u00ed"
             },
             "water_hard": {
                 "name": "Tvrdost vody"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "D\u00e9lka pran\u00ed"
+            },
+            "dry_time": {
+                "name": "Doba su\u0161en\u00ed"
             }
         },
         "button": {

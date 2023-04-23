@@ -81,7 +81,7 @@
                     "14": "Hotov\u00e9 na nosenie",
                     "15": "Extra su\u0161enie"
                 },
-                "name": "Su\u0161enie"
+                "name": "\u00darove\u0148 su\u0161enia"
             },
             "anti_crease": {
                 "name": "Proti pokr\u010deniu"
@@ -117,7 +117,22 @@
                 "name": "\u00darove\u0148 zne\u010distenia"
             },
             "delay_time": {
-                "name": "Napl\u00e1nova\u0165"
+                "name": "Odlo\u017een\u00fd \u0161tart"
+            },
+            "dry_time": {
+                "name": "\u010cas su\u0161enia"
+            },
+            "suggested_load": {
+                "name": "Kapacita naplnenia"
+            },
+            "energy_label": {
+                "name": "Energetick\u00e1 \u00fa\u010dinnos\u0165"
+            },
+            "det_dust": {
+                "name": "Pr\u00e1\u0161ok"
+            },
+            "det_liquid": {
+                "name": "Kvapaln\u00e9 pracie prostriedky"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "Hotov\u00e9 na nosenie",
                     "15": "Extra su\u0161enie"
                 },
-                "name": "Su\u0161enie"
+                "name": "\u00darove\u0148 su\u0161enia"
             },
             "spin_speed": {
                 "name": "Odstre\u010fovanie"
             },
             "temperature": {
                 "name": "Teplota"
+            },
+            "dry_time": {
+                "name": "\u010cas su\u0161enia"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Pozastavi\u0165"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "Otvoren\u00e9 dvere"
             },
             "connection": {
-                "name": "Pripojenie"
+                "name": "Pripojenie spotrebi\u010da"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "Teplota"
             },
             "delay_time": {
-                "name": "Napl\u00e1nova\u0165"
+                "name": "Odlo\u017een\u00fd \u0161tart"
             },
             "water_hard": {
                 "name": "Tvrdos\u0165 vody"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "\u010cas prania"
+            },
+            "dry_time": {
+                "name": "\u010cas su\u0161enia"
             }
         },
         "button": {

@@ -144,7 +144,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Delay time | `timer-plus` | `number` | `startProgram.delayTime` | ✔ |
 | Eco Express | `sprout` | `switch` | `startProgram.ecoExpress` | ✔ |
 | Eco Index | `sprout` | `sensor` | `startProgram.ecoIndex` | ❌ |
-| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` | ❌ |
+| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` | ✔ |
 | Extra Dry | `hair-dryer` | `switch` | `startProgram.extraDry` | ✔ |
 | Half Load | `fraction-one-half` | `switch` | `startProgram.halfLoad` | ✔ |
 | Open Door | `door-open` | `switch` | `startProgram.openDoor` | ✔ |
@@ -227,16 +227,19 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | --- | --- | --- | --- | --- |
 | Anti-Crease | `timer` | `switch` | `startProgram.antiCreaseTime` | ✔ |
 | Delay time | `timer-plus` | `number` | `startProgram.delayTime` | ✔ |
+| Dry Time |  | `number` | `startProgram.dryTime` | ✔ |
+| Dry Time | `timer` | `select` | `startProgram.dryTimeMM` | ✔ |
 | Dry level | `hair-dryer` | `select` | `startProgram.dryLevel` | ✔ |
+| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` | ✔ |
 | Program |  | `select` | `startProgram.program` | ✔ |
 | Sterilization | `clock-start` | `switch` | `startProgram.sterilizationStatus` | ❌ |
+| Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` | ✔ |
 | Temperature level | `thermometer` | `number` | `startProgram.tempLevel` | ✔ |
-| Time | `timer` | `select` | `startProgram.dryTimeMM` | ❌ |
 #### Sensors
 | Name | Icon | Entity | Key | Auto-Translation |
 | --- | --- | --- | --- | --- |
 | Connection |  | `binary_sensor` | `attributes.lastConnEvent.category` | ✔ |
-| Door |  | `binary_sensor` | `doorStatus` | ❌ |
+| Door |  | `binary_sensor` | `doorStatus` | ✔ |
 | Dry level | `hair-dryer` | `sensor` | `dryLevel` | ✔ |
 | Error | `math-log` | `sensor` | `errors` | ✔ |
 | Machine Status | `information` | `sensor` | `machMode` | ✔ |
@@ -257,7 +260,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | --- | --- | --- | --- | --- |
 | Delay Time | `timer-plus` | `number` | `startProgram.delayTime` | ✔ |
 | Program |  | `select` | `startProgram.program` | ✔ |
-| Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` | ❌ |
+| Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` | ✔ |
 #### Sensors
 | Name | Icon | Entity | Key | Auto-Translation |
 | --- | --- | --- | --- | --- |
@@ -295,19 +298,23 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | --- | --- | --- | --- | --- |
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` | ❌ |
 | Delay Time | `timer-plus` | `number` | `startProgram.delayTime` | ✔ |
+| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` | ✔ |
+| Keep Fresh | `refresh-circle` | `switch` | `startProgram.autoSoftenerStatus` | ✔ |
+| Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` | ✔ |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` | ✔ |
+| Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` | ✔ |
 | Program |  | `select` | `startProgram.program` | ✔ |
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` | ✔ |
 | Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` | ✔ |
 | Spin speed | `numeric` | `select` | `startProgram.spinSpeed` | ✔ |
-| Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` | ❌ |
+| Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` | ✔ |
 | Temperature | `thermometer` | `select` | `startProgram.temp` | ✔ |
 #### Sensors
 | Name | Icon | Entity | Key | Auto-Translation |
 | --- | --- | --- | --- | --- |
 | Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` | ❌ |
 | Current Water Used | `water` | `sensor` | `currentWaterUsed` | ❌ |
-| Door |  | `binary_sensor` | `doorStatus` | ❌ |
+| Door |  | `binary_sensor` | `doorStatus` | ✔ |
 | Door Lock |  | `binary_sensor` | `doorLockStatus` | ✔ |
 | Error | `math-log` | `sensor` | `errors` | ✔ |
 | Machine Status | `information` | `sensor` | `machMode` | ✔ |

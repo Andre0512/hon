@@ -81,7 +81,7 @@
                     "14": "Gata de purtat",
                     "15": "Uscare suplimentar\u0103"
                 },
-                "name": "Uscare"
+                "name": "Nivel de uscare"
             },
             "anti_crease": {
                 "name": "Anti\u0219ifonare"
@@ -117,7 +117,22 @@
                 "name": "Nivel de murd\u0103rie"
             },
             "delay_time": {
-                "name": "Programare"
+                "name": "Pornire \u00eent\u00e2rziat\u0103"
+            },
+            "dry_time": {
+                "name": "Timp de uscare"
+            },
+            "suggested_load": {
+                "name": "Capacitate de \u00eenc\u0103rcare"
+            },
+            "energy_label": {
+                "name": "Eficien\u021b\u0103 energetic\u0103"
+            },
+            "det_dust": {
+                "name": "Pudr\u0103"
+            },
+            "det_liquid": {
+                "name": "Lichid"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "Gata de purtat",
                     "15": "Uscare suplimentar\u0103"
                 },
-                "name": "Uscare"
+                "name": "Nivel de uscare"
             },
             "spin_speed": {
                 "name": "Stoarcere"
             },
             "temperature": {
                 "name": "Temperatur\u0103"
+            },
+            "dry_time": {
+                "name": "Timp de uscare"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Pauz\u0103"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "U\u0219\u0103 deschis\u0103"
             },
             "connection": {
-                "name": "Conectare"
+                "name": "Conectarea aparatului"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "Temperatur\u0103"
             },
             "delay_time": {
-                "name": "Programare"
+                "name": "Pornire \u00eent\u00e2rziat\u0103"
             },
             "water_hard": {
                 "name": "Duritate ap\u0103"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "Timp de sp\u0103lare"
+            },
+            "dry_time": {
+                "name": "Timp de uscare"
             }
         },
         "button": {

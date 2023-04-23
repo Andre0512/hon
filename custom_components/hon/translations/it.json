@@ -137,7 +137,7 @@
                     "14": "Pronto da indossare",
                     "15": "Extra asciutto"
                 },
-                "name": "Tipo Asciugatura"
+                "name": "Livello Asciugatura"
             },
             "anti_crease": {
                 "name": "Antipieghe "
@@ -173,7 +173,22 @@
                 "name": "Livello di sporco"
             },
             "delay_time": {
-                "name": "Ritarda avvio"
+                "name": "Utilizzo nelle ore notturne"
+            },
+            "dry_time": {
+                "name": "Tempo asciugatura"
+            },
+            "suggested_load": {
+                "name": "Capacit\u00e0 di carico"
+            },
+            "energy_label": {
+                "name": "Efficienza energetica"
+            },
+            "det_dust": {
+                "name": "Detersivo in polvere"
+            },
+            "det_liquid": {
+                "name": "Detersivo liquido"
             }
         },
         "select": {
@@ -832,13 +847,16 @@
                     "14": "Pronto da indossare",
                     "15": "Extra asciutto"
                 },
-                "name": "Tipo Asciugatura"
+                "name": "Livello Asciugatura"
             },
             "spin_speed": {
                 "name": "Centrifuga"
             },
             "temperature": {
                 "name": "Temperatura"
+            },
+            "dry_time": {
+                "name": "Tempo asciugatura"
             }
         },
         "switch": {
@@ -886,6 +904,9 @@
             },
             "pause": {
                 "name": "Pausa"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -947,7 +968,7 @@
                 "name": "Porta aperta"
             },
             "connection": {
-                "name": "Connessione"
+                "name": "Connessione dell'elettrodomestico"
             }
         },
         "number": {
@@ -958,7 +979,7 @@
                 "name": "Temperatura"
             },
             "delay_time": {
-                "name": "Ritarda avvio"
+                "name": "Utilizzo nelle ore notturne"
             },
             "water_hard": {
                 "name": "Durezza acqua"
@@ -974,6 +995,9 @@
             },
             "wash_time": {
                 "name": "Intensit\u00e0 di lavaggio"
+            },
+            "dry_time": {
+                "name": "Tempo asciugatura"
             }
         },
         "button": {

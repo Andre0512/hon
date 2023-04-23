@@ -81,7 +81,7 @@
                     "14": "\u53ef\u7a7f",
                     "15": "\u7279\u5e72"
                 },
-                "name": "\u70d8\u5e72"
+                "name": "\u70d8\u5e72\u6c34\u5e73"
             },
             "anti_crease": {
                 "name": "\u6297\u76b1"
@@ -117,7 +117,22 @@
                 "name": "\u810f\u6c61\u7a0b\u5ea6"
             },
             "delay_time": {
-                "name": "\u8ba1\u5212"
+                "name": "\u5ef6\u65f6\u542f\u52a8"
+            },
+            "dry_time": {
+                "name": "\u70d8\u5e72\u65f6\u95f4"
+            },
+            "suggested_load": {
+                "name": "\u8d1f\u8f7d\u80fd\u529b"
+            },
+            "energy_label": {
+                "name": "\u80fd\u6548"
+            },
+            "det_dust": {
+                "name": "\u6d17\u8863\u7c89"
+            },
+            "det_liquid": {
+                "name": "\u6d17\u8863\u6db2"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "\u53ef\u7a7f",
                     "15": "\u7279\u5e72"
                 },
-                "name": "\u70d8\u5e72"
+                "name": "\u70d8\u5e72\u6c34\u5e73"
             },
             "spin_speed": {
                 "name": "\u7529\u5e72"
             },
             "temperature": {
                 "name": "\u6e29\u5ea6"
+            },
+            "dry_time": {
+                "name": "\u70d8\u5e72\u65f6\u95f4"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "\u6682\u505c"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "\u95e8\u6253\u5f00"
             },
             "connection": {
-                "name": "\u8fde\u63a5"
+                "name": "\u8bbe\u5907\u8fde\u63a5"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "\u6e29\u5ea6"
             },
             "delay_time": {
-                "name": "\u8ba1\u5212"
+                "name": "\u5ef6\u65f6\u542f\u52a8"
             },
             "water_hard": {
                 "name": "\u6c34\u7684\u786c\u5ea6"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "\u6e05\u6d17\u65f6\u95f4"
+            },
+            "dry_time": {
+                "name": "\u70d8\u5e72\u65f6\u95f4"
             }
         },
         "button": {

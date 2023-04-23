@@ -50,6 +50,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Door",
             device_class=BinarySensorDeviceClass.DOOR,
             on_value="1",
+            translation_key="door_open",
         ),
     ),
     "TD": (
@@ -65,6 +66,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Door",
             device_class=BinarySensorDeviceClass.DOOR,
             on_value="1",
+            translation_key="door_open",
         ),
     ),
     "WD": (

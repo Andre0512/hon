@@ -81,7 +81,7 @@
                     "14": "Listo para llevar",
                     "15": "Extraseco"
                 },
-                "name": "Secado"
+                "name": "Nivel de secado"
             },
             "anti_crease": {
                 "name": "Antiarrugas"
@@ -117,7 +117,22 @@
                 "name": "Nivel de suciedad"
             },
             "delay_time": {
-                "name": "Programar"
+                "name": "Inicio Diferido"
+            },
+            "dry_time": {
+                "name": "Tiempo de secado"
+            },
+            "suggested_load": {
+                "name": "Capacidad de carga"
+            },
+            "energy_label": {
+                "name": "Eficiencia energ\u00e9tica"
+            },
+            "det_dust": {
+                "name": "Polvo"
+            },
+            "det_liquid": {
+                "name": "L\u00edquido"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "Listo para llevar",
                     "15": "Extraseco"
                 },
-                "name": "Secado"
+                "name": "Nivel de secado"
             },
             "spin_speed": {
                 "name": "Centrifugado"
             },
             "temperature": {
                 "name": "Temperatura"
+            },
+            "dry_time": {
+                "name": "Tiempo de secado"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Pausa"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "Puerta abierta"
             },
             "connection": {
-                "name": "Conexi\u00f3n"
+                "name": "Conexi\u00f3n del electrodom\u00e9stico"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "Temperatura"
             },
             "delay_time": {
-                "name": "Programar"
+                "name": "Inicio Diferido"
             },
             "water_hard": {
                 "name": "Dureza del agua"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "Tiempo de lavado"
+            },
+            "dry_time": {
+                "name": "Tiempo de secado"
             }
         },
         "button": {

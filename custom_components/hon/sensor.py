@@ -77,6 +77,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfMass.KILOGRAMS,
             icon="mdi:weight-kilogram",
+            translation_key="suggested_load",
         ),
         SensorEntityDescription(
             key="machMode",
@@ -102,6 +103,28 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfTime.MINUTES,
             translation_key="spin_speed",
+        ),
+        SensorEntityDescription(
+            key="startProgram.energyLabel",
+            name="Energy Label",
+            icon="mdi:lightning-bolt-circle",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.CONFIG,
+            translation_key="energy_label",
+        ),
+        SensorEntityDescription(
+            key="startProgram.liquidDetergentDose",
+            name="Liquid Detergent Dose",
+            icon="mdi:cup-water",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="det_liquid",
+        ),
+        SensorEntityDescription(
+            key="startProgram.powderDetergentDose",
+            name="Powder Detergent Dose",
+            icon="mdi:cup",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="det_dust",
         ),
     ),
     "TD": (
@@ -154,6 +177,22 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:thermometer",
             translation_key="tumbledryertemplevel",
         ),
+        SensorEntityDescription(
+            key="startProgram.suggestedLoadD",
+            name="Suggested Load",
+            icon="mdi:weight-kilogram",
+            entity_category=EntityCategory.CONFIG,
+            native_unit_of_measurement=UnitOfMass.KILOGRAMS,
+            translation_key="suggested_load",
+        ),
+        SensorEntityDescription(
+            key="startProgram.energyLabel",
+            name="Energy Label",
+            icon="mdi:lightning-bolt-circle",
+            state_class=SensorStateClass.MEASUREMENT,
+            entity_category=EntityCategory.CONFIG,
+            translation_key="energy_label",
+        ),
     ),
     "WD": (
         SensorEntityDescription(
@@ -197,6 +236,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfMass.KILOGRAMS,
             icon="mdi:weight-kilogram",
+            translation_key="suggested_load",
         ),
         SensorEntityDescription(
             key="machMode",
@@ -352,6 +392,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:lightning-bolt-circle",
             state_class=SensorStateClass.MEASUREMENT,
             entity_category=EntityCategory.CONFIG,
+            translation_key="energy_label",
         ),
         SensorEntityDescription(
             key="startProgram.remainingTime",

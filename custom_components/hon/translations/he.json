@@ -81,7 +81,7 @@
                     "14": "Ready to wear",
                     "15": "\u05d9\u05d1\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3"
                 },
-                "name": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1"
+                "name": "\u05e8\u05de\u05ea \u05d9\u05d9\u05d1\u05d5\u05e9"
             },
             "anti_crease": {
                 "name": "Anticrease"
@@ -117,7 +117,22 @@
                 "name": "\u05e8\u05de\u05ea \u05e2\u05e4\u05e8"
             },
             "delay_time": {
-                "name": "\u05dc\u05d5\u05d7 \u05d6\u05de\u05e0\u05d9\u05dd"
+                "name": "Delay Start"
+            },
+            "dry_time": {
+                "name": "\u05d6\u05de\u05df \u05d9\u05d9\u05d1\u05d5\u05e9"
+            },
+            "suggested_load": {
+                "name": "\u05d9\u05db\u05d5\u05dc\u05ea \u05e2\u05d5\u05de\u05e1"
+            },
+            "energy_label": {
+                "name": "\u05d7\u05e1\u05db\u05d5\u05df \u05d1\u05d0\u05e0\u05e8\u05d2\u05d9\u05d4"
+            },
+            "det_dust": {
+                "name": "Powder detergent"
+            },
+            "det_liquid": {
+                "name": "Liquid detergent"
             }
         },
         "select": {
@@ -374,13 +389,16 @@
                     "14": "Ready to wear",
                     "15": "\u05d9\u05d1\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3"
                 },
-                "name": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1"
+                "name": "\u05e8\u05de\u05ea \u05d9\u05d9\u05d1\u05d5\u05e9"
             },
             "spin_speed": {
                 "name": "\u05e1\u05d9\u05d1\u05d5\u05d1"
             },
             "temperature": {
                 "name": "Temperature"
+            },
+            "dry_time": {
+                "name": "\u05d6\u05de\u05df \u05d9\u05d9\u05d1\u05d5\u05e9"
             }
         },
         "switch": {
@@ -428,6 +446,9 @@
             },
             "pause": {
                 "name": "Pause"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -489,7 +510,7 @@
                 "name": "Door open"
             },
             "connection": {
-                "name": "\u05d7\u05d9\u05d1\u05d5\u05e8"
+                "name": "Appliance connection"
             }
         },
         "number": {
@@ -500,7 +521,7 @@
                 "name": "Temperature"
             },
             "delay_time": {
-                "name": "\u05dc\u05d5\u05d7 \u05d6\u05de\u05e0\u05d9\u05dd"
+                "name": "Delay Start"
             },
             "water_hard": {
                 "name": "\u05e7\u05e9\u05d9\u05d5\u05ea \u05de\u05d9\u05dd"
@@ -516,6 +537,9 @@
             },
             "wash_time": {
                 "name": "Washing intensity"
+            },
+            "dry_time": {
+                "name": "\u05d6\u05de\u05df \u05d9\u05d9\u05d1\u05d5\u05e9"
             }
         },
         "button": {

@@ -81,7 +81,7 @@
                     "14": "Gotowe do w\u0142o\u017cenia",
                     "15": "Ekstra suchy"
                 },
-                "name": "Suszenie"
+                "name": "Poziom suszenia"
             },
             "anti_crease": {
                 "name": "Przeciw gnieceniu"
@@ -117,7 +117,22 @@
                 "name": "Stopie\u0144 zabrudzenia"
             },
             "delay_time": {
-                "name": "Zaplanuj"
+                "name": "Op\u00f3\u017aniony Start"
+            },
+            "dry_time": {
+                "name": "Czas suszenia"
+            },
+            "suggested_load": {
+                "name": "\u0141adowno\u015b\u0107"
+            },
+            "energy_label": {
+                "name": "Efektywno\u015b\u0107 energetyczna"
+            },
+            "det_dust": {
+                "name": "Proszek"
+            },
+            "det_liquid": {
+                "name": "P\u0142yn"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "Gotowe do w\u0142o\u017cenia",
                     "15": "Ekstra suchy"
                 },
-                "name": "Suszenie"
+                "name": "Poziom suszenia"
             },
             "spin_speed": {
                 "name": "Wirowanie"
             },
             "temperature": {
                 "name": "Temperatura"
+            },
+            "dry_time": {
+                "name": "Czas suszenia"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Pauza"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "Drzwi otwarte"
             },
             "connection": {
-                "name": "Po\u0142\u0105czenie"
+                "name": "Pod\u0142\u0105czenie urz\u0105dzenia"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "Temperatura"
             },
             "delay_time": {
-                "name": "Zaplanuj"
+                "name": "Op\u00f3\u017aniony Start"
             },
             "water_hard": {
                 "name": "Twardo\u015b\u0107 wody"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "Czas prania"
+            },
+            "dry_time": {
+                "name": "Czas suszenia"
             }
         },
         "button": {

@@ -81,7 +81,7 @@
                     "14": "Giyilmeye haz\u0131r",
                     "15": "Ekstra kurutma"
                 },
-                "name": "Kurutma"
+                "name": "Kurutma seviyesi"
             },
             "anti_crease": {
                 "name": "K\u0131r\u0131\u015f\u0131k a\u00e7ma"
@@ -117,7 +117,22 @@
                 "name": "Kir seviyesi"
             },
             "delay_time": {
-                "name": "Planla"
+                "name": "Gecikmeli Ba\u015flatma"
+            },
+            "dry_time": {
+                "name": "Kurutma zaman\u0131"
+            },
+            "suggested_load": {
+                "name": "Y\u00fck kapasitesi"
+            },
+            "energy_label": {
+                "name": "Enerji verimlili\u011fi"
+            },
+            "det_dust": {
+                "name": "Toz"
+            },
+            "det_liquid": {
+                "name": "S\u0131v\u0131"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "Giyilmeye haz\u0131r",
                     "15": "Ekstra kurutma"
                 },
-                "name": "Kurutma"
+                "name": "Kurutma seviyesi"
             },
             "spin_speed": {
                 "name": "S\u0131kma"
             },
             "temperature": {
                 "name": "S\u0131cakl\u0131k"
+            },
+            "dry_time": {
+                "name": "Kurutma zaman\u0131"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Duraklat"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "Kap\u0131 a\u00e7\u0131k"
             },
             "connection": {
-                "name": "Ba\u011flant\u0131"
+                "name": "Cihaz ba\u011flant\u0131s\u0131"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "S\u0131cakl\u0131k"
             },
             "delay_time": {
-                "name": "Planla"
+                "name": "Gecikmeli Ba\u015flatma"
             },
             "water_hard": {
                 "name": "Su sertli\u011fi"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "Y\u0131kama s\u00fcresi"
+            },
+            "dry_time": {
+                "name": "Kurutma zaman\u0131"
             }
         },
         "button": {

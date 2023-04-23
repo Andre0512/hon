@@ -147,7 +147,7 @@
                     "14": "Ready to wear",
                     "15": "Extra dry"
                 },
-                "name": "Drying Type"
+                "name": "Drying level"
             },
             "power": {
                 "name": "Power level"
@@ -180,7 +180,22 @@
                 "name": "Dirt level"
             },
             "delay_time": {
-                "name": "Delay start"
+                "name": "Delay Start"
+            },
+            "dry_time": {
+                "name": "Drying time"
+            },
+            "suggested_load": {
+                "name": "Load capacity"
+            },
+            "energy_label": {
+                "name": "Energy efficiency"
+            },
+            "det_dust": {
+                "name": "Powder detergent"
+            },
+            "det_liquid": {
+                "name": "Liquid detergent"
             }
         },
         "switch": {
@@ -228,6 +243,9 @@
             },
             "pause": {
                 "name": "Pause"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "select": {
@@ -243,7 +261,7 @@
                     "14": "Ready to wear",
                     "15": "Extra dry"
                 },
-                "name": "Drying Type"
+                "name": "Drying level"
             },
             "programs_dw": {
                 "state": {
@@ -901,6 +919,9 @@
             },
             "temperature": {
                 "name": "Temperature"
+            },
+            "dry_time": {
+                "name": "Drying time"
             }
         },
         "binary_sensor": {
@@ -962,7 +983,7 @@
                 "name": "Door open"
             },
             "connection": {
-                "name": "Connection"
+                "name": "Appliance connection"
             }
         },
         "number": {
@@ -973,7 +994,7 @@
                 "name": "Temperature"
             },
             "delay_time": {
-                "name": "Delay start"
+                "name": "Delay Start"
             },
             "water_hard": {
                 "name": "Water hardness"
@@ -989,6 +1010,9 @@
             },
             "wash_time": {
                 "name": "Washing intensity"
+            },
+            "dry_time": {
+                "name": "Drying time"
             }
         },
         "button": {

@@ -81,7 +81,7 @@
                     "14": "Spremno za no\u0161enje",
                     "15": "Potpuno suho"
                 },
-                "name": "Su\u0161enje"
+                "name": "Stupanj suho\u0107e"
             },
             "anti_crease": {
                 "name": "Spre\u010davanje gu\u017evanja"
@@ -117,7 +117,22 @@
                 "name": "Stupanj zaprljanosti"
             },
             "delay_time": {
-                "name": "Zaka\u017ei"
+                "name": "Odgoda po\u010detka"
+            },
+            "dry_time": {
+                "name": "Trajanje su\u0161enja"
+            },
+            "suggested_load": {
+                "name": "Kapacitet rublja"
+            },
+            "energy_label": {
+                "name": "Energetska u\u010dinkovitost"
+            },
+            "det_dust": {
+                "name": "Pra\u0161ak"
+            },
+            "det_liquid": {
+                "name": "Teku\u0107ina"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "Spremno za no\u0161enje",
                     "15": "Potpuno suho"
                 },
-                "name": "Su\u0161enje"
+                "name": "Stupanj suho\u0107e"
             },
             "spin_speed": {
                 "name": "Centrifuga"
             },
             "temperature": {
                 "name": "Temperatura"
+            },
+            "dry_time": {
+                "name": "Trajanje su\u0161enja"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Stanka"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "Otvorena vrata"
             },
             "connection": {
-                "name": "Povezivanje"
+                "name": "Priklju\u010dak ure\u0111aja"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "Temperatura"
             },
             "delay_time": {
-                "name": "Zaka\u017ei"
+                "name": "Odgoda po\u010detka"
             },
             "water_hard": {
                 "name": "Tvrdo\u0107a vode"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "Vrijeme pranja"
+            },
+            "dry_time": {
+                "name": "Trajanje su\u0161enja"
             }
         },
         "button": {

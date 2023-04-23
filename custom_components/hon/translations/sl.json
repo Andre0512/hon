@@ -81,7 +81,7 @@
                     "14": "Pripravljeno za uporabo",
                     "15": "Zelo suho"
                 },
-                "name": "Su\u0161enje"
+                "name": "Stopnja su\u0161enja"
             },
             "anti_crease": {
                 "name": "Proti me\u010dkanju"
@@ -117,7 +117,22 @@
                 "name": "Stopnja umazanije"
             },
             "delay_time": {
-                "name": "Urnik"
+                "name": "S funkcijo Zamik vklopa je mo\u017eno odlo\u017eiti za\u010detek su\u0161ilnega cikla od 1 do 24 ur. Na zaslonu se prika\u017ee izbrana zakasnitev. Da bi videli kako se zmanj\u0161uje iz ure v uro, pritisnite ZA\u010cETEK. Na ta na\u010din bo perilo suho takrat, ko boste to \u017eeleli, in zagnali cikel, ko vam to najbolj ustreza, celo pono\u010di."
+            },
+            "dry_time": {
+                "name": "\u010cas su\u0161enja"
+            },
+            "suggested_load": {
+                "name": "Zmogljivost pranja"
+            },
+            "energy_label": {
+                "name": "Energijska u\u010dinkovitost"
+            },
+            "det_dust": {
+                "name": "Pra\u0161ek"
+            },
+            "det_liquid": {
+                "name": "Teko\u010dina"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "Pripravljeno za uporabo",
                     "15": "Zelo suho"
                 },
-                "name": "Su\u0161enje"
+                "name": "Stopnja su\u0161enja"
             },
             "spin_speed": {
                 "name": "O\u017eemanje"
             },
             "temperature": {
                 "name": "Temperatura"
+            },
+            "dry_time": {
+                "name": "\u010cas su\u0161enja"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Premor"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "Door open"
             },
             "connection": {
-                "name": "Connection"
+                "name": "Povezava aparata"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "Temperatura"
             },
             "delay_time": {
-                "name": "Urnik"
+                "name": "S funkcijo Zamik vklopa je mo\u017eno odlo\u017eiti za\u010detek su\u0161ilnega cikla od 1 do 24 ur. Na zaslonu se prika\u017ee izbrana zakasnitev. Da bi videli kako se zmanj\u0161uje iz ure v uro, pritisnite ZA\u010cETEK. Na ta na\u010din bo perilo suho takrat, ko boste to \u017eeleli, in zagnali cikel, ko vam to najbolj ustreza, celo pono\u010di."
             },
             "water_hard": {
                 "name": "Trdota vode"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "\u010cas pranja"
+            },
+            "dry_time": {
+                "name": "\u010cas su\u0161enja"
             }
         },
         "button": {

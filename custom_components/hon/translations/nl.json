@@ -81,7 +81,7 @@
                     "14": "Klaar om te dragen",
                     "15": "Extra droog"
                 },
-                "name": "Drogen"
+                "name": "Droogniveau"
             },
             "anti_crease": {
                 "name": "Kreukherstellend"
@@ -117,7 +117,22 @@
                 "name": "Vuilheid"
             },
             "delay_time": {
-                "name": "Plannen"
+                "name": "Vertraag Start"
+            },
+            "dry_time": {
+                "name": "Droogtijd"
+            },
+            "suggested_load": {
+                "name": "Laadvermogen"
+            },
+            "energy_label": {
+                "name": "Energie-effici\u00ebntie"
+            },
+            "det_dust": {
+                "name": "Poeder"
+            },
+            "det_liquid": {
+                "name": "Vloeibaar"
             }
         },
         "select": {
@@ -776,13 +791,16 @@
                     "14": "Klaar om te dragen",
                     "15": "Extra droog"
                 },
-                "name": "Drogen"
+                "name": "Droogniveau"
             },
             "spin_speed": {
                 "name": "Centrifugeren"
             },
             "temperature": {
                 "name": "Temperatuur"
+            },
+            "dry_time": {
+                "name": "Droogtijd"
             }
         },
         "switch": {
@@ -830,6 +848,9 @@
             },
             "pause": {
                 "name": "Pauze"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
             }
         },
         "binary_sensor": {
@@ -891,7 +912,7 @@
                 "name": "Deur open"
             },
             "connection": {
-                "name": "Verbinding"
+                "name": "Het apparaat verbinden"
             }
         },
         "number": {
@@ -902,7 +923,7 @@
                 "name": "Temperatuur"
             },
             "delay_time": {
-                "name": "Plannen"
+                "name": "Vertraag Start"
             },
             "water_hard": {
                 "name": "Waterhardheid"
@@ -918,6 +939,9 @@
             },
             "wash_time": {
                 "name": "Wastijd"
+            },
+            "dry_time": {
+                "name": "Droogtijd"
             }
         },
         "button": {

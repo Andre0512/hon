@@ -57,6 +57,12 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             icon="mdi:thermometer",
             translation_key="tumbledryertemplevel",
         ),
+        NumberEntityDescription(
+            key="startProgram.dryTime",
+            name="Dry Time",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="dry_time",
+        ),
     ),
     "WD": (
         NumberEntityDescription(
