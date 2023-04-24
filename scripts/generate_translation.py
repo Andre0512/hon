@@ -262,7 +262,7 @@ def load_json(path):
 
 def save_json(path, keys):
     with open(path, "w") as json_file:
-        json_file.write(json.dumps(keys, indent=4))
+        json_file.write(json.dumps(keys, indent=4, ensure_ascii=False))
 
 
 def load_key(full_key, json_data, fallback=None):
@@ -279,7 +279,7 @@ def load_key(full_key, json_data, fallback=None):
 
 
 def load_keys(full_key, json_data):
-    blacklist = ["description", "_recipe_", "_guided_"]
+    blacklist = ["description", "desctiption", "_recipe_", "_guided_"]
     first, last = full_key.split(".")
     data = json_data.get(first, {}).get(last, {})
     return {

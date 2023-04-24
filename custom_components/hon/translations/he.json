@@ -3,85 +3,85 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
-                    "1": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
-                    "3": "\u05d4\u05b7\u05e4\u05e1\u05b8\u05e7\u05b8\u05d4",
-                    "4": "\u05de\u05ea\u05d5\u05d6\u05de\u05df",
-                    "5": "\u05de\u05ea\u05d5\u05d6\u05de\u05df",
-                    "6": "\u05e9\u05c1\u05b0\u05d2\u05b4\u05d9\u05d0\u05b8\u05d4",
-                    "7": "\u05de\u05d5\u05bc\u05db\u05b8\u05df"
+                    "0": "מוּכָן",
+                    "1": "מוּכָן",
+                    "3": "הַפסָקָה",
+                    "4": "מתוזמן",
+                    "5": "מתוזמן",
+                    "6": "שְׁגִיאָה",
+                    "7": "מוּכָן"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
-                    "1": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "2": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "0": "מוּכָן",
+                    "1": "לִשְׁטוֹף",
+                    "2": "לִשְׁטוֹף",
                     "3": "Spin",
-                    "4": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "5": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "6": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "7": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1",
-                    "9": "\u05e7\u05b4\u05d9\u05d8\u05d5\u05b9\u05e8",
-                    "10": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "4": "לִשְׁטוֹף",
+                    "5": "לִשְׁטוֹף",
+                    "6": "לִשְׁטוֹף",
+                    "7": "יִבּוּשׁ",
+                    "9": "קִיטוֹר",
+                    "10": "מוּכָן",
                     "11": "Spin",
                     "12": "Weighing ",
                     "13": "Weighing ",
-                    "14": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "15": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "16": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "17": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "18": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "19": "\u05de\u05ea\u05d5\u05d6\u05de\u05df",
-                    "20": "\u05e9\u05de\u05d5\u05e8 \u05e2\u05dc \u05d8\u05e8\u05d9\u05d5\u05ea",
+                    "14": "לִשְׁטוֹף",
+                    "15": "לִשְׁטוֹף",
+                    "16": "לִשְׁטוֹף",
+                    "17": "לִשְׁטוֹף",
+                    "18": "לִשְׁטוֹף",
+                    "19": "מתוזמן",
+                    "20": "שמור על טריות",
                     "24": "Refresh",
-                    "25": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "25": "לִשְׁטוֹף",
                     "26": "Heating",
-                    "27": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3"
+                    "27": "לִשְׁטוֹף"
                 },
-                "name": "\u05e9\u05dc\u05d1"
+                "name": "שלב"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "0": "מוּכָן",
                     "1": "Drying",
-                    "2": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1",
+                    "2": "יִבּוּשׁ",
                     "3": "Cooldown",
                     "13": "Cooldown",
                     "14": "Drying",
                     "15": "Drying",
                     "16": "Cooldown",
                     "18": "Keep Fresh",
-                    "19": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1",
-                    "20": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1"
+                    "19": "יִבּוּשׁ",
+                    "20": "יִבּוּשׁ"
                 },
-                "name": "\u05e9\u05dc\u05d1"
+                "name": "שלב"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "0": "מוּכָן",
                     "1": "Prewash",
-                    "2": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "3": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "4": "\u05d9\u05b4\u05d1\u05bc\u05d5\u05bc\u05e9\u05c1",
-                    "5": "\u05de\u05d5\u05bc\u05db\u05b8\u05df",
+                    "2": "לִשְׁטוֹף",
+                    "3": "לִשְׁטוֹף",
+                    "4": "יִבּוּשׁ",
+                    "5": "מוּכָן",
                     "6": "Hot rinse"
                 },
-                "name": "\u05e9\u05dc\u05d1"
+                "name": "שלב"
             },
             "dry_levels": {
                 "state": {
-                    "0": "\u05dc\u05dc\u05d0 \u05d9\u05d9\u05d1\u05d5\u05e9",
-                    "1": "\u05d1\u05bc\u05b7\u05e8\u05d6\u05b6\u05dc",
-                    "2": "\u05dc\u05d0 \u05dc\u05d9\u05d9\u05d1\u05e9 \u05d1\u05e8\u05d6\u05dc",
-                    "3": "\u05d0\u05e8\u05d5\u05df \u05d9\u05d1\u05e9",
-                    "4": "\u05d9\u05d1\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3",
-                    "12": "\u05d1\u05bc\u05b7\u05e8\u05d6\u05b6\u05dc",
-                    "13": "\u05d0\u05e8\u05d5\u05df \u05d9\u05d1\u05e9",
+                    "0": "ללא ייבוש",
+                    "1": "בַּרזֶל",
+                    "2": "לא לייבש ברזל",
+                    "3": "ארון יבש",
+                    "4": "יבש במיוחד",
+                    "12": "בַּרזֶל",
+                    "13": "ארון יבש",
                     "14": "Ready to wear",
-                    "15": "\u05d9\u05d1\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3"
+                    "15": "יבש במיוחד"
                 },
-                "name": "\u05e8\u05de\u05ea \u05d9\u05d9\u05d1\u05d5\u05e9"
+                "name": "רמת ייבוש"
             },
             "anti_crease": {
                 "name": "Anticrease"
@@ -90,7 +90,7 @@
                 "name": "Power level"
             },
             "remaining_time": {
-                "name": "\u05d6\u05de\u05df \u05e9\u05e0\u05d5\u05ea\u05e8"
+                "name": "זמן שנותר"
             },
             "temperature": {
                 "name": "Temperature"
@@ -102,31 +102,31 @@
                 "name": "Water savings"
             },
             "duration": {
-                "name": "\u05de\u05b6\u05e9\u05c1\u05b6\u05da"
+                "name": "מֶשֶׁך"
             },
             "target_temperature": {
                 "name": "Target temperature"
             },
             "spin_speed": {
-                "name": "\u05e1\u05d9\u05d1\u05d5\u05d1"
+                "name": "סיבוב"
             },
             "steam_leve": {
-                "name": "\u05de\u05e4\u05dc\u05e1 \u05e7\u05d9\u05d8\u05d5\u05e8"
+                "name": "מפלס קיטור"
             },
             "dirt_level": {
-                "name": "\u05e8\u05de\u05ea \u05e2\u05e4\u05e8"
+                "name": "רמת עפר"
             },
             "delay_time": {
                 "name": "Delay Start"
             },
             "dry_time": {
-                "name": "\u05d6\u05de\u05df \u05d9\u05d9\u05d1\u05d5\u05e9"
+                "name": "זמן ייבוש"
             },
             "suggested_load": {
-                "name": "\u05d9\u05db\u05d5\u05dc\u05ea \u05e2\u05d5\u05de\u05e1"
+                "name": "יכולת עומס"
             },
             "energy_label": {
-                "name": "\u05d7\u05e1\u05db\u05d5\u05df \u05d1\u05d0\u05e0\u05e8\u05d2\u05d9\u05d4"
+                "name": "חסכון באנרגיה"
             },
             "det_dust": {
                 "name": "Powder detergent"
@@ -141,7 +141,7 @@
                 "name": "Current program"
             },
             "cycles_total": {
-                "name": "\u05de\u05d7\u05d6\u05d5\u05e8\u05d9\u05dd Total"
+                "name": "מחזורים Total"
             },
             "energy_total": {
                 "name": "Energy Consumption Total"
@@ -160,7 +160,7 @@
             "programs_dw": {
                 "state": {
                     "gentle_wash": "Gentle wash",
-                    "iot_checkup": "\u05d1\u05bc\u05b0\u05d3\u05b4\u05d9\u05e7\u05b8\u05d4",
+                    "iot_checkup": "בְּדִיקָה",
                     "iot_dreft_quick_cycle": "Dreft Quick",
                     "iot_fairy_quick_cycle": "Fairy Quick",
                     "iot_jar_quick_cycle": "Jar Quick",
@@ -194,232 +194,232 @@
                     "hqd_luxury": "Luxury",
                     "hqd_night_dry": "Night dry",
                     "hqd_refresh": "Refresh",
-                    "hqd_timer": "\u05ea\u05d5\u05d6\u05de\u05df",
+                    "hqd_timer": "תוזמן",
                     "hqd_warm_up": "Warm up",
                     "hqd_working_suit": "Working suit",
-                    "iot_dry_synthetic_dry": "\u05e1\u05d9\u05e0\u05ea\u05d8\u05d9 \u05d9\u05d1\u05e9"
+                    "iot_dry_synthetic_dry": "סינתטי יבש"
                 },
                 "name": "Program"
             },
             "programs_wm": {
                 "state": {
-                    "20_degrees_new_energy_label": "20 \u05de\u05e2\u05dc\u05d5\u05ea \u05e6\u05dc\u05d6\u05d9\u05d5\u05e1",
-                    "active_steam": "\u05e7\u05b4\u05d9\u05d8\u05d5\u05b9\u05e8",
-                    "active_wash": "\u05e9\u05d8\u05d9\u05e4\u05d4 \u05e4\u05e2\u05d9\u05dc\u05d4",
-                    "active_wash_steam": "\u05e9\u05d8\u05d9\u05e4\u05d4 \u05e4\u05e2\u05d9\u05dc\u05d4",
-                    "allergy_care": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05d1\u05d0\u05dc\u05e8\u05d2\u05d9\u05d4",
+                    "20_degrees_new_energy_label": "20 מעלות צלזיוס",
+                    "active_steam": "קִיטוֹר",
+                    "active_wash": "שטיפה פעילה",
+                    "active_wash_steam": "שטיפה פעילה",
+                    "allergy_care": "טיפול באלרגיה",
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "All in One 49 '",
                     "all_in_one_59": "All in One 59 '",
-                    "all_in_one_59_steam": "\u05e9\u05d8\u05d9\u05e4\u05d4 \u05e4\u05e2\u05d9\u05dc\u05d4",
-                    "autocare": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9",
-                    "autoclean": "\u05e0\u05d9\u05e7\u05d5\u05d9 \u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9",
+                    "all_in_one_59_steam": "שטיפה פעילה",
+                    "autocare": "טיפול אוטומטי",
+                    "autoclean": "ניקוי אוטומטי",
                     "baby_60": "BABY_60",
-                    "care_14": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05de\u05d4\u05d9\u05e8 14 '",
-                    "care_30": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05de\u05d4\u05d9\u05e8 30 '",
-                    "care_44": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05de\u05d4\u05d9\u05e8 44 '",
-                    "checkup": "\u05d1\u05bc\u05b0\u05d3\u05b4\u05d9\u05e7\u05b8\u05d4",
-                    "cottons": "\u05db\u05d5\u05ea\u05e0\u05d4",
-                    "cottons_prewash": "\u05db\u05d5\u05ea\u05e0\u05d4 + \u05db\u05d1\u05d9\u05e1\u05d4 \u05de\u05d5\u05e7\u05d3\u05de\u05ea",
+                    "care_14": "טיפול מהיר 14 '",
+                    "care_30": "טיפול מהיר 30 '",
+                    "care_44": "טיפול מהיר 44 '",
+                    "checkup": "בְּדִיקָה",
+                    "cottons": "כותנה",
+                    "cottons_prewash": "כותנה + כביסה מוקדמת",
                     "cotton_care_59": "Cotton Care 59 Min",
-                    "delicate_59": "\u05e2\u05d3\u05d9\u05df 59 '",
+                    "delicate_59": "עדין 59 '",
                     "delicati_59": "DELICATI_59",
                     "delicati_59_steam": "DELICATI_59",
-                    "drain_spin": "\u05e0\u05d9\u05e7\u05d5\u05d6 + \u05e1\u05d9\u05d1\u05d5\u05d1",
-                    "easy_iron": "\u05d2\u05d9\u05d4\u05d5\u05e5 \u05e7\u05dc",
-                    "eco_40_60_new_energy_label": "\u05d0\u05e7\u05d5 40-60",
-                    "extra_care": "\u05d0\u05db\u05e4\u05ea\u05d9\u05d5\u05ea \u05de\u05d5\u05d2\u05d1\u05e8\u05ea",
-                    "fitness": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05d1\u05db\u05d5\u05e9\u05e8",
-                    "fitness_care": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05d1\u05db\u05d5\u05e9\u05e8",
-                    "fresh_care": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05d8\u05e8\u05d9",
-                    "fresh_care_steam": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05d8\u05e8\u05d9",
-                    "handwash_wool": "\u05e9\u05d8\u05d9\u05e4\u05ea \u05d9\u05d3\u05d9\u05d9\u05dd + \u05e6\u05de\u05e8",
-                    "high_dry": "\u05d9\u05d1\u05e9 \u05d1\u05d7\u05d5\u05dd \u05d2\u05d1\u05d5\u05d4",
-                    "hqd_dry_synthetics": "\u05d9\u05d1\u05e9 \u05d1\u05d7\u05d5\u05dd \u05e0\u05de\u05d5\u05da",
-                    "hygiene_60": "\u05d4\u05d9\u05d2\u05d9\u05d9\u05e0\u05d4 60 \u05de\u05e2\u05dc\u05d5\u05ea \u05e6\u05dc\u05d6\u05d9\u05d5\u05e1",
-                    "intensive_40": "40\u00b0C \u05d0\u05d9\u05e0\u05d8\u05e0\u05e1\u05d9\u05d1\u05d9\u05d9\u05dd",
-                    "iot_active_steam": "\u05e7\u05b4\u05d9\u05d8\u05d5\u05b9\u05e8",
-                    "iot_active_wash_steam": "\u05e9\u05d8\u05d9\u05e4\u05d4 \u05e4\u05e2\u05d9\u05dc\u05d4",
+                    "drain_spin": "ניקוז + סיבוב",
+                    "easy_iron": "גיהוץ קל",
+                    "eco_40_60_new_energy_label": "אקו 40-60",
+                    "extra_care": "אכפתיות מוגברת",
+                    "fitness": "טיפול בכושר",
+                    "fitness_care": "טיפול בכושר",
+                    "fresh_care": "טיפול טרי",
+                    "fresh_care_steam": "טיפול טרי",
+                    "handwash_wool": "שטיפת ידיים + צמר",
+                    "high_dry": "יבש בחום גבוה",
+                    "hqd_dry_synthetics": "יבש בחום נמוך",
+                    "hygiene_60": "היגיינה 60 מעלות צלזיוס",
+                    "intensive_40": "40°C אינטנסיביים",
+                    "iot_active_steam": "קִיטוֹר",
+                    "iot_active_wash_steam": "שטיפה פעילה",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "\u05e9\u05d8\u05d9\u05e4\u05d4 \u05e4\u05e2\u05d9\u05dc\u05d4",
-                    "iot_checkup": "\u05d1\u05bc\u05b0\u05d3\u05b4\u05d9\u05e7\u05b8\u05d4",
+                    "iot_all_in_one_59_steam": "שטיפה פעילה",
+                    "iot_checkup": "בְּדִיקָה",
                     "iot_delicati_59_steam": "DELICATI_59",
-                    "iot_dry_air_refresh": "\u05e8\u05e2\u05e0\u05d5\u05df \u05d0\u05d5\u05d5\u05d9\u05e8",
-                    "iot_dry_anti_mites": "\u05e0\u05d2\u05d3 \u05e7\u05e8\u05d3\u05d9\u05ea",
-                    "iot_dry_baby": "\u05ea\u05b4\u05d9\u05e0\u05d5\u05b9\u05e7",
-                    "iot_dry_backpacks": "\u05ea\u05d9\u05e7\u05d9 \u05d2\u05d1",
-                    "iot_dry_bathrobe": "\u05d7\u05dc\u05d5\u05e7\u05d9 \u05e8\u05d7\u05e6\u05d4",
-                    "iot_dry_bed_linen": "\u05de\u05e6\u05e2\u05d9\u05dd",
-                    "iot_dry_cotton_dry": "\u05db\u05d5\u05ea\u05e0\u05d4 \u05d9\u05d1\u05e9\u05d4",
-                    "iot_dry_cuddly_toys": "\u05e6\u05e2\u05e6\u05d5\u05e2\u05d9 \u05d7\u05d9\u05d1\u05d5\u05e7",
-                    "iot_dry_curtains": "\u05d5\u05d9\u05dc\u05d5\u05e0\u05d5\u05ea",
-                    "iot_dry_dehumidifier": "\u05de\u05e1\u05d9\u05e8 \u05dc\u05d7\u05d5\u05ea",
-                    "iot_dry_delicates_antiallergy": "\u05e2\u05d3\u05d9\u05df \u05e0\u05d2\u05d3 \u05d0\u05dc\u05e8\u05d2\u05d9\u05d4",
-                    "iot_dry_delicate_tablecloths": "\u05de\u05e4\u05d5\u05ea \u05e2\u05d3\u05d9\u05e0\u05d5\u05ea",
-                    "iot_dry_denim_jeans": "\u05d2'\u05d9\u05e0\u05e1",
-                    "iot_dry_easy_iron_cotton": "\u05d1\u05e8\u05d6\u05dc \u05e7\u05dc - \u05db\u05d5\u05ea\u05e0\u05d4",
-                    "iot_dry_easy_iron_synthetics": "\u05e7\u05dc \u05d1\u05e8\u05d6\u05dc - \u05e1\u05d9\u05e0\u05ea\u05d8\u05d9\u05d9\u05dd",
-                    "iot_dry_gym_fit": "\u05db\u05d5\u05e9\u05e8 \u05db\u05d5\u05e9\u05e8 - \u05db\u05d5\u05e9\u05e8",
-                    "iot_dry_lingerie": "\u05dc\u05b4\u05d1\u05e0\u05b5\u05d9 \u05e0\u05b8\u05e9\u05c1\u05b4\u05d9\u05dd",
-                    "iot_dry_mixed_dry": "\u05de\u05e2\u05d5\u05e8\u05d1\u05d1 \u05d9\u05d1\u05e9",
-                    "iot_dry_rapid_60_min_delicates": "\u05de\u05d4\u05d9\u05e8 60 '- \u05e2\u05d3\u05d9\u05e0\u05d9\u05dd",
-                    "iot_dry_shirts": "\u05d7\u05d5\u05dc\u05e6\u05d5\u05ea",
-                    "iot_dry_swimsuits_and_bikinis": "\u05d1\u05d2\u05d3\u05d9 \u05d9\u05dd \u05d5\u05d1\u05d9\u05e7\u05d9\u05e0\u05d9",
-                    "iot_dry_synthetics": "\u05e1\u05d9\u05e0\u05ea\u05d8\u05d9 \u05d9\u05d1\u05e9",
-                    "iot_dry_synthetic_dry": "\u05e1\u05d9\u05e0\u05ea\u05d8\u05d9 \u05d9\u05d1\u05e9",
-                    "iot_dry_tablecloths": "\u05de\u05e4\u05d5\u05ea \u05e9\u05d5\u05dc\u05d7\u05df",
-                    "iot_dry_technical_fabrics": "\u05d1\u05d3\u05d9\u05dd \u05d8\u05db\u05e0\u05d9\u05d9\u05dd",
-                    "iot_dry_warm_embrace": "\u05d7\u05d9\u05d1\u05d5\u05e7 \u05d7\u05dd",
-                    "iot_dry_wool_dry": "\u05e6\u05de\u05e8 \u05d9\u05d1\u05e9",
-                    "iot_easy_iron": "\u05d2\u05d9\u05d4\u05d5\u05e5 \u05e7\u05dc",
-                    "iot_fresh_care_steam": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05d8\u05e8\u05d9",
-                    "iot_synthetic_and_coloured_steam": "\u05e1\u05d9\u05e0\u05d8\u05d8\u05d9 \u05d5\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9",
-                    "iot_wash_anti_mites": "\u05e0\u05d2\u05d3 \u05e7\u05e8\u05d3\u05d9\u05ea",
-                    "iot_wash_anti_odor": "\u05e0\u05d2\u05d3 \u05e8\u05d9\u05d7",
+                    "iot_dry_air_refresh": "רענון אוויר",
+                    "iot_dry_anti_mites": "נגד קרדית",
+                    "iot_dry_baby": "תִינוֹק",
+                    "iot_dry_backpacks": "תיקי גב",
+                    "iot_dry_bathrobe": "חלוקי רחצה",
+                    "iot_dry_bed_linen": "מצעים",
+                    "iot_dry_cotton_dry": "כותנה יבשה",
+                    "iot_dry_cuddly_toys": "צעצועי חיבוק",
+                    "iot_dry_curtains": "וילונות",
+                    "iot_dry_dehumidifier": "מסיר לחות",
+                    "iot_dry_delicates_antiallergy": "עדין נגד אלרגיה",
+                    "iot_dry_delicate_tablecloths": "מפות עדינות",
+                    "iot_dry_denim_jeans": "ג'ינס",
+                    "iot_dry_easy_iron_cotton": "ברזל קל - כותנה",
+                    "iot_dry_easy_iron_synthetics": "קל ברזל - סינתטיים",
+                    "iot_dry_gym_fit": "כושר כושר - כושר",
+                    "iot_dry_lingerie": "לִבנֵי נָשִׁים",
+                    "iot_dry_mixed_dry": "מעורבב יבש",
+                    "iot_dry_rapid_60_min_delicates": "מהיר 60 '- עדינים",
+                    "iot_dry_shirts": "חולצות",
+                    "iot_dry_swimsuits_and_bikinis": "בגדי ים וביקיני",
+                    "iot_dry_synthetics": "סינתטי יבש",
+                    "iot_dry_synthetic_dry": "סינתטי יבש",
+                    "iot_dry_tablecloths": "מפות שולחן",
+                    "iot_dry_technical_fabrics": "בדים טכניים",
+                    "iot_dry_warm_embrace": "חיבוק חם",
+                    "iot_dry_wool_dry": "צמר יבש",
+                    "iot_easy_iron": "גיהוץ קל",
+                    "iot_fresh_care_steam": "טיפול טרי",
+                    "iot_synthetic_and_coloured_steam": "סינטטי וצבעוני",
+                    "iot_wash_anti_mites": "נגד קרדית",
+                    "iot_wash_anti_odor": "נגד ריח",
                     "iot_wash_ariel_clean_cycle": "Ariel Ultimate Clean",
                     "iot_wash_ariel_cold_cycle": "Ariel Cold Clean",
                     "iot_wash_ariel_fresh_cycle": "Ariel Fresh Clean",
-                    "iot_wash_baby_sanitizer": "\u05d7\u05d9\u05d8\u05d5\u05d9 \u05dc\u05ea\u05d9\u05e0\u05d5\u05e7\u05d5\u05ea",
-                    "iot_wash_backpacks": "\u05ea\u05d9\u05e7\u05d9 \u05d2\u05d1",
-                    "iot_wash_bathrobe": "\u05d7\u05dc\u05d5\u05e7\u05d9 \u05e8\u05d7\u05e6\u05d4 \u05d5\u05d1\u05d3\u05d9\u05dd \u05e0\u05e7\u05d1\u05d5\u05d1\u05d9\u05d9\u05dd",
-                    "iot_wash_bed_linen": "\u05de\u05e6\u05e2\u05d9\u05dd",
-                    "iot_wash_bed_linen_zelig": "\u05de\u05e6\u05e2\u05d9\u05dd",
-                    "iot_wash_bleaching": "\u05d4\u05b7\u05dc\u05d1\u05bc\u05b8\u05e0\u05b8\u05d4",
-                    "iot_wash_blood_stains": "\u05db\u05ea\u05de\u05d9 \u05d3\u05dd",
-                    "iot_wash_cashmere": "\u05e7\u05e9\u05de\u05d9\u05e8",
-                    "iot_wash_chocolate_stains": "\u05db\u05ea\u05de\u05d9 \u05e9\u05d5\u05e7\u05d5\u05dc\u05d3",
-                    "iot_wash_cold_wash": "\u05e9\u05d8\u05d9\u05e4\u05d4 \u05e7\u05e8\u05d4",
-                    "iot_wash_colored": "\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9",
-                    "iot_wash_colored_anti_stain": "\u05e0\u05d2\u05d3 \u05db\u05ea\u05dd \u05e6\u05d1\u05e2\u05d5\u05e0\u05d9",
-                    "iot_wash_colored_delicate": "\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9 \u05e2\u05d3\u05d9\u05df",
-                    "iot_wash_coloured": "\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9",
-                    "iot_wash_cotton": "\u05db\u05d5\u05ea\u05e0\u05d4",
-                    "iot_wash_cuddly_toys": "\u05e6\u05e2\u05e6\u05d5\u05e2\u05d9 \u05d7\u05d9\u05d1\u05d5\u05e7",
-                    "iot_wash_curtains": "\u05d5\u05d9\u05dc\u05d5\u05e0\u05d5\u05ea",
-                    "iot_wash_curtains_zelig": "\u05d5\u05d9\u05dc\u05d5\u05e0\u05d5\u05ea",
-                    "iot_wash_dark": "\u05d0\u05e4\u05dc",
-                    "iot_wash_darks_and_coloured_44": "\u05d7\u05d1\u05d9\u05d1\u05d9\u05dd \u05d5\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9\u05d9\u05dd 44 '",
-                    "iot_wash_darks_and_coloured_59": "\u05d7\u05d1\u05d9\u05d1\u05d9\u05dd \u05d5\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9 59 '",
-                    "iot_wash_darks_and_coloured_xl": "\u05d7\u05e4\u05e6\u05d9\u05dd \u05d5\u05e6\u05d1\u05e2 XL",
+                    "iot_wash_baby_sanitizer": "חיטוי לתינוקות",
+                    "iot_wash_backpacks": "תיקי גב",
+                    "iot_wash_bathrobe": "חלוקי רחצה ובדים נקבוביים",
+                    "iot_wash_bed_linen": "מצעים",
+                    "iot_wash_bed_linen_zelig": "מצעים",
+                    "iot_wash_bleaching": "הַלבָּנָה",
+                    "iot_wash_blood_stains": "כתמי דם",
+                    "iot_wash_cashmere": "קשמיר",
+                    "iot_wash_chocolate_stains": "כתמי שוקולד",
+                    "iot_wash_cold_wash": "שטיפה קרה",
+                    "iot_wash_colored": "צבעוני",
+                    "iot_wash_colored_anti_stain": "נגד כתם צבעוני",
+                    "iot_wash_colored_delicate": "צבעוני עדין",
+                    "iot_wash_coloured": "צבעוני",
+                    "iot_wash_cotton": "כותנה",
+                    "iot_wash_cuddly_toys": "צעצועי חיבוק",
+                    "iot_wash_curtains": "וילונות",
+                    "iot_wash_curtains_zelig": "וילונות",
+                    "iot_wash_dark": "אפל",
+                    "iot_wash_darks_and_coloured_44": "חביבים וצבעוניים 44 '",
+                    "iot_wash_darks_and_coloured_59": "חביבים וצבעוני 59 '",
+                    "iot_wash_darks_and_coloured_xl": "חפצים וצבע XL",
                     "iot_wash_dash_clean_cycle": "Dash Ultimate Clean",
                     "iot_wash_dash_cold_cycle": "Dash Cold Clean",
                     "iot_wash_dash_fresh_cycle": "Dash Fresh Clean",
-                    "iot_wash_delicate": "\u05e2\u05d3\u05d9\u05e0\u05d9\u05dd",
-                    "iot_wash_delicate_antiallergy": "\u05d0\u05e0\u05d8\u05d9 \u05d0\u05dc\u05e8\u05d2\u05d9\u05d4 \u05e2\u05d3\u05d9\u05df",
-                    "iot_wash_delicate_antiallergy_zelig": "\u05d0\u05e0\u05d8\u05d9 \u05d0\u05dc\u05e8\u05d2\u05d9\u05d4 \u05e2\u05d3\u05d9\u05df",
-                    "iot_wash_delicate_colors": "\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9 \u05e2\u05d3\u05d9\u05df",
-                    "iot_wash_delicate_dark": "\u05db\u05d4\u05d4 \u05e2\u05d3\u05d9\u05df",
-                    "iot_wash_delicate_tablecloths": "\u05de\u05e4\u05d5\u05ea \u05e2\u05d3\u05d9\u05e0\u05d5\u05ea",
-                    "iot_wash_delicate_whites": "\u05dc\u05d1\u05e0\u05d9\u05dd \u05e2\u05d3\u05d9\u05e0\u05d9\u05dd",
-                    "iot_wash_denim_jeans": "\u05d2'\u05d9\u05e0\u05e1",
-                    "iot_wash_diving_suits": "\u05d7\u05dc\u05d9\u05e4\u05d5\u05ea \u05e6\u05dc\u05d9\u05dc\u05d4",
-                    "iot_wash_diving_suits_zelig": "\u05d7\u05dc\u05d9\u05e4\u05d5\u05ea \u05e6\u05dc\u05d9\u05dc\u05d4",
-                    "iot_wash_down_jackets": "\u05de\u05e2\u05d9\u05dc\u05d9 \u05e4\u05d5\u05da",
-                    "iot_wash_down_jackets_zelig": "\u05de\u05e2\u05d9\u05dc\u05d9 \u05e4\u05d5\u05da",
-                    "iot_wash_fruit_stains": "\u05db\u05ea\u05de\u05d9 \u05e4\u05e8\u05d9",
-                    "iot_wash_gym_fit": "\u05db\u05d5\u05e9\u05e8 \u05db\u05d5\u05e9\u05e8 - \u05db\u05d5\u05e9\u05e8",
-                    "iot_wash_handwash": "\u05e9\u05d8\u05d9\u05e4\u05ea \u05d9\u05d3\u05d9\u05d9\u05dd",
-                    "iot_wash_handwash_colored": "\u05e9\u05d8\u05d9\u05e4\u05ea \u05d9\u05d3\u05d9\u05d9\u05dd \u05d1\u05e6\u05d1\u05e2",
-                    "iot_wash_handwash_dark": "\u05e9\u05d8\u05d9\u05e4\u05ea \u05d9\u05d3\u05d9\u05d9\u05dd \u05db\u05d4\u05d4",
-                    "iot_wash_lingerie": "\u05dc\u05b4\u05d1\u05e0\u05b5\u05d9 \u05e0\u05b8\u05e9\u05c1\u05b4\u05d9\u05dd",
-                    "iot_wash_masks_refresh": "\u05de\u05e1\u05db\u05d5\u05ea \u05e8\u05e2\u05e0\u05df",
-                    "iot_wash_masks_sanification": "\u05d7\u05d9\u05d8\u05d5\u05d9 \u05de\u05e1\u05db\u05d5\u05ea",
-                    "iot_wash_mats": "\u05de\u05d7\u05e6\u05dc\u05d5\u05ea",
-                    "iot_wash_men_s_trousers": "\u05de\u05db\u05e0\u05e1\u05d9 \u05d2\u05d1\u05e8\u05d9\u05dd",
-                    "iot_wash_mixed": "\u05de\u05e2\u05d5\u05e8\u05d1",
-                    "iot_wash_mix_and_coloured_44": "\u05dc\u05e2\u05e8\u05d1\u05d1 \u05d5\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9 44 '",
-                    "iot_wash_mix_and_coloured_59": "\u05de\u05d9\u05e7\u05e1 \u05d5\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9 59 '",
-                    "iot_wash_mix_and_coloured_xl": "\u05de\u05e2\u05e8\u05d1\u05d1\u05d9\u05dd \u05d5\u05e6\u05d1\u05e2\u05d9\u05dd XL",
-                    "iot_wash_new_clothes": "\u05d1\u05d2\u05d3\u05d9\u05dd \u05d7\u05d3\u05e9\u05d9\u05dd",
-                    "iot_wash_perfect_white": "\u05dc\u05d1\u05df \u05de\u05d5\u05e9\u05dc\u05dd",
-                    "iot_wash_pets": "\u05d7\u05d9\u05d5\u05ea \u05de\u05d7\u05de\u05d3",
-                    "iot_wash_pets_steam": "\u05d7\u05d9\u05d5\u05ea \u05de\u05d7\u05de\u05d3",
-                    "iot_wash_playsuits": "\u05d7\u05dc\u05d9\u05e4\u05d5\u05ea \u05de\u05e9\u05d7\u05e7",
-                    "iot_wash_rapid_14": "\u05de\u05d4\u05d9\u05e8 14 '",
-                    "iot_wash_rapid_30": "\u05de\u05d4\u05d9\u05e8 30 '",
-                    "iot_wash_rapid_44": "\u05de\u05d4\u05d9\u05e8 44 '",
-                    "iot_wash_rapid_59": "\u05de\u05d4\u05d9\u05e8 59 '",
-                    "iot_wash_refresh_14_min": "\u05e8\u05e2\u05e0\u05df 14 \u05d3\u05e7\u05d5\u05ea",
-                    "iot_wash_resistant_colored": "\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9 \u05e2\u05de\u05d9\u05d3",
-                    "iot_wash_resistant_dark": "\u05db\u05d4\u05d4 \u05e2\u05de\u05d9\u05d3",
-                    "iot_wash_resistant_whites": "\u05dc\u05d1\u05e0\u05d9\u05dd \u05e2\u05de\u05d9\u05d3\u05d9\u05dd",
-                    "iot_wash_rinse": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
-                    "iot_wash_shirts": "\u05d7\u05d5\u05dc\u05e6\u05d5\u05ea",
-                    "iot_wash_silk": "\u05de\u05e9\u05d9",
-                    "iot_wash_ski_suit": "\u05d7\u05dc\u05d9\u05e4\u05ea \u05e1\u05e7\u05d9",
-                    "iot_wash_ski_suit_zelig": "\u05d7\u05dc\u05d9\u05e4\u05ea \u05e1\u05e7\u05d9",
-                    "iot_wash_spin": "\u05e1\u05d9\u05d1\u05d5\u05d1",
-                    "iot_wash_sport": "\u05e1\u05e4\u05bc\u05d5\u05b9\u05e8\u05d8",
-                    "iot_wash_stains_remover": "\u05de\u05e1\u05d9\u05e8 \u05db\u05ea\u05de\u05d9\u05dd",
-                    "iot_wash_swimsuits_and_bikinis": "\u05d1\u05d2\u05d3\u05d9 \u05d9\u05dd \u05d5\u05d1\u05d9\u05e7\u05d9\u05e0\u05d9",
-                    "iot_wash_synthetic": "\u05e1\u05d9\u05e0\u05ea\u05d8\u05d9\u05d9\u05dd",
-                    "iot_wash_tablecloths": "\u05de\u05e4\u05d5\u05ea \u05e9\u05d5\u05dc\u05d7\u05df",
-                    "iot_wash_technical_fabrics": "\u05d1\u05d3\u05d9\u05dd \u05d8\u05db\u05e0\u05d9\u05d9\u05dd",
-                    "iot_wash_technical_fabrics_zelig": "\u05d1\u05d3\u05d9\u05dd \u05d8\u05db\u05e0\u05d9\u05d9\u05dd",
-                    "iot_wash_technical_jackets": "\u05d6'\u05e7\u05d8\u05d9\u05dd \u05d8\u05db\u05e0\u05d9\u05d9\u05dd",
-                    "iot_wash_technical_jackets_zelig": "\u05d6'\u05e7\u05d8\u05d9\u05dd \u05d8\u05db\u05e0\u05d9\u05d9\u05dd",
-                    "iot_wash_trainers": "\u05de\u05d0\u05de\u05e0\u05d9\u05dd",
-                    "iot_wash_whites": "\u05dc\u05b0\u05d1\u05b8\u05e0\u05b4\u05d9\u05dd",
-                    "iot_wash_whites_44": "\u05dc\u05d1\u05e0\u05d9\u05dd 44 '",
-                    "iot_wash_whites_59": "\u05dc\u05d1\u05e0\u05d9\u05dd 59 '",
-                    "iot_wash_whites_xl": "\u05dc\u05d1\u05e0\u05d9\u05dd XL",
-                    "iot_wash_wine_stains": "\u05db\u05ea\u05de\u05d9 \u05d9\u05d9\u05df",
-                    "iot_wash_wool": "\u05e6\u05b6\u05de\u05b6\u05e8",
-                    "jeans": "\u05d2\u05b4'\u05d9\u05e0\u05e1",
-                    "low_dry": "\u05d9\u05d1\u05e9 \u05d1\u05d7\u05d5\u05dd \u05e0\u05de\u05d5\u05da",
-                    "mixed_and_colored_59": "\u05de\u05e2\u05d5\u05e8\u05d1 \u05d5\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9 59 '",
-                    "night_and_day": "\u05dc\u05d9\u05dc\u05d4 \u05d5\u05d9\u05d5\u05dd",
+                    "iot_wash_delicate": "עדינים",
+                    "iot_wash_delicate_antiallergy": "אנטי אלרגיה עדין",
+                    "iot_wash_delicate_antiallergy_zelig": "אנטי אלרגיה עדין",
+                    "iot_wash_delicate_colors": "צבעוני עדין",
+                    "iot_wash_delicate_dark": "כהה עדין",
+                    "iot_wash_delicate_tablecloths": "מפות עדינות",
+                    "iot_wash_delicate_whites": "לבנים עדינים",
+                    "iot_wash_denim_jeans": "ג'ינס",
+                    "iot_wash_diving_suits": "חליפות צלילה",
+                    "iot_wash_diving_suits_zelig": "חליפות צלילה",
+                    "iot_wash_down_jackets": "מעילי פוך",
+                    "iot_wash_down_jackets_zelig": "מעילי פוך",
+                    "iot_wash_fruit_stains": "כתמי פרי",
+                    "iot_wash_gym_fit": "כושר כושר - כושר",
+                    "iot_wash_handwash": "שטיפת ידיים",
+                    "iot_wash_handwash_colored": "שטיפת ידיים בצבע",
+                    "iot_wash_handwash_dark": "שטיפת ידיים כהה",
+                    "iot_wash_lingerie": "לִבנֵי נָשִׁים",
+                    "iot_wash_masks_refresh": "מסכות רענן",
+                    "iot_wash_masks_sanification": "חיטוי מסכות",
+                    "iot_wash_mats": "מחצלות",
+                    "iot_wash_men_s_trousers": "מכנסי גברים",
+                    "iot_wash_mixed": "מעורב",
+                    "iot_wash_mix_and_coloured_44": "לערבב וצבעוני 44 '",
+                    "iot_wash_mix_and_coloured_59": "מיקס וצבעוני 59 '",
+                    "iot_wash_mix_and_coloured_xl": "מערבבים וצבעים XL",
+                    "iot_wash_new_clothes": "בגדים חדשים",
+                    "iot_wash_perfect_white": "לבן מושלם",
+                    "iot_wash_pets": "חיות מחמד",
+                    "iot_wash_pets_steam": "חיות מחמד",
+                    "iot_wash_playsuits": "חליפות משחק",
+                    "iot_wash_rapid_14": "מהיר 14 '",
+                    "iot_wash_rapid_30": "מהיר 30 '",
+                    "iot_wash_rapid_44": "מהיר 44 '",
+                    "iot_wash_rapid_59": "מהיר 59 '",
+                    "iot_wash_refresh_14_min": "רענן 14 דקות",
+                    "iot_wash_resistant_colored": "צבעוני עמיד",
+                    "iot_wash_resistant_dark": "כהה עמיד",
+                    "iot_wash_resistant_whites": "לבנים עמידים",
+                    "iot_wash_rinse": "לִשְׁטוֹף",
+                    "iot_wash_shirts": "חולצות",
+                    "iot_wash_silk": "משי",
+                    "iot_wash_ski_suit": "חליפת סקי",
+                    "iot_wash_ski_suit_zelig": "חליפת סקי",
+                    "iot_wash_spin": "סיבוב",
+                    "iot_wash_sport": "ספּוֹרט",
+                    "iot_wash_stains_remover": "מסיר כתמים",
+                    "iot_wash_swimsuits_and_bikinis": "בגדי ים וביקיני",
+                    "iot_wash_synthetic": "סינתטיים",
+                    "iot_wash_tablecloths": "מפות שולחן",
+                    "iot_wash_technical_fabrics": "בדים טכניים",
+                    "iot_wash_technical_fabrics_zelig": "בדים טכניים",
+                    "iot_wash_technical_jackets": "ז'קטים טכניים",
+                    "iot_wash_technical_jackets_zelig": "ז'קטים טכניים",
+                    "iot_wash_trainers": "מאמנים",
+                    "iot_wash_whites": "לְבָנִים",
+                    "iot_wash_whites_44": "לבנים 44 '",
+                    "iot_wash_whites_59": "לבנים 59 '",
+                    "iot_wash_whites_xl": "לבנים XL",
+                    "iot_wash_wine_stains": "כתמי יין",
+                    "iot_wash_wool": "צֶמֶר",
+                    "jeans": "גִ'ינס",
+                    "low_dry": "יבש בחום נמוך",
+                    "mixed_and_colored_59": "מעורב וצבעוני 59 '",
+                    "night_and_day": "לילה ויום",
                     "night_wash": "Night Wash",
-                    "perfect_59": "\u05de\u05d5\u05e9\u05dc\u05dd 59 '",
-                    "perfect_whites_59": "\u05dc\u05d1\u05df \u05de\u05d5\u05e9\u05dc\u05dd",
-                    "rapid_wash_and_dry_59_min": "\u05dc\u05e9\u05d8\u05d5\u05e3 \u05d5\u05dc\u05d9\u05d9\u05d1\u05e9 59 '",
-                    "resistant_cotton": "\u05db\u05d5\u05ea\u05e0\u05d4",
-                    "rinse": "\u05dc\u05b4\u05e9\u05c1\u05b0\u05d8\u05d5\u05b9\u05e3",
+                    "perfect_59": "מושלם 59 '",
+                    "perfect_whites_59": "לבן מושלם",
+                    "rapid_wash_and_dry_59_min": "לשטוף ולייבש 59 '",
+                    "resistant_cotton": "כותנה",
+                    "rinse": "לִשְׁטוֹף",
                     "silent_night": "Night Wash",
-                    "soft_care": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05e8\u05da",
-                    "special_49": "\u05de\u05d9\u05d5\u05d7\u05d3 49 '",
-                    "sport_39": "\u05e1\u05e4\u05d5\u05e8\u05d8 39 '",
-                    "sport_plus_29": "\u05e1\u05e4\u05d5\u05e8\u05d8 \u05e4\u05dc\u05d5\u05e1 29 \"",
-                    "steam_39": "\u05e7\u05d9\u05d8\u05d5\u05e8 39 '",
+                    "soft_care": "טיפול רך",
+                    "special_49": "מיוחד 49 '",
+                    "sport_39": "ספורט 39 '",
+                    "sport_plus_29": "ספורט פלוס 29 \"",
+                    "steam_39": "קיטור 39 '",
                     "steam_care_pro": "Steam Care Pro",
                     "steam_care_pro_cotton": "Steam Care Pro",
                     "steam_care_pro_delicates": "Steam Care Pro",
                     "steam_care_pro_synthetic": "Steam Care Pro",
-                    "synthetics": "\u05e1\u05d9\u05e0\u05ea\u05d8\u05d9\u05d9\u05dd",
-                    "synthetic_and_coloured": "\u05e1\u05d9\u05e0\u05d8\u05d8\u05d9 \u05d5\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9",
-                    "synthetic_and_coloured_steam": "\u05e1\u05d9\u05e0\u05d8\u05d8\u05d9 \u05d5\u05e6\u05d1\u05e2\u05d5\u05e0\u05d9",
+                    "synthetics": "סינתטיים",
+                    "synthetic_and_coloured": "סינטטי וצבעוני",
+                    "synthetic_and_coloured_steam": "סינטטי וצבעוני",
                     "tailored_resistant_cotton": "Tailored Resistant Cotton",
                     "tailored_synthetic_and_coloured": "Tailored Synthetic Colored",
-                    "total_care": "\u05d8\u05d9\u05e4\u05d5\u05dc \u05d8\u05d5\u05d8\u05d0\u05dc\u05d9",
-                    "tumbling": "\u05e0\u05d5\u05e4\u05dc\u05d9\u05dd",
+                    "total_care": "טיפול טוטאלי",
+                    "tumbling": "נופלים",
                     "wool_and_delicates_49": "Wool/Delicates 49'",
-                    "wool_dry": "\u05e6\u05de\u05e8 \u05d9\u05d1\u05e9",
+                    "wool_dry": "צמר יבש",
                     "wool_soft_care": "Wool & Soft Care"
                 },
                 "name": "Program"
             },
             "dry_levels": {
                 "state": {
-                    "0": "\u05dc\u05dc\u05d0 \u05d9\u05d9\u05d1\u05d5\u05e9",
-                    "1": "\u05d1\u05bc\u05b7\u05e8\u05d6\u05b6\u05dc",
-                    "2": "\u05dc\u05d0 \u05dc\u05d9\u05d9\u05d1\u05e9 \u05d1\u05e8\u05d6\u05dc",
-                    "3": "\u05d0\u05e8\u05d5\u05df \u05d9\u05d1\u05e9",
-                    "4": "\u05d9\u05d1\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3",
-                    "12": "\u05d1\u05bc\u05b7\u05e8\u05d6\u05b6\u05dc",
-                    "13": "\u05d0\u05e8\u05d5\u05df \u05d9\u05d1\u05e9",
+                    "0": "ללא ייבוש",
+                    "1": "בַּרזֶל",
+                    "2": "לא לייבש ברזל",
+                    "3": "ארון יבש",
+                    "4": "יבש במיוחד",
+                    "12": "בַּרזֶל",
+                    "13": "ארון יבש",
                     "14": "Ready to wear",
-                    "15": "\u05d9\u05d1\u05e9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3"
+                    "15": "יבש במיוחד"
                 },
-                "name": "\u05e8\u05de\u05ea \u05d9\u05d9\u05d1\u05d5\u05e9"
+                "name": "רמת ייבוש"
             },
             "spin_speed": {
-                "name": "\u05e1\u05d9\u05d1\u05d5\u05d1"
+                "name": "סיבוב"
             },
             "temperature": {
                 "name": "Temperature"
             },
             "dry_time": {
-                "name": "\u05d6\u05de\u05df \u05d9\u05d9\u05d1\u05d5\u05e9"
+                "name": "זמן ייבוש"
             }
         },
         "switch": {
@@ -463,7 +463,7 @@
                 "name": "Oven"
             },
             "prewash": {
-                "name": "\u05e9\u05d8\u05d9\u05e4\u05d4 \u05de\u05e8\u05d0\u05e9"
+                "name": "שטיפה מראש"
             },
             "pause": {
                 "name": "Pause"
@@ -477,19 +477,19 @@
         },
         "binary_sensor": {
             "door_lock": {
-                "name": "\u05de\u05e0\u05e2\u05d5\u05dc \u05d3\u05dc\u05ea"
+                "name": "מנעול דלת"
             },
             "extra_rinse_1": {
-                "name": "+1 \u05e9\u05d8\u05d9\u05e4\u05d4"
+                "name": "+1 שטיפה"
             },
             "extra_rinse_2": {
-                "name": "+2 \u05e9\u05d8\u05d9\u05e4\u05d5\u05ea"
+                "name": "+2 שטיפות"
             },
             "extra_rinse_3": {
-                "name": "+3 \u05e9\u05d8\u05d9\u05e4\u05d5\u05ea"
+                "name": "+3 שטיפות"
             },
             "good_night": {
-                "name": "\u05dc\u05d9\u05dc\u05d4 \u05d8\u05d5\u05d1"
+                "name": "לילה טוב"
             },
             "anti_crease": {
                 "name": "Anticrease"
@@ -498,7 +498,7 @@
                 "name": "Acquaplus"
             },
             "spin_speed": {
-                "name": "\u05e1\u05d9\u05d1\u05d5\u05d1"
+                "name": "סיבוב"
             },
             "programs_dw": {
                 "name": "Program"
@@ -540,10 +540,10 @@
                 "name": "Child Lock"
             },
             "on": {
-                "name": "\u05e2\u05b7\u05dc"
+                "name": "עַל"
             },
             "prewash": {
-                "name": "\u05e9\u05d8\u05d9\u05e4\u05d4 \u05de\u05e8\u05d0\u05e9"
+                "name": "שטיפה מראש"
             }
         },
         "number": {
@@ -557,7 +557,7 @@
                 "name": "Delay Start"
             },
             "water_hard": {
-                "name": "\u05e7\u05e9\u05d9\u05d5\u05ea \u05de\u05d9\u05dd"
+                "name": "קשיות מים"
             },
             "program_duration": {
                 "name": "Program duration"
@@ -572,7 +572,7 @@
                 "name": "Washing intensity"
             },
             "dry_time": {
-                "name": "\u05d6\u05de\u05df \u05d9\u05d9\u05d1\u05d5\u05e9"
+                "name": "זמן ייבוש"
             }
         },
         "button": {
