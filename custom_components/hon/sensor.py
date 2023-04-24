@@ -182,6 +182,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Suggested Load",
             icon="mdi:weight-kilogram",
             entity_category=EntityCategory.CONFIG,
+            state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfMass.KILOGRAMS,
             translation_key="suggested_load",
         ),
@@ -444,7 +445,9 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := SENSORS.get(device.appliance_type):
             for description in descriptions:
-                if not device.get(description.key):
+                if not device.get(description.key) and not device.settings.get(
+                    description.key
+                ):
                     _LOGGER.warning(
                         "[%s] Can't setup %s", device.appliance_type, description.key
                     )
@@ -467,9 +470,15 @@ class HonSensorEntity(HonEntity, SensorEntity):
 
     @property
     def native_value(self) -> StateType:
-        return self._device.get(self.entity_description.key, "")
+        value = self._device.get(self.entity_description.key, "")
+        if not value and self.entity_description.state_class is not None:
+            return 0
+        return value
 
     @callback
     def _handle_coordinator_update(self):
-        self._attr_native_value = self._device.get(self.entity_description.key, "")
+        value = self._device.get(self.entity_description.key, "")
+        if not value and self.entity_description.state_class is not None:
+            self._attr_native_value = 0
+        self._attr_native_value = value
         self.async_write_ha_state()

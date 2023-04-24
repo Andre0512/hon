@@ -226,6 +226,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Name | Icon | Entity | Key | Auto-Translation |
 | --- | --- | --- | --- | --- |
 | Anti-Crease | `timer` | `switch` | `startProgram.antiCreaseTime` | ✔ |
+| Anti-Crease | `timer` | `switch` | `startProgram.anticrease` | ✔ |
 | Delay time | `timer-plus` | `number` | `startProgram.delayTime` | ✔ |
 | Dry Time |  | `number` | `startProgram.dryTime` | ✔ |
 | Dry Time | `timer` | `select` | `startProgram.dryTimeMM` | ✔ |

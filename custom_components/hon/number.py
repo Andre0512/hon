@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from pyhon import Hon
+from pyhon.parameter.base import HonParameter
+from pyhon.parameter.fixed import HonParameterFixed
 from pyhon.parameter.range import HonParameterRange
 
 from homeassistant.components.number import (
@@ -179,7 +181,11 @@ class HonNumberEntity(HonEntity, NumberEntity):
         return self._device.get(self.entity_description.key)
 
     async def async_set_native_value(self, value: float) -> None:
-        self._device.settings[self.entity_description.key].value = value
+        setting = self._device.settings[self.entity_description.key]
+        if not (
+            isinstance(setting, HonParameter) or isinstance(setting, HonParameterFixed)
+        ):
+            setting.value = value
         await self.coordinator.async_refresh()
 
     @callback

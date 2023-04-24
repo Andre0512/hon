@@ -97,6 +97,13 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:timer",
             translation_key="anti_crease",
         ),
+        HonSwitchEntityDescription(
+            key="startProgram.anticrease",
+            name="Anti-Crease",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:timer",
+            translation_key="anti_crease",
+        ),
     ),
     "OV": (
         HonSwitchEntityDescription(
