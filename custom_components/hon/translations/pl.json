@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "P\u0142yn"
+            },
+            "errors": {
+                "name": "B\u0142\u0105d"
+            },
+            "programs": {
+                "name": "Aktualny program"
+            },
+            "cycles_total": {
+                "name": "Cykle Suma"
+            },
+            "energy_total": {
+                "name": "Zu\u017cycie energii Suma"
+            },
+            "water_total": {
+                "name": "Wydajno\u015b\u0107 zu\u017cycia wody Suma"
+            },
+            "energy_current": {
+                "name": "Zu\u017cycie energii Aktualne"
+            },
+            "water_current": {
+                "name": "Wydajno\u015b\u0107 zu\u017cycia wody Aktualne"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Op\u00f3\u017aniony Start"
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "Pod\u0142\u0105czenie urz\u0105dzenia"
+            },
+            "child_lock": {
+                "name": "Blokada rodzicielska"
+            },
+            "on": {
+                "name": "W\u0142."
+            },
+            "prewash": {
+                "name": "Mycie wst\u0119pne"
             }
         },
         "number": {

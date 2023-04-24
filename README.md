@@ -134,195 +134,195 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 
 ### Dish washer
 #### Controls
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Dish Washer | `dishwasher` | `switch` | `startProgram` / `stopProgram` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Dish Washer | `dishwasher` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Add Dish | `silverware-fork-knife` | `switch` | `startProgram.addDish` | ✔ |
-| Delay time | `timer-plus` | `number` | `startProgram.delayTime` | ✔ |
-| Eco Express | `sprout` | `switch` | `startProgram.ecoExpress` | ✔ |
-| Eco Index | `sprout` | `sensor` | `startProgram.ecoIndex` | ❌ |
-| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` | ✔ |
-| Extra Dry | `hair-dryer` | `switch` | `startProgram.extraDry` | ✔ |
-| Half Load | `fraction-one-half` | `switch` | `startProgram.halfLoad` | ✔ |
-| Open Door | `door-open` | `switch` | `startProgram.openDoor` | ✔ |
-| Program |  | `select` | `startProgram.program` | ✔ |
-| Temperature | `thermometer` | `sensor` | `startProgram.temp` | ✔ |
-| Three in One | `numeric-3-box-outline` | `switch` | `startProgram.threeInOne` | ✔ |
-| Time | `timer` | `sensor` | `startProgram.remainingTime` | ✔ |
-| Water Efficiency | `water` | `sensor` | `startProgram.waterEfficiency` | ✔ |
-| Water Saving | `water-percent` | `sensor` | `startProgram.waterSaving` | ✔ |
-| Water hard | `water` | `number` | `startProgram.waterHard` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Add Dish | `silverware-fork-knife` | `switch` | `startProgram.addDish` |
+| Delay time | `timer-plus` | `number` | `startProgram.delayTime` |
+| Eco Express | `sprout` | `switch` | `startProgram.ecoExpress` |
+| Eco Index | `sprout` | `sensor` | `startProgram.ecoIndex` |
+| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
+| Extra Dry | `hair-dryer` | `switch` | `startProgram.extraDry` |
+| Half Load | `fraction-one-half` | `switch` | `startProgram.halfLoad` |
+| Open Door | `door-open` | `switch` | `startProgram.openDoor` |
+| Program |  | `select` | `startProgram.program` |
+| Temperature | `thermometer` | `sensor` | `startProgram.temp` |
+| Three in One | `numeric-3-box-outline` | `switch` | `startProgram.threeInOne` |
+| Time | `timer` | `sensor` | `startProgram.remainingTime` |
+| Water Efficiency | `water` | `sensor` | `startProgram.waterEfficiency` |
+| Water Saving | `water-percent` | `sensor` | `startProgram.waterSaving` |
+| Water hard | `water` | `number` | `startProgram.waterHard` |
 #### Sensors
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Connection |  | `binary_sensor` | `attributes.lastConnEvent.category` | ✔ |
-| Door |  | `binary_sensor` | `doorStatus` | ✔ |
-| Error | `math-log` | `sensor` | `errors` | ✔ |
-| Machine Status | `information` | `sensor` | `machMode` | ✔ |
-| Program Phase | `washing-machine` | `sensor` | `prPhase` | ✔ |
-| Remaining Time | `timer` | `sensor` | `remainingTimeMM` | ✔ |
-| Rinse Aid | `spray-bottle` | `binary_sensor` | `rinseAidStatus` | ✔ |
-| Salt | `shaker-outline` | `binary_sensor` | `saltStatus` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Connection |  | `binary_sensor` | `attributes.lastConnEvent.category` |
+| Door |  | `binary_sensor` | `doorStatus` |
+| Error | `math-log` | `sensor` | `errors` |
+| Machine Status | `information` | `sensor` | `machMode` |
+| Program Phase | `washing-machine` | `sensor` | `prPhase` |
+| Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
+| Rinse Aid | `spray-bottle` | `binary_sensor` | `rinseAidStatus` |
+| Salt | `shaker-outline` | `binary_sensor` | `saltStatus` |
 
 ### Hob
 #### Controls
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Start Program | `pot-steam` | `button` | `startProgram` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Start Program | `pot-steam` | `button` | `startProgram` |
 #### Configs
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Power Management | `timelapse` | `number` | `startProgram.powerManagement` | ✔ |
-| Program |  | `select` | `startProgram.program` | ✔ |
-| Temperature | `thermometer` | `number` | `startProgram.temp` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Power Management | `timelapse` | `number` | `startProgram.powerManagement` |
+| Program |  | `select` | `startProgram.program` |
+| Temperature | `thermometer` | `number` | `startProgram.temp` |
 #### Sensors
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Connection | `wifi` | `binary_sensor` | `attributes.lastConnEvent.category` | ✔ |
-| Error | `math-log` | `sensor` | `errors` | ❌ |
-| Hob Lock |  | `binary_sensor` | `hobLockStatus` | ❌ |
-| Hot Status |  | `binary_sensor` | `hotStatus` | ✔ |
-| On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` | ❌ |
-| Pan Status | `pot-mix` | `binary_sensor` | `panStatus` | ✔ |
-| Power | `lightning-bolt` | `sensor` | `power` | ✔ |
-| Remaining Time | `timer` | `sensor` | `remainingTimeMM` | ✔ |
-| Remote Control | `remote` | `binary_sensor` | `attributes.parameters.remoteCtrValid` | ✔ |
-| Temperature | `thermometer` | `sensor` | `temp` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Connection | `wifi` | `binary_sensor` | `attributes.lastConnEvent.category` |
+| Error | `math-log` | `sensor` | `errors` |
+| Hob Lock |  | `binary_sensor` | `hobLockStatus` |
+| Hot Status |  | `binary_sensor` | `hotStatus` |
+| On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
+| Pan Status | `pot-mix` | `binary_sensor` | `panStatus` |
+| Power | `lightning-bolt` | `sensor` | `power` |
+| Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
+| Remote Control | `remote` | `binary_sensor` | `attributes.parameters.remoteCtrValid` |
+| Temperature | `thermometer` | `sensor` | `temp` |
 
 ### Oven
 #### Controls
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Oven | `toaster-oven` | `switch` | `startProgram` / `stopProgram` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Oven | `toaster-oven` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Delay time | `timer-plus` | `number` | `startProgram.delayTime` | ✔ |
-| Preheat | `thermometer-chevron-up` | `switch` | `startProgram.preheatStatus` | ✔ |
-| Program |  | `select` | `startProgram.program` | ✔ |
-| Program Duration | `timelapse` | `number` | `startProgram.prTime` | ✔ |
-| Target Temperature | `thermometer` | `number` | `startProgram.tempSel` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Delay time | `timer-plus` | `number` | `startProgram.delayTime` |
+| Preheat | `thermometer-chevron-up` | `switch` | `startProgram.preheatStatus` |
+| Program |  | `select` | `startProgram.program` |
+| Program Duration | `timelapse` | `number` | `startProgram.prTime` |
+| Target Temperature | `thermometer` | `number` | `startProgram.tempSel` |
 #### Sensors
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Connection | `wifi` | `binary_sensor` | `attributes.lastConnEvent.category` | ✔ |
-| On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` | ❌ |
-| Remaining Time | `timer` | `sensor` | `remainingTimeMM` | ✔ |
-| Remote Control | `remote` | `binary_sensor` | `attributes.parameters.remoteCtrValid` | ✔ |
-| Start Time | `clock-start` | `sensor` | `delayTime` | ✔ |
-| Temperature | `thermometer` | `sensor` | `temp` | ✔ |
-| Temperature Selected | `thermometer` | `sensor` | `tempSel` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Connection | `wifi` | `binary_sensor` | `attributes.lastConnEvent.category` |
+| On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
+| Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
+| Remote Control | `remote` | `binary_sensor` | `attributes.parameters.remoteCtrValid` |
+| Start Time | `clock-start` | `sensor` | `delayTime` |
+| Temperature | `thermometer` | `sensor` | `temp` |
+| Temperature Selected | `thermometer` | `sensor` | `tempSel` |
 
 ### Tumble dryer
 #### Controls
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Pause Tumble Dryer | `pause` | `switch` | `pauseProgram` / `resumeProgram` | ✔ |
-| Tumble Dryer | `tumble-dryer` | `switch` | `startProgram` / `stopProgram` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Pause Tumble Dryer | `pause` | `switch` | `pauseProgram` / `resumeProgram` |
+| Tumble Dryer | `tumble-dryer` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Anti-Crease | `timer` | `switch` | `startProgram.antiCreaseTime` | ✔ |
-| Anti-Crease | `timer` | `switch` | `startProgram.anticrease` | ✔ |
-| Delay time | `timer-plus` | `number` | `startProgram.delayTime` | ✔ |
-| Dry Time |  | `number` | `startProgram.dryTime` | ✔ |
-| Dry Time | `timer` | `select` | `startProgram.dryTimeMM` | ✔ |
-| Dry level | `hair-dryer` | `select` | `startProgram.dryLevel` | ✔ |
-| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` | ✔ |
-| Program |  | `select` | `startProgram.program` | ✔ |
-| Sterilization | `clock-start` | `switch` | `startProgram.sterilizationStatus` | ❌ |
-| Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` | ✔ |
-| Temperature level | `thermometer` | `number` | `startProgram.tempLevel` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Anti-Crease | `timer` | `switch` | `startProgram.antiCreaseTime` |
+| Anti-Crease | `timer` | `switch` | `startProgram.anticrease` |
+| Delay time | `timer-plus` | `number` | `startProgram.delayTime` |
+| Dry Time |  | `number` | `startProgram.dryTime` |
+| Dry Time | `timer` | `select` | `startProgram.dryTimeMM` |
+| Dry level | `hair-dryer` | `select` | `startProgram.dryLevel` |
+| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
+| Program |  | `select` | `startProgram.program` |
+| Sterilization | `clock-start` | `switch` | `startProgram.sterilizationStatus` |
+| Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` |
+| Temperature level | `thermometer` | `number` | `startProgram.tempLevel` |
 #### Sensors
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Connection |  | `binary_sensor` | `attributes.lastConnEvent.category` | ✔ |
-| Door |  | `binary_sensor` | `doorStatus` | ✔ |
-| Dry level | `hair-dryer` | `sensor` | `dryLevel` | ✔ |
-| Error | `math-log` | `sensor` | `errors` | ✔ |
-| Machine Status | `information` | `sensor` | `machMode` | ✔ |
-| Program | `tumble-dryer` | `sensor` | `prCode` | ✔ |
-| Program Phase | `washing-machine` | `sensor` | `prPhase` | ✔ |
-| Remaining Time | `timer` | `sensor` | `remainingTimeMM` | ✔ |
-| Start Time | `clock-start` | `sensor` | `delayTime` | ✔ |
-| Temperature level | `thermometer` | `sensor` | `tempLevel` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Connection |  | `binary_sensor` | `attributes.lastConnEvent.category` |
+| Door |  | `binary_sensor` | `doorStatus` |
+| Dry level | `hair-dryer` | `sensor` | `dryLevel` |
+| Error | `math-log` | `sensor` | `errors` |
+| Machine Status | `information` | `sensor` | `machMode` |
+| Program | `tumble-dryer` | `sensor` | `prCode` |
+| Program Phase | `washing-machine` | `sensor` | `prPhase` |
+| Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
+| Start Time | `clock-start` | `sensor` | `delayTime` |
+| Temperature level | `thermometer` | `sensor` | `tempLevel` |
 
 ### Washer dryer
 #### Controls
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Pause Washing Machine | `pause` | `switch` | `pauseProgram` / `resumeProgram` | ✔ |
-| Washing Machine | `washing-machine` | `switch` | `startProgram` / `stopProgram` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Pause Washing Machine | `pause` | `switch` | `pauseProgram` / `resumeProgram` |
+| Washing Machine | `washing-machine` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Delay Time | `timer-plus` | `number` | `startProgram.delayTime` | ✔ |
-| Program |  | `select` | `startProgram.program` | ✔ |
-| Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Delay Time | `timer-plus` | `number` | `startProgram.delayTime` |
+| Program |  | `select` | `startProgram.program` |
+| Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` |
 #### Sensors
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Acqua Plus |  | `binary_sensor` | `acquaplus` | ✔ |
-| Anti-Crease |  | `binary_sensor` | `anticrease` | ✔ |
-| Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` | ❌ |
-| Current Program | `tumble-dryer` | `sensor` | `prCode` | ❌ |
-| Current Temperature | `thermometer` | `sensor` | `temp` | ✔ |
-| Current Water Used | `water` | `sensor` | `currentWaterUsed` | ❌ |
-| Dirt level | `liquid-spot` | `sensor` | `dirtyLevel` | ✔ |
-| Dry level | `hair-dryer` | `sensor` | `dryLevel` | ✔ |
-| Extra Rinse 1 |  | `binary_sensor` | `extraRinse1` | ✔ |
-| Extra Rinse 2 |  | `binary_sensor` | `extraRinse2` | ✔ |
-| Extra Rinse 3 |  | `binary_sensor` | `extraRinse3` | ✔ |
-| Good Night Mode |  | `binary_sensor` | `goodNight` | ✔ |
-| Machine Status | `information` | `sensor` | `machMode` | ✔ |
-| Pre Wash |  | `binary_sensor` | `startProgram.prewash` | ❌ |
-| Program Phase | `washing-machine` | `sensor` | `prPhase` | ✔ |
-| Remaining Time | `timer` | `sensor` | `remainingTimeMM` | ✔ |
-| Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` | ✔ |
-| Spin Speed | `fast-forward-outline` | `sensor` | `spinSpeed` | ✔ |
-| Steam level | `smoke` | `sensor` | `steamLevel` | ✔ |
-| Total Power |  | `sensor` | `totalElectricityUsed` | ❌ |
-| Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` | ❌ |
-| Total Water |  | `sensor` | `totalWaterUsed` | ❌ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Acqua Plus |  | `binary_sensor` | `acquaplus` |
+| Anti-Crease |  | `binary_sensor` | `anticrease` |
+| Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
+| Current Program | `tumble-dryer` | `sensor` | `prCode` |
+| Current Temperature | `thermometer` | `sensor` | `temp` |
+| Current Water Used | `water` | `sensor` | `currentWaterUsed` |
+| Dirt level | `liquid-spot` | `sensor` | `dirtyLevel` |
+| Dry level | `hair-dryer` | `sensor` | `dryLevel` |
+| Extra Rinse 1 |  | `binary_sensor` | `extraRinse1` |
+| Extra Rinse 2 |  | `binary_sensor` | `extraRinse2` |
+| Extra Rinse 3 |  | `binary_sensor` | `extraRinse3` |
+| Good Night Mode |  | `binary_sensor` | `goodNight` |
+| Machine Status | `information` | `sensor` | `machMode` |
+| Pre Wash |  | `binary_sensor` | `startProgram.prewash` |
+| Program Phase | `washing-machine` | `sensor` | `prPhase` |
+| Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
+| Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
+| Spin Speed | `fast-forward-outline` | `sensor` | `spinSpeed` |
+| Steam level | `smoke` | `sensor` | `steamLevel` |
+| Total Power |  | `sensor` | `totalElectricityUsed` |
+| Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` |
+| Total Water |  | `sensor` | `totalWaterUsed` |
 
 ### Washing machine
 #### Controls
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Pause Washing Machine | `pause` | `switch` | `pauseProgram` / `resumeProgram` | ✔ |
-| Washing Machine | `washing-machine` | `switch` | `startProgram` / `stopProgram` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Pause Washing Machine | `pause` | `switch` | `pauseProgram` / `resumeProgram` |
+| Washing Machine | `washing-machine` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` | ❌ |
-| Delay Time | `timer-plus` | `number` | `startProgram.delayTime` | ✔ |
-| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` | ✔ |
-| Keep Fresh | `refresh-circle` | `switch` | `startProgram.autoSoftenerStatus` | ✔ |
-| Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` | ✔ |
-| Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` | ✔ |
-| Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` | ✔ |
-| Program |  | `select` | `startProgram.program` | ✔ |
-| Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` | ✔ |
-| Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` | ✔ |
-| Spin speed | `numeric` | `select` | `startProgram.spinSpeed` | ✔ |
-| Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` | ✔ |
-| Temperature | `thermometer` | `select` | `startProgram.temp` | ✔ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
+| Delay Time | `timer-plus` | `number` | `startProgram.delayTime` |
+| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
+| Keep Fresh | `refresh-circle` | `switch` | `startProgram.autoSoftenerStatus` |
+| Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
+| Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
+| Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` |
+| Program |  | `select` | `startProgram.program` |
+| Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
+| Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` |
+| Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |
+| Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` |
+| Temperature | `thermometer` | `select` | `startProgram.temp` |
 #### Sensors
-| Name | Icon | Entity | Key | Auto-Translation |
-| --- | --- | --- | --- | --- |
-| Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` | ❌ |
-| Current Water Used | `water` | `sensor` | `currentWaterUsed` | ❌ |
-| Door |  | `binary_sensor` | `doorStatus` | ✔ |
-| Door Lock |  | `binary_sensor` | `doorLockStatus` | ✔ |
-| Error | `math-log` | `sensor` | `errors` | ✔ |
-| Machine Status | `information` | `sensor` | `machMode` | ✔ |
-| Program Phase | `washing-machine` | `sensor` | `prPhase` | ✔ |
-| Remaining Time | `timer` | `sensor` | `remainingTimeMM` | ✔ |
-| Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` | ✔ |
-| Spin Speed | `speedometer` | `sensor` | `spinSpeed` | ✔ |
-| Total Power |  | `sensor` | `totalElectricityUsed` | ❌ |
-| Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` | ❌ |
-| Total Water |  | `sensor` | `totalWaterUsed` | ❌ |
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
+| Current Water Used | `water` | `sensor` | `currentWaterUsed` |
+| Door |  | `binary_sensor` | `doorStatus` |
+| Door Lock |  | `binary_sensor` | `doorLockStatus` |
+| Error | `math-log` | `sensor` | `errors` |
+| Machine Status | `information` | `sensor` | `machMode` |
+| Program Phase | `washing-machine` | `sensor` | `prPhase` |
+| Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
+| Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
+| Spin Speed | `speedometer` | `sensor` | `spinSpeed` |
+| Total Power |  | `sensor` | `totalElectricityUsed` |
+| Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` |
+| Total Water |  | `sensor` | `totalWaterUsed` |

@@ -28,9 +28,10 @@
                     "00": "No error",
                     "100000000000": "E2: Check if the door is closed",
                     "8000000000000": "E4: Check the water supply"
-                }
+                },
+                "name": "Error"
             },
-            "tumbledryerprogram": {
+            "programs": {
                 "state": {
                     "0": "Default",
                     "62": "Cotton",
@@ -47,7 +48,8 @@
                     "85": "Quick Dry",
                     "92": "Delicate",
                     "103": "Remote"
-                }
+                },
+                "name": "Current program"
             },
             "tumbledryertemplevel": {
                 "state": {
@@ -196,6 +198,21 @@
             },
             "det_liquid": {
                 "name": "Liquid detergent"
+            },
+            "cycles_total": {
+                "name": "Cycles Total"
+            },
+            "energy_total": {
+                "name": "Energy Consumption Total"
+            },
+            "water_total": {
+                "name": "Water efficiency Total"
+            },
+            "energy_current": {
+                "name": "Energy Consumption Current"
+            },
+            "water_current": {
+                "name": "Water efficiency Current"
             }
         },
         "switch": {
@@ -246,6 +263,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Delay Start"
             }
         },
         "select": {
@@ -984,6 +1004,15 @@
             },
             "connection": {
                 "name": "Appliance connection"
+            },
+            "child_lock": {
+                "name": "Child Lock"
+            },
+            "on": {
+                "name": "On"
+            },
+            "prewash": {
+                "name": "Pre-wash "
             }
         },
         "number": {

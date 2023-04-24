@@ -136,6 +136,7 @@ NAMES = {
         "prewash": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.PREWASH",
         "pause": "GENERAL.PAUSE_PROGRAM",
         "keep_fresh": "GLOBALS.APPLIANCE_STATUS.TUMBLING",
+        "delay_time": "HINTS.TIPS_TIME_ENERGY_SAVING.TIPS_USE_AT_NIGHT_TITLE",
     },
     "binary_sensor": {
         "door_lock": "WASHING_CMD&CTRL.CHECK_UP_RESULTS.DOOR_LOCK",
@@ -153,6 +154,9 @@ NAMES = {
         "salt_level": "DW_CMD&CTRL.MAINTENANCE.CONSUMABLE_LEVELS_ICON_SALT",
         "door_open": "GLOBALS.APPLIANCE_STATUS.DOOR_OPEN",
         "connection": "ENROLLMENT_COMMON.HEADER_NAME.STEP_APPLIANCE_CONNECTION",
+        "child_lock": "AP.FOOTER_MENU_MORE.SECURITY_LOCK_TITLE",
+        "on": "GLOBALS.GENERAL.ON",
+        "prewash": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.PREWASH",
     },
     "button": {
         "induction_hob": "GLOBALS.APPLIANCES_NAME.IH",
@@ -189,6 +193,28 @@ NAMES = {
         "energy_label": "WASHING_CMD&CTRL.DRAWER_PROGRAM_FILTERS.ENERGY_EFFICIENCY",
         "det_dust": "HUBS.WIDGET.STAINS_WIDGET.STAINS.SUGGESTED_DET_DUST",
         "det_liquid": "HUBS.WIDGET.STAINS_WIDGET.STAINS.SUGGESTED_DET_LIQUID",
+        "errors": "ROBOT_CMD&CTRL.PHASE_ERROR.TITLE",
+        "programs": "OV.TABS.CURRENT_PROGRAM",
+        "cycles_total": [
+            "WASHING_CMD&CTRL.GENERAL.CYCLES",
+            "WC.VIRTUAL_WINE_STATS_COUNTRY.TOTAL",
+        ],
+        "energy_total": [
+            "MISE.ENERGY_CONSUMPTION.TITLE",
+            "WC.VIRTUAL_WINE_STATS_COUNTRY.TOTAL",
+        ],
+        "water_total": [
+            "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_RESULT.WATER_EFFICIENCY",
+            "WC.VIRTUAL_WINE_STATS_COUNTRY.TOTAL",
+        ],
+        "energy_current": [
+            "MISE.ENERGY_CONSUMPTION.TITLE",
+            "CUBE90_GLOBAL.GENERAL.CURRENT",
+        ],
+        "water_current": [
+            "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_RESULT.WATER_EFFICIENCY",
+            "CUBE90_GLOBAL.GENERAL.CURRENT",
+        ],
     },
     "number": {
         "power_management": "HINTS.COOKING_WITH_INDUCTION.POWER_MANAGEMENT",
@@ -240,6 +266,10 @@ def save_json(path, keys):
 
 
 def load_key(full_key, json_data, fallback=None):
+    if isinstance(full_key, list):
+        return " ".join(
+            [load_key(item, json_data, fallback).strip() for item in full_key]
+        )
     result = json_data.copy()
     for key in full_key.split("."):
         result = result.get(key, {})

@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "Teko\u010dina"
+            },
+            "errors": {
+                "name": "Napaka"
+            },
+            "programs": {
+                "name": "Trenutni program"
+            },
+            "cycles_total": {
+                "name": "Programi Skupaj"
+            },
+            "energy_total": {
+                "name": "Poraba energije Skupaj"
+            },
+            "water_total": {
+                "name": "U\u010dinkovita raba vode Skupaj"
+            },
+            "energy_current": {
+                "name": "Poraba energije Current"
+            },
+            "water_current": {
+                "name": "U\u010dinkovita raba vode Current"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "S funkcijo Zamik vklopa je mo\u017eno odlo\u017eiti za\u010detek su\u0161ilnega cikla od 1 do 24 ur. Na zaslonu se prika\u017ee izbrana zakasnitev. Da bi videli kako se zmanj\u0161uje iz ure v uro, pritisnite ZA\u010cETEK. Na ta na\u010din bo perilo suho takrat, ko boste to \u017eeleli, in zagnali cikel, ko vam to najbolj ustreza, celo pono\u010di."
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "Povezava aparata"
+            },
+            "child_lock": {
+                "name": "Varnostni zaklep"
+            },
+            "on": {
+                "name": "On"
+            },
+            "prewash": {
+                "name": "Predpranje"
             }
         },
         "number": {

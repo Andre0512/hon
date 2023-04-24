@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "Kvapaln\u00e9 pracie prostriedky"
+            },
+            "errors": {
+                "name": "Chyba"
+            },
+            "programs": {
+                "name": "Aktu\u00e1lny program"
+            },
+            "cycles_total": {
+                "name": "Cykly S\u00fa\u010det"
+            },
+            "energy_total": {
+                "name": "Spotreba energie S\u00fa\u010det"
+            },
+            "water_total": {
+                "name": "\u00da\u010dinnos\u0165 vody S\u00fa\u010det"
+            },
+            "energy_current": {
+                "name": "Spotreba energie Current"
+            },
+            "water_current": {
+                "name": "\u00da\u010dinnos\u0165 vody Current"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Odlo\u017een\u00fd \u0161tart"
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "Pripojenie spotrebi\u010da"
+            },
+            "child_lock": {
+                "name": "Detsk\u00e1 poistka"
+            },
+            "on": {
+                "name": "Zap."
+            },
+            "prewash": {
+                "name": "Predum\u00fdvanie"
             }
         },
         "number": {

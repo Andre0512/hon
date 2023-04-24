@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "Liquide"
+            },
+            "errors": {
+                "name": "Erreur"
+            },
+            "programs": {
+                "name": "Programme actuel"
+            },
+            "cycles_total": {
+                "name": "Cycles Total"
+            },
+            "energy_total": {
+                "name": "Consommation d\u2019\u00e9nergie Total"
+            },
+            "water_total": {
+                "name": "Efficacit\u00e9 en eau Total"
+            },
+            "energy_current": {
+                "name": "Consommation d\u2019\u00e9nergie Actuel"
+            },
+            "water_current": {
+                "name": "Efficacit\u00e9 en eau Actuel"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Garder la fra\u00eecheur"
+            },
+            "delay_time": {
+                "name": "D\u00e9marrage Diff\u00e9r\u00e9"
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "Connexion de l\u2019appareil"
+            },
+            "child_lock": {
+                "name": "S\u00e9curit\u00e9 enfants"
+            },
+            "on": {
+                "name": "Marche"
+            },
+            "prewash": {
+                "name": "Pr\u00e9lavage"
             }
         },
         "number": {

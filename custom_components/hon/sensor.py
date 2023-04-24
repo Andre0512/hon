@@ -42,6 +42,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             device_class=SensorDeviceClass.ENERGY,
             state_class=SensorStateClass.TOTAL_INCREASING,
             native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
+            translation_key="energy_total",
         ),
         SensorEntityDescription(
             key="totalWaterUsed",
@@ -49,12 +50,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             device_class=SensorDeviceClass.WATER,
             state_class=SensorStateClass.TOTAL_INCREASING,
             native_unit_of_measurement=UnitOfVolume.LITERS,
+            translation_key="water_total",
         ),
         SensorEntityDescription(
             key="totalWashCycle",
             name="Total Wash Cycle",
             state_class=SensorStateClass.TOTAL_INCREASING,
             icon="mdi:counter",
+            translation_key="cycles_total",
         ),
         SensorEntityDescription(
             key="currentElectricityUsed",
@@ -63,12 +66,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             device_class=SensorDeviceClass.POWER,
             native_unit_of_measurement=UnitOfPower.KILO_WATT,
             icon="mdi:lightning-bolt",
+            translation_key="energy_current",
         ),
         SensorEntityDescription(
             key="currentWaterUsed",
             name="Current Water Used",
             state_class=SensorStateClass.MEASUREMENT,
             icon="mdi:water",
+            translation_key="water_current",
         ),
         SensorEntityDescription(
             key="startProgram.weight",
@@ -202,6 +207,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             device_class=SensorDeviceClass.ENERGY,
             state_class=SensorStateClass.TOTAL_INCREASING,
             native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
+            translation_key="energy_total",
         ),
         SensorEntityDescription(
             key="totalWaterUsed",
@@ -209,12 +215,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             device_class=SensorDeviceClass.WATER,
             state_class=SensorStateClass.TOTAL_INCREASING,
             native_unit_of_measurement=UnitOfVolume.LITERS,
+            translation_key="water_total",
         ),
         SensorEntityDescription(
             key="totalWashCycle",
             name="Total Wash Cycle",
             state_class=SensorStateClass.TOTAL_INCREASING,
             icon="mdi:counter",
+            translation_key="cycles_total",
         ),
         SensorEntityDescription(
             key="currentElectricityUsed",
@@ -223,12 +231,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             device_class=SensorDeviceClass.POWER,
             native_unit_of_measurement=UnitOfPower.KILO_WATT,
             icon="mdi:lightning-bolt",
+            translation_key="energy_current",
         ),
         SensorEntityDescription(
             key="currentWaterUsed",
             name="Current Water Used",
             state_class=SensorStateClass.MEASUREMENT,
             icon="mdi:water",
+            translation_key="water_current",
         ),
         SensorEntityDescription(
             key="startProgram.weight",
@@ -265,6 +275,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="prCode",
             name="Current Program",
             icon="mdi:tumble-dryer",
+            translation_key="programs",
         ),
         SensorEntityDescription(
             key="prPhase",
@@ -344,7 +355,9 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="temperature",
         ),
-        SensorEntityDescription(key="errors", name="Error", icon="mdi:math-log"),
+        SensorEntityDescription(
+            key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
+        ),
         SensorEntityDescription(
             key="power",
             name="Power",

@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "Lichid"
+            },
+            "errors": {
+                "name": "Eroare"
+            },
+            "programs": {
+                "name": "Program actual"
+            },
+            "cycles_total": {
+                "name": "Cicluri Total"
+            },
+            "energy_total": {
+                "name": "Consumul de energie Total"
+            },
+            "water_total": {
+                "name": "Eficien\u021ba apei Total"
+            },
+            "energy_current": {
+                "name": "Consumul de energie Current"
+            },
+            "water_current": {
+                "name": "Eficien\u021ba apei Current"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Pornire \u00eent\u00e2rziat\u0103"
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "Conectarea aparatului"
+            },
+            "child_lock": {
+                "name": "Blocare acces copii"
+            },
+            "on": {
+                "name": "Pornit"
+            },
+            "prewash": {
+                "name": "Presp\u0103lare"
             }
         },
         "number": {

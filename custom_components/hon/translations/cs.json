@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "Tekut\u00e9 prost\u0159edky"
+            },
+            "errors": {
+                "name": "Chyba"
+            },
+            "programs": {
+                "name": "Aktu\u00e1ln\u00ed program"
+            },
+            "cycles_total": {
+                "name": "Cykly Celkem"
+            },
+            "energy_total": {
+                "name": "Spot\u0159eba energie Celkem"
+            },
+            "water_total": {
+                "name": "Efektivn\u00ed vyu\u017e\u00edv\u00e1n\u00ed vody Celkem"
+            },
+            "energy_current": {
+                "name": "Spot\u0159eba energie Aktu\u00e1ln\u00ed"
+            },
+            "water_current": {
+                "name": "Efektivn\u00ed vyu\u017e\u00edv\u00e1n\u00ed vody Aktu\u00e1ln\u00ed"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Odlo\u017een\u00e9 spu\u0161t\u011bn\u00ed"
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "P\u0159ipojen\u00ed spot\u0159ebi\u010de"
+            },
+            "child_lock": {
+                "name": "D\u011btsk\u00fd z\u00e1mek"
+            },
+            "on": {
+                "name": "Zapnout"
+            },
+            "prewash": {
+                "name": "P\u0159edp\u00edrka\r\r\r\r\r\r\n"
             }
         },
         "number": {

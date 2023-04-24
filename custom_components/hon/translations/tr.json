@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "S\u0131v\u0131"
+            },
+            "errors": {
+                "name": "Hata"
+            },
+            "programs": {
+                "name": "Ge\u00e7erli program"
+            },
+            "cycles_total": {
+                "name": "Programlar Toplam"
+            },
+            "energy_total": {
+                "name": "Enerji T\u00fcketimi Toplam"
+            },
+            "water_total": {
+                "name": "Su verimlili\u011fi Toplam"
+            },
+            "energy_current": {
+                "name": "Enerji T\u00fcketimi Current"
+            },
+            "water_current": {
+                "name": "Su verimlili\u011fi Current"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Gecikmeli Ba\u015flatma"
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "Cihaz ba\u011flant\u0131s\u0131"
+            },
+            "child_lock": {
+                "name": "\u00c7ocuk Kilidi"
+            },
+            "on": {
+                "name": "A\u00e7\u0131k"
+            },
+            "prewash": {
+                "name": "Pre-wash"
             }
         },
         "number": {

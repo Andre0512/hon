@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "Teku\u0107ina"
+            },
+            "errors": {
+                "name": "Gre\u0161ka"
+            },
+            "programs": {
+                "name": "Trenuta\u010dni program"
+            },
+            "cycles_total": {
+                "name": "Programi Ukupno"
+            },
+            "energy_total": {
+                "name": "Potro\u0161nja energije Ukupno"
+            },
+            "water_total": {
+                "name": "U\u010dinkovitost vode Ukupno"
+            },
+            "energy_current": {
+                "name": "Potro\u0161nja energije Current"
+            },
+            "water_current": {
+                "name": "U\u010dinkovitost vode Current"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Odgoda po\u010detka"
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "Priklju\u010dak ure\u0111aja"
+            },
+            "child_lock": {
+                "name": "Zaklju\u010davanje za za\u0161titu djece"
+            },
+            "on": {
+                "name": "Uklju\u010deno"
+            },
+            "prewash": {
+                "name": "Pretpranje"
             }
         },
         "number": {

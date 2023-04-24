@@ -51,6 +51,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             name="Delay Status",
             icon="mdi:timer-check",
             entity_category=EntityCategory.CONFIG,
+            translation_key="delay_time",
         ),
         HonSwitchEntityDescription(
             key="startProgram.haier_SoakPrewashSelection",

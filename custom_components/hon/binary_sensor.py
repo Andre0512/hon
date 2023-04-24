@@ -79,8 +79,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             translation_key="remote_control",
         ),
         HonBinarySensorEntityDescription(
-            key="startProgram.prewash",
-            name="Pre Wash",
+            key="startProgram.prewash", name="Pre Wash", translation_key="prewash"
         ),
         HonBinarySensorEntityDescription(
             key="extraRinse1", name="Extra Rinse 1", translation_key="extra_rinse_1"
@@ -124,6 +123,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.RUNNING,
             on_value="1",
             icon="mdi:power-cycle",
+            translation_key="on",
         ),
     ),
     "IH": (
@@ -149,6 +149,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.RUNNING,
             on_value="1",
             icon="mdi:power-cycle",
+            translation_key="on",
         ),
         HonBinarySensorEntityDescription(
             key="hotStatus",
@@ -169,6 +170,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Hob Lock",
             device_class=BinarySensorDeviceClass.LOCK,
             on_value="0",
+            translation_key="child_lock",
         ),
     ),
     "DW": (

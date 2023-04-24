@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "Fl\u00fcssigwaschmittel"
+            },
+            "errors": {
+                "name": "Fehler"
+            },
+            "programs": {
+                "name": "Aktuelles Programm"
+            },
+            "cycles_total": {
+                "name": "Waschg\u00e4nge Insgesamt"
+            },
+            "energy_total": {
+                "name": "Energieverbrauch Insgesamt"
+            },
+            "water_total": {
+                "name": "Wasserverbrauch Insgesamt"
+            },
+            "energy_current": {
+                "name": "Energieverbrauch Aktuell"
+            },
+            "water_current": {
+                "name": "Wasserverbrauch Aktuell"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Einschaltverz\u00f6gerung"
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "Ger\u00e4teverbindung"
+            },
+            "child_lock": {
+                "name": "Kindersicherung"
+            },
+            "on": {
+                "name": "An"
+            },
+            "prewash": {
+                "name": "Vorsp\u00fclen"
             }
         },
         "number": {

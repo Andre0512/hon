@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "Vloeibaar"
+            },
+            "errors": {
+                "name": "Fout"
+            },
+            "programs": {
+                "name": "Huidig programma"
+            },
+            "cycles_total": {
+                "name": "Programma's Totaal"
+            },
+            "energy_total": {
+                "name": "Energieverbruik Totaal"
+            },
+            "water_total": {
+                "name": "Effici\u00ebnt waterverbruik Totaal"
+            },
+            "energy_current": {
+                "name": "Energieverbruik Huidige"
+            },
+            "water_current": {
+                "name": "Effici\u00ebnt waterverbruik Huidige"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Vertraag Start"
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "Het apparaat verbinden"
+            },
+            "child_lock": {
+                "name": "Kinderslot"
+            },
+            "on": {
+                "name": "Aan"
+            },
+            "prewash": {
+                "name": "Voorwas"
             }
         },
         "number": {

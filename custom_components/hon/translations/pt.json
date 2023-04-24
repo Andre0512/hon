@@ -133,6 +133,27 @@
             },
             "det_liquid": {
                 "name": "L\u00edquido"
+            },
+            "errors": {
+                "name": "Erro"
+            },
+            "programs": {
+                "name": "Programa atual"
+            },
+            "cycles_total": {
+                "name": "Ciclos Total"
+            },
+            "energy_total": {
+                "name": "Consumo de energia Total"
+            },
+            "water_total": {
+                "name": "Efici\u00eancia da \u00e1gua Total"
+            },
+            "energy_current": {
+                "name": "Consumo de energia Data"
+            },
+            "water_current": {
+                "name": "Efici\u00eancia da \u00e1gua Data"
             }
         },
         "select": {
@@ -851,6 +872,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "In\u00edcio adiado"
             }
         },
         "binary_sensor": {
@@ -913,6 +937,15 @@
             },
             "connection": {
                 "name": "Liga\u00e7\u00e3o do aparelho"
+            },
+            "child_lock": {
+                "name": "Trinco para Crian\u00e7as"
+            },
+            "on": {
+                "name": "On"
+            },
+            "prewash": {
+                "name": "Pr\u00e9-lavagem"
             }
         },
         "number": {

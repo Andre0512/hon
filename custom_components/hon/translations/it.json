@@ -28,9 +28,10 @@
                     "00": "Nessun Errore",
                     "100000000000": "E2: Controllare se la porta \u00e8 chiusa correttamente",
                     "8000000000000": "E4: Controllare l'approvvigionamento idrico"
-                }
+                },
+                "name": "Errore"
             },
-            "tumbledryerprogram": {
+            "programs": {
                 "state": {
                     "0": "Default",
                     "62": "Cotone",
@@ -47,7 +48,8 @@
                     "85": "Asciugatura Rapida",
                     "92": "Delicati",
                     "103": "Controllo Remoto"
-                }
+                },
+                "name": "Programma attuale"
             },
             "tumbledryertemplevel": {
                 "state": {
@@ -189,6 +191,21 @@
             },
             "det_liquid": {
                 "name": "Detersivo liquido"
+            },
+            "cycles_total": {
+                "name": "Cicli Totale"
+            },
+            "energy_total": {
+                "name": "Consumo energetico Totale"
+            },
+            "water_total": {
+                "name": "Efficienza idrica Totale"
+            },
+            "energy_current": {
+                "name": "Consumo energetico Odierna"
+            },
+            "water_current": {
+                "name": "Efficienza idrica Odierna"
             }
         },
         "select": {
@@ -907,6 +924,9 @@
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Utilizzo nelle ore notturne"
             }
         },
         "binary_sensor": {
@@ -969,6 +989,15 @@
             },
             "connection": {
                 "name": "Connessione dell'elettrodomestico"
+            },
+            "child_lock": {
+                "name": "Child Lock"
+            },
+            "on": {
+                "name": "On"
+            },
+            "prewash": {
+                "name": "Prelavaggio"
             }
         },
         "number": {

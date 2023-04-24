@@ -54,8 +54,7 @@ for entity_type, appliances in entities.items():
                 key = f"{entity.turn_on_key}` / `{entity.turn_off_key}"
             else:
                 key = entity.key
-            translation = bool(entity.translation_key)
-            attributes = (key, entity.name, entity.icon, entity_type, translation)
+            attributes = (key, entity.name, entity.icon, entity_type)
             category = "control" if entity_type in ["switch", "button"] else "sensor"
             result.setdefault(appliance, {}).setdefault(
                 entity.entity_category or category, []
@@ -66,14 +65,11 @@ for appliance, categories in sorted(result.items()):
     categories = {k: categories[k] for k in ENTITY_CATEGORY_SORT if k in categories}
     for category, data in categories.items():
         text += f"#### {str(category).capitalize()}s\n"
-        text += "| Name | Icon | Entity | Key | Auto-Translation |\n"
-        text += "| --- | --- | --- | --- | --- |\n"
-        for key, name, icon, entity_type, translation in sorted(
-            data, key=lambda d: d[1]
-        ):
+        text += "| Name | Icon | Entity | Key |\n"
+        text += "| --- | --- | --- | --- |\n"
+        for key, name, icon, entity_type in sorted(data, key=lambda d: d[1]):
             icon = f"`{icon.replace('mdi:', '')}`" if icon else ""
-            translation = "✔" if translation else "❌"
-            text += f"| {name} | {icon} | `{entity_type}` | `{key}` | {translation} |\n"
+            text += f"| {name} | {icon} | `{entity_type}` | `{key}` |\n"
 
 with open(Path(__file__).parent.parent / "README.md", "r") as file:
     readme = file.read()
