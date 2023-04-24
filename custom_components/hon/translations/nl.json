@@ -981,5 +981,16 @@
                 "name": "Inductiekookplaat"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Log in",
+                "data": {
+                    "email": "E-mail",
+                    "password": "Wachtwoord"
+                }
+            }
+        }
     }
 }

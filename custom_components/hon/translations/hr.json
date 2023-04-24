@@ -981,5 +981,16 @@
                 "name": "Indukcijska ploča za kuhanje"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Do the login",
+                "data": {
+                    "email": "E-pošta",
+                    "password": "Password"
+                }
+            }
+        }
     }
 }

@@ -981,5 +981,16 @@
                 "name": "Indukční varná deska"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Přihlaste se",
+                "data": {
+                    "email": "E-mail",
+                    "password": "Heslo"
+                }
+            }
+        }
     }
 }

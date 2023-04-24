@@ -981,5 +981,16 @@
                 "name": "电磁炉"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Do the login",
+                "data": {
+                    "email": "电子邮件",
+                    "password": "Password"
+                }
+            }
+        }
     }
 }

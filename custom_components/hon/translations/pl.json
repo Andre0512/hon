@@ -981,5 +981,16 @@
                 "name": "Płyta indukcyjna"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Zaloguj się",
+                "data": {
+                    "email": "E-mail",
+                    "password": "Hasło"
+                }
+            }
+        }
     }
 }

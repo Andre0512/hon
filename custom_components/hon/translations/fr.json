@@ -981,5 +981,16 @@
                 "name": "Table de cuisson à induction"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Connectez-vous.",
+                "data": {
+                    "email": "E-mail",
+                    "password": "Mot de passe"
+                }
+            }
+        }
     }
 }

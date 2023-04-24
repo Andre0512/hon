@@ -981,5 +981,16 @@
                 "name": "Indukciona ploča"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Do the login",
+                "data": {
+                    "email": "E-adresa",
+                    "password": "Password"
+                }
+            }
+        }
     }
 }

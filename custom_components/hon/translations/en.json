@@ -2,9 +2,9 @@
     "config": {
         "step": {
             "user": {
-                "description": "Please enters your hOn credentials",
+                "description": "Do the login",
                 "data": {
-                    "email": "Email Address",
+                    "email": "Email",
                     "password": "Password"
                 }
             }

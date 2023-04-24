@@ -298,6 +298,15 @@ def add_data(old, original, fallback, data, name, entity="sensor"):
             state[str(number)] = key
 
 
+def translate_login(old, *args):
+    login = old.setdefault("config", {}).setdefault("step", {}).setdefault("user", {})
+    login["description"] = load_key("CUBE90_ALEXA.HAIER_SMART_SKILLS.STEP_2", *args)
+    login.setdefault("data", {})["email"] = load_key(
+        "PET.EDIT_PET_PROFESSIONALS.EMAIL", *args
+    )
+    login["data"]["password"] = load_key("CUBE90_GLOBAL.GENERAL.PASSWORD", *args)
+
+
 def main():
     hass = load_hass_translations()
     hon = load_hon_translations()
@@ -317,6 +326,7 @@ def main():
             for name, key in data.items():
                 select = old.setdefault("entity", {}).setdefault(entity, {})
                 select.setdefault(name, {})["name"] = load_key(key, original, fallback)
+        translate_login(old, original, fallback)
         save_json(base_path / f"{language}.json", old)
 
 

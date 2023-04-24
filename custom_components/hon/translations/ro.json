@@ -981,5 +981,16 @@
                 "name": "Plita cu inducție"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Do the login",
+                "data": {
+                    "email": "E-mail",
+                    "password": "Password"
+                }
+            }
+        }
     }
 }

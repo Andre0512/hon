@@ -981,5 +981,16 @@
                 "name": "Placa de indução"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Faça login",
+                "data": {
+                    "email": "E-mail",
+                    "password": "Palavra-passe"
+                }
+            }
+        }
     }
 }

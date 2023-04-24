@@ -580,5 +580,16 @@
                 "name": "Induction Hob"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Do the login",
+                "data": {
+                    "email": "Email",
+                    "password": "Password"
+                }
+            }
+        }
     }
 }

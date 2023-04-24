@@ -981,5 +981,16 @@
                 "name": "Placa de inducción"
             }
         }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Inicia sesión",
+                "data": {
+                    "email": "Correo electrónico",
+                    "password": "Contraseña"
+                }
+            }
+        }
     }
 }

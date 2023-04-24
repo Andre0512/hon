@@ -2,9 +2,9 @@
     "config": {
         "step": {
             "user": {
-                "description": "Inserisci le credenziali dell'app hOn",
+                "description": "Fai il login",
                 "data": {
-                    "email": "Indirizzo Email",
+                    "email": "Email",
                     "password": "Password"
                 }
             }
