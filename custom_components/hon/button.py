@@ -2,6 +2,7 @@ import logging
 import urllib
 from urllib.parse import quote
 
+import pkg_resources
 from homeassistant.components.button import ButtonEntityDescription, ButtonEntity
 from homeassistant.config_entries import ConfigEntry
 from pyhon import Hon
@@ -76,4 +77,6 @@ class HonFeatureRequestButton(HonEntity, ButtonEntity):
         self._attr_entity_registry_enabled_default = False
 
     async def async_press(self) -> None:
-        _LOGGER.error("Device Info:\n" + self._device.diagnose)
+        pyhon_version = pkg_resources.get_distribution("pyhon").version
+        info = f"Device Info:\n{self._device.diagnose}pyhOnVersion: {pyhon_version}"
+        _LOGGER.error(info)
