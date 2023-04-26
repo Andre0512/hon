@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "用水效率 Current"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "自动",
+                    "1": "冷却",
+                    "2": "冷却",
+                    "3": "烘干",
+                    "4": "加热",
+                    "5": "风扇",
+                    "6": "风扇"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "烘干时间"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "关闭",
+                    "1": "避免触摸",
+                    "2": "跟随"
+                },
+                "name": "节能模式"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "高",
+                    "2": "中   ",
+                    "3": "低",
+                    "4": "自动",
+                    "5": "自动"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10°C 加热功能",
+                    "iot_auto": "自动",
+                    "iot_cool": "冷却",
+                    "iot_dry": "烘干",
+                    "iot_fan": "风扇",
+                    "iot_heat": "加热",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "自净",
+                    "iot_self_clean": "自洁",
+                    "iot_self_clean_56": "无菌清洁 56°C",
+                    "iot_simple_start": "立即启动",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + 自动",
+                    "iot_uv_and_cool": "UV + 制冷",
+                    "iot_uv_and_dry": "UV + 减湿器",
+                    "iot_uv_and_fan": "UV + 风扇",
+                    "iot_uv_and_heat": "UV + 加热"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "延时启动"
+            },
+            "rapid_mode": {
+                "name": "快速模式"
+            },
+            "eco_mode": {
+                "name": "ECO 模式"
+            },
+            "10_degree_heating": {
+                "name": "10°C 加热功能"
+            },
+            "self_clean": {
+                "name": "自洁"
+            },
+            "self_clean_56": {
+                "name": "无菌清洁 56°C"
+            },
+            "silent_mode": {
+                "name": "夜静模式"
+            },
+            "mute_mode": {
+                "name": "静音模式"
             }
         },
         "binary_sensor": {

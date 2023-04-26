@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Water efficiency Current"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Auto",
+                    "1": "Cool",
+                    "2": "Cool",
+                    "3": "Dry",
+                    "4": "Heat",
+                    "5": "Fan",
+                    "6": "Fan"
+                }
             }
         },
         "select": {
@@ -420,6 +431,28 @@
             },
             "dry_time": {
                 "name": "זמן ייבוש"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Off",
+                    "1": "Avoid touch",
+                    "2": "Follow"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "High",
+                    "2": "Medium   ",
+                    "3": "Low",
+                    "4": "Auto",
+                    "5": "Auto"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_simple_start": "התחל עכשיו"
+                }
             }
         },
         "switch": {
@@ -473,6 +506,27 @@
             },
             "delay_time": {
                 "name": "Delay Start"
+            },
+            "rapid_mode": {
+                "name": "Rapid mode"
+            },
+            "eco_mode": {
+                "name": "ECO mode"
+            },
+            "10_degree_heating": {
+                "name": "10°C Heating function"
+            },
+            "self_clean": {
+                "name": "Self-clean"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Silent mode"
+            },
+            "mute_mode": {
+                "name": "Mute mode"
             }
         },
         "binary_sensor": {

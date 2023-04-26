@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Эффективность расхода воды Текущий"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Авто",
+                    "1": "Охлаждение",
+                    "2": "Охлаждение",
+                    "3": "Сушка",
+                    "4": "Нагрев",
+                    "5": "Вентилятор",
+                    "6": "Вентилятор"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Время сушки"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "ВЫКЛ",
+                    "1": "Не прикасайтесь",
+                    "2": "Следование"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Высокий",
+                    "2": "Средний   ",
+                    "3": "Низкий",
+                    "4": "Авто",
+                    "5": "Авто"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Функция нагрева до 10°C",
+                    "iot_auto": "Авто",
+                    "iot_cool": "Охлаждение",
+                    "iot_dry": "Сушка",
+                    "iot_fan": "Вентилятор",
+                    "iot_heat": "Нагрев",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Самоочищение",
+                    "iot_self_clean": "Самоочистка",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Пуск сейчас",
+                    "iot_uv": "Ультрафиолет",
+                    "iot_uv_and_auto": "УФ + Авто",
+                    "iot_uv_and_cool": "УФ + Охлаждение",
+                    "iot_uv_and_dry": "УФ + Осушитель",
+                    "iot_uv_and_fan": "УФ + Вентилятор",
+                    "iot_uv_and_heat": "УФ + Нагрев"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "Отложенный пуск"
+            },
+            "rapid_mode": {
+                "name": "Быстрый режим"
+            },
+            "eco_mode": {
+                "name": "Режим ECO"
+            },
+            "10_degree_heating": {
+                "name": "Функция нагрева до 10°C"
+            },
+            "self_clean": {
+                "name": "Самоочистка"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Тихий режим"
+            },
+            "mute_mode": {
+                "name": "Беззвучный режим"
             }
         },
         "binary_sensor": {

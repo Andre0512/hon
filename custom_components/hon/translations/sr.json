@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Efikasnost vode Current"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Automatski",
+                    "1": "Hlađenje",
+                    "2": "Hlađenje",
+                    "3": "Sušenje",
+                    "4": "Toplota",
+                    "5": "Ventilator",
+                    "6": "Ventilator"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Vreme sušenja"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Isključeno",
+                    "1": "Izbegavajte dodir",
+                    "2": "Pratiti"
+                },
+                "name": "Eko pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Visoko",
+                    "2": "Srednje   ",
+                    "3": "Nisko",
+                    "4": "Automatski",
+                    "5": "Automatski"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Funkcija grejanja – 10° C",
+                    "iot_auto": "Automatski",
+                    "iot_cool": "Hlađenje",
+                    "iot_dry": "Sušenje",
+                    "iot_fan": "Ventilator",
+                    "iot_heat": "Toplota",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Samopročišćavanje",
+                    "iot_self_clean": "Samočišćenje",
+                    "iot_self_clean_56": "Sterilno čišćenje 56°C",
+                    "iot_simple_start": "Pokrenuti sada",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + automatsko",
+                    "iot_uv_and_cool": "UV+ hladno",
+                    "iot_uv_and_dry": "UV + odvlaživač",
+                    "iot_uv_and_fan": "UV + ventilator",
+                    "iot_uv_and_heat": "UV + toplota"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "Odloženi start"
+            },
+            "rapid_mode": {
+                "name": "Brzi režim rada"
+            },
+            "eco_mode": {
+                "name": "ECO režim"
+            },
+            "10_degree_heating": {
+                "name": "Funkcija grejanja – 10° C"
+            },
+            "self_clean": {
+                "name": "Samočišćenje"
+            },
+            "self_clean_56": {
+                "name": "Sterilno čišćenje 56°C"
+            },
+            "silent_mode": {
+                "name": "Tihi režim"
+            },
+            "mute_mode": {
+                "name": "Režim isključenog zvuka"
             }
         },
         "binary_sensor": {

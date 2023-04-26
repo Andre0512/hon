@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Efficiënt waterverbruik Huidige"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Automatisch",
+                    "1": "Koelen",
+                    "2": "Koelen",
+                    "3": "Drogen",
+                    "4": "Verwarming",
+                    "5": "Ventilator",
+                    "6": "Ventilator"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Droogtijd"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Uit",
+                    "1": "Voorkom aanraking",
+                    "2": "Volgen"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Hoog",
+                    "2": "Gemiddeld   ",
+                    "3": "Laag",
+                    "4": "Automatisch",
+                    "5": "Automatisch"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10°C-verwarmingsfunctie",
+                    "iot_auto": "Automatisch",
+                    "iot_cool": "Koelen",
+                    "iot_dry": "Drogen",
+                    "iot_fan": "Ventilator",
+                    "iot_heat": "Verwarming",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Zelfzuivering",
+                    "iot_self_clean": "Zelfreiniging",
+                    "iot_self_clean_56": "Sterilisatie reiniging 56°C",
+                    "iot_simple_start": "Start nu",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Auto",
+                    "iot_uv_and_cool": "UV + Koud",
+                    "iot_uv_and_dry": "UV + Ontvochtiger",
+                    "iot_uv_and_fan": "UV + Hetelucht",
+                    "iot_uv_and_heat": "UV + Warmte"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "Vertraag Start"
+            },
+            "rapid_mode": {
+                "name": "Snelle modus"
+            },
+            "eco_mode": {
+                "name": "ECO-modus"
+            },
+            "10_degree_heating": {
+                "name": "10°C-verwarmingsfunctie"
+            },
+            "self_clean": {
+                "name": "Zelfreiniging"
+            },
+            "self_clean_56": {
+                "name": "Sterilisatie reiniging 56°C"
+            },
+            "silent_mode": {
+                "name": "Stille modus"
+            },
+            "mute_mode": {
+                "name": "Dempmodus"
             }
         },
         "binary_sensor": {

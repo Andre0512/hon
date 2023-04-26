@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Efektivní využívání vody Aktuální"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Auto",
+                    "1": "Chlazení",
+                    "2": "Chlazení",
+                    "3": "Odvlhčování",
+                    "4": "Vytápění",
+                    "5": "Ventilátor",
+                    "6": "Ventilátor"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Doba sušení"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Vypnuto",
+                    "1": "Vyhybání",
+                    "2": "Sledování"
+                },
+                "name": "Senzor osob"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Vysoký",
+                    "2": "Střední   ",
+                    "3": "Nízký",
+                    "4": "Auto",
+                    "5": "Auto"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Funkce Vytápění 10 °C",
+                    "iot_auto": "Auto",
+                    "iot_cool": "Chlazení",
+                    "iot_dry": "Odvlhčování",
+                    "iot_fan": "Ventilátor",
+                    "iot_heat": "Vytápění",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Automatické čištění",
+                    "iot_self_clean": "Samočištění zamrazením",
+                    "iot_self_clean_56": "Samočištění 56°C sterilizace ",
+                    "iot_simple_start": "Spustit nyní",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + auto",
+                    "iot_uv_and_cool": "UV + zchlazení",
+                    "iot_uv_and_dry": "UV + odstranění vlhkosti",
+                    "iot_uv_and_fan": "UV + ventilátor",
+                    "iot_uv_and_heat": "UV + ohřev"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "Odložené spuštění"
+            },
+            "rapid_mode": {
+                "name": "Rychlý režim"
+            },
+            "eco_mode": {
+                "name": "Režim ECO"
+            },
+            "10_degree_heating": {
+                "name": "Funkce Vytápění 10 °C"
+            },
+            "self_clean": {
+                "name": "Samočištění zamrazením"
+            },
+            "self_clean_56": {
+                "name": "Samočištění 56°C sterilizace "
+            },
+            "silent_mode": {
+                "name": "Tichý režim"
+            },
+            "mute_mode": {
+                "name": "Tichý režim"
             }
         },
         "binary_sensor": {

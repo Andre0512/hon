@@ -100,17 +100,47 @@ TUMBLE_DRYER_DRY_LEVEL = {
     15: "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.EXTRA_DRY_TITLE",
 }
 
+AC_MACH_MODE = {
+    0: "PROGRAMS.AC.IOT_AUTO",
+    1: "PROGRAMS.AC.IOT_COOL",
+    2: "PROGRAMS.AC.IOT_COOL",
+    3: "PROGRAMS.AC.IOT_DRY",
+    4: "PROGRAMS.AC.IOT_HEAT",
+    5: "PROGRAMS.AC.IOT_FAN",
+    6: "PROGRAMS.AC.IOT_FAN",
+}
+
+AC_FAN_MODE = {
+    1: "AC.PROGRAM_CARD.WIND_SPEED_HIGH",
+    2: "AC.PROGRAM_CARD.WIND_SPEED_MID",
+    3: "AC.PROGRAM_CARD.WIND_SPEED_LOW",
+    4: "AC.PROGRAM_CARD.WIND_SPEED_AUTO",
+    5: "AC.PROGRAM_CARD.WIND_SPEED_AUTO",
+}
+
+AC_HUMAN_SENSE = {
+    0: "AC.PROGRAM_DETAIL.TOUCH_OFF",
+    1: "AC.PROGRAM_DETAIL.AVOID_TOUCH",
+    2: "AC.PROGRAM_DETAIL.FOLLOW_TOUCH",
+}
+
 SENSOR = {
     "washing_modes": MACH_MODE,
+    "mach_modes_ac": AC_MACH_MODE,
     "program_phases_wm": WASHING_PR_PHASE,
     "program_phases_td": TUMBLE_DRYER_PR_PHASE,
     "program_phases_dw": DISHWASHER_PR_PHASE,
     "dry_levels": TUMBLE_DRYER_DRY_LEVEL,
 }
 
-SELECT = {"dry_levels": TUMBLE_DRYER_DRY_LEVEL}
+SELECT = {
+    "dry_levels": TUMBLE_DRYER_DRY_LEVEL,
+    "eco_pilot": AC_HUMAN_SENSE,
+    "fan_mode": AC_FAN_MODE,
+}
 
 PROGRAMS = {
+    "programs_ac": "PROGRAMS.AC",
     "programs_dw": "PROGRAMS.DW",
     "programs_ih": "PROGRAMS.IH",
     "programs_ov": "PROGRAMS.OV",
@@ -137,6 +167,13 @@ NAMES = {
         "pause": "GENERAL.PAUSE_PROGRAM",
         "keep_fresh": "GLOBALS.APPLIANCE_STATUS.TUMBLING",
         "delay_time": "HINTS.TIPS_TIME_ENERGY_SAVING.TIPS_USE_AT_NIGHT_TITLE",
+        "rapid_mode": "AC.PROGRAM_CARD.RAPID",
+        "eco_mode": "AC.PROGRAM_CARD.ECO_MODE",
+        "10_degree_heating": "PROGRAMS.AC.IOT_10_HEATING",
+        "self_clean": "PROGRAMS.AC.IOT_SELF_CLEAN",
+        "self_clean_56": "PROGRAMS.AC.IOT_SELF_CLEAN_56",
+        "silent_mode": "AC.PROGRAM_DETAIL.SILENT_MODE",
+        "mute_mode": "AC.PROGRAM_DETAIL.MUTE_MODE",
     },
     "binary_sensor": {
         "door_lock": "WASHING_CMD&CTRL.CHECK_UP_RESULTS.DOOR_LOCK",
@@ -171,6 +208,7 @@ NAMES = {
         "programs_ov": "WC.SET_PROGRAM.PROGRAM",
         "programs_td": "WC.SET_PROGRAM.PROGRAM",
         "programs_wm": "WC.SET_PROGRAM.PROGRAM",
+        "eco_pilot": "AC.PROGRAM_DETAIL.ECO_PILOT",
     },
     "sensor": {
         "dry_levels": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_LEVEL",

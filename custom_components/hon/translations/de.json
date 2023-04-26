@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Wasserverbrauch Aktuell"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Auto",
+                    "1": "Kühl",
+                    "2": "Kühl",
+                    "3": "Trocken",
+                    "4": "Heizen",
+                    "5": "Ventilator",
+                    "6": "Ventilator"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Trocknungsdauer"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Aus",
+                    "1": "Berührung vermeiden",
+                    "2": "Folgen"
+                },
+                "name": "Eco Pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Hoch",
+                    "2": "Mittel   ",
+                    "3": "Niedrig",
+                    "4": "Auto",
+                    "5": "Auto"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10°C Heizfunktion",
+                    "iot_auto": "Auto",
+                    "iot_cool": "Kühl",
+                    "iot_dry": "Trocken",
+                    "iot_fan": "Ventilator",
+                    "iot_heat": "Heizen",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Selbst reinigen",
+                    "iot_self_clean": "Self-Clean",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Jetzt beginnen",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Auto",
+                    "iot_uv_and_cool": "UV + Kalt",
+                    "iot_uv_and_dry": "UV + Entfeuchter",
+                    "iot_uv_and_fan": "UV + Gebläse",
+                    "iot_uv_and_heat": "UV + Heizen"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "Einschaltverzögerung"
+            },
+            "rapid_mode": {
+                "name": "Schnellmodus"
+            },
+            "eco_mode": {
+                "name": "ECO-Modus"
+            },
+            "10_degree_heating": {
+                "name": "10°C Heizfunktion"
+            },
+            "self_clean": {
+                "name": "Self-Clean"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Silent-Modus"
+            },
+            "mute_mode": {
+                "name": "Stummer Modus"
             }
         },
         "binary_sensor": {

@@ -193,6 +193,65 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             translation_key="add_dish",
         ),
     ),
+    "AC": (
+        HonSwitchEntityDescription(
+            key="startProgram.10degreeHeatingStatus",
+            name="10° Heating",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="10_degree_heating",
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.echoStatus",
+            name="Echo",
+            entity_category=EntityCategory.CONFIG,
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.ecoMode",
+            name="Eco Mode",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="eco_mode",
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.healthMode",
+            name="Health Mode",
+            entity_category=EntityCategory.CONFIG,
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.muteStatus",
+            name="Mute",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="mute_mode",
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.rapidMode",
+            name="Rapid Mode",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="rapid_mode",
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.screenDisplayStatus",
+            name="Screen Display",
+            entity_category=EntityCategory.CONFIG,
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.selfCleaning56Status",
+            name="Self Cleaning 56",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="self_clean_56",
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.selfCleaningStatus",
+            name="Self Cleaning",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="self_clean",
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.silentSleepStatus",
+            name="Silent Sleep",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="silent_mode",
+        ),
+    ),
 }
 
 
@@ -261,6 +320,8 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
                 setting.max if isinstance(setting, HonParameterRange) else "1"
             )
             self.async_write_ha_state()
+            if self._device.appliance_type in ["AC"]:
+                self._device.commands["startProgram"].send()
             await self.coordinator.async_refresh()
         else:
             await self._device.commands[self.entity_description.turn_on_key].send()
@@ -272,6 +333,8 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
                 setting.min if isinstance(setting, HonParameterRange) else "0"
             )
             self.async_write_ha_state()
+            if self._device.appliance_type in ["AC"]:
+                self._device.commands["startProgram"].send()
             await self.coordinator.async_refresh()
         else:
             await self._device.commands[self.entity_description.turn_off_key].send()

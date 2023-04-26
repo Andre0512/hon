@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Su verimliliği Current"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Otomatik",
+                    "1": "Soğuk",
+                    "2": "Soğuk",
+                    "3": "Kuru",
+                    "4": "Isı",
+                    "5": "Fan",
+                    "6": "Fan"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Kurutma zamanı"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Kapali",
+                    "1": "Dokunmaktan kaçının",
+                    "2": "Takip et"
+                },
+                "name": "Eko pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Yüksek",
+                    "2": "Orta   ",
+                    "3": "Düşük",
+                    "4": "Otomatik",
+                    "5": "Otomatik"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10°C Isıtma fonksiyonu",
+                    "iot_auto": "Otomatik",
+                    "iot_cool": "Soğuk",
+                    "iot_dry": "Kuru",
+                    "iot_fan": "Fan",
+                    "iot_heat": "Isı",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Kendi kendini arındırma",
+                    "iot_self_clean": "Kendi kendini temizleme",
+                    "iot_self_clean_56": "Steril Temizleme 56°C",
+                    "iot_simple_start": "Şimdi başlat",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Otomatik",
+                    "iot_uv_and_cool": "UV + Soğuk",
+                    "iot_uv_and_dry": "UV + Nem giderici",
+                    "iot_uv_and_fan": "UV + Fan",
+                    "iot_uv_and_heat": "UV + Isıtma"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "Gecikmeli Başlatma"
+            },
+            "rapid_mode": {
+                "name": "Hızlı mod"
+            },
+            "eco_mode": {
+                "name": "ECO modu"
+            },
+            "10_degree_heating": {
+                "name": "10°C Isıtma fonksiyonu"
+            },
+            "self_clean": {
+                "name": "Kendi kendini temizleme"
+            },
+            "self_clean_56": {
+                "name": "Steril Temizleme 56°C"
+            },
+            "silent_mode": {
+                "name": "Sessiz mod"
+            },
+            "mute_mode": {
+                "name": "Ses Kapalı mod"
             }
         },
         "binary_sensor": {

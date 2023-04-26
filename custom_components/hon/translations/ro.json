@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Eficiența apei Current"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Automat",
+                    "1": "Răcire",
+                    "2": "Răcire",
+                    "3": "Uscare",
+                    "4": "Încălzire",
+                    "5": "Ventilare",
+                    "6": "Ventilare"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Timp de uscare"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Oprit",
+                    "1": "Evitați atingerea",
+                    "2": "Urmărire"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Ridicat",
+                    "2": "Mediu   ",
+                    "3": "Scăzut",
+                    "4": "Automat",
+                    "5": "Automat"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Funcția de încălzire la 10 °C",
+                    "iot_auto": "Automat",
+                    "iot_cool": "Răcire",
+                    "iot_dry": "Uscare",
+                    "iot_fan": "Ventilare",
+                    "iot_heat": "Încălzire",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Auto-purificare",
+                    "iot_self_clean": "Autocurățare",
+                    "iot_self_clean_56": "Curățare-sterilizare la 56°C",
+                    "iot_simple_start": "Începeți acum",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + automat",
+                    "iot_uv_and_cool": "UV + răcire",
+                    "iot_uv_and_dry": "UV + dezumidificator",
+                    "iot_uv_and_fan": "UV + ventilator",
+                    "iot_uv_and_heat": "UV + încălzire"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "Pornire întârziată"
+            },
+            "rapid_mode": {
+                "name": "Modul rapid"
+            },
+            "eco_mode": {
+                "name": "Modul Eco"
+            },
+            "10_degree_heating": {
+                "name": "Funcția de încălzire la 10 °C"
+            },
+            "self_clean": {
+                "name": "Autocurățare"
+            },
+            "self_clean_56": {
+                "name": "Curățare-sterilizare la 56°C"
+            },
+            "silent_mode": {
+                "name": "Modul silențios"
+            },
+            "mute_mode": {
+                "name": "Modul mut"
             }
         },
         "binary_sensor": {

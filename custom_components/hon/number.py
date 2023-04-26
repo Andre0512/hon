@@ -135,6 +135,16 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             translation_key="water_hard",
         ),
     ),
+    "AC": (
+        NumberEntityDescription(
+            key="startProgram.tempSel",
+            name="Target Temperature",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:thermometer",
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="target_temperature",
+        ),
+    ),
 }
 
 
@@ -186,6 +196,8 @@ class HonNumberEntity(HonEntity, NumberEntity):
             isinstance(setting, HonParameter) or isinstance(setting, HonParameterFixed)
         ):
             setting.value = value
+        if self._device.appliance_type in ["AC"]:
+            self._device.commands["startProgram"].send()
         await self.coordinator.async_refresh()
 
     @callback

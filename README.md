@@ -132,6 +132,24 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 
 ## Appliance Features
 
+### Air conditioner
+#### Configs
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| 10° Heating |  | `switch` | `startProgram.10degreeHeatingStatus` |
+| Echo |  | `switch` | `startProgram.echoStatus` |
+| Eco Mode |  | `switch` | `startProgram.ecoMode` |
+| Eco Pilot |  | `select` | `startProgram.humanSensingStatus` |
+| Health Mode |  | `switch` | `startProgram.healthMode` |
+| Mute |  | `switch` | `startProgram.muteStatus` |
+| Program |  | `select` | `startProgram.program` |
+| Rapid Mode |  | `switch` | `startProgram.rapidMode` |
+| Screen Display |  | `switch` | `startProgram.screenDisplayStatus` |
+| Self Cleaning |  | `switch` | `startProgram.selfCleaningStatus` |
+| Self Cleaning 56 |  | `switch` | `startProgram.selfCleaning56Status` |
+| Silent Sleep |  | `switch` | `startProgram.silentSleepStatus` |
+| Target Temperature | `thermometer` | `number` | `startProgram.tempSel` |
+
 ### Dish washer
 #### Controls
 | Name | Icon | Entity | Key |

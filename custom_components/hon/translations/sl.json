@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Učinkovita raba vode Current"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Samodejno",
+                    "1": "Hlajenje",
+                    "2": "Hlajenje",
+                    "3": "Sušenje",
+                    "4": "Segrevanje",
+                    "5": "Ventilator",
+                    "6": "Ventilator"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Čas sušenja"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Izklop",
+                    "1": "Brez dotika",
+                    "2": "Sledenje"
+                },
+                "name": "Eko pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Visoko",
+                    "2": "Srednje   ",
+                    "3": "Nizko",
+                    "4": "Samodejno",
+                    "5": "Samodejno"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Funkcija ogrevanja pri 10 °C",
+                    "iot_auto": "Samodejno",
+                    "iot_cool": "Hlajenje",
+                    "iot_dry": "Sušenje",
+                    "iot_fan": "Ventilator",
+                    "iot_heat": "Segrevanje",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Samoočiščevanje",
+                    "iot_self_clean": "Samodejno čiščenje",
+                    "iot_self_clean_56": "Sterilno čiščenje 56°C",
+                    "iot_simple_start": "Zaženi zdaj",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + samodejno",
+                    "iot_uv_and_cool": "UV + hlajenje",
+                    "iot_uv_and_dry": "UV + razvlaževanje",
+                    "iot_uv_and_fan": "UV + ventilator",
+                    "iot_uv_and_heat": "UV + gretje"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "S funkcijo Zamik vklopa je možno odložiti začetek sušilnega cikla od 1 do 24 ur. Na zaslonu se prikaže izbrana zakasnitev. Da bi videli kako se zmanjšuje iz ure v uro, pritisnite ZAČETEK. Na ta način bo perilo suho takrat, ko boste to želeli, in zagnali cikel, ko vam to najbolj ustreza, celo ponoči."
+            },
+            "rapid_mode": {
+                "name": "Hitri način"
+            },
+            "eco_mode": {
+                "name": "Način ECO"
+            },
+            "10_degree_heating": {
+                "name": "Funkcija ogrevanja pri 10 °C"
+            },
+            "self_clean": {
+                "name": "Samodejno čiščenje"
+            },
+            "self_clean_56": {
+                "name": "Sterilno čiščenje 56°C"
+            },
+            "silent_mode": {
+                "name": "Tihi način"
+            },
+            "mute_mode": {
+                "name": "Način z izklopljenim zvokom"
             }
         },
         "binary_sensor": {

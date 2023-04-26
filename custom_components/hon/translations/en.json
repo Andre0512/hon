@@ -213,6 +213,17 @@
             },
             "water_current": {
                 "name": "Water efficiency Current"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Auto",
+                    "1": "Cool",
+                    "2": "Cool",
+                    "3": "Dry",
+                    "4": "Heat",
+                    "5": "Fan",
+                    "6": "Fan"
+                }
             }
         },
         "switch": {
@@ -266,6 +277,27 @@
             },
             "delay_time": {
                 "name": "Delay Start"
+            },
+            "rapid_mode": {
+                "name": "Rapid mode"
+            },
+            "eco_mode": {
+                "name": "ECO mode"
+            },
+            "10_degree_heating": {
+                "name": "10°C Heating function"
+            },
+            "self_clean": {
+                "name": "Self-clean"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Silent mode"
+            },
+            "mute_mode": {
+                "name": "Mute mode"
             }
         },
         "select": {
@@ -941,6 +973,44 @@
             },
             "dry_time": {
                 "name": "Drying time"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Off",
+                    "1": "Avoid touch",
+                    "2": "Follow"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "High",
+                    "2": "Medium   ",
+                    "3": "Low",
+                    "4": "Auto",
+                    "5": "Auto"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10°C Heating function",
+                    "iot_auto": "Auto",
+                    "iot_cool": "Cool",
+                    "iot_dry": "Dry",
+                    "iot_fan": "Fan",
+                    "iot_heat": "Heat",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Self-purify",
+                    "iot_self_clean": "Self-clean",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Start now",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Auto",
+                    "iot_uv_and_cool": "UV + Cold",
+                    "iot_uv_and_dry": "UV + Dehumidifier",
+                    "iot_uv_and_fan": "UV + Fan",
+                    "iot_uv_and_heat": "UV + Heat"
+                }
             }
         },
         "binary_sensor": {

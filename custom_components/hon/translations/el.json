@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Απόδοση νερού Current"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Αυτόματο",
+                    "1": "Ψύξη",
+                    "2": "Ψύξη",
+                    "3": "Στέγνωμα",
+                    "4": "Ζέστη",
+                    "5": "Ανεμιστήρας",
+                    "6": "Ανεμιστήρας"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Χρόνος στεγνώματος"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Απενεργοποιηση",
+                    "1": "Αποφύγετε την αφή",
+                    "2": "Σας ακολουθεί"
+                },
+                "name": "Οικολογικός πιλότος"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Υψηλό",
+                    "2": "Μέτριο   ",
+                    "3": "Χαμηλό",
+                    "4": "Αυτόματο",
+                    "5": "Αυτόματο"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10° C Λειτουργία θέρμανσης",
+                    "iot_auto": "Αυτόματο",
+                    "iot_cool": "Ψύξη",
+                    "iot_dry": "Στέγνωμα",
+                    "iot_fan": "Ανεμιστήρας",
+                    "iot_heat": "Ζέστη",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Αυτοκαθαρισμός",
+                    "iot_self_clean": "Αυτοκαθαρισμός",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Εκκίνηση τώρα",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Auto",
+                    "iot_uv_and_cool": "UV + Ψύξη",
+                    "iot_uv_and_dry": "UV + Αφυγραντήρας",
+                    "iot_uv_and_fan": "UV + Ανεμιστήρας",
+                    "iot_uv_and_heat": "UV + Θέρμανση"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "Καθυστερημένη έναρξη"
+            },
+            "rapid_mode": {
+                "name": "Ταχεία λειτουργία"
+            },
+            "eco_mode": {
+                "name": "Λειτουργία Eco"
+            },
+            "10_degree_heating": {
+                "name": "10° C Λειτουργία θέρμανσης"
+            },
+            "self_clean": {
+                "name": "Αυτοκαθαρισμός"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Αθόρυβη λειτουργία"
+            },
+            "mute_mode": {
+                "name": "Σίγαση λειτουργίας"
             }
         },
         "binary_sensor": {

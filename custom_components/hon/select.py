@@ -97,6 +97,20 @@ SELECTS = {
             translation_key="programs_dw",
         ),
     ),
+    "AC": (
+        SelectEntityDescription(
+            key="startProgram.program",
+            name="Program",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="programs_ac",
+        ),
+        SelectEntityDescription(
+            key="startProgram.humanSensingStatus",
+            name="Eco Pilot",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="eco_pilot",
+        ),
+    ),
 }
 
 
@@ -147,6 +161,8 @@ class HonSelectEntity(HonEntity, SelectEntity):
 
     async def async_select_option(self, option: str) -> None:
         self._device.settings[self.entity_description.key].value = option
+        if self._device.appliance_type in ["AC"]:
+            self._device.commands["startProgram"].send()
         await self.coordinator.async_refresh()
 
     @callback

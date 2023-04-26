@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Wydajność zużycia wody Aktualne"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Auto",
+                    "1": "Chłodzenie",
+                    "2": "Chłodzenie",
+                    "3": "Osuszanie",
+                    "4": "Grzanie",
+                    "5": "Wentylator",
+                    "6": "Wentylator"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Czas suszenia"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Wyłącz",
+                    "1": "Unikanie kontaktu",
+                    "2": "Podążanie"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Wysoki",
+                    "2": "Średni   ",
+                    "3": "Niski",
+                    "4": "Auto",
+                    "5": "Auto"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Funkcja grzania 10°C",
+                    "iot_auto": "Auto",
+                    "iot_cool": "Chłodzenie",
+                    "iot_dry": "Osuszanie",
+                    "iot_fan": "Wentylator",
+                    "iot_heat": "Grzanie",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Self Purify",
+                    "iot_self_clean": "Self Clean",
+                    "iot_self_clean_56": "Steri Clean 56°C",
+                    "iot_simple_start": "Uruchom teraz",
+                    "iot_uv": "Sterylizacja UVC",
+                    "iot_uv_and_auto": "UV + automat",
+                    "iot_uv_and_cool": "UV + chłodzenie",
+                    "iot_uv_and_dry": "UV + osuszacz powietrza",
+                    "iot_uv_and_fan": "UV + wentylator",
+                    "iot_uv_and_heat": "UV + podgrzewanie"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "Opóźniony Start"
+            },
+            "rapid_mode": {
+                "name": "Tryb szybki"
+            },
+            "eco_mode": {
+                "name": "Tryb ECO"
+            },
+            "10_degree_heating": {
+                "name": "Funkcja grzania 10°C"
+            },
+            "self_clean": {
+                "name": "Self Clean"
+            },
+            "self_clean_56": {
+                "name": "Steri Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Tryb cichy"
+            },
+            "mute_mode": {
+                "name": "Tryb wyciszenia"
             }
         },
         "binary_sensor": {

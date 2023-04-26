@@ -154,6 +154,17 @@
             },
             "water_current": {
                 "name": "Eficiencia hídrica Actual"
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "0": "Automático",
+                    "1": "Frío",
+                    "2": "Frío",
+                    "3": "Deshumidificar",
+                    "4": "Calor",
+                    "5": "Ventilador",
+                    "6": "Ventilador"
+                }
             }
         },
         "select": {
@@ -821,6 +832,44 @@
             },
             "dry_time": {
                 "name": "Tiempo de secado"
+            },
+            "eco_pilot": {
+                "state": {
+                    "0": "Apagado",
+                    "1": "Evitar el contacto",
+                    "2": "Sígueme"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "1": "Alta",
+                    "2": "Media   ",
+                    "3": "Baja",
+                    "4": "Automático",
+                    "5": "Automático"
+                }
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Función de calentamiento de 10° C",
+                    "iot_auto": "Automático",
+                    "iot_cool": "Frío",
+                    "iot_dry": "Deshumidificar",
+                    "iot_fan": "Ventilador",
+                    "iot_heat": "Calor",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Autopurificar",
+                    "iot_self_clean": "Autolimpieza",
+                    "iot_self_clean_56": "Limpieza desinfectante 56°",
+                    "iot_simple_start": "Iniciar ahora",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Automático",
+                    "iot_uv_and_cool": "UV + Frío",
+                    "iot_uv_and_dry": "UV + Deshumidificador",
+                    "iot_uv_and_fan": "UV + Ventilador",
+                    "iot_uv_and_heat": "UV + Calor"
+                }
             }
         },
         "switch": {
@@ -874,6 +923,27 @@
             },
             "delay_time": {
                 "name": "Inicio Diferido"
+            },
+            "rapid_mode": {
+                "name": "Modo rápido"
+            },
+            "eco_mode": {
+                "name": "Modo ECO"
+            },
+            "10_degree_heating": {
+                "name": "Función de calentamiento de 10° C"
+            },
+            "self_clean": {
+                "name": "Autolimpieza"
+            },
+            "self_clean_56": {
+                "name": "Limpieza desinfectante 56°"
+            },
+            "silent_mode": {
+                "name": "Modo silencioso"
+            },
+            "mute_mode": {
+                "name": "Modo silencio"
             }
         },
         "binary_sensor": {
