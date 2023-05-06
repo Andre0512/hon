@@ -11,6 +11,7 @@ Support for home appliances of Haier's mobile app hOn.
 - [Oven](https://github.com/Andre0512/hon#oven)
 - [Hob](https://github.com/Andre0512/hon#hob)
 - [Dish Washer](https://github.com/Andre0512/hon#dish-washer)
+- [Air conditioner](https://github.com/Andre0512/hon#air-conditioner) [BETA]
 
 ## Tested Appliances
 - Haier WD90-B14TEAM5

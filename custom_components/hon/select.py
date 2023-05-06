@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import time
 
 from pyhon import Hon
 from pyhon.appliance import HonAppliance
@@ -128,7 +129,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := SELECTS.get(device.appliance_type):
             for description in descriptions:
-                if not device.settings.get(description.key):
+                if description.key not in device.available_settings:
                     continue
                 appliances.extend(
                     [HonSelectEntity(hass, coordinator, entry, device, description)]

@@ -131,6 +131,15 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG,
             translation_key="det_dust",
         ),
+        SensorEntityDescription(
+            key="startProgram.remainingTime",
+            name="Remaining Time",
+            icon="mdi:timer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+            entity_category=EntityCategory.CONFIG,
+            translation_key="remaining_time",
+        ),
     ),
     "TD": (
         SensorEntityDescription(

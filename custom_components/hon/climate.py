@@ -23,8 +23,8 @@ from homeassistant.core import callback
 from pyhon import Hon
 from pyhon.appliance import HonAppliance
 
-from custom_components.hon.const import HON_HVAC_MODE, HON_FAN, HON_HVAC_PROGRAM, DOMAIN
-from custom_components.hon.hon import HonEntity, HonCoordinator
+from .const import HON_HVAC_MODE, HON_FAN, HON_HVAC_PROGRAM, DOMAIN
+from .hon import HonEntity, HonCoordinator
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -47,7 +47,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := CLIMATES.get(device.appliance_type):
             for description in descriptions:
-                if not device.settings.get(description.key):
+                if description.key not in device.available_settings:
                     continue
                 appliances.extend(
                     [HonClimateEntity(hass, coordinator, entry, device, description)]

@@ -12,6 +12,7 @@ Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home ap
 - [Oven](https://github.com/Andre0512/hon#oven)
 - [Hob](https://github.com/Andre0512/hon#hob)
 - [Dish Washer](https://github.com/Andre0512/hon#dish-washer)
+- [Air conditioner](https://github.com/Andre0512/hon#air-conditioner) [BETA]
 
 ## Installation
 **Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
@@ -323,6 +324,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
 | Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` |
 | Program |  | `select` | `startProgram.program` |
+| Remaining Time | `timer` | `sensor` | `startProgram.remainingTime` |
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
 | Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` |
 | Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |

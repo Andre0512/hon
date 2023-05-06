@@ -1,6 +1,10 @@
-from homeassistant.components.climate import HVACMode
-
-from custom_components.hon import climate
+from homeassistant.components.climate import (
+    HVACMode,
+    FAN_LOW,
+    FAN_MEDIUM,
+    FAN_HIGH,
+    FAN_AUTO,
+)
 
 DOMAIN = "hon"
 
@@ -33,9 +37,9 @@ HON_HVAC_PROGRAM = {
 }
 
 HON_FAN = {
-    "1": climate.FAN_HIGH,
-    "2": climate.FAN_MEDIUM,
-    "3": climate.FAN_LOW,
-    "4": climate.FAN_AUTO,
-    "5": climate.FAN_AUTO,
+    "1": FAN_HIGH,
+    "2": FAN_MEDIUM,
+    "3": FAN_LOW,
+    "4": FAN_AUTO,
+    "5": FAN_AUTO,
 }
