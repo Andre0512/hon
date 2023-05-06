@@ -162,7 +162,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := NUMBERS.get(device.appliance_type):
             for description in descriptions:
-                if not device.settings.get(description.key):
+                if description.key not in device.available_settings:
                     continue
                 appliances.extend(
                     [HonNumberEntity(hass, coordinator, entry, device, description)]
