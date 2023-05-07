@@ -30,6 +30,39 @@ _Restart Home Assistant_
 **Method 2**: Settings > Devices & Services > Add Integration > **Haier hOn**  
 _If the integration is not in the list, you need to clear the browser cache._
 
+
+## Supported Models
+Support was confirmed for these models. If a supported model is missing, please [add it with this form](https://forms.gle/bTSD8qFotdZFytbf8).
+- Haier WD90-B14TEAM5
+- Haier HD80-A3959
+- Haier HWO60SM2F3XH
+- Hoover H-WASH 500
+- Candy CIS633SCTTWIFI
+- Haier XIB 3B2SFS-80
+- Haier XIB 6B2D3FB
+
+## Supported Languages
+Translation of internal names like programs are available for all languages which are official supported by the hOn app:
+* 🇨🇳 Chinese
+* 🇭🇷 Croatian
+* 🇨🇿 Czech
+* 🇳🇱 Dutch
+* 🇬🇧 English
+* 🇫🇷 French
+* 🇩🇪 German
+* 🇬🇷 Greek
+* 🇮🇱 Hebrew
+* 🇮🇹 Italian
+* 🇵🇱 Polish
+* 🇵🇹 Portuguese
+* 🇷🇴 Romanian
+* 🇷🇺 Russian
+* 🇷🇸 Serbian
+* 🇸🇰 Slovak
+* 🇸🇮 Slovenian
+* 🇪🇸 Spanish
+* 🇹🇷 Turkish
+
 ## Contribute
 Any kind of contribution is welcome!
 ### Read out device data
@@ -92,39 +125,7 @@ For every device exists a hidden button which can be used to log all info of you
 #### Tips and Tricks
 - If you want to have some states humanreadable, have a look at the `translation_key` parameter of the `EntityDescription`.
 - If you need to implement some more logic, create a pull request to the underlying library. There we collect special requirements in the `appliances` directory.
-- Use [pyhOn's translate command](https://github.com/Andre0512/pyhOn#translation) to read out the official translations 
-
-## Tested Devices
-- Haier WD90-B14TEAM5
-- Haier HD80-A3959
-- Haier HWO60SM2F3XH
-- Hoover H-WASH 500
-- Candy CIS633SCTTWIFI
-- Haier XIB 3B2SFS-80
-- Haier XIB 6B2D3FB
-
-## Supported Languages
-Translation of internal names like programs are available for all languages which are official supported by the hOn app:
-* 🇨🇳 Chinese
-* 🇭🇷 Croatian
-* 🇨🇿 Czech
-* 🇳🇱 Dutch
-* 🇬🇧 English
-* 🇫🇷 French
-* 🇩🇪 German
-* 🇬🇷 Greek
-* 🇮🇱 Hebrew
-* 🇮🇹 Italian
-* 🇵🇱 Polish
-* 🇵🇹 Portuguese
-* 🇷🇴 Romanian
-* 🇷🇺 Russian
-* 🇷🇸 Serbian
-* 🇸🇰 Slovak
-* 🇸🇮 Slovenian
-* 🇪🇸 Spanish
-* 🇹🇷 Turkish
-
+- Use [pyhOn's translate command](https://github.com/Andre0512/pyhOn#translation) to read out the official translations
 
 ## About this Repo
 The existing integrations missed some features from the app I liked to have in HomeAssistant.
@@ -265,7 +266,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Dry level | `hair-dryer` | `sensor` | `dryLevel` |
 | Error | `math-log` | `sensor` | `errors` |
 | Machine Status | `information` | `sensor` | `machMode` |
-| Program | `tumble-dryer` | `sensor` | `prCode` |
+| Program | `tumble-dryer` | `sensor` | `programName` |
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Start Time | `clock-start` | `sensor` | `delayTime` |
