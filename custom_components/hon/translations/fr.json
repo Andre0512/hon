@@ -944,6 +944,24 @@
             },
             "mute_mode": {
                 "name": "Mode muet"
+            },
+            "extra_rinse_1": {
+                "name": "+1 rinçage"
+            },
+            "extra_rinse_2": {
+                "name": "+2 rinçages"
+            },
+            "extra_rinse_3": {
+                "name": "+3 rinçages"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "Dose automatique"
+            },
+            "good_night": {
+                "name": "Bonne nuit"
             }
         },
         "binary_sensor": {
@@ -1015,6 +1033,12 @@
             },
             "prewash": {
                 "name": "Prélavage"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "Dose automatique"
             }
         },
         "number": {
@@ -1044,6 +1068,9 @@
             },
             "dry_time": {
                 "name": "Temps de séchage"
+            },
+            "steam_level": {
+                "name": "Niveau de vapeur"
             }
         },
         "button": {

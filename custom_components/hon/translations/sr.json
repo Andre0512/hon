@@ -944,6 +944,24 @@
             },
             "mute_mode": {
                 "name": "Režim isključenog zvuka"
+            },
+            "extra_rinse_1": {
+                "name": "+1 ispiranje"
+            },
+            "extra_rinse_2": {
+                "name": "+2 ispiranja"
+            },
+            "extra_rinse_3": {
+                "name": "+3 ispiranja"
+            },
+            "acqua_plus": {
+                "name": "Viši nivo vode"
+            },
+            "auto_dose": {
+                "name": "Automatsko doziranje"
+            },
+            "good_night": {
+                "name": "Laku noć"
             }
         },
         "binary_sensor": {
@@ -1015,6 +1033,12 @@
             },
             "prewash": {
                 "name": "Predpranje"
+            },
+            "acqua_plus": {
+                "name": "Viši nivo vode"
+            },
+            "auto_dose": {
+                "name": "Automatsko doziranje"
             }
         },
         "number": {
@@ -1044,6 +1068,9 @@
             },
             "dry_time": {
                 "name": "Vreme sušenja"
+            },
+            "steam_level": {
+                "name": "Nivo pare"
             }
         },
         "button": {

@@ -944,6 +944,24 @@
             },
             "mute_mode": {
                 "name": "Modul mut"
+            },
+            "extra_rinse_1": {
+                "name": "+1 clătire"
+            },
+            "extra_rinse_2": {
+                "name": "+2 clătiri"
+            },
+            "extra_rinse_3": {
+                "name": "+3 clătiri"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "Autodozare"
+            },
+            "good_night": {
+                "name": "Noapte bună"
             }
         },
         "binary_sensor": {
@@ -1015,6 +1033,12 @@
             },
             "prewash": {
                 "name": "Prespălare"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "Autodozare"
             }
         },
         "number": {
@@ -1044,6 +1068,9 @@
             },
             "dry_time": {
                 "name": "Timp de uscare"
+            },
+            "steam_level": {
+                "name": "Nivel abur"
             }
         },
         "button": {

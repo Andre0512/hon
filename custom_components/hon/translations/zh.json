@@ -944,6 +944,24 @@
             },
             "mute_mode": {
                 "name": "静音模式"
+            },
+            "extra_rinse_1": {
+                "name": "+1 次漂洗"
+            },
+            "extra_rinse_2": {
+                "name": "+2 次漂洗"
+            },
+            "extra_rinse_3": {
+                "name": "+3 次漂洗"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "自动定量"
+            },
+            "good_night": {
+                "name": "晚安"
             }
         },
         "binary_sensor": {
@@ -1015,6 +1033,12 @@
             },
             "prewash": {
                 "name": "预洗"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "自动定量"
             }
         },
         "number": {
@@ -1044,6 +1068,9 @@
             },
             "dry_time": {
                 "name": "烘干时间"
+            },
+            "steam_level": {
+                "name": "蒸汽档位"
             }
         },
         "button": {

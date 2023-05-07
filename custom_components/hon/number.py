@@ -42,6 +42,25 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTime.MINUTES,
             translation_key="wash_time",
         ),
+        NumberEntityDescription(
+            key="startProgram.steamLevel",
+            name="Steam Level",
+            icon="mdi:weather-dust",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="steam_level",
+        ),
+        NumberEntityDescription(
+            key="startProgram.waterHard",
+            name="Water hard",
+            icon="mdi:water",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="water_hard",
+        ),
+        NumberEntityDescription(
+            key="startProgram.lang",
+            name="lang",
+            entity_category=EntityCategory.CONFIG,
+        ),
     ),
     "TD": (
         NumberEntityDescription(

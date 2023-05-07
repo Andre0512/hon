@@ -944,6 +944,24 @@
             },
             "mute_mode": {
                 "name": "Stlmený režim"
+            },
+            "extra_rinse_1": {
+                "name": "+ 1 oplachovanie"
+            },
+            "extra_rinse_2": {
+                "name": "+ 2 oplachovania"
+            },
+            "extra_rinse_3": {
+                "name": "+ 3 oplachovania"
+            },
+            "acqua_plus": {
+                "name": "Aquaplus"
+            },
+            "auto_dose": {
+                "name": "Automatická dávka"
+            },
+            "good_night": {
+                "name": "Dobrú noc"
             }
         },
         "binary_sensor": {
@@ -1015,6 +1033,12 @@
             },
             "prewash": {
                 "name": "Predumývanie"
+            },
+            "acqua_plus": {
+                "name": "Aquaplus"
+            },
+            "auto_dose": {
+                "name": "Automatická dávka"
             }
         },
         "number": {
@@ -1044,6 +1068,9 @@
             },
             "dry_time": {
                 "name": "Čas sušenia"
+            },
+            "steam_level": {
+                "name": "Úroveň nastavenia pary"
             }
         },
         "button": {

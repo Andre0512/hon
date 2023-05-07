@@ -252,6 +252,8 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Dry level | `hair-dryer` | `select` | `startProgram.dryLevel` |
 | Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
 | Program |  | `select` | `startProgram.program` |
+| Steam Type | `weather-dust` | `sensor` | `steamType` |
+| Steam level | `smoke` | `sensor` | `steamLevel` |
 | Sterilization | `clock-start` | `switch` | `startProgram.sterilizationStatus` |
 | Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` |
 | Temperature level | `thermometer` | `number` | `startProgram.tempLevel` |
@@ -316,9 +318,15 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
+| Acqua Plus | `water-plus` | `switch` | `startProgram.acquaplus` |
+| Auto Dose | `cup` | `switch` | `startProgram.autoDetergentStatus` |
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
 | Delay Time | `timer-plus` | `number` | `startProgram.delayTime` |
 | Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
+| Extra Rinse 1 | `numeric-1-box-multiple-outline` | `switch` | `extraRinse1` |
+| Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `extraRinse2` |
+| Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `extraRinse3` |
+| Good Night | `weather-night` | `switch` | `goodNight` |
 | Keep Fresh | `refresh-circle` | `switch` | `startProgram.autoSoftenerStatus` |
 | Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
@@ -328,13 +336,18 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
 | Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` |
 | Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |
+| Steam Level | `weather-dust` | `number` | `startProgram.steamLevel` |
+| Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadW` |
 | Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` |
 | Temperature | `thermometer` | `select` | `startProgram.temp` |
+| Water hard | `water` | `number` | `startProgram.waterHard` |
+| lang |  | `number` | `startProgram.lang` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
 | Current Water Used | `water` | `sensor` | `currentWaterUsed` |
+| Dirt level | `liquid-spot` | `sensor` | `dirtyLevel` |
 | Door |  | `binary_sensor` | `doorStatus` |
 | Door Lock |  | `binary_sensor` | `doorLockStatus` |
 | Error | `math-log` | `sensor` | `errors` |

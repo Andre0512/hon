@@ -944,6 +944,24 @@
             },
             "mute_mode": {
                 "name": "Dempmodus"
+            },
+            "extra_rinse_1": {
+                "name": "+1 keer spoelen"
+            },
+            "extra_rinse_2": {
+                "name": "+2 keer spoelen"
+            },
+            "extra_rinse_3": {
+                "name": "+3 keer spoelen"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "Automatisch doseren"
+            },
+            "good_night": {
+                "name": "Goede nacht"
             }
         },
         "binary_sensor": {
@@ -1015,6 +1033,12 @@
             },
             "prewash": {
                 "name": "Voorwas"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "Automatisch doseren"
             }
         },
         "number": {
@@ -1044,6 +1068,9 @@
             },
             "dry_time": {
                 "name": "Droogtijd"
+            },
+            "steam_level": {
+                "name": "Stoomniveau"
             }
         },
         "button": {

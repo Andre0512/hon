@@ -944,6 +944,24 @@
             },
             "mute_mode": {
                 "name": "Беззвучный режим"
+            },
+            "extra_rinse_1": {
+                "name": "+1 полоскание"
+            },
+            "extra_rinse_2": {
+                "name": "+2 полоскания"
+            },
+            "extra_rinse_3": {
+                "name": "+3 полоскания"
+            },
+            "acqua_plus": {
+                "name": "Акваплюс"
+            },
+            "auto_dose": {
+                "name": "Автодозирование"
+            },
+            "good_night": {
+                "name": "Спокойной ночи"
             }
         },
         "binary_sensor": {
@@ -1015,6 +1033,12 @@
             },
             "prewash": {
                 "name": "предварительная мойка"
+            },
+            "acqua_plus": {
+                "name": "Акваплюс"
+            },
+            "auto_dose": {
+                "name": "Автодозирование"
             }
         },
         "number": {
@@ -1044,6 +1068,9 @@
             },
             "dry_time": {
                 "name": "Время сушки"
+            },
+            "steam_level": {
+                "name": "Уровень пара"
             }
         },
         "button": {

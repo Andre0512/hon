@@ -298,6 +298,24 @@
             },
             "mute_mode": {
                 "name": "Mute mode"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Rinse"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Rinses"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Rinses"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "Autodose"
+            },
+            "good_night": {
+                "name": "Good Night"
             }
         },
         "select": {
@@ -1082,6 +1100,12 @@
             },
             "prewash": {
                 "name": "Pre-wash "
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "Autodose"
             }
         },
         "number": {
@@ -1111,6 +1135,9 @@
             },
             "dry_time": {
                 "name": "Drying time"
+            },
+            "steam_level": {
+                "name": "Steam Level"
             }
         },
         "button": {

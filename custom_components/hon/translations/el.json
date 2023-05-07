@@ -944,6 +944,24 @@
             },
             "mute_mode": {
                 "name": "Σίγαση λειτουργίας"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Ξέβγαλμα"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Ξεβγάλματα"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Ξεβγάλματα"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus (προσθήκη νερού)"
+            },
+            "auto_dose": {
+                "name": "Αυτόματη Δοσολογία"
+            },
+            "good_night": {
+                "name": "Καληνυχτα"
             }
         },
         "binary_sensor": {
@@ -1015,6 +1033,12 @@
             },
             "prewash": {
                 "name": "προπλυση"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus (προσθήκη νερού)"
+            },
+            "auto_dose": {
+                "name": "Αυτόματη Δοσολογία"
             }
         },
         "number": {
@@ -1044,6 +1068,9 @@
             },
             "dry_time": {
                 "name": "Χρόνος στεγνώματος"
+            },
+            "steam_level": {
+                "name": "Επίπεδο ατμού"
             }
         },
         "button": {

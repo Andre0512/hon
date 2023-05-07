@@ -67,6 +67,48 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:refresh-circle",
             translation_key="keep_fresh",
         ),
+        HonSwitchEntityDescription(
+            key="startProgram.autoDetergentStatus",
+            name="Auto Dose",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:cup",
+            translation_key="auto_dose",
+        ),
+        HonSwitchEntityDescription(
+            key="startProgram.acquaplus",
+            name="Acqua Plus",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:water-plus",
+            translation_key="acqua_plus",
+        ),
+        HonSwitchEntityDescription(
+            key="extraRinse1",
+            name="Extra Rinse 1",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:numeric-1-box-multiple-outline",
+            translation_key="extra_rinse_1",
+        ),
+        HonSwitchEntityDescription(
+            key="extraRinse2",
+            name="Extra Rinse 2",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:numeric-2-box-multiple-outline",
+            translation_key="extra_rinse_2",
+        ),
+        HonSwitchEntityDescription(
+            key="extraRinse3",
+            name="Extra Rinse 3",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:numeric-3-box-multiple-outline",
+            translation_key="extra_rinse_3",
+        ),
+        HonSwitchEntityDescription(
+            key="goodNight",
+            name="Good Night",
+            icon="mdi:weather-night",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="good_night",
+        ),
     ),
     "TD": (
         HonSwitchEntityDescription(

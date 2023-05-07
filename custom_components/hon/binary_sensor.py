@@ -94,7 +94,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="goodNight", name="Good Night Mode", translation_key="good_night"
         ),
         HonBinarySensorEntityDescription(
-            key="acquaplus", name="Acqua Plus", translation_key="aqua_plus"
+            key="acquaplus", name="Acqua Plus", translation_key="acqua_plus"
         ),
         HonBinarySensorEntityDescription(
             key="anticrease", name="Anti-Crease", translation_key="anti_crease"

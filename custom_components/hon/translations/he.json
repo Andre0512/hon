@@ -527,6 +527,24 @@
             },
             "mute_mode": {
                 "name": "Mute mode"
+            },
+            "extra_rinse_1": {
+                "name": "+1 שטיפה"
+            },
+            "extra_rinse_2": {
+                "name": "+2 שטיפות"
+            },
+            "extra_rinse_3": {
+                "name": "+3 שטיפות"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "מינון אוטומטי"
+            },
+            "good_night": {
+                "name": "לילה טוב"
             }
         },
         "binary_sensor": {
@@ -598,6 +616,12 @@
             },
             "prewash": {
                 "name": "שטיפה מראש"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose": {
+                "name": "מינון אוטומטי"
             }
         },
         "number": {
@@ -627,6 +651,9 @@
             },
             "dry_time": {
                 "name": "זמן ייבוש"
+            },
+            "steam_level": {
+                "name": "מפלס קיטור"
             }
         },
         "button": {

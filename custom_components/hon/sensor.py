@@ -140,6 +140,21 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG,
             translation_key="remaining_time",
         ),
+        SensorEntityDescription(
+            key="dirtyLevel",
+            name="Dirt level",
+            icon="mdi:liquid-spot",
+            translation_key="dirt_level",
+        ),
+        SensorEntityDescription(
+            key="startProgram.suggestedLoadW",
+            name="Suggested Load",
+            icon="mdi:weight-kilogram",
+            entity_category=EntityCategory.CONFIG,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfMass.KILOGRAMS,
+            translation_key="suggested_load",
+        ),
     ),
     "TD": (
         SensorEntityDescription(
@@ -207,6 +222,19 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             state_class=SensorStateClass.MEASUREMENT,
             entity_category=EntityCategory.CONFIG,
             translation_key="energy_label",
+        ),
+        SensorEntityDescription(
+            key="steamLevel",
+            name="Steam level",
+            icon="mdi:smoke",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="steam_level",
+        ),
+        SensorEntityDescription(
+            key="steamType",
+            name="Steam Type",
+            icon="mdi:weather-dust",
+            entity_category=EntityCategory.CONFIG,
         ),
     ),
     "WD": (
