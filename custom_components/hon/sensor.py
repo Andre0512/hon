@@ -23,10 +23,12 @@ from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.typing import StateType
 from homeassistant.const import PERCENTAGE
 
+from . import const
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity
 
 _LOGGER = logging.getLogger(__name__)
+
 
 SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
     "WM": (
@@ -36,32 +38,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:washing-machine",
             device_class=SensorDeviceClass.ENUM,
             translation_key="program_phases_wm",
-            options=[
-                "0",
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "6",
-                "7",
-                "9",
-                "10",
-                "11",
-                "12",
-                "13",
-                "14",
-                "15",
-                "16",
-                "17",
-                "18",
-                "19",
-                "20",
-                "24",
-                "25",
-                "26",
-                "27",
-            ],
+            options=list(const.WASHING_PR_PHASE),
         ),
         SensorEntityDescription(
             key="totalElectricityUsed",
@@ -117,7 +94,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:information",
             device_class=SensorDeviceClass.ENUM,
             translation_key="washing_modes",
-            options=["0", "1", "3", "4", "5", "6", "7"],
+            options=list(const.MACH_MODE),
         ),
         SensorEntityDescription(
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
@@ -192,7 +169,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:information",
             device_class=SensorDeviceClass.ENUM,
             translation_key="washing_modes",
-            options=["0", "1", "3", "4", "5", "6", "7"],
+            options=list(const.MACH_MODE),
         ),
         SensorEntityDescription(
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
@@ -214,10 +191,12 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             translation_key="delay_time",
         ),
         SensorEntityDescription(
-            key="prCode",
+            key="programName",
             name="Program",
             icon="mdi:tumble-dryer",
-            translation_key="tumbledryerprogram",
+            device_class=SensorDeviceClass.ENUM,
+            translation_key="programs_td",
+            options=const.PROGRAMS_TD,
         ),
         SensorEntityDescription(
             key="prPhase",
@@ -225,19 +204,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:washing-machine",
             device_class=SensorDeviceClass.ENUM,
             translation_key="program_phases_td",
-            options=[
-                "0",
-                "1",
-                "2",
-                "3",
-                "13",
-                "14",
-                "15",
-                "16",
-                "18",
-                "19",
-                "20",
-            ],
+            options=list(const.TUMBLE_DRYER_PR_PHASE),
         ),
         SensorEntityDescription(
             key="dryLevel",
@@ -245,7 +212,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:hair-dryer",
             device_class=SensorDeviceClass.ENUM,
             translation_key="dry_levels",
-            options=["0", "1", "2", "3", "4", "12", "13", "14", "15"],
+            options=list(const.TUMBLE_DRYER_DRY_LEVEL),
         ),
         SensorEntityDescription(
             key="tempLevel",
@@ -339,7 +306,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:information",
             device_class=SensorDeviceClass.ENUM,
             translation_key="washing_modes",
-            options=["0", "1", "3", "4", "5", "6", "7"],
+            options=list(const.MACH_MODE),
         ),
         SensorEntityDescription(
             key="spinSpeed",
@@ -369,32 +336,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:washing-machine",
             device_class=SensorDeviceClass.ENUM,
             translation_key="program_phases_wm",
-            options=[
-                "0",
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "6",
-                "7",
-                "9",
-                "10",
-                "11",
-                "12",
-                "13",
-                "14",
-                "15",
-                "16",
-                "17",
-                "18",
-                "19",
-                "20",
-                "24",
-                "25",
-                "26",
-                "27",
-            ],
+            options=list(const.WASHING_PR_PHASE),
         ),
         SensorEntityDescription(
             key="dryLevel",
@@ -536,7 +478,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:information",
             device_class=SensorDeviceClass.ENUM,
             translation_key="washing_modes",
-            options=["0", "1", "3", "4", "5", "6", "7"],
+            options=list(const.MACH_MODE),
         ),
         SensorEntityDescription(
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
@@ -555,7 +497,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:washing-machine",
             device_class=SensorDeviceClass.ENUM,
             translation_key="program_phases_dw",
-            options=["0", "1", "2", "3", "4", "5", "6"],
+            options=list(const.DISHWASHER_PR_PHASE),
         ),
     ),
 }

@@ -9,7 +9,10 @@
                     "4": "מתוזמן",
                     "5": "מתוזמן",
                     "6": "שְׁגִיאָה",
-                    "7": "מוּכָן"
+                    "7": "מוּכָן",
+                    "2": "התוכנית פועלת",
+                    "8": "Test",
+                    "9": "Stopping cycle…"
                 }
             },
             "program_phases_wm": {
@@ -53,7 +56,9 @@
                     "16": "Cooldown",
                     "18": "Keep Fresh",
                     "19": "יִבּוּשׁ",
-                    "20": "יִבּוּשׁ"
+                    "20": "יִבּוּשׁ",
+                    "11": "מוּכָן",
+                    "17": "unknown"
                 },
                 "name": "שלב"
             },
@@ -79,7 +84,8 @@
                     "12": "בַּרזֶל",
                     "13": "ארון יבש",
                     "14": "Ready to wear",
-                    "15": "יבש במיוחד"
+                    "15": "יבש במיוחד",
+                    "11": "ללא ייבוש"
                 },
                 "name": "רמת ייבוש"
             },
@@ -164,6 +170,23 @@
                     "4": "Heat",
                     "5": "Fan",
                     "6": "Fan"
+                }
+            },
+            "programs_td": {
+                "state": {
+                    "genius": "Genius",
+                    "hqd_bath_towel": "Bath towel",
+                    "hqd_bulky": "Bulky",
+                    "hqd_cold_wind_30": "Cold wind 30 minutes",
+                    "hqd_cold_wind_timing": "Cold wind",
+                    "hqd_hot_wind_timing": "Hot wind",
+                    "hqd_luxury": "Luxury",
+                    "hqd_night_dry": "Night dry",
+                    "hqd_refresh": "Refresh",
+                    "hqd_timer": "תוזמן",
+                    "hqd_warm_up": "Warm up",
+                    "hqd_working_suit": "Working suit",
+                    "iot_dry_synthetic_dry": "סינתטי יבש"
                 }
             }
         },
@@ -419,7 +442,8 @@
                     "12": "בַּרזֶל",
                     "13": "ארון יבש",
                     "14": "Ready to wear",
-                    "15": "יבש במיוחד"
+                    "15": "יבש במיוחד",
+                    "11": "ללא ייבוש"
                 },
                 "name": "רמת ייבוש"
             },
@@ -460,7 +484,7 @@
                 "name": "Anticrease"
             },
             "add_dish": {
-                "name": ""
+                "name": "Add dishes"
             },
             "eco_express": {
                 "name": "Eco"
