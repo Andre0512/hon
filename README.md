@@ -209,7 +209,6 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Pan Status | `pot-mix` | `binary_sensor` | `panStatus` |
 | Power | `lightning-bolt` | `sensor` | `power` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
-| Remote Control | `remote` | `binary_sensor` | `attributes.parameters.remoteCtrValid` |
 | Temperature | `thermometer` | `sensor` | `temp` |
 
 ### Oven
@@ -231,7 +230,6 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Connection | `wifi` | `binary_sensor` | `attributes.lastConnEvent.category` |
 | On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
-| Remote Control | `remote` | `binary_sensor` | `attributes.parameters.remoteCtrValid` |
 | Start Time | `clock-start` | `sensor` | `delayTime` |
 | Temperature | `thermometer` | `sensor` | `temp` |
 | Temperature Selected | `thermometer` | `sensor` | `tempSel` |

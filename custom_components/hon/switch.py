@@ -379,3 +379,11 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
             await self.coordinator.async_refresh()
         else:
             await self._device.commands[self.entity_description.turn_off_key].send()
+
+    @property
+    def available(self) -> bool:
+        """Return True if entity is available."""
+        if self.entity_category == EntityCategory.CONFIG:
+            return super().available
+        else:
+            return super().available and self._device.get("remoteCtrValid") == "1"

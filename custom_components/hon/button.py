@@ -80,3 +80,8 @@ class HonFeatureRequestButton(HonEntity, ButtonEntity):
         pyhon_version = pkg_resources.get_distribution("pyhon").version
         info = f"Device Info:\n{self._device.diagnose}pyhOnVersion: {pyhon_version}"
         _LOGGER.error(info)
+
+    @property
+    def available(self) -> bool:
+        """Return True if entity is available."""
+        return super().available and self._device.get("remoteCtrValid") == "1"
