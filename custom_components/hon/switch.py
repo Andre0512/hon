@@ -318,10 +318,6 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
                     appliances.extend(
                         [HonSwitchEntity(hass, coordinator, entry, device, description)]
                     )
-                else:
-                    _LOGGER.warning(
-                        "[%s] Can't setup %s", device.appliance_type, description.key
-                    )
 
     async_add_entities(appliances)
 

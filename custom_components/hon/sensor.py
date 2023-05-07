@@ -520,9 +520,6 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
                 if not device.get(description.key) and not device.settings.get(
                     description.key
                 ):
-                    _LOGGER.warning(
-                        "[%s] Can't setup %s", device.appliance_type, description.key
-                    )
                     continue
                 appliances.extend(
                     [HonSensorEntity(hass, coordinator, entry, device, description)]
