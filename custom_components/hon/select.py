@@ -14,7 +14,7 @@ from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 
 from .const import DOMAIN
-from .hon import HonEntity, HonCoordinator
+from .hon import HonEntity, HonCoordinator, unique_entities
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -66,14 +66,6 @@ SELECTS = {
             translation_key="dry_levels",
         ),
     ),
-    "WD": (
-        SelectEntityDescription(
-            key="startProgram.program",
-            name="Program",
-            entity_category=EntityCategory.CONFIG,
-            translation_key="programs_wm",
-        ),
-    ),
     "OV": (
         SelectEntityDescription(
             key="startProgram.program",
@@ -113,6 +105,8 @@ SELECTS = {
         ),
     ),
 }
+
+SELECTS["WD"] = unique_entities(SELECTS["WM"], SELECTS["TD"])
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:

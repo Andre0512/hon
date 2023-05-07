@@ -15,7 +15,7 @@ from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 
 from .const import DOMAIN
-from .hon import HonEntity, HonCoordinator
+from .hon import HonEntity, HonCoordinator, unique_entities
 
 NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
     "WM": (
@@ -83,16 +83,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             name="Dry Time",
             entity_category=EntityCategory.CONFIG,
             translation_key="dry_time",
-        ),
-    ),
-    "WD": (
-        NumberEntityDescription(
-            key="startProgram.delayTime",
-            name="Delay Time",
-            icon="mdi:timer-plus",
-            entity_category=EntityCategory.CONFIG,
-            native_unit_of_measurement=UnitOfTime.MINUTES,
-            translation_key="delay_time",
         ),
     ),
     "OV": (
@@ -165,6 +155,8 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
         ),
     ),
 }
+
+NUMBERS["WD"] = unique_entities(NUMBERS["WM"], NUMBERS["TD"])
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:

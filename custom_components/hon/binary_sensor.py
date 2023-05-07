@@ -11,7 +11,7 @@ from homeassistant.components.binary_sensor import (
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
 from .const import DOMAIN
-from .hon import HonCoordinator, HonEntity
+from .hon import HonCoordinator, HonEntity, unique_entities
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -52,32 +52,6 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             on_value="1",
             translation_key="door_open",
         ),
-    ),
-    "TD": (
-        HonBinarySensorEntityDescription(
-            key="attributes.lastConnEvent.category",
-            name="Connection",
-            device_class=BinarySensorDeviceClass.CONNECTIVITY,
-            on_value="CONNECTED",
-            translation_key="connection",
-        ),
-        HonBinarySensorEntityDescription(
-            key="doorStatus",
-            name="Door",
-            device_class=BinarySensorDeviceClass.DOOR,
-            on_value="1",
-            translation_key="door_open",
-        ),
-    ),
-    "WD": (
-        HonBinarySensorEntityDescription(
-            key="attributes.lastConnEvent.category",
-            name="Remote Control",
-            device_class=BinarySensorDeviceClass.CONNECTIVITY,
-            on_value="CONNECTED",
-            icon="mdi:remote",
-            translation_key="remote_control",
-        ),
         HonBinarySensorEntityDescription(
             key="startProgram.prewash", name="Pre Wash", translation_key="prewash"
         ),
@@ -95,6 +69,22 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
         ),
         HonBinarySensorEntityDescription(
             key="acquaplus", name="Acqua Plus", translation_key="acqua_plus"
+        ),
+    ),
+    "TD": (
+        HonBinarySensorEntityDescription(
+            key="attributes.lastConnEvent.category",
+            name="Connection",
+            device_class=BinarySensorDeviceClass.CONNECTIVITY,
+            on_value="CONNECTED",
+            translation_key="connection",
+        ),
+        HonBinarySensorEntityDescription(
+            key="doorStatus",
+            name="Door",
+            device_class=BinarySensorDeviceClass.DOOR,
+            on_value="1",
+            translation_key="door_open",
         ),
         HonBinarySensorEntityDescription(
             key="anticrease", name="Anti-Crease", translation_key="anti_crease"
@@ -208,6 +198,9 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
 }
 
 
+BINARY_SENSORS["WD"] = unique_entities(BINARY_SENSORS["WM"], BINARY_SENSORS["TD"])
+
+
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
     hon: Hon = hass.data[DOMAIN][entry.unique_id]
     coordinators = hass.data[DOMAIN]["coordinators"]
@@ -224,12 +217,8 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             for description in descriptions:
                 if not device.get(description.key):
                     continue
-                appliances.extend(
-                    [
-                        HonBinarySensorEntity(
-                            hass, coordinator, entry, device, description
-                        )
-                    ]
+                appliances.append(
+                    HonBinarySensorEntity(hass, coordinator, entry, device, description)
                 )
 
     async_add_entities(appliances)

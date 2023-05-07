@@ -254,13 +254,14 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
 | Program |  | `select` | `startProgram.program` |
 | Steam Type | `weather-dust` | `sensor` | `steamType` |
-| Steam level | `smoke` | `sensor` | `steamLevel` |
+| Steam level | `smoke` | `sensor` | `startProgram.steamLevel` |
 | Sterilization | `clock-start` | `switch` | `startProgram.sterilizationStatus` |
 | Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` |
 | Temperature level | `thermometer` | `number` | `startProgram.tempLevel` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
+| Anti-Crease |  | `binary_sensor` | `anticrease` |
 | Connection |  | `binary_sensor` | `attributes.lastConnEvent.category` |
 | Door |  | `binary_sensor` | `doorStatus` |
 | Dry level | `hair-dryer` | `sensor` | `dryLevel` |
@@ -270,42 +271,78 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Start Time | `clock-start` | `sensor` | `delayTime` |
+| Steam level | `smoke` | `sensor` | `steamLevel` |
 | Temperature level | `thermometer` | `sensor` | `tempLevel` |
 
 ### Washer dryer
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Pause Washing Machine | `pause` | `switch` | `pauseProgram` / `resumeProgram` |
-| Washing Machine | `washing-machine` | `switch` | `startProgram` / `stopProgram` |
+| Pause Washer Dryer | `pause` | `switch` | `pauseProgram` / `resumeProgram` |
+| Washer Dryer | `washing-machine` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
+| Acqua Plus | `water-plus` | `switch` | `startProgram.acquaplus` |
+| Anti-Crease | `timer` | `switch` | `startProgram.antiCreaseTime` |
+| Anti-Crease | `timer` | `switch` | `startProgram.anticrease` |
+| Auto Dose | `cup` | `switch` | `startProgram.autoDetergentStatus` |
+| Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
 | Delay Time | `timer-plus` | `number` | `startProgram.delayTime` |
+| Dry Time |  | `number` | `startProgram.dryTime` |
+| Dry Time | `timer` | `select` | `startProgram.dryTimeMM` |
+| Dry level | `hair-dryer` | `select` | `startProgram.dryLevel` |
+| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
+| Extra Rinse 1 | `numeric-1-box-multiple-outline` | `switch` | `extraRinse1` |
+| Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `extraRinse2` |
+| Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `extraRinse3` |
+| Good Night | `weather-night` | `switch` | `goodNight` |
+| Keep Fresh | `refresh-circle` | `switch` | `startProgram.autoSoftenerStatus` |
+| Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
+| Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
+| Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` |
 | Program |  | `select` | `startProgram.program` |
+| Remaining Time | `timer` | `sensor` | `startProgram.remainingTime` |
+| Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
+| Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` |
+| Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |
+| Steam Level | `weather-dust` | `number` | `startProgram.steamLevel` |
+| Steam Type | `weather-dust` | `sensor` | `steamType` |
+| Steam level | `smoke` | `sensor` | `startProgram.steamLevel` |
+| Sterilization | `clock-start` | `switch` | `startProgram.sterilizationStatus` |
+| Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadW` |
+| Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` |
 | Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` |
+| Temperature | `thermometer` | `select` | `startProgram.temp` |
+| Temperature level | `thermometer` | `number` | `startProgram.tempLevel` |
+| Water hard | `water` | `number` | `startProgram.waterHard` |
+| lang |  | `number` | `startProgram.lang` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Acqua Plus |  | `binary_sensor` | `acquaplus` |
 | Anti-Crease |  | `binary_sensor` | `anticrease` |
 | Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
-| Current Program | `tumble-dryer` | `sensor` | `prCode` |
-| Current Temperature | `thermometer` | `sensor` | `temp` |
 | Current Water Used | `water` | `sensor` | `currentWaterUsed` |
 | Dirt level | `liquid-spot` | `sensor` | `dirtyLevel` |
+| Door |  | `binary_sensor` | `doorStatus` |
+| Door Lock |  | `binary_sensor` | `doorLockStatus` |
 | Dry level | `hair-dryer` | `sensor` | `dryLevel` |
+| Error | `math-log` | `sensor` | `errors` |
 | Extra Rinse 1 |  | `binary_sensor` | `extraRinse1` |
 | Extra Rinse 2 |  | `binary_sensor` | `extraRinse2` |
 | Extra Rinse 3 |  | `binary_sensor` | `extraRinse3` |
 | Good Night Mode |  | `binary_sensor` | `goodNight` |
 | Machine Status | `information` | `sensor` | `machMode` |
 | Pre Wash |  | `binary_sensor` | `startProgram.prewash` |
+| Program | `tumble-dryer` | `sensor` | `programName` |
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
-| Spin Speed | `fast-forward-outline` | `sensor` | `spinSpeed` |
+| Spin Speed | `speedometer` | `sensor` | `spinSpeed` |
+| Start Time | `clock-start` | `sensor` | `delayTime` |
 | Steam level | `smoke` | `sensor` | `steamLevel` |
+| Temperature level | `thermometer` | `sensor` | `tempLevel` |
 | Total Power |  | `sensor` | `totalElectricityUsed` |
 | Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` |
 | Total Water |  | `sensor` | `totalWaterUsed` |
@@ -346,13 +383,19 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
+| Acqua Plus |  | `binary_sensor` | `acquaplus` |
 | Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
 | Current Water Used | `water` | `sensor` | `currentWaterUsed` |
 | Dirt level | `liquid-spot` | `sensor` | `dirtyLevel` |
 | Door |  | `binary_sensor` | `doorStatus` |
 | Door Lock |  | `binary_sensor` | `doorLockStatus` |
 | Error | `math-log` | `sensor` | `errors` |
+| Extra Rinse 1 |  | `binary_sensor` | `extraRinse1` |
+| Extra Rinse 2 |  | `binary_sensor` | `extraRinse2` |
+| Extra Rinse 3 |  | `binary_sensor` | `extraRinse3` |
+| Good Night Mode |  | `binary_sensor` | `goodNight` |
 | Machine Status | `information` | `sensor` | `machMode` |
+| Pre Wash |  | `binary_sensor` | `startProgram.prewash` |
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` |

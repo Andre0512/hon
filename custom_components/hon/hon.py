@@ -50,3 +50,12 @@ class HonCoordinator(DataUpdateCoordinator):
 
     async def _async_update_data(self):
         await self._device.update()
+
+
+def unique_entities(base_entities, new_entities):
+    result = list(base_entities)
+    existing_entities = [entity.key for entity in base_entities]
+    for entity in new_entities:
+        if entity.key not in existing_entities:
+            result.append(entity)
+    return tuple(result)

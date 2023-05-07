@@ -10,7 +10,7 @@ from pyhon.appliance import HonAppliance
 from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
-from .hon import HonCoordinator, HonEntity
+from .hon import HonCoordinator, HonEntity, unique_entities
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -168,7 +168,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
     "WD": (
         HonSwitchEntityDescription(
             key="active",
-            name="Washing Machine",
+            name="Washer Dryer",
             icon="mdi:washing-machine",
             turn_on_key="startProgram",
             turn_off_key="stopProgram",
@@ -176,7 +176,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         ),
         HonSwitchEntityDescription(
             key="pause",
-            name="Pause Washing Machine",
+            name="Pause Washer Dryer",
             icon="mdi:pause",
             turn_on_key="pauseProgram",
             turn_off_key="resumeProgram",
@@ -295,6 +295,9 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         ),
     ),
 }
+
+SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["WM"])
+SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["TD"])
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:

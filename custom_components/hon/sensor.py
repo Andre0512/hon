@@ -25,7 +25,7 @@ from homeassistant.const import PERCENTAGE
 
 from . import const
 from .const import DOMAIN
-from .hon import HonCoordinator, HonEntity
+from .hon import HonCoordinator, HonEntity, unique_entities
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -112,7 +112,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Spin Speed",
             icon="mdi:speedometer",
             state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement=UnitOfTime.MINUTES,
+            native_unit_of_measurement=REVOLUTIONS_PER_MINUTE,
             translation_key="spin_speed",
         ),
         SensorEntityDescription(
@@ -238,10 +238,16 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             translation_key="energy_label",
         ),
         SensorEntityDescription(
-            key="steamLevel",
+            key="startProgram.steamLevel",
             name="Steam level",
             icon="mdi:smoke",
             entity_category=EntityCategory.CONFIG,
+            translation_key="steam_level",
+        ),
+        SensorEntityDescription(
+            key="steamLevel",
+            name="Steam level",
+            icon="mdi:smoke",
             translation_key="steam_level",
         ),
         SensorEntityDescription(
@@ -249,120 +255,6 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Steam Type",
             icon="mdi:weather-dust",
             entity_category=EntityCategory.CONFIG,
-        ),
-    ),
-    "WD": (
-        SensorEntityDescription(
-            key="totalElectricityUsed",
-            name="Total Power",
-            device_class=SensorDeviceClass.ENERGY,
-            state_class=SensorStateClass.TOTAL_INCREASING,
-            native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-            translation_key="energy_total",
-        ),
-        SensorEntityDescription(
-            key="totalWaterUsed",
-            name="Total Water",
-            device_class=SensorDeviceClass.WATER,
-            state_class=SensorStateClass.TOTAL_INCREASING,
-            native_unit_of_measurement=UnitOfVolume.LITERS,
-            translation_key="water_total",
-        ),
-        SensorEntityDescription(
-            key="totalWashCycle",
-            name="Total Wash Cycle",
-            state_class=SensorStateClass.TOTAL_INCREASING,
-            icon="mdi:counter",
-            translation_key="cycles_total",
-        ),
-        SensorEntityDescription(
-            key="currentElectricityUsed",
-            name="Current Electricity Used",
-            state_class=SensorStateClass.MEASUREMENT,
-            device_class=SensorDeviceClass.POWER,
-            native_unit_of_measurement=UnitOfPower.KILO_WATT,
-            icon="mdi:lightning-bolt",
-            translation_key="energy_current",
-        ),
-        SensorEntityDescription(
-            key="currentWaterUsed",
-            name="Current Water Used",
-            state_class=SensorStateClass.MEASUREMENT,
-            icon="mdi:water",
-            translation_key="water_current",
-        ),
-        SensorEntityDescription(
-            key="startProgram.weight",
-            name="Suggested weight",
-            state_class=SensorStateClass.MEASUREMENT,
-            entity_category=EntityCategory.CONFIG,
-            native_unit_of_measurement=UnitOfMass.KILOGRAMS,
-            icon="mdi:weight-kilogram",
-            translation_key="suggested_load",
-        ),
-        SensorEntityDescription(
-            key="machMode",
-            name="Machine Status",
-            icon="mdi:information",
-            device_class=SensorDeviceClass.ENUM,
-            translation_key="washing_modes",
-            options=list(const.MACH_MODE),
-        ),
-        SensorEntityDescription(
-            key="spinSpeed",
-            name="Spin Speed",
-            icon="mdi:fast-forward-outline",
-            state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement=REVOLUTIONS_PER_MINUTE,
-            translation_key="spin_speed",
-        ),
-        SensorEntityDescription(
-            key="remainingTimeMM",
-            name="Remaining Time",
-            icon="mdi:timer",
-            state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement=UnitOfTime.MINUTES,
-            translation_key="remaining_time",
-        ),
-        SensorEntityDescription(
-            key="prCode",
-            name="Current Program",
-            icon="mdi:tumble-dryer",
-            translation_key="programs",
-        ),
-        SensorEntityDescription(
-            key="prPhase",
-            name="Program Phase",
-            icon="mdi:washing-machine",
-            device_class=SensorDeviceClass.ENUM,
-            translation_key="program_phases_wm",
-            options=list(const.WASHING_PR_PHASE),
-        ),
-        SensorEntityDescription(
-            key="dryLevel",
-            name="Dry level",
-            icon="mdi:hair-dryer",
-            translation_key="dry_levels",
-        ),
-        SensorEntityDescription(
-            key="dirtyLevel",
-            name="Dirt level",
-            icon="mdi:liquid-spot",
-            translation_key="dirt_level",
-        ),
-        SensorEntityDescription(
-            key="steamLevel",
-            name="Steam level",
-            icon="mdi:smoke",
-            translation_key="steam_level",
-        ),
-        SensorEntityDescription(
-            key="temp",
-            name="Current Temperature",
-            icon="mdi:thermometer",
-            state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
-            translation_key="temperature",
         ),
     ),
     "OV": (
@@ -501,6 +393,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         ),
     ),
 }
+SENSORS["WD"] = unique_entities(SENSORS["WM"], SENSORS["TD"])
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
