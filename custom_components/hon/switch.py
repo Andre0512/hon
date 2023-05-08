@@ -326,6 +326,8 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
                 if (
                     device.get(description.key) is not None
                     or description.key in device.available_settings
+                    or description.turn_on_key in list(device.commands)
+                    or description.turn_off_key in list(device.commands)
                 ):
                     appliances.extend(
                         [HonSwitchEntity(hass, coordinator, entry, device, description)]
