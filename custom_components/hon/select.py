@@ -98,8 +98,9 @@ SELECTS = {
             translation_key="programs_ac",
         ),
         SelectEntityDescription(
-            key="startProgram.humanSensingStatus",
+            key="settings.humanSensingStatus",
             name="Eco Pilot",
+            icon="mdi:run",
             entity_category=EntityCategory.CONFIG,
             translation_key="eco_pilot",
         ),

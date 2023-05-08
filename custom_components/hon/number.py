@@ -146,7 +146,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
     ),
     "AC": (
         NumberEntityDescription(
-            key="startProgram.tempSel",
+            key="settings.tempSel",
             name="Target Temperature",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",

@@ -138,19 +138,19 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| 10° Heating |  | `switch` | `startProgram.10degreeHeatingStatus` |
-| Echo |  | `switch` | `startProgram.echoStatus` |
-| Eco Mode |  | `switch` | `startProgram.ecoMode` |
-| Eco Pilot |  | `select` | `startProgram.humanSensingStatus` |
-| Health Mode |  | `switch` | `startProgram.healthMode` |
-| Mute |  | `switch` | `startProgram.muteStatus` |
+| 10° Heating | `heat-wave` | `switch` | `settings.10degreeHeatingStatus` |
+| Echo | `account-voice` | `switch` | `settings.echoStatus` |
+| Eco Mode |  | `switch` | `settings.ecoMode` |
+| Eco Pilot | `run` | `select` | `settings.humanSensingStatus` |
+| Health Mode | `medication-outline` | `switch` | `settings.healthMode` |
+| Mute | `volume-off` | `switch` | `settings.muteStatus` |
 | Program |  | `select` | `startProgram.program` |
-| Rapid Mode |  | `switch` | `startProgram.rapidMode` |
-| Screen Display |  | `switch` | `startProgram.screenDisplayStatus` |
-| Self Cleaning |  | `switch` | `startProgram.selfCleaningStatus` |
-| Self Cleaning 56 |  | `switch` | `startProgram.selfCleaning56Status` |
-| Silent Sleep |  | `switch` | `startProgram.silentSleepStatus` |
-| Target Temperature | `thermometer` | `number` | `startProgram.tempSel` |
+| Rapid Mode | `run-fast` | `switch` | `settings.rapidMode` |
+| Screen Display | `monitor-small` | `switch` | `settings.screenDisplayStatus` |
+| Self Cleaning | `air-filter` | `switch` | `settings.selfCleaningStatus` |
+| Self Cleaning 56 | `air-filter` | `switch` | `settings.selfCleaning56Status` |
+| Silent Sleep | `bed` | `switch` | `settings.silentSleepStatus` |
+| Target Temperature | `thermometer` | `number` | `settings.tempSel` |
 
 ### Dish washer
 #### Controls
