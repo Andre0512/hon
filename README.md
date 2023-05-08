@@ -322,6 +322,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Acqua Plus |  | `binary_sensor` | `acquaplus` |
 | Anti-Crease |  | `binary_sensor` | `anticrease` |
 | Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
+| Current Temperature | `thermometer` | `sensor` | `temp` |
 | Current Water Used | `water` | `sensor` | `currentWaterUsed` |
 | Dirt level | `liquid-spot` | `sensor` | `dirtyLevel` |
 | Door |  | `binary_sensor` | `doorStatus` |
@@ -384,6 +385,7 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | --- | --- | --- | --- |
 | Acqua Plus |  | `binary_sensor` | `acquaplus` |
 | Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
+| Current Temperature | `thermometer` | `sensor` | `temp` |
 | Current Water Used | `water` | `sensor` | `currentWaterUsed` |
 | Dirt level | `liquid-spot` | `sensor` | `dirtyLevel` |
 | Door |  | `binary_sensor` | `doorStatus` |

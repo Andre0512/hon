@@ -161,6 +161,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfMass.KILOGRAMS,
             translation_key="suggested_load",
         ),
+        SensorEntityDescription(
+            key="temp",
+            name="Current Temperature",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
+        ),
     ),
     "TD": (
         SensorEntityDescription(
