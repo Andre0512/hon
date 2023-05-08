@@ -29,6 +29,7 @@ Support was confirmed for these models. If a supported model is missing, please 
 - Candy CIS633SCTTWIFI
 - Haier XIB 3B2SFS-80
 - Haier XIB 6B2D3FB
+- Hoover HSOT3161WG
 
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:

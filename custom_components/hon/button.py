@@ -64,6 +64,11 @@ class HonButtonEntity(HonEntity, ButtonEntity):
     async def async_press(self) -> None:
         await self._device.commands[self.entity_description.key].send()
 
+    @property
+    def available(self) -> bool:
+        """Return True if entity is available."""
+        return super().available and self._device.get("remoteCtrValid") == "1"
+
 
 class HonFeatureRequestButton(HonEntity, ButtonEntity):
     def __init__(self, hass, coordinator, entry, device: HonAppliance) -> None:
@@ -80,8 +85,3 @@ class HonFeatureRequestButton(HonEntity, ButtonEntity):
         pyhon_version = pkg_resources.get_distribution("pyhon").version
         info = f"Device Info:\n{self._device.diagnose}pyhOnVersion: {pyhon_version}"
         _LOGGER.error(info)
-
-    @property
-    def available(self) -> bool:
-        """Return True if entity is available."""
-        return super().available and self._device.get("remoteCtrValid") == "1"

@@ -40,6 +40,7 @@ Support was confirmed for these models. If a supported model is missing, please 
 - Candy CIS633SCTTWIFI
 - Haier XIB 3B2SFS-80
 - Haier XIB 6B2D3FB
+- Hoover HSOT3161WG
 
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:
@@ -291,10 +292,10 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Dry Time | `timer` | `select` | `startProgram.dryTimeMM` |
 | Dry level | `hair-dryer` | `select` | `startProgram.dryLevel` |
 | Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
-| Extra Rinse 1 | `numeric-1-box-multiple-outline` | `switch` | `extraRinse1` |
-| Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `extraRinse2` |
-| Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `extraRinse3` |
-| Good Night | `weather-night` | `switch` | `goodNight` |
+| Extra Rinse 1 | `numeric-1-box-multiple-outline` | `switch` | `startProgram.extraRinse1` |
+| Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `startProgram.extraRinse2` |
+| Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `startProgram.extraRinse3` |
+| Good Night | `weather-night` | `switch` | `startProgram.goodNight` |
 | Keep Fresh | `refresh-circle` | `switch` | `startProgram.autoSoftenerStatus` |
 | Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
@@ -359,10 +360,10 @@ I moved the api related stuff into the package [pyhOn](https://github.com/Andre0
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
 | Delay Time | `timer-plus` | `number` | `startProgram.delayTime` |
 | Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
-| Extra Rinse 1 | `numeric-1-box-multiple-outline` | `switch` | `extraRinse1` |
-| Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `extraRinse2` |
-| Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `extraRinse3` |
-| Good Night | `weather-night` | `switch` | `goodNight` |
+| Extra Rinse 1 | `numeric-1-box-multiple-outline` | `switch` | `startProgram.extraRinse1` |
+| Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `startProgram.extraRinse2` |
+| Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `startProgram.extraRinse3` |
+| Good Night | `weather-night` | `switch` | `startProgram.goodNight` |
 | Keep Fresh | `refresh-circle` | `switch` | `startProgram.autoSoftenerStatus` |
 | Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |

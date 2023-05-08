@@ -130,8 +130,8 @@ class HonClimateEntity(HonEntity, ClimateEntity):
 
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
-        # self._attr_target_temperature = int(float(self._device.get("tempSel")))
-        # self._attr_current_temperature = float(self._device.get("tempIndoor"))
+        self._attr_target_temperature = int(float(self._device.get("tempSel")))
+        self._attr_current_temperature = float(self._device.get("tempIndoor"))
         self._attr_max_temp = self._device.settings["settings.tempSel"].max
         self._attr_min_temp = self._device.settings["settings.tempSel"].min
 
