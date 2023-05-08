@@ -323,16 +323,18 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
         if descriptions := SWITCHES.get(device.appliance_type):
             for description in descriptions:
-                if (
-                    description.entity_category == EntityCategory.CONFIG
-                    and description.key not in device.available_settings
-                    or not any(
-                        device.get(description.key) is not None
-                        or description.turn_on_key in list(device.commands)
-                        or description.turn_off_key in list(device.commands)
-                    )
-                ):
-                    continue
+                if description.entity_category == EntityCategory.CONFIG:
+                    if description.key not in device.available_settings:
+                        continue
+                else:
+                    if not any(
+                        [
+                            device.get(description.key) is not None,
+                            description.turn_on_key in list(device.commands),
+                            description.turn_off_key in list(device.commands),
+                        ]
+                    ):
+                        continue
                 appliances.extend(
                     [HonSwitchEntity(hass, coordinator, entry, device, description)]
                 )
