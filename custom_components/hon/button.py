@@ -83,5 +83,5 @@ class HonFeatureRequestButton(HonEntity, ButtonEntity):
 
     async def async_press(self) -> None:
         pyhon_version = pkg_resources.get_distribution("pyhon").version
-        info = f"Device Info:\n{self._device.diagnose}pyhOnVersion: {pyhon_version}"
+        info = f"Device Info:\n{self._device.diagnose()}pyhOnVersion: {pyhon_version}"
         _LOGGER.error(info)
