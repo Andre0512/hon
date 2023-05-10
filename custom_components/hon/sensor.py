@@ -1,7 +1,5 @@
 import logging
 
-from pyhon import Hon
-
 from homeassistant.components.sensor import (
     SensorEntity,
     SensorDeviceClass,
@@ -9,6 +7,7 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
 )
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import PERCENTAGE
 from homeassistant.const import (
     REVOLUTIONS_PER_MINUTE,
     UnitOfEnergy,
@@ -21,7 +20,7 @@ from homeassistant.const import (
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.typing import StateType
-from homeassistant.const import PERCENTAGE
+from pyhon import Hon
 
 from . import const
 from .const import DOMAIN
@@ -398,6 +397,26 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             device_class=SensorDeviceClass.ENUM,
             translation_key="program_phases_dw",
             options=list(const.DISHWASHER_PR_PHASE),
+        ),
+    ),
+    "REF": (
+        SensorEntityDescription(
+            key="humidityEnv",
+            name="Room Humidity",
+            icon="mdi:water-percent",
+            device_class=SensorDeviceClass.HUMIDITY,
+            native_unit_of_measurement=PERCENTAGE,
+            state_class=SensorStateClass.MEASUREMENT,
+            translation_key="humidity",
+        ),
+        SensorEntityDescription(
+            key="tempEnv",
+            name="Room Temperature",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="room_temperature",
         ),
     ),
 }

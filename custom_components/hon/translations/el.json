@@ -307,6 +307,12 @@
                     "xxl_load": "XXL Φορτιο",
                     "zoom_59": "Zoom 59"
                 }
+            },
+            "room_temperature": {
+                "name": "Θερμοκρασία δωματίου"
+            },
+            "humidity": {
+                "name": "Υγρασία"
             }
         },
         "select": {
@@ -1013,6 +1019,28 @@
                     "iot_uv_and_fan": "UV + Ανεμιστήρας",
                     "iot_uv_and_heat": "UV + Θέρμανση"
                 }
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "ΑΥΤΌΜΑΤΗ ΡΎΘΜΙΣΗ",
+                    "cheese": "Τυρί",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Λειτουργία Eco",
+                    "fruits_and_veg": "ΦΡΟΥΤΑ & ΛΑΧΑΝΙΚΑ",
+                    "fruit_and_veg": "Fruit & Veg",
+                    "holiday": "Ρυθμίστε το ψυγείο στους 17°C και διατηρήστε την κατάψυξη σε λειτουργία για μεγάλο χρονικό διάστημα.",
+                    "keep_fresh": "0° Fresh",
+                    "no_mode_selected": "Δεν επιλέχθηκε λειτουργία",
+                    "quick_cool": "ΓΡΗΓΟΡΗ ΨΥΞΗ",
+                    "sea_food": "Ready to cook meal",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "SUPER COOL",
+                    "super_freeze": "SUPER FREEZE",
+                    "tea": "Cold drinks or Beverages",
+                    "zero_fresh": "0° Fresh"
+                }
             }
         },
         "switch": {
@@ -1219,6 +1247,11 @@
         "button": {
             "induction_hob": {
                 "name": "Επαγωγική εστία"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Κλιματιστικό"
             }
         }
     },

@@ -12,6 +12,7 @@ Support for home appliances of Haier's mobile app hOn.
 - [Hob](https://github.com/Andre0512/hon#hob)
 - [Dish Washer](https://github.com/Andre0512/hon#dish-washer)
 - [Air conditioner](https://github.com/Andre0512/hon#air-conditioner) [BETA]
+- [Fridge](https://github.com/Andre0512/hon#fridge) [BETA]
 
 ## Configuration
 
@@ -21,15 +22,29 @@ Support for home appliances of Haier's mobile app hOn.
 _If the integration is not in the list, you need to clear the browser cache._
 
 ## Supported Models
-Support was confirmed for these models. If a supported model is missing, please [add it with this form](https://forms.gle/bTSD8qFotdZFytbf8).
-- Haier WD90-B14TEAM5
+Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+- Haier EG9012B19SU1JD
 - Haier HD80-A3959
+- Haier HW90-B14TEAM5
+- Haier HWD100-B14979
 - Haier HWO60SM2F3XH
-- Hoover H-WASH 500
-- Candy CIS633SCTTWIFI
 - Haier XIB 3B2SFS-80
 - Haier XIB 6B2D3FB
+- Candy CIS633SCTTWIFI
+- Candy CSOE C10DE-80
+- Candy ROE H9A3TCEX-S
+- Candy RPW41066BWMR/1-S
+- Hoover H-WASH 500
+- Hoover H-DRY 500
+- Hoover H7W4 48MBC-S
+- Hoover H9A3TCBEXS-S
+- Hoover HFB 6B2S3FX
+- Hoover HLE C10DCE-80
 - Hoover HSOT3161WG
+- Hoover HWPD 69AMBC/1-S
+- Hoover NDE H10A2TCE-80
+- Hoover NDPHY10A2TCBEXSS
+
 
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:

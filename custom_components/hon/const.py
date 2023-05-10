@@ -180,50 +180,6 @@ AC_HUMAN_SENSE = {
     "2": "AC.PROGRAM_DETAIL.FOLLOW_TOUCH",
 }
 
-TUMBLE_DRYER_PROGRAMS = [
-    "hqd_baby_care"
-    "hqd_bath_towel"
-    "hqd_bed_sheets"
-    "hqd_bulky"
-    "hqd_casual"
-    "hqd_cold_wind_30"
-    "hqd_cold_wind_timing"
-    "hqd_cotton"
-    "hqd_curtain"
-    "hqd_delicate"
-    "hqd_diaper"
-    "hqd_duvet"
-    "hqd_feather"
-    "hqd_hot_wind_timing"
-    "hqd_hygienic"
-    "hqd_i_refresh"
-    "hqd_i_refresh_pro"
-    "hqd_jacket"
-    "hqd_jeans"
-    "hqd_luxury"
-    "hqd_mix"
-    "hqd_night_dry"
-    "hqd_outdoor"
-    "hqd_precious_cure"
-    "hqd_quick_20"
-    "hqd_quick_30"
-    "hqd_quick_dry"
-    "hqd_quilt"
-    "hqd_refresh"
-    "hqd_school_uniform"
-    "hqd_shirt"
-    "hqd_shoes"
-    "hqd_silk"
-    "hqd_sports"
-    "hqd_synthetics"
-    "hqd_timer"
-    "hqd_towel"
-    "hqd_underwear"
-    "hqd_warm_up"
-    "hqd_wool"
-    "hqd_working_suit"
-]
-
 PROGRAMS_TD = [
     "active_dry",
     "allergy_care",

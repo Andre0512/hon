@@ -307,6 +307,12 @@
                     "xxl_load": "XXL náplň",
                     "zoom_59": "Zoom 59"
                 }
+            },
+            "room_temperature": {
+                "name": "Izbová teplota"
+            },
+            "humidity": {
+                "name": "Vlhkosť"
             }
         },
         "select": {
@@ -1013,6 +1019,28 @@
                     "iot_uv_and_fan": "UV + Ventilátor",
                     "iot_uv_and_heat": "UV + Ohrev"
                 }
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "AUTOMATICKÉ NASTAVENIE",
+                    "cheese": "Syr",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Režim Eco",
+                    "fruits_and_veg": "Fruit&Veg",
+                    "fruit_and_veg": "Fruit & Veg",
+                    "holiday": "DOVOLENKA",
+                    "keep_fresh": "0° Fresh",
+                    "no_mode_selected": "Nie je vybraný žiadny režim",
+                    "quick_cool": "QUICK COOL",
+                    "sea_food": "Ready to cook meal",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "SUPER CHLADENIE",
+                    "super_freeze": "SUPER MRAZENIE",
+                    "tea": "Cold drinks or Beverages",
+                    "zero_fresh": "0° Fresh"
+                }
             }
         },
         "switch": {
@@ -1219,6 +1247,11 @@
         "button": {
             "induction_hob": {
                 "name": "Indukčná varná doska"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Klimatizácia"
             }
         }
     },

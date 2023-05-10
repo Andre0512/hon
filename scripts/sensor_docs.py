@@ -4,11 +4,13 @@ import re
 import sys
 from pathlib import Path
 
+
 if __name__ == "__main__":
     sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from custom_components.hon.binary_sensor import BINARY_SENSORS
 from custom_components.hon.button import BUTTONS
+from custom_components.hon.climate import CLIMATES
 from custom_components.hon.number import NUMBERS
 from custom_components.hon.select import SELECTS
 from custom_components.hon.sensor import SENSORS
@@ -41,6 +43,7 @@ entities = {
     "select": SELECTS,
     "sensor": SENSORS,
     "switch": SWITCHES,
+    "climate": CLIMATES,
 }
 
 result = {}
@@ -55,7 +58,11 @@ for entity_type, appliances in entities.items():
             else:
                 key = entity.key
             attributes = (key, entity.name, entity.icon, entity_type)
-            category = "control" if entity_type in ["switch", "button"] else "sensor"
+            category = (
+                "control"
+                if entity_type in ["switch", "button", "climate"]
+                else "sensor"
+            )
             result.setdefault(appliance, {}).setdefault(
                 entity.entity_category or category, []
             ).append(attributes)

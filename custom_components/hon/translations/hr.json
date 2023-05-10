@@ -307,6 +307,12 @@
                     "xxl_load": "XXL kapacitet",
                     "zoom_59": "Zoom 59"
                 }
+            },
+            "room_temperature": {
+                "name": "Sobna temperatura"
+            },
+            "humidity": {
+                "name": "Vlažnost"
             }
         },
         "select": {
@@ -1013,6 +1019,28 @@
                     "iot_uv_and_fan": "UV + ventilator",
                     "iot_uv_and_heat": "UV + grijanje"
                 }
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "AUTOMATSKA POSTAVKA",
+                    "cheese": "Sir",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Način rada Eco",
+                    "fruits_and_veg": "Voće i Povrće",
+                    "fruit_and_veg": "Fruit & Veg",
+                    "holiday": "ODMOR",
+                    "keep_fresh": "0° Fresh",
+                    "no_mode_selected": "Nije odabran način rada",
+                    "quick_cool": "BRZO HLAĐENJE",
+                    "sea_food": "Ready to cook meal",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "SUPER HLAĐENJE",
+                    "super_freeze": "SUPER ZAMRZAVANJE",
+                    "tea": "Hladna pića i napitci",
+                    "zero_fresh": "0° Fresh"
+                }
             }
         },
         "switch": {
@@ -1219,6 +1247,11 @@
         "button": {
             "induction_hob": {
                 "name": "Indukcijska ploča za kuhanje"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Klimatizacijski uređaj"
             }
         }
     },

@@ -307,6 +307,12 @@
                     "xxl_load": "XXL Çamaşır",
                     "zoom_59": "Yakınlaştır 59"
                 }
+            },
+            "room_temperature": {
+                "name": "Oda sıcaklığı"
+            },
+            "humidity": {
+                "name": "Nem"
             }
         },
         "select": {
@@ -1013,6 +1019,28 @@
                     "iot_uv_and_fan": "UV + Fan",
                     "iot_uv_and_heat": "UV + Isıtma"
                 }
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "OTOMATİK AYAR",
+                    "cheese": "Peynir",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Eco modu",
+                    "fruits_and_veg": "Meyve Ve Sebze",
+                    "fruit_and_veg": "Fruit & Veg",
+                    "holiday": "TATİL ",
+                    "keep_fresh": "0° Fresh",
+                    "no_mode_selected": "Hiç mod seçilmedi",
+                    "quick_cool": "HIZLI SOĞUTMA",
+                    "sea_food": "Ready to cook meal",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "SUPER COOL",
+                    "super_freeze": "SUPER FREEZE",
+                    "tea": "Cold drinks or Beverages",
+                    "zero_fresh": "0° Fresh"
+                }
             }
         },
         "switch": {
@@ -1219,6 +1247,11 @@
         "button": {
             "induction_hob": {
                 "name": "İndüksiyonlu Ocak"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Klima"
             }
         }
     },

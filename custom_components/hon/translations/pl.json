@@ -307,6 +307,12 @@
                     "xxl_load": "XXL Load",
                     "zoom_59": "Zoom 59"
                 }
+            },
+            "room_temperature": {
+                "name": "Temperatura pokojowa"
+            },
+            "humidity": {
+                "name": "Wilgotność"
             }
         },
         "select": {
@@ -1013,6 +1019,28 @@
                     "iot_uv_and_fan": "UV + wentylator",
                     "iot_uv_and_heat": "UV + podgrzewanie"
                 }
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "AUTO-SET",
+                    "cheese": "Ser",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Tryb Eco",
+                    "fruits_and_veg": "Fruit&Veg",
+                    "fruit_and_veg": "Fruit & Veg",
+                    "holiday": "HOLIDAY",
+                    "keep_fresh": "0° Fresh",
+                    "no_mode_selected": "Nie wybrano żadnego trybu",
+                    "quick_cool": "QUICK COOL",
+                    "sea_food": "Ready to cook meal",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "SUPER COOL",
+                    "super_freeze": "SUPER FREEZE",
+                    "tea": "Cold drinks or Beverages",
+                    "zero_fresh": "0° Fresh"
+                }
             }
         },
         "switch": {
@@ -1219,6 +1247,11 @@
         "button": {
             "induction_hob": {
                 "name": "Płyta indukcyjna"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Klimatyzator"
             }
         }
     },

@@ -1,8 +1,6 @@
 import logging
 from dataclasses import dataclass
 
-from pyhon import Hon
-
 from homeassistant.components.binary_sensor import (
     BinarySensorEntityDescription,
     BinarySensorDeviceClass,
@@ -10,6 +8,8 @@ from homeassistant.components.binary_sensor import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
+from pyhon import Hon
+
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity, unique_entities
 

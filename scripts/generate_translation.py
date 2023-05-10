@@ -36,6 +36,7 @@ PROGRAMS = {
         "programs_ov": "PROGRAMS.OV",
         "programs_td": "PROGRAMS.TD",
         "programs_wm": "PROGRAMS.WM_WD",
+        "programs_ref": "PROGRAMS.REF",
     },
     "sensor": {
         "programs_td": "PROGRAMS.TD",
@@ -134,6 +135,8 @@ NAMES = {
         "det_liquid": "HUBS.WIDGET.STAINS_WIDGET.STAINS.SUGGESTED_DET_LIQUID",
         "errors": "ROBOT_CMD&CTRL.PHASE_ERROR.TITLE",
         "programs": "OV.TABS.CURRENT_PROGRAM",
+        "room_temperature": "REF.SMART_DRINK_ASSISTANT.AMBIENT",
+        "humidity": "AP.TITLES.HUMIDITY",
         "cycles_total": [
             "WASHING_CMD&CTRL.GENERAL.CYCLES",
             "WC.VIRTUAL_WINE_STATS_COUNTRY.TOTAL",
@@ -167,6 +170,7 @@ NAMES = {
         "dry_time": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_TIME",
         "steam_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.STEAM_LEVEL",
     },
+    "climate": {"air_conditioner": "GLOBALS.APPLIANCES_NAME.AC"},
 }
 
 

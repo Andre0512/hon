@@ -1,11 +1,10 @@
 import logging
 from datetime import timedelta
 
-from pyhon.appliance import HonAppliance
-
 from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
+from pyhon.appliance import HonAppliance
 
 from .const import DOMAIN
 

@@ -307,6 +307,12 @@
                     "xxl_load": "XXL Load",
                     "zoom_59": "缩放 59"
                 }
+            },
+            "room_temperature": {
+                "name": "室温"
+            },
+            "humidity": {
+                "name": "湿度"
             }
         },
         "select": {
@@ -1013,6 +1019,28 @@
                     "iot_uv_and_fan": "UV + 风扇",
                     "iot_uv_and_heat": "UV + 加热"
                 }
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "AUTO-SET（自动设置）",
+                    "cheese": "奶酪",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Eco 模式",
+                    "fruits_and_veg": "Fruit&Veg（水果和蔬菜）",
+                    "fruit_and_veg": "Fruit & Veg",
+                    "holiday": "HOLIDAY（假日模式）",
+                    "keep_fresh": "0° Fresh",
+                    "no_mode_selected": "未选择模式",
+                    "quick_cool": "QUICK COOL（快速冷却）",
+                    "sea_food": "Ready to cook meal",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "SUPER COOL（超级冷却）",
+                    "super_freeze": "SUPER FREEZE（超级冷冻）",
+                    "tea": "Cold drinks or Beverages",
+                    "zero_fresh": "0° Fresh"
+                }
             }
         },
         "switch": {
@@ -1219,6 +1247,11 @@
         "button": {
             "induction_hob": {
                 "name": "电磁炉"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "空调"
             }
         }
     },

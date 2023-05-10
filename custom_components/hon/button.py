@@ -1,14 +1,12 @@
 import logging
-import urllib
-from urllib.parse import quote
 
 import pkg_resources
 from homeassistant.components.button import ButtonEntityDescription, ButtonEntity
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import EntityCategory
 from pyhon import Hon
 from pyhon.appliance import HonAppliance
 
-from homeassistant.const import EntityCategory
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity
 

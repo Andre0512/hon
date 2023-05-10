@@ -307,6 +307,12 @@
                     "xxl_load": "Încărcare XXL",
                     "zoom_59": "Zoom 59"
                 }
+            },
+            "room_temperature": {
+                "name": "Temperatura camerei"
+            },
+            "humidity": {
+                "name": "Umiditate"
             }
         },
         "select": {
@@ -1013,6 +1019,28 @@
                     "iot_uv_and_fan": "UV + ventilator",
                     "iot_uv_and_heat": "UV + încălzire"
                 }
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "AUTO-SET (Setare automată)",
+                    "cheese": "Brânză",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Modul Eco",
+                    "fruits_and_veg": "Fruit&Veg (Fructe și legume)",
+                    "fruit_and_veg": "Fruit & Veg",
+                    "holiday": "HOLIDAY (Perioadă de neutilizare)",
+                    "keep_fresh": "0° Fresh",
+                    "no_mode_selected": "Niciun mod selectat",
+                    "quick_cool": "QUICK COOL",
+                    "sea_food": "Ready to cook meal",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "SUPER COOL (Răcire rapidă)",
+                    "super_freeze": "SUPER FREEZE (Congelare rapidă)",
+                    "tea": "Cold drinks or Beverages",
+                    "zero_fresh": "0° Fresh"
+                }
             }
         },
         "switch": {
@@ -1219,6 +1247,11 @@
         "button": {
             "induction_hob": {
                 "name": "Plita cu inducție"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Aer condiționat"
             }
         }
     },

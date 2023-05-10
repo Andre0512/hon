@@ -1,10 +1,5 @@
 from __future__ import annotations
 
-from pyhon import Hon
-from pyhon.parameter.base import HonParameter
-from pyhon.parameter.fixed import HonParameterFixed
-from pyhon.parameter.range import HonParameterRange
-
 from homeassistant.components.number import (
     NumberEntity,
     NumberEntityDescription,
@@ -13,6 +8,10 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTime, UnitOfTemperature
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
+from pyhon import Hon
+from pyhon.parameter.base import HonParameter
+from pyhon.parameter.fixed import HonParameterFixed
+from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
 from .hon import HonEntity, HonCoordinator, unique_entities

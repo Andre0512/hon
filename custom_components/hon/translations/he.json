@@ -188,6 +188,12 @@
                     "hqd_working_suit": "Working suit",
                     "iot_dry_synthetic_dry": "סינתטי יבש"
                 }
+            },
+            "room_temperature": {
+                "name": "Room temperature"
+            },
+            "humidity": {
+                "name": "Humidity"
             }
         },
         "select": {
@@ -477,6 +483,17 @@
                 "state": {
                     "iot_simple_start": "התחל עכשיו"
                 }
+            },
+            "programs_ref": {
+                "state": {
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "fruit_and_veg": "Fruit & Veg",
+                    "keep_fresh": "0° Fresh",
+                    "sea_food": "Ready to cook meal",
+                    "soft_frozen": "Soft freezing",
+                    "tea": "Cold drinks or Beverages"
+                }
             }
         },
         "switch": {
@@ -683,6 +700,11 @@
         "button": {
             "induction_hob": {
                 "name": "Induction Hob"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Air conditioner"
             }
         }
     },

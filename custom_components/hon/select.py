@@ -1,17 +1,15 @@
 from __future__ import annotations
 
 import logging
-import time
-
-from pyhon import Hon
-from pyhon.appliance import HonAppliance
-from pyhon.parameter.fixed import HonParameterFixed
 
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTemperature, UnitOfTime, REVOLUTIONS_PER_MINUTE
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
+from pyhon import Hon
+from pyhon.appliance import HonAppliance
+from pyhon.parameter.fixed import HonParameterFixed
 
 from .const import DOMAIN
 from .hon import HonEntity, HonCoordinator, unique_entities
@@ -103,6 +101,14 @@ SELECTS = {
             icon="mdi:run",
             entity_category=EntityCategory.CONFIG,
             translation_key="eco_pilot",
+        ),
+    ),
+    "REF": (
+        SelectEntityDescription(
+            key="startProgram.program",
+            name="Program",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="programs_ref",
         ),
     ),
 }

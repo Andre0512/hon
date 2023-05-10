@@ -29,7 +29,14 @@ from .hon import HonEntity, HonCoordinator
 _LOGGER = logging.getLogger(__name__)
 
 CLIMATES = {
-    "AC": (ClimateEntityDescription(key="startProgram", icon="mdi:air-conditioner"),),
+    "AC": (
+        ClimateEntityDescription(
+            key="settings",
+            name="Air Conditioner",
+            icon="mdi:air-conditioner",
+            translation_key="air_conditioner",
+        ),
+    ),
 }
 
 
