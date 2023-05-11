@@ -1,6 +1,8 @@
 import logging
 
 import pkg_resources
+
+from homeassistant.components import persistent_notification
 from homeassistant.components.button import ButtonEntityDescription, ButtonEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory
@@ -71,15 +73,18 @@ class HonButtonEntity(HonEntity, ButtonEntity):
 class HonFeatureRequestButton(HonEntity, ButtonEntity):
     def __init__(self, hass, coordinator, entry, device: HonAppliance) -> None:
         super().__init__(hass, entry, coordinator, device)
+        self._hass = hass
 
         self._device = device
         self._attr_unique_id = f"{super().unique_id}_log_device_info"
         self._attr_icon = "mdi:information"
-        self._attr_name = "Log Device Info"
+        self._attr_name = "Show Device Info"
         self._attr_entity_category = EntityCategory.DIAGNOSTIC
         self._attr_entity_registry_enabled_default = False
 
     async def async_press(self) -> None:
         pyhon_version = pkg_resources.get_distribution("pyhon").version
         info = f"Device Info:\n{self._device.diagnose()}pyhOnVersion: {pyhon_version}"
-        _LOGGER.error(info)
+        title = f"{self._device.nick_name} Device Info"
+        persistent_notification.create(self._hass, f"```\n```{info}```\n```", title)
+        _LOGGER.info(info.replace(" ", "\u200B "))

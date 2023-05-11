@@ -21,31 +21,6 @@ Support for home appliances of Haier's mobile app hOn.
 **Method 2**: Settings > Devices & Services > Add Integration > **Haier hOn**  
 _If the integration is not in the list, you need to clear the browser cache._
 
-## Supported Models
-Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
-- Haier EG9012B19SU1JD
-- Haier HD80-A3959
-- Haier HW90-B14TEAM5
-- Haier HWD100-B14979
-- Haier HWO60SM2F3XH
-- Haier XIB 3B2SFS-80
-- Haier XIB 6B2D3FB
-- Candy CIS633SCTTWIFI
-- Candy CSOE C10DE-80
-- Candy ROE H9A3TCEX-S
-- Candy RPW41066BWMR/1-S
-- Hoover H-WASH 500
-- Hoover H-DRY 500
-- Hoover H7W4 48MBC-S
-- Hoover H9A3TCBEXS-S
-- Hoover HFB 6B2S3FX
-- Hoover HLE C10DCE-80
-- Hoover HSOT3161WG
-- Hoover HWPD 69AMBC/1-S
-- Hoover NDE H10A2TCE-80
-- Hoover NDPHY10A2TCBEXSS
-
-
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:
 * 🇨🇳 Chinese
@@ -67,6 +42,38 @@ Translation of internal names like programs are available for all languages whic
 * 🇸🇮 Slovenian
 * 🇪🇸 Spanish
 * 🇹🇷 Turkish
+
+## Examples
+### Washing Machine
+![washing_machine.png](assets/washing_machine.png)
+
+## Supported Models
+Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+- Haier AS25PBAHRA
+- Haier EG9012B19SU1JD
+- Haier HD80-A3959
+- Haier HW90-B14TEAM5
+- Haier HW100-B14959U1
+- Haier HWD100-B14979
+- Haier HWO60SM2F3XH
+- Haier XIB 3B2SFS-80
+- Haier XIB 6B2D3FB
+- Candy CIS633SCTTWIFI
+- Candy CSOE C10DE-80
+- Candy ROE H9A3TCEX-S
+- Candy RPW41066BWMR/1-S
+- Hoover H-WASH 500
+- Hoover H-DRY 500
+- Hoover H7W4 48MBC-S
+- Hoover H9A3TCBEXS-S
+- Hoover HFB 6B2S3FX
+- Hoover HLE C10DCE-80
+- Hoover HSOT3161WG
+- Hoover HWPD 69AMBC/1-S
+- Hoover HWPS4954DAMR-11
+- Hoover NDE H10A2TCE-80
+- Hoover NDE H9A2TSBEXS-S
+- Hoover NDPHY10A2TCBEXSS
 
 ## Contribute
 Want to help us to support more appliances? Or add more sensors? Or help with translating? Or beautify some icons or captions? 

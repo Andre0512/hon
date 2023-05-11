@@ -1,17 +1,18 @@
 # Haier hOn
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://hacs.xyz)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/Andre0512/hon?color=green)](https://github.com/Andre0512/hon/releases/latest)
+[![PyPI](https://img.shields.io/pypi/v/pyhon?label=pyhOn)](https://github.com/Andre0512/pyhOn)
 [![GitHub](https://img.shields.io/github/license/Andre0512/hon?color=red)](https://github.com/Andre0512/hon/blob/main/LICENSE)
 [![GitHub all releases](https://img.shields.io/github/downloads/Andre0512/hon/total?color=blue)](https://tooomm.github.io/github-release-stats/?username=Andre0512&repository=hon)  
-Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home appliances like washing machines.
+Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.com/).
 
 ## Supported Appliances
 - [Washing Machine](https://github.com/Andre0512/hon#washing-machine)
 - [Tumble Dryer](https://github.com/Andre0512/hon#tumble-dryer)
 - [Washer Dryer](https://github.com/Andre0512/hon#washer-dryer)
 - [Oven](https://github.com/Andre0512/hon#oven)
-- [Hob](https://github.com/Andre0512/hon#hob)
 - [Dish Washer](https://github.com/Andre0512/hon#dish-washer)
+- [Hob](https://github.com/Andre0512/hon#hob) [BETA]
 - [Air conditioner](https://github.com/Andre0512/hon#air-conditioner) [BETA]
 - [Fridge](https://github.com/Andre0512/hon#fridge) [BETA]
 
@@ -30,31 +31,6 @@ _Restart Home Assistant_
 
 **Method 2**: Settings > Devices & Services > Add Integration > **Haier hOn**  
 _If the integration is not in the list, you need to clear the browser cache._
-
-
-## Supported Models
-Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
-- Haier EG9012B19SU1JD
-- Haier HD80-A3959
-- Haier HW90-B14TEAM5
-- Haier HWD100-B14979
-- Haier HWO60SM2F3XH
-- Haier XIB 3B2SFS-80
-- Haier XIB 6B2D3FB
-- Candy CIS633SCTTWIFI
-- Candy CSOE C10DE-80
-- Candy ROE H9A3TCEX-S
-- Candy RPW41066BWMR/1-S
-- Hoover H-WASH 500
-- Hoover H-DRY 500
-- Hoover H7W4 48MBC-S
-- Hoover H9A3TCBEXS-S
-- Hoover HFB 6B2S3FX
-- Hoover HLE C10DCE-80
-- Hoover HSOT3161WG
-- Hoover HWPD 69AMBC/1-S
-- Hoover NDE H10A2TCE-80
-- Hoover NDPHY10A2TCBEXSS
 
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:
@@ -78,26 +54,47 @@ Translation of internal names like programs are available for all languages whic
 * 🇪🇸 Spanish
 * 🇹🇷 Turkish
 
+## Examples
+### Washing Machine
+![washing_machine.png](assets/washing_machine.png)
+
+## Supported Models
+Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+- Haier AS25PBAHRA
+- Haier EG9012B19SU1JD
+- Haier HD80-A3959
+- Haier HW90-B14TEAM5
+- Haier HW100-B14959U1
+- Haier HWD100-B14979
+- Haier HWO60SM2F3XH
+- Haier XIB 3B2SFS-80
+- Haier XIB 6B2D3FB
+- Candy CIS633SCTTWIFI
+- Candy CSOE C10DE-80
+- Candy ROE H9A3TCEX-S
+- Candy RPW41066BWMR/1-S
+- Hoover H-WASH 500
+- Hoover H-DRY 500
+- Hoover H7W4 48MBC-S
+- Hoover H9A3TCBEXS-S
+- Hoover HFB 6B2S3FX
+- Hoover HLE C10DCE-80
+- Hoover HSOT3161WG
+- Hoover HWPD 69AMBC/1-S
+- Hoover HWPS4954DAMR-11
+- Hoover NDE H10A2TCE-80
+- Hoover NDE H9A2TSBEXS-S
+- Hoover NDPHY10A2TCBEXSS
+
 ## Contribute
 Any kind of contribution is welcome!
 ### Read out device data
 If you want to make a request for adding new appliances or additional attributes and don't want to use the command line, here is how you can read out your device data.
-For every device exists a hidden button which can be used to log all info of your appliance.
-1. Enable the "Log Device Info" button  
+For every device exists a hidden button which can be used to log all infos of your appliance.
+1. Enable the "Show Device Info" button  
    _This button can be found in the diagnostic section of your device or in the entity overview if "show disabled entities" is enabled._
-2. Press the button
-3. Go to Settings > System > Logs, click _load full logs_ and scroll down  
-   _The formatting is messy if you not load full logs_
-4. Here you can find all data which can be read out via the api
-   ```yaml
-   data:
-     appliance:
-       applianceId: 12-34-56-78-90-ab#2022-10-25T19:47:11Z
-       applianceModelId: 1569 
-       ...
-   ```
-5. Copy this data and create a [new issue](https://github.com/Andre0512/hon/issues/new) with your request
-
+2. Press the button to create a notification
+3. Open home assistant notifications and copy the message (Crtl+A, Ctrl+C)
 ### Add appliances or additional attributes
 1. Install [pyhOn](https://github.com/Andre0512/pyhOn)
    ```commandline
@@ -142,13 +139,13 @@ For every device exists a hidden button which can be used to log all info of you
 - If you need to implement some more logic, create a pull request to the underlying library. There we collect special requirements in the `appliances` directory.
 - Use [pyhOn's translate command](https://github.com/Andre0512/pyhOn#translation) to read out the official translations
 
-## About this Repo
-The existing integrations missed some features from the app I liked to have in HomeAssistant.
-I tried to create a pull request, but in the structures of these existing repos, I find it hard to fit in my needs, so I basically rewrote everything. 
-I moved the api related stuff into the package [pyhOn](https://github.com/Andre0512/pyhOn).
+## Special Thanks
+- to [@alexandre-leites](https://github.com/alexandre-leites), [@MiguelAngelLV](https://github.com/MiguelAngelLV) and [@drudgebg](https://github.com/drudgebg) for contributing early to this project and adding new integrations.
+- to [gvigroux/hon](https://github.com/gvigroux/hon), [signalize/hon-app-research](https://github.com/signalize/hon-app-research) and [slegars56/hon](https://github.com/slegars56/hon) for inspiring me to do this integration and for doing pioneer work on the hOn api.
+- to everyone who contributed, created an issue, gave this repo a star, and used this integration.
+- to the patience of my girlfriend as I work on this integration.
 
 ## Appliance Features
-
 ### Air conditioner
 #### Controls
 | Name | Icon | Entity | Key |
