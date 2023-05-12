@@ -586,6 +586,12 @@
             },
             "good_night": {
                 "name": "לילה טוב"
+            },
+            "auto_dose_softener": {
+                "name": "מינון אוטומטי מרכך"
+            },
+            "auto_dose_detergent": {
+                "name": "מינון אוטומטי חומר ניקוי"
             }
         },
         "binary_sensor": {

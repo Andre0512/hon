@@ -146,6 +146,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 - to the patience of my girlfriend as I work on this integration.
 
 ## Appliance Features
+
 ### Air conditioner
 #### Controls
 | Name | Icon | Entity | Key |
@@ -311,7 +312,8 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Acqua Plus | `water-plus` | `switch` | `startProgram.acquaplus` |
 | Anti-Crease | `timer` | `switch` | `startProgram.antiCreaseTime` |
 | Anti-Crease | `timer` | `switch` | `startProgram.anticrease` |
-| Auto Dose | `cup` | `switch` | `startProgram.autoDetergentStatus` |
+| Auto Dose Detergent | `cup` | `switch` | `startProgram.autoDetergentStatus` |
+| Auto Dose Softener | `teddy-bear` | `switch` | `startProgram.autoSoftenerStatus` |
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
 | Delay Time | `timer-plus` | `number` | `startProgram.delayTime` |
 | Dry Time |  | `number` | `startProgram.dryTime` |
@@ -322,7 +324,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `startProgram.extraRinse2` |
 | Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `startProgram.extraRinse3` |
 | Good Night | `weather-night` | `switch` | `startProgram.goodNight` |
-| Keep Fresh | `refresh-circle` | `switch` | `startProgram.autoSoftenerStatus` |
+| Keep Fresh | `refresh-circle` | `switch` | `startProgram.permanentPressStatus` |
 | Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
 | Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` |
@@ -383,7 +385,8 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Acqua Plus | `water-plus` | `switch` | `startProgram.acquaplus` |
-| Auto Dose | `cup` | `switch` | `startProgram.autoDetergentStatus` |
+| Auto Dose Detergent | `cup` | `switch` | `startProgram.autoDetergentStatus` |
+| Auto Dose Softener | `teddy-bear` | `switch` | `startProgram.autoSoftenerStatus` |
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
 | Delay Time | `timer-plus` | `number` | `startProgram.delayTime` |
 | Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
@@ -391,7 +394,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `startProgram.extraRinse2` |
 | Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `startProgram.extraRinse3` |
 | Good Night | `weather-night` | `switch` | `startProgram.goodNight` |
-| Keep Fresh | `refresh-circle` | `switch` | `startProgram.autoSoftenerStatus` |
+| Keep Fresh | `refresh-circle` | `switch` | `startProgram.permanentPressStatus` |
 | Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
 | Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` |

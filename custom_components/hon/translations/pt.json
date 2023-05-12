@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "Boa Noite"
+            },
+            "auto_dose_softener": {
+                "name": "Autodosagem Amaciador"
+            },
+            "auto_dose_detergent": {
+                "name": "Autodosagem Detergente"
             }
         },
         "binary_sensor": {

@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "Dobranoc"
+            },
+            "auto_dose_softener": {
+                "name": "Automatyczne dozowanie Środek zmiękczający"
+            },
+            "auto_dose_detergent": {
+                "name": "Automatyczne dozowanie Detergent"
             }
         },
         "binary_sensor": {

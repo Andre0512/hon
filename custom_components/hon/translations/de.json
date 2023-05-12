@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "Gute Nacht"
+            },
+            "auto_dose_softener": {
+                "name": "Autodosierung Weichspüler"
+            },
+            "auto_dose_detergent": {
+                "name": "Autodosierung Spülmittel"
             }
         },
         "binary_sensor": {

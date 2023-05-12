@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "İyi Geceler"
+            },
+            "auto_dose_softener": {
+                "name": "Otomatik doz Yumuşatıcı"
+            },
+            "auto_dose_detergent": {
+                "name": "Otomatik doz Deterjan"
             }
         },
         "binary_sensor": {

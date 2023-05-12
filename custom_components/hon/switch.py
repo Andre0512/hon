@@ -61,18 +61,25 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             translation_key="prewash",
         ),
         HonSwitchEntityDescription(
-            key="startProgram.autoSoftenerStatus",
+            key="startProgram.permanentPressStatus",
             name="Keep Fresh",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:refresh-circle",
             translation_key="keep_fresh",
         ),
         HonSwitchEntityDescription(
+            key="startProgram.autoSoftenerStatus",
+            name="Auto Dose Softener",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:teddy-bear",
+            translation_key="auto_dose_softener",
+        ),
+        HonSwitchEntityDescription(
             key="startProgram.autoDetergentStatus",
-            name="Auto Dose",
+            name="Auto Dose Detergent",
             entity_category=EntityCategory.CONFIG,
             icon="mdi:cup",
-            translation_key="auto_dose",
+            translation_key="auto_dose_detergent",
         ),
         HonSwitchEntityDescription(
             key="startProgram.acquaplus",

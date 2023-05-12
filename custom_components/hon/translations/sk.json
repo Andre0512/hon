@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "Dobrú noc"
+            },
+            "auto_dose_softener": {
+                "name": "Automatická dávka Aviváž"
+            },
+            "auto_dose_detergent": {
+                "name": "Automatická dávka Prací prostriedok"
             }
         },
         "binary_sensor": {

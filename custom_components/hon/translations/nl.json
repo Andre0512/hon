@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "Goede nacht"
+            },
+            "auto_dose_softener": {
+                "name": "Automatisch doseren Wasverzachter"
+            },
+            "auto_dose_detergent": {
+                "name": "Automatisch doseren Wasmiddel"
             }
         },
         "binary_sensor": {

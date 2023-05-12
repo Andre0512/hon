@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "晚安"
+            },
+            "auto_dose_softener": {
+                "name": "自动定量 柔软剂"
+            },
+            "auto_dose_detergent": {
+                "name": "自动定量 洗涤剂"
             }
         },
         "binary_sensor": {

@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "Good Night"
+            },
+            "auto_dose_softener": {
+                "name": "Automatsko doziranje Omekšivač"
+            },
+            "auto_dose_detergent": {
+                "name": "Automatsko doziranje Deterdžent"
             }
         },
         "binary_sensor": {

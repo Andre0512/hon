@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "Спокойной ночи"
+            },
+            "auto_dose_softener": {
+                "name": "Автодозирование Кондиционер"
+            },
+            "auto_dose_detergent": {
+                "name": "Автодозирование Средство для стирки"
             }
         },
         "binary_sensor": {

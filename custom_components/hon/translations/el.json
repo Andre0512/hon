@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "Καληνυχτα"
+            },
+            "auto_dose_softener": {
+                "name": "Αυτόματη Δοσολογία Μαλακτικό"
+            },
+            "auto_dose_detergent": {
+                "name": "Αυτόματη Δοσολογία Απορρυπαντικό"
             }
         },
         "binary_sensor": {

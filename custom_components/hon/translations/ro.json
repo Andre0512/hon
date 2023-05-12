@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "Noapte bună"
+            },
+            "auto_dose_softener": {
+                "name": "Autodozare Balsam"
+            },
+            "auto_dose_detergent": {
+                "name": "Autodozare Detergent"
             }
         },
         "binary_sensor": {

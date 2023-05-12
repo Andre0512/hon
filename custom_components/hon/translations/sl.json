@@ -1133,6 +1133,12 @@
             },
             "good_night": {
                 "name": "Lahko noč"
+            },
+            "auto_dose_softener": {
+                "name": "Samodejno odmerjanje Mehčalec"
+            },
+            "auto_dose_detergent": {
+                "name": "Samodejno odmerjanje Detergent"
             }
         },
         "binary_sensor": {

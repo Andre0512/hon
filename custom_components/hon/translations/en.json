@@ -464,6 +464,12 @@
             },
             "good_night": {
                 "name": "Good Night"
+            },
+            "auto_dose_softener": {
+                "name": "Autodose Softener"
+            },
+            "auto_dose_detergent": {
+                "name": "Autodose Detergent"
             }
         },
         "select": {
