@@ -410,4 +410,9 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         if self.entity_category == EntityCategory.CONFIG:
             return super().available
         else:
-            return super().available and self._device.get("remoteCtrValid") == "1"
+            return (
+                super().available
+                and self._device.get("remoteCtrValid") == "1"
+                and self._device.get("attributes.lastConnEvent.category")
+                != "DISCONNECTED"
+            )
