@@ -165,10 +165,12 @@ class HonSelectEntity(HonEntity, SelectEntity):
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"
 
-        if not isinstance(self._device.settings[description.key], HonParameterFixed):
-            self._attr_options: list[str] = device.settings[description.key].values
+        if not (setting := self._device.settings.get(description.key)):
+            self._attr_options: list[str] = []
+        elif not isinstance(setting, HonParameterFixed):
+            self._attr_options: list[str] = setting.value
         else:
-            self._attr_options: list[str] = [device.settings[description.key].value]
+            self._attr_options: list[str] = [setting.value]
 
     @property
     def current_option(self) -> str | None:
@@ -179,10 +181,10 @@ class HonSelectEntity(HonEntity, SelectEntity):
 
     async def async_select_option(self, option: str) -> None:
         self._device.settings[self.entity_description.key].value = option
-        if "settings." in self.entity_description:
-            self._device.commands["settings"].send()
+        if "settings." in self.entity_description.key:
+            await self._device.commands["settings"].send()
         elif self._device.appliance_type in ["AC"]:
-            self._device.commands["startProgram"].send()
+            await self._device.commands["startProgram"].send()
         await self.coordinator.async_refresh()
 
     @callback

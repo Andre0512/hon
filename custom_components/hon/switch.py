@@ -392,10 +392,10 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
                 setting.max if isinstance(setting, HonParameterRange) else "1"
             )
             self.async_write_ha_state()
-            if "settings." in self.entity_description:
-                self._device.commands["settings"].send()
+            if "settings." in self.entity_description.key:
+                await self._device.commands["settings"].send()
             elif self._device.appliance_type in ["AC"]:
-                self._device.commands["startProgram"].send()
+                await self._device.commands["startProgram"].send()
             await self.coordinator.async_refresh()
         else:
             await self._device.commands[self.entity_description.turn_on_key].send()
@@ -407,10 +407,10 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
                 setting.min if isinstance(setting, HonParameterRange) else "0"
             )
             self.async_write_ha_state()
-            if "settings." in self.entity_description:
-                self._device.commands["settings"].send()
+            if "settings." in self.entity_description.key:
+                await self._device.commands["settings"].send()
             elif self._device.appliance_type in ["AC"]:
-                self._device.commands["startProgram"].send()
+                await self._device.commands["startProgram"].send()
             await self.coordinator.async_refresh()
         else:
             await self._device.commands[self.entity_description.turn_off_key].send()
