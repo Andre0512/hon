@@ -1041,6 +1041,9 @@
                     "tea": "Cold drinks or Beverages",
                     "zero_fresh": "0° Fresh"
                 }
+            },
+            "remaining_time": {
+                "name": "Kalan süre"
             }
         },
         "switch": {
@@ -1216,6 +1219,9 @@
             },
             "auto_dose": {
                 "name": "Otomatik doz"
+            },
+            "buzzer": {
+                "name": "Program sonu zili"
             }
         },
         "number": {

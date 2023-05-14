@@ -102,6 +102,7 @@ NAMES = {
         "child_lock": "AP.FOOTER_MENU_MORE.SECURITY_LOCK_TITLE",
         "on": "GLOBALS.GENERAL.ON",
         "prewash": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.PREWASH",
+        "buzzer": "DW_CMD&CTRL.SETTINGS.END_CYCLE_BUZZER",
     },
     "button": {
         "induction_hob": "GLOBALS.APPLIANCES_NAME.IH",
@@ -117,6 +118,7 @@ NAMES = {
         "programs_td": "WC.SET_PROGRAM.PROGRAM",
         "programs_wm": "WC.SET_PROGRAM.PROGRAM",
         "eco_pilot": "AC.PROGRAM_DETAIL.ECO_PILOT",
+        "remaining_time": "ENROLLMENT_COMMON.GENERAL.REMAINING_TIME",
     },
     "sensor": {
         "dry_levels": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_LEVEL",

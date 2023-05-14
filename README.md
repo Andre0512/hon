@@ -178,6 +178,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Add Dish | `silverware-fork-knife` | `switch` | `startProgram.addDish` |
+| Buzzer Disabled | `volume-off` | `switch` | `settings.buzzerDisabled` |
 | Delay time | `timer-plus` | `number` | `startProgram.delayTime` |
 | Eco Express | `sprout` | `switch` | `startProgram.ecoExpress` |
 | Eco Index | `sprout` | `sensor` | `startProgram.ecoIndex` |
@@ -186,6 +187,8 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Half Load | `fraction-one-half` | `switch` | `startProgram.halfLoad` |
 | Open Door | `door-open` | `switch` | `startProgram.openDoor` |
 | Program |  | `select` | `startProgram.program` |
+| Remaining Time | `timer` | `select` | `startProgram.remainingTime` |
+| Temperature | `thermometer` | `select` | `startProgram.temp` |
 | Temperature | `thermometer` | `sensor` | `startProgram.temp` |
 | Three in One | `numeric-3-box-outline` | `switch` | `startProgram.threeInOne` |
 | Time | `timer` | `sensor` | `startProgram.remainingTime` |

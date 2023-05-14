@@ -1041,6 +1041,9 @@
                     "tea": "Hladna pića i napitci",
                     "zero_fresh": "0° Fresh"
                 }
+            },
+            "remaining_time": {
+                "name": "Preostalo vrijeme"
             }
         },
         "switch": {
@@ -1216,6 +1219,9 @@
             },
             "auto_dose": {
                 "name": "Automatsko doziranje"
+            },
+            "buzzer": {
+                "name": "Zvono za završetak ciklusa"
             }
         },
         "number": {

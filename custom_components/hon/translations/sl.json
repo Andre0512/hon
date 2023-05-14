@@ -1041,6 +1041,9 @@
                     "tea": "Cold drinks or Beverages",
                     "zero_fresh": "0° Fresh"
                 }
+            },
+            "remaining_time": {
+                "name": "Time remaining"
             }
         },
         "switch": {
@@ -1216,6 +1219,9 @@
             },
             "auto_dose": {
                 "name": "Samodejno odmerjanje"
+            },
+            "buzzer": {
+                "name": "Zvočni signal ob koncu cikla"
             }
         },
         "number": {

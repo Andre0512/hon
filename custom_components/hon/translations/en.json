@@ -1207,6 +1207,9 @@
                     "tea": "Cold drinks or Beverages",
                     "zero_fresh": "0° Fresh"
                 }
+            },
+            "remaining_time": {
+                "name": "Time remaining"
             }
         },
         "binary_sensor": {
@@ -1284,6 +1287,9 @@
             },
             "auto_dose": {
                 "name": "Autodose"
+            },
+            "buzzer": {
+                "name": "Cycle end chime"
             }
         },
         "number": {

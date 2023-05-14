@@ -87,6 +87,22 @@ SELECTS = {
             entity_category=EntityCategory.CONFIG,
             translation_key="programs_dw",
         ),
+        SelectEntityDescription(
+            key="startProgram.temp",
+            name="Temperature",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:thermometer",
+            unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
+        ),
+        SelectEntityDescription(
+            key="startProgram.remainingTime",
+            name="Remaining Time",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:timer",
+            unit_of_measurement=UnitOfTime.MINUTES,
+            translation_key="remaining_time",
+        ),
     ),
     "AC": (
         SelectEntityDescription(

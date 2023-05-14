@@ -1041,6 +1041,9 @@
                     "tea": "Cold drinks or Beverages",
                     "zero_fresh": "0° Fresh"
                 }
+            },
+            "remaining_time": {
+                "name": "剩余时间"
             }
         },
         "switch": {
@@ -1216,6 +1219,9 @@
             },
             "auto_dose": {
                 "name": "自动定量"
+            },
+            "buzzer": {
+                "name": "循环结束提示音"
             }
         },
         "number": {

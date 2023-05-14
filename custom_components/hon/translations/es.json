@@ -1041,6 +1041,9 @@
                     "tea": "Cold drinks or Beverages",
                     "zero_fresh": "0° Fresh"
                 }
+            },
+            "remaining_time": {
+                "name": "Tiempo restante"
             }
         },
         "switch": {
@@ -1216,6 +1219,9 @@
             },
             "auto_dose": {
                 "name": "Dosificación automática"
+            },
+            "buzzer": {
+                "name": "Campana de fin de ciclo"
             }
         },
         "number": {

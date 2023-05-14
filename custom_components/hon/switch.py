@@ -241,6 +241,13 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             entity_category=EntityCategory.CONFIG,
             translation_key="add_dish",
         ),
+        HonSwitchEntityDescription(
+            key="settings.buzzerDisabled",
+            name="Buzzer Disabled",
+            icon="mdi:volume-off",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="buzzer",
+        ),
     ),
     "AC": (
         HonSwitchEntityDescription(
