@@ -1222,6 +1222,24 @@
             },
             "buzzer": {
                 "name": "Sygnał dźwiękowy końca cyklu"
+            },
+            "holiday_mode": {
+                "name": "Tryb Holiday"
+            },
+            "auto_set": {
+                "name": "Ustawianie automatyczne"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Drzwi otwarte Zamrażarka"
+            },
+            "fridge_door": {
+                "name": "Drzwi otwarte Lodówka"
             }
         },
         "number": {
@@ -1254,6 +1272,12 @@
             },
             "steam_level": {
                 "name": "Poziom pary"
+            },
+            "freezer_temp_sel": {
+                "name": "Temperatura docelowa Zamrażarka"
+            },
+            "fridge_temp_sel": {
+                "name": "Temperatura docelowa Lodówka"
             }
         },
         "button": {

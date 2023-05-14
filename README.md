@@ -258,12 +258,20 @@ For every device exists a hidden button which can be used to log all infos of yo
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
+| Freezer Temperature | `thermometer` | `number` | `settings.tempSelZ2` |
+| Fridge Temperature | `thermometer` | `number` | `settings.tempSelZ1` |
 | Program |  | `select` | `startProgram.program` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
+| Auto-Set Mode | `robot-outline` | `binary_sensor` | `intelligenceMode` |
+| Door Status Freezer | `fridge-top` | `binary_sensor` | `doorStatusZ1` |
+| Door Status Fridge | `fridge-bottom` | `binary_sensor` | `door2StatusZ1` |
+| Holiday Mode | `palm-tree` | `binary_sensor` | `holidayMode` |
 | Room Humidity | `water-percent` | `sensor` | `humidityEnv` |
 | Room Temperature | `thermometer` | `sensor` | `tempEnv` |
+| Super Cool | `snowflake` | `binary_sensor` | `quickModeZ2` |
+| Super Freeze | `snowflake-variant` | `binary_sensor` | `quickModeZ1` |
 
 ### Tumble dryer
 #### Controls

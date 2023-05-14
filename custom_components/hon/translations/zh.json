@@ -1222,6 +1222,24 @@
             },
             "buzzer": {
                 "name": "循环结束提示音"
+            },
+            "holiday_mode": {
+                "name": "Holiday 模式"
+            },
+            "auto_set": {
+                "name": "自动设置"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "门打开 冷藏箱"
+            },
+            "fridge_door": {
+                "name": "门打开 冰箱"
             }
         },
         "number": {
@@ -1254,6 +1272,12 @@
             },
             "steam_level": {
                 "name": "蒸汽档位"
+            },
+            "freezer_temp_sel": {
+                "name": "目标温度 冷藏箱"
+            },
+            "fridge_temp_sel": {
+                "name": "目标温度 冰箱"
             }
         },
         "button": {

@@ -1222,6 +1222,24 @@
             },
             "buzzer": {
                 "name": "Zvuková signalizace konce cyklu"
+            },
+            "holiday_mode": {
+                "name": "Režim Holiday"
+            },
+            "auto_set": {
+                "name": "Automatické nastavení"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Otevřená dvířka Mraznička"
+            },
+            "fridge_door": {
+                "name": "Otevřená dvířka Chladnička"
             }
         },
         "number": {
@@ -1254,6 +1272,12 @@
             },
             "steam_level": {
                 "name": "Úroveň páry"
+            },
+            "freezer_temp_sel": {
+                "name": "Cílová teplota Mraznička"
+            },
+            "fridge_temp_sel": {
+                "name": "Cílová teplota Chladnička"
             }
         },
         "button": {

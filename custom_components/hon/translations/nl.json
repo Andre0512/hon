@@ -1222,6 +1222,24 @@
             },
             "buzzer": {
                 "name": "Bel voor einde cyclus"
+            },
+            "holiday_mode": {
+                "name": "Holiday-modus (Vakantie)"
+            },
+            "auto_set": {
+                "name": "Automatisch instellen"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Deur open Vriezer"
+            },
+            "fridge_door": {
+                "name": "Deur open Koelkast"
             }
         },
         "number": {
@@ -1254,6 +1272,12 @@
             },
             "steam_level": {
                 "name": "Stoomniveau"
+            },
+            "freezer_temp_sel": {
+                "name": "Doeltemperatuur Vriezer"
+            },
+            "fridge_temp_sel": {
+                "name": "Doeltemperatuur Koelkast"
             }
         },
         "button": {

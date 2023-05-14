@@ -1222,6 +1222,24 @@
             },
             "buzzer": {
                 "name": "Signalton zum Programmende"
+            },
+            "holiday_mode": {
+                "name": "Holiday-Modus"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Tür offen Gefrierschrank"
+            },
+            "fridge_door": {
+                "name": "Tür offen Kühlschrank"
             }
         },
         "number": {
@@ -1254,6 +1272,12 @@
             },
             "steam_level": {
                 "name": "Dampfstufe"
+            },
+            "freezer_temp_sel": {
+                "name": "Zieltemperatur Gefrierschrank"
+            },
+            "fridge_temp_sel": {
+                "name": "Zieltemperatur Kühlschrank"
             }
         },
         "button": {

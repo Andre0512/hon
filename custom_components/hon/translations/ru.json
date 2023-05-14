@@ -1222,6 +1222,24 @@
             },
             "buzzer": {
                 "name": "Звуковой сигнал окончания цикла"
+            },
+            "holiday_mode": {
+                "name": "Режим Holiday (режим отпуска)"
+            },
+            "auto_set": {
+                "name": "Автоматическая установка"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Дверца открыта Морозильник"
+            },
+            "fridge_door": {
+                "name": "Дверца открыта Холодильник"
             }
         },
         "number": {
@@ -1254,6 +1272,12 @@
             },
             "steam_level": {
                 "name": "Уровень пара"
+            },
+            "freezer_temp_sel": {
+                "name": "Заданная температура Морозильник"
+            },
+            "fridge_temp_sel": {
+                "name": "Заданная температура Холодильник"
             }
         },
         "button": {

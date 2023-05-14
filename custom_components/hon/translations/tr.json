@@ -1222,6 +1222,24 @@
             },
             "buzzer": {
                 "name": "Program sonu zili"
+            },
+            "holiday_mode": {
+                "name": "Holiday Modu"
+            },
+            "auto_set": {
+                "name": "Otomatik Ayarla"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Kapı açık Dondurucu"
+            },
+            "fridge_door": {
+                "name": "Kapı açık Buzdolabı"
             }
         },
         "number": {
@@ -1254,6 +1272,12 @@
             },
             "steam_level": {
                 "name": "Buhar Seviyesi"
+            },
+            "freezer_temp_sel": {
+                "name": "Hedef sıcaklık Dondurucu"
+            },
+            "fridge_temp_sel": {
+                "name": "Hedef sıcaklık Buzdolabı"
             }
         },
         "button": {

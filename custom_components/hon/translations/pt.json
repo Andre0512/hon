@@ -1222,6 +1222,24 @@
             },
             "buzzer": {
                 "name": "Besouro de fim de ciclo"
+            },
+            "holiday_mode": {
+                "name": "Modo Holiday"
+            },
+            "auto_set": {
+                "name": "Ajuste automático"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Porta aberta Congelador"
+            },
+            "fridge_door": {
+                "name": "Porta aberta Frigorífico"
             }
         },
         "number": {
@@ -1254,6 +1272,12 @@
             },
             "steam_level": {
                 "name": "Nível de vapor"
+            },
+            "freezer_temp_sel": {
+                "name": "Temperatura alvo Congelador"
+            },
+            "fridge_temp_sel": {
+                "name": "Temperatura alvo Frigorífico"
             }
         },
         "button": {

@@ -675,6 +675,24 @@
             },
             "buzzer": {
                 "name": "Cycle end chime"
+            },
+            "holiday_mode": {
+                "name": "Holiday Mode"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Door open Freezer"
+            },
+            "fridge_door": {
+                "name": "Door open Fridge"
             }
         },
         "number": {
@@ -707,6 +725,12 @@
             },
             "steam_level": {
                 "name": "מפלס קיטור"
+            },
+            "freezer_temp_sel": {
+                "name": "Target temperature Freezer"
+            },
+            "fridge_temp_sel": {
+                "name": "Target temperature Fridge"
             }
         },
         "button": {

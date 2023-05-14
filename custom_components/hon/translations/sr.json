@@ -1222,6 +1222,24 @@
             },
             "buzzer": {
                 "name": "Zvono na kraju ciklusa"
+            },
+            "holiday_mode": {
+                "name": "Režim Holiday"
+            },
+            "auto_set": {
+                "name": "Automatsko podešavanje"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Vrata su otvorena Zamrzivač"
+            },
+            "fridge_door": {
+                "name": "Vrata su otvorena Frižider"
             }
         },
         "number": {
@@ -1254,6 +1272,12 @@
             },
             "steam_level": {
                 "name": "Nivo pare"
+            },
+            "freezer_temp_sel": {
+                "name": "Željena temperatura Zamrzivač"
+            },
+            "fridge_temp_sel": {
+                "name": "Željena temperatura Frižider"
             }
         },
         "button": {

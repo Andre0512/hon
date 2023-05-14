@@ -103,6 +103,12 @@ NAMES = {
         "on": "GLOBALS.GENERAL.ON",
         "prewash": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.PREWASH",
         "buzzer": "DW_CMD&CTRL.SETTINGS.END_CYCLE_BUZZER",
+        "holiday_mode": "REF.DASHBOARD_MENU_MORE_NOTIFICATIONS.HOLIDAY_MODE",
+        "auto_set": "REF_CMD&CTRL.MODALITIES.ECO",
+        "super_cool": "REF_CMD&CTRL.MODALITIES.SUPER_COOL",
+        "super_freeze": "REF_CMD&CTRL.MODALITIES.SUPER_FREEZE",
+        "freezer_door": ["GLOBALS.APPLIANCE_STATUS.DOOR_OPEN", "REF.ZONES.FREEZER"],
+        "fridge_door": ["GLOBALS.APPLIANCE_STATUS.DOOR_OPEN", "REF.ZONES.FRIDGE"],
     },
     "button": {
         "induction_hob": "GLOBALS.APPLIANCES_NAME.IH",
@@ -177,6 +183,8 @@ NAMES = {
         "wash_time": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL.WASHING_TIME",
         "dry_time": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_TIME",
         "steam_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.STEAM_LEVEL",
+        "freezer_temp_sel": ["OV.COMMON.GOAL_TEMPERATURE", "REF.ZONES.FREEZER"],
+        "fridge_temp_sel": ["OV.COMMON.GOAL_TEMPERATURE", "REF.ZONES.FRIDGE"],
     },
     "climate": {"air_conditioner": "GLOBALS.APPLIANCES_NAME.AC"},
 }

@@ -179,6 +179,56 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             translation_key="door_open",
         ),
     ),
+    "REF": (
+        HonBinarySensorEntityDescription(
+            key="quickModeZ2",
+            name="Super Cool",
+            icon="mdi:snowflake",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value="1",
+            translation_key="super_cool",
+        ),
+        HonBinarySensorEntityDescription(
+            key="quickModeZ1",
+            name="Super Freeze",
+            icon="mdi:snowflake-variant",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value="1",
+            translation_key="super_freeze",
+        ),
+        HonBinarySensorEntityDescription(
+            key="doorStatusZ1",
+            name="Door Status Freezer",
+            device_class=BinarySensorDeviceClass.DOOR,
+            icon="mdi:fridge-top",
+            on_value="1",
+            translation_key="freezer_door",
+        ),
+        HonBinarySensorEntityDescription(
+            key="door2StatusZ1",
+            name="Door Status Fridge",
+            icon="mdi:fridge-bottom",
+            device_class=BinarySensorDeviceClass.DOOR,
+            on_value="1",
+            translation_key="fridge_door",
+        ),
+        HonBinarySensorEntityDescription(
+            key="intelligenceMode",
+            name="Auto-Set Mode",
+            icon="mdi:robot-outline",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value="1",
+            translation_key="auto_set",
+        ),
+        HonBinarySensorEntityDescription(
+            key="holidayMode",
+            name="Holiday Mode",
+            icon="mdi:palm-tree",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value="1",
+            translation_key="holiday_mode",
+        ),
+    ),
 }
 
 

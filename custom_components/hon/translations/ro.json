@@ -1222,6 +1222,24 @@
             },
             "buzzer": {
                 "name": "Sonerie la finalul ciclului"
+            },
+            "holiday_mode": {
+                "name": "Mod Holiday"
+            },
+            "auto_set": {
+                "name": "Setare automată"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Ușă deschisă Congelator"
+            },
+            "fridge_door": {
+                "name": "Ușă deschisă Frigider"
             }
         },
         "number": {
@@ -1254,6 +1272,12 @@
             },
             "steam_level": {
                 "name": "Nivel abur"
+            },
+            "freezer_temp_sel": {
+                "name": "Temperatură vizată Congelator"
+            },
+            "fridge_temp_sel": {
+                "name": "Temperatură vizată Frigider"
             }
         },
         "button": {

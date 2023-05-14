@@ -153,6 +153,24 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             translation_key="target_temperature",
         ),
     ),
+    "REF": (
+        NumberEntityDescription(
+            key="settings.tempSelZ1",
+            name="Fridge Temperature",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:thermometer",
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="fridge_temp_sel",
+        ),
+        NumberEntityDescription(
+            key="settings.tempSelZ2",
+            name="Freezer Temperature",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:thermometer",
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="freezer_temp_sel",
+        ),
+    ),
 }
 
 NUMBERS["WD"] = unique_entities(NUMBERS["WM"], NUMBERS["TD"])

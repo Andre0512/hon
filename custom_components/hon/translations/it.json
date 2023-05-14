@@ -1274,6 +1274,24 @@
             },
             "buzzer": {
                 "name": "Avviso di fine ciclo"
+            },
+            "holiday_mode": {
+                "name": "Modalità Holiday"
+            },
+            "auto_set": {
+                "name": "Impostazione automatica"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Porta aperta Congelatore"
+            },
+            "fridge_door": {
+                "name": "Porta aperta Frigorifero"
             }
         },
         "number": {
@@ -1306,6 +1324,12 @@
             },
             "steam_level": {
                 "name": "Livello vapore"
+            },
+            "freezer_temp_sel": {
+                "name": "Temperatura target Congelatore"
+            },
+            "fridge_temp_sel": {
+                "name": "Temperatura target Frigorifero"
             }
         },
         "button": {
