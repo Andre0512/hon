@@ -206,7 +206,9 @@ class HonNumberEntity(HonEntity, NumberEntity):
             isinstance(setting, HonParameter) or isinstance(setting, HonParameterFixed)
         ):
             setting.value = value
-        if self._device.appliance_type in ["AC"]:
+        if "settings." in self.entity_description:
+            self._device.commands["settings"].send()
+        elif self._device.appliance_type in ["AC"]:
             self._device.commands["startProgram"].send()
         await self.coordinator.async_refresh()
 
