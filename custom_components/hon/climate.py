@@ -132,7 +132,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
     async def async_set_temperature(self, **kwargs):
         if (temperature := kwargs.get(ATTR_TEMPERATURE)) is None:
             return False
-        self._device.settings["settings.selTemp"].value = temperature
+        self._device.settings["settings.tempSel"].value = int(temperature)
         await self._device.commands["settings"].send()
 
     @callback
