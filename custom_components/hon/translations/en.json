@@ -372,6 +372,12 @@
             },
             "humidity": {
                 "name": "Humidity"
+            },
+            "freezer_temp": {
+                "name": "Freezer temperature"
+            },
+            "fridge_temp": {
+                "name": "Fridge temperature"
             }
         },
         "switch": {
@@ -470,6 +476,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Autodose Detergent"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "select": {

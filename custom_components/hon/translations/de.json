@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "Luftfeuchtigkeit"
+            },
+            "freezer_temp": {
+                "name": "Gefrierschrank-Temperatur"
+            },
+            "fridge_temp": {
+                "name": "Temperatur des Kühlschranks"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Autodosierung Spülmittel"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

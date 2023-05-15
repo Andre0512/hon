@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "Luchtvochtigheid"
+            },
+            "freezer_temp": {
+                "name": "Vriezertemperatuur"
+            },
+            "fridge_temp": {
+                "name": "Koelkasttemperatuur"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Automatisch doseren Wasmiddel"
+            },
+            "auto_set": {
+                "name": "Automatisch instellen"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "Υγρασία"
+            },
+            "freezer_temp": {
+                "name": "Θερμοκρασία καταψύκτη"
+            },
+            "fridge_temp": {
+                "name": "Θερμοκρασία ψυγείου"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Αυτόματη Δοσολογία Απορρυπαντικό"
+            },
+            "auto_set": {
+                "name": "Αυτόματη ρύθμιση"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

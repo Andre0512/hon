@@ -151,34 +151,37 @@ For every device exists a hidden button which can be used to log all infos of yo
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Air Conditioner | `air-conditioner` | `climate` | `settings` |
-#### Configs
-| Name | Icon | Entity | Key |
-| --- | --- | --- | --- |
 | 10° Heating | `heat-wave` | `switch` | `settings.10degreeHeatingStatus` |
+| Air Conditioner | `air-conditioner` | `climate` | `settings` |
 | Echo | `account-voice` | `switch` | `settings.echoStatus` |
 | Eco Mode |  | `switch` | `settings.ecoMode` |
-| Eco Pilot | `run` | `select` | `settings.humanSensingStatus` |
 | Health Mode | `medication-outline` | `switch` | `settings.healthMode` |
 | Mute | `volume-off` | `switch` | `settings.muteStatus` |
-| Program |  | `select` | `startProgram.program` |
 | Rapid Mode | `run-fast` | `switch` | `settings.rapidMode` |
 | Screen Display | `monitor-small` | `switch` | `settings.screenDisplayStatus` |
 | Self Cleaning | `air-filter` | `switch` | `settings.selfCleaningStatus` |
 | Self Cleaning 56 | `air-filter` | `switch` | `settings.selfCleaning56Status` |
 | Silent Sleep | `bed` | `switch` | `settings.silentSleepStatus` |
+#### Configs
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Program |  | `select` | `startProgram.program` |
+#### Sensors
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Eco Pilot | `run` | `select` | `settings.humanSensingStatus` |
 | Target Temperature | `thermometer` | `number` | `settings.tempSel` |
 
 ### Dish washer
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
+| Buzzer Disabled | `volume-off` | `switch` | `settings.buzzerDisabled` |
 | Dish Washer | `dishwasher` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Add Dish | `silverware-fork-knife` | `switch` | `startProgram.addDish` |
-| Buzzer Disabled | `volume-off` | `switch` | `settings.buzzerDisabled` |
 | Delay time | `timer-plus` | `number` | `startProgram.delayTime` |
 | Eco Express | `sprout` | `switch` | `startProgram.ecoExpress` |
 | Eco Index | `sprout` | `sensor` | `startProgram.ecoIndex` |
@@ -255,23 +258,31 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Temperature Selected | `thermometer` | `sensor` | `tempSel` |
 
 ### Fridge
+#### Controls
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Auto-Set Mode | `thermometer-auto` | `switch` | `settings.intelligenceMode` |
+| Super Cool | `snowflake` | `switch` | `settings.quickModeZ2` |
+| Super Freeze | `snowflake-variant` | `switch` | `settings.quickModeZ1` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Freezer Temperature | `thermometer` | `number` | `settings.tempSelZ2` |
-| Fridge Temperature | `thermometer` | `number` | `settings.tempSelZ1` |
 | Program |  | `select` | `startProgram.program` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Auto-Set Mode | `robot-outline` | `binary_sensor` | `intelligenceMode` |
+| Auto-Set Mode | `thermometer-auto` | `binary_sensor` | `intelligenceMode` |
 | Door Status Freezer | `fridge-top` | `binary_sensor` | `doorStatusZ1` |
 | Door Status Fridge | `fridge-bottom` | `binary_sensor` | `door2StatusZ1` |
+| Freezer Temperature | `thermometer` | `number` | `settings.tempSelZ2` |
+| Fridge Temperature | `thermometer` | `number` | `settings.tempSelZ1` |
 | Holiday Mode | `palm-tree` | `binary_sensor` | `holidayMode` |
 | Room Humidity | `water-percent` | `sensor` | `humidityEnv` |
-| Room Temperature | `thermometer` | `sensor` | `tempEnv` |
+| Room Temperature | `home-thermometer-outline` | `sensor` | `tempEnv` |
 | Super Cool | `snowflake` | `binary_sensor` | `quickModeZ2` |
 | Super Freeze | `snowflake-variant` | `binary_sensor` | `quickModeZ1` |
+| Temperature Freezer | `snowflake-thermometer` | `sensor` | `tempZ2` |
+| Temperature Fridge | `thermometer` | `sensor` | `tempZ1` |
 
 ### Tumble dryer
 #### Controls

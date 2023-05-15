@@ -365,6 +365,12 @@
             },
             "humidity": {
                 "name": "Umidità"
+            },
+            "freezer_temp": {
+                "name": "Temperatura del congelatore"
+            },
+            "fridge_temp": {
+                "name": "Temperatura del frigorifero"
             }
         },
         "select": {
@@ -1194,6 +1200,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Autodose Detergente"
+            },
+            "auto_set": {
+                "name": "Impostazione automatica"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "Vlaga "
+            },
+            "freezer_temp": {
+                "name": "Temperatura zamrzovalnika"
+            },
+            "fridge_temp": {
+                "name": "Temperatura hladilnika"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Samodejno odmerjanje Detergent"
+            },
+            "auto_set": {
+                "name": "Samodejna nastavitev"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

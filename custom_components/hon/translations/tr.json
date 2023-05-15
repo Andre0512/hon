@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "Nem"
+            },
+            "freezer_temp": {
+                "name": "Dondurucu sıcaklığı"
+            },
+            "fridge_temp": {
+                "name": "Buzdolabı sıcaklığı"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Otomatik doz Deterjan"
+            },
+            "auto_set": {
+                "name": "Otomatik Ayarla"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "湿度"
+            },
+            "freezer_temp": {
+                "name": "冷藏室温度"
+            },
+            "fridge_temp": {
+                "name": "冰箱温度"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "自动定量 洗涤剂"
+            },
+            "auto_set": {
+                "name": "自动设置"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

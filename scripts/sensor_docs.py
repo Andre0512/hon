@@ -53,6 +53,7 @@ for entity_type, appliances in entities.items():
             if (
                 isinstance(entity, HonSwitchEntityDescription)
                 and entity.entity_category != "config"
+                and "settings." not in entity.key
             ):
                 key = f"{entity.turn_on_key}` / `{entity.turn_off_key}"
             else:

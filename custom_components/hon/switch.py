@@ -245,7 +245,6 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             key="settings.buzzerDisabled",
             name="Buzzer Disabled",
             icon="mdi:volume-off",
-            entity_category=EntityCategory.CONFIG,
             translation_key="buzzer",
         ),
     ),
@@ -254,67 +253,77 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             key="settings.10degreeHeatingStatus",
             name="10° Heating",
             icon="mdi:heat-wave",
-            entity_category=EntityCategory.CONFIG,
             translation_key="10_degree_heating",
         ),
         HonSwitchEntityDescription(
             key="settings.echoStatus",
             name="Echo",
             icon="mdi:account-voice",
-            entity_category=EntityCategory.CONFIG,
         ),
         HonSwitchEntityDescription(
             key="settings.ecoMode",
             name="Eco Mode",
-            entity_category=EntityCategory.CONFIG,
             translation_key="eco_mode",
         ),
         HonSwitchEntityDescription(
             key="settings.healthMode",
             name="Health Mode",
             icon="mdi:medication-outline",
-            entity_category=EntityCategory.CONFIG,
         ),
         HonSwitchEntityDescription(
             key="settings.muteStatus",
             name="Mute",
             icon="mdi:volume-off",
-            entity_category=EntityCategory.CONFIG,
             translation_key="mute_mode",
         ),
         HonSwitchEntityDescription(
             key="settings.rapidMode",
             name="Rapid Mode",
             icon="mdi:run-fast",
-            entity_category=EntityCategory.CONFIG,
             translation_key="rapid_mode",
         ),
         HonSwitchEntityDescription(
             key="settings.screenDisplayStatus",
             name="Screen Display",
             icon="mdi:monitor-small",
-            entity_category=EntityCategory.CONFIG,
         ),
         HonSwitchEntityDescription(
             key="settings.selfCleaning56Status",
             name="Self Cleaning 56",
             icon="mdi:air-filter",
-            entity_category=EntityCategory.CONFIG,
             translation_key="self_clean_56",
         ),
         HonSwitchEntityDescription(
             key="settings.selfCleaningStatus",
             name="Self Cleaning",
             icon="mdi:air-filter",
-            entity_category=EntityCategory.CONFIG,
             translation_key="self_clean",
         ),
         HonSwitchEntityDescription(
             key="settings.silentSleepStatus",
             name="Silent Sleep",
             icon="mdi:bed",
-            entity_category=EntityCategory.CONFIG,
             translation_key="silent_mode",
+        ),
+    ),
+    "REF": (
+        HonSwitchEntityDescription(
+            key="settings.intelligenceMode",
+            name="Auto-Set Mode",
+            icon="mdi:thermometer-auto",
+            translation_key="auto_set",
+        ),
+        HonSwitchEntityDescription(
+            key="settings.quickModeZ1",
+            name="Super Freeze",
+            icon="mdi:snowflake-variant",
+            translation_key="super_freeze",
+        ),
+        HonSwitchEntityDescription(
+            key="settings.quickModeZ2",
+            name="Super Cool",
+            icon="mdi:snowflake",
+            translation_key="super_cool",
         ),
     ),
 }
@@ -386,7 +395,10 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         return self._device.get(self.entity_description.key, False)
 
     async def async_turn_on(self, **kwargs: Any) -> None:
-        if self.entity_category == EntityCategory.CONFIG:
+        if (
+            self.entity_category == EntityCategory.CONFIG
+            or "settings." in self.entity_description.key
+        ):
             setting = self._device.settings[self.entity_description.key]
             setting.value = (
                 setting.max if isinstance(setting, HonParameterRange) else "1"
@@ -394,14 +406,15 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
             self.async_write_ha_state()
             if "settings." in self.entity_description.key:
                 await self._device.commands["settings"].send()
-            elif self._device.appliance_type in ["AC"]:
-                await self._device.commands["startProgram"].send()
             await self.coordinator.async_refresh()
         else:
             await self._device.commands[self.entity_description.turn_on_key].send()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
-        if self.entity_category == EntityCategory.CONFIG:
+        if (
+            self.entity_category == EntityCategory.CONFIG
+            or "settings." in self.entity_description.key
+        ):
             setting = self._device.settings[self.entity_description.key]
             setting.value = (
                 setting.min if isinstance(setting, HonParameterRange) else "0"
@@ -409,8 +422,6 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
             self.async_write_ha_state()
             if "settings." in self.entity_description.key:
                 await self._device.commands["settings"].send()
-            elif self._device.appliance_type in ["AC"]:
-                await self._device.commands["startProgram"].send()
             await self.coordinator.async_refresh()
         else:
             await self._device.commands[self.entity_description.turn_off_key].send()

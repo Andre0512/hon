@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "Umiditate"
+            },
+            "freezer_temp": {
+                "name": "Temperatura congelatorului"
+            },
+            "fridge_temp": {
+                "name": "Temperatura frigiderului"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Autodozare Detergent"
+            },
+            "auto_set": {
+                "name": "Setare automată"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

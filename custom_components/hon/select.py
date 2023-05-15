@@ -2,15 +2,15 @@ from __future__ import annotations
 
 import logging
 
+from pyhon import Hon
+from pyhon.appliance import HonAppliance
+from pyhon.parameter.fixed import HonParameterFixed
+
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTemperature, UnitOfTime, REVOLUTIONS_PER_MINUTE
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
-from pyhon import Hon
-from pyhon.appliance import HonAppliance
-from pyhon.parameter.fixed import HonParameterFixed
-
 from .const import DOMAIN
 from .hon import HonEntity, HonCoordinator, unique_entities
 
@@ -115,7 +115,6 @@ SELECTS = {
             key="settings.humanSensingStatus",
             name="Eco Pilot",
             icon="mdi:run",
-            entity_category=EntityCategory.CONFIG,
             translation_key="eco_pilot",
         ),
     ),
@@ -168,7 +167,7 @@ class HonSelectEntity(HonEntity, SelectEntity):
         if not (setting := self._device.settings.get(description.key)):
             self._attr_options: list[str] = []
         elif not isinstance(setting, HonParameterFixed):
-            self._attr_options: list[str] = setting.value
+            self._attr_options: list[str] = setting.values
         else:
             self._attr_options: list[str] = [setting.value]
 
@@ -199,3 +198,16 @@ class HonSelectEntity(HonEntity, SelectEntity):
             self._attr_options: list[str] = setting.values
             self._attr_native_value = setting.value
         self.async_write_ha_state()
+
+    @property
+    def available(self) -> bool:
+        """Return True if entity is available."""
+        if self.entity_category == EntityCategory.CONFIG:
+            return super().available
+        else:
+            return (
+                super().available
+                and self._device.get("remoteCtrValid") == "1"
+                and self._device.get("attributes.lastConnEvent.category")
+                != "DISCONNECTED"
+            )

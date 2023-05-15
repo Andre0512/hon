@@ -147,7 +147,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
         NumberEntityDescription(
             key="settings.tempSel",
             name="Target Temperature",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="target_temperature",
@@ -157,7 +156,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
         NumberEntityDescription(
             key="settings.tempSelZ1",
             name="Fridge Temperature",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="fridge_temp_sel",
@@ -165,7 +163,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
         NumberEntityDescription(
             key="settings.tempSelZ2",
             name="Freezer Temperature",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="freezer_temp_sel",
@@ -226,8 +223,6 @@ class HonNumberEntity(HonEntity, NumberEntity):
             setting.value = value
         if "settings." in self.entity_description.key:
             await self._device.commands["settings"].send()
-        elif self._device.appliance_type in ["AC"]:
-            await self._device.commands["startProgram"].send()
         await self.coordinator.async_refresh()
 
     @callback
@@ -239,3 +234,16 @@ class HonNumberEntity(HonEntity, NumberEntity):
             self._attr_native_step = setting.step
         self._attr_native_value = setting.value
         self.async_write_ha_state()
+
+    @property
+    def available(self) -> bool:
+        """Return True if entity is available."""
+        if self.entity_category == EntityCategory.CONFIG:
+            return super().available
+        else:
+            return (
+                super().available
+                and self._device.get("remoteCtrValid") == "1"
+                and self._device.get("attributes.lastConnEvent.category")
+                != "DISCONNECTED"
+            )

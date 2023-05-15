@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "Влажность"
+            },
+            "freezer_temp": {
+                "name": "Температура в морозильном отделении"
+            },
+            "fridge_temp": {
+                "name": "Температура в холодильнике"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Автодозирование Средство для стирки"
+            },
+            "auto_set": {
+                "name": "Автоматическая установка"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

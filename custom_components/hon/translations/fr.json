@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "Humidité"
+            },
+            "freezer_temp": {
+                "name": "Température du congélateur"
+            },
+            "fridge_temp": {
+                "name": "Température du réfrigérateur"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Dose automatique Lessive"
+            },
+            "auto_set": {
+                "name": "Réglage automatique"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "Vlhkost"
+            },
+            "freezer_temp": {
+                "name": "Teplota mrazničky"
+            },
+            "fridge_temp": {
+                "name": "Teplota chladničky"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Automatické dávkování Prací prostředek"
+            },
+            "auto_set": {
+                "name": "Automatické nastavení"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {

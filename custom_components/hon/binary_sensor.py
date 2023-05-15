@@ -215,7 +215,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
         HonBinarySensorEntityDescription(
             key="intelligenceMode",
             name="Auto-Set Mode",
-            icon="mdi:robot-outline",
+            icon="mdi:thermometer-auto",
             device_class=BinarySensorDeviceClass.RUNNING,
             on_value="1",
             translation_key="auto_set",

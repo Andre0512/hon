@@ -313,6 +313,12 @@
             },
             "humidity": {
                 "name": "Wilgotność"
+            },
+            "freezer_temp": {
+                "name": "Temperatura zamrażarki"
+            },
+            "fridge_temp": {
+                "name": "Temperatura lodówki"
             }
         },
         "select": {
@@ -1142,6 +1148,15 @@
             },
             "auto_dose_detergent": {
                 "name": "Automatyczne dozowanie Detergent"
+            },
+            "auto_set": {
+                "name": "Ustawianie automatyczne"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
             }
         },
         "binary_sensor": {
