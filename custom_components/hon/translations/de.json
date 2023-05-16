@@ -1255,6 +1255,9 @@
             },
             "fridge_door": {
                 "name": "Tür offen Kühlschrank"
+            },
+            "filter_replacement": {
+                "name": "Filteraustausch"
             }
         },
         "number": {

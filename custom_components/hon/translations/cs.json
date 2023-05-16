@@ -1255,6 +1255,9 @@
             },
             "fridge_door": {
                 "name": "Otevřená dvířka Chladnička"
+            },
+            "filter_replacement": {
+                "name": "Výměna filtru"
             }
         },
         "number": {

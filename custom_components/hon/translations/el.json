@@ -1255,6 +1255,9 @@
             },
             "fridge_door": {
                 "name": "Πόρτα ανοιχτή Ψυγείο"
+            },
+            "filter_replacement": {
+                "name": "Αντικατάσταση φίλτρου"
             }
         },
         "number": {

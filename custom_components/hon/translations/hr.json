@@ -1255,6 +1255,9 @@
             },
             "fridge_door": {
                 "name": "Otvorena vrata Hladnjak"
+            },
+            "filter_replacement": {
+                "name": "Zamjena filtra"
             }
         },
         "number": {

@@ -155,6 +155,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Air Conditioner | `air-conditioner` | `climate` | `settings` |
 | Echo | `account-voice` | `switch` | `settings.echoStatus` |
 | Eco Mode |  | `switch` | `settings.ecoMode` |
+| Eco Pilot | `run` | `select` | `settings.humanSensingStatus` |
 | Health Mode | `medication-outline` | `switch` | `settings.healthMode` |
 | Mute | `volume-off` | `switch` | `settings.muteStatus` |
 | Rapid Mode | `run-fast` | `switch` | `settings.rapidMode` |
@@ -162,15 +163,21 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Self Cleaning | `air-filter` | `switch` | `settings.selfCleaningStatus` |
 | Self Cleaning 56 | `air-filter` | `switch` | `settings.selfCleaning56Status` |
 | Silent Sleep | `bed` | `switch` | `settings.silentSleepStatus` |
-#### Configs
-| Name | Icon | Entity | Key |
-| --- | --- | --- | --- |
-| Program |  | `select` | `startProgram.program` |
+| Target Temperature | `thermometer` | `number` | `settings.tempSel` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Eco Pilot | `run` | `select` | `settings.humanSensingStatus` |
-| Target Temperature | `thermometer` | `number` | `settings.tempSel` |
+| Air Temperature Outdoor | `thermometer` | `sensor` | `tempAirOutdoor` |
+| Ch2O Cleaning |  | `binary_sensor` | `ch2oCleaningStatus` |
+| Coiler Temperature Indoor | `thermometer` | `sensor` | `tempCoilerIndoor` |
+| Coiler Temperature Outside | `thermometer` | `sensor` | `tempCoilerOutdoor` |
+| Defrost Temperature Outdoor | `thermometer` | `sensor` | `tempDefrostOutdoor` |
+| Filter Replacement |  | `binary_sensor` | `filterChangeStatusLocal` |
+| In Air Temperature Outdoor | `thermometer` | `sensor` | `tempInAirOutdoor` |
+| Indoor Temperature | `thermometer` | `sensor` | `tempIndoor` |
+| Outdoor Temperature | `thermometer` | `sensor` | `tempOutdoor` |
+| Program |  | `select` | `startProgram.program` |
+| Selected Temperature | `thermometer` | `sensor` | `tempSel` |
 
 ### Dish washer
 #### Controls
@@ -262,6 +269,8 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Auto-Set Mode | `thermometer-auto` | `switch` | `settings.intelligenceMode` |
+| Freezer Temperature | `thermometer` | `number` | `settings.tempSelZ2` |
+| Fridge Temperature | `thermometer` | `number` | `settings.tempSelZ1` |
 | Super Cool | `snowflake` | `switch` | `settings.quickModeZ2` |
 | Super Freeze | `snowflake-variant` | `switch` | `settings.quickModeZ1` |
 #### Configs
@@ -274,8 +283,6 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Auto-Set Mode | `thermometer-auto` | `binary_sensor` | `intelligenceMode` |
 | Door Status Freezer | `fridge-top` | `binary_sensor` | `doorStatusZ1` |
 | Door Status Fridge | `fridge-bottom` | `binary_sensor` | `door2StatusZ1` |
-| Freezer Temperature | `thermometer` | `number` | `settings.tempSelZ2` |
-| Fridge Temperature | `thermometer` | `number` | `settings.tempSelZ1` |
 | Holiday Mode | `palm-tree` | `binary_sensor` | `holidayMode` |
 | Room Humidity | `water-percent` | `sensor` | `humidityEnv` |
 | Room Temperature | `home-thermometer-outline` | `sensor` | `tempEnv` |

@@ -2,13 +2,14 @@ import logging
 from dataclasses import dataclass
 from typing import Any
 
-from homeassistant.components.switch import SwitchEntityDescription, SwitchEntity
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import EntityCategory
 from pyhon import Hon
 from pyhon.appliance import HonAppliance
 from pyhon.parameter.range import HonParameterRange
 
+from homeassistant.components.switch import SwitchEntityDescription, SwitchEntity
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import EntityCategory
+from homeassistant.core import callback
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity, unique_entities
 
@@ -19,6 +20,7 @@ _LOGGER = logging.getLogger(__name__)
 class HonSwitchEntityDescriptionMixin:
     turn_on_key: str = ""
     turn_off_key: str = ""
+    status_key: str = ""
 
 
 @dataclass
@@ -251,12 +253,14 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
     "AC": (
         HonSwitchEntityDescription(
             key="settings.10degreeHeatingStatus",
+            status_key="10degreeHeatingStatus",
             name="10° Heating",
             icon="mdi:heat-wave",
             translation_key="10_degree_heating",
         ),
         HonSwitchEntityDescription(
             key="settings.echoStatus",
+            status_key="echoStatus",
             name="Echo",
             icon="mdi:account-voice",
         ),
@@ -267,23 +271,27 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         ),
         HonSwitchEntityDescription(
             key="settings.healthMode",
+            status_key="healthMode",
             name="Health Mode",
             icon="mdi:medication-outline",
         ),
         HonSwitchEntityDescription(
             key="settings.muteStatus",
+            status_key="muteStatus",
             name="Mute",
             icon="mdi:volume-off",
             translation_key="mute_mode",
         ),
         HonSwitchEntityDescription(
             key="settings.rapidMode",
+            status_key="rapidMode",
             name="Rapid Mode",
             icon="mdi:run-fast",
             translation_key="rapid_mode",
         ),
         HonSwitchEntityDescription(
             key="settings.screenDisplayStatus",
+            status_key="screenDisplayStatus",
             name="Screen Display",
             icon="mdi:monitor-small",
         ),
@@ -295,12 +303,14 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         ),
         HonSwitchEntityDescription(
             key="settings.selfCleaningStatus",
+            status_key="selfCleaningStatus",
             name="Self Cleaning",
             icon="mdi:air-filter",
             translation_key="self_clean",
         ),
         HonSwitchEntityDescription(
             key="settings.silentSleepStatus",
+            status_key="silentSleepStatus",
             name="Silent Sleep",
             icon="mdi:bed",
             translation_key="silent_mode",
@@ -392,6 +402,8 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
                 or hasattr(setting, "min")
                 and setting.value != setting.min
             )
+        elif self.entity_description.status_key:
+            return self._device.get(self.entity_description.status_key, "0") == "1"
         return self._device.get(self.entity_description.key, False)
 
     async def async_turn_on(self, **kwargs: Any) -> None:
@@ -438,3 +450,11 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
                 and self._device.get("attributes.lastConnEvent.category")
                 != "DISCONNECTED"
             )
+
+    @callback
+    def _handle_coordinator_update(self):
+        if not self.entity_description.status_key:
+            return
+        value = self._device.get(self.entity_description.status_key, "0")
+        self._attr_state = value == "1"
+        self.async_write_ha_state()

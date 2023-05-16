@@ -61,7 +61,9 @@ for entity_type, appliances in entities.items():
             attributes = (key, entity.name, entity.icon, entity_type)
             category = (
                 "control"
-                if entity_type in ["switch", "button", "climate"]
+                if entity.key.startswith("settings")
+                or hasattr(entity, "turn_on_key")
+                or entity_type in ["button", "climate"]
                 else "sensor"
             )
             result.setdefault(appliance, {}).setdefault(

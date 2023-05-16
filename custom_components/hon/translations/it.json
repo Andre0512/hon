@@ -1307,6 +1307,9 @@
             },
             "fridge_door": {
                 "name": "Porta aperta Frigorifero"
+            },
+            "filter_replacement": {
+                "name": "Sostituzione filtro"
             }
         },
         "number": {

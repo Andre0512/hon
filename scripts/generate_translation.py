@@ -112,6 +112,7 @@ NAMES = {
         "super_freeze": "REF_CMD&CTRL.MODALITIES.SUPER_FREEZE",
         "freezer_door": ["GLOBALS.APPLIANCE_STATUS.DOOR_OPEN", "REF.ZONES.FREEZER"],
         "fridge_door": ["GLOBALS.APPLIANCE_STATUS.DOOR_OPEN", "REF.ZONES.FRIDGE"],
+        "filter_replacement": "AP.MAINTENANCE.FILTER_REPLACEMENT",
     },
     "button": {
         "induction_hob": "GLOBALS.APPLIANCES_NAME.IH",

@@ -1,5 +1,7 @@
 import logging
 
+from pyhon import Hon
+
 from homeassistant.components.sensor import (
     SensorEntity,
     SensorDeviceClass,
@@ -20,8 +22,6 @@ from homeassistant.const import (
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.typing import StateType
-from pyhon import Hon
-
 from . import const
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity, unique_entities
@@ -397,6 +397,72 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             device_class=SensorDeviceClass.ENUM,
             translation_key="program_phases_dw",
             options=list(const.DISHWASHER_PR_PHASE),
+        ),
+    ),
+    "AC": (
+        SensorEntityDescription(
+            key="tempAirOutdoor",
+            name="Air Temperature Outdoor",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        SensorEntityDescription(
+            key="tempCoilerIndoor",
+            name="Coiler Temperature Indoor",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        SensorEntityDescription(
+            key="tempCoilerOutdoor",
+            name="Coiler Temperature Outside",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        SensorEntityDescription(
+            key="tempDefrostOutdoor",
+            name="Defrost Temperature Outdoor",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        SensorEntityDescription(
+            key="tempInAirOutdoor",
+            name="In Air Temperature Outdoor",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        SensorEntityDescription(
+            key="tempIndoor",
+            name="Indoor Temperature",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        SensorEntityDescription(
+            key="tempOutdoor",
+            name="Outdoor Temperature",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        SensorEntityDescription(
+            key="tempSel",
+            name="Selected Temperature",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
         ),
     ),
     "REF": (

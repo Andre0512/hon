@@ -1255,6 +1255,9 @@
             },
             "fridge_door": {
                 "name": "Дверца открыта Холодильник"
+            },
+            "filter_replacement": {
+                "name": "Замена фильтра"
             }
         },
         "number": {

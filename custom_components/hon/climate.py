@@ -1,5 +1,8 @@
 import logging
 
+from pyhon import Hon
+from pyhon.appliance import HonAppliance
+
 from homeassistant.components.climate import (
     ClimateEntity,
     ClimateEntityDescription,
@@ -20,9 +23,6 @@ from homeassistant.const import (
     TEMP_CELSIUS,
 )
 from homeassistant.core import callback
-from pyhon import Hon
-from pyhon.appliance import HonAppliance
-
 from .const import HON_HVAC_MODE, HON_FAN, HON_HVAC_PROGRAM, DOMAIN
 from .hon import HonEntity, HonCoordinator
 
@@ -107,6 +107,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
             ]
             await self._device.commands["startProgram"].send()
         self._attr_hvac_mode = hvac_mode
+        self.async_write_ha_state()
 
     async def async_set_fan_mode(self, fan_mode):
         mode_number = list(HON_FAN.values()).index(fan_mode)
@@ -114,6 +115,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
             mode_number
         ]
         await self._device.commands["settings"].send()
+        self.async_write_ha_state()
 
     async def async_set_swing_mode(self, swing_mode):
         horizontal = self._device.settings["settings.windDirectionHorizontal"]
@@ -128,29 +130,29 @@ class HonClimateEntity(HonEntity, ClimateEntity):
             horizontal.value = "0"
         self._attr_swing_mode = swing_mode
         await self._device.commands["settings"].send()
+        self.async_write_ha_state()
 
     async def async_set_temperature(self, **kwargs):
         if (temperature := kwargs.get(ATTR_TEMPERATURE)) is None:
             return False
-        self._device.settings["settings.tempSel"].value = int(temperature)
+        self._device.settings["settings.tempSel"].value = str(int(temperature))
         await self._device.commands["settings"].send()
+        self.async_write_ha_state()
 
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
         self._attr_target_temperature = int(float(self._device.get("tempSel")))
         self._attr_current_temperature = float(self._device.get("tempIndoor"))
-        self._attr_max_temp = self._device.settings["settings.tempSel"].max
-        self._attr_min_temp = self._device.settings["settings.tempSel"].min
 
         if self._device.get("onOffStatus") == "0":
             self._attr_hvac_mode = HVACMode.OFF
         else:
             self._attr_hvac_mode = HON_HVAC_MODE[self._device.get("machMode") or "0"]
 
-        self._attr_fan_mode = HON_FAN[self._device.settings["settings.windSpeed"].value]
+        self._attr_fan_mode = HON_FAN[self._device.get("windSpeed")]
 
-        horizontal = self._device.settings["settings.windDirectionHorizontal"]
-        vertical = self._device.settings["settings.windDirectionVertical"]
+        horizontal = self._device.get("windDirectionHorizontal")
+        vertical = self._device.get("windDirectionVertical")
         if horizontal == "7" and vertical == "8":
             self._attr_swing_mode = SWING_BOTH
         elif horizontal == "7":
@@ -159,3 +161,4 @@ class HonClimateEntity(HonEntity, ClimateEntity):
             self._attr_swing_mode = SWING_VERTICAL
         else:
             self._attr_swing_mode = SWING_OFF
+        self.async_write_ha_state()

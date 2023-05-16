@@ -1255,6 +1255,9 @@
             },
             "fridge_door": {
                 "name": "Deur open Koelkast"
+            },
+            "filter_replacement": {
+                "name": "Filter vervangen"
             }
         },
         "number": {

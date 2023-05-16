@@ -1,6 +1,8 @@
 import logging
 from dataclasses import dataclass
 
+from pyhon import Hon
+
 from homeassistant.components.binary_sensor import (
     BinarySensorEntityDescription,
     BinarySensorDeviceClass,
@@ -8,8 +10,6 @@ from homeassistant.components.binary_sensor import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
-from pyhon import Hon
-
 from .const import DOMAIN
 from .hon import HonCoordinator, HonEntity, unique_entities
 
@@ -177,6 +177,20 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             device_class=BinarySensorDeviceClass.DOOR,
             on_value="1",
             translation_key="door_open",
+        ),
+    ),
+    "AC": (
+        HonBinarySensorEntityDescription(
+            key="filterChangeStatusLocal",
+            name="Filter Replacement",
+            device_class=BinarySensorDeviceClass.PROBLEM,
+            on_value="1",
+            translation_key="filter_replacement",
+        ),
+        HonBinarySensorEntityDescription(
+            key="ch2oCleaningStatus",
+            name="Ch2O Cleaning",
+            on_value="1",
         ),
     ),
     "REF": (

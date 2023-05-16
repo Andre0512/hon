@@ -1255,6 +1255,9 @@
             },
             "fridge_door": {
                 "name": "Kapı açık Buzdolabı"
+            },
+            "filter_replacement": {
+                "name": "Filtre değişimi"
             }
         },
         "number": {

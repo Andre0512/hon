@@ -21,7 +21,7 @@ PLATFORMS = [
 HON_HVAC_MODE = {
     "0": HVACMode.AUTO,
     "1": HVACMode.COOL,
-    "2": HVACMode.COOL,
+    "2": HVACMode.DRY,
     "3": HVACMode.DRY,
     "4": HVACMode.HEAT,
     "5": HVACMode.FAN_ONLY,

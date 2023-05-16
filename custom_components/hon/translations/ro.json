@@ -1255,6 +1255,9 @@
             },
             "fridge_door": {
                 "name": "Ușă deschisă Frigider"
+            },
+            "filter_replacement": {
+                "name": "Înlocuirea filtrului"
             }
         },
         "number": {

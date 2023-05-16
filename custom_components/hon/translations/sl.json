@@ -1255,6 +1255,9 @@
             },
             "fridge_door": {
                 "name": "Door open Hladilnik"
+            },
+            "filter_replacement": {
+                "name": "Menjava filtra"
             }
         },
         "number": {

@@ -1323,6 +1323,9 @@
             },
             "fridge_door": {
                 "name": "Door open Fridge"
+            },
+            "filter_replacement": {
+                "name": "Filter replacement"
             }
         },
         "number": {
