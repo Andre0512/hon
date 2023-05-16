@@ -434,7 +434,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         else:
             return (
                 super().available
-                and self._device.get("remoteCtrValid") == "1"
+                and self._device.get("remoteCtrValid", "1") == "1"
                 and self._device.get("attributes.lastConnEvent.category")
                 != "DISCONNECTED"
             )
