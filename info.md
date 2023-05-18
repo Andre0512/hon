@@ -49,7 +49,10 @@ Translation of internal names like programs are available for all languages whic
 
 ## Supported Models
 Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+- Haier AD105S2SM3FA
 - Haier AS25PBAHRA
+- Haier AS25TADHRA-2
+- Haier AS35TADHRA-2
 - Haier EG9012B19SU1JD
 - Haier HD80-A3959
 - Haier HW90-B14TEAM5
