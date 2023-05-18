@@ -56,8 +56,6 @@ class HonButtonEntity(HonEntity, ButtonEntity):
     ) -> None:
         super().__init__(hass, entry, coordinator, device)
 
-        self._coordinator = coordinator
-        self._device = device
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"
 
@@ -77,9 +75,7 @@ class HonButtonEntity(HonEntity, ButtonEntity):
 class HonFeatureRequestButton(HonEntity, ButtonEntity):
     def __init__(self, hass, coordinator, entry, device: HonAppliance) -> None:
         super().__init__(hass, entry, coordinator, device)
-        self._hass = hass
 
-        self._device = device
         self._attr_unique_id = f"{super().unique_id}_log_device_info"
         self._attr_icon = "mdi:information"
         self._attr_name = "Show Device Info"
@@ -88,7 +84,9 @@ class HonFeatureRequestButton(HonEntity, ButtonEntity):
 
     async def async_press(self) -> None:
         pyhon_version = pkg_resources.get_distribution("pyhon").version
-        info = f"Device Info:\n{self._device.diagnose()}pyhOnVersion: {pyhon_version}"
+        info = f"{self._device.diagnose()}pyhOnVersion: {pyhon_version}"
         title = f"{self._device.nick_name} Device Info"
-        persistent_notification.create(self._hass, f"```\n```{info}```\n```", title)
+        persistent_notification.create(
+            self._hass, f"````\n```\n{info}\n```\n````", title
+        )
         _LOGGER.info(info.replace(" ", "\u200B "))

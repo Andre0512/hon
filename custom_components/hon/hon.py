@@ -19,6 +19,7 @@ class HonEntity(CoordinatorEntity):
 
         self._hon = hass.data[DOMAIN][entry.unique_id]
         self._hass = hass
+        self._coordinator = coordinator
         self._device = device
 
         self._attr_unique_id = self._device.unique_id

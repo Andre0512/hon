@@ -56,8 +56,8 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             for description in descriptions:
                 if description.key not in list(device.commands):
                     continue
-                appliances.extend(
-                    [HonClimateEntity(hass, coordinator, entry, device, description)]
+                appliances.append(
+                    HonClimateEntity(hass, coordinator, entry, device, description)
                 )
     async_add_entities(appliances)
 
@@ -67,10 +67,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
         self, hass, coordinator, entry, device: HonAppliance, description
     ) -> None:
         super().__init__(hass, entry, coordinator, device)
-        self._coordinator = coordinator
-        self._device = device
         self.entity_description = description
-        self._hass = hass
         self._attr_unique_id = f"{super().unique_id}climate"
 
         self._attr_temperature_unit = TEMP_CELSIUS
@@ -96,7 +93,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
             | ClimateEntityFeature.SWING_MODE
         )
 
-        self._handle_coordinator_update()
+        self._handle_coordinator_update(update=False)
 
     async def async_set_hvac_mode(self, hvac_mode):
         if hvac_mode == HVACMode.OFF:
@@ -161,4 +158,5 @@ class HonClimateEntity(HonEntity, ClimateEntity):
             self._attr_swing_mode = SWING_VERTICAL
         else:
             self._attr_swing_mode = SWING_OFF
-        self.async_write_ha_state()
+        if update:
+            self.async_write_ha_state()

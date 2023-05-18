@@ -200,8 +200,6 @@ class HonNumberEntity(HonEntity, NumberEntity):
     def __init__(self, hass, coordinator, entry, device, description) -> None:
         super().__init__(hass, entry, coordinator, device)
 
-        self._coordinator = coordinator
-        self._device = device
         self._data = device.settings[description.key]
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"

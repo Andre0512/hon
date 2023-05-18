@@ -158,8 +158,6 @@ class HonSelectEntity(HonEntity, SelectEntity):
     ) -> None:
         super().__init__(hass, entry, coordinator, device)
 
-        self._coordinator = coordinator
-        self._device = device
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"
 

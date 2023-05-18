@@ -278,8 +278,6 @@ class HonBinarySensorEntity(HonEntity, BinarySensorEntity):
     def __init__(self, hass, coordinator, entry, device, description) -> None:
         super().__init__(hass, entry, coordinator, device)
 
-        self._coordinator = coordinator
-
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"
 
