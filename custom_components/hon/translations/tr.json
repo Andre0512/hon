@@ -1061,8 +1061,8 @@
                 "state": {
                     "fridge": "Buzdolabı",
                     "freezer": "Dondurucu",
-                    "vtRoom1": "My Zone",
-                    "[fridge|freezer]": "Buzdolabı & Dondurucu"
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Buzdolabı & Dondurucu"
                 },
                 "name": "Ocak gözü"
             }

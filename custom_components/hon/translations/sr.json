@@ -1061,8 +1061,8 @@
                 "state": {
                     "fridge": "Frižider",
                     "freezer": "Zamrzivač",
-                    "vtRoom1": "My Zone",
-                    "[fridge|freezer]": "Frižider & Zamrzivač"
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Frižider & Zamrzivač"
                 },
                 "name": "Zona"
             }

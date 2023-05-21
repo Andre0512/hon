@@ -1061,8 +1061,8 @@
                 "state": {
                     "fridge": "Hladilnik",
                     "freezer": "Zamrzovalnik",
-                    "vtRoom1": "My Zone",
-                    "[fridge|freezer]": "Hladilnik & Zamrzovalnik"
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Hladilnik & Zamrzovalnik"
                 },
                 "name": "Cona"
             }

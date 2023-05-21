@@ -1061,8 +1061,8 @@
                 "state": {
                     "fridge": "Kühlschrank",
                     "freezer": "Gefrierschrank",
-                    "vtRoom1": "My Zone",
-                    "[fridge|freezer]": "Kühlschrank & Gefrierschrank"
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Kühlschrank & Gefrierschrank"
                 },
                 "name": "Zone"
             }

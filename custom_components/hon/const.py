@@ -183,8 +183,8 @@ AC_HUMAN_SENSE = {
 REF_ZONES = {
     "fridge": "REF.ZONES.FRIDGE",
     "freezer": "REF.ZONES.FREEZER",
-    "vtRoom1": "REF.ZONES.MY_ZONE_1",
-    "[fridge|freezer]": ["REF.ZONES.FRIDGE", " & ", "REF.ZONES.FREEZER"],
+    "vtroom1": "REF.ZONES.MY_ZONE_1",
+    "fridge_freezer": ["REF.ZONES.FRIDGE", " & ", "REF.ZONES.FREEZER"],
 }
 
 PROGRAMS_TD = [

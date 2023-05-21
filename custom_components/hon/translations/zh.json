@@ -1061,8 +1061,8 @@
                 "state": {
                     "fridge": "冰箱",
                     "freezer": "冷藏箱",
-                    "vtRoom1": "My Zone",
-                    "[fridge|freezer]": "冰箱 & 冷藏箱"
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "冰箱 & 冷藏箱"
                 },
                 "name": "区域"
             }

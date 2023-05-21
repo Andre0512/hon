@@ -1113,8 +1113,8 @@
                 "state": {
                     "fridge": "Frigorifero",
                     "freezer": "Congelatore",
-                    "vtRoom1": "My Zone",
-                    "[fridge|freezer]": "Frigorifero & Congelatore"
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Frigorifero & Congelatore"
                 },
                 "name": "Zona"
             }

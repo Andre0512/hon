@@ -1235,8 +1235,8 @@
                 "state": {
                     "fridge": "Fridge",
                     "freezer": "Freezer",
-                    "vtRoom1": "My Zone",
-                    "[fridge|freezer]": "Fridge & Freezer"
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Fridge & Freezer"
                 },
                 "name": "Zone"
             }

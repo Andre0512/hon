@@ -1061,8 +1061,8 @@
                 "state": {
                     "fridge": "Ψυγείο",
                     "freezer": "Καταψύκτης",
-                    "vtRoom1": "My Zone",
-                    "[fridge|freezer]": "Ψυγείο & Καταψύκτης"
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Ψυγείο & Καταψύκτης"
                 },
                 "name": "Ζώνη"
             }

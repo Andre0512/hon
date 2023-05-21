@@ -1061,8 +1061,8 @@
                 "state": {
                     "fridge": "Frigider",
                     "freezer": "Congelator",
-                    "vtRoom1": "My Zone",
-                    "[fridge|freezer]": "Frigider & Congelator"
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Frigider & Congelator"
                 },
                 "name": "Zonă"
             }
