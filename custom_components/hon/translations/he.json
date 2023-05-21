@@ -211,7 +211,8 @@
                     "iot_fairy_quick_cycle": "Fairy Quick",
                     "iot_jar_quick_cycle": "Jar Quick",
                     "iot_yes_quick_cycle": "Yes Quick",
-                    "smart_ai": "Smart AI"
+                    "smart_ai": "Smart AI",
+                    "smart_ai_soil": "Smart AI"
                 },
                 "name": "Program"
             },
@@ -503,6 +504,15 @@
             },
             "remaining_time": {
                 "name": "זמן שנותר"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Fridge",
+                    "freezer": "Freezer",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Fridge & Freezer"
+                },
+                "name": "Zone"
             }
         },
         "switch": {
@@ -610,6 +620,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Refrigerator"
             }
         },
         "binary_sensor": {
@@ -754,6 +767,12 @@
         "button": {
             "induction_hob": {
                 "name": "Induction Hob"
+            },
+            "start_program": {
+                "name": "Program Start"
+            },
+            "stop_program": {
+                "name": "Program Stop"
             }
         },
         "climate": {

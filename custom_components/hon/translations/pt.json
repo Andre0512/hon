@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rápido 20",
                     "hqd_quick_30": "Rápido 30",
-                    "hqd_quick_dry": "Secagem rápida",
+                    "hqd_quick_dry": "Secagem rápida 30",
                     "hqd_quilt": "Colchas",
                     "hqd_refresh": "Refrescar",
                     "hqd_school_uniform": "Farda da escola",
@@ -409,6 +409,11 @@
                     "silent": "Noite",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "especial",
                     "special_pw_prz": "especial",
                     "steam": "Vapor 75 °C",
@@ -465,19 +470,20 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Massas e bolos",
-                    "bakery_steam": "Pão cozido a vapor",
+                    "bakery_steam": "Vapor do forno",
                     "bottom_heating": "Aquecimento inferior",
                     "bottom_heating_fan": "Aquecimento Inferior + Ventilação",
                     "bread": "Pão",
-                    "bread_steam": "Pastelaria cozida a vapor",
+                    "bread_steam": "Pão no vapor",
+                    "combi": "Combi",
                     "convection_fan": "Convecção + Ventilador",
-                    "convection_fan_turnspit": "Convecção + Ventilador + Espeto giratório",
+                    "convection_fan_turnspit": "Espeto com convecção ventilada",
                     "conventional": "Estático",
-                    "conventional_turnspit": "Convecção + Espeto giratório",
+                    "conventional_turnspit": "Espeto convencional",
                     "defrost": "Descongelar",
                     "descaling": "Descalcificação",
                     "fish": "Peixe",
-                    "fish_steam": "Peixe cozinhado a vapor",
+                    "fish_steam": "Peixe no vapor",
                     "grill_cata": "Grelhar",
                     "grill_fan_cata": "Grelhar com ventilação",
                     "grill_fan_pyro": "Grelhar + Ventilação",
@@ -486,23 +492,23 @@
                     "iot_bread": "Pão",
                     "iot_h20_clean": "h2O clean",
                     "leavening": "Levedação",
-                    "low_temp_cooking": "Cozinhar a baixa temperatura",
-                    "low_temp_cooking_fish": "Cozinhar carne a baixa temperatura - Peixe",
-                    "low_temp_cooking_fish_steam": "Cozedura a vapor a baixa temperatura - Peixe",
-                    "low_temp_cooking_meat": "Cozinhar carne a baixa temperatura - Carne",
-                    "low_temp_cooking_meat_steam": "Cozedura a vapor a baixa temperatura - Carne",
-                    "low_temp_cooking_steam": "Cozedura a vapor a baixa temperatura",
+                    "low_temp_cooking": "Cozimento em baixa temperatura",
+                    "low_temp_cooking_fish": "Cozimento em baixa temperatura Peixe",
+                    "low_temp_cooking_fish_steam": "Cozimento em baixa temperatura Peixe a vapor",
+                    "low_temp_cooking_meat": "Cozimento em baixa temperatura Carne",
+                    "low_temp_cooking_meat_steam": "Cozimento em baixa temperatura Carne no vapor",
+                    "low_temp_cooking_steam": "Cozimento em baixa temperatura no vapor",
                     "meat": "Carne",
-                    "meat_steam": "Carne cozinhada a vapor",
+                    "meat_steam": "Vapor de carne",
                     "multi_level": "Multinível",
                     "paella": "Paella",
                     "pasta_and_bakery": "Massas e bolos",
                     "pizza": "Pizza",
                     "pyrolysis": "Pirólise",
                     "pyrolysis_plus": "Pirólise +",
-                    "red_meat": "Carne vermelha",
-                    "red_meat_steam": "Carne vermelha cozinhada a vapor",
-                    "regenerate": "Regeneração",
+                    "red_meat": "Carne Vermelha",
+                    "red_meat_steam": "Carne Vermelha no vapor",
+                    "regenerate": "Regenerar",
                     "soft_plus": "Soft+",
                     "super_grill": "Super Grelhador",
                     "tailor_bake": "Tailor bake",
@@ -511,9 +517,9 @@
                     "vegetables": "Vegetais",
                     "vegetables_cata": "Legumes",
                     "vegetables_pyro": "Legumes",
-                    "water_discharge": "Drenagem de água",
-                    "white_meat": "Carne branca",
-                    "white_meat_steam": "Carne branca cozinhada a vapor"
+                    "water_discharge": "Descarga d'água",
+                    "white_meat": "Carne Branca",
+                    "white_meat_steam": "Carne Branca no vapor"
                 },
                 "name": "Programa"
             },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rápido 20",
                     "hqd_quick_30": "Rápido 30",
-                    "hqd_quick_dry": "Secagem rápida",
+                    "hqd_quick_dry": "Secagem rápida 30",
                     "hqd_quilt": "Colchas",
                     "hqd_refresh": "Refrescar",
                     "hqd_school_uniform": "Farda da escola",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Tempo restante"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Frigorífico",
+                    "freezer": "Congelador",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Frigorífico & Congelador"
+                },
+                "name": "Zona"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Frigorífico"
             }
         },
         "binary_sensor": {
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Placa de indução"
+            },
+            "start_program": {
+                "name": "Programa Início"
+            },
+            "stop_program": {
+                "name": "Programa Parar"
             }
         },
         "climate": {

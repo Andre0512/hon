@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rapid 20",
                     "hqd_quick_30": "Rapid 30",
-                    "hqd_quick_dry": "Uscare rapidă",
+                    "hqd_quick_dry": "Uscare rapidă 30",
                     "hqd_quilt": "Pilote",
                     "hqd_refresh": "Reîmprospătare",
                     "hqd_school_uniform": "Uniformă școlară",
@@ -409,6 +409,11 @@
                     "silent": "Noapte",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "special",
                     "special_pw_prz": "special",
                     "steam": "Abur 75 °C",
@@ -464,12 +469,13 @@
             },
             "programs_ov": {
                 "state": {
-                    "bakery": "Paste și patiserie",
-                    "bakery_steam": "Pâine gătită la abur",
+                    "bakery": "Paste și produse de patiserie",
+                    "bakery_steam": "În cuptor la abur",
                     "bottom_heating": "Încălzire de jos",
                     "bottom_heating_fan": "Încălzire De Jos + Ventilație",
                     "bread": "Pâine",
-                    "bread_steam": "Produse de patiserie gătite la abur",
+                    "bread_steam": "Pâine gătită la abur",
+                    "combi": "Combi",
                     "convection_fan": "Convecție și ventilație",
                     "convection_fan_turnspit": "Convecție + Ventilator + Rotisor",
                     "conventional": "Convențional",
@@ -488,9 +494,9 @@
                     "leavening": "Dospire",
                     "low_temp_cooking": "Gătire la temperatură scăzută",
                     "low_temp_cooking_fish": "Gătire la temperatură scăzută - Pește",
-                    "low_temp_cooking_fish_steam": "Gătitul cu abur la temperatură scăzută - Pește",
+                    "low_temp_cooking_fish_steam": "Gătitul la temperaturi scăzute - Pește gătit la abur",
                     "low_temp_cooking_meat": "Gătire la temperatură scăzută - Carne",
-                    "low_temp_cooking_meat_steam": "Gătitul la abur la temperatură scăzută - carne",
+                    "low_temp_cooking_meat_steam": "Gătitul la temperaturi scăzute - Carne gătită la abur",
                     "low_temp_cooking_steam": "Gătitul la abur la temperaturi scăzute",
                     "meat": "Carne",
                     "meat_steam": "Carne gătită la abur",
@@ -511,7 +517,7 @@
                     "vegetables": "Legume",
                     "vegetables_cata": "Legume",
                     "vegetables_pyro": "Legume",
-                    "water_discharge": "Scurgerea apei",
+                    "water_discharge": "Evacuare apă",
                     "white_meat": "Carne albă",
                     "white_meat_steam": "Carne albă gătită la abur"
                 },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rapid 20",
                     "hqd_quick_30": "Rapid 30",
-                    "hqd_quick_dry": "Uscare rapidă",
+                    "hqd_quick_dry": "Uscare rapidă 30",
                     "hqd_quilt": "Pilote",
                     "hqd_refresh": "Reîmprospătare",
                     "hqd_school_uniform": "Uniformă școlară",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Timp rămas"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Frigider",
+                    "freezer": "Congelator",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Frigider & Congelator"
+                },
+                "name": "Zonă"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Frigider"
             }
         },
         "binary_sensor": {
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Plita cu inducție"
+            },
+            "start_program": {
+                "name": "Program Pornire"
+            },
+            "stop_program": {
+                "name": "Program Oprire"
             }
         },
         "climate": {

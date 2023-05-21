@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Hızlı 20",
                     "hqd_quick_30": "Hızlı 30",
-                    "hqd_quick_dry": "Hızlı kurutma",
+                    "hqd_quick_dry": "Hızlı kurutma 30",
                     "hqd_quilt": "Yorganlar",
                     "hqd_refresh": "Yenileme",
                     "hqd_school_uniform": "Okul üniforması",
@@ -409,6 +409,11 @@
                     "silent": "Gece",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "özel",
                     "special_pw_prz": "özel",
                     "steam": "Buhar 75°C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Makarna ve Ekmek",
-                    "bakery_steam": "Buharda pişmiş ekmek",
+                    "bakery_steam": "Fırın buharı",
                     "bottom_heating": "Alt ısıtıcı",
                     "bottom_heating_fan": "Alt ısıtıcı + Fan",
                     "bread": "Ekmek",
-                    "bread_steam": "Buharda pişmiş hamur işleri",
+                    "bread_steam": "Buharda pişmiş ekmek",
+                    "combi": "Kombi",
                     "convection_fan": "Fan desteklı",
                     "convection_fan_turnspit": "Konveksiyon + Fan + Şiş Çevirme",
                     "conventional": "Statık",
@@ -477,7 +483,7 @@
                     "defrost": "Buz çözme",
                     "descaling": "Kireç çözme",
                     "fish": "Balık",
-                    "fish_steam": "Buharda pişmiş balık",
+                    "fish_steam": "Balık buğulama",
                     "grill_cata": "Izgara",
                     "grill_fan_cata": "Izgara fan",
                     "grill_fan_pyro": "Izgara + Fan",
@@ -488,12 +494,12 @@
                     "leavening": "Mayalama",
                     "low_temp_cooking": "Düşük Sıcaklıkta Pişirme",
                     "low_temp_cooking_fish": "Düşük Sıcaklıkta Pişirme - Balık",
-                    "low_temp_cooking_fish_steam": "Düşük Sıcaklıkta Buharda Pişirme - Balık",
+                    "low_temp_cooking_fish_steam": "Düşük Isıda Pişirme - Balık buğulama",
                     "low_temp_cooking_meat": "Düşük Sıcaklıkta Pişirme - Et",
-                    "low_temp_cooking_meat_steam": "Düşük Sıcaklıkta Buharda Pişirme - Et",
+                    "low_temp_cooking_meat_steam": "Düşük Isıda Pişirme - Buharda et",
                     "low_temp_cooking_steam": "Düşük Sıcaklıkta Buharda Pişirme",
                     "meat": "Et",
-                    "meat_steam": "Buharda pişmiş et",
+                    "meat_steam": "Et buharı",
                     "multi_level": "Çok Seviyeli",
                     "paella": "Paella",
                     "pasta_and_bakery": "Makarna ve Ekmek",
@@ -501,8 +507,8 @@
                     "pyrolysis": "Piroliz",
                     "pyrolysis_plus": "Piroliz +",
                     "red_meat": "Kırmızı Et",
-                    "red_meat_steam": "Buharda pişmiş kırmızı et",
-                    "regenerate": "Yenileme",
+                    "red_meat_steam": "Buharda kırmızı et",
+                    "regenerate": "Yeniden oluştur",
                     "soft_plus": "Yumuşak+",
                     "super_grill": "Süper Izgara",
                     "tailor_bake": "Tailor bake",
@@ -511,9 +517,9 @@
                     "vegetables": "Sebzeler",
                     "vegetables_cata": "Sebzeler",
                     "vegetables_pyro": "Sebzeler",
-                    "water_discharge": "Su Drenajı",
+                    "water_discharge": "Su Tahliyesi",
                     "white_meat": "Beyaz Et",
-                    "white_meat_steam": "Buharda pişmiş beyaz et"
+                    "white_meat_steam": "Buharda beyaz et"
                 },
                 "name": "Program"
             },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Hızlı 20",
                     "hqd_quick_30": "Hızlı 30",
-                    "hqd_quick_dry": "Hızlı kurutma",
+                    "hqd_quick_dry": "Hızlı kurutma 30",
                     "hqd_quilt": "Yorganlar",
                     "hqd_refresh": "Yenileme",
                     "hqd_school_uniform": "Okul üniforması",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Kalan süre"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Buzdolabı",
+                    "freezer": "Dondurucu",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Buzdolabı & Dondurucu"
+                },
+                "name": "Ocak gözü"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Buzdolabı"
             }
         },
         "binary_sensor": {
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "İndüksiyonlu Ocak"
+            },
+            "start_program": {
+                "name": "Program Başlangıç"
+            },
+            "stop_program": {
+                "name": "Program Durdur"
             }
         },
         "climate": {

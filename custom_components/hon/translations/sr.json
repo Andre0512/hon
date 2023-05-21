@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Brzo 20",
                     "hqd_quick_30": "Brzo 30",
-                    "hqd_quick_dry": "Brzo sušenje",
+                    "hqd_quick_dry": "Brzo sušenje 30",
                     "hqd_quilt": "Jorgani",
                     "hqd_refresh": "Osvežavanje",
                     "hqd_school_uniform": "Školska uniforma",
@@ -409,6 +409,11 @@
                     "silent": "Noć",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "posebno",
                     "special_pw_prz": "posebno",
                     "steam": "Para 75°C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Testenine i pecivo",
-                    "bakery_steam": "Hleb pečen na pari",
+                    "bakery_steam": "Priprema na pari u rerni",
                     "bottom_heating": "Donje grejanje",
                     "bottom_heating_fan": "Donje grejanje + Ventilator",
                     "bread": "Hleb",
-                    "bread_steam": "Peciva pečena na pari",
+                    "bread_steam": "Hleb pečen na pari",
+                    "combi": "Kombinovani",
                     "convection_fan": "Konvekcija + ventilator",
                     "convection_fan_turnspit": "Konvekcija + ventilator + ražanj",
                     "conventional": "Konvekcija",
@@ -477,7 +483,7 @@
                     "defrost": "Odmrzavanje",
                     "descaling": "Uklanjanje kamenca",
                     "fish": "Riba",
-                    "fish_steam": "Riba kuvana na pari",
+                    "fish_steam": "Riba na pari",
                     "grill_cata": "Roštilj",
                     "grill_fan_cata": "Roštilj sa ventilatorom",
                     "grill_fan_pyro": "Gril + ventilator",
@@ -488,12 +494,12 @@
                     "leavening": "Narastanje",
                     "low_temp_cooking": "Kuvanje na niskoj temperaturi",
                     "low_temp_cooking_fish": "Kuvanje na niskoj temperaturi – riba",
-                    "low_temp_cooking_fish_steam": "Kuvanje na pari na niskoj temperaturi – riba",
+                    "low_temp_cooking_fish_steam": "Kuvanje na niskoj temperaturi – riba na pari",
                     "low_temp_cooking_meat": "Kuvanje na niskoj temperaturi – meso",
-                    "low_temp_cooking_meat_steam": "Kuvanje na pari na niskoj temperaturi – meso",
+                    "low_temp_cooking_meat_steam": "Kuvanje na niskoj temperaturi – meso na pari",
                     "low_temp_cooking_steam": "Kuvanje na pari na niskoj temperaturi",
                     "meat": "Meso",
-                    "meat_steam": "Meso kuvano na pari",
+                    "meat_steam": "Priprema mesa na pari",
                     "multi_level": "Više nivoa",
                     "paella": "Paella",
                     "pasta_and_bakery": "Testenine i pecivo",
@@ -501,7 +507,7 @@
                     "pyrolysis": "Piroliza",
                     "pyrolysis_plus": "Piroliza +",
                     "red_meat": "Crveno meso",
-                    "red_meat_steam": "Crveno meso kuvano na pari",
+                    "red_meat_steam": "Crveno meso na pari",
                     "regenerate": "Regeneracija",
                     "soft_plus": "Meko+",
                     "super_grill": "Super gril",
@@ -511,9 +517,9 @@
                     "vegetables": "Povrće",
                     "vegetables_cata": "Povrće",
                     "vegetables_pyro": "Povrće",
-                    "water_discharge": "Odvod vode",
+                    "water_discharge": "Ispuštanje vode",
                     "white_meat": "Belo meso",
-                    "white_meat_steam": "Belo meso kuvano na pari"
+                    "white_meat_steam": "Belo meso na pari"
                 },
                 "name": "Program"
             },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Brzo 20",
                     "hqd_quick_30": "Brzo 30",
-                    "hqd_quick_dry": "Brzo sušenje",
+                    "hqd_quick_dry": "Brzo sušenje 30",
                     "hqd_quilt": "Jorgani",
                     "hqd_refresh": "Osvežavanje",
                     "hqd_school_uniform": "Školska uniforma",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Preostalo vreme"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Frižider",
+                    "freezer": "Zamrzivač",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Frižider & Zamrzivač"
+                },
+                "name": "Zona"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Frižider"
             }
         },
         "binary_sensor": {
@@ -1206,7 +1224,7 @@
                 "name": "Tiganj"
             },
             "remote_control": {
-                "name": "Daljinsko upravljanje"
+                "name": "Upravljanje na daljinu"
             },
             "rinse_aid": {
                 "name": "Nivo sredstva za ispiranje"
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Indukciona ploča"
+            },
+            "start_program": {
+                "name": "Program Pokretanje"
+            },
+            "stop_program": {
+                "name": "Program Zaustavi"
             }
         },
         "climate": {

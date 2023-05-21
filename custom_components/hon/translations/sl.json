@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Hitro 20",
                     "hqd_quick_30": "Hitro 30",
-                    "hqd_quick_dry": "Hitro sušenje",
+                    "hqd_quick_dry": "Hitro sušenje 30",
                     "hqd_quilt": "Posteljna pregrinjala",
                     "hqd_refresh": "Osvežitev",
                     "hqd_school_uniform": "Šolska uniforma",
@@ -409,6 +409,11 @@
                     "silent": "Noč",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "posebno",
                     "special_pw_prz": "Posebno",
                     "steam": "Para 75 °C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Testenine in pekovski izdelki",
-                    "bakery_steam": "V sopari pečen kruh",
+                    "bakery_steam": "Parna pečica",
                     "bottom_heating": "Spodnji grelnik",
                     "bottom_heating_fan": "Spodnji grelnik + Ventilator",
                     "bread": "Kruh",
-                    "bread_steam": "V sopari pečeno pecivo",
+                    "bread_steam": "V sopari pečen kruh",
+                    "combi": "Kombinirano",
                     "convection_fan": "Konvekcija + ventilator",
                     "convection_fan_turnspit": "Konvekcija + ventilator + raženj",
                     "conventional": "Konvenkcijsko",
@@ -486,14 +492,14 @@
                     "iot_bread": "Kruh",
                     "iot_h20_clean": "h2O clean",
                     "leavening": "Vzhajanje",
-                    "low_temp_cooking": "Priprava pri nizki temperaturi",
-                    "low_temp_cooking_fish": "Priprava pri nizki temperaturi – ribe",
-                    "low_temp_cooking_fish_steam": "Soparjenje pri nizki temperaturi – ribe",
-                    "low_temp_cooking_meat": "Priprava pri nizki temperaturi – meso",
-                    "low_temp_cooking_meat_steam": "Soparjenje pri nizki temperaturi – meso",
+                    "low_temp_cooking": "Kuhanje pri nizki temperaturi",
+                    "low_temp_cooking_fish": "Kuhanje pri nizki temperaturi – ribe",
+                    "low_temp_cooking_fish_steam": "Kuhanje pri nizki temperaturi – soparjene ribe",
+                    "low_temp_cooking_meat": "Kuhanje pri nizki temperaturi – meso",
+                    "low_temp_cooking_meat_steam": "Kuhanje pri nizki temperaturi – soparjeno meso",
                     "low_temp_cooking_steam": "Soparjenje pri nizki temperaturi",
                     "meat": "Meso",
-                    "meat_steam": "Soparjeno meso",
+                    "meat_steam": "Soparjenje mesa",
                     "multi_level": "Na več nivojih",
                     "paella": "Paella",
                     "pasta_and_bakery": "Testenine in pekovski izdelki",
@@ -502,7 +508,7 @@
                     "pyrolysis_plus": "Piroliza +",
                     "red_meat": "Rdeče meso",
                     "red_meat_steam": "Soparjeno rdeče meso",
-                    "regenerate": "Obnavljanje",
+                    "regenerate": "Regeneracija",
                     "soft_plus": "Soft+",
                     "super_grill": "Super Grill",
                     "tailor_bake": "Tailor bake",
@@ -511,7 +517,7 @@
                     "vegetables": "Zelenjava",
                     "vegetables_cata": "Zelenjava",
                     "vegetables_pyro": "Zelenjava",
-                    "water_discharge": "Odtok za vodo",
+                    "water_discharge": "Izpust vode",
                     "white_meat": "Belo meso",
                     "white_meat_steam": "Soparjeno belo meso"
                 },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Hitro 20",
                     "hqd_quick_30": "Hitro 30",
-                    "hqd_quick_dry": "Hitro sušenje",
+                    "hqd_quick_dry": "Hitro sušenje 30",
                     "hqd_quilt": "Posteljna pregrinjala",
                     "hqd_refresh": "Osvežitev",
                     "hqd_school_uniform": "Šolska uniforma",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Time remaining"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Hladilnik",
+                    "freezer": "Zamrzovalnik",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Hladilnik & Zamrzovalnik"
+                },
+                "name": "Cona"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Hladilnik"
             }
         },
         "binary_sensor": {
@@ -1206,7 +1224,7 @@
                 "name": "Posoda"
             },
             "remote_control": {
-                "name": "Daljinsko upravljanje"
+                "name": "Diaľkové ovládanie"
             },
             "rinse_aid": {
                 "name": "Nivo sredstva za sijaj"
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Indukcijska kuhalna plošča"
+            },
+            "start_program": {
+                "name": "Program Start"
+            },
+            "stop_program": {
+                "name": "Program Stop"
             }
         },
         "climate": {

@@ -124,6 +124,13 @@ SELECTS = {
             entity_category=EntityCategory.CONFIG,
             translation_key="programs_ref",
         ),
+        SelectEntityDescription(
+            key="startProgram.zone",
+            name="Zone",
+            icon="mdi:radiobox-marked",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="ref_zones",
+        ),
     ),
 }
 

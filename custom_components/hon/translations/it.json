@@ -256,7 +256,7 @@
                     "hqd_bed_sheets": "Lenzuola",
                     "hqd_bulky": "Vestiti voluminosi",
                     "hqd_casual": "Casual",
-                    "hqd_cold_wind_30": "Brezza rinfrescante 30 minuti",
+                    "hqd_cold_wind_30": "Brezza rinfrescante 30m",
                     "hqd_cold_wind_timing": "Brezza rinfrescante",
                     "hqd_cotton": "Cotone",
                     "hqd_curtain": "Tende",
@@ -270,14 +270,14 @@
                     "hqd_i_refresh_pro": "I-Refresh Pro",
                     "hqd_jacket": "Giacche",
                     "hqd_jeans": "Jeans",
-                    "hqd_luxury": "Vestiti preziosi",
+                    "hqd_luxury": "Capi Pregiati",
                     "hqd_mix": "Misti",
                     "hqd_night_dry": "Asciugatura notturna",
                     "hqd_outdoor": "Outdoor",
                     "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "Rapido 20",
-                    "hqd_quick_30": "Rapido 30",
-                    "hqd_quick_dry": "Asciugatura veloce",
+                    "hqd_quick_20": "Rapido 20m",
+                    "hqd_quick_30": "Rapido 30m",
+                    "hqd_quick_dry": "Asciugatura veloce (30 min)",
                     "hqd_quilt": "Trapunte",
                     "hqd_refresh": "Refresh",
                     "hqd_school_uniform": "Uniforme scolastica",
@@ -291,7 +291,7 @@
                     "hqd_underwear": "Intimo",
                     "hqd_warm_up": "Riscaldamento",
                     "hqd_wool": "Lana",
-                    "hqd_working_suit": "Completo da lavoro",
+                    "hqd_working_suit": "Abbigliamento da lavoro",
                     "hygiene": "Igiene",
                     "iot_checkup": "Check-Up",
                     "iot_dry_anti_mites": "Anti-Acari",
@@ -315,7 +315,7 @@
                     "iot_dry_lingerie": "Lingerie",
                     "iot_dry_mixed": "Misti",
                     "iot_dry_playsuits": "Tutine",
-                    "iot_dry_rapid_30": "Rapido 30",
+                    "iot_dry_rapid_30": "Rapido 30m",
                     "iot_dry_rapid_59": "Rapido 59'.",
                     "iot_dry_refresh": "Rinfresca",
                     "iot_dry_regenerates_waterproof": "Rigenera Tessuti Impermeabili",
@@ -461,6 +461,11 @@
                     "silent": "Notte",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "Speciale",
                     "special_pw_prz": "Speciale",
                     "steam": "Vapore 75°C",
@@ -517,19 +522,20 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Pasta e Pasticceria",
-                    "bakery_steam": "Pane a vapore",
+                    "bakery_steam": "Vapore da forno",
                     "bottom_heating": "Resistenza Inferiore",
                     "bottom_heating_fan": "Resistenza Inferiore Ventilata",
                     "bread": "Pane",
-                    "bread_steam": "Pasticceria a vapore",
+                    "bread_steam": "Pane al vapore",
+                    "combi": "Combi",
                     "convection_fan": "Cottura Ventilata",
-                    "convection_fan_turnspit": "Girarrosto + statico ventilato",
+                    "convection_fan_turnspit": "Girarrosto a convenzione ventilata",
                     "conventional": "Statico",
-                    "conventional_turnspit": "Girarrosto + statico",
+                    "conventional_turnspit": "Girarrosto a convenzione",
                     "defrost": "Decongelamento",
-                    "descaling": "Disincrostazione",
+                    "descaling": "Decalcificazione",
                     "fish": "Pesce",
-                    "fish_steam": "Pesce a vapore",
+                    "fish_steam": "Pesce al vapore",
                     "grill_cata": "Grill",
                     "grill_fan_cata": "Grill fan",
                     "grill_fan_pyro": "Grill Ventilato",
@@ -539,13 +545,13 @@
                     "iot_h20_clean": "h2O clean",
                     "leavening": "Lievitazione",
                     "low_temp_cooking": "Cottura a bassa temperatura",
-                    "low_temp_cooking_fish": "Cottura a bassa temperatura del pesce",
-                    "low_temp_cooking_fish_steam": "Cottura a bassa temperatura del pesce a vapore",
-                    "low_temp_cooking_meat": "Cottura a bassa temperatura della carne",
-                    "low_temp_cooking_meat_steam": "Cottura a vapore a bassa temperatura di carne",
-                    "low_temp_cooking_steam": "Cottura a vapore a bassa temperatura",
+                    "low_temp_cooking_fish": "Cottura a bassa temperatura Pesce",
+                    "low_temp_cooking_fish_steam": "Cottura a bassa temperatura Pesce al vapore",
+                    "low_temp_cooking_meat": "Cottura a bassa temperatura Carne",
+                    "low_temp_cooking_meat_steam": "Cottura a bassa temperatura Carne al vapore",
+                    "low_temp_cooking_steam": "Cottura a bassa temperatura al vapore",
                     "meat": "Carne",
-                    "meat_steam": "Carne a vapore",
+                    "meat_steam": "Carne al vapore",
                     "multi_level": "Cottura Multilivello",
                     "paella": "Paella",
                     "pasta_and_bakery": "Pasta e Pasticceria",
@@ -553,8 +559,8 @@
                     "pyrolysis": "Pirolisi",
                     "pyrolysis_plus": "Pirolisi +",
                     "red_meat": "Carne rossa",
-                    "red_meat_steam": "Carne rossa a vapore",
-                    "regenerate": "Rigenerazione",
+                    "red_meat_steam": "Carne rossa al vapore",
+                    "regenerate": "Rigenerare",
                     "soft_plus": "Soft+",
                     "super_grill": "Supergriglia",
                     "tailor_bake": "Tailor bake",
@@ -563,9 +569,9 @@
                     "vegetables": "Verdure",
                     "vegetables_cata": "Verdure",
                     "vegetables_pyro": "Verdure",
-                    "water_discharge": "Scarico d'acqua",
-                    "white_meat": "Carne bianca",
-                    "white_meat_steam": "Carne bianca a vapore"
+                    "water_discharge": "Scarico dell'acqua",
+                    "white_meat": "Carne Bianca",
+                    "white_meat_steam": "Carne bianca al vapore"
                 },
                 "name": "Programma"
             },
@@ -601,7 +607,7 @@
                     "hqd_bed_sheets": "Lenzuola",
                     "hqd_bulky": "Vestiti voluminosi",
                     "hqd_casual": "Casual",
-                    "hqd_cold_wind_30": "Brezza rinfrescante 30 minuti",
+                    "hqd_cold_wind_30": "Brezza rinfrescante 30m",
                     "hqd_cold_wind_timing": "Brezza rinfrescante",
                     "hqd_cotton": "Cotone",
                     "hqd_curtain": "Tende",
@@ -615,14 +621,14 @@
                     "hqd_i_refresh_pro": "I-Refresh Pro",
                     "hqd_jacket": "Giacche",
                     "hqd_jeans": "Jeans",
-                    "hqd_luxury": "Vestiti preziosi",
+                    "hqd_luxury": "Capi Pregiati",
                     "hqd_mix": "Misti",
                     "hqd_night_dry": "Asciugatura notturna",
                     "hqd_outdoor": "Outdoor",
                     "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "Rapido 20",
-                    "hqd_quick_30": "Rapido 30",
-                    "hqd_quick_dry": "Asciugatura veloce",
+                    "hqd_quick_20": "Rapido 20m",
+                    "hqd_quick_30": "Rapido 30m",
+                    "hqd_quick_dry": "Asciugatura veloce (30 min)",
                     "hqd_quilt": "Trapunte",
                     "hqd_refresh": "Refresh",
                     "hqd_school_uniform": "Uniforme scolastica",
@@ -636,7 +642,7 @@
                     "hqd_underwear": "Intimo",
                     "hqd_warm_up": "Riscaldamento",
                     "hqd_wool": "Lana",
-                    "hqd_working_suit": "Completo da lavoro",
+                    "hqd_working_suit": "Abbigliamento da lavoro",
                     "hygiene": "Igiene",
                     "iot_checkup": "Check-Up",
                     "iot_dry_anti_mites": "Anti-Acari",
@@ -660,7 +666,7 @@
                     "iot_dry_lingerie": "Lingerie",
                     "iot_dry_mixed": "Misti",
                     "iot_dry_playsuits": "Tutine",
-                    "iot_dry_rapid_30": "Rapido 30",
+                    "iot_dry_rapid_30": "Rapido 30m",
                     "iot_dry_rapid_59": "Rapido 59'.",
                     "iot_dry_refresh": "Rinfresca",
                     "iot_dry_regenerates_waterproof": "Rigenera Tessuti Impermeabili",
@@ -1102,6 +1108,15 @@
             },
             "remaining_time": {
                 "name": "Tempo rimanente"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Frigorifero",
+                    "freezer": "Congelatore",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Frigorifero & Congelatore"
+                },
+                "name": "Zona"
             }
         },
         "switch": {
@@ -1209,6 +1224,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Frigo"
             }
         },
         "binary_sensor": {
@@ -1258,7 +1276,7 @@
                 "name": "Pentola"
             },
             "remote_control": {
-                "name": "Controllo remoto"
+                "name": "远程控制"
             },
             "rinse_aid": {
                 "name": "Livello Brillantante"
@@ -1353,6 +1371,12 @@
         "button": {
             "induction_hob": {
                 "name": "Piano cottura a induzione"
+            },
+            "start_program": {
+                "name": "Programma Inizia"
+            },
+            "stop_program": {
+                "name": "Programma Stop"
             }
         },
         "climate": {

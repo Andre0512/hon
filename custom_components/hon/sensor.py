@@ -502,6 +502,9 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="freezer_temp",
         ),
+        SensorEntityDescription(
+            key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
+        ),
     ),
 }
 SENSORS["WD"] = unique_entities(SENSORS["WM"], SENSORS["TD"])

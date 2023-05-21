@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Быстрая 20",
                     "hqd_quick_30": "Быстрая 30",
-                    "hqd_quick_dry": "Быстрая сушка",
+                    "hqd_quick_dry": "Быстрая сушка 30",
                     "hqd_quilt": "Стеганые одеяла",
                     "hqd_refresh": "Освежение",
                     "hqd_school_uniform": "Школьная форма",
@@ -409,6 +409,11 @@
                     "silent": "Ночь",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "специальные",
                     "special_pw_prz": "специальные",
                     "steam": "пар 75°C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Паста и выпечка",
-                    "bakery_steam": "Хлеб, испеченный на пару",
+                    "bakery_steam": "Пар в духовом шкафу",
                     "bottom_heating": "Нижний элемент",
                     "bottom_heating_fan": "Нижний элемент + вентилятор",
                     "bread": "Хлеб",
-                    "bread_steam": "Выпечка, приготовленная на пару",
+                    "bread_steam": "Хлеб, испеченный на пару",
+                    "combi": "Combi",
                     "convection_fan": "Верхний и нижний нагрев с вентилятором",
                     "convection_fan_turnspit": "Обыкновенная духовка + вентилятор + вертел",
                     "conventional": "Верхний и нижний нагрев",
@@ -477,7 +483,7 @@
                     "defrost": "Размораживание",
                     "descaling": "Удаление накипи",
                     "fish": "Рыба",
-                    "fish_steam": "Рыба, приготовленная на пару",
+                    "fish_steam": "Рыба на пару",
                     "grill_cata": "Гриль",
                     "grill_fan_cata": "Гриль с вентилятором",
                     "grill_fan_pyro": "Гриль + вентилятор",
@@ -488,12 +494,12 @@
                     "leavening": "Заквашивание",
                     "low_temp_cooking": "Приготовление при низкой температуре",
                     "low_temp_cooking_fish": "Приготовление при низкой температуре - Рыба",
-                    "low_temp_cooking_fish_steam": "Приготовление при низкой температуре на пару - Рыба",
+                    "low_temp_cooking_fish_steam": "Приготовление при низкой температуре - Рыба на пару",
                     "low_temp_cooking_meat": "Приготовление при низкой температуре - Мясо",
-                    "low_temp_cooking_meat_steam": "Приготовление при низкой температуре на пару - Мясо",
+                    "low_temp_cooking_meat_steam": "Приготовление при низкой температуре - Мясо на пару",
                     "low_temp_cooking_steam": "Приготовление при низкой температуре на пару",
                     "meat": "Мясо",
-                    "meat_steam": "Мясо, приготовленное на пару",
+                    "meat_steam": "Мясо на пару",
                     "multi_level": "Многоуровневое приготовление",
                     "paella": "Paella",
                     "pasta_and_bakery": "Паста и выпечка",
@@ -501,7 +507,7 @@
                     "pyrolysis": "Пиролиз",
                     "pyrolysis_plus": "Пиролиз +",
                     "red_meat": "Красное мясо",
-                    "red_meat_steam": "Красное мясо, приготовленное на пару",
+                    "red_meat_steam": "Красное мясо на пару",
                     "regenerate": "Регенерация",
                     "soft_plus": "Soft+",
                     "super_grill": "Супер-гриль",
@@ -511,9 +517,9 @@
                     "vegetables": "Овощи",
                     "vegetables_cata": "Овощи",
                     "vegetables_pyro": "Овощи",
-                    "water_discharge": "Водоотвод",
+                    "water_discharge": "Слив воды",
                     "white_meat": "Белое мясо",
-                    "white_meat_steam": "Белое мясо, приготовленное на пару"
+                    "white_meat_steam": "Белое мясо на пару"
                 },
                 "name": "Программа"
             },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Быстрая 20",
                     "hqd_quick_30": "Быстрая 30",
-                    "hqd_quick_dry": "Быстрая сушка",
+                    "hqd_quick_dry": "Быстрая сушка 30",
                     "hqd_quilt": "Стеганые одеяла",
                     "hqd_refresh": "Освежение",
                     "hqd_school_uniform": "Школьная форма",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Оставшееся время"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Холодильник",
+                    "freezer": "Морозильник",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Холодильник & Морозильник"
+                },
+                "name": "Зона"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Холодильник"
             }
         },
         "binary_sensor": {
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Индукционная варочная панель"
+            },
+            "start_program": {
+                "name": "Программа Начать"
+            },
+            "stop_program": {
+                "name": "Программа Стоп"
             }
         },
         "climate": {

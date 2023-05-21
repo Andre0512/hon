@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious Cure",
                     "hqd_quick_20": "Schnell 20",
                     "hqd_quick_30": "Schnell 30",
-                    "hqd_quick_dry": "Schnell trocken",
+                    "hqd_quick_dry": "Schnell trocken 30",
                     "hqd_quilt": "Steppdecken",
                     "hqd_refresh": "Auffrischen",
                     "hqd_school_uniform": "Schuluniform",
@@ -409,6 +409,11 @@
                     "silent": "Nacht",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "spezial",
                     "special_pw_prz": "spezial",
                     "steam": "Dampf 75 °C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Teigwaren und Brot",
-                    "bakery_steam": "Mit Dampf gebackenes Brot",
+                    "bakery_steam": "Dampf im Backofen",
                     "bottom_heating": "Unterhitze",
                     "bottom_heating_fan": "Unterhitze + Umluft",
                     "bread": "Brot",
-                    "bread_steam": "Mit Dampf gebackenes Gebäck",
+                    "bread_steam": "Mit Dampf gebackenes Brot",
+                    "combi": "Combi",
                     "convection_fan": "Umluft",
                     "convection_fan_turnspit": "Heißluft + Drehspieß",
                     "conventional": "Ober-Unterhitze",
@@ -477,7 +483,7 @@
                     "defrost": "Auftauen",
                     "descaling": "Entkalkung",
                     "fish": "Fisch",
-                    "fish_steam": "Dampfgegarter Fisch",
+                    "fish_steam": "Gedünsteter Fisch",
                     "grill_cata": "Grill",
                     "grill_fan_cata": "Grill Umluft",
                     "grill_fan_pyro": "Grill + Umluft",
@@ -488,12 +494,12 @@
                     "leavening": "Aufgehen",
                     "low_temp_cooking": "Garen bei niedriger Temperatur",
                     "low_temp_cooking_fish": "Garen bei niedriger Temperatur - Fisch",
-                    "low_temp_cooking_fish_steam": "Dampfgaren bei niedriger Temperatur - Fisch",
+                    "low_temp_cooking_fish_steam": "Niedertemperaturgaren - Gedünsteter Fisch",
                     "low_temp_cooking_meat": "Garen bei niedriger Temperatur - Fleisch",
-                    "low_temp_cooking_meat_steam": "Niedertemperatur-Dampfgaren - Fleisch",
+                    "low_temp_cooking_meat_steam": "Niedertemperaturgaren - Gedämpftes Fleisch",
                     "low_temp_cooking_steam": "Niedertemperatur-Dampfgaren",
                     "meat": "Fleisch",
-                    "meat_steam": "Dampfgegartes Fleisch",
+                    "meat_steam": "Fleisch Dampf",
                     "multi_level": "Multi-Level",
                     "paella": "Paella",
                     "pasta_and_bakery": "Teigwaren und Brot",
@@ -501,8 +507,8 @@
                     "pyrolysis": "Pyrolyse",
                     "pyrolysis_plus": "Pyrolyse +",
                     "red_meat": "Rotes Fleisch",
-                    "red_meat_steam": "Dampfgegartes rotes Fleisch",
-                    "regenerate": "Regeneration",
+                    "red_meat_steam": "Gedünstetes rotes Fleisch",
+                    "regenerate": "Regenerieren",
                     "soft_plus": "Soft+",
                     "super_grill": "Super Grill",
                     "tailor_bake": "Tailor bake",
@@ -513,7 +519,7 @@
                     "vegetables_pyro": "Gemüse",
                     "water_discharge": "Wasserabfluss",
                     "white_meat": "Weißes Fleisch",
-                    "white_meat_steam": "Dampfgegartes weißes Fleisch"
+                    "white_meat_steam": "Gedämpftes weißes Fleisch"
                 },
                 "name": "Programm"
             },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious Cure",
                     "hqd_quick_20": "Schnell 20",
                     "hqd_quick_30": "Schnell 30",
-                    "hqd_quick_dry": "Schnell trocken",
+                    "hqd_quick_dry": "Schnell trocken 30",
                     "hqd_quilt": "Steppdecken",
                     "hqd_refresh": "Auffrischen",
                     "hqd_school_uniform": "Schuluniform",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Verbleibende Zeit"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Kühlschrank",
+                    "freezer": "Gefrierschrank",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Kühlschrank & Gefrierschrank"
+                },
+                "name": "Zone"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Kühlschrank"
             }
         },
         "binary_sensor": {
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Induktionskochfeld"
+            },
+            "start_program": {
+                "name": "Programm Start"
+            },
+            "stop_program": {
+                "name": "Programm Stopp"
             }
         },
         "climate": {

@@ -409,6 +409,11 @@
                     "silent": "夜间",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "特殊",
                     "special_pw_prz": "特殊",
                     "steam": "蒸汽洗75°C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "意大利面和烘焙食品",
-                    "bakery_steam": "蒸烤的面包",
+                    "bakery_steam": "烤炉蒸汽",
                     "bottom_heating": "底部加热 ",
                     "bottom_heating_fan": "底部加热 + 风扇",
                     "bread": "面包",
-                    "bread_steam": "蒸烤的甜点",
+                    "bread_steam": "蒸烤的面包",
+                    "combi": "Combi",
                     "convection_fan": "对流 + 风扇",
                     "convection_fan_turnspit": "对流 + 风扇 + 烤叉",
                     "conventional": "对流",
@@ -477,7 +483,7 @@
                     "defrost": "解冻",
                     "descaling": "除垢",
                     "fish": "鱼",
-                    "fish_steam": "蒸煮的鱼",
+                    "fish_steam": "蒸鱼",
                     "grill_cata": "烤架",
                     "grill_fan_cata": "烤架风扇",
                     "grill_fan_pyro": "烤架 + 风扇",
@@ -488,12 +494,12 @@
                     "leavening": "发酵",
                     "low_temp_cooking": "低温烹饪",
                     "low_temp_cooking_fish": "低温烹饪 - 鱼类",
-                    "low_temp_cooking_fish_steam": "低温蒸汽烹饪 - 鱼类",
+                    "low_temp_cooking_fish_steam": "低温烹饪 - 蒸鱼",
                     "low_temp_cooking_meat": "低温烹饪 - 肉类",
-                    "low_temp_cooking_meat_steam": "低温蒸汽烹饪 - 肉类",
+                    "low_temp_cooking_meat_steam": "低温烹饪 - 蒸肉",
                     "low_temp_cooking_steam": "低温蒸汽烹饪",
                     "meat": "肉",
-                    "meat_steam": "蒸煮的肉",
+                    "meat_steam": "肉类蒸汽",
                     "multi_level": "多层",
                     "paella": "Paella",
                     "pasta_and_bakery": "意大利面和烘焙食品",
@@ -501,8 +507,8 @@
                     "pyrolysis": "热解",
                     "pyrolysis_plus": "热解 +",
                     "red_meat": "红肉",
-                    "red_meat_steam": "蒸煮的红肉",
-                    "regenerate": "再生",
+                    "red_meat_steam": "蒸红肉",
+                    "regenerate": "再加热",
                     "soft_plus": "软+",
                     "super_grill": "超级烤架",
                     "tailor_bake": "Tailor bake",
@@ -513,7 +519,7 @@
                     "vegetables_pyro": "蔬菜",
                     "water_discharge": "排水",
                     "white_meat": "白肉",
-                    "white_meat_steam": "蒸煮的白肉"
+                    "white_meat_steam": "蒸白肉"
                 },
                 "name": "程序"
             },
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "剩余时间"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "冰箱",
+                    "freezer": "冷藏箱",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "冰箱 & 冷藏箱"
+                },
+                "name": "区域"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "冰箱"
             }
         },
         "binary_sensor": {
@@ -1206,7 +1224,7 @@
                 "name": "烤盘"
             },
             "remote_control": {
-                "name": "远程控制"
+                "name": "Control remoto"
             },
             "rinse_aid": {
                 "name": "漂洗助剂液位"
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "电磁炉"
+            },
+            "start_program": {
+                "name": "程序 开始"
+            },
+            "stop_program": {
+                "name": "程序 停止"
             }
         },
         "climate": {

@@ -4,6 +4,7 @@ from typing import Any
 
 from pyhon import Hon
 from pyhon.appliance import HonAppliance
+from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
 
 from homeassistant.components.switch import SwitchEntityDescription, SwitchEntity
@@ -319,21 +320,31 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
     "REF": (
         HonSwitchEntityDescription(
             key="settings.intelligenceMode",
+            status_key="intelligenceMode",
             name="Auto-Set Mode",
             icon="mdi:thermometer-auto",
             translation_key="auto_set",
         ),
         HonSwitchEntityDescription(
             key="settings.quickModeZ1",
+            status_key="quickModeZ1",
             name="Super Freeze",
             icon="mdi:snowflake-variant",
             translation_key="super_freeze",
         ),
         HonSwitchEntityDescription(
             key="settings.quickModeZ2",
+            status_key="quickModeZ2",
             name="Super Cool",
             icon="mdi:snowflake",
             translation_key="super_cool",
+        ),
+        HonSwitchEntityDescription(
+            key="settings.holidayMode",
+            status_key="holidayMode",
+            name="Holiday Mode",
+            icon="mdi:palm-tree",
+            translation_key="holiday_mode",
         ),
     ),
 }
@@ -411,13 +422,14 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
             or "settings." in self.entity_description.key
         ):
             setting = self._device.settings[self.entity_description.key]
-            setting.value = (
-                setting.max if isinstance(setting, HonParameterRange) else "1"
-            )
-            self.async_write_ha_state()
-            if "settings." in self.entity_description.key:
-                await self._device.commands["settings"].send()
-            await self.coordinator.async_refresh()
+            if not type(setting) == HonParameter:
+                setting.value = (
+                    setting.max if isinstance(setting, HonParameterRange) else "1"
+                )
+                self.async_write_ha_state()
+                await self.coordinator.async_refresh()
+                if "settings." in self.entity_description.key:
+                    await self._device.commands["settings"].send()
         else:
             await self._device.commands[self.entity_description.turn_on_key].send()
 
@@ -427,13 +439,14 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
             or "settings." in self.entity_description.key
         ):
             setting = self._device.settings[self.entity_description.key]
-            setting.value = (
-                setting.min if isinstance(setting, HonParameterRange) else "0"
-            )
-            self.async_write_ha_state()
-            if "settings." in self.entity_description.key:
-                await self._device.commands["settings"].send()
-            await self.coordinator.async_refresh()
+            if not type(setting) == HonParameter:
+                setting.value = (
+                    setting.min if isinstance(setting, HonParameterRange) else "0"
+                )
+                self.async_write_ha_state()
+                if "settings." in self.entity_description.key:
+                    await self._device.commands["settings"].send()
+                await self.coordinator.async_refresh()
         else:
             await self._device.commands[self.entity_description.turn_off_key].send()
 
@@ -452,8 +465,11 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
 
     @callback
     def _handle_coordinator_update(self):
-        if not self.entity_description.status_key:
+        if self.entity_description.status_key:
+            value = self._device.get(self.entity_description.status_key, "0")
+        elif self.entity_category == EntityCategory.CONFIG:
+            value = self._device.settings.get(self.entity_description.key, "0")
+        else:
             return
-        value = self._device.get(self.entity_description.status_key, "0")
         self._attr_state = value == "1"
         self.async_write_ha_state()

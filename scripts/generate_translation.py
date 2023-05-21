@@ -26,6 +26,7 @@ SELECT = {
     "dry_levels": const.TUMBLE_DRYER_DRY_LEVEL,
     "eco_pilot": const.AC_HUMAN_SENSE,
     "fan_mode": const.AC_FAN_MODE,
+    "ref_zones": const.REF_ZONES,
 }
 
 PROGRAMS = {
@@ -85,6 +86,7 @@ NAMES = {
         "auto_set": "REF_CMD&CTRL.MODALITIES.ECO",
         "super_cool": "REF_CMD&CTRL.MODALITIES.SUPER_COOL",
         "super_freeze": "REF_CMD&CTRL.MODALITIES.SUPER_FREEZE",
+        "refrigerator": "REF.NAME",
     },
     "binary_sensor": {
         "door_lock": "WASHING_CMD&CTRL.CHECK_UP_RESULTS.DOOR_LOCK",
@@ -116,6 +118,8 @@ NAMES = {
     },
     "button": {
         "induction_hob": "GLOBALS.APPLIANCES_NAME.IH",
+        "start_program": ["WC.SET_PROGRAM.PROGRAM", "GLOBALS.GENERAL.START_ON"],
+        "stop_program": ["WC.SET_PROGRAM.PROGRAM", "GLOBALS.GENERAL.STOP"],
     },
     "select": {
         "dry_levels": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_LEVEL",
@@ -129,6 +133,7 @@ NAMES = {
         "programs_wm": "WC.SET_PROGRAM.PROGRAM",
         "eco_pilot": "AC.PROGRAM_DETAIL.ECO_PILOT",
         "remaining_time": "ENROLLMENT_COMMON.GENERAL.REMAINING_TIME",
+        "ref_zones": "IH.COMMON.COIL",
     },
     "sensor": {
         "dry_levels": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_LEVEL",

@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rapide 20’",
                     "hqd_quick_30": "Rapide 30’",
-                    "hqd_quick_dry": "Séchage rapide",
+                    "hqd_quick_dry": "Séchage rapide 30",
                     "hqd_quilt": "Couvertures",
                     "hqd_refresh": "Rafraîchissement",
                     "hqd_school_uniform": "Uniforme scolaire",
@@ -409,6 +409,11 @@
                     "silent": "Nuit",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "spécial",
                     "special_pw_prz": "spécial",
                     "steam": "Vapeur 75 °C",
@@ -465,19 +470,20 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Pâtes et pains",
-                    "bakery_steam": "Pain cuit à la vapeur",
+                    "bakery_steam": "Four à vapeur",
                     "bottom_heating": "Sole",
                     "bottom_heating_fan": "Sole brassée",
                     "bread": "Pain",
-                    "bread_steam": "Pâtisseries cuites à la vapeur",
+                    "bread_steam": "Pain àla vapeur",
+                    "combi": "Combi",
                     "convection_fan": "Chaleur tournante",
-                    "convection_fan_turnspit": "Convection + Ventilateur + Tournebroche",
+                    "convection_fan_turnspit": "Tournebrocheà convection ventilée",
                     "conventional": "Convection naturelle",
-                    "conventional_turnspit": "Convection + Tournebroche",
+                    "conventional_turnspit": "Tournebroche conventionnel",
                     "defrost": "Décongélation",
                     "descaling": "Détartrage",
                     "fish": "Poisson",
-                    "fish_steam": "Poisson cuit à la vapeur",
+                    "fish_steam": "Poisson à la vapeur",
                     "grill_cata": "Gril",
                     "grill_fan_cata": "Turbogril",
                     "grill_fan_pyro": "Turbogril",
@@ -487,13 +493,13 @@
                     "iot_h20_clean": "h2O clean",
                     "leavening": "Étuve",
                     "low_temp_cooking": "Cuisson à basse température",
-                    "low_temp_cooking_fish": "Cuisson à basse température - Poisson",
-                    "low_temp_cooking_fish_steam": "Cuisson à la vapeur à basse température - Poisson",
-                    "low_temp_cooking_meat": "Cuisson à basse température - Viande",
-                    "low_temp_cooking_meat_steam": "Cuisson à la vapeur à basse température - Viande",
-                    "low_temp_cooking_steam": "Cuisson à la vapeur à basse température",
+                    "low_temp_cooking_fish": "Cuisson à basse température Poisson",
+                    "low_temp_cooking_fish_steam": "Cuisson à basse température Poisson à la vapeur",
+                    "low_temp_cooking_meat": "Cuisson à basse température Viande",
+                    "low_temp_cooking_meat_steam": "Cuisson à basse température Viande à la vapeur",
+                    "low_temp_cooking_steam": "Cuisson à basse température à la vapeur",
                     "meat": "Viande",
-                    "meat_steam": "Viande cuite à la vapeur",
+                    "meat_steam": "Viande à la vapeur",
                     "multi_level": "Chaleur pulsée",
                     "paella": "Paella",
                     "pasta_and_bakery": "Pâtes et pains",
@@ -501,8 +507,8 @@
                     "pyrolysis": "Pyrolyse",
                     "pyrolysis_plus": "Pyrolyse +",
                     "red_meat": "Viande rouge",
-                    "red_meat_steam": "Viande rouge cuite à la vapeur",
-                    "regenerate": "Régénération",
+                    "red_meat_steam": "Viande rouge à la vapeur",
+                    "regenerate": "Régénérer",
                     "soft_plus": "Soft+",
                     "super_grill": "Super Gril",
                     "tailor_bake": "Tailor bake",
@@ -511,9 +517,9 @@
                     "vegetables": "Légumes",
                     "vegetables_cata": "Légumes",
                     "vegetables_pyro": "Légumes",
-                    "water_discharge": "Vidange de l’eau",
+                    "water_discharge": "Décharge d'eau",
                     "white_meat": "Viande blanche",
-                    "white_meat_steam": "Viande blanche cuite à la vapeur"
+                    "white_meat_steam": "Viande blanche à la vapeur"
                 },
                 "name": "Programme"
             },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rapide 20’",
                     "hqd_quick_30": "Rapide 30’",
-                    "hqd_quick_dry": "Séchage rapide",
+                    "hqd_quick_dry": "Séchage rapide 30",
                     "hqd_quilt": "Couvertures",
                     "hqd_refresh": "Rafraîchissement",
                     "hqd_school_uniform": "Uniforme scolaire",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Temps restant"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Réfrigérateur",
+                    "freezer": "Congélateur",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Réfrigérateur & Congélateur"
+                },
+                "name": "Zone"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Réfrigérateur"
             }
         },
         "binary_sensor": {
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Table de cuisson à induction"
+            },
+            "start_program": {
+                "name": "Programme Démarrer"
+            },
+            "stop_program": {
+                "name": "Programme Arrêter"
             }
         },
         "climate": {

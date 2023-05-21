@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Quick 20",
                     "hqd_quick_30": "Quick 30",
-                    "hqd_quick_dry": "Quick dry",
+                    "hqd_quick_dry": "Quick dry 30",
                     "hqd_quilt": "Quilts",
                     "hqd_refresh": "Opfrissen",
                     "hqd_school_uniform": "Schooluniform",
@@ -409,6 +409,11 @@
                     "silent": "Nacht",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "speciaal",
                     "special_pw_prz": "speciaal",
                     "steam": "Stoom 75°C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Pasta en bakkersproducten",
-                    "bakery_steam": "Stoomgebakken brood",
+                    "bakery_steam": "Oven stomen",
                     "bottom_heating": "Bodemverwarming",
                     "bottom_heating_fan": "Bodemverwarming + Ventilator",
                     "bread": "Brood",
-                    "bread_steam": "Stoomgebakken pasteien",
+                    "bread_steam": "Stoomgebakken brood",
+                    "combi": "Combi",
                     "convection_fan": "Met ventilator",
                     "convection_fan_turnspit": "Convectie + ventilator + draaispit",
                     "conventional": "Conventioneel",
@@ -488,12 +494,12 @@
                     "leavening": "Gisting",
                     "low_temp_cooking": "Bereiding op lage temperatuur",
                     "low_temp_cooking_fish": "Bereiding op lage temperatuur – Vis",
-                    "low_temp_cooking_fish_steam": "Stomen bij lage temperatuur – Vis",
+                    "low_temp_cooking_fish_steam": "Bereiding op lage temperatuur – Gestoomde vis",
                     "low_temp_cooking_meat": "Bereiding op lage temperatuur – Vlees",
-                    "low_temp_cooking_meat_steam": "Stomen bij lage temperatuur – Vlees",
+                    "low_temp_cooking_meat_steam": "Bereiding op lage temperatuur – Gestoomd vlees",
                     "low_temp_cooking_steam": "Stomen bij lage temperatuur",
                     "meat": "Vlees",
-                    "meat_steam": "Gestoomd vlees",
+                    "meat_steam": "Vlees stomen",
                     "multi_level": "Multi-level",
                     "paella": "Paella",
                     "pasta_and_bakery": "Pasta en bakkersproducten",
@@ -502,7 +508,7 @@
                     "pyrolysis_plus": "Pyrolyse +",
                     "red_meat": "Rood vlees",
                     "red_meat_steam": "Gestoomd rood vlees",
-                    "regenerate": "Regeneratie",
+                    "regenerate": "Regenereren",
                     "soft_plus": "Soft+",
                     "super_grill": "Super grill",
                     "tailor_bake": "Tailor bake",
@@ -511,7 +517,7 @@
                     "vegetables": "Groenten",
                     "vegetables_cata": "Groenten",
                     "vegetables_pyro": "Groenten",
-                    "water_discharge": "Waterafvoer",
+                    "water_discharge": "Afvoer van water",
                     "white_meat": "Wit vlees",
                     "white_meat_steam": "Gestoomd wit vlees"
                 },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Quick 20",
                     "hqd_quick_30": "Quick 30",
-                    "hqd_quick_dry": "Quick dry",
+                    "hqd_quick_dry": "Quick dry 30",
                     "hqd_quilt": "Quilts",
                     "hqd_refresh": "Opfrissen",
                     "hqd_school_uniform": "Schooluniform",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Resterende tijd"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Koelkast",
+                    "freezer": "Vriezer",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Koelkast & Vriezer"
+                },
+                "name": "Zone"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Koelkast"
             }
         },
         "binary_sensor": {
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Inductiekookplaat"
+            },
+            "start_program": {
+                "name": "Programma Start"
+            },
+            "stop_program": {
+                "name": "Programma Stoppen"
             }
         },
         "climate": {

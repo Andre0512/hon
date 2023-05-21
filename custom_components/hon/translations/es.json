@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rápido 20",
                     "hqd_quick_30": "Rápido 30",
-                    "hqd_quick_dry": "Secado rápido",
+                    "hqd_quick_dry": "Secado rápido 30",
                     "hqd_quilt": "Colchas",
                     "hqd_refresh": "Refrescar",
                     "hqd_school_uniform": "Uniformes escolares",
@@ -409,6 +409,11 @@
                     "silent": "Noche",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "Especial",
                     "special_pw_prz": "Especial",
                     "steam": "Vapor 75 °C",
@@ -465,15 +470,16 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Pasta y Panadería",
-                    "bakery_steam": "Pan al vapor",
+                    "bakery_steam": "Oven steam",
                     "bottom_heating": "Calentamiento Inferior",
                     "bottom_heating_fan": "Calentamiento Inferior + Ventilador",
                     "bread": "Pan",
-                    "bread_steam": "Bollería al vapor",
+                    "bread_steam": "Pan al vapor",
+                    "combi": "Combi",
                     "convection_fan": "Convección + Ventilador",
-                    "convection_fan_turnspit": "Convección + Ventilador + Rustepollos",
+                    "convection_fan_turnspit": "Asador giratorio convencional ventilada",
                     "conventional": "Convección",
-                    "conventional_turnspit": "Convección + Rustepollos",
+                    "conventional_turnspit": "Asador giratorio convencional",
                     "defrost": "Descongelación",
                     "descaling": "Descalcificación",
                     "fish": "Pescado",
@@ -487,13 +493,13 @@
                     "iot_h20_clean": "h2O clean",
                     "leavening": "Fermentación",
                     "low_temp_cooking": "Cocción a baja temperatura",
-                    "low_temp_cooking_fish": "Cocción a baja temperatura - Pescado",
-                    "low_temp_cooking_fish_steam": "Cocción al vapor a baja temperatura - Pescado",
-                    "low_temp_cooking_meat": "Cocción a baja temperatura - Carne",
-                    "low_temp_cooking_meat_steam": "Cocción al vapor a baja temperatura - Carne",
-                    "low_temp_cooking_steam": "Cocción al vapor a baja temperatura",
+                    "low_temp_cooking_fish": "Cocción a baja temperatura Pescado",
+                    "low_temp_cooking_fish_steam": "Cocción a baja temperatura Pescado",
+                    "low_temp_cooking_meat": "Cocción a baja temperatura Carne",
+                    "low_temp_cooking_meat_steam": "Cocción a baja temperatura Carne al vapor",
+                    "low_temp_cooking_steam": "Cocción a baja temperatura al vapor",
                     "meat": "Carne",
-                    "meat_steam": "Carne al vapor",
+                    "meat_steam": "Meat steam",
                     "multi_level": "Múltiples niveles",
                     "paella": "Paella",
                     "pasta_and_bakery": "Pasta y Panadería",
@@ -502,7 +508,7 @@
                     "pyrolysis_plus": "Pirólisis +",
                     "red_meat": "Carne roja",
                     "red_meat_steam": "Carne roja al vapor",
-                    "regenerate": "Regeneración",
+                    "regenerate": "Regenerar",
                     "soft_plus": "Soft+",
                     "super_grill": "Super Grill",
                     "tailor_bake": "Tailor bake",
@@ -511,7 +517,7 @@
                     "vegetables": "Verduras",
                     "vegetables_cata": "Verduras",
                     "vegetables_pyro": "Verdura",
-                    "water_discharge": "Drenaje del agua",
+                    "water_discharge": "Descarga de agua",
                     "white_meat": "Carne blanca",
                     "white_meat_steam": "Carne blanca al vapor"
                 },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rápido 20",
                     "hqd_quick_30": "Rápido 30",
-                    "hqd_quick_dry": "Secado rápido",
+                    "hqd_quick_dry": "Secado rápido 30",
                     "hqd_quilt": "Colchas",
                     "hqd_refresh": "Refrescar",
                     "hqd_school_uniform": "Uniformes escolares",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Tiempo restante"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Frigorífico",
+                    "freezer": "Congelador",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Frigorífico & Congelador"
+                },
+                "name": "Zona"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Frigorífico"
             }
         },
         "binary_sensor": {
@@ -1206,7 +1224,7 @@
                 "name": "Sartén"
             },
             "remote_control": {
-                "name": "Control remoto"
+                "name": "Τηλεχειριστήριο"
             },
             "rinse_aid": {
                 "name": "Nivel del agente de enjuague"
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Placa de inducción"
+            },
+            "start_program": {
+                "name": "Programa Inicio"
+            },
+            "stop_program": {
+                "name": "Programa Detener"
             }
         },
         "climate": {

@@ -180,6 +180,13 @@ AC_HUMAN_SENSE = {
     "2": "AC.PROGRAM_DETAIL.FOLLOW_TOUCH",
 }
 
+REF_ZONES = {
+    "fridge": "REF.ZONES.FRIDGE",
+    "freezer": "REF.ZONES.FREEZER",
+    "vtRoom1": "REF.ZONES.MY_ZONE_1",
+    "[fridge|freezer]": ["REF.ZONES.FRIDGE", " & ", "REF.ZONES.FREEZER"],
+}
+
 PROGRAMS_TD = [
     "active_dry",
     "allergy_care",

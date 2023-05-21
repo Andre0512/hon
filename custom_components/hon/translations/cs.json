@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rychlý 20",
                     "hqd_quick_30": "Rychlý 30",
-                    "hqd_quick_dry": "Rychlé sušení",
+                    "hqd_quick_dry": "Rychlé sušení 30",
                     "hqd_quilt": "Deky",
                     "hqd_refresh": "Osvěžení",
                     "hqd_school_uniform": "Školní uniformy",
@@ -409,6 +409,11 @@
                     "silent": "Noc",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "speciální",
                     "special_pw_prz": "speciální",
                     "steam": "Parní 75 °C",
@@ -465,19 +470,20 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Těstoviny a pečivo",
-                    "bakery_steam": "Chléb pečený v páře",
+                    "bakery_steam": "Pára v troubě",
                     "bottom_heating": "Spodní ohřev",
                     "bottom_heating_fan": "Spodní ohřev + ventilátor",
                     "bread": "Chléb",
-                    "bread_steam": "Pečivo pečené v páře",
+                    "bread_steam": "Chléb pečený v páře",
+                    "combi": "Combi",
                     "convection_fan": "Statický + ventilátor",
                     "convection_fan_turnspit": "Konvekce + ventilátor + rožeň",
                     "conventional": "Statický",
-                    "conventional_turnspit": "Konvekční + rožeň",
+                    "conventional_turnspit": "Konvekce + rožeň",
                     "defrost": "Rozmrazování",
                     "descaling": "Odstraňování vodního kamene",
                     "fish": "Ryby",
-                    "fish_steam": "Ryby připravované v páře",
+                    "fish_steam": "Ryby v páře",
                     "grill_cata": "Gril",
                     "grill_fan_cata": "Ventilátor grilu",
                     "grill_fan_pyro": "Gril + ventilátor",
@@ -487,13 +493,13 @@
                     "iot_h20_clean": "h2O clean",
                     "leavening": "Kynutí",
                     "low_temp_cooking": "Příprava při nízkých teplotách",
-                    "low_temp_cooking_fish": "Příprava ryb při nízkých teplotách",
-                    "low_temp_cooking_fish_steam": "Příprava ryb v páře při nízkých teplotách",
-                    "low_temp_cooking_meat": "Příprava masa při nízkých teplotách",
-                    "low_temp_cooking_meat_steam": "Příprava masa v páře při nízkých teplotách",
+                    "low_temp_cooking_fish": "Příprava při nízkých teplotách – ryby",
+                    "low_temp_cooking_fish_steam": "Příprava při nízkých teplotách – ryby v páře",
+                    "low_temp_cooking_meat": "Příprava při nízkých teplotách – maso",
+                    "low_temp_cooking_meat_steam": "Příprava při nízkých teplotách - dušené maso",
                     "low_temp_cooking_steam": "Příprava v páře při nízkých teplotách",
                     "meat": "Maso",
-                    "meat_steam": "Maso připravované v páře",
+                    "meat_steam": "Maso v páře",
                     "multi_level": "Víceúrovňové",
                     "paella": "Paella",
                     "pasta_and_bakery": "Těstoviny a pečivo",
@@ -501,7 +507,7 @@
                     "pyrolysis": "Pyrolýza",
                     "pyrolysis_plus": "Pyrolýza +",
                     "red_meat": "Tmavé maso",
-                    "red_meat_steam": "Červené maso připravované v páře",
+                    "red_meat_steam": "Červené maso vařené v páře",
                     "regenerate": "Regenerace",
                     "soft_plus": "Soft +",
                     "super_grill": "Super gril",
@@ -511,9 +517,9 @@
                     "vegetables": "Zelenina",
                     "vegetables_cata": "Zelenina",
                     "vegetables_pyro": "Zelenina",
-                    "water_discharge": "Odtok vody",
+                    "water_discharge": "Vypouštění vody",
                     "white_meat": "Bílé maso",
-                    "white_meat_steam": "Bílé maso připravované v páře"
+                    "white_meat_steam": "Bílé maso vařené v páře"
                 },
                 "name": "Program"
             },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rychlý 20",
                     "hqd_quick_30": "Rychlý 30",
-                    "hqd_quick_dry": "Rychlé sušení",
+                    "hqd_quick_dry": "Rychlé sušení 30",
                     "hqd_quilt": "Deky",
                     "hqd_refresh": "Osvěžení",
                     "hqd_school_uniform": "Školní uniformy",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Zbývající čas"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Chladnička",
+                    "freezer": "Mraznička",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Chladnička & Mraznička"
+                },
+                "name": "Zóna"
             }
         },
         "switch": {
@@ -1093,7 +1108,7 @@
                 "name": "Trouba"
             },
             "prewash": {
-                "name": "Předpírka\r\r\r\r\r\r\n"
+                "name": "Předpírka\r\r\r\r\r\r\r\n"
             },
             "pause": {
                 "name": "Pozastavit"
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Chladnička"
             }
         },
         "binary_sensor": {
@@ -1227,7 +1245,7 @@
                 "name": "Zapnout"
             },
             "prewash": {
-                "name": "Předpírka\r\r\r\r\r\r\n"
+                "name": "Předpírka\r\r\r\r\r\r\r\n"
             },
             "acqua_plus": {
                 "name": "Aquaplus"
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Indukční varná deska"
+            },
+            "start_program": {
+                "name": "Program Zahájení"
+            },
+            "stop_program": {
+                "name": "Program Zastavit"
             }
         },
         "climate": {

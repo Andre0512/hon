@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rýchle 20",
                     "hqd_quick_30": "Rýchle 30",
-                    "hqd_quick_dry": "Rýchle sušenie",
+                    "hqd_quick_dry": "Rýchle sušenie 30",
                     "hqd_quilt": "Prikrývky",
                     "hqd_refresh": "Osvieženie",
                     "hqd_school_uniform": "Školská uniforma",
@@ -409,6 +409,11 @@
                     "silent": "Noc",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "špeciál",
                     "special_pw_prz": "špeciál",
                     "steam": "Para 75 °C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Cestoviny a pečenie",
-                    "bakery_steam": "Chlieb pečený v pare",
+                    "bakery_steam": "Parná rúra",
                     "bottom_heating": "Spodný ohrev",
                     "bottom_heating_fan": "Spodný ohrev + Ventilátor",
                     "bread": "Chlieb",
-                    "bread_steam": "Pečivo pečené v pare",
+                    "bread_steam": "Chlieb pečený v pare",
+                    "combi": "Combi",
                     "convection_fan": "Statický + ventilátor",
                     "convection_fan_turnspit": "Statické + ventilátor + otočný ražeň",
                     "conventional": "Statický",
@@ -477,7 +483,7 @@
                     "defrost": "Rozmraziť",
                     "descaling": "Odstránenie vodného kameňa",
                     "fish": "Ryby",
-                    "fish_steam": "Ryby varené v pare",
+                    "fish_steam": "Ryby pripravené v pare",
                     "grill_cata": "Gril",
                     "grill_fan_cata": "Gril + ventilátor",
                     "grill_fan_pyro": "Gril + ventilátor",
@@ -488,12 +494,12 @@
                     "leavening": "Kysnutie",
                     "low_temp_cooking": "Varenie pri nízkych teplotách",
                     "low_temp_cooking_fish": "Varenie pri nízkych teplotách – Ryby",
-                    "low_temp_cooking_fish_steam": "Varenie pri nízkych teplotách v pare – Ryby",
+                    "low_temp_cooking_fish_steam": "Varenie pri nízkych teplotách – ryby pripravené v pare",
                     "low_temp_cooking_meat": "Varenie pri nízkych teplotách – Mäso",
-                    "low_temp_cooking_meat_steam": "Varenie pri nízkych teplotách v pare",
+                    "low_temp_cooking_meat_steam": "Varenie pri nízkych teplotách - mäso dusené v pare",
                     "low_temp_cooking_steam": "Varenie pri nízkych teplotách v pare",
                     "meat": "Mäso",
-                    "meat_steam": "Mäso uvarené v pare",
+                    "meat_steam": "Mäso v pare",
                     "multi_level": "Viacúrovňové",
                     "paella": "Paella",
                     "pasta_and_bakery": "Cestoviny a pečenie",
@@ -501,8 +507,8 @@
                     "pyrolysis": "Pyrolýza",
                     "pyrolysis_plus": "Pyrolýza +",
                     "red_meat": "Červené mäso",
-                    "red_meat_steam": "Červené mäso varené v pare",
-                    "regenerate": "Regenerácia",
+                    "red_meat_steam": "Červené mäso dusené v pare",
+                    "regenerate": "Regenerovať",
                     "soft_plus": "Soft+",
                     "super_grill": "Super Gril",
                     "tailor_bake": "Tailor bake",
@@ -511,9 +517,9 @@
                     "vegetables": "Zelenina",
                     "vegetables_cata": "Zelenina",
                     "vegetables_pyro": "Zelenina",
-                    "water_discharge": "Odtok vody",
+                    "water_discharge": "Vypúšťanie vody",
                     "white_meat": "Biele mäso",
-                    "white_meat_steam": "Biele mäso varené v pare"
+                    "white_meat_steam": "Biele mäso pripravené v pare"
                 },
                 "name": "Program"
             },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rýchle 20",
                     "hqd_quick_30": "Rýchle 30",
-                    "hqd_quick_dry": "Rýchle sušenie",
+                    "hqd_quick_dry": "Rýchle sušenie 30",
                     "hqd_quilt": "Prikrývky",
                     "hqd_refresh": "Osvieženie",
                     "hqd_school_uniform": "Školská uniforma",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Zostávajúci čas"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Chladnička",
+                    "freezer": "Mraznička",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Chladnička & Mraznička"
+                },
+                "name": "Zóna"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Chladnička"
             }
         },
         "binary_sensor": {
@@ -1206,7 +1224,7 @@
                 "name": "Panvica"
             },
             "remote_control": {
-                "name": "Diaľkové ovládanie"
+                "name": "Daljinsko upravljanje"
             },
             "rinse_aid": {
                 "name": "Úroveň prostriedku na oplachovanie"
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Indukčná varná doska"
+            },
+            "start_program": {
+                "name": "Program Začiatok"
+            },
+            "stop_program": {
+                "name": "Program Zastaviť"
             }
         },
         "climate": {

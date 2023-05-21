@@ -263,7 +263,7 @@
                     "hqd_bed_sheets": "Bed Sheets",
                     "hqd_bulky": "Bulky Items",
                     "hqd_casual": "Casual",
-                    "hqd_cold_wind_30": "Cool Breeze 30 minutes",
+                    "hqd_cold_wind_30": "Cool Breeze 30m",
                     "hqd_cold_wind_timing": "Cool Breeze ",
                     "hqd_cotton": "Cotton",
                     "hqd_curtain": "Curtains",
@@ -282,9 +282,9 @@
                     "hqd_night_dry": "Overnight drying",
                     "hqd_outdoor": "Outdoor",
                     "hqd_precious_cure": "Precious Cure",
-                    "hqd_quick_20": "Quick 20",
-                    "hqd_quick_30": "Quick 30",
-                    "hqd_quick_dry": "Quick dry",
+                    "hqd_quick_20": "Quick 20m",
+                    "hqd_quick_30": "Quick 30m",
+                    "hqd_quick_dry": "Quick dry (30 min)",
                     "hqd_quilt": "Quilts",
                     "hqd_refresh": "Refresh",
                     "hqd_school_uniform": "School Uniform",
@@ -322,7 +322,7 @@
                     "iot_dry_lingerie": "Lingerie",
                     "iot_dry_mixed": "Mixed",
                     "iot_dry_playsuits": "Playsuits",
-                    "iot_dry_rapid_30": "Rapid 30",
+                    "iot_dry_rapid_30": "Rapid 30m",
                     "iot_dry_rapid_59": "Rapid 59'",
                     "iot_dry_refresh": "Refresh",
                     "iot_dry_regenerates_waterproof": "Regenerates Waterproof",
@@ -485,6 +485,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Refrigerator"
             }
         },
         "select": {
@@ -508,9 +511,9 @@
                     "59_min": "Rapid 59'",
                     "auto_care": "Auto Care",
                     "auto_care_soil": "Auto Care",
-                    "auto_hygiene": "Auto Hygiene",
                     "auto_plus": "AutoPlus",
-                    "auto_rapid": "Auto Rapid",
+                    "auto_plus_soil": "Auto Plus Soil",
+                    "auto_rapid_soil": "Auto rapid Soil",
                     "auto_sensor": "Auto Sensor",
                     "auto_sensor_soil": "Auto Sensor",
                     "auto_universal": "Auto Universal 50 - 60°C",
@@ -554,7 +557,7 @@
                     "iot_eco_bldc": "Eco 45°C",
                     "iot_eco_synch": "Eco 45°C",
                     "iot_extra_hygiene": "Extra Hygiene",
-                    "iot_fairy_quick_cycle": "Fairy Short",
+                    "iot_fairy_quick_cycle": "Fairy Quick",
                     "iot_happy_hour": "Happy Hour",
                     "iot_jar_quick_cycle": "Jar Quick",
                     "iot_party": "Party",
@@ -593,7 +596,10 @@
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
                     "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
                     "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "Special",
                     "special_pw_prz": "Special",
                     "steam": "Steam 75°C",
@@ -650,21 +656,21 @@
             },
             "programs_ov": {
                 "state": {
-                    "bakery": "Pasta and Pastries",
-                    "bakery_steam": "Steam-baked bread",
+                    "bakery": "Pasta and Bakery",
+                    "bakery_steam": "Steam oven",
                     "bottom_heating": "Bottom Heating",
                     "bottom_heating_fan": "Bottom Heating + Fan",
                     "bread": "Bread",
-                    "bread_steam": "Steam-baked pastries",
+                    "bread_steam": "Steam baked bread",
                     "combi": "Combi",
                     "convection_fan": "Convection + Fan",
                     "convection_fan_turnspit": "Convection + Fan + Turnspit",
                     "conventional": "Conventional",
                     "conventional_turnspit": "Convection + Turnspit",
-                    "defrost": "Defrost",
+                    "defrost": "Defrosting",
                     "descaling": "Descaling",
                     "fish": "Fish",
-                    "fish_steam": "Steam-cooked fish",
+                    "fish_steam": "Steamed fish",
                     "grill_cata": "Grill",
                     "grill_fan_cata": "Grill fan",
                     "grill_fan_pyro": "Grill + Fan",
@@ -673,16 +679,15 @@
                     "iot_bread": "Bread",
                     "iot_h20_clean": "h2O clean",
                     "leavening": "Leavening",
-                    "light_fan": "Light Fan",
                     "light_fan\n": "Light Fan",
                     "low_temp_cooking": "Low Temperature Cooking",
                     "low_temp_cooking_fish": "Low Temperature Cooking - Fish",
-                    "low_temp_cooking_fish_steam": "Low Temperature Steam Cooking - Fish",
+                    "low_temp_cooking_fish_steam": "Low Temperature Cooking - Steamed fish",
                     "low_temp_cooking_meat": "Low Temperature Cooking - Meat",
-                    "low_temp_cooking_meat_steam": "Low Temperature Steam Cooking - Meat",
+                    "low_temp_cooking_meat_steam": "Low Temperature Cooking - Steamed meat",
                     "low_temp_cooking_steam": "Low Temperature Steam Cooking",
                     "meat": "Meat",
-                    "meat_steam": "Steam-cooked meat",
+                    "meat_steam": "Steamed meat",
                     "multi_level": "Multi-Level",
                     "paella": "Paella",
                     "pasta_and_bakery": "Pasta and Bakery",
@@ -690,8 +695,8 @@
                     "pyrolysis": "Pyrolysis",
                     "pyrolysis_plus": "Pyrolysis +",
                     "red_meat": "Red Meat",
-                    "red_meat_steam": "Steam-cooked red meat",
-                    "regenerate": "Regeneration",
+                    "red_meat_steam": "Steamed red meat",
+                    "regenerate": "Regenerate",
                     "soft_plus": "Soft+",
                     "super_grill": "Super Grill",
                     "tailor_bake": "Tailor bake",
@@ -700,9 +705,9 @@
                     "vegetables": "Vegetables",
                     "vegetables_cata": "Vegetables",
                     "vegetables_pyro": "Vegetables",
-                    "water_discharge": "Water Drain",
+                    "water_discharge": "Water Discharge",
                     "white_meat": "White Meat",
-                    "white_meat_steam": "Steam-cooked white meat"
+                    "white_meat_steam": "Steamed white meat"
                 },
                 "name": "Program"
             },
@@ -738,7 +743,7 @@
                     "hqd_bed_sheets": "Bed Sheets",
                     "hqd_bulky": "Bulky Items",
                     "hqd_casual": "Casual",
-                    "hqd_cold_wind_30": "Cool Breeze 30 minutes",
+                    "hqd_cold_wind_30": "Cool Breeze 30m",
                     "hqd_cold_wind_timing": "Cool Breeze ",
                     "hqd_cotton": "Cotton",
                     "hqd_curtain": "Curtains",
@@ -757,9 +762,9 @@
                     "hqd_night_dry": "Overnight drying",
                     "hqd_outdoor": "Outdoor",
                     "hqd_precious_cure": "Precious Cure",
-                    "hqd_quick_20": "Quick 20",
-                    "hqd_quick_30": "Quick 30",
-                    "hqd_quick_dry": "Quick dry",
+                    "hqd_quick_20": "Quick 20m",
+                    "hqd_quick_30": "Quick 30m",
+                    "hqd_quick_dry": "Quick dry (30 min)",
                     "hqd_quilt": "Quilts",
                     "hqd_refresh": "Refresh",
                     "hqd_school_uniform": "School Uniform",
@@ -797,7 +802,7 @@
                     "iot_dry_lingerie": "Lingerie",
                     "iot_dry_mixed": "Mixed",
                     "iot_dry_playsuits": "Playsuits",
-                    "iot_dry_rapid_30": "Rapid 30",
+                    "iot_dry_rapid_30": "Rapid 30m",
                     "iot_dry_rapid_59": "Rapid 59'",
                     "iot_dry_refresh": "Refresh",
                     "iot_dry_regenerates_waterproof": "Regenerates Waterproof",
@@ -856,7 +861,7 @@
                     "all_in_one_59": "All in One 59'",
                     "all_in_one_59_steam": "Active Wash + Steam",
                     "autocare": "Autocare",
-                    "autoclean": "Drum Cleaning",
+                    "autoclean": "Drum cleaning and descaling ",
                     "baby_60": "All Baby 60°C",
                     "care_14": "Rapid Care 14'",
                     "care_30": "Rapid Care 30'",
@@ -1225,6 +1230,15 @@
             },
             "remaining_time": {
                 "name": "Time remaining"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Fridge",
+                    "freezer": "Freezer",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Fridge & Freezer"
+                },
+                "name": "Zone"
             }
         },
         "binary_sensor": {
@@ -1369,6 +1383,12 @@
         "button": {
             "induction_hob": {
                 "name": "Induction Hob"
+            },
+            "start_program": {
+                "name": "Program Start"
+            },
+            "stop_program": {
+                "name": "Program Stop"
             }
         },
         "climate": {

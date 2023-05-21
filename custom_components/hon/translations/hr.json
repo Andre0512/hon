@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious Cure",
                     "hqd_quick_20": "Brzo 20",
                     "hqd_quick_30": "Brzo 30",
-                    "hqd_quick_dry": "Brzo sušenje",
+                    "hqd_quick_dry": "Brzo sušenje 30",
                     "hqd_quilt": "Popluni",
                     "hqd_refresh": "Protiv neugodnih mirisa",
                     "hqd_school_uniform": "Školska uniforma",
@@ -409,6 +409,11 @@
                     "silent": "Noć",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "Posebno",
                     "special_pw_prz": "Posebno",
                     "steam": "Steam (Para) 75 °C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Tjestenina i tijesta",
-                    "bakery_steam": "Kruh pečen na pari",
+                    "bakery_steam": "Para u pećnici",
                     "bottom_heating": "Donji grijač",
                     "bottom_heating_fan": "Donji grijač + Ventilator",
                     "bread": "Kruh",
-                    "bread_steam": "Peciva pečena na pari",
+                    "bread_steam": "Kruh pečen na pari",
+                    "combi": "Combi",
                     "convection_fan": "Konvekcija + Ventilator",
                     "convection_fan_turnspit": "Konvekcija + ventilator + ražanj",
                     "conventional": "Konvekcijska",
@@ -477,7 +483,7 @@
                     "defrost": "Odmrzavanje",
                     "descaling": "Uklanjanje kamenca",
                     "fish": "Riba",
-                    "fish_steam": "Riba kuhana na pari",
+                    "fish_steam": "Riba na pari",
                     "grill_cata": "Pečenje",
                     "grill_fan_cata": "Ventilator za pečenje",
                     "grill_fan_pyro": "Grijač + ventilator",
@@ -488,12 +494,12 @@
                     "leavening": "Dizanje tijesta",
                     "low_temp_cooking": "Kuhanje na niskoj temperaturi",
                     "low_temp_cooking_fish": "Kuhanje na niskoj temperaturi - riba",
-                    "low_temp_cooking_fish_steam": "Kuhanje na pari i na niskoj temperaturi - riba",
+                    "low_temp_cooking_fish_steam": "Kuhanje na niskoj temperaturi - riba na pari",
                     "low_temp_cooking_meat": "Kuhanje na niskoj temperaturi - meso",
-                    "low_temp_cooking_meat_steam": "Kuhanje na pari i na niskoj temperaturi - meso",
+                    "low_temp_cooking_meat_steam": "Kuhanje na niskoj temperaturi - meso na pari",
                     "low_temp_cooking_steam": "Kuhanje na pari i na niskoj temperaturi",
                     "meat": "Meso",
-                    "meat_steam": "Meso kuhano na pari",
+                    "meat_steam": "Meso na pari",
                     "multi_level": "Više razina",
                     "paella": "Paella",
                     "pasta_and_bakery": "Tjestenina i tijesta",
@@ -501,7 +507,7 @@
                     "pyrolysis": "Piroliza",
                     "pyrolysis_plus": "Piroliza +",
                     "red_meat": "Crveno meso",
-                    "red_meat_steam": "Crveno meso kuhano na pari",
+                    "red_meat_steam": "Kuhano crveno meso",
                     "regenerate": "Regeneracija",
                     "soft_plus": "Mekano+",
                     "super_grill": "Super roštilj",
@@ -511,9 +517,9 @@
                     "vegetables": "Povrće",
                     "vegetables_cata": "Povrće",
                     "vegetables_pyro": "Povrće",
-                    "water_discharge": "Odvod vode",
+                    "water_discharge": "Ispuštanje vode",
                     "white_meat": "Bijelo meso",
-                    "white_meat_steam": "Bijelo meso kuhano na pari"
+                    "white_meat_steam": "Kuhano bijelo meso na pari"
                 },
                 "name": "Program"
             },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious Cure",
                     "hqd_quick_20": "Brzo 20",
                     "hqd_quick_30": "Brzo 30",
-                    "hqd_quick_dry": "Brzo sušenje",
+                    "hqd_quick_dry": "Brzo sušenje 30",
                     "hqd_quilt": "Popluni",
                     "hqd_refresh": "Protiv neugodnih mirisa",
                     "hqd_school_uniform": "Školska uniforma",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Preostalo vrijeme"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Hladnjak",
+                    "freezer": "Zamrzivač",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Hladnjak & Zamrzivač"
+                },
+                "name": "Zona"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Hladnjak"
             }
         },
         "binary_sensor": {
@@ -1206,7 +1224,7 @@
                 "name": "Tava"
             },
             "remote_control": {
-                "name": "Upravljanje na daljinu"
+                "name": "Daljinski upravljač"
             },
             "rinse_aid": {
                 "name": "Razina sredstva za ispiranje"
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Indukcijska ploča za kuhanje"
+            },
+            "start_program": {
+                "name": "Program Početak"
+            },
+            "stop_program": {
+                "name": "Program Zaustavi"
             }
         },
         "climate": {

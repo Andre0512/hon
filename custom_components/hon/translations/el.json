@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Γρήγορα 20",
                     "hqd_quick_30": "Γρήγορα 30",
-                    "hqd_quick_dry": "Γρήγορο στέγνωμα",
+                    "hqd_quick_dry": "Γρήγορο στέγνωμα 30",
                     "hqd_quilt": "Παπλώματα",
                     "hqd_refresh": "Φρεσκάρισμα",
                     "hqd_school_uniform": "Σχολική στολή",
@@ -409,6 +409,11 @@
                     "silent": "Νύχτα",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "σπεσιαλ",
                     "special_pw_prz": "σπεσιαλ",
                     "steam": "ατμος 75°C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Ζυμαρικά και αρτοποιήματα",
-                    "bakery_steam": "Ψωμί ατμού",
+                    "bakery_steam": "Ατμός φούρνου",
                     "bottom_heating": "Κάτω στοιχείο",
                     "bottom_heating_fan": "Κάτω στοιχείο + ανεμιστήρας",
                     "bread": "Ψωμί",
-                    "bread_steam": "Αρτοσκευάσματα ατμού",
+                    "bread_steam": "Ψωμί ατμού",
+                    "combi": "Combi",
                     "convection_fan": "Θερμοσ αερασ",
                     "convection_fan_turnspit": "Θερμός αέρας + Ανεμιστήρας + Σούβλα",
                     "conventional": "Ανω - κατω θερμανση",
@@ -477,7 +483,7 @@
                     "defrost": "Απόψυξη",
                     "descaling": "Αφαλάτωση",
                     "fish": "Ψάρια",
-                    "fish_steam": "Ψάρι στον ατμό",
+                    "fish_steam": "Ψάρια στον ατμό",
                     "grill_cata": "Γκριλ",
                     "grill_fan_cata": "Ανεμιστήρας γκριλ",
                     "grill_fan_pyro": "Γκριλ + ανεμιστήρας",
@@ -488,9 +494,9 @@
                     "leavening": "Ζυμωση",
                     "low_temp_cooking": "Μαγείρεμα σε χαμηλή θερμοκρασία",
                     "low_temp_cooking_fish": "Μαγείρεμα σε χαμηλή θερμοκρασία - Ψάρι",
-                    "low_temp_cooking_fish_steam": "Μαγείρεμα με ατμό σε χαμηλή θερμοκρασία - Ψάρι",
+                    "low_temp_cooking_fish_steam": "Μαγείρεμα σε χαμηλή θερμοκρασία - Ψάρια στον ατμό",
                     "low_temp_cooking_meat": "Μαγείρεμα σε χαμηλή θερμοκρασία - Κρέας",
-                    "low_temp_cooking_meat_steam": "Μαγείρεμα με ατμό σε χαμηλή θερμοκρασία - Κρέας",
+                    "low_temp_cooking_meat_steam": "Μαγείρεμα σε χαμηλή θερμοκρασία - Κρέας στον ατμό",
                     "low_temp_cooking_steam": "Μαγείρεμα με ατμό σε χαμηλή θερμοκρασία",
                     "meat": "Κρέας",
                     "meat_steam": "Κρέας στον ατμό",
@@ -511,7 +517,7 @@
                     "vegetables": "Λαχανικά",
                     "vegetables_cata": "Λαχανικά",
                     "vegetables_pyro": "Λαχανικά",
-                    "water_discharge": "Αποστράγγιση νερού",
+                    "water_discharge": "Απόρριψη νερού",
                     "white_meat": "Λευκό κρέας",
                     "white_meat_steam": "Λευκό κρέας στον ατμό"
                 },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Γρήγορα 20",
                     "hqd_quick_30": "Γρήγορα 30",
-                    "hqd_quick_dry": "Γρήγορο στέγνωμα",
+                    "hqd_quick_dry": "Γρήγορο στέγνωμα 30",
                     "hqd_quilt": "Παπλώματα",
                     "hqd_refresh": "Φρεσκάρισμα",
                     "hqd_school_uniform": "Σχολική στολή",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Χρόνος που απομένει"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Ψυγείο",
+                    "freezer": "Καταψύκτης",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Ψυγείο & Καταψύκτης"
+                },
+                "name": "Ζώνη"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Ψυγείο"
             }
         },
         "binary_sensor": {
@@ -1206,7 +1224,7 @@
                 "name": "Τηγάνι"
             },
             "remote_control": {
-                "name": "Τηλεχειριστήριο"
+                "name": "Daljinsko upravljanje"
             },
             "rinse_aid": {
                 "name": "Επίπεδο λαμπρυντικού"
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Επαγωγική εστία"
+            },
+            "start_program": {
+                "name": "Πρόγραμμα Εκκίνηση"
+            },
+            "stop_program": {
+                "name": "Πρόγραμμα Διακοπή"
             }
         },
         "climate": {

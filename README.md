@@ -72,6 +72,7 @@ Support has been confirmed for these models, but many more will work. Please add
 - Haier HWO60SM2F3XH
 - Haier XIB 3B2SFS-80
 - Haier XIB 6B2D3FB
+- Candy BCTDH7A1TE
 - Candy CIS633SCTTWIFI
 - Candy CSOE C10DE-80
 - Candy ROE H9A3TCEX-S
@@ -274,18 +275,23 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Auto-Set Mode | `thermometer-auto` | `switch` | `settings.intelligenceMode` |
 | Freezer Temperature | `thermometer` | `number` | `settings.tempSelZ2` |
 | Fridge Temperature | `thermometer` | `number` | `settings.tempSelZ1` |
+| Holiday Mode | `palm-tree` | `switch` | `settings.holidayMode` |
+| Program Start | `play` | `button` | `startProgram` |
+| Program Stop | `stop` | `button` | `stopProgram` |
 | Super Cool | `snowflake` | `switch` | `settings.quickModeZ2` |
 | Super Freeze | `snowflake-variant` | `switch` | `settings.quickModeZ1` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Program |  | `select` | `startProgram.program` |
+| Zone | `radiobox-marked` | `select` | `startProgram.zone` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Auto-Set Mode | `thermometer-auto` | `binary_sensor` | `intelligenceMode` |
 | Door Status Freezer | `fridge-top` | `binary_sensor` | `doorStatusZ1` |
 | Door Status Fridge | `fridge-bottom` | `binary_sensor` | `door2StatusZ1` |
+| Error | `math-log` | `sensor` | `errors` |
 | Holiday Mode | `palm-tree` | `binary_sensor` | `holidayMode` |
 | Room Humidity | `water-percent` | `sensor` | `humidityEnv` |
 | Room Temperature | `home-thermometer-outline` | `sensor` | `tempEnv` |

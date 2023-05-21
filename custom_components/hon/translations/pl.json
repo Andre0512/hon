@@ -225,7 +225,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Szybkie 20",
                     "hqd_quick_30": "Szybkie 30",
-                    "hqd_quick_dry": "Szybkoschnące",
+                    "hqd_quick_dry": "Szybkoschnące 30",
                     "hqd_quilt": "Kołdry",
                     "hqd_refresh": "Odświeżanie",
                     "hqd_school_uniform": "Mundurek szkolny",
@@ -409,6 +409,11 @@
                     "silent": "Nocny",
                     "silent_care": "Silent Care",
                     "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
                     "special": "specjalne",
                     "special_pw_prz": "specjalne",
                     "steam": "Para 75°C",
@@ -465,11 +470,12 @@
             "programs_ov": {
                 "state": {
                     "bakery": "Makaron i Piekarnia",
-                    "bakery_steam": "Chleb pieczony na parze",
+                    "bakery_steam": "Para z piekarnika",
                     "bottom_heating": "Grzanie dolne",
                     "bottom_heating_fan": "Grzanie Dolne + Termoobieg",
                     "bread": "Chleb",
-                    "bread_steam": "Ciasteczka pieczone na parze",
+                    "bread_steam": "Chleb pieczony na parze",
+                    "combi": "Kombi",
                     "convection_fan": "Termoobieg",
                     "convection_fan_turnspit": "Termoobieg + Fan + Rożen",
                     "conventional": "Konwencjonalny",
@@ -477,7 +483,7 @@
                     "defrost": "Rozmrażanie",
                     "descaling": "Odkamienianie",
                     "fish": "Ryby",
-                    "fish_steam": "Ryba gotowana na parze",
+                    "fish_steam": "Ryba na parze",
                     "grill_cata": "Grill",
                     "grill_fan_cata": "Grill + termoobieg",
                     "grill_fan_pyro": "Grill + termoobieg",
@@ -488,12 +494,12 @@
                     "leavening": "Zaczyn",
                     "low_temp_cooking": "Pieczenie w niskiej temperaturze",
                     "low_temp_cooking_fish": "Pieczenie w niskiej temperaturze - ryby",
-                    "low_temp_cooking_fish_steam": "Gotowanie na parze w niskiej temperaturze — ryby",
+                    "low_temp_cooking_fish_steam": "Gotowanie w niskiej temperaturze - ryba gotowana na parze",
                     "low_temp_cooking_meat": "Pieczenie w niskiej temperaturze - mięso",
-                    "low_temp_cooking_meat_steam": "Gotowanie na parze w niskiej temperaturze — mięso",
+                    "low_temp_cooking_meat_steam": "Gotowanie w niskiej temperaturze — mięso gotowane na parze",
                     "low_temp_cooking_steam": "Gotowanie na parze w niskiej temperaturze",
                     "meat": "Mięso",
-                    "meat_steam": "Mięso gotowane na parze",
+                    "meat_steam": "Mięso na parze",
                     "multi_level": "Wielopoziomowo",
                     "paella": "Paella",
                     "pasta_and_bakery": "Makaron i Piekarnia",
@@ -501,8 +507,8 @@
                     "pyrolysis": "Pyroliza",
                     "pyrolysis_plus": "Pyroliza +",
                     "red_meat": "Czerwone mięso",
-                    "red_meat_steam": "Czerwone mięso gotowane na parze",
-                    "regenerate": "Regeneracja",
+                    "red_meat_steam": "Czerwone mięso na parze",
+                    "regenerate": "Podgrzewanie",
                     "soft_plus": "Soft+",
                     "super_grill": "Super Grill",
                     "tailor_bake": "Tailor bake",
@@ -511,7 +517,7 @@
                     "vegetables": "Warzywa",
                     "vegetables_cata": "Warzywa",
                     "vegetables_pyro": "Warzywa",
-                    "water_discharge": "Odpływ wody",
+                    "water_discharge": "Odprowadzanie wody",
                     "white_meat": "Białe mięso",
                     "white_meat_steam": "Białe mięso gotowane na parze"
                 },
@@ -570,7 +576,7 @@
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Szybkie 20",
                     "hqd_quick_30": "Szybkie 30",
-                    "hqd_quick_dry": "Szybkoschnące",
+                    "hqd_quick_dry": "Szybkoschnące 30",
                     "hqd_quilt": "Kołdry",
                     "hqd_refresh": "Odświeżanie",
                     "hqd_school_uniform": "Mundurek szkolny",
@@ -1050,6 +1056,15 @@
             },
             "remaining_time": {
                 "name": "Pozostały czas"
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Lodówka",
+                    "freezer": "Zamrażarka",
+                    "vtRoom1": "My Zone",
+                    "[fridge|freezer]": "Lodówka & Zamrażarka"
+                },
+                "name": "Strefa"
             }
         },
         "switch": {
@@ -1157,6 +1172,9 @@
             },
             "super_freeze": {
                 "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Lodówka"
             }
         },
         "binary_sensor": {
@@ -1301,6 +1319,12 @@
         "button": {
             "induction_hob": {
                 "name": "Płyta indukcyjna"
+            },
+            "start_program": {
+                "name": "Program Początek"
+            },
+            "stop_program": {
+                "name": "Program Zatrzymaj"
             }
         },
         "climate": {

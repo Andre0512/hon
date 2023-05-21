@@ -216,7 +216,7 @@ class HonNumberEntity(HonEntity, NumberEntity):
     async def async_set_native_value(self, value: float) -> None:
         setting = self._device.settings[self.entity_description.key]
         if not (
-            isinstance(setting, HonParameter) or isinstance(setting, HonParameterFixed)
+            type(setting) == HonParameter or isinstance(setting, HonParameterFixed)
         ):
             setting.value = value
         if "settings." in self.entity_description.key:
