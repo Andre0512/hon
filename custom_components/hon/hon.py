@@ -1,11 +1,11 @@
 import logging
 from datetime import timedelta
 
-from pyhon.appliance import HonAppliance
-
 from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
+from pyhon.appliance import HonAppliance
+
 from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
@@ -59,3 +59,13 @@ def unique_entities(base_entities, new_entities):
         if entity.key not in existing_entities:
             result.append(entity)
     return tuple(result)
+
+
+def get_coordinator(hass, appliance):
+    coordinators = hass.data[DOMAIN]["coordinators"]
+    if appliance.unique_id in coordinators:
+        coordinator = hass.data[DOMAIN]["coordinators"][appliance.unique_id]
+    else:
+        coordinator = HonCoordinator(hass, appliance)
+        hass.data[DOMAIN]["coordinators"][appliance.unique_id] = coordinator
+    return coordinator

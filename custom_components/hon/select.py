@@ -2,17 +2,17 @@ from __future__ import annotations
 
 import logging
 
-from pyhon import Hon
-from pyhon.appliance import HonAppliance
-from pyhon.parameter.fixed import HonParameterFixed
-
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTemperature, UnitOfTime, REVOLUTIONS_PER_MINUTE
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
+from pyhon import Hon
+from pyhon.appliance import HonAppliance
+from pyhon.parameter.fixed import HonParameterFixed
+
 from .const import DOMAIN
-from .hon import HonEntity, HonCoordinator, unique_entities
+from .hon import HonEntity, unique_entities, get_coordinator
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -139,14 +139,9 @@ SELECTS["WD"] = unique_entities(SELECTS["WM"], SELECTS["TD"])
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
     hon: Hon = hass.data[DOMAIN][entry.unique_id]
-    coordinators = hass.data[DOMAIN]["coordinators"]
     appliances = []
     for device in hon.appliances:
-        if device.unique_id in coordinators:
-            coordinator = hass.data[DOMAIN]["coordinators"][device.unique_id]
-        else:
-            coordinator = HonCoordinator(hass, device)
-            hass.data[DOMAIN]["coordinators"][device.unique_id] = coordinator
+        coordinator = get_coordinator(hass, device)
         await coordinator.async_config_entry_first_refresh()
 
         if descriptions := SELECTS.get(device.appliance_type):

@@ -2,17 +2,17 @@ import logging
 from dataclasses import dataclass
 from typing import Any
 
+from homeassistant.components.switch import SwitchEntityDescription, SwitchEntity
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import EntityCategory
+from homeassistant.core import callback
 from pyhon import Hon
 from pyhon.appliance import HonAppliance
 from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
 
-from homeassistant.components.switch import SwitchEntityDescription, SwitchEntity
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import EntityCategory
-from homeassistant.core import callback
 from .const import DOMAIN
-from .hon import HonCoordinator, HonEntity, unique_entities
+from .hon import HonEntity, unique_entities, get_coordinator
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -355,14 +355,9 @@ SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["TD"])
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
     hon: Hon = hass.data[DOMAIN][entry.unique_id]
-    coordinators = hass.data[DOMAIN]["coordinators"]
     appliances = []
     for device in hon.appliances:
-        if device.unique_id in coordinators:
-            coordinator = hass.data[DOMAIN]["coordinators"][device.unique_id]
-        else:
-            coordinator = HonCoordinator(hass, device)
-            hass.data[DOMAIN]["coordinators"][device.unique_id] = coordinator
+        coordinator = get_coordinator(hass, device)
         await coordinator.async_config_entry_first_refresh()
 
         if descriptions := SWITCHES.get(device.appliance_type):

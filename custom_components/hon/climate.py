@@ -1,8 +1,5 @@
 import logging
 
-from pyhon import Hon
-from pyhon.appliance import HonAppliance
-
 from homeassistant.components.climate import (
     ClimateEntity,
     ClimateEntityDescription,
@@ -23,8 +20,11 @@ from homeassistant.const import (
     TEMP_CELSIUS,
 )
 from homeassistant.core import callback
+from pyhon import Hon
+from pyhon.appliance import HonAppliance
+
 from .const import HON_HVAC_MODE, HON_FAN, HON_HVAC_PROGRAM, DOMAIN
-from .hon import HonEntity, HonCoordinator
+from .hon import HonEntity, get_coordinator
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -42,14 +42,9 @@ CLIMATES = {
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
     hon: Hon = hass.data[DOMAIN][entry.unique_id]
-    coordinators = hass.data[DOMAIN]["coordinators"]
     appliances = []
     for device in hon.appliances:
-        if device.unique_id in coordinators:
-            coordinator = hass.data[DOMAIN]["coordinators"][device.unique_id]
-        else:
-            coordinator = HonCoordinator(hass, device)
-            hass.data[DOMAIN]["coordinators"][device.unique_id] = coordinator
+        coordinator = get_coordinator(hass, device)
         await coordinator.async_config_entry_first_refresh()
 
         if descriptions := CLIMATES.get(device.appliance_type):

@@ -1,7 +1,5 @@
 import logging
 
-from pyhon import Hon
-
 from homeassistant.components.sensor import (
     SensorEntity,
     SensorDeviceClass,
@@ -22,9 +20,11 @@ from homeassistant.const import (
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.typing import StateType
+from pyhon import Hon
+
 from . import const
 from .const import DOMAIN
-from .hon import HonCoordinator, HonEntity, unique_entities
+from .hon import HonEntity, unique_entities, get_coordinator
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -512,14 +512,9 @@ SENSORS["WD"] = unique_entities(SENSORS["WM"], SENSORS["TD"])
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
     hon: Hon = hass.data[DOMAIN][entry.unique_id]
-    coordinators = hass.data[DOMAIN]["coordinators"]
     appliances = []
     for device in hon.appliances:
-        if device.unique_id in coordinators:
-            coordinator = hass.data[DOMAIN]["coordinators"][device.unique_id]
-        else:
-            coordinator = HonCoordinator(hass, device)
-            hass.data[DOMAIN]["coordinators"][device.unique_id] = coordinator
+        coordinator = get_coordinator(hass, device)
         await coordinator.async_config_entry_first_refresh()
 
         if descriptions := SENSORS.get(device.appliance_type):
