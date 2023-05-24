@@ -6,13 +6,12 @@ from homeassistant.components.switch import SwitchEntityDescription, SwitchEntit
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory
 from homeassistant.core import callback
-from pyhon import Hon
 from pyhon.appliance import HonAppliance
 from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities, get_coordinator
+from .hon import HonEntity, unique_entities
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -354,31 +353,26 @@ SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["TD"])
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
-    hon: Hon = hass.data[DOMAIN][entry.unique_id]
-    appliances = []
-    for device in hon.appliances:
-        coordinator = get_coordinator(hass, device)
-        await coordinator.async_config_entry_first_refresh()
+    entities = []
+    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+        for description in SWITCHES.get(device.appliance_type, []):
+            if description.entity_category == EntityCategory.CONFIG:
+                if description.key not in device.available_settings:
+                    continue
+            else:
+                if not any(
+                    [
+                        device.get(description.key) is not None,
+                        description.turn_on_key in list(device.commands),
+                        description.turn_off_key in list(device.commands),
+                    ]
+                ):
+                    continue
+            entity = HonSwitchEntity(hass, entry, device, description)
+            await entity.coordinator.async_config_entry_first_refresh()
+            entities.append(entity)
 
-        if descriptions := SWITCHES.get(device.appliance_type):
-            for description in descriptions:
-                if description.entity_category == EntityCategory.CONFIG:
-                    if description.key not in device.available_settings:
-                        continue
-                else:
-                    if not any(
-                        [
-                            device.get(description.key) is not None,
-                            description.turn_on_key in list(device.commands),
-                            description.turn_off_key in list(device.commands),
-                        ]
-                    ):
-                        continue
-                appliances.extend(
-                    [HonSwitchEntity(hass, coordinator, entry, device, description)]
-                )
-
-    async_add_entities(appliances)
+    async_add_entities(entities)
 
 
 class HonSwitchEntity(HonEntity, SwitchEntity):
@@ -387,12 +381,11 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
     def __init__(
         self,
         hass,
-        coordinator,
         entry,
         device: HonAppliance,
         description: HonSwitchEntityDescription,
     ) -> None:
-        super().__init__(hass, entry, coordinator, device)
+        super().__init__(hass, entry, device)
 
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"

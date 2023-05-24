@@ -20,11 +20,10 @@ from homeassistant.const import (
     TEMP_CELSIUS,
 )
 from homeassistant.core import callback
-from pyhon import Hon
 from pyhon.appliance import HonAppliance
 
 from .const import HON_HVAC_MODE, HON_FAN, HON_HVAC_PROGRAM, DOMAIN
-from .hon import HonEntity, get_coordinator
+from .hon import HonEntity
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -41,27 +40,20 @@ CLIMATES = {
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
-    hon: Hon = hass.data[DOMAIN][entry.unique_id]
-    appliances = []
-    for device in hon.appliances:
-        coordinator = get_coordinator(hass, device)
-        await coordinator.async_config_entry_first_refresh()
-
-        if descriptions := CLIMATES.get(device.appliance_type):
-            for description in descriptions:
-                if description.key not in list(device.commands):
-                    continue
-                appliances.append(
-                    HonClimateEntity(hass, coordinator, entry, device, description)
-                )
-    async_add_entities(appliances)
+    entities = []
+    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+        for description in CLIMATES.get(device.appliance_type, []):
+            if description.key not in list(device.commands):
+                continue
+            entity = HonClimateEntity(hass, entry, device, description)
+            await entity.coordinator.async_config_entry_first_refresh()
+            entities.append(entity)
+    async_add_entities(entities)
 
 
 class HonClimateEntity(HonEntity, ClimateEntity):
-    def __init__(
-        self, hass, coordinator, entry, device: HonAppliance, description
-    ) -> None:
-        super().__init__(hass, entry, coordinator, device)
+    def __init__(self, hass, entry, device: HonAppliance, description) -> None:
+        super().__init__(hass, entry, device)
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}climate"
 

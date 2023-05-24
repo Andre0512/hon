@@ -8,10 +8,9 @@ from homeassistant.components.binary_sensor import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
-from pyhon import Hon
 
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities, get_coordinator
+from .hon import HonEntity, unique_entities
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -250,28 +249,22 @@ BINARY_SENSORS["WD"] = unique_entities(BINARY_SENSORS["WM"], BINARY_SENSORS["TD"
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
-    hon: Hon = hass.data[DOMAIN][entry.unique_id]
-    appliances = []
-    for device in hon.appliances:
-        coordinator = get_coordinator(hass, device)
-        await coordinator.async_config_entry_first_refresh()
-
-        if descriptions := BINARY_SENSORS.get(device.appliance_type):
-            for description in descriptions:
-                if not device.get(description.key):
-                    continue
-                appliances.append(
-                    HonBinarySensorEntity(hass, coordinator, entry, device, description)
-                )
-
-    async_add_entities(appliances)
+    entities = []
+    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+        for description in BINARY_SENSORS.get(device.appliance_type, []):
+            if not device.get(description.key):
+                continue
+            entity = HonBinarySensorEntity(hass, entry, device, description)
+            await entity.coordinator.async_config_entry_first_refresh()
+            entities.append(entity)
+    async_add_entities(entities)
 
 
 class HonBinarySensorEntity(HonEntity, BinarySensorEntity):
     entity_description: HonBinarySensorEntityDescription
 
-    def __init__(self, hass, coordinator, entry, device, description) -> None:
-        super().__init__(hass, entry, coordinator, device)
+    def __init__(self, hass, entry, device, description) -> None:
+        super().__init__(hass, entry, device)
 
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"

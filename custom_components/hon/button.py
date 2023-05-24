@@ -5,11 +5,10 @@ from homeassistant.components import persistent_notification
 from homeassistant.components.button import ButtonEntityDescription, ButtonEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory
-from pyhon import Hon
 from pyhon.appliance import HonAppliance
 
 from .const import DOMAIN
-from .hon import HonEntity, get_coordinator
+from .hon import HonEntity
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -40,29 +39,22 @@ BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
 
 
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
-    hon: Hon = hass.data[DOMAIN][entry.unique_id]
-    appliances = []
-    for device in hon.appliances:
-        coordinator = get_coordinator(hass, device)
-        await coordinator.async_config_entry_first_refresh()
-
-        if descriptions := BUTTONS.get(device.appliance_type):
-            for description in descriptions:
-                if not device.commands.get(description.key):
-                    continue
-                appliances.extend(
-                    [HonButtonEntity(hass, coordinator, entry, device, description)]
-                )
-        appliances.extend([HonFeatureRequestButton(hass, coordinator, entry, device)])
-
-    async_add_entities(appliances)
+    entities = []
+    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+        for description in BUTTONS.get(device.appliance_type, []):
+            if not device.commands.get(description.key):
+                continue
+            entity = HonButtonEntity(hass, entry, device, description)
+            await entity.coordinator.async_config_entry_first_refresh()
+            entities.append(entity)
+        entities.append(HonFeatureRequestButton(hass, entry, device))
+        await entities[-1].coordinator.async_config_entry_first_refresh()
+    async_add_entities(entities)
 
 
 class HonButtonEntity(HonEntity, ButtonEntity):
-    def __init__(
-        self, hass, coordinator, entry, device: HonAppliance, description
-    ) -> None:
-        super().__init__(hass, entry, coordinator, device)
+    def __init__(self, hass, entry, device: HonAppliance, description) -> None:
+        super().__init__(hass, entry, device)
 
         self.entity_description = description
         self._attr_unique_id = f"{super().unique_id}{description.key}"
@@ -81,8 +73,8 @@ class HonButtonEntity(HonEntity, ButtonEntity):
 
 
 class HonFeatureRequestButton(HonEntity, ButtonEntity):
-    def __init__(self, hass, coordinator, entry, device: HonAppliance) -> None:
-        super().__init__(hass, entry, coordinator, device)
+    def __init__(self, hass, entry, device: HonAppliance) -> None:
+        super().__init__(hass, entry, device)
 
         self._attr_unique_id = f"{super().unique_id}_log_device_info"
         self._attr_icon = "mdi:information"
