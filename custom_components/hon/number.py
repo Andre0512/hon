@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from dataclasses import dataclass
+
 from homeassistant.components.number import (
     NumberEntity,
     NumberEntityDescription,
@@ -7,143 +9,136 @@ from homeassistant.components.number import (
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTime, UnitOfTemperature
 from homeassistant.core import callback
-from homeassistant.helpers.entity import EntityCategory
-from pyhon.parameter.base import HonParameter
-from pyhon.parameter.fixed import HonParameterFixed
+from homeassistant.helpers.entity import EntityCategory, Entity
 from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
 from .hon import HonEntity, unique_entities
 
+
+@dataclass
+class HonConfigNumberEntityDescription(NumberEntityDescription):
+    entity_category: EntityCategory = EntityCategory.CONFIG
+
+
+@dataclass
+class HonNumberEntityDescription(NumberEntityDescription):
+    pass
+
+
 NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
     "WM": (
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.delayTime",
             name="Delay Time",
             icon="mdi:timer-plus",
-            entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
             translation_key="delay_time",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.rinseIterations",
             name="Rinse Iterations",
             icon="mdi:rotate-right",
-            entity_category=EntityCategory.CONFIG,
             translation_key="rinse_iterations",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.mainWashTime",
             name="Main Wash Time",
             icon="mdi:clock-start",
-            entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
             translation_key="wash_time",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.steamLevel",
             name="Steam Level",
             icon="mdi:weather-dust",
-            entity_category=EntityCategory.CONFIG,
             translation_key="steam_level",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.waterHard",
             name="Water hard",
             icon="mdi:water",
-            entity_category=EntityCategory.CONFIG,
             translation_key="water_hard",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.lang",
             name="lang",
-            entity_category=EntityCategory.CONFIG,
         ),
     ),
     "TD": (
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.delayTime",
             name="Delay time",
             icon="mdi:timer-plus",
-            entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
             translation_key="delay_time",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.tempLevel",
             name="Temperature level",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
             translation_key="tumbledryertemplevel",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.dryTime",
             name="Dry Time",
-            entity_category=EntityCategory.CONFIG,
             translation_key="dry_time",
         ),
     ),
     "OV": (
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.delayTime",
             name="Delay time",
             icon="mdi:timer-plus",
-            entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
             translation_key="delay_time",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.tempSel",
             name="Target Temperature",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="target_temperature",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.prTime",
             name="Program Duration",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:timelapse",
             native_unit_of_measurement=UnitOfTime.MINUTES,
             translation_key="program_duration",
         ),
     ),
     "IH": (
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.temp",
             name="Temperature",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
             translation_key="temperature",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.powerManagement",
             name="Power Management",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:timelapse",
             translation_key="power_management",
         ),
     ),
     "DW": (
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.delayTime",
             name="Delay time",
             icon="mdi:timer-plus",
-            entity_category=EntityCategory.CONFIG,
             native_unit_of_measurement=UnitOfTime.MINUTES,
             translation_key="delay_time",
         ),
-        NumberEntityDescription(
+        HonConfigNumberEntityDescription(
             key="startProgram.waterHard",
             name="Water hard",
             icon="mdi:water",
-            entity_category=EntityCategory.CONFIG,
             translation_key="water_hard",
         ),
     ),
     "AC": (
-        NumberEntityDescription(
+        HonNumberEntityDescription(
             key="settings.tempSel",
             name="Target Temperature",
             icon="mdi:thermometer",
@@ -152,14 +147,14 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
         ),
     ),
     "REF": (
-        NumberEntityDescription(
+        HonNumberEntityDescription(
             key="settings.tempSelZ1",
             name="Fridge Temperature",
             icon="mdi:thermometer",
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="fridge_temp_sel",
         ),
-        NumberEntityDescription(
+        HonNumberEntityDescription(
             key="settings.tempSelZ2",
             name="Freezer Temperature",
             icon="mdi:thermometer",
@@ -178,20 +173,24 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
         for description in NUMBERS.get(device.appliance_type, []):
             if description.key not in device.available_settings:
                 continue
-            entity = HonNumberEntity(hass, entry, device, description)
+            if isinstance(description, HonNumberEntityDescription):
+                entity = HonNumberEntity(hass, entry, device, description)
+            elif isinstance(description, HonConfigNumberEntityDescription):
+                entity = HonConfigNumberEntity(hass, entry, device, description)
+            else:
+                continue
             await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
     async_add_entities(entities)
 
 
 class HonNumberEntity(HonEntity, NumberEntity):
+    entity_description: HonNumberEntityDescription
+
     def __init__(self, hass, entry, device, description) -> None:
-        super().__init__(hass, entry, device)
+        super().__init__(hass, entry, device, description)
 
         self._data = device.settings[description.key]
-        self.entity_description = description
-        self._attr_unique_id = f"{super().unique_id}{description.key}"
-
         if isinstance(self._data, HonParameterRange):
             self._attr_native_max_value = self._data.max
             self._attr_native_min_value = self._data.min
@@ -203,12 +202,10 @@ class HonNumberEntity(HonEntity, NumberEntity):
 
     async def async_set_native_value(self, value: float) -> None:
         setting = self._device.settings[self.entity_description.key]
-        if not (
-            type(setting) == HonParameter or isinstance(setting, HonParameterFixed)
-        ):
+        if isinstance(setting, HonParameterRange):
             setting.value = value
-        if "settings." in self.entity_description.key:
-            await self._device.commands["settings"].send()
+        command = self.entity_description.key.split(".")[0]
+        await self._device.commands[command].send()
         await self.coordinator.async_refresh()
 
     @callback
@@ -224,12 +221,23 @@ class HonNumberEntity(HonEntity, NumberEntity):
     @property
     def available(self) -> bool:
         """Return True if entity is available."""
-        if self.entity_category == EntityCategory.CONFIG:
-            return super().available
-        else:
-            return (
-                super().available
-                and self._device.get("remoteCtrValid", "1") == "1"
-                and self._device.get("attributes.lastConnEvent.category")
-                != "DISCONNECTED"
-            )
+        return (
+            super().available
+            and self._device.get("remoteCtrValid", "1") == "1"
+            and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
+        )
+
+
+class HonConfigNumberEntity(HonNumberEntity):
+    entity_description: HonConfigNumberEntityDescription
+
+    async def async_set_native_value(self, value: str) -> None:
+        setting = self._device.settings[self.entity_description.key]
+        if isinstance(setting, HonParameterRange):
+            setting.value = value
+        await self.coordinator.async_refresh()
+
+    @property
+    def available(self) -> bool:
+        """Return True if entity is available."""
+        return super(NumberEntity, self).available

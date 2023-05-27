@@ -1,12 +1,13 @@
 from __future__ import annotations
 
 import logging
+from dataclasses import dataclass
 
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTemperature, UnitOfTime, REVOLUTIONS_PER_MINUTE
 from homeassistant.core import callback
-from homeassistant.helpers.entity import EntityCategory
+from homeassistant.helpers.entity import EntityCategory, Entity
 from pyhon.appliance import HonAppliance
 from pyhon.parameter.fixed import HonParameterFixed
 
@@ -15,101 +16,101 @@ from .hon import HonEntity, unique_entities
 
 _LOGGER = logging.getLogger(__name__)
 
+
+@dataclass
+class HonSelectEntityDescription(SelectEntityDescription):
+    pass
+
+
+@dataclass
+class HonConfigSelectEntityDescription(SelectEntityDescription):
+    entity_category: EntityCategory = EntityCategory.CONFIG
+
+
 SELECTS = {
     "WM": (
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.spinSpeed",
             name="Spin speed",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:numeric",
             unit_of_measurement=REVOLUTIONS_PER_MINUTE,
             translation_key="spin_speed",
         ),
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.temp",
             name="Temperature",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
             unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="temperature",
         ),
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.program",
             name="Program",
-            entity_category=EntityCategory.CONFIG,
             translation_key="programs_wm",
         ),
     ),
     "TD": (
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.program",
             name="Program",
-            entity_category=EntityCategory.CONFIG,
             translation_key="programs_td",
         ),
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.dryTimeMM",
             name="Dry Time",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:timer",
             unit_of_measurement=UnitOfTime.MINUTES,
             translation_key="dry_time",
         ),
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.dryLevel",
             name="Dry level",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:hair-dryer",
             translation_key="dry_levels",
         ),
     ),
     "OV": (
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.program",
             name="Program",
-            entity_category=EntityCategory.CONFIG,
             translation_key="programs_ov",
         ),
     ),
     "IH": (
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.program",
             name="Program",
-            entity_category=EntityCategory.CONFIG,
             translation_key="programs_ih",
         ),
     ),
     "DW": (
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.program",
             name="Program",
-            entity_category=EntityCategory.CONFIG,
             translation_key="programs_dw",
         ),
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.temp",
             name="Temperature",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:thermometer",
             unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="temperature",
         ),
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.remainingTime",
             name="Remaining Time",
-            entity_category=EntityCategory.CONFIG,
             icon="mdi:timer",
             unit_of_measurement=UnitOfTime.MINUTES,
             translation_key="remaining_time",
         ),
     ),
     "AC": (
-        SelectEntityDescription(
+        HonSelectEntityDescription(
             key="startProgram.program",
             name="Program",
             translation_key="programs_ac",
         ),
-        SelectEntityDescription(
+        HonSelectEntityDescription(
             key="settings.humanSensingStatus",
             name="Eco Pilot",
             icon="mdi:run",
@@ -117,17 +118,15 @@ SELECTS = {
         ),
     ),
     "REF": (
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.program",
             name="Program",
-            entity_category=EntityCategory.CONFIG,
             translation_key="programs_ref",
         ),
-        SelectEntityDescription(
+        HonConfigSelectEntityDescription(
             key="startProgram.zone",
             name="Zone",
             icon="mdi:radiobox-marked",
-            entity_category=EntityCategory.CONFIG,
             translation_key="ref_zones",
         ),
     ),
@@ -142,18 +141,22 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
         for description in SELECTS.get(device.appliance_type, []):
             if description.key not in device.available_settings:
                 continue
-            entity = HonSelectEntity(hass, entry, device, description)
+            if isinstance(description, HonSelectEntityDescription):
+                entity = HonSelectEntity(hass, entry, device, description)
+            elif isinstance(description, HonConfigSelectEntityDescription):
+                entity = HonConfigSelectEntity(hass, entry, device, description)
+            else:
+                continue
             await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
     async_add_entities(entities)
 
 
 class HonSelectEntity(HonEntity, SelectEntity):
-    def __init__(self, hass, entry, device: HonAppliance, description) -> None:
-        super().__init__(hass, entry, device)
+    entity_description: HonSelectEntityDescription
 
-        self.entity_description = description
-        self._attr_unique_id = f"{super().unique_id}{description.key}"
+    def __init__(self, hass, entry, device: HonAppliance, description) -> None:
+        super().__init__(hass, entry, device, description)
 
         if not (setting := self._device.settings.get(description.key)):
             self._attr_options: list[str] = []
@@ -171,10 +174,8 @@ class HonSelectEntity(HonEntity, SelectEntity):
 
     async def async_select_option(self, option: str) -> None:
         self._device.settings[self.entity_description.key].value = option
-        if "settings." in self.entity_description.key:
-            await self._device.commands["settings"].send()
-        elif self._device.appliance_type in ["AC"]:
-            await self._device.commands["startProgram"].send()
+        command = self.entity_description.key.split(".")[0]
+        await self._device.commands[command].send()
         await self.coordinator.async_refresh()
 
     @callback
@@ -193,12 +194,21 @@ class HonSelectEntity(HonEntity, SelectEntity):
     @property
     def available(self) -> bool:
         """Return True if entity is available."""
-        if self.entity_category == EntityCategory.CONFIG:
-            return super().available
-        else:
-            return (
-                super().available
-                and self._device.get("remoteCtrValid", "1") == "1"
-                and self._device.get("attributes.lastConnEvent.category")
-                != "DISCONNECTED"
-            )
+        return (
+            super().available
+            and self._device.get("remoteCtrValid", "1") == "1"
+            and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
+        )
+
+
+class HonConfigSelectEntity(HonSelectEntity):
+    entity_description: HonConfigSelectEntityDescription
+
+    async def async_select_option(self, option: str) -> None:
+        self._device.settings[self.entity_description.key].value = option
+        await self.coordinator.async_refresh()
+
+    @property
+    def available(self) -> bool:
+        """Return True if entity is available."""
+        return super(SelectEntity, self).available

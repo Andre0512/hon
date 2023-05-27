@@ -14,7 +14,7 @@ _LOGGER = logging.getLogger(__name__)
 class HonEntity(CoordinatorEntity):
     _attr_has_entity_name = True
 
-    def __init__(self, hass, entry, device: HonAppliance) -> None:
+    def __init__(self, hass, entry, device: HonAppliance, description=None) -> None:
         coordinator = get_coordinator(hass, device)
         super().__init__(coordinator)
 
@@ -23,7 +23,11 @@ class HonEntity(CoordinatorEntity):
         self._coordinator = coordinator
         self._device = device
 
-        self._attr_unique_id = self._device.unique_id
+        if description is not None:
+            self.entity_description = description
+            self._attr_unique_id = f"{self._device.unique_id}{description.key}"
+        else:
+            self._attr_unique_id = self._device.unique_id
 
     @property
     def device_info(self):

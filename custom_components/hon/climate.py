@@ -53,9 +53,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
 class HonClimateEntity(HonEntity, ClimateEntity):
     def __init__(self, hass, entry, device: HonAppliance, description) -> None:
-        super().__init__(hass, entry, device)
-        self.entity_description = description
-        self._attr_unique_id = f"{super().unique_id}climate"
+        super().__init__(hass, entry, device, description)
 
         self._attr_temperature_unit = TEMP_CELSIUS
         self._attr_target_temperature_step = PRECISION_WHOLE

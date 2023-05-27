@@ -53,11 +53,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
 
 class HonButtonEntity(HonEntity, ButtonEntity):
-    def __init__(self, hass, entry, device: HonAppliance, description) -> None:
-        super().__init__(hass, entry, device)
-
-        self.entity_description = description
-        self._attr_unique_id = f"{super().unique_id}{description.key}"
+    entity_description: ButtonEntityDescription
 
     async def async_press(self) -> None:
         await self._device.commands[self.entity_description.key].send()
