@@ -1330,6 +1330,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Aire acondicionado"
+            },
+            "fridge": {
+                "name": "Frigorífico",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Modos de frigorífico",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "No se ha seleccionado ningún modo"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Congelador",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Modos congelador",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "No se ha seleccionado ningún modo"
+                        }
+                    }
+                }
             }
         }
     },

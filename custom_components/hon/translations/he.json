@@ -778,6 +778,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Air conditioner"
+            },
+            "fridge": {
+                "name": "Fridge",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Fridge modes",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "No mode selected"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Freezer",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Freezer modes",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "No mode selected"
+                        }
+                    }
+                }
             }
         }
     },

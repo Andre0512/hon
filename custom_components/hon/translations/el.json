@@ -1330,6 +1330,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Κλιματιστικό"
+            },
+            "fridge": {
+                "name": "Ψυγείο",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Λειτουργίες ψυγείου",
+                        "state": {
+                            "auto_set": "Αυτόματη ρύθμιση",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "Δεν επιλέχθηκε λειτουργία"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Καταψύκτης",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Λειτουργίες κατάψυξης",
+                        "state": {
+                            "auto_set": "Αυτόματη ρύθμιση",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Δεν επιλέχθηκε λειτουργία"
+                        }
+                    }
+                }
             }
         }
     },

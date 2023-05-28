@@ -73,6 +73,7 @@ Support has been confirmed for these models, but many more will work. Please add
 - Hoover HFB 6B2S3FX
 - Hoover HLE C10DCE-80
 - Hoover HSOT3161WG
+- Hoover HW 68AMC/1-80
 - Hoover HWPD 69AMBC/1-S
 - Hoover HWPS4954DAMR-11
 - Hoover NDE H10A2TCE-80

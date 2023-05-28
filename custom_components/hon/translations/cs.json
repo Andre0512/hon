@@ -1330,6 +1330,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Klimatizační jednotka"
+            },
+            "fridge": {
+                "name": "Chladnička",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Režimy chladničky",
+                        "state": {
+                            "auto_set": "Automatické nastavení",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "Není vybrán žádný režim"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Mraznička",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Režimy mrazničky",
+                        "state": {
+                            "auto_set": "Automatické nastavení",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Není vybrán žádný režim"
+                        }
+                    }
+                }
             }
         }
     },

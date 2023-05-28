@@ -1330,6 +1330,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Airconditioner"
+            },
+            "fridge": {
+                "name": "Koelkast",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Koelkastmodi",
+                        "state": {
+                            "auto_set": "Automatisch instellen",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "Geen modus geselecteerd"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Vriezer",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Vriezermodi",
+                        "state": {
+                            "auto_set": "Automatisch instellen",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Geen modus geselecteerd"
+                        }
+                    }
+                }
             }
         }
     },

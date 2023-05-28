@@ -14,7 +14,11 @@ from custom_components.hon.climate import CLIMATES
 from custom_components.hon.number import NUMBERS
 from custom_components.hon.select import SELECTS
 from custom_components.hon.sensor import SENSORS
-from custom_components.hon.switch import SWITCHES, HonSwitchEntityDescription
+from custom_components.hon.switch import (
+    SWITCHES,
+    HonControlSwitchEntityDescription,
+    HonSwitchEntityDescription,
+)
 
 APPLIANCES = {
     "AC": "Air conditioner",
@@ -50,11 +54,7 @@ result = {}
 for entity_type, appliances in entities.items():
     for appliance, data in appliances.items():
         for entity in data:
-            if (
-                isinstance(entity, HonSwitchEntityDescription)
-                and entity.entity_category != "config"
-                and "settings." not in entity.key
-            ):
+            if isinstance(entity, HonControlSwitchEntityDescription):
                 key = f"{entity.turn_on_key}` / `{entity.turn_off_key}"
             else:
                 key = entity.key
@@ -62,7 +62,8 @@ for entity_type, appliances in entities.items():
             category = (
                 "control"
                 if entity.key.startswith("settings")
-                or hasattr(entity, "turn_on_key")
+                or isinstance(entity, HonSwitchEntityDescription)
+                or isinstance(entity, HonControlSwitchEntityDescription)
                 or entity_type in ["button", "climate"]
                 else "sensor"
             )

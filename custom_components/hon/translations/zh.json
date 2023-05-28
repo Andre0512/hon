@@ -1330,6 +1330,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "空调"
+            },
+            "fridge": {
+                "name": "冰箱",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "冰箱模式",
+                        "state": {
+                            "auto_set": "自动设置",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "未选择模式"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "冷藏箱",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "冷藏室模式",
+                        "state": {
+                            "auto_set": "自动设置",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "未选择模式"
+                        }
+                    }
+                }
             }
         }
     },

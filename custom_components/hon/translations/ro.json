@@ -1330,6 +1330,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Aer condiționat"
+            },
+            "fridge": {
+                "name": "Frigider",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Moduri frigider",
+                        "state": {
+                            "auto_set": "Setare automată",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "Niciun mod selectat"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Congelator",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Moduri de congelare",
+                        "state": {
+                            "auto_set": "Setare automată",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Niciun mod selectat"
+                        }
+                    }
+                }
             }
         }
     },

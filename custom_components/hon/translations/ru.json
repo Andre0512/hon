@@ -1330,6 +1330,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Кондиционер воздуха"
+            },
+            "fridge": {
+                "name": "Холодильник",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Режимы холодильника",
+                        "state": {
+                            "auto_set": "Автоматическая установка",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "Режим не выбран"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Морозильник",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Режимы морозильного отделения",
+                        "state": {
+                            "auto_set": "Автоматическая установка",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Режим не выбран"
+                        }
+                    }
+                }
             }
         }
     },

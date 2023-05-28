@@ -1330,6 +1330,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Klimatyzator"
+            },
+            "fridge": {
+                "name": "Lodówka",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Tryby pracy lodówki",
+                        "state": {
+                            "auto_set": "Ustawianie automatyczne",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "Nie wybrano żadnego trybu"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Zamrażarka",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Tryby pracy zamrażarki",
+                        "state": {
+                            "auto_set": "Ustawianie automatyczne",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Nie wybrano żadnego trybu"
+                        }
+                    }
+                }
             }
         }
     },

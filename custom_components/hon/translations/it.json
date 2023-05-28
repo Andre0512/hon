@@ -1382,6 +1382,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Condizionatore"
+            },
+            "fridge": {
+                "name": "Frigorifero",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Modalità del frigorifero",
+                        "state": {
+                            "auto_set": "Impostazione automatica",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "Nessuna modalità selezionata"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Congelatore",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Modalità del congelatore",
+                        "state": {
+                            "auto_set": "Impostazione automatica",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Nessuna modalità selezionata"
+                        }
+                    }
+                }
             }
         }
     }

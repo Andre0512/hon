@@ -1330,6 +1330,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Klimatska naprava"
+            },
+            "fridge": {
+                "name": "Hladilnik",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Načini hladilnika",
+                        "state": {
+                            "auto_set": "Samodejna nastavitev",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "Izbran ni noben način"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Zamrzovalnik",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Načini zamrzovalnika",
+                        "state": {
+                            "auto_set": "Samodejna nastavitev",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Izbran ni noben način"
+                        }
+                    }
+                }
             }
         }
     },

@@ -1330,6 +1330,33 @@
         "climate": {
             "air_conditioner": {
                 "name": "Klima"
+            },
+            "fridge": {
+                "name": "Buzdolabı",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Buzdolabı modları",
+                        "state": {
+                            "auto_set": "Otomatik Ayarla",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "Hiç mod seçilmedi"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Dondurucu",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Dondurucu modları",
+                        "state": {
+                            "auto_set": "Otomatik Ayarla",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Hiç mod seçilmedi"
+                        }
+                    }
+                }
             }
         }
     },

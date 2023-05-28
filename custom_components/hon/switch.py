@@ -344,8 +344,9 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
                     continue
                 entity = HonControlSwitchEntity(hass, entry, device, description)
             elif isinstance(description, HonSwitchEntityDescription):
-                if description.key not in device.available_settings or not device.get(
-                    description.key
+                if (
+                    f"settings.{description.key}" not in device.available_settings
+                    or not device.get(description.key)
                 ):
                     continue
                 entity = HonSwitchEntity(hass, entry, device, description)
@@ -366,7 +367,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         return self._device.get(self.entity_description.key, "0") == "1"
 
     async def async_turn_on(self, **kwargs: Any) -> None:
-        setting = self._device.settings[self.entity_description.key]
+        setting = self._device.settings[f"settings.{self.entity_description.key}"]
         if type(setting) == HonParameter:
             return
         setting.value = setting.max if isinstance(setting, HonParameterRange) else "1"
@@ -375,7 +376,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         await self.coordinator.async_refresh()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
-        setting = self._device.settings[self.entity_description.key]
+        setting = self._device.settings[f"settings.{self.entity_description.key}"]
         if type(setting) == HonParameter:
             return
         setting.value = setting.min if isinstance(setting, HonParameterRange) else "0"
@@ -431,9 +432,9 @@ class HonConfigSwitchEntity(HonEntity, SwitchEntity):
         """Return True if entity is on."""
         setting = self._device.settings[self.entity_description.key]
         return (
-            setting.value == "1"
-            or hasattr(setting, "min")
-            and setting.value != setting.min
+            setting.value != setting.min
+            if hasattr(setting, "min")
+            else setting.value == "1"
         )
 
     async def async_turn_on(self, **kwargs: Any) -> None:

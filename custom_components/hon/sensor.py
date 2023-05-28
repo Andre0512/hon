@@ -543,7 +543,6 @@ class HonConfigSensorEntity(HonEntity, SensorEntity):
         value = self._device.settings.get(self.entity_description.key, None)
         if self.entity_description.state_class is not None:
             if value and value.value:
-                print(value.value, type(value.value))
                 self._attr_native_value = (
                     float(value.value) if "." in str(value.value) else int(value.value)
                 )

@@ -84,6 +84,7 @@ Support has been confirmed for these models, but many more will work. Please add
 - Hoover HFB 6B2S3FX
 - Hoover HLE C10DCE-80
 - Hoover HSOT3161WG
+- Hoover HW 68AMC/1-80
 - Hoover HWPD 69AMBC/1-S
 - Hoover HWPS4954DAMR-11
 - Hoover NDE H10A2TCE-80
@@ -155,18 +156,18 @@ For every device exists a hidden button which can be used to log all infos of yo
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| 10° Heating | `heat-wave` | `switch` | `settings.10degreeHeatingStatus` |
+| 10° Heating | `heat-wave` | `switch` | `10degreeHeatingStatus` |
 | Air Conditioner | `air-conditioner` | `climate` | `settings` |
-| Echo | `account-voice` | `switch` | `settings.echoStatus` |
-| Eco Mode |  | `switch` | `settings.ecoMode` |
+| Echo | `account-voice` | `switch` | `echoStatus` |
+| Eco Mode |  | `switch` | `ecoMode` |
 | Eco Pilot | `run` | `select` | `settings.humanSensingStatus` |
-| Health Mode | `medication-outline` | `switch` | `settings.healthMode` |
-| Mute | `volume-off` | `switch` | `settings.muteStatus` |
-| Rapid Mode | `run-fast` | `switch` | `settings.rapidMode` |
-| Screen Display | `monitor-small` | `switch` | `settings.screenDisplayStatus` |
-| Self Cleaning | `air-filter` | `switch` | `settings.selfCleaningStatus` |
-| Self Cleaning 56 | `air-filter` | `switch` | `settings.selfCleaning56Status` |
-| Silent Sleep | `bed` | `switch` | `settings.silentSleepStatus` |
+| Health Mode | `medication-outline` | `switch` | `healthMode` |
+| Mute | `volume-off` | `switch` | `muteStatus` |
+| Rapid Mode | `run-fast` | `switch` | `rapidMode` |
+| Screen Display | `monitor-small` | `switch` | `screenDisplayStatus` |
+| Self Cleaning | `air-filter` | `switch` | `selfCleaningStatus` |
+| Self Cleaning 56 | `air-filter` | `switch` | `selfCleaning56Status` |
+| Silent Sleep | `bed` | `switch` | `silentSleepStatus` |
 | Target Temperature | `thermometer` | `number` | `settings.tempSel` |
 #### Sensors
 | Name | Icon | Entity | Key |
@@ -187,7 +188,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Buzzer Disabled | `volume-off` | `switch` | `settings.buzzerDisabled` |
+| Buzzer Disabled | `volume-off` | `switch` | `buzzerDisabled` |
 | Dish Washer | `dishwasher` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
 | Name | Icon | Entity | Key |
@@ -272,14 +273,16 @@ For every device exists a hidden button which can be used to log all infos of yo
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Auto-Set Mode | `thermometer-auto` | `switch` | `settings.intelligenceMode` |
+| Auto-Set Mode | `thermometer-auto` | `switch` | `intelligenceMode` |
+| Freezer | `snowflake-thermometer` | `climate` | `settings.tempSelZ2` |
 | Freezer Temperature | `thermometer` | `number` | `settings.tempSelZ2` |
+| Fridge | `thermometer` | `climate` | `settings.tempSelZ1` |
 | Fridge Temperature | `thermometer` | `number` | `settings.tempSelZ1` |
-| Holiday Mode | `palm-tree` | `switch` | `settings.holidayMode` |
+| Holiday Mode | `palm-tree` | `switch` | `holidayMode` |
 | Program Start | `play` | `button` | `startProgram` |
 | Program Stop | `stop` | `button` | `stopProgram` |
-| Super Cool | `snowflake` | `switch` | `settings.quickModeZ2` |
-| Super Freeze | `snowflake-variant` | `switch` | `settings.quickModeZ1` |
+| Super Cool | `snowflake` | `switch` | `quickModeZ2` |
+| Super Freeze | `snowflake-variant` | `switch` | `quickModeZ1` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |

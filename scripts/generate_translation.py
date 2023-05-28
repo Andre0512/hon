@@ -44,6 +44,30 @@ PROGRAMS = {
     },
 }
 
+CLIMATE = {
+    "fridge": {
+        "preset_mode": {
+            "name": "REF_CMD&CTRL.MODE_SELECTION_DRAWER_FRIDGE.FRIDGE_MODE_TITLE",
+            "state": {
+                "auto_set": "REF_CMD&CTRL.MODALITIES.ECO",
+                "super_cool": "REF_CMD&CTRL.MODALITIES.SUPER_COOL",
+                "holiday": "REF_CMD&CTRL.MODALITIES.BACK_FROM_HOLIDAY",
+                "no_mode": "REF_CMD&CTRL.MODALITIES.NO_MODE_SELECTED",
+            },
+        }
+    },
+    "freezer": {
+        "preset_mode": {
+            "name": "REF_CMD&CTRL.MODE_SELECTION_DRAWER_FREEZER.FREEZER_MODE_TITLE",
+            "state": {
+                "auto_set": "REF_CMD&CTRL.MODALITIES.ECO",
+                "super_freeze": "REF_CMD&CTRL.MODALITIES.SHOCK_FREEZE",
+                "no_mode": "REF_CMD&CTRL.MODALITIES.NO_MODE_SELECTED",
+            },
+        }
+    },
+}
+
 NAMES = {
     "switch": {
         "anti_crease": "HDRY_CMD&CTRL.PROGRAM_CYCLE_DETAIL.ANTICREASE_TITLE",
@@ -197,7 +221,11 @@ NAMES = {
         "freezer_temp_sel": ["OV.COMMON.GOAL_TEMPERATURE", "REF.ZONES.FREEZER"],
         "fridge_temp_sel": ["OV.COMMON.GOAL_TEMPERATURE", "REF.ZONES.FRIDGE"],
     },
-    "climate": {"air_conditioner": "GLOBALS.APPLIANCES_NAME.AC"},
+    "climate": {
+        "air_conditioner": "GLOBALS.APPLIANCES_NAME.AC",
+        "fridge": "REF.ZONES.FRIDGE",
+        "freezer": "REF.ZONES.FREEZER",
+    },
 }
 
 
@@ -298,6 +326,15 @@ def main():
             for name, key in data.items():
                 select = old.setdefault("entity", {}).setdefault(entity, {})
                 select.setdefault(name, {})["name"] = load_key(key, original, fallback)
+        for name, modes in CLIMATE.items():
+            climate = old.setdefault("entity", {}).setdefault("climate", {})
+            attr = climate.setdefault(name, {}).setdefault("state_attributes", {})
+            for mode, data in modes.items():
+                mode_name = load_key(data["name"], original, fallback)
+                attr.setdefault(mode, {})["name"] = mode_name
+                for state, key in data["state"].items():
+                    mode_state = load_key(key, original, fallback)
+                    attr[mode].setdefault("state", {})[state] = mode_state
         translate_login(old, original, fallback)
         save_json(base_path / f"{language}.json", old)
 
