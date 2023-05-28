@@ -66,6 +66,12 @@ CLIMATE = {
             },
         }
     },
+    "oven": {
+        "preset_mode": {
+            "name": "OV.TABS.PROGRAMS_TITLE",
+            "state": "PROGRAMS.OV",
+        }
+    },
 }
 
 NAMES = {
@@ -225,6 +231,7 @@ NAMES = {
         "air_conditioner": "GLOBALS.APPLIANCES_NAME.AC",
         "fridge": "REF.ZONES.FRIDGE",
         "freezer": "REF.ZONES.FREEZER",
+        "oven": "GLOBALS.APPLIANCES_NAME.OV",
     },
 }
 
@@ -332,9 +339,13 @@ def main():
             for mode, data in modes.items():
                 mode_name = load_key(data["name"], original, fallback)
                 attr.setdefault(mode, {})["name"] = mode_name
-                for state, key in data["state"].items():
-                    mode_state = load_key(key, original, fallback)
-                    attr[mode].setdefault("state", {})[state] = mode_state
+                if isinstance(data["state"], dict):
+                    for state, key in data["state"].items():
+                        mode_state = load_key(key, original, fallback)
+                        attr[mode].setdefault("state", {})[state] = mode_state
+                else:
+                    attr[mode]["state"] = load_keys(data["state"], original)
+
         translate_login(old, original, fallback)
         save_json(base_path / f"{language}.json", old)
 

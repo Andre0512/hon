@@ -1421,6 +1421,68 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Oven",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programs",
+                        "state": {
+                            "bakery": "Pasta and Bakery",
+                            "bakery_steam": "Steam oven",
+                            "bottom_heating": "Bottom Heating",
+                            "bottom_heating_fan": "Bottom Heating + Fan",
+                            "bread": "Bread",
+                            "bread_steam": "Steam baked bread",
+                            "combi": "Combi",
+                            "convection_fan": "Convection + Fan",
+                            "convection_fan_turnspit": "Convection + Fan + Turnspit",
+                            "conventional": "Conventional",
+                            "conventional_turnspit": "Convection + Turnspit",
+                            "defrost": "Defrosting",
+                            "descaling": "Descaling",
+                            "fish": "Fish",
+                            "fish_steam": "Steamed fish",
+                            "grill_cata": "Grill",
+                            "grill_fan_cata": "Grill fan",
+                            "grill_fan_pyro": "Grill + Fan",
+                            "grill_pyro": "Grill",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Bread",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Leavening",
+                            "light_fan\n": "Light Fan",
+                            "low_temp_cooking": "Low Temperature Cooking",
+                            "low_temp_cooking_fish": "Low Temperature Cooking - Fish",
+                            "low_temp_cooking_fish_steam": "Low Temperature Cooking - Steamed fish",
+                            "low_temp_cooking_meat": "Low Temperature Cooking - Meat",
+                            "low_temp_cooking_meat_steam": "Low Temperature Cooking - Steamed meat",
+                            "low_temp_cooking_steam": "Low Temperature Steam Cooking",
+                            "meat": "Meat",
+                            "meat_steam": "Steamed meat",
+                            "multi_level": "Multi-Level",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Pasta and Bakery",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Pyrolysis",
+                            "pyrolysis_plus": "Pyrolysis +",
+                            "red_meat": "Red Meat",
+                            "red_meat_steam": "Steamed red meat",
+                            "regenerate": "Regenerate",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super Grill",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Vegetables",
+                            "vegetables_cata": "Vegetables",
+                            "vegetables_pyro": "Vegetables",
+                            "water_discharge": "Water Discharge",
+                            "white_meat": "White Meat",
+                            "white_meat_steam": "Steamed white meat"
+                        }
+                    }
+                }
             }
         }
     }

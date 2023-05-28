@@ -1357,6 +1357,67 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Horno",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programas",
+                        "state": {
+                            "bakery": "Pasta y Panadería",
+                            "bakery_steam": "Oven steam",
+                            "bottom_heating": "Calentamiento Inferior",
+                            "bottom_heating_fan": "Calentamiento Inferior + Ventilador",
+                            "bread": "Pan",
+                            "bread_steam": "Pan al vapor",
+                            "combi": "Combi",
+                            "convection_fan": "Convección + Ventilador",
+                            "convection_fan_turnspit": "Asador giratorio convencional ventilada",
+                            "conventional": "Convección",
+                            "conventional_turnspit": "Asador giratorio convencional",
+                            "defrost": "Descongelación",
+                            "descaling": "Descalcificación",
+                            "fish": "Pescado",
+                            "fish_steam": "Pescado al vapor",
+                            "grill_cata": "Grill",
+                            "grill_fan_cata": "Grill y ventilador",
+                            "grill_fan_pyro": "Grill + Ventilador",
+                            "grill_pyro": "Grill",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Pan",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Fermentación",
+                            "low_temp_cooking": "Cocción a baja temperatura",
+                            "low_temp_cooking_fish": "Cocción a baja temperatura Pescado",
+                            "low_temp_cooking_fish_steam": "Cocción a baja temperatura Pescado",
+                            "low_temp_cooking_meat": "Cocción a baja temperatura Carne",
+                            "low_temp_cooking_meat_steam": "Cocción a baja temperatura Carne al vapor",
+                            "low_temp_cooking_steam": "Cocción a baja temperatura al vapor",
+                            "meat": "Carne",
+                            "meat_steam": "Meat steam",
+                            "multi_level": "Múltiples niveles",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Pasta y Panadería",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Pirólisis",
+                            "pyrolysis_plus": "Pirólisis +",
+                            "red_meat": "Carne roja",
+                            "red_meat_steam": "Carne roja al vapor",
+                            "regenerate": "Regenerar",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super Grill",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Verduras",
+                            "vegetables_cata": "Verduras",
+                            "vegetables_pyro": "Verdura",
+                            "water_discharge": "Descarga de agua",
+                            "white_meat": "Carne blanca",
+                            "white_meat_steam": "Carne blanca al vapor"
+                        }
+                    }
+                }
             }
         }
     },

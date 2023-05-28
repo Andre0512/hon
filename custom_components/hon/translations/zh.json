@@ -1357,6 +1357,67 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "烤炉",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "程序",
+                        "state": {
+                            "bakery": "意大利面和烘焙食品",
+                            "bakery_steam": "烤炉蒸汽",
+                            "bottom_heating": "底部加热 ",
+                            "bottom_heating_fan": "底部加热 + 风扇",
+                            "bread": "面包",
+                            "bread_steam": "蒸烤的面包",
+                            "combi": "Combi",
+                            "convection_fan": "对流 + 风扇",
+                            "convection_fan_turnspit": "对流 + 风扇 + 烤叉",
+                            "conventional": "对流",
+                            "conventional_turnspit": "对流 + 烤叉",
+                            "defrost": "解冻",
+                            "descaling": "除垢",
+                            "fish": "鱼",
+                            "fish_steam": "蒸鱼",
+                            "grill_cata": "烤架",
+                            "grill_fan_cata": "烤架风扇",
+                            "grill_fan_pyro": "烤架 + 风扇",
+                            "grill_pyro": "烤架",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "面包",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "发酵",
+                            "low_temp_cooking": "低温烹饪",
+                            "low_temp_cooking_fish": "低温烹饪 - 鱼类",
+                            "low_temp_cooking_fish_steam": "低温烹饪 - 蒸鱼",
+                            "low_temp_cooking_meat": "低温烹饪 - 肉类",
+                            "low_temp_cooking_meat_steam": "低温烹饪 - 蒸肉",
+                            "low_temp_cooking_steam": "低温蒸汽烹饪",
+                            "meat": "肉",
+                            "meat_steam": "肉类蒸汽",
+                            "multi_level": "多层",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "意大利面和烘焙食品",
+                            "pizza": "Pizza",
+                            "pyrolysis": "热解",
+                            "pyrolysis_plus": "热解 +",
+                            "red_meat": "红肉",
+                            "red_meat_steam": "蒸红肉",
+                            "regenerate": "再加热",
+                            "soft_plus": "软+",
+                            "super_grill": "超级烤架",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "蔬菜",
+                            "vegetables_cata": "蔬菜",
+                            "vegetables_pyro": "蔬菜",
+                            "water_discharge": "排水",
+                            "white_meat": "白肉",
+                            "white_meat_steam": "蒸白肉"
+                        }
+                    }
+                }
             }
         }
     },

@@ -251,6 +251,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Oven | `toaster-oven` | `switch` | `startProgram` / `stopProgram` |
+| Oven | `thermometer` | `climate` | `settings.tempSel` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |

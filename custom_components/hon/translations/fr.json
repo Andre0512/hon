@@ -1357,6 +1357,67 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Four",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programmes",
+                        "state": {
+                            "bakery": "Pâtes et pains",
+                            "bakery_steam": "Four à vapeur",
+                            "bottom_heating": "Sole",
+                            "bottom_heating_fan": "Sole brassée",
+                            "bread": "Pain",
+                            "bread_steam": "Pain àla vapeur",
+                            "combi": "Combi",
+                            "convection_fan": "Chaleur tournante",
+                            "convection_fan_turnspit": "Tournebrocheà convection ventilée",
+                            "conventional": "Convection naturelle",
+                            "conventional_turnspit": "Tournebroche conventionnel",
+                            "defrost": "Décongélation",
+                            "descaling": "Détartrage",
+                            "fish": "Poisson",
+                            "fish_steam": "Poisson à la vapeur",
+                            "grill_cata": "Gril",
+                            "grill_fan_cata": "Turbogril",
+                            "grill_fan_pyro": "Turbogril",
+                            "grill_pyro": "Gril",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Pain",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Étuve",
+                            "low_temp_cooking": "Cuisson à basse température",
+                            "low_temp_cooking_fish": "Cuisson à basse température Poisson",
+                            "low_temp_cooking_fish_steam": "Cuisson à basse température Poisson à la vapeur",
+                            "low_temp_cooking_meat": "Cuisson à basse température Viande",
+                            "low_temp_cooking_meat_steam": "Cuisson à basse température Viande à la vapeur",
+                            "low_temp_cooking_steam": "Cuisson à basse température à la vapeur",
+                            "meat": "Viande",
+                            "meat_steam": "Viande à la vapeur",
+                            "multi_level": "Chaleur pulsée",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Pâtes et pains",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Pyrolyse",
+                            "pyrolysis_plus": "Pyrolyse +",
+                            "red_meat": "Viande rouge",
+                            "red_meat_steam": "Viande rouge à la vapeur",
+                            "regenerate": "Régénérer",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super Gril",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Légumes",
+                            "vegetables_cata": "Légumes",
+                            "vegetables_pyro": "Légumes",
+                            "water_discharge": "Décharge d'eau",
+                            "white_meat": "Viande blanche",
+                            "white_meat_steam": "Viande blanche à la vapeur"
+                        }
+                    }
+                }
             }
         }
     },

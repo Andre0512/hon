@@ -1357,6 +1357,67 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Φούρνος",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Προγράμματα",
+                        "state": {
+                            "bakery": "Ζυμαρικά και αρτοποιήματα",
+                            "bakery_steam": "Ατμός φούρνου",
+                            "bottom_heating": "Κάτω στοιχείο",
+                            "bottom_heating_fan": "Κάτω στοιχείο + ανεμιστήρας",
+                            "bread": "Ψωμί",
+                            "bread_steam": "Ψωμί ατμού",
+                            "combi": "Combi",
+                            "convection_fan": "Θερμοσ αερασ",
+                            "convection_fan_turnspit": "Θερμός αέρας + Ανεμιστήρας + Σούβλα",
+                            "conventional": "Ανω - κατω θερμανση",
+                            "conventional_turnspit": "Θερμός αέρας + Σούβλα",
+                            "defrost": "Απόψυξη",
+                            "descaling": "Αφαλάτωση",
+                            "fish": "Ψάρια",
+                            "fish_steam": "Ψάρια στον ατμό",
+                            "grill_cata": "Γκριλ",
+                            "grill_fan_cata": "Ανεμιστήρας γκριλ",
+                            "grill_fan_pyro": "Γκριλ + ανεμιστήρας",
+                            "grill_pyro": "Γκριλ",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Ψωμί",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Ζυμωση",
+                            "low_temp_cooking": "Μαγείρεμα σε χαμηλή θερμοκρασία",
+                            "low_temp_cooking_fish": "Μαγείρεμα σε χαμηλή θερμοκρασία - Ψάρι",
+                            "low_temp_cooking_fish_steam": "Μαγείρεμα σε χαμηλή θερμοκρασία - Ψάρια στον ατμό",
+                            "low_temp_cooking_meat": "Μαγείρεμα σε χαμηλή θερμοκρασία - Κρέας",
+                            "low_temp_cooking_meat_steam": "Μαγείρεμα σε χαμηλή θερμοκρασία - Κρέας στον ατμό",
+                            "low_temp_cooking_steam": "Μαγείρεμα με ατμό σε χαμηλή θερμοκρασία",
+                            "meat": "Κρέας",
+                            "meat_steam": "Κρέας στον ατμό",
+                            "multi_level": "Πολλαπλων Επιπεδων",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Ζυμαρικά και αρτοποιήματα",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Πυρόλυση",
+                            "pyrolysis_plus": "Πυρόλυση +",
+                            "red_meat": "Κόκκινο κρέας",
+                            "red_meat_steam": "Κόκκινο κρέας στον ατμό",
+                            "regenerate": "Αναζωογόνηση",
+                            "soft_plus": "Μαλακό +",
+                            "super_grill": "Σούπερ γκριλ",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Λαχανικά",
+                            "vegetables_cata": "Λαχανικά",
+                            "vegetables_pyro": "Λαχανικά",
+                            "water_discharge": "Απόρριψη νερού",
+                            "white_meat": "Λευκό κρέας",
+                            "white_meat_steam": "Λευκό κρέας στον ατμό"
+                        }
+                    }
+                }
             }
         }
     },

@@ -1357,6 +1357,67 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Cuptor",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programe",
+                        "state": {
+                            "bakery": "Paste și produse de patiserie",
+                            "bakery_steam": "În cuptor la abur",
+                            "bottom_heating": "Încălzire de jos",
+                            "bottom_heating_fan": "Încălzire De Jos + Ventilație",
+                            "bread": "Pâine",
+                            "bread_steam": "Pâine gătită la abur",
+                            "combi": "Combi",
+                            "convection_fan": "Convecție și ventilație",
+                            "convection_fan_turnspit": "Convecție + Ventilator + Rotisor",
+                            "conventional": "Convențional",
+                            "conventional_turnspit": "Convecție + Rotisor",
+                            "defrost": "Decongelare",
+                            "descaling": "Îndepărtarea calcarului",
+                            "fish": "Pește",
+                            "fish_steam": "Pește gătit la abur",
+                            "grill_cata": "Gril",
+                            "grill_fan_cata": "Grill + Ventilație",
+                            "grill_fan_pyro": "Grill + Ventilație",
+                            "grill_pyro": "Grill",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Pâine",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Dospire",
+                            "low_temp_cooking": "Gătire la temperatură scăzută",
+                            "low_temp_cooking_fish": "Gătire la temperatură scăzută - Pește",
+                            "low_temp_cooking_fish_steam": "Gătitul la temperaturi scăzute - Pește gătit la abur",
+                            "low_temp_cooking_meat": "Gătire la temperatură scăzută - Carne",
+                            "low_temp_cooking_meat_steam": "Gătitul la temperaturi scăzute - Carne gătită la abur",
+                            "low_temp_cooking_steam": "Gătitul la abur la temperaturi scăzute",
+                            "meat": "Carne",
+                            "meat_steam": "Carne gătită la abur",
+                            "multi_level": "Multi-Nivel",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Paste și patiserie",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Piroliză",
+                            "pyrolysis_plus": "Piroliză+",
+                            "red_meat": "Carne roșie",
+                            "red_meat_steam": "Carne roșie gătită la abur",
+                            "regenerate": "Regenerare",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super Grill",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Legume",
+                            "vegetables_cata": "Legume",
+                            "vegetables_pyro": "Legume",
+                            "water_discharge": "Evacuare apă",
+                            "white_meat": "Carne albă",
+                            "white_meat_steam": "Carne albă gătită la abur"
+                        }
+                    }
+                }
             }
         }
     },

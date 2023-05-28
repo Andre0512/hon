@@ -1357,6 +1357,67 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Rúra na pečenie",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programy",
+                        "state": {
+                            "bakery": "Cestoviny a pečenie",
+                            "bakery_steam": "Parná rúra",
+                            "bottom_heating": "Spodný ohrev",
+                            "bottom_heating_fan": "Spodný ohrev + Ventilátor",
+                            "bread": "Chlieb",
+                            "bread_steam": "Chlieb pečený v pare",
+                            "combi": "Combi",
+                            "convection_fan": "Statický + ventilátor",
+                            "convection_fan_turnspit": "Statické + ventilátor + otočný ražeň",
+                            "conventional": "Statický",
+                            "conventional_turnspit": "Statické + otočný ražeň",
+                            "defrost": "Rozmraziť",
+                            "descaling": "Odstránenie vodného kameňa",
+                            "fish": "Ryby",
+                            "fish_steam": "Ryby pripravené v pare",
+                            "grill_cata": "Gril",
+                            "grill_fan_cata": "Gril + ventilátor",
+                            "grill_fan_pyro": "Gril + ventilátor",
+                            "grill_pyro": "Gril",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Chlieb",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Kysnutie",
+                            "low_temp_cooking": "Varenie pri nízkych teplotách",
+                            "low_temp_cooking_fish": "Varenie pri nízkych teplotách – Ryby",
+                            "low_temp_cooking_fish_steam": "Varenie pri nízkych teplotách – ryby pripravené v pare",
+                            "low_temp_cooking_meat": "Varenie pri nízkych teplotách – Mäso",
+                            "low_temp_cooking_meat_steam": "Varenie pri nízkych teplotách - mäso dusené v pare",
+                            "low_temp_cooking_steam": "Varenie pri nízkych teplotách v pare",
+                            "meat": "Mäso",
+                            "meat_steam": "Mäso v pare",
+                            "multi_level": "Viacúrovňové",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Cestoviny a pečenie",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Pyrolýza",
+                            "pyrolysis_plus": "Pyrolýza +",
+                            "red_meat": "Červené mäso",
+                            "red_meat_steam": "Červené mäso dusené v pare",
+                            "regenerate": "Regenerovať",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super Gril",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Zelenina",
+                            "vegetables_cata": "Zelenina",
+                            "vegetables_pyro": "Zelenina",
+                            "water_discharge": "Vypúšťanie vody",
+                            "white_meat": "Biele mäso",
+                            "white_meat_steam": "Biele mäso pripravené v pare"
+                        }
+                    }
+                }
             }
         }
     },

@@ -805,6 +805,19 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Oven",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programs",
+                        "state": {
+                            "iot_h20_clean": "h2O clean",
+                            "pizza": "Pizza",
+                            "tailor_bake": "Tailor bake"
+                        }
+                    }
+                }
             }
         }
     },

@@ -1357,6 +1357,67 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Ofen",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programme",
+                        "state": {
+                            "bakery": "Teigwaren und Brot",
+                            "bakery_steam": "Dampf im Backofen",
+                            "bottom_heating": "Unterhitze",
+                            "bottom_heating_fan": "Unterhitze + Umluft",
+                            "bread": "Brot",
+                            "bread_steam": "Mit Dampf gebackenes Brot",
+                            "combi": "Combi",
+                            "convection_fan": "Umluft",
+                            "convection_fan_turnspit": "Heißluft + Drehspieß",
+                            "conventional": "Ober-Unterhitze",
+                            "conventional_turnspit": "Ober-&Unterhitze + Bratspieß",
+                            "defrost": "Auftauen",
+                            "descaling": "Entkalkung",
+                            "fish": "Fisch",
+                            "fish_steam": "Gedünsteter Fisch",
+                            "grill_cata": "Grill",
+                            "grill_fan_cata": "Grill Umluft",
+                            "grill_fan_pyro": "Grill + Umluft",
+                            "grill_pyro": "Grill",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Brot",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Aufgehen",
+                            "low_temp_cooking": "Garen bei niedriger Temperatur",
+                            "low_temp_cooking_fish": "Garen bei niedriger Temperatur - Fisch",
+                            "low_temp_cooking_fish_steam": "Niedertemperaturgaren - Gedünsteter Fisch",
+                            "low_temp_cooking_meat": "Garen bei niedriger Temperatur - Fleisch",
+                            "low_temp_cooking_meat_steam": "Niedertemperaturgaren - Gedämpftes Fleisch",
+                            "low_temp_cooking_steam": "Niedertemperatur-Dampfgaren",
+                            "meat": "Fleisch",
+                            "meat_steam": "Fleisch Dampf",
+                            "multi_level": "Multi-Level",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Teigwaren und Brot",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Pyrolyse",
+                            "pyrolysis_plus": "Pyrolyse +",
+                            "red_meat": "Rotes Fleisch",
+                            "red_meat_steam": "Gedünstetes rotes Fleisch",
+                            "regenerate": "Regenerieren",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super Grill",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Gemüse",
+                            "vegetables_cata": "Gemüse",
+                            "vegetables_pyro": "Gemüse",
+                            "water_discharge": "Wasserabfluss",
+                            "white_meat": "Weißes Fleisch",
+                            "white_meat_steam": "Gedämpftes weißes Fleisch"
+                        }
+                    }
+                }
             }
         }
     },

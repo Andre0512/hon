@@ -1,6 +1,8 @@
 import logging
 from dataclasses import dataclass
 
+from pyhon.appliance import HonAppliance
+
 from homeassistant.components.climate import (
     ClimateEntity,
     ClimateEntityDescription,
@@ -17,13 +19,9 @@ from homeassistant.components.climate.const import (
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (
     ATTR_TEMPERATURE,
-    PRECISION_WHOLE,
     TEMP_CELSIUS,
 )
 from homeassistant.core import callback
-from pyhon import helper
-from pyhon.appliance import HonAppliance
-
 from .const import HON_HVAC_MODE, HON_FAN, HON_HVAC_PROGRAM, DOMAIN
 from .hon import HonEntity
 
@@ -36,8 +34,8 @@ class HonACClimateEntityDescription(ClimateEntityDescription):
 
 
 @dataclass
-class HonREFClimateEntityDescription(ClimateEntityDescription):
-    pass
+class HonClimateEntityDescription(ClimateEntityDescription):
+    mode: HVACMode = "auto"
 
 
 CLIMATES = {
@@ -50,17 +48,28 @@ CLIMATES = {
         ),
     ),
     "REF": (
-        HonREFClimateEntityDescription(
+        HonClimateEntityDescription(
             key="settings.tempSelZ1",
+            mode=HVACMode.COOL,
             name="Fridge",
             icon="mdi:thermometer",
             translation_key="fridge",
         ),
-        HonREFClimateEntityDescription(
+        HonClimateEntityDescription(
             key="settings.tempSelZ2",
+            mode=HVACMode.COOL,
             name="Freezer",
             icon="mdi:snowflake-thermometer",
             translation_key="freezer",
+        ),
+    ),
+    "OV": (
+        HonClimateEntityDescription(
+            key="settings.tempSel",
+            mode=HVACMode.HEAT,
+            name="Oven",
+            icon="mdi:thermometer",
+            translation_key="oven",
         ),
     ),
 }
@@ -74,10 +83,10 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
                 if description.key not in list(device.commands):
                     continue
                 entity = HonACClimateEntity(hass, entry, device, description)
-            elif isinstance(description, HonREFClimateEntityDescription):
+            elif isinstance(description, HonClimateEntityDescription):
                 if description.key not in device.available_settings:
                     continue
-                entity = HonREFClimateEntity(hass, entry, device, description)
+                entity = HonClimateEntity(hass, entry, device, description)
             else:
                 continue
             await entity.coordinator.async_config_entry_first_refresh()
@@ -90,7 +99,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         super().__init__(hass, entry, device, description)
 
         self._attr_temperature_unit = TEMP_CELSIUS
-        self._attr_target_temperature_step = PRECISION_WHOLE
+        self._attr_target_temperature_step = device.settings["settings.tempSel"].step
         self._attr_max_temp = device.settings["settings.tempSel"].max
         self._attr_min_temp = device.settings["settings.tempSel"].min
 
@@ -114,11 +123,14 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
 
         self._handle_coordinator_update(update=False)
 
-    async def async_set_hvac_mode(self, hvac_mode):
+    @property
+    def hvac_mode(self) -> HVACMode | str | None:
         if self._device.get("onOffStatus") == "0":
-            self._attr_hvac_mode = HVACMode.OFF
+            return HVACMode.OFF
         else:
-            self._attr_hvac_mode = HON_HVAC_MODE[self._device.get("machMode")]
+            return HON_HVAC_MODE[self._device.get("machMode")]
+
+    async def async_set_hvac_mode(self, hvac_mode):
         if hvac_mode == HVACMode.OFF:
             await self._device.commands["stopProgram"].send()
         else:
@@ -185,28 +197,37 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
             self.async_write_ha_state()
 
 
-class HonREFClimateEntity(HonEntity, ClimateEntity):
+class HonClimateEntity(HonEntity, ClimateEntity):
+    entity_description = HonClimateEntityDescription
+
     def __init__(self, hass, entry, device: HonAppliance, description) -> None:
         super().__init__(hass, entry, device, description)
 
         self._attr_temperature_unit = TEMP_CELSIUS
-        self._attr_target_temperature_step = PRECISION_WHOLE
-        self._attr_max_temp = device.settings[description.key].max
-        self._attr_min_temp = device.settings[description.key].min
+        self._set_temperature_bound()
 
-        self._attr_hvac_modes = [HVACMode.COOL]
         self._attr_supported_features = (
             ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.PRESET_MODE
         )
 
-        self._handle_coordinator_update(update=False)
+        self._attr_hvac_modes = [description.mode]
+        if device.get("onOffStatus"):
+            self._attr_hvac_modes += [HVACMode.OFF]
+            modes = []
+        else:
+            modes = ["no_mode"]
 
-        modes = ["no_mode"]
         for mode, data in device.commands["startProgram"].categories.items():
+            if mode not in data.parameters["program"].values:
+                continue
             if zone := data.parameters.get("zone"):
                 if self.entity_description.name.lower() in zone.values:
                     modes.append(mode)
+            else:
+                modes.append(mode)
         self._attr_preset_modes = modes
+
+        self._handle_coordinator_update(update=False)
 
     @property
     def target_temperature(self) -> int | None:
@@ -227,34 +248,58 @@ class HonREFClimateEntity(HonEntity, ClimateEntity):
         self.async_write_ha_state()
 
     @property
+    def hvac_mode(self) -> HVACMode | str | None:
+        if self._device.get("onOffStatus") == "0":
+            return HVACMode.OFF
+        else:
+            return self.entity_description.mode
+
+    async def async_set_hvac_mode(self, hvac_mode):
+        if len(self.hvac_modes) <= 1:
+            return
+        if hvac_mode == HVACMode.OFF:
+            await self._device.commands["stopProgram"].send()
+        else:
+            await self._device.commands["startProgram"].send()
+        self._attr_hvac_mode = hvac_mode
+        self.async_write_ha_state()
+
+    @property
     def preset_mode(self) -> str | None:
         """Return the current Preset for this channel."""
-        return self._device.get(f"mode{self.entity_description.key[-2:]}", "no_mode")
+        if self._device.get("onOffStatus") is not None:
+            return self._device.get("programName", "")
+        else:
+            return self._device.get(
+                f"mode{self.entity_description.key[-2:]}", "no_mode"
+            )
 
     async def async_set_preset_mode(self, preset_mode: str) -> None:
         """Set the new preset mode."""
-        if preset_mode == "no_mode":
-            self._device.sync_command("stopProgram", "settings")
-            await self.coordinator.async_refresh()
-            await self._device.commands["stopProgram"].send()
-        else:
-            self._device.settings["startProgram.program"].value = preset_mode
-            self._device.settings[
-                "startProgram.zone"
-            ].value = self.entity_description.name.lower()
-            self._device.sync_command("startProgram", "settings")
-            await self.coordinator.async_refresh()
-            await self._device.commands["startProgram"].send()
+        command = "stopProgram" if preset_mode == "no_mode" else "startProgram"
+        if program := self._device.settings.get(f"{command}.program"):
+            program.value = preset_mode
+        if zone := self._device.settings.get(f"{command}.zone"):
+            zone.value = self.entity_description.name.lower()
+        self._device.sync_command(command, "settings")
+        self._set_temperature_bound()
+        await self.coordinator.async_refresh()
+        await self._device.commands[command].send()
+        self._attr_preset_mode = preset_mode
         self.async_write_ha_state()
+
+    def _set_temperature_bound(self):
+        self._attr_target_temperature_step = self._device.settings[
+            self.entity_description.key
+        ].step
+        self._attr_max_temp = self._device.settings[self.entity_description.key].max
+        self._attr_min_temp = self._device.settings[self.entity_description.key].min
 
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
-        self._attr_target_temperature = int(
-            float(self._device.get(self.entity_description.key))
-        )
-        temp_key = self.entity_description.key.split(".")[-1].replace("Sel", "")
-        self._attr_current_temperature = int(self._device.get(temp_key))
-
-        self._attr_hvac_mode = HVACMode.COOL
+        self._attr_target_temperature = self.target_temperature
+        self._attr_current_temperature = self.current_temperature
+        self._attr_hvac_mode = self.hvac_mode
+        self._attr_preset_mode = self.preset_mode
         if update:
             self.async_write_ha_state()

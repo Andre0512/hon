@@ -1357,6 +1357,67 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Pečica",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programi",
+                        "state": {
+                            "bakery": "Testenine in pekovski izdelki",
+                            "bakery_steam": "Parna pečica",
+                            "bottom_heating": "Spodnji grelnik",
+                            "bottom_heating_fan": "Spodnji grelnik + Ventilator",
+                            "bread": "Kruh",
+                            "bread_steam": "V sopari pečen kruh",
+                            "combi": "Kombinirano",
+                            "convection_fan": "Konvekcija + ventilator",
+                            "convection_fan_turnspit": "Konvekcija + ventilator + raženj",
+                            "conventional": "Konvenkcijsko",
+                            "conventional_turnspit": "Konvekcija + raženj",
+                            "defrost": "Odmrzovanje",
+                            "descaling": "Odstranjevanje vodnega kamna",
+                            "fish": "Ribe",
+                            "fish_steam": "Soparjene ribe",
+                            "grill_cata": "Žar",
+                            "grill_fan_cata": "Žar in ventilator",
+                            "grill_fan_pyro": "Žar + ventilator",
+                            "grill_pyro": "Žar",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Kruh",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Vzhajanje",
+                            "low_temp_cooking": "Kuhanje pri nizki temperaturi",
+                            "low_temp_cooking_fish": "Kuhanje pri nizki temperaturi – ribe",
+                            "low_temp_cooking_fish_steam": "Kuhanje pri nizki temperaturi – soparjene ribe",
+                            "low_temp_cooking_meat": "Kuhanje pri nizki temperaturi – meso",
+                            "low_temp_cooking_meat_steam": "Kuhanje pri nizki temperaturi – soparjeno meso",
+                            "low_temp_cooking_steam": "Soparjenje pri nizki temperaturi",
+                            "meat": "Meso",
+                            "meat_steam": "Soparjenje mesa",
+                            "multi_level": "Na več nivojih",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Testenine in pekovski izdelki",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Piroliza",
+                            "pyrolysis_plus": "Piroliza +",
+                            "red_meat": "Rdeče meso",
+                            "red_meat_steam": "Soparjeno rdeče meso",
+                            "regenerate": "Regeneracija",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super Grill",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Zelenjava",
+                            "vegetables_cata": "Zelenjava",
+                            "vegetables_pyro": "Zelenjava",
+                            "water_discharge": "Izpust vode",
+                            "white_meat": "Belo meso",
+                            "white_meat_steam": "Soparjeno belo meso"
+                        }
+                    }
+                }
             }
         }
     },

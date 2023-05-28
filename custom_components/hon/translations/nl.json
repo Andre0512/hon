@@ -1357,6 +1357,67 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Oven",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programma's",
+                        "state": {
+                            "bakery": "Pasta en bakkersproducten",
+                            "bakery_steam": "Oven stomen",
+                            "bottom_heating": "Bodemverwarming",
+                            "bottom_heating_fan": "Bodemverwarming + Ventilator",
+                            "bread": "Brood",
+                            "bread_steam": "Stoomgebakken brood",
+                            "combi": "Combi",
+                            "convection_fan": "Met ventilator",
+                            "convection_fan_turnspit": "Convectie + ventilator + draaispit",
+                            "conventional": "Conventioneel",
+                            "conventional_turnspit": "Convectie + draaispit",
+                            "defrost": "Ontdooien",
+                            "descaling": "Ontkalken",
+                            "fish": "Vis",
+                            "fish_steam": "Gestoomde vis",
+                            "grill_cata": "Grill",
+                            "grill_fan_cata": "Grill + ventilator",
+                            "grill_fan_pyro": "Grill + ventilator",
+                            "grill_pyro": "Grill",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Brood",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Gisting",
+                            "low_temp_cooking": "Bereiding op lage temperatuur",
+                            "low_temp_cooking_fish": "Bereiding op lage temperatuur – Vis",
+                            "low_temp_cooking_fish_steam": "Bereiding op lage temperatuur – Gestoomde vis",
+                            "low_temp_cooking_meat": "Bereiding op lage temperatuur – Vlees",
+                            "low_temp_cooking_meat_steam": "Bereiding op lage temperatuur – Gestoomd vlees",
+                            "low_temp_cooking_steam": "Stomen bij lage temperatuur",
+                            "meat": "Vlees",
+                            "meat_steam": "Vlees stomen",
+                            "multi_level": "Multi-level",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Pasta en bakkersproducten",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Pyrolyse",
+                            "pyrolysis_plus": "Pyrolyse +",
+                            "red_meat": "Rood vlees",
+                            "red_meat_steam": "Gestoomd rood vlees",
+                            "regenerate": "Regenereren",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super grill",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Groenten",
+                            "vegetables_cata": "Groenten",
+                            "vegetables_pyro": "Groenten",
+                            "water_discharge": "Afvoer van water",
+                            "white_meat": "Wit vlees",
+                            "white_meat_steam": "Gestoomd wit vlees"
+                        }
+                    }
+                }
             }
         }
     },

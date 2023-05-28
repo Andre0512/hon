@@ -1357,6 +1357,67 @@
                         }
                     }
                 }
+            },
+            "oven": {
+                "name": "Fırın",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programlar",
+                        "state": {
+                            "bakery": "Makarna ve Ekmek",
+                            "bakery_steam": "Fırın buharı",
+                            "bottom_heating": "Alt ısıtıcı",
+                            "bottom_heating_fan": "Alt ısıtıcı + Fan",
+                            "bread": "Ekmek",
+                            "bread_steam": "Buharda pişmiş ekmek",
+                            "combi": "Kombi",
+                            "convection_fan": "Fan desteklı",
+                            "convection_fan_turnspit": "Konveksiyon + Fan + Şiş Çevirme",
+                            "conventional": "Statık",
+                            "conventional_turnspit": "Konveksiyon + Şiş Çevirme",
+                            "defrost": "Buz çözme",
+                            "descaling": "Kireç çözme",
+                            "fish": "Balık",
+                            "fish_steam": "Balık buğulama",
+                            "grill_cata": "Izgara",
+                            "grill_fan_cata": "Izgara fan",
+                            "grill_fan_pyro": "Izgara + Fan",
+                            "grill_pyro": "Izgara",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Ekmek",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Mayalama",
+                            "low_temp_cooking": "Düşük Sıcaklıkta Pişirme",
+                            "low_temp_cooking_fish": "Düşük Sıcaklıkta Pişirme - Balık",
+                            "low_temp_cooking_fish_steam": "Düşük Isıda Pişirme - Balık buğulama",
+                            "low_temp_cooking_meat": "Düşük Sıcaklıkta Pişirme - Et",
+                            "low_temp_cooking_meat_steam": "Düşük Isıda Pişirme - Buharda et",
+                            "low_temp_cooking_steam": "Düşük Sıcaklıkta Buharda Pişirme",
+                            "meat": "Et",
+                            "meat_steam": "Et buharı",
+                            "multi_level": "Çok Seviyeli",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Makarna ve Ekmek",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Piroliz",
+                            "pyrolysis_plus": "Piroliz +",
+                            "red_meat": "Kırmızı Et",
+                            "red_meat_steam": "Buharda kırmızı et",
+                            "regenerate": "Yeniden oluştur",
+                            "soft_plus": "Yumuşak+",
+                            "super_grill": "Süper Izgara",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Sebzeler",
+                            "vegetables_cata": "Sebzeler",
+                            "vegetables_pyro": "Sebzeler",
+                            "water_discharge": "Su Tahliyesi",
+                            "white_meat": "Beyaz Et",
+                            "white_meat_steam": "Buharda beyaz et"
+                        }
+                    }
+                }
             }
         }
     },
