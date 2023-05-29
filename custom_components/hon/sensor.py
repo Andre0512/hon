@@ -535,6 +535,71 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
         ),
     ),
+    "HO": (
+        HonSensorEntityDescription(
+            key="delayTime",
+            name="Delay time",
+            icon="mdi:clock-start",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfTime.MINUTES,
+        ),
+        HonSensorEntityDescription(
+            key="delayTimeStatus",
+            name="Delay time status",
+            icon="mdi:clock-start",
+        ),
+        HonSensorEntityDescription(
+            key="errors",
+            name="Errors",
+            icon="mdi:alert-circle",
+        ),
+        HonSensorEntityDescription(
+            key="filterCleaningAlarmStatus",
+            name="Filter Cleaning Alarm Status",
+        ),
+        HonSensorEntityDescription(
+            key="filterCleaningStatus",
+            name="Filter Cleaning Status",
+        ),
+        HonSensorEntityDescription(
+            key="lastWorkTime",
+            name="Last Work Time",
+            icon="mdi:clock-start",
+        ),
+        HonSensorEntityDescription(
+            key="lightStatus",
+            name="Light Status",
+            icon="mdi:lightbulb",
+        ),
+        HonSensorEntityDescription(
+            key="machMode",
+            name="Mach Mode",
+        ),
+        HonSensorEntityDescription(
+            key="onOffStatus",
+            name="On / Off Status",
+            icon="mdi:lightbulb",
+        ),
+        HonSensorEntityDescription(
+            key="quickDelayTimeStatus",
+            name="Quick Delay Time Status",
+        ),
+        HonSensorEntityDescription(
+            key="rgbLightColors",
+            name="RGB Light Color",
+            icon="mdi:lightbulb",
+        ),
+        HonSensorEntityDescription(
+            key="rgbLightStatus",
+            name="RGB Light Status",
+            icon="mdi:lightbulb",
+        ),
+        HonSensorEntityDescription(
+            key="windSpeed",
+            name="Wind Speed",
+            icon="mdi:fan",
+        ),
+    ),
 }
 SENSORS["WD"] = unique_entities(SENSORS["WM"], SENSORS["TD"])
 
