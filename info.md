@@ -62,6 +62,7 @@ Support has been confirmed for these models, but many more will work. Please add
 - Haier XIB 3B2SFS-80
 - Haier XIB 6B2D3FB
 - Candy BCTDH7A1TE
+- Candy CCE4T620EWU
 - Candy CIS633SCTTWIFI
 - Candy CSOE C10DE-80
 - Candy ROE H9A3TCEX-S

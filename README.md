@@ -73,6 +73,7 @@ Support has been confirmed for these models, but many more will work. Please add
 - Haier XIB 3B2SFS-80
 - Haier XIB 6B2D3FB
 - Candy BCTDH7A1TE
+- Candy CCE4T620EWU
 - Candy CIS633SCTTWIFI
 - Candy CSOE C10DE-80
 - Candy ROE H9A3TCEX-S
@@ -182,6 +183,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Indoor Temperature | `thermometer` | `sensor` | `tempIndoor` |
 | Outdoor Temperature | `thermometer` | `sensor` | `tempOutdoor` |
 | Program |  | `select` | `startProgram.program` |
+| Program | `play` | `sensor` | `programName` |
 | Selected Temperature | `thermometer` | `sensor` | `tempSel` |
 
 ### Dish washer
@@ -217,6 +219,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Door |  | `binary_sensor` | `doorStatus` |
 | Error | `math-log` | `sensor` | `errors` |
 | Machine Status | `information` | `sensor` | `machMode` |
+| Program | `play` | `sensor` | `programName` |
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Rinse Aid | `spray-bottle` | `binary_sensor` | `rinseAidStatus` |
@@ -243,6 +246,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
 | Pan Status | `pot-mix` | `binary_sensor` | `panStatus` |
 | Power | `lightning-bolt` | `sensor` | `power` |
+| Program | `play` | `sensor` | `programName` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Temperature | `thermometer` | `sensor` | `temp` |
 
@@ -265,6 +269,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | --- | --- | --- | --- |
 | Connection | `wifi` | `binary_sensor` | `attributes.lastConnEvent.category` |
 | On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
+| Program | `play` | `sensor` | `programName` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Start Time | `clock-start` | `sensor` | `delayTime` |
 | Temperature | `thermometer` | `sensor` | `temp` |
@@ -335,7 +340,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Dry level | `hair-dryer` | `sensor` | `dryLevel` |
 | Error | `math-log` | `sensor` | `errors` |
 | Machine Status | `information` | `sensor` | `machMode` |
-| Program | `tumble-dryer` | `sensor` | `programName` |
+| Program | `play` | `sensor` | `programName` |
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Start Time | `clock-start` | `sensor` | `delayTime` |
@@ -405,7 +410,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Good Night Mode |  | `binary_sensor` | `goodNight` |
 | Machine Status | `information` | `sensor` | `machMode` |
 | Pre Wash |  | `binary_sensor` | `startProgram.prewash` |
-| Program | `tumble-dryer` | `sensor` | `programName` |
+| Program | `play` | `sensor` | `programName` |
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
@@ -468,6 +473,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Good Night Mode |  | `binary_sensor` | `goodNight` |
 | Machine Status | `information` | `sensor` | `machMode` |
 | Pre Wash |  | `binary_sensor` | `startProgram.prewash` |
+| Program | `play` | `sensor` | `programName` |
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` |

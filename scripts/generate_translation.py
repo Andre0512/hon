@@ -40,7 +40,13 @@ PROGRAMS = {
         "programs_ref": "PROGRAMS.REF",
     },
     "sensor": {
+        "programs_ac": "PROGRAMS.AC",
+        "programs_dw": "PROGRAMS.DW",
+        "programs_ih": "PROGRAMS.IH",
+        "programs_ov": "PROGRAMS.OV",
         "programs_td": "PROGRAMS.TD",
+        "programs_wm": "PROGRAMS.WM_WD",
+        "programs_ref": "PROGRAMS.REF",
     },
 }
 
@@ -161,6 +167,8 @@ NAMES = {
         "programs_ov": "WC.SET_PROGRAM.PROGRAM",
         "programs_td": "WC.SET_PROGRAM.PROGRAM",
         "programs_wm": "WC.SET_PROGRAM.PROGRAM",
+        "programs_ac": "WC.SET_PROGRAM.PROGRAM",
+        "programs_ref": "WC.SET_PROGRAM.PROGRAM",
         "eco_pilot": "AC.PROGRAM_DETAIL.ECO_PILOT",
         "remaining_time": "ENROLLMENT_COMMON.GENERAL.REMAINING_TIME",
         "ref_zones": "IH.COMMON.COIL",
@@ -212,6 +220,13 @@ NAMES = {
         ],
         "freezer_temp": "REF_CMD&CTRL.TEMPERATURE_DRAWER_FREEZER.FREEZER_TEMPERATURE_TITLE",
         "fridge_temp": "REF_CMD&CTRL.TEMPERATURE_DRAWER_FRIDGE.FRIDGE_TEMPERATURE_TITLE",
+        "programs_dw": "WC.SET_PROGRAM.PROGRAM",
+        "programs_ih": "WC.SET_PROGRAM.PROGRAM",
+        "programs_ov": "WC.SET_PROGRAM.PROGRAM",
+        "programs_td": "WC.SET_PROGRAM.PROGRAM",
+        "programs_wm": "WC.SET_PROGRAM.PROGRAM",
+        "programs_ac": "WC.SET_PROGRAM.PROGRAM",
+        "programs_ref": "WC.SET_PROGRAM.PROGRAM",
     },
     "number": {
         "power_management": "HINTS.COOKING_WITH_INDUCTION.POWER_MANAGEMENT",

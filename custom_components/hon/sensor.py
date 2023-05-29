@@ -1,6 +1,8 @@
 import logging
 from dataclasses import dataclass
 
+from pyhon.appliance import HonAppliance
+
 from homeassistant.components.sensor import (
     SensorEntity,
     SensorDeviceClass,
@@ -171,6 +173,13 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="temperature",
         ),
+        HonSensorEntityDescription(
+            key="programName",
+            name="Program",
+            icon="mdi:play",
+            device_class=SensorDeviceClass.ENUM,
+            translation_key="programs_wm",
+        ),
     ),
     "TD": (
         HonSensorEntityDescription(
@@ -203,10 +212,9 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         HonSensorEntityDescription(
             key="programName",
             name="Program",
-            icon="mdi:tumble-dryer",
+            icon="mdi:play",
             device_class=SensorDeviceClass.ENUM,
             translation_key="programs_td",
-            options=const.PROGRAMS_TD,
         ),
         HonSensorEntityDescription(
             key="prPhase",
@@ -291,6 +299,13 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:thermometer",
             translation_key="target_temperature",
         ),
+        HonSensorEntityDescription(
+            key="programName",
+            name="Program",
+            icon="mdi:play",
+            device_class=SensorDeviceClass.ENUM,
+            translation_key="programs_ov",
+        ),
     ),
     "IH": (
         HonSensorEntityDescription(
@@ -317,6 +332,13 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:lightning-bolt",
             state_class=SensorStateClass.MEASUREMENT,
             translation_key="power",
+        ),
+        HonSensorEntityDescription(
+            key="programName",
+            name="Program",
+            icon="mdi:play",
+            device_class=SensorDeviceClass.ENUM,
+            translation_key="programs_ih",
         ),
     ),
     "DW": (
@@ -391,6 +413,13 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             translation_key="program_phases_dw",
             options=list(const.DISHWASHER_PR_PHASE),
         ),
+        HonSensorEntityDescription(
+            key="programName",
+            name="Program",
+            icon="mdi:play",
+            device_class=SensorDeviceClass.ENUM,
+            translation_key="programs_dw",
+        ),
     ),
     "AC": (
         HonSensorEntityDescription(
@@ -456,6 +485,13 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             state_class=SensorStateClass.MEASUREMENT,
             device_class=SensorDeviceClass.TEMPERATURE,
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        HonSensorEntityDescription(
+            key="programName",
+            name="Program",
+            icon="mdi:play",
+            device_class=SensorDeviceClass.ENUM,
+            translation_key="programs_ac",
         ),
     ),
     "REF": (
@@ -525,6 +561,13 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 
 class HonSensorEntity(HonEntity, SensorEntity):
     entity_description: HonSensorEntityDescription
+
+    def __init__(self, hass, entry, device: HonAppliance, description):
+        super().__init__(hass, entry, device, description)
+        if self.entity_description.key == "programName":
+            self._attr_options = self._device.settings.get(
+                "startProgram.program"
+            ).values + ["No Program"]
 
     @callback
     def _handle_coordinator_update(self):
