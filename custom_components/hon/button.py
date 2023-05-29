@@ -35,6 +35,20 @@ BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
             translation_key="stop_program",
         ),
     ),
+    "HO": (
+        ButtonEntityDescription(
+            key="startProgram",
+            name="Start Program",
+            icon="mdi:hvac",
+            translation_key="start_program",
+        ),
+        ButtonEntityDescription(
+            key="stopProgram",
+            name="Stop Program",
+            icon="mdi:hvac-off",
+            translation_key="stop_program",
+        ),
+    ),
 }
 
 
