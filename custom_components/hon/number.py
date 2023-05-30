@@ -162,6 +162,20 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             translation_key="freezer_temp_sel",
         ),
     ),
+    "HO": (
+        HonNumberEntityDescription(
+            key="startProgram.windSpeed",
+            name="Wind speed",
+            icon="mdi:fan",
+            entity_category=EntityCategory.CONFIG,
+        ),
+        HonNumberEntityDescription(
+            key="startProgram.lightStatus",
+            name="Light status",
+            icon="mdi:lightbulb",
+            entity_category=EntityCategory.CONFIG,
+        ),
+    ),
 }
 
 NUMBERS["WD"] = unique_entities(NUMBERS["WM"], NUMBERS["TD"])
