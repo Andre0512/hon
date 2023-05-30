@@ -15,6 +15,7 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 - [Hob](https://github.com/Andre0512/hon#hob) [BETA]
 - [Air conditioner](https://github.com/Andre0512/hon#air-conditioner) [BETA]
 - [Fridge](https://github.com/Andre0512/hon#fridge) [BETA]
+- [Hood](https://github.com/Andre0512/hon#hood) [BETA]
 
 ## Installation
 **Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
@@ -62,9 +63,12 @@ Translation of internal names like programs are available for all languages whic
 Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 - Haier AD105S2SM3FA
 - Haier AS25PBAHRA
+- Haier AS25S2SF1FA-WH
 - Haier AS25TADHRA-2
 - Haier AS35TADHRA-2
 - Haier EG9012B19SU1JD
+- Haier HA2MTSJ68MC
+- Haier HADG6DS46BWIFI
 - Haier HD80-A3959
 - Haier HW90-B14TEAM5
 - Haier HW100-B14959U1
@@ -76,6 +80,7 @@ Support has been confirmed for these models, but many more will work. Please add
 - Candy CCE4T620EWU
 - Candy CIS633SCTTWIFI
 - Candy CSOE C10DE-80
+- Candy RO44 1286DWMC4-07
 - Candy ROE H9A3TCEX-S
 - Candy RPW41066BWMR/1-S
 - Hoover H-WASH 500
@@ -224,6 +229,34 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Rinse Aid | `spray-bottle` | `binary_sensor` | `rinseAidStatus` |
 | Salt | `shaker-outline` | `binary_sensor` | `saltStatus` |
+
+### Hood
+#### Controls
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Start Program | `hvac` | `button` | `startProgram` |
+| Stop Program | `hvac-off` | `button` | `stopProgram` |
+#### Configs
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Light status | `lightbulb` | `number` | `startProgram.lightStatus` |
+| Wind speed | `fan` | `number` | `startProgram.windSpeed` |
+#### Sensors
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Delay time | `clock-start` | `sensor` | `delayTime` |
+| Delay time status | `clock-start` | `sensor` | `delayTimeStatus` |
+| Errors | `alert-circle` | `sensor` | `errors` |
+| Filter Cleaning Alarm Status |  | `sensor` | `filterCleaningAlarmStatus` |
+| Filter Cleaning Status |  | `sensor` | `filterCleaningStatus` |
+| Last Work Time | `clock-start` | `sensor` | `lastWorkTime` |
+| Light Status | `lightbulb` | `sensor` | `lightStatus` |
+| Mach Mode |  | `sensor` | `machMode` |
+| On / Off Status | `lightbulb` | `sensor` | `onOffStatus` |
+| Quick Delay Time Status |  | `sensor` | `quickDelayTimeStatus` |
+| RGB Light Color | `lightbulb` | `sensor` | `rgbLightColors` |
+| RGB Light Status | `lightbulb` | `sensor` | `rgbLightStatus` |
+| Wind Speed | `fan` | `sensor` | `windSpeed` |
 
 ### Hob
 #### Controls

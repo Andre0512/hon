@@ -9,10 +9,11 @@ Support for home appliances of Haier's mobile app hOn.
 - [Tumble Dryer](https://github.com/Andre0512/hon#tumble-dryer)
 - [Washer Dryer](https://github.com/Andre0512/hon#washer-dryer)
 - [Oven](https://github.com/Andre0512/hon#oven)
-- [Hob](https://github.com/Andre0512/hon#hob)
 - [Dish Washer](https://github.com/Andre0512/hon#dish-washer)
+- [Hob](https://github.com/Andre0512/hon#hob) [BETA]
 - [Air conditioner](https://github.com/Andre0512/hon#air-conditioner) [BETA]
 - [Fridge](https://github.com/Andre0512/hon#fridge) [BETA]
+- [Hood](https://github.com/Andre0512/hon#hood) [BETA]
 
 ## Configuration
 
@@ -51,9 +52,12 @@ Translation of internal names like programs are available for all languages whic
 Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 - Haier AD105S2SM3FA
 - Haier AS25PBAHRA
+- Haier AS25S2SF1FA-WH
 - Haier AS25TADHRA-2
 - Haier AS35TADHRA-2
 - Haier EG9012B19SU1JD
+- Haier HA2MTSJ68MC
+- Haier HADG6DS46BWIFI
 - Haier HD80-A3959
 - Haier HW90-B14TEAM5
 - Haier HW100-B14959U1
@@ -65,6 +69,7 @@ Support has been confirmed for these models, but many more will work. Please add
 - Candy CCE4T620EWU
 - Candy CIS633SCTTWIFI
 - Candy CSOE C10DE-80
+- Candy RO44 1286DWMC4-07
 - Candy ROE H9A3TCEX-S
 - Candy RPW41066BWMR/1-S
 - Hoover H-WASH 500
