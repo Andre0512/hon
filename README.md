@@ -12,9 +12,9 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 - [Washer Dryer](https://github.com/Andre0512/hon#washer-dryer)
 - [Oven](https://github.com/Andre0512/hon#oven)
 - [Dish Washer](https://github.com/Andre0512/hon#dish-washer)
+- [Air conditioner](https://github.com/Andre0512/hon#air-conditioner)
+- [Fridge](https://github.com/Andre0512/hon#fridge)
 - [Hob](https://github.com/Andre0512/hon#hob) [BETA]
-- [Air conditioner](https://github.com/Andre0512/hon#air-conditioner) [BETA]
-- [Fridge](https://github.com/Andre0512/hon#fridge) [BETA]
 - [Hood](https://github.com/Andre0512/hon#hood) [BETA]
 
 ## Installation
