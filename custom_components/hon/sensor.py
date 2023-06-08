@@ -1,8 +1,6 @@
 import logging
 from dataclasses import dataclass
 
-from pyhon.appliance import HonAppliance
-
 from homeassistant.components.sensor import (
     SensorEntity,
     SensorDeviceClass,
@@ -22,7 +20,8 @@ from homeassistant.const import (
 )
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
-from homeassistant.helpers.typing import StateType
+from pyhon.appliance import HonAppliance
+
 from . import const
 from .const import DOMAIN
 from .hon import HonEntity, unique_entities
@@ -635,19 +634,20 @@ class HonSensorEntity(HonEntity, SensorEntity):
             ).values + ["No Program"]
 
     @callback
-    def _handle_coordinator_update(self):
+    def _handle_coordinator_update(self, update=True) -> None:
         value = self._device.get(self.entity_description.key, "")
         if not value and self.entity_description.state_class is not None:
             self._attr_native_value = 0
         self._attr_native_value = value
-        self.async_write_ha_state()
+        if update:
+            self.async_write_ha_state()
 
 
 class HonConfigSensorEntity(HonEntity, SensorEntity):
     entity_description: HonConfigSensorEntityDescription
 
     @callback
-    def _handle_coordinator_update(self):
+    def _handle_coordinator_update(self, update=True) -> None:
         value = self._device.settings.get(self.entity_description.key, None)
         if self.entity_description.state_class is not None:
             if value and value.value:
@@ -658,4 +658,5 @@ class HonConfigSensorEntity(HonEntity, SensorEntity):
                 self._attr_native_value = 0
         else:
             self._attr_native_value = value.value
-        self.async_write_ha_state()
+        if update:
+            self.async_write_ha_state()

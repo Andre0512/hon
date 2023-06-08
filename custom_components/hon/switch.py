@@ -1,5 +1,6 @@
 import logging
 from dataclasses import dataclass
+from datetime import datetime, timedelta
 from typing import Any
 
 from homeassistant.components.switch import SwitchEntityDescription, SwitchEntity
@@ -394,10 +395,11 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         )
 
     @callback
-    def _handle_coordinator_update(self):
+    def _handle_coordinator_update(self, update=True) -> None:
         value = self._device.get(self.entity_description.key, "0")
         self._attr_state = value == "1"
-        self.async_write_ha_state()
+        if update:
+            self.async_write_ha_state()
 
 
 class HonControlSwitchEntity(HonEntity, SwitchEntity):
@@ -410,9 +412,13 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         await self._device.commands[self.entity_description.turn_on_key].send()
+        self._device.attributes[self.entity_description.key] = True
+        self.async_write_ha_state()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
         await self._device.commands[self.entity_description.turn_off_key].send()
+        self._device.attributes[self.entity_description.key] = False
+        self.async_write_ha_state()
 
     @property
     def available(self) -> bool:
@@ -422,6 +428,18 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
             and self._device.get("remoteCtrValid", "1") == "1"
             and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
         )
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any]:
+        """Return the optional state attributes."""
+        result = {}
+        if remaining_time := int(self._device.get("remainingTimeMM", 0)):
+            delay_time = int(self._device.get("delayTime", 0))
+            result["start_time"] = datetime.now() + timedelta(minutes=delay_time)
+            result["end_time"] = datetime.now() + timedelta(
+                minutes=delay_time + remaining_time
+            )
+        return result
 
 
 class HonConfigSwitchEntity(HonEntity, SwitchEntity):
@@ -454,7 +472,8 @@ class HonConfigSwitchEntity(HonEntity, SwitchEntity):
         await self.coordinator.async_refresh()
 
     @callback
-    def _handle_coordinator_update(self):
+    def _handle_coordinator_update(self, update=True) -> None:
         value = self._device.settings.get(self.entity_description.key, "0")
         self._attr_state = value == "1"
-        self.async_write_ha_state()
+        if update:
+            self.async_write_ha_state()

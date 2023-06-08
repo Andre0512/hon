@@ -7,7 +7,7 @@ from homeassistant.components.select import SelectEntity, SelectEntityDescriptio
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTemperature, UnitOfTime, REVOLUTIONS_PER_MINUTE
 from homeassistant.core import callback
-from homeassistant.helpers.entity import EntityCategory, Entity
+from homeassistant.helpers.entity import EntityCategory
 from pyhon.appliance import HonAppliance
 from pyhon.parameter.fixed import HonParameterFixed
 
@@ -179,7 +179,7 @@ class HonSelectEntity(HonEntity, SelectEntity):
         await self.coordinator.async_refresh()
 
     @callback
-    def _handle_coordinator_update(self):
+    def _handle_coordinator_update(self, update=True) -> None:
         setting = self._device.settings.get(self.entity_description.key)
         if setting is None:
             self._attr_available = False
@@ -189,7 +189,8 @@ class HonSelectEntity(HonEntity, SelectEntity):
             self._attr_available = True
             self._attr_options: list[str] = setting.values
             self._attr_native_value = setting.value
-        self.async_write_ha_state()
+        if update:
+            self.async_write_ha_state()
 
     @property
     def available(self) -> bool:

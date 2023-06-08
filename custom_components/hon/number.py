@@ -9,7 +9,7 @@ from homeassistant.components.number import (
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTime, UnitOfTemperature
 from homeassistant.core import callback
-from homeassistant.helpers.entity import EntityCategory, Entity
+from homeassistant.helpers.entity import EntityCategory
 from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
@@ -223,14 +223,15 @@ class HonNumberEntity(HonEntity, NumberEntity):
         await self.coordinator.async_refresh()
 
     @callback
-    def _handle_coordinator_update(self):
+    def _handle_coordinator_update(self, update=True) -> None:
         setting = self._device.settings[self.entity_description.key]
         if isinstance(setting, HonParameterRange):
             self._attr_native_max_value = setting.max
             self._attr_native_min_value = setting.min
             self._attr_native_step = setting.step
         self._attr_native_value = setting.value
-        self.async_write_ha_state()
+        if update:
+            self.async_write_ha_state()
 
     @property
     def available(self) -> bool:

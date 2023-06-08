@@ -271,9 +271,10 @@ class HonBinarySensorEntity(HonEntity, BinarySensorEntity):
         )
 
     @callback
-    def _handle_coordinator_update(self):
+    def _handle_coordinator_update(self, update=True) -> None:
         self._attr_native_value = (
             self._device.get(self.entity_description.key, "")
             == self.entity_description.on_value
         )
-        self.async_write_ha_state()
+        if update:
+            self.async_write_ha_state()

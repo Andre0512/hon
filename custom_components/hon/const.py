@@ -7,6 +7,7 @@ from homeassistant.components.climate import (
 )
 
 DOMAIN = "hon"
+UPDATE_INTERVAL = 10
 
 PLATFORMS = [
     "sensor",

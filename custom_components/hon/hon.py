@@ -1,12 +1,13 @@
 import logging
 from datetime import timedelta
 
+from homeassistant.core import callback
 from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from pyhon.appliance import HonAppliance
 
-from .const import DOMAIN
+from .const import DOMAIN, UPDATE_INTERVAL
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -21,13 +22,14 @@ class HonEntity(CoordinatorEntity):
         self._hon = hass.data[DOMAIN][entry.unique_id]
         self._hass = hass
         self._coordinator = coordinator
-        self._device = device
+        self._device: HonAppliance = device
 
         if description is not None:
             self.entity_description = description
             self._attr_unique_id = f"{self._device.unique_id}{description.key}"
         else:
             self._attr_unique_id = self._device.unique_id
+        self._handle_coordinator_update(update=False)
 
     @property
     def device_info(self):
@@ -41,6 +43,11 @@ class HonEntity(CoordinatorEntity):
             sw_version=self._device.get("fwVersion", ""),
         )
 
+    @callback
+    def _handle_coordinator_update(self, update: bool = True) -> None:
+        if update:
+            self.async_write_ha_state()
+
 
 class HonCoordinator(DataUpdateCoordinator):
     def __init__(self, hass, device: HonAppliance):
@@ -49,7 +56,7 @@ class HonCoordinator(DataUpdateCoordinator):
             hass,
             _LOGGER,
             name=device.unique_id,
-            update_interval=timedelta(seconds=30),
+            update_interval=timedelta(seconds=UPDATE_INTERVAL),
         )
         self._device = device
 
