@@ -150,11 +150,13 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
     async def async_set_hvac_mode(self, hvac_mode):
         self._attr_hvac_mode = hvac_mode
         if hvac_mode == HVACMode.OFF:
-            await self._device.commands["stopProgram"].send()
+            command = "stopProgram"
         else:
             mode = HON_HVAC_PROGRAM[hvac_mode]
             self._device.settings["startProgram.program"].value = mode
-            await self._device.commands["startProgram"].send()
+            command = "startProgram"
+        await self._device.commands[command].send()
+        self._device.sync_command(command, "settings")
         self.async_write_ha_state()
 
     @property
