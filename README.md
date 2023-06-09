@@ -61,42 +61,18 @@ Translation of internal names like programs are available for all languages whic
 
 ## Supported Models
 Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
-- Haier AD105S2SM3FA
-- Haier AS20HPL1HRA
-- Haier AS25PBAHRA
-- Haier AS25S2SF1FA-WH
-- Haier AS25TADHRA-2
-- Haier AS35TADHRA-2
-- Haier EG9012B19SU1JD
-- Haier HA2MTSJ68MC
-- Haier HADG6DS46BWIFI
-- Haier HD80-A3959
-- Haier HW90-B14TEAM5
-- Haier HW100-B14959U1
-- Haier HWD100-B14979
-- Haier HWO60SM2F3XH
-- Haier XIB 3B2SFS-80
-- Haier XIB 6B2D3FB
-- Candy BCTDH7A1TE
-- Candy CCE4T620EWU
-- Candy CIS633SCTTWIFI
-- Candy CSOE C10DE-80
-- Candy RO44 1286DWMC4-07
-- Candy ROE H9A3TCEX-S
-- Candy RPW41066BWMR/1-S
-- Hoover H-WASH 500
-- Hoover H-DRY 500
-- Hoover H7W4 48MBC-S
-- Hoover H9A3TCBEXS-S
-- Hoover HFB 6B2S3FX
-- Hoover HLE C10DCE-80
-- Hoover HSOT3161WG
-- Hoover HW 68AMC/1-80
-- Hoover HWPD 69AMBC/1-S
-- Hoover HWPS4954DAMR-11
-- Hoover NDE H10A2TCE-80
-- Hoover NDE H9A2TSBEXS-S
-- Hoover NDPHY10A2TCBEXSS
+
+|                    | **Haier**                                                                                                        | **Hoover**                                                                                                            | **Candy**                                           |
+|--------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| **Washing Machine** | HW90-B14TEAM5 <br/> HW100-B14959U1                                                                               | H-WASH 500 <br/> H7W4 48MBC-S                                                                                         | RO44 1286DWMC4-07 <br/> HW 68AMC/1-80 <br/> HWPD 69AMBC/1-S        |
+| **Tumble Dryer**   | HD80-A3959                                                                                                       | H-DRY 500 <br/> H9A3TCBEXS-S <br/> HLE C10DCE-80 <br/> NDE H10A2TCE-80 <br/> NDE H9A2TSBEXS-S <br/> NDPHY10A2TCBEXSS  | BCTDH7A1TE <br/> CSOE C10DE-80 <br/> ROE H9A3TCEX-S |
+| **Washer Dryer**   | HWD100-B14979                                                                                                    | HWPS4954DAMR-11                                                                                                       | RPW41066BWMR/1-S                                    |
+| **Oven**           | HWO60SM2F3XH                                                                                                     | HSOT3161WG                                                                                                            |                                                     |
+| **Dish Washer**    | XIB 3B2SFS-80 <br/> XIB 6B2D3FB                                                                                  | HFB 6B2S3FX                                                                                                           |                                                     |
+| **Air conditioner** | AD105S2SM3FA <br/> AS20HPL1HRA <br/> AS25PBAHRA <br/> AS25S2SF1FA-WH <br/> AS25TADHRA-2 <br/> AS35TADHRA-2 <br/> |                                                                                                                       |                                                     |
+| **Fridge**         | HFW7720ENMB                                                                                                                 |                                                                                                                       | CCE4T620EWU                                         |
+| **Hob**            | HA2MTSJ68MC                                                                                                      |                                                                                                                       | CIS633SCTTWIFI                                      |
+| **Hood**           | HADG6DS46BWIFI                                                                                                   |                                                                                                                       |                                                     |
 
 ## Contribute
 Any kind of contribution is welcome!
@@ -237,11 +213,11 @@ For every device exists a hidden button which can be used to log all infos of yo
 | --- | --- | --- | --- |
 | Start Program | `hvac` | `button` | `startProgram` |
 | Stop Program | `hvac-off` | `button` | `stopProgram` |
+| Wind Speed |  | `fan` | `settings.windSpeed` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Light status | `lightbulb` | `number` | `startProgram.lightStatus` |
-| Wind speed | `fan` | `number` | `startProgram.windSpeed` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -257,7 +233,6 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Quick Delay Time Status |  | `sensor` | `quickDelayTimeStatus` |
 | RGB Light Color | `lightbulb` | `sensor` | `rgbLightColors` |
 | RGB Light Status | `lightbulb` | `sensor` | `rgbLightStatus` |
-| Wind Speed | `fan` | `sensor` | `windSpeed` |
 
 ### Hob
 #### Controls

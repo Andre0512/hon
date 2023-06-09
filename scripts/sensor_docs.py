@@ -14,6 +14,7 @@ from custom_components.hon.climate import CLIMATES
 from custom_components.hon.number import NUMBERS
 from custom_components.hon.select import SELECTS
 from custom_components.hon.sensor import SENSORS
+from custom_components.hon.fan import FANS
 from custom_components.hon.switch import (
     SWITCHES,
     HonControlSwitchEntityDescription,
@@ -48,6 +49,7 @@ entities = {
     "sensor": SENSORS,
     "switch": SWITCHES,
     "climate": CLIMATES,
+    "fan": FANS,
 }
 
 result = {}

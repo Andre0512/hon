@@ -248,6 +248,7 @@ NAMES = {
         "freezer": "REF.ZONES.FREEZER",
         "oven": "GLOBALS.APPLIANCES_NAME.OV",
     },
+    "fan": {"air_extraction": "HO.DASHBOARD.AIR_EXTRACTION_TITLE"},
 }
 
 

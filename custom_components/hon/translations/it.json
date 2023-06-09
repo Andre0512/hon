@@ -2031,6 +2031,11 @@
                     }
                 }
             }
+        },
+        "fan": {
+            "air_extraction": {
+                "name": "Aspirazione aria"
+            }
         }
     }
 }

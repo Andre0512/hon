@@ -164,12 +164,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
     ),
     "HO": (
         HonNumberEntityDescription(
-            key="startProgram.windSpeed",
-            name="Wind speed",
-            icon="mdi:fan",
-            entity_category=EntityCategory.CONFIG,
-        ),
-        HonNumberEntityDescription(
             key="startProgram.lightStatus",
             name="Light status",
             icon="mdi:lightbulb",

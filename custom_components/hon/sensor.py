@@ -593,11 +593,6 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="RGB Light Status",
             icon="mdi:lightbulb",
         ),
-        HonSensorEntityDescription(
-            key="windSpeed",
-            name="Wind Speed",
-            icon="mdi:fan",
-        ),
     ),
 }
 SENSORS["WD"] = unique_entities(SENSORS["WM"], SENSORS["TD"])

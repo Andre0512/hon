@@ -213,7 +213,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
 
 
 class HonClimateEntity(HonEntity, ClimateEntity):
-    entity_description = HonClimateEntityDescription
+    entity_description: HonClimateEntityDescription
 
     def __init__(self, hass, entry, device: HonAppliance, description) -> None:
         super().__init__(hass, entry, device, description)

@@ -17,6 +17,7 @@ PLATFORMS = [
     "button",
     "binary_sensor",
     "climate",
+    "fan",
 ]
 
 HON_HVAC_MODE = {

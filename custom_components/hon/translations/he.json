@@ -1065,6 +1065,11 @@
                     }
                 }
             }
+        },
+        "fan": {
+            "air_extraction": {
+                "name": "Air extraction"
+            }
         }
     },
     "config": {
