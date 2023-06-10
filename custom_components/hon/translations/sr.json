@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Program"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Šampanjac",
+                    "iot_dessert": "Desert",
+                    "iot_fortified": "Strukturisano",
+                    "iot_rose": "Rosé",
+                    "iot_whisky": "Viski",
+                    "red": "Crvena",
+                    "sparkling": "Penušavo",
+                    "white": "Belo"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Ispuštanje vode",
                             "white_meat": "Belo meso",
                             "white_meat_steam": "Belo meso na pari"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Vinska vitrina",
+                        "state": {
+                            "iot_champagne": "Šampanjac",
+                            "iot_dessert": "Desert",
+                            "iot_fortified": "Strukturisano",
+                            "iot_rose": "Rosé",
+                            "iot_whisky": "Viski",
+                            "red": "Crvena",
+                            "sparkling": "Penušavo",
+                            "white": "Belo"
                         }
                     }
                 }

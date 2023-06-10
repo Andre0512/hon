@@ -944,6 +944,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Program"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Champagne",
+                    "iot_dessert": "Dessert",
+                    "iot_fortified": "Fortified",
+                    "iot_rose": "Rosé",
+                    "iot_whisky": "Whisky",
+                    "red": "Red",
+                    "sparkling": "Sparkling",
+                    "white": "White"
+                }
             }
         },
         "switch": {
@@ -2052,6 +2064,23 @@
                             "water_discharge": "Water Discharge",
                             "white_meat": "White Meat",
                             "white_meat_steam": "Steamed white meat"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Wine Cellar",
+                        "state": {
+                            "iot_champagne": "Champagne",
+                            "iot_dessert": "Dessert",
+                            "iot_fortified": "Fortified",
+                            "iot_rose": "Rosé",
+                            "iot_whisky": "Whisky",
+                            "red": "Red",
+                            "sparkling": "Sparkling",
+                            "white": "White"
                         }
                     }
                 }

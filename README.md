@@ -16,6 +16,7 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 - [Fridge](https://github.com/Andre0512/hon#fridge)
 - [Hob](https://github.com/Andre0512/hon#hob) [BETA]
 - [Hood](https://github.com/Andre0512/hon#hood) [BETA]
+- [Wine Cellar](https://github.com/Andre0512/hon#wine-cellar) [BETA]
 
 ## Installation
 **Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
@@ -355,6 +356,27 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Start Time | `clock-start` | `sensor` | `delayTime` |
 | Steam level | `smoke` | `sensor` | `steamLevel` |
 | Temperature level | `thermometer` | `sensor` | `tempLevel` |
+
+### Wine Cellar
+#### Controls
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Light | `lightbulb` | `switch` | `lightStatus` |
+| Sabbath Mode | `palm-tree` | `switch` | `sabbathStatus` |
+| Wine Cellar | `thermometer` | `climate` | `settings.tempSel` |
+| Wine Cellar | `thermometer` | `climate` | `settings.tempSelZ2` |
+#### Sensors
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Error | `math-log` | `sensor` | `errors` |
+| Humidity | `water-percent` | `sensor` | `humidityZ1` |
+| Humidity 2 | `water-percent` | `sensor` | `humidityZ2` |
+| Program | `play` | `sensor` | `programName` |
+| Room Temperature | `home-thermometer-outline` | `sensor` | `tempEnv` |
+| Selected Temperature | `thermometer` | `sensor` | `tempSel` |
+| Selected Temperature 2 | `thermometer` | `sensor` | `tempSelZ2` |
+| Temperature | `thermometer` | `sensor` | `temp` |
+| Temperature 2 | `thermometer` | `sensor` | `tempZ2` |
 
 ### Washer dryer
 #### Controls

@@ -929,6 +929,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Programma"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Champagne",
+                    "iot_dessert": "Dolce",
+                    "iot_fortified": "Strutturato",
+                    "iot_rose": "Rosé",
+                    "iot_whisky": "Whisky",
+                    "red": "Rosso",
+                    "sparkling": "Bollicine",
+                    "white": "Bianco"
+                }
             }
         },
         "select": {
@@ -2027,6 +2039,23 @@
                             "water_discharge": "Scarico dell'acqua",
                             "white_meat": "Carne Bianca",
                             "white_meat_steam": "Carne bianca al vapore"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Cantinetta",
+                        "state": {
+                            "iot_champagne": "Champagne",
+                            "iot_dessert": "Dolce",
+                            "iot_fortified": "Strutturato",
+                            "iot_rose": "Rosé",
+                            "iot_whisky": "Whisky",
+                            "red": "Rosso",
+                            "sparkling": "Bollicine",
+                            "white": "Bianco"
                         }
                     }
                 }

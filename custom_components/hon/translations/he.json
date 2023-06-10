@@ -444,6 +444,9 @@
                     "tea": "Cold drinks or Beverages"
                 },
                 "name": "Program"
+            },
+            "programs_wc": {
+                "state": {}
             }
         },
         "select": {
@@ -1062,6 +1065,14 @@
                             "pizza": "Pizza",
                             "tailor_bake": "Tailor bake"
                         }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Wine Cellar",
+                        "state": {}
                     }
                 }
             }

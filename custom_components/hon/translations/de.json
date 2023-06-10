@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Programm"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Champagner",
+                    "iot_dessert": "Dessert",
+                    "iot_fortified": "Strukturiert",
+                    "iot_rose": "Rosé",
+                    "iot_whisky": "Whisky",
+                    "red": "Rot",
+                    "sparkling": "Sekt",
+                    "white": "Weiß"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Wasserabfluss",
                             "white_meat": "Weißes Fleisch",
                             "white_meat_steam": "Gedämpftes weißes Fleisch"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Weinklimaschrank",
+                        "state": {
+                            "iot_champagne": "Champagner",
+                            "iot_dessert": "Dessert",
+                            "iot_fortified": "Strukturiert",
+                            "iot_rose": "Rosé",
+                            "iot_whisky": "Whisky",
+                            "red": "Rot",
+                            "sparkling": "Sekt",
+                            "white": "Weiß"
                         }
                     }
                 }

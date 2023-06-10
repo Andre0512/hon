@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "程序"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "香槟",
+                    "iot_dessert": "甜点",
+                    "iot_fortified": "结构化",
+                    "iot_rose": "桃红",
+                    "iot_whisky": "威士忌",
+                    "red": "红",
+                    "sparkling": "起泡酒",
+                    "white": "白葡萄酒"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "排水",
                             "white_meat": "白肉",
                             "white_meat_steam": "蒸白肉"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "酒窖",
+                        "state": {
+                            "iot_champagne": "香槟",
+                            "iot_dessert": "甜点",
+                            "iot_fortified": "结构化",
+                            "iot_rose": "桃红",
+                            "iot_whisky": "威士忌",
+                            "red": "红",
+                            "sparkling": "起泡酒",
+                            "white": "白葡萄酒"
                         }
                     }
                 }

@@ -14,6 +14,7 @@ Support for home appliances of Haier's mobile app hOn.
 - [Fridge](https://github.com/Andre0512/hon#fridge)
 - [Hob](https://github.com/Andre0512/hon#hob) [BETA]
 - [Hood](https://github.com/Andre0512/hon#hood) [BETA]
+- [Wine Cellar](https://github.com/Andre0512/hon#wine-cellar) [BETA]
 
 ## Configuration
 

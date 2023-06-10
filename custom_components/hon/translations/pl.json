@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Program"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Szampan",
+                    "iot_dessert": "Deser",
+                    "iot_fortified": "Struktura",
+                    "iot_rose": "Różowe",
+                    "iot_whisky": "Whisky",
+                    "red": "Czerwony",
+                    "sparkling": "Musujące",
+                    "white": "Białe"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Odprowadzanie wody",
                             "white_meat": "Białe mięso",
                             "white_meat_steam": "Białe mięso gotowane na parze"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Piwniczka z winami",
+                        "state": {
+                            "iot_champagne": "Szampan",
+                            "iot_dessert": "Deser",
+                            "iot_fortified": "Struktura",
+                            "iot_rose": "Różowe",
+                            "iot_whisky": "Whisky",
+                            "red": "Czerwony",
+                            "sparkling": "Musujące",
+                            "white": "Białe"
                         }
                     }
                 }

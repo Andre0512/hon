@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Programma"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Champagne",
+                    "iot_dessert": "Dessert",
+                    "iot_fortified": "Gestructureerd",
+                    "iot_rose": "Rosé",
+                    "iot_whisky": "Whisky",
+                    "red": "Rood",
+                    "sparkling": "Mousserend",
+                    "white": "Wit"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Afvoer van water",
                             "white_meat": "Wit vlees",
                             "white_meat_steam": "Gestoomd wit vlees"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Wijnkelder",
+                        "state": {
+                            "iot_champagne": "Champagne",
+                            "iot_dessert": "Dessert",
+                            "iot_fortified": "Gestructureerd",
+                            "iot_rose": "Rosé",
+                            "iot_whisky": "Whisky",
+                            "red": "Rood",
+                            "sparkling": "Mousserend",
+                            "white": "Wit"
                         }
                     }
                 }

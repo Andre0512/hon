@@ -72,6 +72,22 @@ CLIMATES = {
             translation_key="oven",
         ),
     ),
+    "WC": (
+        HonClimateEntityDescription(
+            key="settings.tempSel",
+            mode=HVACMode.COOL,
+            name="Wine Cellar",
+            icon="mdi:thermometer",
+            translation_key="wine",
+        ),
+        HonClimateEntityDescription(
+            key="settings.tempSelZ2",
+            mode=HVACMode.COOL,
+            name="Wine Cellar",
+            icon="mdi:thermometer",
+            translation_key="wine",
+        ),
+    ),
 }
 
 
@@ -226,7 +242,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
         )
 
         self._attr_hvac_modes = [description.mode]
-        if device.get("onOffStatus"):
+        if "stopProgram" in device.commands:
             self._attr_hvac_modes += [HVACMode.OFF]
             modes = []
         else:
@@ -245,15 +261,15 @@ class HonClimateEntity(HonEntity, ClimateEntity):
         self._handle_coordinator_update(update=False)
 
     @property
-    def target_temperature(self) -> int | None:
+    def target_temperature(self) -> float | None:
         """Return the temperature we try to reach."""
-        return int(self._device.get(self.entity_description.key))
+        return float(self._device.get(self.entity_description.key))
 
     @property
-    def current_temperature(self) -> int | None:
+    def current_temperature(self) -> float | None:
         """Return the current temperature."""
         temp_key = self.entity_description.key.split(".")[-1].replace("Sel", "")
-        return int(self._device.get(temp_key))
+        return float(self._device.get(temp_key))
 
     async def async_set_temperature(self, **kwargs):
         if (temperature := kwargs.get(ATTR_TEMPERATURE)) is None:

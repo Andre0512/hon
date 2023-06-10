@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Programa"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Champán",
+                    "iot_dessert": "Postre",
+                    "iot_fortified": "Estructurado",
+                    "iot_rose": "Rosado",
+                    "iot_whisky": "Whisky",
+                    "red": "Tinto",
+                    "sparkling": "Espumoso",
+                    "white": "Blanco"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Descarga de agua",
                             "white_meat": "Carne blanca",
                             "white_meat_steam": "Carne blanca al vapor"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Cámara de vino",
+                        "state": {
+                            "iot_champagne": "Champán",
+                            "iot_dessert": "Postre",
+                            "iot_fortified": "Estructurado",
+                            "iot_rose": "Rosado",
+                            "iot_whisky": "Whisky",
+                            "red": "Tinto",
+                            "sparkling": "Espumoso",
+                            "white": "Blanco"
                         }
                     }
                 }

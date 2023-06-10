@@ -322,6 +322,17 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             translation_key="holiday_mode",
         ),
     ),
+    "WC": (
+        HonSwitchEntityDescription(
+            key="sabbathStatus",
+            name="Sabbath Mode",
+            icon="mdi:palm-tree",
+            translation_key="holiday_mode",
+        ),
+        HonSwitchEntityDescription(
+            key="lightStatus", name="Light", icon="mdi:lightbulb"
+        ),
+    ),
 }
 
 SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["WM"])

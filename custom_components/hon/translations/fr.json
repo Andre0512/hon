@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Programme"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Champagne",
+                    "iot_dessert": "Dessert",
+                    "iot_fortified": "Corsé",
+                    "iot_rose": "Rosé",
+                    "iot_whisky": "Whisky",
+                    "red": "Rouge",
+                    "sparkling": "Pétillant",
+                    "white": "Blanc"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Décharge d'eau",
                             "white_meat": "Viande blanche",
                             "white_meat_steam": "Viande blanche à la vapeur"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Cave à vin",
+                        "state": {
+                            "iot_champagne": "Champagne",
+                            "iot_dessert": "Dessert",
+                            "iot_fortified": "Corsé",
+                            "iot_rose": "Rosé",
+                            "iot_whisky": "Whisky",
+                            "red": "Rouge",
+                            "sparkling": "Pétillant",
+                            "white": "Blanc"
                         }
                     }
                 }

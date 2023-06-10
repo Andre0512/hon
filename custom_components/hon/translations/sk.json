@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Program"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Šampanské",
+                    "iot_dessert": "Dezertné",
+                    "iot_fortified": "Štruktúrované",
+                    "iot_rose": "Ružové",
+                    "iot_whisky": "Whisky",
+                    "red": "Červené",
+                    "sparkling": "Šumivé",
+                    "white": "Biele"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Vypúšťanie vody",
                             "white_meat": "Biele mäso",
                             "white_meat_steam": "Biele mäso pripravené v pare"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Vinotéka",
+                        "state": {
+                            "iot_champagne": "Šampanské",
+                            "iot_dessert": "Dezertné",
+                            "iot_fortified": "Štruktúrované",
+                            "iot_rose": "Ružové",
+                            "iot_whisky": "Whisky",
+                            "red": "Červené",
+                            "sparkling": "Šumivé",
+                            "white": "Biele"
                         }
                     }
                 }

@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Πρόγραμμα"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Σαμπάνια",
+                    "iot_dessert": "Επιδόρπιο",
+                    "iot_fortified": "Δομημένο",
+                    "iot_rose": "Ροζέ",
+                    "iot_whisky": "Ουίσκι",
+                    "red": "Κόκκινο",
+                    "sparkling": "Αφρώδες",
+                    "white": "Λευκό"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Απόρριψη νερού",
                             "white_meat": "Λευκό κρέας",
                             "white_meat_steam": "Λευκό κρέας στον ατμό"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Κάβα",
+                        "state": {
+                            "iot_champagne": "Σαμπάνια",
+                            "iot_dessert": "Επιδόρπιο",
+                            "iot_fortified": "Δομημένο",
+                            "iot_rose": "Ροζέ",
+                            "iot_whisky": "Ουίσκι",
+                            "red": "Κόκκινο",
+                            "sparkling": "Αφρώδες",
+                            "white": "Λευκό"
                         }
                     }
                 }

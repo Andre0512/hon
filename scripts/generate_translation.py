@@ -47,6 +47,7 @@ PROGRAMS = {
         "programs_td": "PROGRAMS.TD",
         "programs_wm": "PROGRAMS.WM_WD",
         "programs_ref": "PROGRAMS.REF",
+        "programs_wc": "PROGRAMS.WC",
     },
 }
 
@@ -76,6 +77,12 @@ CLIMATE = {
         "preset_mode": {
             "name": "OV.TABS.PROGRAMS_TITLE",
             "state": "PROGRAMS.OV",
+        }
+    },
+    "wine": {
+        "preset_mode": {
+            "name": "WC.NAME",
+            "state": "PROGRAMS.WC",
         }
     },
 }

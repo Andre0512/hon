@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Program"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Șampanie",
+                    "iot_dessert": "Desert",
+                    "iot_fortified": "Structurat",
+                    "iot_rose": "Roze",
+                    "iot_whisky": "Whisky",
+                    "red": "Roșu",
+                    "sparkling": "Spumant",
+                    "white": "Alb"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Evacuare apă",
                             "white_meat": "Carne albă",
                             "white_meat_steam": "Carne albă gătită la abur"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Cramă",
+                        "state": {
+                            "iot_champagne": "Șampanie",
+                            "iot_dessert": "Desert",
+                            "iot_fortified": "Structurat",
+                            "iot_rose": "Roze",
+                            "iot_whisky": "Whisky",
+                            "red": "Roșu",
+                            "sparkling": "Spumant",
+                            "white": "Alb"
                         }
                     }
                 }

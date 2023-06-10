@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Программа"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Шампанское",
+                    "iot_dessert": "Десертное",
+                    "iot_fortified": "Структурированное",
+                    "iot_rose": "Розовое",
+                    "iot_whisky": "Виски",
+                    "red": "Красное",
+                    "sparkling": "Игристое",
+                    "white": "Белое"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Слив воды",
                             "white_meat": "Белое мясо",
                             "white_meat_steam": "Белое мясо на пару"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Винный шкаф",
+                        "state": {
+                            "iot_champagne": "Шампанское",
+                            "iot_dessert": "Десертное",
+                            "iot_fortified": "Структурированное",
+                            "iot_rose": "Розовое",
+                            "iot_whisky": "Виски",
+                            "red": "Красное",
+                            "sparkling": "Игристое",
+                            "white": "Белое"
                         }
                     }
                 }

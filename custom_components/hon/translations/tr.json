@@ -877,6 +877,18 @@
                     "zero_fresh": "0° Fresh"
                 },
                 "name": "Program"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Şampanya",
+                    "iot_dessert": "Tatlı",
+                    "iot_fortified": "Gövdeli",
+                    "iot_rose": "Roze",
+                    "iot_whisky": "Viski",
+                    "red": "Kırmızı",
+                    "sparkling": "Köpüklü",
+                    "white": "Beyaz"
+                }
             }
         },
         "select": {
@@ -1975,6 +1987,23 @@
                             "water_discharge": "Su Tahliyesi",
                             "white_meat": "Beyaz Et",
                             "white_meat_steam": "Buharda beyaz et"
+                        }
+                    }
+                }
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Şarap Mahzeni",
+                        "state": {
+                            "iot_champagne": "Şampanya",
+                            "iot_dessert": "Tatlı",
+                            "iot_fortified": "Gövdeli",
+                            "iot_rose": "Roze",
+                            "iot_whisky": "Viski",
+                            "red": "Kırmızı",
+                            "sparkling": "Köpüklü",
+                            "white": "Beyaz"
                         }
                     }
                 }
