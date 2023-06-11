@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Isključeno",
                     "avoid_touch": "Izbjegavajte dodir",
-                    "follow_touch": "Pratite"
+                    "follow_touch": "Pratite",
+                    "unknown": "unknown"
                 },
                 "name": "Eko-pilot"
             },

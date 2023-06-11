@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Désactivé",
                     "avoid_touch": "Évitez de toucher",
-                    "follow_touch": "Suivi"
+                    "follow_touch": "Suivi",
+                    "unknown": "unknown"
                 },
                 "name": "Pilote éco"
             },

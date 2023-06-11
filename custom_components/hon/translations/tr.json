@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Kapali",
                     "avoid_touch": "Dokunmaktan kaçının",
-                    "follow_touch": "Takip et"
+                    "follow_touch": "Takip et",
+                    "unknown": "unknown"
                 },
                 "name": "Eko pilot"
             },

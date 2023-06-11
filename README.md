@@ -164,6 +164,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Filter Replacement |  | `binary_sensor` | `filterChangeStatusLocal` |
 | In Air Temperature Outdoor | `thermometer` | `sensor` | `tempInAirOutdoor` |
 | Indoor Temperature | `thermometer` | `sensor` | `tempIndoor` |
+| Machine Status | `information` | `sensor` | `machMode` |
 | Outdoor Temperature | `thermometer` | `sensor` | `tempOutdoor` |
 | Program |  | `select` | `startProgram.program` |
 | Program | `play` | `sensor` | `programName` |

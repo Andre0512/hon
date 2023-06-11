@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Aus",
                     "avoid_touch": "Berührung vermeiden",
-                    "follow_touch": "Folgen"
+                    "follow_touch": "Folgen",
+                    "unknown": "unknown"
                 },
                 "name": "Eco Pilot"
             },

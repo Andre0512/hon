@@ -878,7 +878,8 @@
                 "state": {
                     "touch_off": "Spento",
                     "avoid_touch": "Avoid touch",
-                    "follow_touch": "Segui"
+                    "follow_touch": "Segui",
+                    "unknown": "unknown"
                 },
                 "name": "Eco pilot"
             },

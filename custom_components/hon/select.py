@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass
+from typing import Dict, List
 
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
@@ -9,8 +10,8 @@ from homeassistant.const import UnitOfTemperature, UnitOfTime, REVOLUTIONS_PER_M
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 from pyhon.appliance import HonAppliance
-from pyhon.parameter.fixed import HonParameterFixed
 
+from . import const
 from .const import DOMAIN
 from .hon import HonEntity, unique_entities
 
@@ -19,12 +20,13 @@ _LOGGER = logging.getLogger(__name__)
 
 @dataclass
 class HonSelectEntityDescription(SelectEntityDescription):
-    pass
+    option_list: Dict[str, str] = None
 
 
 @dataclass
 class HonConfigSelectEntityDescription(SelectEntityDescription):
     entity_category: EntityCategory = EntityCategory.CONFIG
+    option_list: Dict[str, str] = None
 
 
 SELECTS = {
@@ -67,6 +69,7 @@ SELECTS = {
             name="Dry level",
             icon="mdi:hair-dryer",
             translation_key="dry_levels",
+            option_list=const.TUMBLE_DRYER_DRY_LEVEL,
         ),
     ),
     "OV": (
@@ -115,6 +118,7 @@ SELECTS = {
             name="Eco Pilot",
             icon="mdi:run",
             translation_key="eco_pilot",
+            option_list=const.AC_HUMAN_SENSE,
         ),
     ),
     "REF": (
@@ -158,13 +162,6 @@ class HonSelectEntity(HonEntity, SelectEntity):
     def __init__(self, hass, entry, device: HonAppliance, description) -> None:
         super().__init__(hass, entry, device, description)
 
-        if not (setting := self._device.settings.get(description.key)):
-            self._attr_options: list[str] = []
-        elif not isinstance(setting, HonParameterFixed):
-            self._attr_options: list[str] = setting.values
-        else:
-            self._attr_options: list[str] = [setting.value]
-
     @property
     def current_option(self) -> str | None:
         value = self._device.settings.get(self.entity_description.key)
@@ -183,12 +180,20 @@ class HonSelectEntity(HonEntity, SelectEntity):
         setting = self._device.settings.get(self.entity_description.key)
         if setting is None:
             self._attr_available = False
-            self._attr_options: list[str] = []
-            self._attr_native_value = None
+            self._attr_options: List[str] = []
+            value = None
         else:
             self._attr_available = True
-            self._attr_options: list[str] = setting.values
-            self._attr_native_value = setting.value
+            self._attr_options: List[str] = setting.values
+            value = setting.value
+        if self.entity_description.option_list is not None:
+            self._attr_options = [
+                self.entity_description.option_list.get(k, k)
+                for k in self._attr_options
+            ]
+            if value is not None:
+                value = self.entity_description.option_list.get(value, value)
+        self._attr_native_value = value
         if update:
             self.async_write_ha_state()
 

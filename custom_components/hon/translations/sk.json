@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Off (Vypnúť)",
                     "avoid_touch": "Nedotýkať sa",
-                    "follow_touch": "Nasledovať"
+                    "follow_touch": "Nasledovať",
+                    "unknown": "unknown"
                 },
                 "name": "Ekologický pilot"
             },

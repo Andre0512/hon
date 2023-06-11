@@ -1,6 +1,6 @@
 import logging
 from dataclasses import dataclass
-from typing import List
+from typing import Dict
 
 from homeassistant.components.sensor import (
     SensorEntity,
@@ -21,7 +21,6 @@ from homeassistant.const import (
 )
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
-from pyhon.appliance import HonAppliance
 
 from . import const
 from .const import DOMAIN
@@ -33,11 +32,12 @@ _LOGGER = logging.getLogger(__name__)
 @dataclass
 class HonConfigSensorEntityDescription(SensorEntityDescription):
     entity_category: EntityCategory = EntityCategory.CONFIG
+    option_list: Dict[str, str] = None
 
 
 @dataclass
 class HonSensorEntityDescription(SensorEntityDescription):
-    option_list: List = None
+    option_list: Dict[str, str] = None
 
 
 SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
@@ -155,7 +155,9 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             key="dirtyLevel",
             name="Dirt level",
             icon="mdi:liquid-spot",
+            device_class=SensorDeviceClass.ENUM,
             translation_key="dirt_level",
+            option_list=const.DIRTY_LEVEL,
         ),
         HonConfigSensorEntityDescription(
             key="startProgram.suggestedLoadW",
@@ -256,14 +258,18 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         HonConfigSensorEntityDescription(
             key="startProgram.steamLevel",
             name="Steam level",
+            device_class=SensorDeviceClass.ENUM,
             icon="mdi:smoke",
             translation_key="steam_level",
+            option_list=const.STEAM_LEVEL,
         ),
         HonSensorEntityDescription(
             key="steamLevel",
             name="Steam level",
             icon="mdi:smoke",
+            device_class=SensorDeviceClass.ENUM,
             translation_key="steam_level",
+            option_list=const.STEAM_LEVEL,
         ),
         HonConfigSensorEntityDescription(
             key="steamType",
@@ -494,6 +500,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             device_class=SensorDeviceClass.ENUM,
             translation_key="programs_ac",
         ),
+        HonSensorEntityDescription(
+            key="machMode",
+            name="Machine Status",
+            icon="mdi:information",
+            device_class=SensorDeviceClass.ENUM,
+            translation_key="mach_modes_ac",
+            option_list=const.AC_MACH_MODE,
+        ),
     ),
     "REF": (
         HonSensorEntityDescription(
@@ -696,20 +710,16 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 class HonSensorEntity(HonEntity, SensorEntity):
     entity_description: HonSensorEntityDescription
 
-    def __init__(self, hass, entry, device: HonAppliance, description):
-        super().__init__(hass, entry, device, description)
-        if description.key == "programName":
-            self._attr_options = self._device.settings.get(
-                "startProgram.program"
-            ).values + ["No Program"]
-        elif description.option_list is not None:
-            self._attr_options = list(description.option_list.values())
-
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
         value = self._device.get(self.entity_description.key, "")
-        if self.entity_description.option_list is not None:
-            value = self.entity_description.option_list[value]
+        if self.entity_description.key == "programName":
+            self._attr_options = self._device.settings.get(
+                "startProgram.program"
+            ).values + ["No Program"]
+        elif self.entity_description.option_list is not None:
+            self._attr_options = list(self.entity_description.option_list.values())
+            value = self.entity_description.option_list.get(value, value)
         if not value and self.entity_description.state_class is not None:
             self._attr_native_value = 0
         self._attr_native_value = value
@@ -725,12 +735,16 @@ class HonConfigSensorEntity(HonEntity, SensorEntity):
         value = self._device.settings.get(self.entity_description.key, None)
         if self.entity_description.state_class is not None:
             if value and value.value:
-                self._attr_native_value = (
+                value = (
                     float(value.value) if "." in str(value.value) else int(value.value)
                 )
             else:
-                self._attr_native_value = 0
+                value = 0
         else:
-            self._attr_native_value = value.value
+            value = value.value
+        if self.entity_description.option_list is not None and not value == 0:
+            self._attr_options = list(self.entity_description.option_list.values())
+            value = self.entity_description.option_list.get(value, value)
+        self._attr_native_value = value
         if update:
             self.async_write_ha_state()

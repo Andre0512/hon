@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Vypnuto",
                     "avoid_touch": "Vyhybání",
-                    "follow_touch": "Sledování"
+                    "follow_touch": "Sledování",
+                    "unknown": "unknown"
                 },
                 "name": "Senzor osob"
             },

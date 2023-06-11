@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "ВЫКЛ",
                     "avoid_touch": "Не прикасайтесь",
-                    "follow_touch": "Следование"
+                    "follow_touch": "Следование",
+                    "unknown": "unknown"
                 },
                 "name": "Eco pilot"
             },

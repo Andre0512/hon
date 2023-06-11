@@ -128,6 +128,7 @@ TUMBLE_DRYER_PR_PHASE = {
 }
 
 DIRTY_LEVEL = {
+    "0": "unknown",
     "1": "little",
     "2": "normal",
     "3": "very",
@@ -185,4 +186,5 @@ AC_HUMAN_SENSE = {
     "0": "touch_off",
     "1": "avoid_touch",
     "2": "follow_touch",
+    "3": "unknown",
 }

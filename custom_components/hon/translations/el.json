@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Απενεργοποιηση",
                     "avoid_touch": "Αποφύγετε την αφή",
-                    "follow_touch": "Σας ακολουθεί"
+                    "follow_touch": "Σας ακολουθεί",
+                    "unknown": "unknown"
                 },
                 "name": "Οικολογικός πιλότος"
             },

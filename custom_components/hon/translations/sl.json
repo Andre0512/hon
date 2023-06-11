@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Izklop",
                     "avoid_touch": "Brez dotika",
-                    "follow_touch": "Sledenje"
+                    "follow_touch": "Sledenje",
+                    "unknown": "unknown"
                 },
                 "name": "Eko pilot"
             },

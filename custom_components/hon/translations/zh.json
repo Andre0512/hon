@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "关闭",
                     "avoid_touch": "避免触摸",
-                    "follow_touch": "跟随"
+                    "follow_touch": "跟随",
+                    "unknown": "unknown"
                 },
                 "name": "节能模式"
             },

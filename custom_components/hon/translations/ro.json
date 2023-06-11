@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Oprit",
                     "avoid_touch": "Evitați atingerea",
-                    "follow_touch": "Urmărire"
+                    "follow_touch": "Urmărire",
+                    "unknown": "unknown"
                 },
                 "name": "Eco pilot"
             },

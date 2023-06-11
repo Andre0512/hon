@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Wyłącz",
                     "avoid_touch": "Unikanie kontaktu",
-                    "follow_touch": "Podążanie"
+                    "follow_touch": "Podążanie",
+                    "unknown": "unknown"
                 },
                 "name": "Eco pilot"
             },

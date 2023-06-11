@@ -873,7 +873,8 @@
                 "state": {
                     "touch_off": "Uit",
                     "avoid_touch": "Voorkom aanraking",
-                    "follow_touch": "Volgen"
+                    "follow_touch": "Volgen",
+                    "unknown": "unknown"
                 },
                 "name": "Eco pilot"
             },
