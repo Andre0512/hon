@@ -3,324 +3,72 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "就绪",
-                    "1": "就绪",
-                    "3": "暂停",
-                    "4": "已计划",
-                    "5": "已计划",
-                    "6": "错误",
-                    "7": "就绪",
-                    "2": "程序运行中",
-                    "8": "Test",
-                    "9": "正在停止循环..."
+                    "ready": "就绪",
+                    "running": "程序运行中",
+                    "pause": "暂停",
+                    "scheduled": "已计划",
+                    "error": "错误",
+                    "test": "Test",
+                    "ending": "正在停止循环..."
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "自动",
+                    "cool": "冷却",
+                    "dry": "烘干",
+                    "heat": "加热",
+                    "fan": "风扇"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "就绪",
-                    "1": "洗涤",
-                    "2": "洗涤",
-                    "3": "甩干",
-                    "4": "漂洗",
-                    "5": "漂洗",
-                    "6": "漂洗",
-                    "7": "烘干",
-                    "9": "蒸汽",
-                    "10": "就绪",
-                    "11": "甩干",
-                    "12": "正在称重 ",
-                    "13": "正在称重 ",
-                    "14": "洗涤",
-                    "15": "洗涤",
-                    "16": "洗涤",
-                    "17": "漂洗",
-                    "18": "漂洗",
-                    "19": "已计划",
-                    "20": "保持清新",
-                    "24": "清新",
-                    "25": "洗涤",
-                    "26": "加热",
-                    "27": "洗涤"
+                    "ready": "就绪",
+                    "spin": "甩干",
+                    "rinse": "漂洗",
+                    "drying": "烘干",
+                    "steam": "蒸汽",
+                    "weighting": "正在称重 ",
+                    "scheduled": "已计划",
+                    "tumbling": "保持清新",
+                    "refresh": "清新",
+                    "heating": "加热",
+                    "washing": "洗涤"
                 },
                 "name": "阶段"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "就绪",
-                    "1": "正在烘干",
-                    "2": "烘干",
-                    "3": "冷却",
-                    "13": "冷却",
-                    "14": "正在烘干",
-                    "15": "正在烘干",
-                    "16": "冷却",
-                    "18": "保持清新",
-                    "19": "烘干",
-                    "20": "烘干",
-                    "11": "就绪",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "就绪",
+                    "heat_stroke": "正在烘干",
+                    "drying": "烘干",
+                    "cooldown": "冷却",
+                    "unknown": "unknown",
+                    "tumbling": "保持清新"
                 },
                 "name": "阶段"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "就绪",
-                    "1": "预洗",
-                    "2": "洗涤",
-                    "3": "漂洗",
-                    "4": "烘干",
-                    "5": "就绪",
-                    "6": "Hot rinse"
+                    "ready": "就绪",
+                    "prewash": "预洗",
+                    "washing": "洗涤",
+                    "rinse": "漂洗",
+                    "drying": "烘干",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "阶段"
             },
             "dry_levels": {
                 "state": {
-                    "0": "不烘干",
-                    "1": "熨烫",
-                    "2": "衣柜就绪",
-                    "3": "衣柜就绪",
-                    "4": "特干",
-                    "12": "熨烫",
-                    "13": "衣柜就绪",
-                    "14": "可穿",
-                    "15": "特干",
-                    "11": "不烘干"
+                    "no_dry": "不烘干",
+                    "iron_dry": "熨烫",
+                    "no_dry_iron": "衣柜就绪",
+                    "cupboard_dry": "衣柜就绪",
+                    "extra_dry": "特干",
+                    "ready_to_wear": "可穿"
                 },
                 "name": "烘干水平"
-            },
-            "anti_crease": {
-                "name": "抗皱"
-            },
-            "power": {
-                "name": "功率级"
-            },
-            "remaining_time": {
-                "name": "剩余时间"
-            },
-            "temperature": {
-                "name": "温度"
-            },
-            "water_efficiency": {
-                "name": "用水效率"
-            },
-            "water_saving": {
-                "name": "节水"
-            },
-            "duration": {
-                "name": "持续时间"
-            },
-            "target_temperature": {
-                "name": "目标温度"
-            },
-            "spin_speed": {
-                "name": "甩干"
-            },
-            "steam_leve": {
-                "name": "蒸汽档位"
-            },
-            "dirt_level": {
-                "name": "脏污程度"
-            },
-            "delay_time": {
-                "name": "延时启动"
-            },
-            "dry_time": {
-                "name": "烘干时间"
-            },
-            "suggested_load": {
-                "name": "负载能力"
-            },
-            "energy_label": {
-                "name": "能效"
-            },
-            "det_dust": {
-                "name": "洗衣粉"
-            },
-            "det_liquid": {
-                "name": "洗衣液"
-            },
-            "errors": {
-                "name": "错误"
-            },
-            "programs": {
-                "name": "当前程序"
-            },
-            "cycles_total": {
-                "name": "循环 总计"
-            },
-            "energy_total": {
-                "name": "能耗 总计"
-            },
-            "water_total": {
-                "name": "用水效率 总计"
-            },
-            "energy_current": {
-                "name": "能耗 Current"
-            },
-            "water_current": {
-                "name": "用水效率 Current"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "自动",
-                    "1": "冷却",
-                    "2": "冷却",
-                    "3": "烘干",
-                    "4": "加热",
-                    "5": "风扇",
-                    "6": "风扇"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "active_dry": "主动干燥",
-                    "allergy_care": "Antiallergy",
-                    "all_in_one": "All in One",
-                    "antiallergy": "抗过敏",
-                    "anti_odours": "除味",
-                    "auto_care": "自动护理",
-                    "baby": "婴儿服",
-                    "bed_quilt": "床被",
-                    "care_30": "护理 30",
-                    "care_45": "护理 45",
-                    "care_59": "护理 59",
-                    "coloured": "彩色衣物",
-                    "daily_45_min": "每日 45 分钟",
-                    "daily_perfect_59_min": "每日完美 59 分钟",
-                    "darks_and_coloured": "深色和彩色衣物",
-                    "delicates": "精细织物",
-                    "duvet": "羽绒服",
-                    "eco": "生态棉",
-                    "ecospeed_cottons": "经济速度棉质衣物",
-                    "ecospeed_delicates": "经济速度精致衣物",
-                    "ecospeed_mixed": "经济速度混合衣物",
-                    "extra_hygiene": "额外卫生",
-                    "fitness": "健身衣物",
-                    "fresh_care": "清新护理",
-                    "genius": "Genius",
-                    "hqd_baby_care": "Baby Care",
-                    "hqd_bath_towel": "毛巾",
-                    "hqd_bed_sheets": "床单",
-                    "hqd_bulky": "大件物品",
-                    "hqd_casual": "休闲",
-                    "hqd_cold_wind_30": "凉风 30 分钟",
-                    "hqd_cold_wind_timing": "凉风 ",
-                    "hqd_cotton": "棉布",
-                    "hqd_curtain": "窗帘",
-                    "hqd_delicate": "精致衣物",
-                    "hqd_diaper": "纸尿裤",
-                    "hqd_duvet": "羽绒被",
-                    "hqd_feather": "羽绒服",
-                    "hqd_hot_wind_timing": "热空气",
-                    "hqd_hygienic": "卫生保护",
-                    "hqd_i_refresh": "I-Refresh",
-                    "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_jacket": "夹克",
-                    "hqd_jeans": "牛仔裤",
-                    "hqd_luxury": "奢侈衣物",
-                    "hqd_mix": "混合材质",
-                    "hqd_night_dry": "过夜烘干",
-                    "hqd_outdoor": "Outdoor",
-                    "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "快洗 20",
-                    "hqd_quick_30": "快洗 30",
-                    "hqd_quick_dry": "快速干燥",
-                    "hqd_quilt": "棉被",
-                    "hqd_refresh": "清新",
-                    "hqd_school_uniform": "校服",
-                    "hqd_shirt": "衬衫",
-                    "hqd_shoes": "鞋子",
-                    "hqd_silk": "丝绸",
-                    "hqd_sports": "运动装",
-                    "hqd_synthetics": "合成纤维",
-                    "hqd_timer": "定时",
-                    "hqd_towel": "毛巾",
-                    "hqd_underwear": "内衣",
-                    "hqd_warm_up": "加热",
-                    "hqd_wool": "羊毛衣物",
-                    "hqd_working_suit": "工作服",
-                    "hygiene": "卫生",
-                    "iot_checkup": "检测",
-                    "iot_dry_anti_mites": "除螨",
-                    "iot_dry_baby": "婴儿服",
-                    "iot_dry_backpacks": "背包",
-                    "iot_dry_bathrobe": "浴衣",
-                    "iot_dry_bed_linen": "被单枕套",
-                    "iot_dry_bed_quilt": "床被",
-                    "iot_dry_cotton": "棉布",
-                    "iot_dry_cuddly_toys": "毛绒玩具",
-                    "iot_dry_curtains": "窗帘",
-                    "iot_dry_dehumidifier": "除湿机",
-                    "iot_dry_delicates": "精细织物",
-                    "iot_dry_delicate_tablecloths": "精细台布",
-                    "iot_dry_denim_jeans": "牛仔布 - 牛仔裤",
-                    "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "羽绒服",
-                    "iot_dry_easy_iron_cotton": "Super Easy Iron",
-                    "iot_dry_easy_iron_synthetics": "超级易熨合成织物",
-                    "iot_dry_gym_fit": "健身服",
-                    "iot_dry_lingerie": "女性内衣",
-                    "iot_dry_mixed": "混合材质",
-                    "iot_dry_playsuits": "运动装",
-                    "iot_dry_rapid_30": "快速 30",
-                    "iot_dry_rapid_59": "快速 59’",
-                    "iot_dry_refresh": "Refresh",
-                    "iot_dry_regenerates_waterproof": "防水布",
-                    "iot_dry_relax_creases": "Relax Creases",
-                    "iot_dry_shirts": "衬衫",
-                    "iot_dry_small_load": "Small Load",
-                    "iot_dry_swimsuits_and_bikinis": "泳衣",
-                    "iot_dry_synthetics": "合成纤维衣物",
-                    "iot_dry_synthetic_dry": "合成纤维烘干",
-                    "iot_dry_tablecloths": "台布",
-                    "iot_dry_technical_fabrics": "弹性织物",
-                    "iot_dry_warm_embrace": "衣物蓬松",
-                    "iot_dry_wool": "Woolmark",
-                    "jeans": "牛仔裤",
-                    "mix_and_dry": "混合化纤洗干一体",
-                    "pets": "宠物",
-                    "pre_iron": "熨烫前",
-                    "rapid_30": "快速 30",
-                    "rapid_45": "快速 45 分钟",
-                    "rapid_59": "完美快洗59′",
-                    "refresh": "清新",
-                    "relax_creases": "Relax Creases",
-                    "saving_30_min": "节约 30 分钟",
-                    "shirts": "衬衫",
-                    "shoes": "鞋子",
-                    "small_load": "Small Load",
-                    "soft_care": "柔软保养",
-                    "sport_plus": "Sport Plus",
-                    "super_easy_iron_misti": "超易熨烫混合衣物",
-                    "super_easy_iron_xxl": "超易熨烫超大衣物",
-                    "super_fast_cottons": "Super Fast Cottons",
-                    "super_fast_delicates": "Super Fast Delicates",
-                    "synthetics": "合成纤维衣物",
-                    "total_care": "Total Care",
-                    "trainers": "运动鞋",
-                    "ultra_care": "Ultra Care",
-                    "waterproof_revitalize": "Waterproof Revitalize",
-                    "whites": "浅色衣物",
-                    "wool": "烘干羊毛衣物",
-                    "woolmark": "Woolmark",
-                    "xxl_load": "XXL Load",
-                    "zoom_59": "缩放 59"
-                },
-                "name": "程序"
-            },
-            "room_temperature": {
-                "name": "室温"
-            },
-            "humidity": {
-                "name": "湿度"
-            },
-            "freezer_temp": {
-                "name": "冷藏室温度"
-            },
-            "fridge_temp": {
-                "name": "冰箱温度"
             },
             "programs_ac": {
                 "state": {
@@ -545,6 +293,143 @@
                 },
                 "name": "程序"
             },
+            "programs_td": {
+                "state": {
+                    "active_dry": "主动干燥",
+                    "allergy_care": "Antiallergy",
+                    "all_in_one": "All in One",
+                    "antiallergy": "抗过敏",
+                    "anti_odours": "除味",
+                    "auto_care": "自动护理",
+                    "baby": "婴儿服",
+                    "bed_quilt": "床被",
+                    "care_30": "护理 30",
+                    "care_45": "护理 45",
+                    "care_59": "护理 59",
+                    "coloured": "彩色衣物",
+                    "daily_45_min": "每日 45 分钟",
+                    "daily_perfect_59_min": "每日完美 59 分钟",
+                    "darks_and_coloured": "深色和彩色衣物",
+                    "delicates": "精细织物",
+                    "duvet": "羽绒服",
+                    "eco": "生态棉",
+                    "ecospeed_cottons": "经济速度棉质衣物",
+                    "ecospeed_delicates": "经济速度精致衣物",
+                    "ecospeed_mixed": "经济速度混合衣物",
+                    "extra_hygiene": "额外卫生",
+                    "fitness": "健身衣物",
+                    "fresh_care": "清新护理",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "毛巾",
+                    "hqd_bed_sheets": "床单",
+                    "hqd_bulky": "大件物品",
+                    "hqd_casual": "休闲",
+                    "hqd_cold_wind_30": "凉风 30 分钟",
+                    "hqd_cold_wind_timing": "凉风 ",
+                    "hqd_cotton": "棉布",
+                    "hqd_curtain": "窗帘",
+                    "hqd_delicate": "精致衣物",
+                    "hqd_diaper": "纸尿裤",
+                    "hqd_duvet": "羽绒被",
+                    "hqd_feather": "羽绒服",
+                    "hqd_hot_wind_timing": "热空气",
+                    "hqd_hygienic": "卫生保护",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_jacket": "夹克",
+                    "hqd_jeans": "牛仔裤",
+                    "hqd_luxury": "奢侈衣物",
+                    "hqd_mix": "混合材质",
+                    "hqd_night_dry": "过夜烘干",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious cure",
+                    "hqd_quick_20": "快洗 20",
+                    "hqd_quick_30": "快洗 30",
+                    "hqd_quick_dry": "快速干燥",
+                    "hqd_quilt": "棉被",
+                    "hqd_refresh": "清新",
+                    "hqd_school_uniform": "校服",
+                    "hqd_shirt": "衬衫",
+                    "hqd_shoes": "鞋子",
+                    "hqd_silk": "丝绸",
+                    "hqd_sports": "运动装",
+                    "hqd_synthetics": "合成纤维",
+                    "hqd_timer": "定时",
+                    "hqd_towel": "毛巾",
+                    "hqd_underwear": "内衣",
+                    "hqd_warm_up": "加热",
+                    "hqd_wool": "羊毛衣物",
+                    "hqd_working_suit": "工作服",
+                    "hygiene": "卫生",
+                    "iot_checkup": "检测",
+                    "iot_dry_anti_mites": "除螨",
+                    "iot_dry_baby": "婴儿服",
+                    "iot_dry_backpacks": "背包",
+                    "iot_dry_bathrobe": "浴衣",
+                    "iot_dry_bed_linen": "被单枕套",
+                    "iot_dry_bed_quilt": "床被",
+                    "iot_dry_cotton": "棉布",
+                    "iot_dry_cuddly_toys": "毛绒玩具",
+                    "iot_dry_curtains": "窗帘",
+                    "iot_dry_dehumidifier": "除湿机",
+                    "iot_dry_delicates": "精细织物",
+                    "iot_dry_delicate_tablecloths": "精细台布",
+                    "iot_dry_denim_jeans": "牛仔布 - 牛仔裤",
+                    "iot_dry_down_jacket": "Jacket",
+                    "iot_dry_duvet": "羽绒服",
+                    "iot_dry_easy_iron_cotton": "Super Easy Iron",
+                    "iot_dry_easy_iron_synthetics": "超级易熨合成织物",
+                    "iot_dry_gym_fit": "健身服",
+                    "iot_dry_lingerie": "女性内衣",
+                    "iot_dry_mixed": "混合材质",
+                    "iot_dry_playsuits": "运动装",
+                    "iot_dry_rapid_30": "快速 30",
+                    "iot_dry_rapid_59": "快速 59’",
+                    "iot_dry_refresh": "Refresh",
+                    "iot_dry_regenerates_waterproof": "防水布",
+                    "iot_dry_relax_creases": "Relax Creases",
+                    "iot_dry_shirts": "衬衫",
+                    "iot_dry_small_load": "Small Load",
+                    "iot_dry_swimsuits_and_bikinis": "泳衣",
+                    "iot_dry_synthetics": "合成纤维衣物",
+                    "iot_dry_synthetic_dry": "合成纤维烘干",
+                    "iot_dry_tablecloths": "台布",
+                    "iot_dry_technical_fabrics": "弹性织物",
+                    "iot_dry_warm_embrace": "衣物蓬松",
+                    "iot_dry_wool": "Woolmark",
+                    "jeans": "牛仔裤",
+                    "mix_and_dry": "混合化纤洗干一体",
+                    "pets": "宠物",
+                    "pre_iron": "熨烫前",
+                    "rapid_30": "快速 30",
+                    "rapid_45": "快速 45 分钟",
+                    "rapid_59": "完美快洗59′",
+                    "refresh": "清新",
+                    "relax_creases": "Relax Creases",
+                    "saving_30_min": "节约 30 分钟",
+                    "shirts": "衬衫",
+                    "shoes": "鞋子",
+                    "small_load": "Small Load",
+                    "soft_care": "柔软保养",
+                    "sport_plus": "Sport Plus",
+                    "super_easy_iron_misti": "超易熨烫混合衣物",
+                    "super_easy_iron_xxl": "超易熨烫超大衣物",
+                    "super_fast_cottons": "Super Fast Cottons",
+                    "super_fast_delicates": "Super Fast Delicates",
+                    "synthetics": "合成纤维衣物",
+                    "total_care": "Total Care",
+                    "trainers": "运动鞋",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Waterproof Revitalize",
+                    "whites": "浅色衣物",
+                    "wool": "烘干羊毛衣物",
+                    "woolmark": "Woolmark",
+                    "xxl_load": "XXL Load",
+                    "zoom_59": "缩放 59"
+                },
+                "name": "程序"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_coloured_cottons": "20° 彩色和棉花",
@@ -556,7 +441,7 @@
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "一体化 49'",
                     "all_in_one_59": "一体化 59'",
-                    "all_in_one_59_steam": "活化洗涤 + 蒸汽",
+                    "all_in_one_59_steam": "一体化 59' + 蒸汽",
                     "autocare": "自动护理",
                     "autoclean": "滚筒清洁",
                     "baby_60": "婴儿服60℃",
@@ -622,7 +507,7 @@
                     "iot_active_steam": "蒸汽",
                     "iot_active_wash_steam": "活化洗涤",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "活化洗涤 + 蒸汽",
+                    "iot_all_in_one_59_steam": "一体化 59' + 蒸汽",
                     "iot_checkup": "检测",
                     "iot_colour_59_steam": "Coloureds 59' + 蒸汽",
                     "iot_cottons_steam": "棉质 + 蒸汽",
@@ -889,9 +774,148 @@
                     "sparkling": "起泡酒",
                     "white": "白葡萄酒"
                 }
+            },
+            "dry_time": {
+                "name": "烘干时间"
+            },
+            "power": {
+                "name": "功率级"
+            },
+            "remaining_time": {
+                "name": "剩余时间"
+            },
+            "temperature": {
+                "name": "温度"
+            },
+            "water_efficiency": {
+                "name": "用水效率"
+            },
+            "water_saving": {
+                "name": "节水"
+            },
+            "duration": {
+                "name": "持续时间"
+            },
+            "target_temperature": {
+                "name": "目标温度"
+            },
+            "spin_speed": {
+                "name": "甩干"
+            },
+            "steam_leve": {
+                "name": "蒸汽档位"
+            },
+            "dirt_level": {
+                "name": "脏污程度"
+            },
+            "delay_time": {
+                "name": "延时启动"
+            },
+            "suggested_load": {
+                "name": "负载能力"
+            },
+            "energy_label": {
+                "name": "能效"
+            },
+            "det_dust": {
+                "name": "洗衣粉"
+            },
+            "det_liquid": {
+                "name": "洗衣液"
+            },
+            "errors": {
+                "name": "错误"
+            },
+            "programs": {
+                "name": "当前程序"
+            },
+            "room_temperature": {
+                "name": "室温"
+            },
+            "humidity": {
+                "name": "湿度"
+            },
+            "cycles_total": {
+                "name": "循环 总计"
+            },
+            "energy_total": {
+                "name": "能耗 总计"
+            },
+            "water_total": {
+                "name": "用水效率 总计"
+            },
+            "energy_current": {
+                "name": "能耗 Current"
+            },
+            "water_current": {
+                "name": "用水效率 Current"
+            },
+            "freezer_temp": {
+                "name": "冷藏室温度"
+            },
+            "fridge_temp": {
+                "name": "冰箱温度"
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "不烘干",
+                    "iron_dry": "熨烫",
+                    "no_dry_iron": "衣柜就绪",
+                    "cupboard_dry": "衣柜就绪",
+                    "extra_dry": "特干",
+                    "ready_to_wear": "可穿"
+                },
+                "name": "烘干水平"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "关闭",
+                    "avoid_touch": "避免触摸",
+                    "follow_touch": "跟随"
+                },
+                "name": "节能模式"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "高",
+                    "mid": "中   ",
+                    "low": "低",
+                    "auto": "自动"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "冰箱",
+                    "freezer": "冷藏箱",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "冰箱 & 冷藏箱"
+                },
+                "name": "区域"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10°C 加热功能",
+                    "iot_auto": "自动",
+                    "iot_cool": "冷却",
+                    "iot_dry": "烘干",
+                    "iot_fan": "风扇",
+                    "iot_heat": "加热",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "自净",
+                    "iot_self_clean": "自洁",
+                    "iot_self_clean_56": "无菌清洁 56°C",
+                    "iot_simple_start": "立即启动",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + 自动",
+                    "iot_uv_and_cool": "UV + 制冷",
+                    "iot_uv_and_dry": "UV + 减湿器",
+                    "iot_uv_and_fan": "UV + 风扇",
+                    "iot_uv_and_heat": "UV + 加热"
+                },
+                "name": "程序"
+            },
             "programs_dw": {
                 "state": {
                     "59_min": "Rapid 59'",
@@ -1241,7 +1265,7 @@
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "一体化 49'",
                     "all_in_one_59": "一体化 59'",
-                    "all_in_one_59_steam": "活化洗涤 + 蒸汽",
+                    "all_in_one_59_steam": "一体化 59' + 蒸汽",
                     "autocare": "自动护理",
                     "autoclean": "滚筒清洁",
                     "baby_60": "婴儿服60℃",
@@ -1307,7 +1331,7 @@
                     "iot_active_steam": "蒸汽",
                     "iot_active_wash_steam": "活化洗涤",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "活化洗涤 + 蒸汽",
+                    "iot_all_in_one_59_steam": "一体化 59' + 蒸汽",
                     "iot_checkup": "检测",
                     "iot_colour_59_steam": "Coloureds 59' + 蒸汽",
                     "iot_cottons_steam": "棉质 + 蒸汽",
@@ -1540,69 +1564,6 @@
                 },
                 "name": "程序"
             },
-            "dry_levels": {
-                "state": {
-                    "0": "不烘干",
-                    "1": "熨烫",
-                    "2": "衣柜就绪",
-                    "3": "衣柜就绪",
-                    "4": "特干",
-                    "12": "熨烫",
-                    "13": "衣柜就绪",
-                    "14": "可穿",
-                    "15": "特干",
-                    "11": "不烘干"
-                },
-                "name": "烘干水平"
-            },
-            "spin_speed": {
-                "name": "甩干"
-            },
-            "temperature": {
-                "name": "温度"
-            },
-            "dry_time": {
-                "name": "烘干时间"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "关闭",
-                    "1": "避免触摸",
-                    "2": "跟随"
-                },
-                "name": "节能模式"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "高",
-                    "2": "中   ",
-                    "3": "低",
-                    "4": "自动",
-                    "5": "自动"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_10_heating": "10°C 加热功能",
-                    "iot_auto": "自动",
-                    "iot_cool": "冷却",
-                    "iot_dry": "烘干",
-                    "iot_fan": "风扇",
-                    "iot_heat": "加热",
-                    "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "自净",
-                    "iot_self_clean": "自洁",
-                    "iot_self_clean_56": "无菌清洁 56°C",
-                    "iot_simple_start": "立即启动",
-                    "iot_uv": "UV",
-                    "iot_uv_and_auto": "UV + 自动",
-                    "iot_uv_and_cool": "UV + 制冷",
-                    "iot_uv_and_dry": "UV + 减湿器",
-                    "iot_uv_and_fan": "UV + 风扇",
-                    "iot_uv_and_heat": "UV + 加热"
-                },
-                "name": "程序"
-            },
             "programs_ref": {
                 "state": {
                     "auto_set": "AUTO-SET（自动设置）",
@@ -1626,17 +1587,17 @@
                 },
                 "name": "程序"
             },
+            "dry_time": {
+                "name": "烘干时间"
+            },
+            "spin_speed": {
+                "name": "甩干"
+            },
+            "temperature": {
+                "name": "温度"
+            },
             "remaining_time": {
                 "name": "剩余时间"
-            },
-            "ref_zones": {
-                "state": {
-                    "fridge": "冰箱",
-                    "freezer": "冷藏箱",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "冰箱 & 冷藏箱"
-                },
-                "name": "区域"
             }
         },
         "switch": {
@@ -1724,17 +1685,14 @@
             "acqua_plus": {
                 "name": "Acquaplus"
             },
-            "auto_dose": {
-                "name": "自动定量"
-            },
-            "good_night": {
-                "name": "晚安"
-            },
             "auto_dose_softener": {
                 "name": "自动定量 柔软剂"
             },
             "auto_dose_detergent": {
                 "name": "自动定量 洗涤剂"
+            },
+            "good_night": {
+                "name": "晚安"
             },
             "auto_set": {
                 "name": "自动设置"
@@ -1768,26 +1726,11 @@
             "anti_crease": {
                 "name": "抗皱"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Acquaplus"
             },
             "spin_speed": {
                 "name": "甩干"
-            },
-            "programs_dw": {
-                "name": "程序"
-            },
-            "programs_ih": {
-                "name": "程序"
-            },
-            "programs_ov": {
-                "name": "程序"
-            },
-            "programs_td": {
-                "name": "程序"
-            },
-            "programs_wm": {
-                "name": "程序"
             },
             "still_hot": {
                 "name": "仍然热"
@@ -1819,12 +1762,6 @@
             "prewash": {
                 "name": "预洗"
             },
-            "acqua_plus": {
-                "name": "Acquaplus"
-            },
-            "auto_dose": {
-                "name": "自动定量"
-            },
             "buzzer": {
                 "name": "循环结束提示音"
             },
@@ -1848,6 +1785,17 @@
             },
             "filter_replacement": {
                 "name": "更换过滤器"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "电磁炉"
+            },
+            "start_program": {
+                "name": "程序 开始"
+            },
+            "stop_program": {
+                "name": "程序 停止"
             }
         },
         "number": {
@@ -1886,17 +1834,6 @@
             },
             "fridge_temp_sel": {
                 "name": "目标温度 冰箱"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "电磁炉"
-            },
-            "start_program": {
-                "name": "程序 开始"
-            },
-            "stop_program": {
-                "name": "程序 停止"
             }
         },
         "climate": {

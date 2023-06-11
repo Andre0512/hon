@@ -3,324 +3,72 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "Klaar",
-                    "1": "Klaar",
-                    "3": "Pauze",
-                    "4": "Gepland",
-                    "5": "Gepland",
-                    "6": "Fout",
-                    "7": "Klaar",
-                    "2": "Programma draait",
-                    "8": "Test",
-                    "9": "Programma stoppen…"
+                    "ready": "Klaar",
+                    "running": "Programma draait",
+                    "pause": "Pauze",
+                    "scheduled": "Gepland",
+                    "error": "Fout",
+                    "test": "Test",
+                    "ending": "Programma stoppen…"
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Automatisch",
+                    "cool": "Koelen",
+                    "dry": "Drogen",
+                    "heat": "Verwarming",
+                    "fan": "Ventilator"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "Klaar",
-                    "1": "Wassen",
-                    "2": "Wassen",
-                    "3": "Centrifugeren",
-                    "4": "Spoelen",
-                    "5": "Spoelen",
-                    "6": "Spoelen",
-                    "7": "Drogen",
-                    "9": "Stoom",
-                    "10": "Klaar",
-                    "11": "Centrifugeren",
-                    "12": "Wegen ",
-                    "13": "Wegen ",
-                    "14": "Wassen",
-                    "15": "Wassen",
-                    "16": "Wassen",
-                    "17": "Spoelen",
-                    "18": "Spoelen",
-                    "19": "Gepland",
-                    "20": "Fris houden",
-                    "24": "Opfrissen",
-                    "25": "Wassen",
-                    "26": "Verwarming",
-                    "27": "Wassen"
+                    "ready": "Klaar",
+                    "spin": "Centrifugeren",
+                    "rinse": "Spoelen",
+                    "drying": "Drogen",
+                    "steam": "Stoom",
+                    "weighting": "Wegen ",
+                    "scheduled": "Gepland",
+                    "tumbling": "Fris houden",
+                    "refresh": "Opfrissen",
+                    "heating": "Verwarming",
+                    "washing": "Wassen"
                 },
                 "name": "Fase"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "Klaar",
-                    "1": "Drogen",
-                    "2": "Drogen",
-                    "3": "Afkoelen",
-                    "13": "Afkoelen",
-                    "14": "Drogen",
-                    "15": "Drogen",
-                    "16": "Afkoelen",
-                    "18": "Fris houden",
-                    "19": "Drogen",
-                    "20": "Drogen",
-                    "11": "Klaar",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "Klaar",
+                    "heat_stroke": "Drogen",
+                    "drying": "Drogen",
+                    "cooldown": "Afkoelen",
+                    "unknown": "unknown",
+                    "tumbling": "Fris houden"
                 },
                 "name": "Fase"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "Klaar",
-                    "1": "Voorwassen",
-                    "2": "Wassen",
-                    "3": "Spoelen",
-                    "4": "Drogen",
-                    "5": "Klaar",
-                    "6": "Hot rinse"
+                    "ready": "Klaar",
+                    "prewash": "Voorwassen",
+                    "washing": "Wassen",
+                    "rinse": "Spoelen",
+                    "drying": "Drogen",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "Fase"
             },
             "dry_levels": {
                 "state": {
-                    "0": "Niet drogen",
-                    "1": "Strijken",
-                    "2": "Kastdroog",
-                    "3": "Kastdroog",
-                    "4": "Extra droog",
-                    "12": "Strijken",
-                    "13": "Kastdroog",
-                    "14": "Klaar om te dragen",
-                    "15": "Extra droog",
-                    "11": "Niet drogen"
+                    "no_dry": "Niet drogen",
+                    "iron_dry": "Strijken",
+                    "no_dry_iron": "Kastdroog",
+                    "cupboard_dry": "Kastdroog",
+                    "extra_dry": "Extra droog",
+                    "ready_to_wear": "Klaar om te dragen"
                 },
                 "name": "Droogniveau"
-            },
-            "anti_crease": {
-                "name": "Kreukherstellend"
-            },
-            "power": {
-                "name": "Vermogensniveau"
-            },
-            "remaining_time": {
-                "name": "Resterende tijd"
-            },
-            "temperature": {
-                "name": "Temperatuur"
-            },
-            "water_efficiency": {
-                "name": "Efficiënt waterverbruik"
-            },
-            "water_saving": {
-                "name": "Waterbesparing"
-            },
-            "duration": {
-                "name": "Duur"
-            },
-            "target_temperature": {
-                "name": "Doeltemperatuur"
-            },
-            "spin_speed": {
-                "name": "Centrifugeren"
-            },
-            "steam_leve": {
-                "name": "Stoomniveau"
-            },
-            "dirt_level": {
-                "name": "Vuilheid"
-            },
-            "delay_time": {
-                "name": "Vertraag Start"
-            },
-            "dry_time": {
-                "name": "Droogtijd"
-            },
-            "suggested_load": {
-                "name": "Laadvermogen"
-            },
-            "energy_label": {
-                "name": "Energie-efficiëntie"
-            },
-            "det_dust": {
-                "name": "Poeder"
-            },
-            "det_liquid": {
-                "name": "Vloeibaar"
-            },
-            "errors": {
-                "name": "Fout"
-            },
-            "programs": {
-                "name": "Huidig programma"
-            },
-            "cycles_total": {
-                "name": "Programma's Totaal"
-            },
-            "energy_total": {
-                "name": "Energieverbruik Totaal"
-            },
-            "water_total": {
-                "name": "Efficiënt waterverbruik Totaal"
-            },
-            "energy_current": {
-                "name": "Energieverbruik Huidige"
-            },
-            "water_current": {
-                "name": "Efficiënt waterverbruik Huidige"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "Automatisch",
-                    "1": "Koelen",
-                    "2": "Koelen",
-                    "3": "Drogen",
-                    "4": "Verwarming",
-                    "5": "Ventilator",
-                    "6": "Ventilator"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "active_dry": "Actief drogen",
-                    "allergy_care": "Anti-allergie",
-                    "all_in_one": "All in One",
-                    "antiallergy": "Anti-allergie",
-                    "anti_odours": "Anti geuren",
-                    "auto_care": "Automatische verzorging",
-                    "baby": "Baby",
-                    "bed_quilt": "Dekbed",
-                    "care_30": "Verzorging 30'",
-                    "care_45": "Verzorging 45'",
-                    "care_59": "Verzorging 59'",
-                    "coloured": "Gekleurd",
-                    "daily_45_min": "DAILY 45'",
-                    "daily_perfect_59_min": "DAILY PERFECT 59'",
-                    "darks_and_coloured": "Donker & Gekleurd",
-                    "delicates": "Fijne was",
-                    "duvet": "Dekbed",
-                    "eco": "Eco katoen",
-                    "ecospeed_cottons": "Ecospeed Katoen",
-                    "ecospeed_delicates": "Ecospeed fijne was",
-                    "ecospeed_mixed": "Ecospeed Gemengd",
-                    "extra_hygiene": "Extra Hygiene",
-                    "fitness": "Fitness",
-                    "fresh_care": "Opfrisverzorging",
-                    "genius": "Genius",
-                    "hqd_baby_care": "Baby Care",
-                    "hqd_bath_towel": "Handdoeken",
-                    "hqd_bed_sheets": "Beddengoed",
-                    "hqd_bulky": "Grote artikelen",
-                    "hqd_casual": "Casual",
-                    "hqd_cold_wind_30": "30 minuten koel briesje",
-                    "hqd_cold_wind_timing": "Koel briesje ",
-                    "hqd_cotton": "Katoen",
-                    "hqd_curtain": "Gordijnen",
-                    "hqd_delicate": "Fijne was",
-                    "hqd_diaper": "Luiers",
-                    "hqd_duvet": "Dekbed",
-                    "hqd_feather": "Donsjassen",
-                    "hqd_hot_wind_timing": "Hete lucht",
-                    "hqd_hygienic": "Ontsmetten",
-                    "hqd_i_refresh": "I-Refresh",
-                    "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_jacket": "Jassen",
-                    "hqd_jeans": "Jeans",
-                    "hqd_luxury": "Luxury",
-                    "hqd_mix": "Gemengde vezels",
-                    "hqd_night_dry": "Nachtelijk droogprogramma",
-                    "hqd_outdoor": "Outdoor",
-                    "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "Quick 20",
-                    "hqd_quick_30": "Quick 30",
-                    "hqd_quick_dry": "Quick dry 30",
-                    "hqd_quilt": "Quilts",
-                    "hqd_refresh": "Opfrissen",
-                    "hqd_school_uniform": "Schooluniform",
-                    "hqd_shirt": "Overhemden",
-                    "hqd_shoes": "Schoenen",
-                    "hqd_silk": "Zijde",
-                    "hqd_sports": "Sport",
-                    "hqd_synthetics": "Synthetische stoffen",
-                    "hqd_timer": "Getimed",
-                    "hqd_towel": "Handdoeken",
-                    "hqd_underwear": "Ondergoed",
-                    "hqd_warm_up": "Opwarmen",
-                    "hqd_wool": "Wol",
-                    "hqd_working_suit": "Werkkleding",
-                    "hygiene": "Hygiëne",
-                    "iot_checkup": "Controle",
-                    "iot_dry_anti_mites": "Anti-mijten",
-                    "iot_dry_baby": "Baby",
-                    "iot_dry_backpacks": "Rugzakken",
-                    "iot_dry_bathrobe": "Badjas",
-                    "iot_dry_bed_linen": "Bed Linnen",
-                    "iot_dry_bed_quilt": "Dekbed",
-                    "iot_dry_cotton": "Katoen",
-                    "iot_dry_cuddly_toys": "Knufflels",
-                    "iot_dry_curtains": "Gordijnen",
-                    "iot_dry_dehumidifier": "Vochtigheidsverwijderaar",
-                    "iot_dry_delicates": "Delicate was",
-                    "iot_dry_delicate_tablecloths": "Delicate tafelkleden",
-                    "iot_dry_denim_jeans": "Denim – Jeans",
-                    "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "Dekbed",
-                    "iot_dry_easy_iron_cotton": "Super Gemakkelijk strijken",
-                    "iot_dry_easy_iron_synthetics": "Synthetische stoffen gemakkelijk strijken",
-                    "iot_dry_gym_fit": "Gym fit - Fitness",
-                    "iot_dry_lingerie": "Lingerie",
-                    "iot_dry_mixed": "Gemengde vezels",
-                    "iot_dry_playsuits": "Jumpsuits",
-                    "iot_dry_rapid_30": "Rapid 30",
-                    "iot_dry_rapid_59": "Snel 59'",
-                    "iot_dry_refresh": "Opfrissen",
-                    "iot_dry_regenerates_waterproof": "Regenereert Waterproof",
-                    "iot_dry_relax_creases": "Ontkreuken",
-                    "iot_dry_shirts": "Overhemden",
-                    "iot_dry_small_load": "Kleine lading",
-                    "iot_dry_swimsuits_and_bikinis": "Badkleding",
-                    "iot_dry_synthetics": "Synthetisch",
-                    "iot_dry_synthetic_dry": "Synthetische stoffen drogen",
-                    "iot_dry_tablecloths": "Tafelkleden",
-                    "iot_dry_technical_fabrics": "Technische Vezels",
-                    "iot_dry_warm_embrace": "Warme Knuffel",
-                    "iot_dry_wool": "Wol",
-                    "jeans": "Jeans",
-                    "mix_and_dry": "Gemengd&Droog",
-                    "pets": "Huisdieren",
-                    "pre_iron": "Gemakkelijk strijken",
-                    "rapid_30": "Rapid 30",
-                    "rapid_45": "Snel 45 min",
-                    "rapid_59": "Perfect Rapid 59 Min",
-                    "refresh": "Opfrissen",
-                    "relax_creases": "Ontkreuken",
-                    "saving_30_min": "ECO 30'",
-                    "shirts": "Overhemden",
-                    "shoes": "Schoenen",
-                    "small_load": "Kleine lading",
-                    "soft_care": "Zachte verzorging",
-                    "sport_plus": "Sports",
-                    "super_easy_iron_misti": "Super eenvoudig strijken gemengd",
-                    "super_easy_iron_xxl": "Super eenvoudig strijken XXL",
-                    "super_fast_cottons": "Super Snel Katoen",
-                    "super_fast_delicates": "Super Snel Delicaat",
-                    "synthetics": "Synthetisch",
-                    "total_care": "Total Care",
-                    "trainers": "Trainers",
-                    "ultra_care": "Ultra Care",
-                    "waterproof_revitalize": "Waterproof Revitaliseren",
-                    "whites": "Witte was",
-                    "wool": "Droge Wol",
-                    "woolmark": "Wol",
-                    "xxl_load": "XXL Lading",
-                    "zoom_59": "Zoom 59"
-                },
-                "name": "Programma"
-            },
-            "room_temperature": {
-                "name": "Omgevingstemperatuur"
-            },
-            "humidity": {
-                "name": "Luchtvochtigheid"
-            },
-            "freezer_temp": {
-                "name": "Vriezertemperatuur"
-            },
-            "fridge_temp": {
-                "name": "Koelkasttemperatuur"
             },
             "programs_ac": {
                 "state": {
@@ -545,6 +293,143 @@
                 },
                 "name": "Programma"
             },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Actief drogen",
+                    "allergy_care": "Anti-allergie",
+                    "all_in_one": "All in One",
+                    "antiallergy": "Anti-allergie",
+                    "anti_odours": "Anti geuren",
+                    "auto_care": "Automatische verzorging",
+                    "baby": "Baby",
+                    "bed_quilt": "Dekbed",
+                    "care_30": "Verzorging 30'",
+                    "care_45": "Verzorging 45'",
+                    "care_59": "Verzorging 59'",
+                    "coloured": "Gekleurd",
+                    "daily_45_min": "DAILY 45'",
+                    "daily_perfect_59_min": "DAILY PERFECT 59'",
+                    "darks_and_coloured": "Donker & Gekleurd",
+                    "delicates": "Fijne was",
+                    "duvet": "Dekbed",
+                    "eco": "Eco katoen",
+                    "ecospeed_cottons": "Ecospeed Katoen",
+                    "ecospeed_delicates": "Ecospeed fijne was",
+                    "ecospeed_mixed": "Ecospeed Gemengd",
+                    "extra_hygiene": "Extra Hygiene",
+                    "fitness": "Fitness",
+                    "fresh_care": "Opfrisverzorging",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Handdoeken",
+                    "hqd_bed_sheets": "Beddengoed",
+                    "hqd_bulky": "Grote artikelen",
+                    "hqd_casual": "Casual",
+                    "hqd_cold_wind_30": "30 minuten koel briesje",
+                    "hqd_cold_wind_timing": "Koel briesje ",
+                    "hqd_cotton": "Katoen",
+                    "hqd_curtain": "Gordijnen",
+                    "hqd_delicate": "Fijne was",
+                    "hqd_diaper": "Luiers",
+                    "hqd_duvet": "Dekbed",
+                    "hqd_feather": "Donsjassen",
+                    "hqd_hot_wind_timing": "Hete lucht",
+                    "hqd_hygienic": "Ontsmetten",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_jacket": "Jassen",
+                    "hqd_jeans": "Jeans",
+                    "hqd_luxury": "Luxury",
+                    "hqd_mix": "Gemengde vezels",
+                    "hqd_night_dry": "Nachtelijk droogprogramma",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious cure",
+                    "hqd_quick_20": "Quick 20",
+                    "hqd_quick_30": "Quick 30",
+                    "hqd_quick_dry": "Quick dry 30",
+                    "hqd_quilt": "Quilts",
+                    "hqd_refresh": "Opfrissen",
+                    "hqd_school_uniform": "Schooluniform",
+                    "hqd_shirt": "Overhemden",
+                    "hqd_shoes": "Schoenen",
+                    "hqd_silk": "Zijde",
+                    "hqd_sports": "Sport",
+                    "hqd_synthetics": "Synthetische stoffen",
+                    "hqd_timer": "Getimed",
+                    "hqd_towel": "Handdoeken",
+                    "hqd_underwear": "Ondergoed",
+                    "hqd_warm_up": "Opwarmen",
+                    "hqd_wool": "Wol",
+                    "hqd_working_suit": "Werkkleding",
+                    "hygiene": "Hygiëne",
+                    "iot_checkup": "Controle",
+                    "iot_dry_anti_mites": "Anti-mijten",
+                    "iot_dry_baby": "Baby",
+                    "iot_dry_backpacks": "Rugzakken",
+                    "iot_dry_bathrobe": "Badjas",
+                    "iot_dry_bed_linen": "Bed Linnen",
+                    "iot_dry_bed_quilt": "Dekbed",
+                    "iot_dry_cotton": "Katoen",
+                    "iot_dry_cuddly_toys": "Knufflels",
+                    "iot_dry_curtains": "Gordijnen",
+                    "iot_dry_dehumidifier": "Vochtigheidsverwijderaar",
+                    "iot_dry_delicates": "Delicate was",
+                    "iot_dry_delicate_tablecloths": "Delicate tafelkleden",
+                    "iot_dry_denim_jeans": "Denim – Jeans",
+                    "iot_dry_down_jacket": "Jacket",
+                    "iot_dry_duvet": "Dekbed",
+                    "iot_dry_easy_iron_cotton": "Super Gemakkelijk strijken",
+                    "iot_dry_easy_iron_synthetics": "Synthetische stoffen gemakkelijk strijken",
+                    "iot_dry_gym_fit": "Gym fit - Fitness",
+                    "iot_dry_lingerie": "Lingerie",
+                    "iot_dry_mixed": "Gemengde vezels",
+                    "iot_dry_playsuits": "Jumpsuits",
+                    "iot_dry_rapid_30": "Rapid 30",
+                    "iot_dry_rapid_59": "Snel 59'",
+                    "iot_dry_refresh": "Opfrissen",
+                    "iot_dry_regenerates_waterproof": "Regenereert Waterproof",
+                    "iot_dry_relax_creases": "Ontkreuken",
+                    "iot_dry_shirts": "Overhemden",
+                    "iot_dry_small_load": "Kleine lading",
+                    "iot_dry_swimsuits_and_bikinis": "Badkleding",
+                    "iot_dry_synthetics": "Synthetisch",
+                    "iot_dry_synthetic_dry": "Synthetische stoffen drogen",
+                    "iot_dry_tablecloths": "Tafelkleden",
+                    "iot_dry_technical_fabrics": "Technische Vezels",
+                    "iot_dry_warm_embrace": "Warme Knuffel",
+                    "iot_dry_wool": "Wol",
+                    "jeans": "Jeans",
+                    "mix_and_dry": "Gemengd&Droog",
+                    "pets": "Huisdieren",
+                    "pre_iron": "Gemakkelijk strijken",
+                    "rapid_30": "Rapid 30",
+                    "rapid_45": "Snel 45 min",
+                    "rapid_59": "Perfect Rapid 59 Min",
+                    "refresh": "Opfrissen",
+                    "relax_creases": "Ontkreuken",
+                    "saving_30_min": "ECO 30'",
+                    "shirts": "Overhemden",
+                    "shoes": "Schoenen",
+                    "small_load": "Kleine lading",
+                    "soft_care": "Zachte verzorging",
+                    "sport_plus": "Sports",
+                    "super_easy_iron_misti": "Super eenvoudig strijken gemengd",
+                    "super_easy_iron_xxl": "Super eenvoudig strijken XXL",
+                    "super_fast_cottons": "Super Snel Katoen",
+                    "super_fast_delicates": "Super Snel Delicaat",
+                    "synthetics": "Synthetisch",
+                    "total_care": "Total Care",
+                    "trainers": "Trainers",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Waterproof Revitaliseren",
+                    "whites": "Witte was",
+                    "wool": "Droge Wol",
+                    "woolmark": "Wol",
+                    "xxl_load": "XXL Lading",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Programma"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_coloured_cottons": "20° gekleurd en katoen",
@@ -556,7 +441,7 @@
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "Alles-in-één 49'.",
                     "all_in_one_59": "Alles-in-één 59'.",
-                    "all_in_one_59_steam": "Actieve was + Stoom",
+                    "all_in_one_59_steam": "Alles-in-één 59' + Stoom",
                     "autocare": "Automatische verzorging",
                     "autoclean": "Trommelreiniging",
                     "baby_60": "All baby 60 ° C",
@@ -622,7 +507,7 @@
                     "iot_active_steam": "Stoom",
                     "iot_active_wash_steam": "Actieve was",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "Actieve was + Stoom",
+                    "iot_all_in_one_59_steam": "Alles-in-één 59' + Stoom",
                     "iot_checkup": "Controle",
                     "iot_colour_59_steam": "Gekleurd 59' + Stoom",
                     "iot_cottons_steam": "Katoen + Stoom",
@@ -889,9 +774,148 @@
                     "sparkling": "Mousserend",
                     "white": "Wit"
                 }
+            },
+            "dry_time": {
+                "name": "Droogtijd"
+            },
+            "power": {
+                "name": "Vermogensniveau"
+            },
+            "remaining_time": {
+                "name": "Resterende tijd"
+            },
+            "temperature": {
+                "name": "Temperatuur"
+            },
+            "water_efficiency": {
+                "name": "Efficiënt waterverbruik"
+            },
+            "water_saving": {
+                "name": "Waterbesparing"
+            },
+            "duration": {
+                "name": "Duur"
+            },
+            "target_temperature": {
+                "name": "Doeltemperatuur"
+            },
+            "spin_speed": {
+                "name": "Centrifugeren"
+            },
+            "steam_leve": {
+                "name": "Stoomniveau"
+            },
+            "dirt_level": {
+                "name": "Vuilheid"
+            },
+            "delay_time": {
+                "name": "Vertraag Start"
+            },
+            "suggested_load": {
+                "name": "Laadvermogen"
+            },
+            "energy_label": {
+                "name": "Energie-efficiëntie"
+            },
+            "det_dust": {
+                "name": "Poeder"
+            },
+            "det_liquid": {
+                "name": "Vloeibaar"
+            },
+            "errors": {
+                "name": "Fout"
+            },
+            "programs": {
+                "name": "Huidig programma"
+            },
+            "room_temperature": {
+                "name": "Omgevingstemperatuur"
+            },
+            "humidity": {
+                "name": "Luchtvochtigheid"
+            },
+            "cycles_total": {
+                "name": "Programma's Totaal"
+            },
+            "energy_total": {
+                "name": "Energieverbruik Totaal"
+            },
+            "water_total": {
+                "name": "Efficiënt waterverbruik Totaal"
+            },
+            "energy_current": {
+                "name": "Energieverbruik Huidige"
+            },
+            "water_current": {
+                "name": "Efficiënt waterverbruik Huidige"
+            },
+            "freezer_temp": {
+                "name": "Vriezertemperatuur"
+            },
+            "fridge_temp": {
+                "name": "Koelkasttemperatuur"
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Niet drogen",
+                    "iron_dry": "Strijken",
+                    "no_dry_iron": "Kastdroog",
+                    "cupboard_dry": "Kastdroog",
+                    "extra_dry": "Extra droog",
+                    "ready_to_wear": "Klaar om te dragen"
+                },
+                "name": "Droogniveau"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Uit",
+                    "avoid_touch": "Voorkom aanraking",
+                    "follow_touch": "Volgen"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Hoog",
+                    "mid": "Gemiddeld   ",
+                    "low": "Laag",
+                    "auto": "Automatisch"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Koelkast",
+                    "freezer": "Vriezer",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Koelkast & Vriezer"
+                },
+                "name": "Zone"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10°C-verwarmingsfunctie",
+                    "iot_auto": "Automatisch",
+                    "iot_cool": "Koelen",
+                    "iot_dry": "Drogen",
+                    "iot_fan": "Ventilator",
+                    "iot_heat": "Verwarming",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Zelfzuivering",
+                    "iot_self_clean": "Zelfreiniging",
+                    "iot_self_clean_56": "Sterilisatie reiniging 56°C",
+                    "iot_simple_start": "Start nu",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Auto",
+                    "iot_uv_and_cool": "UV + Koud",
+                    "iot_uv_and_dry": "UV + Ontvochtiger",
+                    "iot_uv_and_fan": "UV + Hetelucht",
+                    "iot_uv_and_heat": "UV + Warmte"
+                },
+                "name": "Programma"
+            },
             "programs_dw": {
                 "state": {
                     "59_min": "Snel 59'",
@@ -1241,7 +1265,7 @@
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "Alles-in-één 49'.",
                     "all_in_one_59": "Alles-in-één 59'.",
-                    "all_in_one_59_steam": "Actieve was + Stoom",
+                    "all_in_one_59_steam": "Alles-in-één 59' + Stoom",
                     "autocare": "Automatische verzorging",
                     "autoclean": "Trommelreiniging",
                     "baby_60": "All baby 60 ° C",
@@ -1307,7 +1331,7 @@
                     "iot_active_steam": "Stoom",
                     "iot_active_wash_steam": "Actieve was",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "Actieve was + Stoom",
+                    "iot_all_in_one_59_steam": "Alles-in-één 59' + Stoom",
                     "iot_checkup": "Controle",
                     "iot_colour_59_steam": "Gekleurd 59' + Stoom",
                     "iot_cottons_steam": "Katoen + Stoom",
@@ -1540,69 +1564,6 @@
                 },
                 "name": "Programma"
             },
-            "dry_levels": {
-                "state": {
-                    "0": "Niet drogen",
-                    "1": "Strijken",
-                    "2": "Kastdroog",
-                    "3": "Kastdroog",
-                    "4": "Extra droog",
-                    "12": "Strijken",
-                    "13": "Kastdroog",
-                    "14": "Klaar om te dragen",
-                    "15": "Extra droog",
-                    "11": "Niet drogen"
-                },
-                "name": "Droogniveau"
-            },
-            "spin_speed": {
-                "name": "Centrifugeren"
-            },
-            "temperature": {
-                "name": "Temperatuur"
-            },
-            "dry_time": {
-                "name": "Droogtijd"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "Uit",
-                    "1": "Voorkom aanraking",
-                    "2": "Volgen"
-                },
-                "name": "Eco pilot"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "Hoog",
-                    "2": "Gemiddeld   ",
-                    "3": "Laag",
-                    "4": "Automatisch",
-                    "5": "Automatisch"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_10_heating": "10°C-verwarmingsfunctie",
-                    "iot_auto": "Automatisch",
-                    "iot_cool": "Koelen",
-                    "iot_dry": "Drogen",
-                    "iot_fan": "Ventilator",
-                    "iot_heat": "Verwarming",
-                    "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Zelfzuivering",
-                    "iot_self_clean": "Zelfreiniging",
-                    "iot_self_clean_56": "Sterilisatie reiniging 56°C",
-                    "iot_simple_start": "Start nu",
-                    "iot_uv": "UV",
-                    "iot_uv_and_auto": "UV + Auto",
-                    "iot_uv_and_cool": "UV + Koud",
-                    "iot_uv_and_dry": "UV + Ontvochtiger",
-                    "iot_uv_and_fan": "UV + Hetelucht",
-                    "iot_uv_and_heat": "UV + Warmte"
-                },
-                "name": "Programma"
-            },
             "programs_ref": {
                 "state": {
                     "auto_set": "AUTO-SET",
@@ -1626,17 +1587,17 @@
                 },
                 "name": "Programma"
             },
+            "dry_time": {
+                "name": "Droogtijd"
+            },
+            "spin_speed": {
+                "name": "Centrifugeren"
+            },
+            "temperature": {
+                "name": "Temperatuur"
+            },
             "remaining_time": {
                 "name": "Resterende tijd"
-            },
-            "ref_zones": {
-                "state": {
-                    "fridge": "Koelkast",
-                    "freezer": "Vriezer",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "Koelkast & Vriezer"
-                },
-                "name": "Zone"
             }
         },
         "switch": {
@@ -1724,17 +1685,14 @@
             "acqua_plus": {
                 "name": "Acquaplus"
             },
-            "auto_dose": {
-                "name": "Automatisch doseren"
-            },
-            "good_night": {
-                "name": "Goede nacht"
-            },
             "auto_dose_softener": {
                 "name": "Automatisch doseren Wasverzachter"
             },
             "auto_dose_detergent": {
                 "name": "Automatisch doseren Wasmiddel"
+            },
+            "good_night": {
+                "name": "Goede nacht"
             },
             "auto_set": {
                 "name": "Automatisch instellen"
@@ -1768,26 +1726,11 @@
             "anti_crease": {
                 "name": "Kreukherstellend"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Acquaplus"
             },
             "spin_speed": {
                 "name": "Centrifugeren"
-            },
-            "programs_dw": {
-                "name": "Programma"
-            },
-            "programs_ih": {
-                "name": "Programma"
-            },
-            "programs_ov": {
-                "name": "Programma"
-            },
-            "programs_td": {
-                "name": "Programma"
-            },
-            "programs_wm": {
-                "name": "Programma"
             },
             "still_hot": {
                 "name": "Nog heet"
@@ -1819,12 +1762,6 @@
             "prewash": {
                 "name": "Voorwas"
             },
-            "acqua_plus": {
-                "name": "Acquaplus"
-            },
-            "auto_dose": {
-                "name": "Automatisch doseren"
-            },
             "buzzer": {
                 "name": "Bel voor einde cyclus"
             },
@@ -1848,6 +1785,17 @@
             },
             "filter_replacement": {
                 "name": "Filter vervangen"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Inductiekookplaat"
+            },
+            "start_program": {
+                "name": "Programma Start"
+            },
+            "stop_program": {
+                "name": "Programma Stoppen"
             }
         },
         "number": {
@@ -1886,17 +1834,6 @@
             },
             "fridge_temp_sel": {
                 "name": "Doeltemperatuur Koelkast"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "Inductiekookplaat"
-            },
-            "start_program": {
-                "name": "Programma Start"
-            },
-            "stop_program": {
-                "name": "Programma Stoppen"
             }
         },
         "climate": {

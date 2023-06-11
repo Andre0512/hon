@@ -3,324 +3,72 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "Připraveno",
-                    "1": "Připraveno",
-                    "3": "Pozastavit",
-                    "4": "Naplánováno",
-                    "5": "Naplánováno",
-                    "6": "Chyba",
-                    "7": "Připraveno",
-                    "2": "Program běží",
-                    "8": "Test",
-                    "9": "Zastavování cyklu…"
+                    "ready": "Připraveno",
+                    "running": "Program běží",
+                    "pause": "Pozastavit",
+                    "scheduled": "Naplánováno",
+                    "error": "Chyba",
+                    "test": "Test",
+                    "ending": "Zastavování cyklu…"
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Auto",
+                    "cool": "Chlazení",
+                    "dry": "Odvlhčování",
+                    "heat": "Vytápění",
+                    "fan": "Ventilátor"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "Připraveno",
-                    "1": "Praní",
-                    "2": "Praní",
-                    "3": "Odstřeďování",
-                    "4": "Máchání",
-                    "5": "Máchání",
-                    "6": "Máchání",
-                    "7": "Sušení",
-                    "9": "Pára",
-                    "10": "Připraveno",
-                    "11": "Odstřeďování",
-                    "12": "Vážení ",
-                    "13": "Vážení ",
-                    "14": "Praní",
-                    "15": "Praní",
-                    "16": "Praní",
-                    "17": "Máchání",
-                    "18": "Máchání",
-                    "19": "Naplánováno",
-                    "20": "Keep Fresh",
-                    "24": "Osvěžení",
-                    "25": "Praní",
-                    "26": "Ohřev",
-                    "27": "Praní"
+                    "ready": "Připraveno",
+                    "spin": "Odstřeďování",
+                    "rinse": "Máchání",
+                    "drying": "Sušení",
+                    "steam": "Pára",
+                    "weighting": "Vážení ",
+                    "scheduled": "Naplánováno",
+                    "tumbling": "Keep Fresh",
+                    "refresh": "Osvěžení",
+                    "heating": "Ohřev",
+                    "washing": "Praní"
                 },
                 "name": "Fáze"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "Připraveno",
-                    "1": "Sušení",
-                    "2": "Sušení",
-                    "3": "Vychladnutí",
-                    "13": "Vychladnutí",
-                    "14": "Sušení",
-                    "15": "Sušení",
-                    "16": "Vychladnutí",
-                    "18": "Keep Fresh",
-                    "19": "Sušení",
-                    "20": "Sušení",
-                    "11": "Připraveno",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "Připraveno",
+                    "heat_stroke": "Sušení",
+                    "drying": "Sušení",
+                    "cooldown": "Vychladnutí",
+                    "unknown": "unknown",
+                    "tumbling": "Keep Fresh"
                 },
                 "name": "Fáze"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "Připraveno",
-                    "1": "Předpírka",
-                    "2": "Praní",
-                    "3": "Máchání",
-                    "4": "Sušení",
-                    "5": "Připraveno",
-                    "6": "Hot rinse"
+                    "ready": "Připraveno",
+                    "prewash": "Předpírka",
+                    "washing": "Praní",
+                    "rinse": "Máchání",
+                    "drying": "Sušení",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "Fáze"
             },
             "dry_levels": {
                 "state": {
-                    "0": "Bez sušení",
-                    "1": "Žehlení",
-                    "2": "Do skříně",
-                    "3": "Do skříně",
-                    "4": "Extra suché",
-                    "12": "Žehlení",
-                    "13": "Do skříně",
-                    "14": "Připraveno k oblečení",
-                    "15": "Extra suché",
-                    "11": "Bez sušení"
+                    "no_dry": "Bez sušení",
+                    "iron_dry": "Žehlení",
+                    "no_dry_iron": "Do skříně",
+                    "cupboard_dry": "Do skříně",
+                    "extra_dry": "Extra suché",
+                    "ready_to_wear": "Připraveno k oblečení"
                 },
                 "name": "Úroveň sušení"
-            },
-            "anti_crease": {
-                "name": "Proti pomačkání"
-            },
-            "power": {
-                "name": "Stupeň výkonu"
-            },
-            "remaining_time": {
-                "name": "Zbývající čas"
-            },
-            "temperature": {
-                "name": "Teplota"
-            },
-            "water_efficiency": {
-                "name": "Efektivní využívání vody"
-            },
-            "water_saving": {
-                "name": "Úspora vody"
-            },
-            "duration": {
-                "name": "Délka"
-            },
-            "target_temperature": {
-                "name": "Cílová teplota"
-            },
-            "spin_speed": {
-                "name": "Odstřeďování"
-            },
-            "steam_leve": {
-                "name": "Úroveň páry"
-            },
-            "dirt_level": {
-                "name": "Míra znečištění"
-            },
-            "delay_time": {
-                "name": "Odložené spuštění"
-            },
-            "dry_time": {
-                "name": "Doba sušení"
-            },
-            "suggested_load": {
-                "name": "Kapacita náplně"
-            },
-            "energy_label": {
-                "name": "Energetická účinnost"
-            },
-            "det_dust": {
-                "name": "Prášky"
-            },
-            "det_liquid": {
-                "name": "Tekuté prostředky"
-            },
-            "errors": {
-                "name": "Chyba"
-            },
-            "programs": {
-                "name": "Aktuální program"
-            },
-            "cycles_total": {
-                "name": "Cykly Celkem"
-            },
-            "energy_total": {
-                "name": "Spotřeba energie Celkem"
-            },
-            "water_total": {
-                "name": "Efektivní využívání vody Celkem"
-            },
-            "energy_current": {
-                "name": "Spotřeba energie Aktuální"
-            },
-            "water_current": {
-                "name": "Efektivní využívání vody Aktuální"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "Auto",
-                    "1": "Chlazení",
-                    "2": "Chlazení",
-                    "3": "Odvlhčování",
-                    "4": "Vytápění",
-                    "5": "Ventilátor",
-                    "6": "Ventilátor"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "active_dry": "Aktivní sušení",
-                    "allergy_care": "Antialergický",
-                    "all_in_one": "All in One",
-                    "antiallergy": "Antialergický",
-                    "anti_odours": "Proti zápachu",
-                    "auto_care": "Automatická péče",
-                    "baby": "Dětské",
-                    "bed_quilt": "Ložní přikrývka",
-                    "care_30": "Péče 30",
-                    "care_45": "Péče 45",
-                    "care_59": "Péče 59",
-                    "coloured": "Barevné",
-                    "daily_45_min": "DENNI 45'",
-                    "daily_perfect_59_min": "DENNI PERFEKTNI 59'",
-                    "darks_and_coloured": "Tmavé a barevné",
-                    "delicates": "Jemné",
-                    "duvet": "Přikrývky",
-                    "eco": "Eco bavlna",
-                    "ecospeed_cottons": "Ecospeed bavlna",
-                    "ecospeed_delicates": "Eco rychly - jemne",
-                    "ecospeed_mixed": "Ecospeed směsné",
-                    "extra_hygiene": "HYGIENA EXTRA",
-                    "fitness": "Cvičení",
-                    "fresh_care": "Svěží péče",
-                    "genius": "Genius",
-                    "hqd_baby_care": "Baby Care",
-                    "hqd_bath_towel": "Ručníky",
-                    "hqd_bed_sheets": "Povlečení",
-                    "hqd_bulky": "Objemné kusy",
-                    "hqd_casual": "Casual",
-                    "hqd_cold_wind_30": "Chladný vánek 30 minut",
-                    "hqd_cold_wind_timing": "Chladný vánek ",
-                    "hqd_cotton": "Bavlna",
-                    "hqd_curtain": "Záclony",
-                    "hqd_delicate": "Jemné",
-                    "hqd_diaper": "Pleny",
-                    "hqd_duvet": "Přikrývky",
-                    "hqd_feather": "Prošívané bundy",
-                    "hqd_hot_wind_timing": "Horký vzduch",
-                    "hqd_hygienic": "Dezinfekce",
-                    "hqd_i_refresh": "I-Refresh",
-                    "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_jacket": "Bundy",
-                    "hqd_jeans": "Džíny",
-                    "hqd_luxury": "Luxusní",
-                    "hqd_mix": "Směsné",
-                    "hqd_night_dry": "Sušení přes noc",
-                    "hqd_outdoor": "Outdoor",
-                    "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "Rychlý 20",
-                    "hqd_quick_30": "Rychlý 30",
-                    "hqd_quick_dry": "Rychlé sušení 30",
-                    "hqd_quilt": "Deky",
-                    "hqd_refresh": "Osvěžení",
-                    "hqd_school_uniform": "Školní uniformy",
-                    "hqd_shirt": "Košile",
-                    "hqd_shoes": "Obuv",
-                    "hqd_silk": "Hedvábí",
-                    "hqd_sports": "Sportovní",
-                    "hqd_synthetics": "Syntetika",
-                    "hqd_timer": "Načasováno",
-                    "hqd_towel": "Ručníky",
-                    "hqd_underwear": "Spodní prádlo",
-                    "hqd_warm_up": "Ohřátí",
-                    "hqd_wool": "Vlna",
-                    "hqd_working_suit": "Pracovní oděvy",
-                    "hygiene": "Hygiena",
-                    "iot_checkup": "Kontrola",
-                    "iot_dry_anti_mites": "Proti roztočům",
-                    "iot_dry_baby": "Dětské",
-                    "iot_dry_backpacks": "Batohy",
-                    "iot_dry_bathrobe": "Župany",
-                    "iot_dry_bed_linen": "Ložní prádlo",
-                    "iot_dry_bed_quilt": "Ložní přikrývka",
-                    "iot_dry_cotton": "Bavlna",
-                    "iot_dry_cuddly_toys": "Plyšové hračky",
-                    "iot_dry_curtains": "Závěsy",
-                    "iot_dry_dehumidifier": "Odstraňovač vlhkosti",
-                    "iot_dry_delicates": "Jemné prádlo",
-                    "iot_dry_delicate_tablecloths": "Jemné ubrusy",
-                    "iot_dry_denim_jeans": "Džínovina - džíny",
-                    "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "Přikrývky",
-                    "iot_dry_easy_iron_cotton": "Super snadné žehlení",
-                    "iot_dry_easy_iron_synthetics": "Velmi snadné žehlení - syntetika",
-                    "iot_dry_gym_fit": "Sportovní oblečení",
-                    "iot_dry_lingerie": "Spodní prádlo",
-                    "iot_dry_mixed": "Smíšené",
-                    "iot_dry_playsuits": "Tepláky",
-                    "iot_dry_rapid_30": "Rapid 30",
-                    "iot_dry_rapid_59": "Rychlý 59'.",
-                    "iot_dry_refresh": "Osvěžení",
-                    "iot_dry_regenerates_waterproof": "Oživení nepromokavých tkanin",
-                    "iot_dry_relax_creases": "Uvolnění záhybů",
-                    "iot_dry_shirts": "Košile",
-                    "iot_dry_small_load": "Malá náplň",
-                    "iot_dry_swimsuits_and_bikinis": "Plavky",
-                    "iot_dry_synthetics": "Syntetika",
-                    "iot_dry_synthetic_dry": "Syntetika - suché",
-                    "iot_dry_tablecloths": "Ubrusy",
-                    "iot_dry_technical_fabrics": "Technické tkaniny",
-                    "iot_dry_warm_embrace": "Dětská zavinovačka",
-                    "iot_dry_wool": "Woolmark",
-                    "jeans": "Džíny",
-                    "mix_and_dry": "Mix a suché",
-                    "pets": "Zvířata",
-                    "pre_iron": "Před žehlením",
-                    "rapid_30": "Rapid 30",
-                    "rapid_45": "Rychlý 45 min",
-                    "rapid_59": "Perfektně rychlý 59 min",
-                    "refresh": "Osvěžení",
-                    "relax_creases": "Uvolnění záhybů",
-                    "saving_30_min": "USPORNY 30'",
-                    "shirts": "Košile",
-                    "shoes": "Obuv",
-                    "small_load": "Malá náplň",
-                    "soft_care": "Měkká péče",
-                    "sport_plus": "Sport",
-                    "super_easy_iron_misti": "Velmi snadné žehlení – smíšené",
-                    "super_easy_iron_xxl": "Velmi snadné žehlení – XXL",
-                    "super_fast_cottons": "Super rychlý bavlna",
-                    "super_fast_delicates": "Super rychlý jemné",
-                    "synthetics": "Syntetika",
-                    "total_care": "Total Care",
-                    "trainers": "Sportovní obuv",
-                    "ultra_care": "Ultra Care",
-                    "waterproof_revitalize": "Obnovení voděodolnosti",
-                    "whites": "Bílé prádlo",
-                    "wool": "Sušení vlny",
-                    "woolmark": "Woolmark",
-                    "xxl_load": "XXL náplň",
-                    "zoom_59": "Zoom 59"
-                },
-                "name": "Program"
-            },
-            "room_temperature": {
-                "name": "Pokojová teplota"
-            },
-            "humidity": {
-                "name": "Vlhkost"
-            },
-            "freezer_temp": {
-                "name": "Teplota mrazničky"
-            },
-            "fridge_temp": {
-                "name": "Teplota chladničky"
             },
             "programs_ac": {
                 "state": {
@@ -545,6 +293,143 @@
                 },
                 "name": "Program"
             },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Aktivní sušení",
+                    "allergy_care": "Antialergický",
+                    "all_in_one": "All in One",
+                    "antiallergy": "Antialergický",
+                    "anti_odours": "Proti zápachu",
+                    "auto_care": "Automatická péče",
+                    "baby": "Dětské",
+                    "bed_quilt": "Ložní přikrývka",
+                    "care_30": "Péče 30",
+                    "care_45": "Péče 45",
+                    "care_59": "Péče 59",
+                    "coloured": "Barevné",
+                    "daily_45_min": "DENNI 45'",
+                    "daily_perfect_59_min": "DENNI PERFEKTNI 59'",
+                    "darks_and_coloured": "Tmavé a barevné",
+                    "delicates": "Jemné",
+                    "duvet": "Přikrývky",
+                    "eco": "Eco bavlna",
+                    "ecospeed_cottons": "Ecospeed bavlna",
+                    "ecospeed_delicates": "Eco rychly - jemne",
+                    "ecospeed_mixed": "Ecospeed směsné",
+                    "extra_hygiene": "HYGIENA EXTRA",
+                    "fitness": "Cvičení",
+                    "fresh_care": "Svěží péče",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Ručníky",
+                    "hqd_bed_sheets": "Povlečení",
+                    "hqd_bulky": "Objemné kusy",
+                    "hqd_casual": "Casual",
+                    "hqd_cold_wind_30": "Chladný vánek 30 minut",
+                    "hqd_cold_wind_timing": "Chladný vánek ",
+                    "hqd_cotton": "Bavlna",
+                    "hqd_curtain": "Záclony",
+                    "hqd_delicate": "Jemné",
+                    "hqd_diaper": "Pleny",
+                    "hqd_duvet": "Přikrývky",
+                    "hqd_feather": "Prošívané bundy",
+                    "hqd_hot_wind_timing": "Horký vzduch",
+                    "hqd_hygienic": "Dezinfekce",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_jacket": "Bundy",
+                    "hqd_jeans": "Džíny",
+                    "hqd_luxury": "Luxusní",
+                    "hqd_mix": "Směsné",
+                    "hqd_night_dry": "Sušení přes noc",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious cure",
+                    "hqd_quick_20": "Rychlý 20",
+                    "hqd_quick_30": "Rychlý 30",
+                    "hqd_quick_dry": "Rychlé sušení 30",
+                    "hqd_quilt": "Deky",
+                    "hqd_refresh": "Osvěžení",
+                    "hqd_school_uniform": "Školní uniformy",
+                    "hqd_shirt": "Košile",
+                    "hqd_shoes": "Obuv",
+                    "hqd_silk": "Hedvábí",
+                    "hqd_sports": "Sportovní",
+                    "hqd_synthetics": "Syntetika",
+                    "hqd_timer": "Načasováno",
+                    "hqd_towel": "Ručníky",
+                    "hqd_underwear": "Spodní prádlo",
+                    "hqd_warm_up": "Ohřátí",
+                    "hqd_wool": "Vlna",
+                    "hqd_working_suit": "Pracovní oděvy",
+                    "hygiene": "Hygiena",
+                    "iot_checkup": "Kontrola",
+                    "iot_dry_anti_mites": "Proti roztočům",
+                    "iot_dry_baby": "Dětské",
+                    "iot_dry_backpacks": "Batohy",
+                    "iot_dry_bathrobe": "Župany",
+                    "iot_dry_bed_linen": "Ložní prádlo",
+                    "iot_dry_bed_quilt": "Ložní přikrývka",
+                    "iot_dry_cotton": "Bavlna",
+                    "iot_dry_cuddly_toys": "Plyšové hračky",
+                    "iot_dry_curtains": "Závěsy",
+                    "iot_dry_dehumidifier": "Odstraňovač vlhkosti",
+                    "iot_dry_delicates": "Jemné prádlo",
+                    "iot_dry_delicate_tablecloths": "Jemné ubrusy",
+                    "iot_dry_denim_jeans": "Džínovina - džíny",
+                    "iot_dry_down_jacket": "Jacket",
+                    "iot_dry_duvet": "Přikrývky",
+                    "iot_dry_easy_iron_cotton": "Super snadné žehlení",
+                    "iot_dry_easy_iron_synthetics": "Velmi snadné žehlení - syntetika",
+                    "iot_dry_gym_fit": "Sportovní oblečení",
+                    "iot_dry_lingerie": "Spodní prádlo",
+                    "iot_dry_mixed": "Smíšené",
+                    "iot_dry_playsuits": "Tepláky",
+                    "iot_dry_rapid_30": "Rapid 30",
+                    "iot_dry_rapid_59": "Rychlý 59'.",
+                    "iot_dry_refresh": "Osvěžení",
+                    "iot_dry_regenerates_waterproof": "Oživení nepromokavých tkanin",
+                    "iot_dry_relax_creases": "Uvolnění záhybů",
+                    "iot_dry_shirts": "Košile",
+                    "iot_dry_small_load": "Malá náplň",
+                    "iot_dry_swimsuits_and_bikinis": "Plavky",
+                    "iot_dry_synthetics": "Syntetika",
+                    "iot_dry_synthetic_dry": "Syntetika - suché",
+                    "iot_dry_tablecloths": "Ubrusy",
+                    "iot_dry_technical_fabrics": "Technické tkaniny",
+                    "iot_dry_warm_embrace": "Dětská zavinovačka",
+                    "iot_dry_wool": "Woolmark",
+                    "jeans": "Džíny",
+                    "mix_and_dry": "Mix a suché",
+                    "pets": "Zvířata",
+                    "pre_iron": "Před žehlením",
+                    "rapid_30": "Rapid 30",
+                    "rapid_45": "Rychlý 45 min",
+                    "rapid_59": "Perfektně rychlý 59 min",
+                    "refresh": "Osvěžení",
+                    "relax_creases": "Uvolnění záhybů",
+                    "saving_30_min": "USPORNY 30'",
+                    "shirts": "Košile",
+                    "shoes": "Obuv",
+                    "small_load": "Malá náplň",
+                    "soft_care": "Měkká péče",
+                    "sport_plus": "Sport",
+                    "super_easy_iron_misti": "Velmi snadné žehlení – smíšené",
+                    "super_easy_iron_xxl": "Velmi snadné žehlení – XXL",
+                    "super_fast_cottons": "Super rychlý bavlna",
+                    "super_fast_delicates": "Super rychlý jemné",
+                    "synthetics": "Syntetika",
+                    "total_care": "Total Care",
+                    "trainers": "Sportovní obuv",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Obnovení voděodolnosti",
+                    "whites": "Bílé prádlo",
+                    "wool": "Sušení vlny",
+                    "woolmark": "Woolmark",
+                    "xxl_load": "XXL náplň",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Program"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_coloured_cottons": "20° barevné a bavlněné látky",
@@ -556,7 +441,7 @@
                     "allergy_care_pro": "Antialergická péče Pro",
                     "all_in_one_49": "Vše v jednom 49'.",
                     "all_in_one_59": "Vše v jednom 59'.",
-                    "all_in_one_59_steam": "Aktivní praní + pára",
+                    "all_in_one_59_steam": "Vše v jednom 59' + pára",
                     "autocare": "Autocare",
                     "autoclean": "Čištění bubnu",
                     "baby_60": "Všechno dětské 60°C",
@@ -622,7 +507,7 @@
                     "iot_active_steam": "Pára",
                     "iot_active_wash_steam": "Aktivní praní",
                     "iot_allergy_care_pro": "Antialergická péče Pro",
-                    "iot_all_in_one_59_steam": "Aktivní praní + pára",
+                    "iot_all_in_one_59_steam": "Vše v jednom 59' + pára",
                     "iot_checkup": "Kontrola",
                     "iot_colour_59_steam": "Barevné 59'' + pára",
                     "iot_cottons_steam": "Bavlna + Pára",
@@ -889,9 +774,148 @@
                     "sparkling": "Šumivé",
                     "white": "Bílé"
                 }
+            },
+            "dry_time": {
+                "name": "Doba sušení"
+            },
+            "power": {
+                "name": "Stupeň výkonu"
+            },
+            "remaining_time": {
+                "name": "Zbývající čas"
+            },
+            "temperature": {
+                "name": "Teplota"
+            },
+            "water_efficiency": {
+                "name": "Efektivní využívání vody"
+            },
+            "water_saving": {
+                "name": "Úspora vody"
+            },
+            "duration": {
+                "name": "Délka"
+            },
+            "target_temperature": {
+                "name": "Cílová teplota"
+            },
+            "spin_speed": {
+                "name": "Odstřeďování"
+            },
+            "steam_leve": {
+                "name": "Úroveň páry"
+            },
+            "dirt_level": {
+                "name": "Míra znečištění"
+            },
+            "delay_time": {
+                "name": "Odložené spuštění"
+            },
+            "suggested_load": {
+                "name": "Kapacita náplně"
+            },
+            "energy_label": {
+                "name": "Energetická účinnost"
+            },
+            "det_dust": {
+                "name": "Prášky"
+            },
+            "det_liquid": {
+                "name": "Tekuté prostředky"
+            },
+            "errors": {
+                "name": "Chyba"
+            },
+            "programs": {
+                "name": "Aktuální program"
+            },
+            "room_temperature": {
+                "name": "Pokojová teplota"
+            },
+            "humidity": {
+                "name": "Vlhkost"
+            },
+            "cycles_total": {
+                "name": "Cykly Celkem"
+            },
+            "energy_total": {
+                "name": "Spotřeba energie Celkem"
+            },
+            "water_total": {
+                "name": "Efektivní využívání vody Celkem"
+            },
+            "energy_current": {
+                "name": "Spotřeba energie Aktuální"
+            },
+            "water_current": {
+                "name": "Efektivní využívání vody Aktuální"
+            },
+            "freezer_temp": {
+                "name": "Teplota mrazničky"
+            },
+            "fridge_temp": {
+                "name": "Teplota chladničky"
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Bez sušení",
+                    "iron_dry": "Žehlení",
+                    "no_dry_iron": "Do skříně",
+                    "cupboard_dry": "Do skříně",
+                    "extra_dry": "Extra suché",
+                    "ready_to_wear": "Připraveno k oblečení"
+                },
+                "name": "Úroveň sušení"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Vypnuto",
+                    "avoid_touch": "Vyhybání",
+                    "follow_touch": "Sledování"
+                },
+                "name": "Senzor osob"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Vysoký",
+                    "mid": "Střední   ",
+                    "low": "Nízký",
+                    "auto": "Auto"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Chladnička",
+                    "freezer": "Mraznička",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Chladnička & Mraznička"
+                },
+                "name": "Zóna"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Funkce Vytápění 10 °C",
+                    "iot_auto": "Auto",
+                    "iot_cool": "Chlazení",
+                    "iot_dry": "Odvlhčování",
+                    "iot_fan": "Ventilátor",
+                    "iot_heat": "Vytápění",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Automatické čištění",
+                    "iot_self_clean": "Samočištění zamrazením",
+                    "iot_self_clean_56": "Samočištění 56°C sterilizace ",
+                    "iot_simple_start": "Spustit nyní",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + auto",
+                    "iot_uv_and_cool": "UV + zchlazení",
+                    "iot_uv_and_dry": "UV + odstranění vlhkosti",
+                    "iot_uv_and_fan": "UV + ventilátor",
+                    "iot_uv_and_heat": "UV + ohřev"
+                },
+                "name": "Program"
+            },
             "programs_dw": {
                 "state": {
                     "59_min": "Rychlý 59'",
@@ -1241,7 +1265,7 @@
                     "allergy_care_pro": "Antialergická péče Pro",
                     "all_in_one_49": "Vše v jednom 49'.",
                     "all_in_one_59": "Vše v jednom 59'.",
-                    "all_in_one_59_steam": "Aktivní praní + pára",
+                    "all_in_one_59_steam": "Vše v jednom 59' + pára",
                     "autocare": "Autocare",
                     "autoclean": "Čištění bubnu",
                     "baby_60": "Všechno dětské 60°C",
@@ -1307,7 +1331,7 @@
                     "iot_active_steam": "Pára",
                     "iot_active_wash_steam": "Aktivní praní",
                     "iot_allergy_care_pro": "Antialergická péče Pro",
-                    "iot_all_in_one_59_steam": "Aktivní praní + pára",
+                    "iot_all_in_one_59_steam": "Vše v jednom 59' + pára",
                     "iot_checkup": "Kontrola",
                     "iot_colour_59_steam": "Barevné 59'' + pára",
                     "iot_cottons_steam": "Bavlna + Pára",
@@ -1540,69 +1564,6 @@
                 },
                 "name": "Program"
             },
-            "dry_levels": {
-                "state": {
-                    "0": "Bez sušení",
-                    "1": "Žehlení",
-                    "2": "Do skříně",
-                    "3": "Do skříně",
-                    "4": "Extra suché",
-                    "12": "Žehlení",
-                    "13": "Do skříně",
-                    "14": "Připraveno k oblečení",
-                    "15": "Extra suché",
-                    "11": "Bez sušení"
-                },
-                "name": "Úroveň sušení"
-            },
-            "spin_speed": {
-                "name": "Odstřeďování"
-            },
-            "temperature": {
-                "name": "Teplota"
-            },
-            "dry_time": {
-                "name": "Doba sušení"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "Vypnuto",
-                    "1": "Vyhybání",
-                    "2": "Sledování"
-                },
-                "name": "Senzor osob"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "Vysoký",
-                    "2": "Střední   ",
-                    "3": "Nízký",
-                    "4": "Auto",
-                    "5": "Auto"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_10_heating": "Funkce Vytápění 10 °C",
-                    "iot_auto": "Auto",
-                    "iot_cool": "Chlazení",
-                    "iot_dry": "Odvlhčování",
-                    "iot_fan": "Ventilátor",
-                    "iot_heat": "Vytápění",
-                    "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Automatické čištění",
-                    "iot_self_clean": "Samočištění zamrazením",
-                    "iot_self_clean_56": "Samočištění 56°C sterilizace ",
-                    "iot_simple_start": "Spustit nyní",
-                    "iot_uv": "UV",
-                    "iot_uv_and_auto": "UV + auto",
-                    "iot_uv_and_cool": "UV + zchlazení",
-                    "iot_uv_and_dry": "UV + odstranění vlhkosti",
-                    "iot_uv_and_fan": "UV + ventilátor",
-                    "iot_uv_and_heat": "UV + ohřev"
-                },
-                "name": "Program"
-            },
             "programs_ref": {
                 "state": {
                     "auto_set": "AUTOMATICKÉ NASTAVENÍ",
@@ -1626,17 +1587,17 @@
                 },
                 "name": "Program"
             },
+            "dry_time": {
+                "name": "Doba sušení"
+            },
+            "spin_speed": {
+                "name": "Odstřeďování"
+            },
+            "temperature": {
+                "name": "Teplota"
+            },
             "remaining_time": {
                 "name": "Zbývající čas"
-            },
-            "ref_zones": {
-                "state": {
-                    "fridge": "Chladnička",
-                    "freezer": "Mraznička",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "Chladnička & Mraznička"
-                },
-                "name": "Zóna"
             }
         },
         "switch": {
@@ -1724,17 +1685,14 @@
             "acqua_plus": {
                 "name": "Aquaplus"
             },
-            "auto_dose": {
-                "name": "Automatické dávkování"
-            },
-            "good_night": {
-                "name": "Dobrou noc"
-            },
             "auto_dose_softener": {
                 "name": "Automatické dávkování Avivážní prostředek"
             },
             "auto_dose_detergent": {
                 "name": "Automatické dávkování Prací prostředek"
+            },
+            "good_night": {
+                "name": "Dobrou noc"
             },
             "auto_set": {
                 "name": "Automatické nastavení"
@@ -1768,26 +1726,11 @@
             "anti_crease": {
                 "name": "Proti pomačkání"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Aquaplus"
             },
             "spin_speed": {
                 "name": "Odstřeďování"
-            },
-            "programs_dw": {
-                "name": "Program"
-            },
-            "programs_ih": {
-                "name": "Program"
-            },
-            "programs_ov": {
-                "name": "Program"
-            },
-            "programs_td": {
-                "name": "Program"
-            },
-            "programs_wm": {
-                "name": "Program"
             },
             "still_hot": {
                 "name": "Stále horká"
@@ -1819,12 +1762,6 @@
             "prewash": {
                 "name": "Předpírka\r\r\r\r\r\r\r\n"
             },
-            "acqua_plus": {
-                "name": "Aquaplus"
-            },
-            "auto_dose": {
-                "name": "Automatické dávkování"
-            },
             "buzzer": {
                 "name": "Zvuková signalizace konce cyklu"
             },
@@ -1848,6 +1785,17 @@
             },
             "filter_replacement": {
                 "name": "Výměna filtru"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Indukční varná deska"
+            },
+            "start_program": {
+                "name": "Program Zahájení"
+            },
+            "stop_program": {
+                "name": "Program Zastavit"
             }
         },
         "number": {
@@ -1886,17 +1834,6 @@
             },
             "fridge_temp_sel": {
                 "name": "Cílová teplota Chladnička"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "Indukční varná deska"
-            },
-            "start_program": {
-                "name": "Program Zahájení"
-            },
-            "stop_program": {
-                "name": "Program Zastavit"
             }
         },
         "climate": {

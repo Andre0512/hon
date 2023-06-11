@@ -3,205 +3,72 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "מוּכָן",
-                    "1": "מוּכָן",
-                    "3": "הַפסָקָה",
-                    "4": "מתוזמן",
-                    "5": "מתוזמן",
-                    "6": "שְׁגִיאָה",
-                    "7": "מוּכָן",
-                    "2": "התוכנית פועלת",
-                    "8": "Test",
-                    "9": "Stopping cycle…"
+                    "ready": "מוּכָן",
+                    "running": "התוכנית פועלת",
+                    "pause": "הַפסָקָה",
+                    "scheduled": "מתוזמן",
+                    "error": "שְׁגִיאָה",
+                    "test": "Test",
+                    "ending": "Stopping cycle…"
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Auto",
+                    "cool": "Cool",
+                    "dry": "Dry",
+                    "heat": "Heat",
+                    "fan": "Fan"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "מוּכָן",
-                    "1": "לִשְׁטוֹף",
-                    "2": "לִשְׁטוֹף",
-                    "3": "Spin",
-                    "4": "לִשְׁטוֹף",
-                    "5": "לִשְׁטוֹף",
-                    "6": "לִשְׁטוֹף",
-                    "7": "יִבּוּשׁ",
-                    "9": "קִיטוֹר",
-                    "10": "מוּכָן",
-                    "11": "Spin",
-                    "12": "Weighing ",
-                    "13": "Weighing ",
-                    "14": "לִשְׁטוֹף",
-                    "15": "לִשְׁטוֹף",
-                    "16": "לִשְׁטוֹף",
-                    "17": "לִשְׁטוֹף",
-                    "18": "לִשְׁטוֹף",
-                    "19": "מתוזמן",
-                    "20": "שמור על טריות",
-                    "24": "Refresh",
-                    "25": "לִשְׁטוֹף",
-                    "26": "Heating",
-                    "27": "לִשְׁטוֹף"
+                    "ready": "מוּכָן",
+                    "spin": "Spin",
+                    "rinse": "לִשְׁטוֹף",
+                    "drying": "יִבּוּשׁ",
+                    "steam": "קִיטוֹר",
+                    "weighting": "Weighing ",
+                    "scheduled": "מתוזמן",
+                    "tumbling": "שמור על טריות",
+                    "refresh": "Refresh",
+                    "heating": "Heating",
+                    "washing": "לִשְׁטוֹף"
                 },
                 "name": "שלב"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "מוּכָן",
-                    "1": "Drying",
-                    "2": "יִבּוּשׁ",
-                    "3": "Cooldown",
-                    "13": "Cooldown",
-                    "14": "Drying",
-                    "15": "Drying",
-                    "16": "Cooldown",
-                    "18": "Keep Fresh",
-                    "19": "יִבּוּשׁ",
-                    "20": "יִבּוּשׁ",
-                    "11": "מוּכָן",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "מוּכָן",
+                    "heat_stroke": "Drying",
+                    "drying": "יִבּוּשׁ",
+                    "cooldown": "Cooldown",
+                    "unknown": "unknown",
+                    "tumbling": "Keep Fresh"
                 },
                 "name": "שלב"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "מוּכָן",
-                    "1": "Prewash",
-                    "2": "לִשְׁטוֹף",
-                    "3": "לִשְׁטוֹף",
-                    "4": "יִבּוּשׁ",
-                    "5": "מוּכָן",
-                    "6": "Hot rinse"
+                    "ready": "מוּכָן",
+                    "prewash": "Prewash",
+                    "washing": "לִשְׁטוֹף",
+                    "rinse": "לִשְׁטוֹף",
+                    "drying": "יִבּוּשׁ",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "שלב"
             },
             "dry_levels": {
                 "state": {
-                    "0": "ללא ייבוש",
-                    "1": "בַּרזֶל",
-                    "2": "לא לייבש ברזל",
-                    "3": "ארון יבש",
-                    "4": "יבש במיוחד",
-                    "12": "בַּרזֶל",
-                    "13": "ארון יבש",
-                    "14": "Ready to wear",
-                    "15": "יבש במיוחד",
-                    "11": "ללא ייבוש"
+                    "no_dry": "ללא ייבוש",
+                    "iron_dry": "בַּרזֶל",
+                    "no_dry_iron": "לא לייבש ברזל",
+                    "cupboard_dry": "ארון יבש",
+                    "extra_dry": "יבש במיוחד",
+                    "ready_to_wear": "Ready to wear"
                 },
                 "name": "רמת ייבוש"
-            },
-            "anti_crease": {
-                "name": "Anticrease"
-            },
-            "power": {
-                "name": "Power level"
-            },
-            "remaining_time": {
-                "name": "זמן שנותר"
-            },
-            "temperature": {
-                "name": "Temperature"
-            },
-            "water_efficiency": {
-                "name": "Water efficiency"
-            },
-            "water_saving": {
-                "name": "Water savings"
-            },
-            "duration": {
-                "name": "מֶשֶׁך"
-            },
-            "target_temperature": {
-                "name": "Target temperature"
-            },
-            "spin_speed": {
-                "name": "סיבוב"
-            },
-            "steam_leve": {
-                "name": "מפלס קיטור"
-            },
-            "dirt_level": {
-                "name": "רמת עפר"
-            },
-            "delay_time": {
-                "name": "Delay Start"
-            },
-            "dry_time": {
-                "name": "זמן ייבוש"
-            },
-            "suggested_load": {
-                "name": "יכולת עומס"
-            },
-            "energy_label": {
-                "name": "חסכון באנרגיה"
-            },
-            "det_dust": {
-                "name": "Powder detergent"
-            },
-            "det_liquid": {
-                "name": "Liquid detergent"
-            },
-            "errors": {
-                "name": "Error"
-            },
-            "programs": {
-                "name": "Current program"
-            },
-            "cycles_total": {
-                "name": "מחזורים Total"
-            },
-            "energy_total": {
-                "name": "Energy Consumption Total"
-            },
-            "water_total": {
-                "name": "Water efficiency Total"
-            },
-            "energy_current": {
-                "name": "Energy Consumption Current"
-            },
-            "water_current": {
-                "name": "Water efficiency Current"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "Auto",
-                    "1": "Cool",
-                    "2": "Cool",
-                    "3": "Dry",
-                    "4": "Heat",
-                    "5": "Fan",
-                    "6": "Fan"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "genius": "Genius",
-                    "hqd_bath_towel": "Bath towel",
-                    "hqd_bulky": "Bulky",
-                    "hqd_cold_wind_30": "Cold wind 30 minutes",
-                    "hqd_cold_wind_timing": "Cold wind",
-                    "hqd_hot_wind_timing": "Hot wind",
-                    "hqd_luxury": "Luxury",
-                    "hqd_night_dry": "Night dry",
-                    "hqd_refresh": "Refresh",
-                    "hqd_timer": "תוזמן",
-                    "hqd_warm_up": "Warm up",
-                    "hqd_working_suit": "Working suit",
-                    "iot_dry_synthetic_dry": "סינתטי יבש"
-                },
-                "name": "Program"
-            },
-            "room_temperature": {
-                "name": "Room temperature"
-            },
-            "humidity": {
-                "name": "Humidity"
-            },
-            "freezer_temp": {
-                "name": "Freezer temperature"
-            },
-            "fridge_temp": {
-                "name": "Fridge temperature"
             },
             "programs_ac": {
                 "state": {
@@ -236,6 +103,24 @@
                 },
                 "name": "Program"
             },
+            "programs_td": {
+                "state": {
+                    "genius": "Genius",
+                    "hqd_bath_towel": "Bath towel",
+                    "hqd_bulky": "Bulky",
+                    "hqd_cold_wind_30": "Cold wind 30 minutes",
+                    "hqd_cold_wind_timing": "Cold wind",
+                    "hqd_hot_wind_timing": "Hot wind",
+                    "hqd_luxury": "Luxury",
+                    "hqd_night_dry": "Night dry",
+                    "hqd_refresh": "Refresh",
+                    "hqd_timer": "תוזמן",
+                    "hqd_warm_up": "Warm up",
+                    "hqd_working_suit": "Working suit",
+                    "iot_dry_synthetic_dry": "סינתטי יבש"
+                },
+                "name": "Program"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_new_energy_label": "20 מעלות צלזיוס",
@@ -246,7 +131,7 @@
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "All in One 49 '",
                     "all_in_one_59": "All in One 59 '",
-                    "all_in_one_59_steam": "שטיפה פעילה",
+                    "all_in_one_59_steam": "All in One 59 '",
                     "autocare": "טיפול אוטומטי",
                     "autoclean": "ניקוי אוטומטי",
                     "baby_60": "BABY_60",
@@ -276,7 +161,7 @@
                     "iot_active_steam": "קִיטוֹר",
                     "iot_active_wash_steam": "שטיפה פעילה",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "שטיפה פעילה",
+                    "iot_all_in_one_59_steam": "All in One 59 '",
                     "iot_checkup": "בְּדִיקָה",
                     "iot_delicati_59_steam": "DELICATI_59",
                     "iot_dry_air_refresh": "רענון אוויר",
@@ -447,9 +332,132 @@
             },
             "programs_wc": {
                 "state": {}
+            },
+            "dry_time": {
+                "name": "זמן ייבוש"
+            },
+            "power": {
+                "name": "Power level"
+            },
+            "remaining_time": {
+                "name": "זמן שנותר"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
+            "water_efficiency": {
+                "name": "Water efficiency"
+            },
+            "water_saving": {
+                "name": "Water savings"
+            },
+            "duration": {
+                "name": "מֶשֶׁך"
+            },
+            "target_temperature": {
+                "name": "Target temperature"
+            },
+            "spin_speed": {
+                "name": "סיבוב"
+            },
+            "steam_leve": {
+                "name": "מפלס קיטור"
+            },
+            "dirt_level": {
+                "name": "רמת עפר"
+            },
+            "delay_time": {
+                "name": "Delay Start"
+            },
+            "suggested_load": {
+                "name": "יכולת עומס"
+            },
+            "energy_label": {
+                "name": "חסכון באנרגיה"
+            },
+            "det_dust": {
+                "name": "Powder detergent"
+            },
+            "det_liquid": {
+                "name": "Liquid detergent"
+            },
+            "errors": {
+                "name": "Error"
+            },
+            "programs": {
+                "name": "Current program"
+            },
+            "room_temperature": {
+                "name": "Room temperature"
+            },
+            "humidity": {
+                "name": "Humidity"
+            },
+            "cycles_total": {
+                "name": "מחזורים Total"
+            },
+            "energy_total": {
+                "name": "Energy Consumption Total"
+            },
+            "water_total": {
+                "name": "Water efficiency Total"
+            },
+            "energy_current": {
+                "name": "Energy Consumption Current"
+            },
+            "water_current": {
+                "name": "Water efficiency Current"
+            },
+            "freezer_temp": {
+                "name": "Freezer temperature"
+            },
+            "fridge_temp": {
+                "name": "Fridge temperature"
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "ללא ייבוש",
+                    "iron_dry": "בַּרזֶל",
+                    "no_dry_iron": "לא לייבש ברזל",
+                    "cupboard_dry": "ארון יבש",
+                    "extra_dry": "יבש במיוחד",
+                    "ready_to_wear": "Ready to wear"
+                },
+                "name": "רמת ייבוש"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Off",
+                    "avoid_touch": "Avoid touch",
+                    "follow_touch": "Follow"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "High",
+                    "mid": "Medium   ",
+                    "low": "Low",
+                    "auto": "Auto"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Fridge",
+                    "freezer": "Freezer",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Fridge & Freezer"
+                },
+                "name": "Zone"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_simple_start": "התחל עכשיו"
+                },
+                "name": "Program"
+            },
             "programs_dw": {
                 "state": {
                     "gentle_wash": "Gentle wash",
@@ -505,7 +513,7 @@
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "All in One 49 '",
                     "all_in_one_59": "All in One 59 '",
-                    "all_in_one_59_steam": "שטיפה פעילה",
+                    "all_in_one_59_steam": "All in One 59 '",
                     "autocare": "טיפול אוטומטי",
                     "autoclean": "ניקוי אוטומטי",
                     "baby_60": "BABY_60",
@@ -535,7 +543,7 @@
                     "iot_active_steam": "קִיטוֹר",
                     "iot_active_wash_steam": "שטיפה פעילה",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "שטיפה פעילה",
+                    "iot_all_in_one_59_steam": "All in One 59 '",
                     "iot_checkup": "בְּדִיקָה",
                     "iot_delicati_59_steam": "DELICATI_59",
                     "iot_dry_air_refresh": "רענון אוויר",
@@ -692,53 +700,6 @@
                 },
                 "name": "Program"
             },
-            "dry_levels": {
-                "state": {
-                    "0": "ללא ייבוש",
-                    "1": "בַּרזֶל",
-                    "2": "לא לייבש ברזל",
-                    "3": "ארון יבש",
-                    "4": "יבש במיוחד",
-                    "12": "בַּרזֶל",
-                    "13": "ארון יבש",
-                    "14": "Ready to wear",
-                    "15": "יבש במיוחד",
-                    "11": "ללא ייבוש"
-                },
-                "name": "רמת ייבוש"
-            },
-            "spin_speed": {
-                "name": "סיבוב"
-            },
-            "temperature": {
-                "name": "Temperature"
-            },
-            "dry_time": {
-                "name": "זמן ייבוש"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "Off",
-                    "1": "Avoid touch",
-                    "2": "Follow"
-                },
-                "name": "Eco pilot"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "High",
-                    "2": "Medium   ",
-                    "3": "Low",
-                    "4": "Auto",
-                    "5": "Auto"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_simple_start": "התחל עכשיו"
-                },
-                "name": "Program"
-            },
             "programs_ref": {
                 "state": {
                     "chiller": "Quick cool",
@@ -751,17 +712,17 @@
                 },
                 "name": "Program"
             },
+            "dry_time": {
+                "name": "זמן ייבוש"
+            },
+            "spin_speed": {
+                "name": "סיבוב"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
             "remaining_time": {
                 "name": "זמן שנותר"
-            },
-            "ref_zones": {
-                "state": {
-                    "fridge": "Fridge",
-                    "freezer": "Freezer",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "Fridge & Freezer"
-                },
-                "name": "Zone"
             }
         },
         "switch": {
@@ -849,17 +810,14 @@
             "acqua_plus": {
                 "name": "Acquaplus"
             },
-            "auto_dose": {
-                "name": "מינון אוטומטי"
-            },
-            "good_night": {
-                "name": "לילה טוב"
-            },
             "auto_dose_softener": {
                 "name": "מינון אוטומטי מרכך"
             },
             "auto_dose_detergent": {
                 "name": "מינון אוטומטי חומר ניקוי"
+            },
+            "good_night": {
+                "name": "לילה טוב"
             },
             "auto_set": {
                 "name": "Auto-Set"
@@ -893,26 +851,11 @@
             "anti_crease": {
                 "name": "Anticrease"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Acquaplus"
             },
             "spin_speed": {
                 "name": "סיבוב"
-            },
-            "programs_dw": {
-                "name": "Program"
-            },
-            "programs_ih": {
-                "name": "Program"
-            },
-            "programs_ov": {
-                "name": "Program"
-            },
-            "programs_td": {
-                "name": "Program"
-            },
-            "programs_wm": {
-                "name": "Program"
             },
             "still_hot": {
                 "name": "Still hot"
@@ -944,12 +887,6 @@
             "prewash": {
                 "name": "שטיפה מראש"
             },
-            "acqua_plus": {
-                "name": "Acquaplus"
-            },
-            "auto_dose": {
-                "name": "מינון אוטומטי"
-            },
             "buzzer": {
                 "name": "Cycle end chime"
             },
@@ -973,6 +910,17 @@
             },
             "filter_replacement": {
                 "name": "Filter replacement"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Induction Hob"
+            },
+            "start_program": {
+                "name": "Program Start"
+            },
+            "stop_program": {
+                "name": "Program Stop"
             }
         },
         "number": {
@@ -1011,17 +959,6 @@
             },
             "fridge_temp_sel": {
                 "name": "Target temperature Fridge"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "Induction Hob"
-            },
-            "start_program": {
-                "name": "Program Start"
-            },
-            "stop_program": {
-                "name": "Program Stop"
             }
         },
         "climate": {

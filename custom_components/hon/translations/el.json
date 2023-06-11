@@ -3,324 +3,72 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "Ετοιμος",
-                    "1": "Ετοιμος",
-                    "3": "Παύση",
-                    "4": "Προγραμματισμένος",
-                    "5": "Προγραμματισμένος",
-                    "6": "Λάθος",
-                    "7": "Ετοιμος",
-                    "2": "Το πρόγραμμα εκτελείται",
-                    "8": "Test",
-                    "9": "Διακοπή κύκλου..."
+                    "ready": "Ετοιμος",
+                    "running": "Το πρόγραμμα εκτελείται",
+                    "pause": "Παύση",
+                    "scheduled": "Προγραμματισμένος",
+                    "error": "Λάθος",
+                    "test": "Test",
+                    "ending": "Διακοπή κύκλου..."
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Αυτόματο",
+                    "cool": "Ψύξη",
+                    "dry": "Στέγνωμα",
+                    "heat": "Ζέστη",
+                    "fan": "Ανεμιστήρας"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "Ετοιμος",
-                    "1": "Πλύση",
-                    "2": "Πλύση",
-                    "3": "Στύψιμο",
-                    "4": "Ξέβγαλμα",
-                    "5": "Ξέβγαλμα",
-                    "6": "Ξέβγαλμα",
-                    "7": "Στέγνωμα",
-                    "9": "Ατμός",
-                    "10": "Ετοιμος",
-                    "11": "Στύψιμο",
-                    "12": "Ζύγισμα ",
-                    "13": "Ζύγισμα ",
-                    "14": "Πλύση",
-                    "15": "Πλύση",
-                    "16": "Πλύση",
-                    "17": "Ξέβγαλμα",
-                    "18": "Ξέβγαλμα",
-                    "19": "Προγραμματισμένος",
-                    "20": "Κρατήστε τη φρεσκάδα",
-                    "24": "Φρεσκάρισμα",
-                    "25": "Πλύση",
-                    "26": "Θέρμανση",
-                    "27": "Πλύση"
+                    "ready": "Ετοιμος",
+                    "spin": "Στύψιμο",
+                    "rinse": "Ξέβγαλμα",
+                    "drying": "Στέγνωμα",
+                    "steam": "Ατμός",
+                    "weighting": "Ζύγισμα ",
+                    "scheduled": "Προγραμματισμένος",
+                    "tumbling": "Κρατήστε τη φρεσκάδα",
+                    "refresh": "Φρεσκάρισμα",
+                    "heating": "Θέρμανση",
+                    "washing": "Πλύση"
                 },
                 "name": "Φάση"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "Ετοιμος",
-                    "1": "Στέγνωμα",
-                    "2": "Στέγνωμα",
-                    "3": "Περίοδος αναμονής",
-                    "13": "Περίοδος αναμονής",
-                    "14": "Στέγνωμα",
-                    "15": "Στέγνωμα",
-                    "16": "Περίοδος αναμονής",
-                    "18": "Κρατήστε τη φρεσκάδα",
-                    "19": "Στέγνωμα",
-                    "20": "Στέγνωμα",
-                    "11": "Ετοιμος",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "Ετοιμος",
+                    "heat_stroke": "Στέγνωμα",
+                    "drying": "Στέγνωμα",
+                    "cooldown": "Περίοδος αναμονής",
+                    "unknown": "unknown",
+                    "tumbling": "Κρατήστε τη φρεσκάδα"
                 },
                 "name": "Φάση"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "Ετοιμος",
-                    "1": "Πρόπλυση",
-                    "2": "Πλύση",
-                    "3": "Ξέβγαλμα",
-                    "4": "Στέγνωμα",
-                    "5": "Ετοιμος",
-                    "6": "Hot rinse"
+                    "ready": "Ετοιμος",
+                    "prewash": "Πρόπλυση",
+                    "washing": "Πλύση",
+                    "rinse": "Ξέβγαλμα",
+                    "drying": "Στέγνωμα",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "Φάση"
             },
             "dry_levels": {
                 "state": {
-                    "0": "Χωρίς στέγνωμα",
-                    "1": "Σιδέρωμα",
-                    "2": "Στέγνωμα για Αποθήκευση ",
-                    "3": "Στέγνωμα για Αποθήκευση ",
-                    "4": "Επιπλέον στέγνωμα",
-                    "12": "Σιδέρωμα",
-                    "13": "Στέγνωμα για Αποθήκευση ",
-                    "14": "Ετοιμο να φορεθεί",
-                    "15": "Επιπλέον στέγνωμα",
-                    "11": "Χωρίς στέγνωμα"
+                    "no_dry": "Χωρίς στέγνωμα",
+                    "iron_dry": "Σιδέρωμα",
+                    "no_dry_iron": "Στέγνωμα για Αποθήκευση ",
+                    "cupboard_dry": "Στέγνωμα για Αποθήκευση ",
+                    "extra_dry": "Επιπλέον στέγνωμα",
+                    "ready_to_wear": "Ετοιμο να φορεθεί"
                 },
                 "name": "Επίπεδο στεγνώματος"
-            },
-            "anti_crease": {
-                "name": "Λιγότερες ζάρες"
-            },
-            "power": {
-                "name": "Επίπεδο ισχύος ρεύματος"
-            },
-            "remaining_time": {
-                "name": "Χρόνος που απομένει"
-            },
-            "temperature": {
-                "name": "Θερμοκρασία"
-            },
-            "water_efficiency": {
-                "name": "Απόδοση νερού"
-            },
-            "water_saving": {
-                "name": "Εξοικονόμηση νερού"
-            },
-            "duration": {
-                "name": "Διάρκεια"
-            },
-            "target_temperature": {
-                "name": "Στοχευμένη θερμοκρασία"
-            },
-            "spin_speed": {
-                "name": "Στύψιμο"
-            },
-            "steam_leve": {
-                "name": "Επίπεδο ατμού"
-            },
-            "dirt_level": {
-                "name": "Επίπεδο βρωμιάς"
-            },
-            "delay_time": {
-                "name": "Καθυστερημένη έναρξη"
-            },
-            "dry_time": {
-                "name": "Χρόνος στεγνώματος"
-            },
-            "suggested_load": {
-                "name": "Χωρητικότητα φορτίου"
-            },
-            "energy_label": {
-                "name": "Ενεργειακή απόδοση"
-            },
-            "det_dust": {
-                "name": "Σκόνη"
-            },
-            "det_liquid": {
-                "name": "Υγρό"
-            },
-            "errors": {
-                "name": "Σφάλμα"
-            },
-            "programs": {
-                "name": "Τρέχων πρόγραμμα"
-            },
-            "cycles_total": {
-                "name": "Κύκλοι Σύνολο"
-            },
-            "energy_total": {
-                "name": "Κατανάλωση ενέργειας Σύνολο"
-            },
-            "water_total": {
-                "name": "Απόδοση νερού Σύνολο"
-            },
-            "energy_current": {
-                "name": "Κατανάλωση ενέργειας Current"
-            },
-            "water_current": {
-                "name": "Απόδοση νερού Current"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "Αυτόματο",
-                    "1": "Ψύξη",
-                    "2": "Ψύξη",
-                    "3": "Στέγνωμα",
-                    "4": "Ζέστη",
-                    "5": "Ανεμιστήρας",
-                    "6": "Ανεμιστήρας"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "active_dry": "Ενεργό στέγνωμα",
-                    "allergy_care": "Αντιαλλεργικο",
-                    "all_in_one": "Ολα σε ενα",
-                    "antiallergy": "Αντιαλλεργικο",
-                    "anti_odours": "Εναντια στιws",
-                    "auto_care": "Αυτόματη φροντίδα",
-                    "baby": "Μωρουδιακά",
-                    "bed_quilt": "Καλυμματα κρεβατιου",
-                    "care_30": "Φροντίδα 30",
-                    "care_45": "Φροντίδα 45",
-                    "care_59": "Φροντίδα 59",
-                    "coloured": "χρωματιστα",
-                    "daily_45_min": "ΚΑΘΗΜΕΡΙΝΟ 45'",
-                    "daily_perfect_59_min": "ΚΑΘΗΜΕΡΙΝΟ ΙΔΑΝΙΚΟ 59'",
-                    "darks_and_coloured": "Μαυρα & Χρωματιστα",
-                    "delicates": "Ευαίσθητα",
-                    "duvet": "Παπλώματα",
-                    "eco": "Βαμβακερά οικολογικά",
-                    "ecospeed_cottons": "Ecospeed βαμβακερα",
-                    "ecospeed_delicates": "Ecospeed ευαισθητα",
-                    "ecospeed_mixed": "Ecospeed αναμεικτα",
-                    "extra_hygiene": "ΕΠΙΠΛΕΟΝ ΥΓΙΕΙΝΗ",
-                    "fitness": "Καταλληλότητα",
-                    "fresh_care": "Φρέσκια φροντίδα",
-                    "genius": "Genius",
-                    "hqd_baby_care": "Baby Care",
-                    "hqd_bath_towel": "Πετσέτες",
-                    "hqd_bed_sheets": "Σεντόνια κρεβατιού",
-                    "hqd_bulky": "Ογκώδη αντικείμενα",
-                    "hqd_casual": "Καθημερινά ρούχα",
-                    "hqd_cold_wind_30": "Δροσερό αεράκι 30 λεπτά",
-                    "hqd_cold_wind_timing": "Δροσερό αεράκι ",
-                    "hqd_cotton": "Βαμβακερό",
-                    "hqd_curtain": "Κουρτίνες",
-                    "hqd_delicate": "Ευαίσθητα",
-                    "hqd_diaper": "Πάνες",
-                    "hqd_duvet": "Πάπλωμα",
-                    "hqd_feather": "Φουσκωτά μπουφάν",
-                    "hqd_hot_wind_timing": "Ζεστός αέρας",
-                    "hqd_hygienic": "Υγιεινή",
-                    "hqd_i_refresh": "I-Refresh",
-                    "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_jacket": "Ζακέτες",
-                    "hqd_jeans": "Τζιν παντελονια",
-                    "hqd_luxury": "Luxury",
-                    "hqd_mix": "Μικτά",
-                    "hqd_night_dry": "Ολονύκτιο στέγνωμα",
-                    "hqd_outdoor": "Outdoor",
-                    "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "Γρήγορα 20",
-                    "hqd_quick_30": "Γρήγορα 30",
-                    "hqd_quick_dry": "Γρήγορο στέγνωμα 30",
-                    "hqd_quilt": "Παπλώματα",
-                    "hqd_refresh": "Φρεσκάρισμα",
-                    "hqd_school_uniform": "Σχολική στολή",
-                    "hqd_shirt": "Πουκάμισα",
-                    "hqd_shoes": "Παπούτσια",
-                    "hqd_silk": "Μεταξωτά",
-                    "hqd_sports": "Αθλητικά",
-                    "hqd_synthetics": "Συνθετικά",
-                    "hqd_timer": "Χρονομετρημένο",
-                    "hqd_towel": "Πετσέτες",
-                    "hqd_underwear": "Εσώρουχα",
-                    "hqd_warm_up": "Ζέσταμα",
-                    "hqd_wool": "Μάλλινα",
-                    "hqd_working_suit": "Ενδύματα εργασίας",
-                    "hygiene": "Υγιεινή",
-                    "iot_checkup": "Έλεγχος",
-                    "iot_dry_anti_mites": "Ενάντια στα ακάρεα",
-                    "iot_dry_baby": "Μωρουδιακά",
-                    "iot_dry_backpacks": "Σακίδια πλάτης",
-                    "iot_dry_bathrobe": "Μπουρνούζι",
-                    "iot_dry_bed_linen": "Κλινοσκεπάσματα",
-                    "iot_dry_bed_quilt": "Καλυμματα κρεβατιου",
-                    "iot_dry_cotton": "Βαμβακερό",
-                    "iot_dry_cuddly_toys": "Λούτρινα Αρκουδάκια",
-                    "iot_dry_curtains": "Κουρτίνες",
-                    "iot_dry_dehumidifier": "Αφαίρεση υγρασίας",
-                    "iot_dry_delicates": "Ευαισθητα",
-                    "iot_dry_delicate_tablecloths": "Ευαίσθητα τραπεζομάντηλα",
-                    "iot_dry_denim_jeans": "Ντένιμ - τζιν",
-                    "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "Παπλώματα",
-                    "iot_dry_easy_iron_cotton": "Super Easy Iron",
-                    "iot_dry_easy_iron_synthetics": "Εξαιρετικά εύκολο σιδέρωμα - Συνθετικά",
-                    "iot_dry_gym_fit": "Γυμναστήριο",
-                    "iot_dry_lingerie": "Εσώρουχα",
-                    "iot_dry_mixed": "Μικτά",
-                    "iot_dry_playsuits": "Στολές",
-                    "iot_dry_rapid_30": "Rapid 30",
-                    "iot_dry_rapid_59": "Γρήγορο 59'.",
-                    "iot_dry_refresh": "Refresh",
-                    "iot_dry_regenerates_waterproof": "Ανανέωση αδιάβροχων",
-                    "iot_dry_relax_creases": "ΧΑΛΑΡΩΣΗ",
-                    "iot_dry_shirts": "Πουκάμισα",
-                    "iot_dry_small_load": "ΜΙΚΡΟ ΦΟΡΤΙΟ",
-                    "iot_dry_swimsuits_and_bikinis": "Μαγιό",
-                    "iot_dry_synthetics": "Συνθετικα",
-                    "iot_dry_synthetic_dry": "Συνθετικά στέγνωμα",
-                    "iot_dry_tablecloths": "Τραπεζομάντηλα",
-                    "iot_dry_technical_fabrics": "Τεχνικά υφάσματα",
-                    "iot_dry_warm_embrace": "Ζεστή Αγκαλιά",
-                    "iot_dry_wool": "Μαλλινα",
-                    "jeans": "τζιν",
-                    "mix_and_dry": "Μικτά & Στέγνωμα",
-                    "pets": "Κατοικίδια",
-                    "pre_iron": "Προ-σιδερωμα",
-                    "rapid_30": "Rapid 30",
-                    "rapid_45": "Rapid 45 min",
-                    "rapid_59": "Τέλειο Γρήγορο 59 λεπτά",
-                    "refresh": "Φρεσκάρισμα",
-                    "relax_creases": "ΧΑΛΑΡΩΣΗ",
-                    "saving_30_min": "ΕΞΟΙΚΟΝΟΜΗΣΗ 30'",
-                    "shirts": "Πουκάμισα",
-                    "shoes": "Παπούτσια",
-                    "small_load": "ΜΙΚΡΟ ΦΟΡΤΙΟ",
-                    "soft_care": "Απαλή φροντίδα",
-                    "sport_plus": "ΣΠΟΡ",
-                    "super_easy_iron_misti": "Εξαιρετικά εύκολο σιδέρωμα για ανάμεικτα",
-                    "super_easy_iron_xxl": "Εξαιρετικά εύκολο σιδέρωμα για XXL",
-                    "super_fast_cottons": "Εξαιρετικα ΓΡΗΓΟΡΟ βαμβακερα",
-                    "super_fast_delicates": "Εξαιρετικα ΓΡΗΓΟΡΟ ευαισθητα",
-                    "synthetics": "Συνθετικα",
-                    "total_care": "Ολικη Φροντιδα",
-                    "trainers": "Αθλητικά παπούτσια",
-                    "ultra_care": "Ultra Care",
-                    "waterproof_revitalize": "Αναζωογονηση αδιαβροχων",
-                    "whites": "Λευκά",
-                    "wool": "Στέγνωμα Μάλλινων",
-                    "woolmark": "Μαλλινα",
-                    "xxl_load": "XXL Φορτιο",
-                    "zoom_59": "Zoom 59"
-                },
-                "name": "Πρόγραμμα"
-            },
-            "room_temperature": {
-                "name": "Θερμοκρασία δωματίου"
-            },
-            "humidity": {
-                "name": "Υγρασία"
-            },
-            "freezer_temp": {
-                "name": "Θερμοκρασία καταψύκτη"
-            },
-            "fridge_temp": {
-                "name": "Θερμοκρασία ψυγείου"
             },
             "programs_ac": {
                 "state": {
@@ -545,6 +293,143 @@
                 },
                 "name": "Πρόγραμμα"
             },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Ενεργό στέγνωμα",
+                    "allergy_care": "Αντιαλλεργικο",
+                    "all_in_one": "Ολα σε ενα",
+                    "antiallergy": "Αντιαλλεργικο",
+                    "anti_odours": "Εναντια στιws",
+                    "auto_care": "Αυτόματη φροντίδα",
+                    "baby": "Μωρουδιακά",
+                    "bed_quilt": "Καλυμματα κρεβατιου",
+                    "care_30": "Φροντίδα 30",
+                    "care_45": "Φροντίδα 45",
+                    "care_59": "Φροντίδα 59",
+                    "coloured": "χρωματιστα",
+                    "daily_45_min": "ΚΑΘΗΜΕΡΙΝΟ 45'",
+                    "daily_perfect_59_min": "ΚΑΘΗΜΕΡΙΝΟ ΙΔΑΝΙΚΟ 59'",
+                    "darks_and_coloured": "Μαυρα & Χρωματιστα",
+                    "delicates": "Ευαίσθητα",
+                    "duvet": "Παπλώματα",
+                    "eco": "Βαμβακερά οικολογικά",
+                    "ecospeed_cottons": "Ecospeed βαμβακερα",
+                    "ecospeed_delicates": "Ecospeed ευαισθητα",
+                    "ecospeed_mixed": "Ecospeed αναμεικτα",
+                    "extra_hygiene": "ΕΠΙΠΛΕΟΝ ΥΓΙΕΙΝΗ",
+                    "fitness": "Καταλληλότητα",
+                    "fresh_care": "Φρέσκια φροντίδα",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Πετσέτες",
+                    "hqd_bed_sheets": "Σεντόνια κρεβατιού",
+                    "hqd_bulky": "Ογκώδη αντικείμενα",
+                    "hqd_casual": "Καθημερινά ρούχα",
+                    "hqd_cold_wind_30": "Δροσερό αεράκι 30 λεπτά",
+                    "hqd_cold_wind_timing": "Δροσερό αεράκι ",
+                    "hqd_cotton": "Βαμβακερό",
+                    "hqd_curtain": "Κουρτίνες",
+                    "hqd_delicate": "Ευαίσθητα",
+                    "hqd_diaper": "Πάνες",
+                    "hqd_duvet": "Πάπλωμα",
+                    "hqd_feather": "Φουσκωτά μπουφάν",
+                    "hqd_hot_wind_timing": "Ζεστός αέρας",
+                    "hqd_hygienic": "Υγιεινή",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_jacket": "Ζακέτες",
+                    "hqd_jeans": "Τζιν παντελονια",
+                    "hqd_luxury": "Luxury",
+                    "hqd_mix": "Μικτά",
+                    "hqd_night_dry": "Ολονύκτιο στέγνωμα",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious cure",
+                    "hqd_quick_20": "Γρήγορα 20",
+                    "hqd_quick_30": "Γρήγορα 30",
+                    "hqd_quick_dry": "Γρήγορο στέγνωμα 30",
+                    "hqd_quilt": "Παπλώματα",
+                    "hqd_refresh": "Φρεσκάρισμα",
+                    "hqd_school_uniform": "Σχολική στολή",
+                    "hqd_shirt": "Πουκάμισα",
+                    "hqd_shoes": "Παπούτσια",
+                    "hqd_silk": "Μεταξωτά",
+                    "hqd_sports": "Αθλητικά",
+                    "hqd_synthetics": "Συνθετικά",
+                    "hqd_timer": "Χρονομετρημένο",
+                    "hqd_towel": "Πετσέτες",
+                    "hqd_underwear": "Εσώρουχα",
+                    "hqd_warm_up": "Ζέσταμα",
+                    "hqd_wool": "Μάλλινα",
+                    "hqd_working_suit": "Ενδύματα εργασίας",
+                    "hygiene": "Υγιεινή",
+                    "iot_checkup": "Έλεγχος",
+                    "iot_dry_anti_mites": "Ενάντια στα ακάρεα",
+                    "iot_dry_baby": "Μωρουδιακά",
+                    "iot_dry_backpacks": "Σακίδια πλάτης",
+                    "iot_dry_bathrobe": "Μπουρνούζι",
+                    "iot_dry_bed_linen": "Κλινοσκεπάσματα",
+                    "iot_dry_bed_quilt": "Καλυμματα κρεβατιου",
+                    "iot_dry_cotton": "Βαμβακερό",
+                    "iot_dry_cuddly_toys": "Λούτρινα Αρκουδάκια",
+                    "iot_dry_curtains": "Κουρτίνες",
+                    "iot_dry_dehumidifier": "Αφαίρεση υγρασίας",
+                    "iot_dry_delicates": "Ευαισθητα",
+                    "iot_dry_delicate_tablecloths": "Ευαίσθητα τραπεζομάντηλα",
+                    "iot_dry_denim_jeans": "Ντένιμ - τζιν",
+                    "iot_dry_down_jacket": "Jacket",
+                    "iot_dry_duvet": "Παπλώματα",
+                    "iot_dry_easy_iron_cotton": "Super Easy Iron",
+                    "iot_dry_easy_iron_synthetics": "Εξαιρετικά εύκολο σιδέρωμα - Συνθετικά",
+                    "iot_dry_gym_fit": "Γυμναστήριο",
+                    "iot_dry_lingerie": "Εσώρουχα",
+                    "iot_dry_mixed": "Μικτά",
+                    "iot_dry_playsuits": "Στολές",
+                    "iot_dry_rapid_30": "Rapid 30",
+                    "iot_dry_rapid_59": "Γρήγορο 59'.",
+                    "iot_dry_refresh": "Refresh",
+                    "iot_dry_regenerates_waterproof": "Ανανέωση αδιάβροχων",
+                    "iot_dry_relax_creases": "ΧΑΛΑΡΩΣΗ",
+                    "iot_dry_shirts": "Πουκάμισα",
+                    "iot_dry_small_load": "ΜΙΚΡΟ ΦΟΡΤΙΟ",
+                    "iot_dry_swimsuits_and_bikinis": "Μαγιό",
+                    "iot_dry_synthetics": "Συνθετικα",
+                    "iot_dry_synthetic_dry": "Συνθετικά στέγνωμα",
+                    "iot_dry_tablecloths": "Τραπεζομάντηλα",
+                    "iot_dry_technical_fabrics": "Τεχνικά υφάσματα",
+                    "iot_dry_warm_embrace": "Ζεστή Αγκαλιά",
+                    "iot_dry_wool": "Μαλλινα",
+                    "jeans": "τζιν",
+                    "mix_and_dry": "Μικτά & Στέγνωμα",
+                    "pets": "Κατοικίδια",
+                    "pre_iron": "Προ-σιδερωμα",
+                    "rapid_30": "Rapid 30",
+                    "rapid_45": "Rapid 45 min",
+                    "rapid_59": "Τέλειο Γρήγορο 59 λεπτά",
+                    "refresh": "Φρεσκάρισμα",
+                    "relax_creases": "ΧΑΛΑΡΩΣΗ",
+                    "saving_30_min": "ΕΞΟΙΚΟΝΟΜΗΣΗ 30'",
+                    "shirts": "Πουκάμισα",
+                    "shoes": "Παπούτσια",
+                    "small_load": "ΜΙΚΡΟ ΦΟΡΤΙΟ",
+                    "soft_care": "Απαλή φροντίδα",
+                    "sport_plus": "ΣΠΟΡ",
+                    "super_easy_iron_misti": "Εξαιρετικά εύκολο σιδέρωμα για ανάμεικτα",
+                    "super_easy_iron_xxl": "Εξαιρετικά εύκολο σιδέρωμα για XXL",
+                    "super_fast_cottons": "Εξαιρετικα ΓΡΗΓΟΡΟ βαμβακερα",
+                    "super_fast_delicates": "Εξαιρετικα ΓΡΗΓΟΡΟ ευαισθητα",
+                    "synthetics": "Συνθετικα",
+                    "total_care": "Ολικη Φροντιδα",
+                    "trainers": "Αθλητικά παπούτσια",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Αναζωογονηση αδιαβροχων",
+                    "whites": "Λευκά",
+                    "wool": "Στέγνωμα Μάλλινων",
+                    "woolmark": "Μαλλινα",
+                    "xxl_load": "XXL Φορτιο",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Πρόγραμμα"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_coloured_cottons": "20° Χρωματιστά και Βαμβακερά",
@@ -556,7 +441,7 @@
                     "allergy_care_pro": "Allergy Care Επαγγελματικό",
                     "all_in_one_49": "Όλα σε Ένα 49'.",
                     "all_in_one_59": "Όλα σε Ένα 59'.",
-                    "all_in_one_59_steam": "Ενεργή πλύση + Ατμός",
+                    "all_in_one_59_steam": "Όλα σε Ένα 59' + Ατμός",
                     "autocare": "Αυτόματη φροντίδα",
                     "autoclean": "Καθαρισμός κάδου",
                     "baby_60": "Μωρουδιακά 60°C",
@@ -622,7 +507,7 @@
                     "iot_active_steam": "Ατμός",
                     "iot_active_wash_steam": "Ενεργό πλύσιμο",
                     "iot_allergy_care_pro": "Allergy Care Επαγγελματικό",
-                    "iot_all_in_one_59_steam": "Ενεργή πλύση + Ατμός",
+                    "iot_all_in_one_59_steam": "Όλα σε Ένα 59' + Ατμός",
                     "iot_checkup": "Έλεγχος",
                     "iot_colour_59_steam": "Χρωματιστά 59' + ατμός",
                     "iot_cottons_steam": "Βαμβακερό + Ατμός",
@@ -889,9 +774,148 @@
                     "sparkling": "Αφρώδες",
                     "white": "Λευκό"
                 }
+            },
+            "dry_time": {
+                "name": "Χρόνος στεγνώματος"
+            },
+            "power": {
+                "name": "Επίπεδο ισχύος ρεύματος"
+            },
+            "remaining_time": {
+                "name": "Χρόνος που απομένει"
+            },
+            "temperature": {
+                "name": "Θερμοκρασία"
+            },
+            "water_efficiency": {
+                "name": "Απόδοση νερού"
+            },
+            "water_saving": {
+                "name": "Εξοικονόμηση νερού"
+            },
+            "duration": {
+                "name": "Διάρκεια"
+            },
+            "target_temperature": {
+                "name": "Στοχευμένη θερμοκρασία"
+            },
+            "spin_speed": {
+                "name": "Στύψιμο"
+            },
+            "steam_leve": {
+                "name": "Επίπεδο ατμού"
+            },
+            "dirt_level": {
+                "name": "Επίπεδο βρωμιάς"
+            },
+            "delay_time": {
+                "name": "Καθυστερημένη έναρξη"
+            },
+            "suggested_load": {
+                "name": "Χωρητικότητα φορτίου"
+            },
+            "energy_label": {
+                "name": "Ενεργειακή απόδοση"
+            },
+            "det_dust": {
+                "name": "Σκόνη"
+            },
+            "det_liquid": {
+                "name": "Υγρό"
+            },
+            "errors": {
+                "name": "Σφάλμα"
+            },
+            "programs": {
+                "name": "Τρέχων πρόγραμμα"
+            },
+            "room_temperature": {
+                "name": "Θερμοκρασία δωματίου"
+            },
+            "humidity": {
+                "name": "Υγρασία"
+            },
+            "cycles_total": {
+                "name": "Κύκλοι Σύνολο"
+            },
+            "energy_total": {
+                "name": "Κατανάλωση ενέργειας Σύνολο"
+            },
+            "water_total": {
+                "name": "Απόδοση νερού Σύνολο"
+            },
+            "energy_current": {
+                "name": "Κατανάλωση ενέργειας Current"
+            },
+            "water_current": {
+                "name": "Απόδοση νερού Current"
+            },
+            "freezer_temp": {
+                "name": "Θερμοκρασία καταψύκτη"
+            },
+            "fridge_temp": {
+                "name": "Θερμοκρασία ψυγείου"
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Χωρίς στέγνωμα",
+                    "iron_dry": "Σιδέρωμα",
+                    "no_dry_iron": "Στέγνωμα για Αποθήκευση ",
+                    "cupboard_dry": "Στέγνωμα για Αποθήκευση ",
+                    "extra_dry": "Επιπλέον στέγνωμα",
+                    "ready_to_wear": "Ετοιμο να φορεθεί"
+                },
+                "name": "Επίπεδο στεγνώματος"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Απενεργοποιηση",
+                    "avoid_touch": "Αποφύγετε την αφή",
+                    "follow_touch": "Σας ακολουθεί"
+                },
+                "name": "Οικολογικός πιλότος"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Υψηλό",
+                    "mid": "Μέτριο   ",
+                    "low": "Χαμηλό",
+                    "auto": "Αυτόματο"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Ψυγείο",
+                    "freezer": "Καταψύκτης",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Ψυγείο & Καταψύκτης"
+                },
+                "name": "Ζώνη"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10° C Λειτουργία θέρμανσης",
+                    "iot_auto": "Αυτόματο",
+                    "iot_cool": "Ψύξη",
+                    "iot_dry": "Στέγνωμα",
+                    "iot_fan": "Ανεμιστήρας",
+                    "iot_heat": "Ζέστη",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Αυτοκαθαρισμός",
+                    "iot_self_clean": "Αυτοκαθαρισμός",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Εκκίνηση τώρα",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Auto",
+                    "iot_uv_and_cool": "UV + Ψύξη",
+                    "iot_uv_and_dry": "UV + Αφυγραντήρας",
+                    "iot_uv_and_fan": "UV + Ανεμιστήρας",
+                    "iot_uv_and_heat": "UV + Θέρμανση"
+                },
+                "name": "Πρόγραμμα"
+            },
             "programs_dw": {
                 "state": {
                     "59_min": "Γρηγορο 59'",
@@ -1241,7 +1265,7 @@
                     "allergy_care_pro": "Allergy Care Επαγγελματικό",
                     "all_in_one_49": "Όλα σε Ένα 49'.",
                     "all_in_one_59": "Όλα σε Ένα 59'.",
-                    "all_in_one_59_steam": "Ενεργή πλύση + Ατμός",
+                    "all_in_one_59_steam": "Όλα σε Ένα 59' + Ατμός",
                     "autocare": "Αυτόματη φροντίδα",
                     "autoclean": "Καθαρισμός κάδου",
                     "baby_60": "Μωρουδιακά 60°C",
@@ -1307,7 +1331,7 @@
                     "iot_active_steam": "Ατμός",
                     "iot_active_wash_steam": "Ενεργό πλύσιμο",
                     "iot_allergy_care_pro": "Allergy Care Επαγγελματικό",
-                    "iot_all_in_one_59_steam": "Ενεργή πλύση + Ατμός",
+                    "iot_all_in_one_59_steam": "Όλα σε Ένα 59' + Ατμός",
                     "iot_checkup": "Έλεγχος",
                     "iot_colour_59_steam": "Χρωματιστά 59' + ατμός",
                     "iot_cottons_steam": "Βαμβακερό + Ατμός",
@@ -1540,69 +1564,6 @@
                 },
                 "name": "Πρόγραμμα"
             },
-            "dry_levels": {
-                "state": {
-                    "0": "Χωρίς στέγνωμα",
-                    "1": "Σιδέρωμα",
-                    "2": "Στέγνωμα για Αποθήκευση ",
-                    "3": "Στέγνωμα για Αποθήκευση ",
-                    "4": "Επιπλέον στέγνωμα",
-                    "12": "Σιδέρωμα",
-                    "13": "Στέγνωμα για Αποθήκευση ",
-                    "14": "Ετοιμο να φορεθεί",
-                    "15": "Επιπλέον στέγνωμα",
-                    "11": "Χωρίς στέγνωμα"
-                },
-                "name": "Επίπεδο στεγνώματος"
-            },
-            "spin_speed": {
-                "name": "Στύψιμο"
-            },
-            "temperature": {
-                "name": "Θερμοκρασία"
-            },
-            "dry_time": {
-                "name": "Χρόνος στεγνώματος"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "Απενεργοποιηση",
-                    "1": "Αποφύγετε την αφή",
-                    "2": "Σας ακολουθεί"
-                },
-                "name": "Οικολογικός πιλότος"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "Υψηλό",
-                    "2": "Μέτριο   ",
-                    "3": "Χαμηλό",
-                    "4": "Αυτόματο",
-                    "5": "Αυτόματο"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_10_heating": "10° C Λειτουργία θέρμανσης",
-                    "iot_auto": "Αυτόματο",
-                    "iot_cool": "Ψύξη",
-                    "iot_dry": "Στέγνωμα",
-                    "iot_fan": "Ανεμιστήρας",
-                    "iot_heat": "Ζέστη",
-                    "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Αυτοκαθαρισμός",
-                    "iot_self_clean": "Αυτοκαθαρισμός",
-                    "iot_self_clean_56": "Steri-Clean 56°C",
-                    "iot_simple_start": "Εκκίνηση τώρα",
-                    "iot_uv": "UV",
-                    "iot_uv_and_auto": "UV + Auto",
-                    "iot_uv_and_cool": "UV + Ψύξη",
-                    "iot_uv_and_dry": "UV + Αφυγραντήρας",
-                    "iot_uv_and_fan": "UV + Ανεμιστήρας",
-                    "iot_uv_and_heat": "UV + Θέρμανση"
-                },
-                "name": "Πρόγραμμα"
-            },
             "programs_ref": {
                 "state": {
                     "auto_set": "ΑΥΤΌΜΑΤΗ ΡΎΘΜΙΣΗ",
@@ -1626,17 +1587,17 @@
                 },
                 "name": "Πρόγραμμα"
             },
+            "dry_time": {
+                "name": "Χρόνος στεγνώματος"
+            },
+            "spin_speed": {
+                "name": "Στύψιμο"
+            },
+            "temperature": {
+                "name": "Θερμοκρασία"
+            },
             "remaining_time": {
                 "name": "Χρόνος που απομένει"
-            },
-            "ref_zones": {
-                "state": {
-                    "fridge": "Ψυγείο",
-                    "freezer": "Καταψύκτης",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "Ψυγείο & Καταψύκτης"
-                },
-                "name": "Ζώνη"
             }
         },
         "switch": {
@@ -1724,17 +1685,14 @@
             "acqua_plus": {
                 "name": "Acquaplus (προσθήκη νερού)"
             },
-            "auto_dose": {
-                "name": "Αυτόματη Δοσολογία"
-            },
-            "good_night": {
-                "name": "Καληνυχτα"
-            },
             "auto_dose_softener": {
                 "name": "Αυτόματη Δοσολογία Μαλακτικό"
             },
             "auto_dose_detergent": {
                 "name": "Αυτόματη Δοσολογία Απορρυπαντικό"
+            },
+            "good_night": {
+                "name": "Καληνυχτα"
             },
             "auto_set": {
                 "name": "Αυτόματη ρύθμιση"
@@ -1768,26 +1726,11 @@
             "anti_crease": {
                 "name": "Λιγότερες ζάρες"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Acquaplus (προσθήκη νερού)"
             },
             "spin_speed": {
                 "name": "Στύψιμο"
-            },
-            "programs_dw": {
-                "name": "Πρόγραμμα"
-            },
-            "programs_ih": {
-                "name": "Πρόγραμμα"
-            },
-            "programs_ov": {
-                "name": "Πρόγραμμα"
-            },
-            "programs_td": {
-                "name": "Πρόγραμμα"
-            },
-            "programs_wm": {
-                "name": "Πρόγραμμα"
             },
             "still_hot": {
                 "name": "Ακόμα ζεστό"
@@ -1819,12 +1762,6 @@
             "prewash": {
                 "name": "προπλυση"
             },
-            "acqua_plus": {
-                "name": "Acquaplus (προσθήκη νερού)"
-            },
-            "auto_dose": {
-                "name": "Αυτόματη Δοσολογία"
-            },
             "buzzer": {
                 "name": "Κουδούνισμα τέλους κύκλου"
             },
@@ -1848,6 +1785,17 @@
             },
             "filter_replacement": {
                 "name": "Αντικατάσταση φίλτρου"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Επαγωγική εστία"
+            },
+            "start_program": {
+                "name": "Πρόγραμμα Εκκίνηση"
+            },
+            "stop_program": {
+                "name": "Πρόγραμμα Διακοπή"
             }
         },
         "number": {
@@ -1886,17 +1834,6 @@
             },
             "fridge_temp_sel": {
                 "name": "Στοχευμένη θερμοκρασία Ψυγείο"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "Επαγωγική εστία"
-            },
-            "start_program": {
-                "name": "Πρόγραμμα Εκκίνηση"
-            },
-            "stop_program": {
-                "name": "Πρόγραμμα Διακοπή"
             }
         },
         "climate": {

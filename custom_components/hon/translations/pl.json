@@ -3,324 +3,72 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "Gotowe",
-                    "1": "Gotowe",
-                    "3": "Zatrzymaj",
-                    "4": "Zaplanowane",
-                    "5": "Zaplanowane",
-                    "6": "Błąd",
-                    "7": "Gotowe",
-                    "2": "Program uruchomiony",
-                    "8": "Test",
-                    "9": "Zatrzymanie cyklu…"
+                    "ready": "Gotowe",
+                    "running": "Program uruchomiony",
+                    "pause": "Zatrzymaj",
+                    "scheduled": "Zaplanowane",
+                    "error": "Błąd",
+                    "test": "Test",
+                    "ending": "Zatrzymanie cyklu…"
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Auto",
+                    "cool": "Chłodzenie",
+                    "dry": "Osuszanie",
+                    "heat": "Grzanie",
+                    "fan": "Wentylator"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "Gotowe",
-                    "1": "Pranie",
-                    "2": "Pranie",
-                    "3": "Wirowanie",
-                    "4": "Płukanie",
-                    "5": "Płukanie",
-                    "6": "Płukanie",
-                    "7": "Suszenie",
-                    "9": "Para",
-                    "10": "Gotowe",
-                    "11": "Wirowanie",
-                    "12": "Ważenie ",
-                    "13": "Ważenie ",
-                    "14": "Pranie",
-                    "15": "Pranie",
-                    "16": "Pranie",
-                    "17": "Płukanie",
-                    "18": "Płukanie",
-                    "19": "Zaplanowane",
-                    "20": "Utrzymaj świeżość",
-                    "24": "Odświeżanie",
-                    "25": "Pranie",
-                    "26": "Ogrzewanie",
-                    "27": "Pranie"
+                    "ready": "Gotowe",
+                    "spin": "Wirowanie",
+                    "rinse": "Płukanie",
+                    "drying": "Suszenie",
+                    "steam": "Para",
+                    "weighting": "Ważenie ",
+                    "scheduled": "Zaplanowane",
+                    "tumbling": "Utrzymaj świeżość",
+                    "refresh": "Odświeżanie",
+                    "heating": "Ogrzewanie",
+                    "washing": "Pranie"
                 },
                 "name": "Faza"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "Gotowe",
-                    "1": "Suszenie",
-                    "2": "Suszenie",
-                    "3": "Chłodzenie",
-                    "13": "Chłodzenie",
-                    "14": "Suszenie",
-                    "15": "Suszenie",
-                    "16": "Chłodzenie",
-                    "18": "Utrzymaj świeżość",
-                    "19": "Suszenie",
-                    "20": "Suszenie",
-                    "11": "Gotowe",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "Gotowe",
+                    "heat_stroke": "Suszenie",
+                    "drying": "Suszenie",
+                    "cooldown": "Chłodzenie",
+                    "unknown": "unknown",
+                    "tumbling": "Utrzymaj świeżość"
                 },
                 "name": "Faza"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "Gotowe",
-                    "1": "Zmywanie wstępne",
-                    "2": "Pranie",
-                    "3": "Płukanie",
-                    "4": "Suszenie",
-                    "5": "Gotowe",
-                    "6": "Hot rinse"
+                    "ready": "Gotowe",
+                    "prewash": "Zmywanie wstępne",
+                    "washing": "Pranie",
+                    "rinse": "Płukanie",
+                    "drying": "Suszenie",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "Faza"
             },
             "dry_levels": {
                 "state": {
-                    "0": "Bez suszenia",
-                    "1": "Prasowanie",
-                    "2": "Gotowe do garderoby",
-                    "3": "Gotowe do garderoby",
-                    "4": "Ekstra suchy",
-                    "12": "Prasowanie",
-                    "13": "Gotowe do garderoby",
-                    "14": "Gotowe do włożenia",
-                    "15": "Ekstra suchy",
-                    "11": "Bez suszenia"
+                    "no_dry": "Bez suszenia",
+                    "iron_dry": "Prasowanie",
+                    "no_dry_iron": "Gotowe do garderoby",
+                    "cupboard_dry": "Gotowe do garderoby",
+                    "extra_dry": "Ekstra suchy",
+                    "ready_to_wear": "Gotowe do włożenia"
                 },
                 "name": "Poziom suszenia"
-            },
-            "anti_crease": {
-                "name": "Przeciw gnieceniu"
-            },
-            "power": {
-                "name": "Poziom mocy"
-            },
-            "remaining_time": {
-                "name": "Pozostały czas"
-            },
-            "temperature": {
-                "name": "Temperatura"
-            },
-            "water_efficiency": {
-                "name": "Wydajność zużycia wody"
-            },
-            "water_saving": {
-                "name": "Oszczędność wody"
-            },
-            "duration": {
-                "name": "Czas trwania"
-            },
-            "target_temperature": {
-                "name": "Temperatura docelowa"
-            },
-            "spin_speed": {
-                "name": "Wirowanie"
-            },
-            "steam_leve": {
-                "name": "Poziom pary"
-            },
-            "dirt_level": {
-                "name": "Stopień zabrudzenia"
-            },
-            "delay_time": {
-                "name": "Opóźniony Start"
-            },
-            "dry_time": {
-                "name": "Czas suszenia"
-            },
-            "suggested_load": {
-                "name": "Ładowność"
-            },
-            "energy_label": {
-                "name": "Efektywność energetyczna"
-            },
-            "det_dust": {
-                "name": "Proszek"
-            },
-            "det_liquid": {
-                "name": "Płyn"
-            },
-            "errors": {
-                "name": "Błąd"
-            },
-            "programs": {
-                "name": "Aktualny program"
-            },
-            "cycles_total": {
-                "name": "Cykle Suma"
-            },
-            "energy_total": {
-                "name": "Zużycie energii Suma"
-            },
-            "water_total": {
-                "name": "Wydajność zużycia wody Suma"
-            },
-            "energy_current": {
-                "name": "Zużycie energii Aktualne"
-            },
-            "water_current": {
-                "name": "Wydajność zużycia wody Aktualne"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "Auto",
-                    "1": "Chłodzenie",
-                    "2": "Chłodzenie",
-                    "3": "Osuszanie",
-                    "4": "Grzanie",
-                    "5": "Wentylator",
-                    "6": "Wentylator"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "active_dry": "Aktywne suche",
-                    "allergy_care": "Antiallergy",
-                    "all_in_one": "All in One",
-                    "antiallergy": "Antiallergy",
-                    "anti_odours": "Odświeżenie",
-                    "auto_care": "Auto Care",
-                    "baby": "Dzieci",
-                    "bed_quilt": "Bed Quilt",
-                    "care_30": "Care 30",
-                    "care_45": "Care 45",
-                    "care_59": "Care 59",
-                    "coloured": "Kolorowe",
-                    "daily_45_min": "CODZIENNY 45'",
-                    "daily_perfect_59_min": "CODZIENNY PERFEKT 59'",
-                    "darks_and_coloured": "Darks & Coloured",
-                    "delicates": "Delikatne",
-                    "duvet": "Kołdry",
-                    "eco": "Bawełna ekologiczna",
-                    "ecospeed_cottons": "Ecospeed Cottons",
-                    "ecospeed_delicates": "Szybki Eco do tkanin delikatnych",
-                    "ecospeed_mixed": "Ecospeed Mixed",
-                    "extra_hygiene": "HIGIENICZNY",
-                    "fitness": "Fitness",
-                    "fresh_care": "Fresh Care",
-                    "genius": "Genius",
-                    "hqd_baby_care": "Baby Care",
-                    "hqd_bath_towel": "Ręczniki",
-                    "hqd_bed_sheets": "Prześcieradła",
-                    "hqd_bulky": "Elementy wielkogabarytowe",
-                    "hqd_casual": "Nieformalny",
-                    "hqd_cold_wind_30": "Chłodna bryza 30 minut",
-                    "hqd_cold_wind_timing": "Chłodny wietrzyk ",
-                    "hqd_cotton": "Bawełna",
-                    "hqd_curtain": "Zasłony",
-                    "hqd_delicate": "Delikatne",
-                    "hqd_diaper": "Pieluchy",
-                    "hqd_duvet": "Kołdry",
-                    "hqd_feather": "Kurtki puchowe",
-                    "hqd_hot_wind_timing": "Gorące powietrze",
-                    "hqd_hygienic": "Higienizacja",
-                    "hqd_i_refresh": "I-Refresh",
-                    "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_jacket": "Kurtki",
-                    "hqd_jeans": "Dżins",
-                    "hqd_luxury": "Luxury",
-                    "hqd_mix": "Mieszane",
-                    "hqd_night_dry": "Suszenie nocne",
-                    "hqd_outdoor": "Outdoor",
-                    "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "Szybkie 20",
-                    "hqd_quick_30": "Szybkie 30",
-                    "hqd_quick_dry": "Szybkoschnące 30",
-                    "hqd_quilt": "Kołdry",
-                    "hqd_refresh": "Odświeżanie",
-                    "hqd_school_uniform": "Mundurek szkolny",
-                    "hqd_shirt": "Koszule",
-                    "hqd_shoes": "Buty",
-                    "hqd_silk": "Jedwab",
-                    "hqd_sports": "Odzież sportowa",
-                    "hqd_synthetics": "Syntetyki",
-                    "hqd_timer": "Czasowe",
-                    "hqd_towel": "Ręczniki",
-                    "hqd_underwear": "Bielizna",
-                    "hqd_warm_up": "Podgrzej",
-                    "hqd_wool": "Wełna",
-                    "hqd_working_suit": "Odzież robocza",
-                    "hygiene": "Higiena",
-                    "iot_checkup": "Kontrola",
-                    "iot_dry_anti_mites": "Przeciw roztoczom",
-                    "iot_dry_baby": "Dzieci",
-                    "iot_dry_backpacks": "Plecaki",
-                    "iot_dry_bathrobe": "Szlafroki",
-                    "iot_dry_bed_linen": "Pościel",
-                    "iot_dry_bed_quilt": "Bed Quilt",
-                    "iot_dry_cotton": "Bawełna",
-                    "iot_dry_cuddly_toys": "Zabawki pluszowe",
-                    "iot_dry_curtains": "Zasłony",
-                    "iot_dry_dehumidifier": "Środek do usuwania wilgoci",
-                    "iot_dry_delicates": "Bielizna",
-                    "iot_dry_delicate_tablecloths": "Delikatne obrusy",
-                    "iot_dry_denim_jeans": "Dżinsy",
-                    "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "Kołdry",
-                    "iot_dry_easy_iron_cotton": "Super Easy Iron",
-                    "iot_dry_easy_iron_synthetics": "Super łatwe prasowanie tkanin syntetycznych",
-                    "iot_dry_gym_fit": "Gimnastyczne - Fitness",
-                    "iot_dry_lingerie": "Bielizna",
-                    "iot_dry_mixed": "Mieszane",
-                    "iot_dry_playsuits": "Pajacyki",
-                    "iot_dry_rapid_30": "Rapid 30",
-                    "iot_dry_rapid_59": "Szybki 59’.",
-                    "iot_dry_refresh": "Refresh",
-                    "iot_dry_regenerates_waterproof": "Regeneracja wodoodpornych",
-                    "iot_dry_relax_creases": "Relax Creases",
-                    "iot_dry_shirts": "Koszule",
-                    "iot_dry_small_load": "Small Load",
-                    "iot_dry_swimsuits_and_bikinis": "Stroje kąpielowe",
-                    "iot_dry_synthetics": "Syntetyczne",
-                    "iot_dry_synthetic_dry": "Suszenie materiałów syntetycznych",
-                    "iot_dry_tablecloths": "Obrusy",
-                    "iot_dry_technical_fabrics": "Materiały techniczne",
-                    "iot_dry_warm_embrace": "Ciepłe objęcie",
-                    "iot_dry_wool": "Woolmark",
-                    "jeans": "Dżinsy",
-                    "mix_and_dry": "Mix&Dry",
-                    "pets": "Zwierzęta domowe",
-                    "pre_iron": "Pre-Iron",
-                    "rapid_30": "Rapid 30",
-                    "rapid_45": "Rapid 45 min",
-                    "rapid_59": "Perfekcyjne szybkie w 59 min",
-                    "refresh": "Odświeżanie",
-                    "relax_creases": "Relax Creases",
-                    "saving_30_min": "ECO 30'",
-                    "shirts": "Koszule",
-                    "shoes": "Buty",
-                    "small_load": "Small Load",
-                    "soft_care": "Soft Care",
-                    "sport_plus": "Sportowe",
-                    "super_easy_iron_misti": "Super łatwe prasowanie tkanin mieszanych",
-                    "super_easy_iron_xxl": "Super łatwe prasowanie XXL",
-                    "super_fast_cottons": "Super Fast Cottons",
-                    "super_fast_delicates": "Super Fast Delicates",
-                    "synthetics": "Syntetyczne",
-                    "total_care": "Total Care",
-                    "trainers": "Buty sportowe",
-                    "ultra_care": "Ultra Care",
-                    "waterproof_revitalize": "Waterproof Revitalize",
-                    "whites": "Białe",
-                    "wool": "Suszenie wełny",
-                    "woolmark": "Woolmark",
-                    "xxl_load": "XXL Load",
-                    "zoom_59": "Zoom 59"
-                },
-                "name": "Program"
-            },
-            "room_temperature": {
-                "name": "Temperatura pokojowa"
-            },
-            "humidity": {
-                "name": "Wilgotność"
-            },
-            "freezer_temp": {
-                "name": "Temperatura zamrażarki"
-            },
-            "fridge_temp": {
-                "name": "Temperatura lodówki"
             },
             "programs_ac": {
                 "state": {
@@ -545,6 +293,143 @@
                 },
                 "name": "Program"
             },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Aktywne suche",
+                    "allergy_care": "Antiallergy",
+                    "all_in_one": "All in One",
+                    "antiallergy": "Antiallergy",
+                    "anti_odours": "Odświeżenie",
+                    "auto_care": "Auto Care",
+                    "baby": "Dzieci",
+                    "bed_quilt": "Bed Quilt",
+                    "care_30": "Care 30",
+                    "care_45": "Care 45",
+                    "care_59": "Care 59",
+                    "coloured": "Kolorowe",
+                    "daily_45_min": "CODZIENNY 45'",
+                    "daily_perfect_59_min": "CODZIENNY PERFEKT 59'",
+                    "darks_and_coloured": "Darks & Coloured",
+                    "delicates": "Delikatne",
+                    "duvet": "Kołdry",
+                    "eco": "Bawełna ekologiczna",
+                    "ecospeed_cottons": "Ecospeed Cottons",
+                    "ecospeed_delicates": "Szybki Eco do tkanin delikatnych",
+                    "ecospeed_mixed": "Ecospeed Mixed",
+                    "extra_hygiene": "HIGIENICZNY",
+                    "fitness": "Fitness",
+                    "fresh_care": "Fresh Care",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Ręczniki",
+                    "hqd_bed_sheets": "Prześcieradła",
+                    "hqd_bulky": "Elementy wielkogabarytowe",
+                    "hqd_casual": "Nieformalny",
+                    "hqd_cold_wind_30": "Chłodna bryza 30 minut",
+                    "hqd_cold_wind_timing": "Chłodny wietrzyk ",
+                    "hqd_cotton": "Bawełna",
+                    "hqd_curtain": "Zasłony",
+                    "hqd_delicate": "Delikatne",
+                    "hqd_diaper": "Pieluchy",
+                    "hqd_duvet": "Kołdry",
+                    "hqd_feather": "Kurtki puchowe",
+                    "hqd_hot_wind_timing": "Gorące powietrze",
+                    "hqd_hygienic": "Higienizacja",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_jacket": "Kurtki",
+                    "hqd_jeans": "Dżins",
+                    "hqd_luxury": "Luxury",
+                    "hqd_mix": "Mieszane",
+                    "hqd_night_dry": "Suszenie nocne",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious cure",
+                    "hqd_quick_20": "Szybkie 20",
+                    "hqd_quick_30": "Szybkie 30",
+                    "hqd_quick_dry": "Szybkoschnące 30",
+                    "hqd_quilt": "Kołdry",
+                    "hqd_refresh": "Odświeżanie",
+                    "hqd_school_uniform": "Mundurek szkolny",
+                    "hqd_shirt": "Koszule",
+                    "hqd_shoes": "Buty",
+                    "hqd_silk": "Jedwab",
+                    "hqd_sports": "Odzież sportowa",
+                    "hqd_synthetics": "Syntetyki",
+                    "hqd_timer": "Czasowe",
+                    "hqd_towel": "Ręczniki",
+                    "hqd_underwear": "Bielizna",
+                    "hqd_warm_up": "Podgrzej",
+                    "hqd_wool": "Wełna",
+                    "hqd_working_suit": "Odzież robocza",
+                    "hygiene": "Higiena",
+                    "iot_checkup": "Kontrola",
+                    "iot_dry_anti_mites": "Przeciw roztoczom",
+                    "iot_dry_baby": "Dzieci",
+                    "iot_dry_backpacks": "Plecaki",
+                    "iot_dry_bathrobe": "Szlafroki",
+                    "iot_dry_bed_linen": "Pościel",
+                    "iot_dry_bed_quilt": "Bed Quilt",
+                    "iot_dry_cotton": "Bawełna",
+                    "iot_dry_cuddly_toys": "Zabawki pluszowe",
+                    "iot_dry_curtains": "Zasłony",
+                    "iot_dry_dehumidifier": "Środek do usuwania wilgoci",
+                    "iot_dry_delicates": "Bielizna",
+                    "iot_dry_delicate_tablecloths": "Delikatne obrusy",
+                    "iot_dry_denim_jeans": "Dżinsy",
+                    "iot_dry_down_jacket": "Jacket",
+                    "iot_dry_duvet": "Kołdry",
+                    "iot_dry_easy_iron_cotton": "Super Easy Iron",
+                    "iot_dry_easy_iron_synthetics": "Super łatwe prasowanie tkanin syntetycznych",
+                    "iot_dry_gym_fit": "Gimnastyczne - Fitness",
+                    "iot_dry_lingerie": "Bielizna",
+                    "iot_dry_mixed": "Mieszane",
+                    "iot_dry_playsuits": "Pajacyki",
+                    "iot_dry_rapid_30": "Rapid 30",
+                    "iot_dry_rapid_59": "Szybki 59’.",
+                    "iot_dry_refresh": "Refresh",
+                    "iot_dry_regenerates_waterproof": "Regeneracja wodoodpornych",
+                    "iot_dry_relax_creases": "Relax Creases",
+                    "iot_dry_shirts": "Koszule",
+                    "iot_dry_small_load": "Small Load",
+                    "iot_dry_swimsuits_and_bikinis": "Stroje kąpielowe",
+                    "iot_dry_synthetics": "Syntetyczne",
+                    "iot_dry_synthetic_dry": "Suszenie materiałów syntetycznych",
+                    "iot_dry_tablecloths": "Obrusy",
+                    "iot_dry_technical_fabrics": "Materiały techniczne",
+                    "iot_dry_warm_embrace": "Ciepłe objęcie",
+                    "iot_dry_wool": "Woolmark",
+                    "jeans": "Dżinsy",
+                    "mix_and_dry": "Mix&Dry",
+                    "pets": "Zwierzęta domowe",
+                    "pre_iron": "Pre-Iron",
+                    "rapid_30": "Rapid 30",
+                    "rapid_45": "Rapid 45 min",
+                    "rapid_59": "Perfekcyjne szybkie w 59 min",
+                    "refresh": "Odświeżanie",
+                    "relax_creases": "Relax Creases",
+                    "saving_30_min": "ECO 30'",
+                    "shirts": "Koszule",
+                    "shoes": "Buty",
+                    "small_load": "Small Load",
+                    "soft_care": "Soft Care",
+                    "sport_plus": "Sportowe",
+                    "super_easy_iron_misti": "Super łatwe prasowanie tkanin mieszanych",
+                    "super_easy_iron_xxl": "Super łatwe prasowanie XXL",
+                    "super_fast_cottons": "Super Fast Cottons",
+                    "super_fast_delicates": "Super Fast Delicates",
+                    "synthetics": "Syntetyczne",
+                    "total_care": "Total Care",
+                    "trainers": "Buty sportowe",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Waterproof Revitalize",
+                    "whites": "Białe",
+                    "wool": "Suszenie wełny",
+                    "woolmark": "Woolmark",
+                    "xxl_load": "XXL Load",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Program"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_coloured_cottons": "20° Kolorowe i Bawełna",
@@ -556,7 +441,7 @@
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "Wszystko w jednym cyklu 49’",
                     "all_in_one_59": "Wszystko w jednym cyklu 59’",
-                    "all_in_one_59_steam": "Aktywne pranie + Para",
+                    "all_in_one_59_steam": "Wszystko w jednym cyklu 59’ + Para",
                     "autocare": "Pielęgnacja własna",
                     "autoclean": "Czyszczenie bębna",
                     "baby_60": "Wszystkie dziecinne 60°C",
@@ -622,7 +507,7 @@
                     "iot_active_steam": "Para",
                     "iot_active_wash_steam": "Aktywne pranie",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "Aktywne pranie + Para",
+                    "iot_all_in_one_59_steam": "Wszystko w jednym cyklu 59’ + Para",
                     "iot_checkup": "Kontrola",
                     "iot_colour_59_steam": "Kolorowe 59' + Para",
                     "iot_cottons_steam": "Bawełna + Para",
@@ -889,9 +774,148 @@
                     "sparkling": "Musujące",
                     "white": "Białe"
                 }
+            },
+            "dry_time": {
+                "name": "Czas suszenia"
+            },
+            "power": {
+                "name": "Poziom mocy"
+            },
+            "remaining_time": {
+                "name": "Pozostały czas"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "water_efficiency": {
+                "name": "Wydajność zużycia wody"
+            },
+            "water_saving": {
+                "name": "Oszczędność wody"
+            },
+            "duration": {
+                "name": "Czas trwania"
+            },
+            "target_temperature": {
+                "name": "Temperatura docelowa"
+            },
+            "spin_speed": {
+                "name": "Wirowanie"
+            },
+            "steam_leve": {
+                "name": "Poziom pary"
+            },
+            "dirt_level": {
+                "name": "Stopień zabrudzenia"
+            },
+            "delay_time": {
+                "name": "Opóźniony Start"
+            },
+            "suggested_load": {
+                "name": "Ładowność"
+            },
+            "energy_label": {
+                "name": "Efektywność energetyczna"
+            },
+            "det_dust": {
+                "name": "Proszek"
+            },
+            "det_liquid": {
+                "name": "Płyn"
+            },
+            "errors": {
+                "name": "Błąd"
+            },
+            "programs": {
+                "name": "Aktualny program"
+            },
+            "room_temperature": {
+                "name": "Temperatura pokojowa"
+            },
+            "humidity": {
+                "name": "Wilgotność"
+            },
+            "cycles_total": {
+                "name": "Cykle Suma"
+            },
+            "energy_total": {
+                "name": "Zużycie energii Suma"
+            },
+            "water_total": {
+                "name": "Wydajność zużycia wody Suma"
+            },
+            "energy_current": {
+                "name": "Zużycie energii Aktualne"
+            },
+            "water_current": {
+                "name": "Wydajność zużycia wody Aktualne"
+            },
+            "freezer_temp": {
+                "name": "Temperatura zamrażarki"
+            },
+            "fridge_temp": {
+                "name": "Temperatura lodówki"
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Bez suszenia",
+                    "iron_dry": "Prasowanie",
+                    "no_dry_iron": "Gotowe do garderoby",
+                    "cupboard_dry": "Gotowe do garderoby",
+                    "extra_dry": "Ekstra suchy",
+                    "ready_to_wear": "Gotowe do włożenia"
+                },
+                "name": "Poziom suszenia"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Wyłącz",
+                    "avoid_touch": "Unikanie kontaktu",
+                    "follow_touch": "Podążanie"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Wysoki",
+                    "mid": "Średni   ",
+                    "low": "Niski",
+                    "auto": "Auto"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Lodówka",
+                    "freezer": "Zamrażarka",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Lodówka & Zamrażarka"
+                },
+                "name": "Strefa"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Funkcja grzania 10°C",
+                    "iot_auto": "Auto",
+                    "iot_cool": "Chłodzenie",
+                    "iot_dry": "Osuszanie",
+                    "iot_fan": "Wentylator",
+                    "iot_heat": "Grzanie",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Self Purify",
+                    "iot_self_clean": "Self Clean",
+                    "iot_self_clean_56": "Steri Clean 56°C",
+                    "iot_simple_start": "Uruchom teraz",
+                    "iot_uv": "Sterylizacja UVC",
+                    "iot_uv_and_auto": "UV + automat",
+                    "iot_uv_and_cool": "UV + chłodzenie",
+                    "iot_uv_and_dry": "UV + osuszacz powietrza",
+                    "iot_uv_and_fan": "UV + wentylator",
+                    "iot_uv_and_heat": "UV + podgrzewanie"
+                },
+                "name": "Program"
+            },
             "programs_dw": {
                 "state": {
                     "59_min": "Szybki 59'",
@@ -1241,7 +1265,7 @@
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "Wszystko w jednym cyklu 49’",
                     "all_in_one_59": "Wszystko w jednym cyklu 59’",
-                    "all_in_one_59_steam": "Aktywne pranie + Para",
+                    "all_in_one_59_steam": "Wszystko w jednym cyklu 59’ + Para",
                     "autocare": "Pielęgnacja własna",
                     "autoclean": "Czyszczenie bębna",
                     "baby_60": "Wszystkie dziecinne 60°C",
@@ -1307,7 +1331,7 @@
                     "iot_active_steam": "Para",
                     "iot_active_wash_steam": "Aktywne pranie",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "Aktywne pranie + Para",
+                    "iot_all_in_one_59_steam": "Wszystko w jednym cyklu 59’ + Para",
                     "iot_checkup": "Kontrola",
                     "iot_colour_59_steam": "Kolorowe 59' + Para",
                     "iot_cottons_steam": "Bawełna + Para",
@@ -1540,69 +1564,6 @@
                 },
                 "name": "Program"
             },
-            "dry_levels": {
-                "state": {
-                    "0": "Bez suszenia",
-                    "1": "Prasowanie",
-                    "2": "Gotowe do garderoby",
-                    "3": "Gotowe do garderoby",
-                    "4": "Ekstra suchy",
-                    "12": "Prasowanie",
-                    "13": "Gotowe do garderoby",
-                    "14": "Gotowe do włożenia",
-                    "15": "Ekstra suchy",
-                    "11": "Bez suszenia"
-                },
-                "name": "Poziom suszenia"
-            },
-            "spin_speed": {
-                "name": "Wirowanie"
-            },
-            "temperature": {
-                "name": "Temperatura"
-            },
-            "dry_time": {
-                "name": "Czas suszenia"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "Wyłącz",
-                    "1": "Unikanie kontaktu",
-                    "2": "Podążanie"
-                },
-                "name": "Eco pilot"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "Wysoki",
-                    "2": "Średni   ",
-                    "3": "Niski",
-                    "4": "Auto",
-                    "5": "Auto"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_10_heating": "Funkcja grzania 10°C",
-                    "iot_auto": "Auto",
-                    "iot_cool": "Chłodzenie",
-                    "iot_dry": "Osuszanie",
-                    "iot_fan": "Wentylator",
-                    "iot_heat": "Grzanie",
-                    "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Self Purify",
-                    "iot_self_clean": "Self Clean",
-                    "iot_self_clean_56": "Steri Clean 56°C",
-                    "iot_simple_start": "Uruchom teraz",
-                    "iot_uv": "Sterylizacja UVC",
-                    "iot_uv_and_auto": "UV + automat",
-                    "iot_uv_and_cool": "UV + chłodzenie",
-                    "iot_uv_and_dry": "UV + osuszacz powietrza",
-                    "iot_uv_and_fan": "UV + wentylator",
-                    "iot_uv_and_heat": "UV + podgrzewanie"
-                },
-                "name": "Program"
-            },
             "programs_ref": {
                 "state": {
                     "auto_set": "AUTO-SET",
@@ -1626,17 +1587,17 @@
                 },
                 "name": "Program"
             },
+            "dry_time": {
+                "name": "Czas suszenia"
+            },
+            "spin_speed": {
+                "name": "Wirowanie"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
             "remaining_time": {
                 "name": "Pozostały czas"
-            },
-            "ref_zones": {
-                "state": {
-                    "fridge": "Lodówka",
-                    "freezer": "Zamrażarka",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "Lodówka & Zamrażarka"
-                },
-                "name": "Strefa"
             }
         },
         "switch": {
@@ -1724,17 +1685,14 @@
             "acqua_plus": {
                 "name": "Acquaplus"
             },
-            "auto_dose": {
-                "name": "Automatyczne dozowanie"
-            },
-            "good_night": {
-                "name": "Dobranoc"
-            },
             "auto_dose_softener": {
                 "name": "Automatyczne dozowanie Środek zmiękczający"
             },
             "auto_dose_detergent": {
                 "name": "Automatyczne dozowanie Detergent"
+            },
+            "good_night": {
+                "name": "Dobranoc"
             },
             "auto_set": {
                 "name": "Ustawianie automatyczne"
@@ -1768,26 +1726,11 @@
             "anti_crease": {
                 "name": "Przeciw gnieceniu"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Acquaplus"
             },
             "spin_speed": {
                 "name": "Wirowanie"
-            },
-            "programs_dw": {
-                "name": "Program"
-            },
-            "programs_ih": {
-                "name": "Program"
-            },
-            "programs_ov": {
-                "name": "Program"
-            },
-            "programs_td": {
-                "name": "Program"
-            },
-            "programs_wm": {
-                "name": "Program"
             },
             "still_hot": {
                 "name": "Nadal gorące"
@@ -1819,12 +1762,6 @@
             "prewash": {
                 "name": "Mycie wstępne"
             },
-            "acqua_plus": {
-                "name": "Acquaplus"
-            },
-            "auto_dose": {
-                "name": "Automatyczne dozowanie"
-            },
             "buzzer": {
                 "name": "Sygnał dźwiękowy końca cyklu"
             },
@@ -1848,6 +1785,17 @@
             },
             "filter_replacement": {
                 "name": "Wymiana filtra"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Płyta indukcyjna"
+            },
+            "start_program": {
+                "name": "Program Początek"
+            },
+            "stop_program": {
+                "name": "Program Zatrzymaj"
             }
         },
         "number": {
@@ -1886,17 +1834,6 @@
             },
             "fridge_temp_sel": {
                 "name": "Temperatura docelowa Lodówka"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "Płyta indukcyjna"
-            },
-            "start_program": {
-                "name": "Program Początek"
-            },
-            "stop_program": {
-                "name": "Program Zatrzymaj"
             }
         },
         "climate": {

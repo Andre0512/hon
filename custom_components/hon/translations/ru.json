@@ -3,324 +3,72 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "Готово",
-                    "1": "Готово",
-                    "3": "Пауза",
-                    "4": "Запланировано",
-                    "5": "Запланировано",
-                    "6": "Ошибка",
-                    "7": "Готово",
-                    "2": "Выполнение программы",
-                    "8": "Test",
-                    "9": "Остановка цикла..."
+                    "ready": "Готово",
+                    "running": "Выполнение программы",
+                    "pause": "Пауза",
+                    "scheduled": "Запланировано",
+                    "error": "Ошибка",
+                    "test": "Test",
+                    "ending": "Остановка цикла..."
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Авто",
+                    "cool": "Охлаждение",
+                    "dry": "Сушка",
+                    "heat": "Нагрев",
+                    "fan": "Вентилятор"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "Готово",
-                    "1": "Стирка",
-                    "2": "Стирка",
-                    "3": "Отжим",
-                    "4": "Полоскание",
-                    "5": "Полоскание",
-                    "6": "Полоскание",
-                    "7": "Сушка",
-                    "9": "Пар",
-                    "10": "Готово",
-                    "11": "Отжим",
-                    "12": "Взвешивание ",
-                    "13": "Взвешивание ",
-                    "14": "Стирка",
-                    "15": "Стирка",
-                    "16": "Стирка",
-                    "17": "Полоскание",
-                    "18": "Полоскание",
-                    "19": "Запланировано",
-                    "20": "Сохранение свежести",
-                    "24": "Освежить",
-                    "25": "Стирка",
-                    "26": "Нагрев",
-                    "27": "Стирка"
+                    "ready": "Готово",
+                    "spin": "Отжим",
+                    "rinse": "Полоскание",
+                    "drying": "Сушка",
+                    "steam": "Пар",
+                    "weighting": "Взвешивание ",
+                    "scheduled": "Запланировано",
+                    "tumbling": "Сохранение свежести",
+                    "refresh": "Освежить",
+                    "heating": "Нагрев",
+                    "washing": "Стирка"
                 },
                 "name": "Фаза"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "Готово",
-                    "1": "Сушка",
-                    "2": "Сушка",
-                    "3": "Охлаждение",
-                    "13": "Охлаждение",
-                    "14": "Сушка",
-                    "15": "Сушка",
-                    "16": "Охлаждение",
-                    "18": "Keep Fresh (Сохранение свежести)",
-                    "19": "Сушка",
-                    "20": "Сушка",
-                    "11": "Готово",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "Готово",
+                    "heat_stroke": "Сушка",
+                    "drying": "Сушка",
+                    "cooldown": "Охлаждение",
+                    "unknown": "unknown",
+                    "tumbling": "Keep Fresh (Сохранение свежести)"
                 },
                 "name": "Фаза"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "Готово",
-                    "1": "Предварительная мойка",
-                    "2": "Стирка",
-                    "3": "Полоскание",
-                    "4": "Сушка",
-                    "5": "Готово",
-                    "6": "Hot rinse"
+                    "ready": "Готово",
+                    "prewash": "Предварительная мойка",
+                    "washing": "Стирка",
+                    "rinse": "Полоскание",
+                    "drying": "Сушка",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "Фаза"
             },
             "dry_levels": {
                 "state": {
-                    "0": "Без сушки",
-                    "1": "Под утюг",
-                    "2": "В шкаф",
-                    "3": "Готово в шкаф",
-                    "4": "Экстра сушка",
-                    "12": "Под утюг",
-                    "13": "Готово в шкаф",
-                    "14": "Готово для надевания",
-                    "15": "Экстра сушка",
-                    "11": "Без сушки"
+                    "no_dry": "Без сушки",
+                    "iron_dry": "Под утюг",
+                    "no_dry_iron": "В шкаф",
+                    "cupboard_dry": "Готово в шкаф",
+                    "extra_dry": "Экстра сушка",
+                    "ready_to_wear": "Готово для надевания"
                 },
                 "name": "Уровень сухости"
-            },
-            "anti_crease": {
-                "name": "Противосминание"
-            },
-            "power": {
-                "name": "Уровень мощности"
-            },
-            "remaining_time": {
-                "name": "Оставшееся время"
-            },
-            "temperature": {
-                "name": "Температура"
-            },
-            "water_efficiency": {
-                "name": "Эффективность расхода воды"
-            },
-            "water_saving": {
-                "name": "Экономия воды"
-            },
-            "duration": {
-                "name": "Длительность"
-            },
-            "target_temperature": {
-                "name": "Заданная температура"
-            },
-            "spin_speed": {
-                "name": "Отжим"
-            },
-            "steam_leve": {
-                "name": "Уровень пара"
-            },
-            "dirt_level": {
-                "name": "Уровень загрязнения"
-            },
-            "delay_time": {
-                "name": "Отложенный пуск"
-            },
-            "dry_time": {
-                "name": "Время сушки"
-            },
-            "suggested_load": {
-                "name": "Допустимая загрузка"
-            },
-            "energy_label": {
-                "name": "Энергоэффективность"
-            },
-            "det_dust": {
-                "name": "Стиральный порошок"
-            },
-            "det_liquid": {
-                "name": "Жидкое средство"
-            },
-            "errors": {
-                "name": "Ошибка"
-            },
-            "programs": {
-                "name": "Текущая программа"
-            },
-            "cycles_total": {
-                "name": "Циклы Итого"
-            },
-            "energy_total": {
-                "name": "Потребление энергии Итого"
-            },
-            "water_total": {
-                "name": "Эффективность расхода воды Итого"
-            },
-            "energy_current": {
-                "name": "Потребление энергии Текущий"
-            },
-            "water_current": {
-                "name": "Эффективность расхода воды Текущий"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "Авто",
-                    "1": "Охлаждение",
-                    "2": "Охлаждение",
-                    "3": "Сушка",
-                    "4": "Нагрев",
-                    "5": "Вентилятор",
-                    "6": "Вентилятор"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "active_dry": "Активная сушка",
-                    "allergy_care": "Противоаллергическое действие",
-                    "all_in_one": "Все в одном",
-                    "antiallergy": "Противоаллергическое действие",
-                    "anti_odours": "Против запаха",
-                    "auto_care": "Автоуход",
-                    "baby": "Детская одежда",
-                    "bed_quilt": "Стеганые и пуховые одеяла",
-                    "care_30": "Уход 30",
-                    "care_45": "Уход 45",
-                    "care_59": "Уход 59",
-                    "coloured": "цветные",
-                    "daily_45_min": "ЕЖЕДНЕВНАЯ 45'",
-                    "daily_perfect_59_min": "ЕЖЕДНЕВНАЯ ИДЕАЛЬНАЯ 59'",
-                    "darks_and_coloured": "Темные и Цветные",
-                    "delicates": "Деликатные",
-                    "duvet": "Пуховое одеяло",
-                    "eco": "Эко хлопок",
-                    "ecospeed_cottons": "Эко скорость хлопок",
-                    "ecospeed_delicates": "Эко скорость деликатные",
-                    "ecospeed_mixed": "Эко скорость смешанные",
-                    "extra_hygiene": "ЭКСТРА ГИГИЕНА",
-                    "fitness": "Фитнес",
-                    "fresh_care": "Свежесть",
-                    "genius": "Genius",
-                    "hqd_baby_care": "Baby Care",
-                    "hqd_bath_towel": "Полотенца",
-                    "hqd_bed_sheets": "Простыни",
-                    "hqd_bulky": "Объемные изделия",
-                    "hqd_casual": "Повседневная одежда",
-                    "hqd_cold_wind_30": "Прохладный обдув 30 минут",
-                    "hqd_cold_wind_timing": "Прохладный обдув ",
-                    "hqd_cotton": "Хлопок",
-                    "hqd_curtain": "Шторы",
-                    "hqd_delicate": "Деликатные вещи",
-                    "hqd_diaper": "Пеленки",
-                    "hqd_duvet": "Пуховое одеяло",
-                    "hqd_feather": "Пуховики",
-                    "hqd_hot_wind_timing": "Горячий воздух",
-                    "hqd_hygienic": "Санитарная обработка",
-                    "hqd_i_refresh": "I-Refresh",
-                    "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_jacket": "Куртки",
-                    "hqd_jeans": "Джинсы",
-                    "hqd_luxury": "Люксовые изделия",
-                    "hqd_mix": "Смешанные ткани",
-                    "hqd_night_dry": "Ночная сушка",
-                    "hqd_outdoor": "Outdoor",
-                    "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "Быстрая 20",
-                    "hqd_quick_30": "Быстрая 30",
-                    "hqd_quick_dry": "Быстрая сушка 30",
-                    "hqd_quilt": "Стеганые одеяла",
-                    "hqd_refresh": "Освежение",
-                    "hqd_school_uniform": "Школьная форма",
-                    "hqd_shirt": "Рубашки",
-                    "hqd_shoes": "Обувь",
-                    "hqd_silk": "Шелк",
-                    "hqd_sports": "Спортивная одежда",
-                    "hqd_synthetics": "Синтетика",
-                    "hqd_timer": "Timed",
-                    "hqd_towel": "Полотенца",
-                    "hqd_underwear": "Нижнее белье",
-                    "hqd_warm_up": "Подогрев",
-                    "hqd_wool": "Шерсть",
-                    "hqd_working_suit": "Рабочая одежда",
-                    "hygiene": "Гигиена",
-                    "iot_checkup": "Проверка",
-                    "iot_dry_anti_mites": "Противоклещевая обработка",
-                    "iot_dry_baby": "Детская одежда",
-                    "iot_dry_backpacks": "Рюкзаки",
-                    "iot_dry_bathrobe": "Банные халаты",
-                    "iot_dry_bed_linen": "Постельное белье",
-                    "iot_dry_bed_quilt": "Стеганые и пуховые одеяла",
-                    "iot_dry_cotton": "Хлопок",
-                    "iot_dry_cuddly_toys": "Мягкие игрушки",
-                    "iot_dry_curtains": "Шторы",
-                    "iot_dry_dehumidifier": "Влагопоглотитель",
-                    "iot_dry_delicates": "Деликатные",
-                    "iot_dry_delicate_tablecloths": "Деликатные скатерти",
-                    "iot_dry_denim_jeans": "Деним – джинсы",
-                    "iot_dry_down_jacket": "Куртки",
-                    "iot_dry_duvet": "Пуховое одеяло",
-                    "iot_dry_easy_iron_cotton": "Сверхлегкая глажка",
-                    "iot_dry_easy_iron_synthetics": "Суперудобная глажка синтетики",
-                    "iot_dry_gym_fit": "Одежда для спортзала – Фитнес",
-                    "iot_dry_lingerie": "Белье",
-                    "iot_dry_mixed": "Смешанные ткани",
-                    "iot_dry_playsuits": "Пляжные костюмы",
-                    "iot_dry_rapid_30": "Быстрая 30'",
-                    "iot_dry_rapid_59": "Быстрая 59 мин.",
-                    "iot_dry_refresh": "Освежить",
-                    "iot_dry_regenerates_waterproof": "Восстановление водонепроницаемых тканей",
-                    "iot_dry_relax_creases": "Уменьшение образования складок",
-                    "iot_dry_shirts": "Рубашки",
-                    "iot_dry_small_load": "Малая загрузка",
-                    "iot_dry_swimsuits_and_bikinis": "Купальники",
-                    "iot_dry_synthetics": "Синтетика",
-                    "iot_dry_synthetic_dry": "Сушка синтетики",
-                    "iot_dry_tablecloths": "Скатерти",
-                    "iot_dry_technical_fabrics": "Технические ткани",
-                    "iot_dry_warm_embrace": "Обработка теплом",
-                    "iot_dry_wool": "Шерсть",
-                    "jeans": "джинсы",
-                    "mix_and_dry": "Смешанные+сушка",
-                    "pets": "Животные",
-                    "pre_iron": "Предварительная глажка",
-                    "rapid_30": "Быстрая 30'",
-                    "rapid_45": "Быстрая 45 мин",
-                    "rapid_59": "Быстрая идеальная 59 мин.",
-                    "refresh": "Освежить",
-                    "relax_creases": "Уменьшение образования складок",
-                    "saving_30_min": "ЭКО 30'",
-                    "shirts": "Рубашки",
-                    "shoes": "Обувь",
-                    "small_load": "Малая загрузка",
-                    "soft_care": "Деликатный уход",
-                    "sport_plus": "Спорт",
-                    "super_easy_iron_misti": "Суперлегкая глажка смешанные",
-                    "super_easy_iron_xxl": "Суперлегкая глажка XXL",
-                    "super_fast_cottons": "Супер-БЫСТРАЯ хлопок",
-                    "super_fast_delicates": "Супер-БЫСТРАЯ деликатные",
-                    "synthetics": "Синтетика",
-                    "total_care": "Общии уход",
-                    "trainers": "Спортивная обувь",
-                    "ultra_care": "Ultra Care",
-                    "waterproof_revitalize": "Восстановление водонепроницаемости",
-                    "whites": "Белые ткани",
-                    "wool": "Сушка шерсти",
-                    "woolmark": "Шерсть",
-                    "xxl_load": "Объемные вещи",
-                    "zoom_59": "Zoom 59 (Зум 59)"
-                },
-                "name": "Программа"
-            },
-            "room_temperature": {
-                "name": "Комнатная температура"
-            },
-            "humidity": {
-                "name": "Влажность"
-            },
-            "freezer_temp": {
-                "name": "Температура в морозильном отделении"
-            },
-            "fridge_temp": {
-                "name": "Температура в холодильнике"
             },
             "programs_ac": {
                 "state": {
@@ -545,6 +293,143 @@
                 },
                 "name": "Программа"
             },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Активная сушка",
+                    "allergy_care": "Противоаллергическое действие",
+                    "all_in_one": "Все в одном",
+                    "antiallergy": "Противоаллергическое действие",
+                    "anti_odours": "Против запаха",
+                    "auto_care": "Автоуход",
+                    "baby": "Детская одежда",
+                    "bed_quilt": "Стеганые и пуховые одеяла",
+                    "care_30": "Уход 30",
+                    "care_45": "Уход 45",
+                    "care_59": "Уход 59",
+                    "coloured": "цветные",
+                    "daily_45_min": "ЕЖЕДНЕВНАЯ 45'",
+                    "daily_perfect_59_min": "ЕЖЕДНЕВНАЯ ИДЕАЛЬНАЯ 59'",
+                    "darks_and_coloured": "Темные и Цветные",
+                    "delicates": "Деликатные",
+                    "duvet": "Пуховое одеяло",
+                    "eco": "Эко хлопок",
+                    "ecospeed_cottons": "Эко скорость хлопок",
+                    "ecospeed_delicates": "Эко скорость деликатные",
+                    "ecospeed_mixed": "Эко скорость смешанные",
+                    "extra_hygiene": "ЭКСТРА ГИГИЕНА",
+                    "fitness": "Фитнес",
+                    "fresh_care": "Свежесть",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Полотенца",
+                    "hqd_bed_sheets": "Простыни",
+                    "hqd_bulky": "Объемные изделия",
+                    "hqd_casual": "Повседневная одежда",
+                    "hqd_cold_wind_30": "Прохладный обдув 30 минут",
+                    "hqd_cold_wind_timing": "Прохладный обдув ",
+                    "hqd_cotton": "Хлопок",
+                    "hqd_curtain": "Шторы",
+                    "hqd_delicate": "Деликатные вещи",
+                    "hqd_diaper": "Пеленки",
+                    "hqd_duvet": "Пуховое одеяло",
+                    "hqd_feather": "Пуховики",
+                    "hqd_hot_wind_timing": "Горячий воздух",
+                    "hqd_hygienic": "Санитарная обработка",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_jacket": "Куртки",
+                    "hqd_jeans": "Джинсы",
+                    "hqd_luxury": "Люксовые изделия",
+                    "hqd_mix": "Смешанные ткани",
+                    "hqd_night_dry": "Ночная сушка",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious cure",
+                    "hqd_quick_20": "Быстрая 20",
+                    "hqd_quick_30": "Быстрая 30",
+                    "hqd_quick_dry": "Быстрая сушка 30",
+                    "hqd_quilt": "Стеганые одеяла",
+                    "hqd_refresh": "Освежение",
+                    "hqd_school_uniform": "Школьная форма",
+                    "hqd_shirt": "Рубашки",
+                    "hqd_shoes": "Обувь",
+                    "hqd_silk": "Шелк",
+                    "hqd_sports": "Спортивная одежда",
+                    "hqd_synthetics": "Синтетика",
+                    "hqd_timer": "Timed",
+                    "hqd_towel": "Полотенца",
+                    "hqd_underwear": "Нижнее белье",
+                    "hqd_warm_up": "Подогрев",
+                    "hqd_wool": "Шерсть",
+                    "hqd_working_suit": "Рабочая одежда",
+                    "hygiene": "Гигиена",
+                    "iot_checkup": "Проверка",
+                    "iot_dry_anti_mites": "Противоклещевая обработка",
+                    "iot_dry_baby": "Детская одежда",
+                    "iot_dry_backpacks": "Рюкзаки",
+                    "iot_dry_bathrobe": "Банные халаты",
+                    "iot_dry_bed_linen": "Постельное белье",
+                    "iot_dry_bed_quilt": "Стеганые и пуховые одеяла",
+                    "iot_dry_cotton": "Хлопок",
+                    "iot_dry_cuddly_toys": "Мягкие игрушки",
+                    "iot_dry_curtains": "Шторы",
+                    "iot_dry_dehumidifier": "Влагопоглотитель",
+                    "iot_dry_delicates": "Деликатные",
+                    "iot_dry_delicate_tablecloths": "Деликатные скатерти",
+                    "iot_dry_denim_jeans": "Деним – джинсы",
+                    "iot_dry_down_jacket": "Куртки",
+                    "iot_dry_duvet": "Пуховое одеяло",
+                    "iot_dry_easy_iron_cotton": "Сверхлегкая глажка",
+                    "iot_dry_easy_iron_synthetics": "Суперудобная глажка синтетики",
+                    "iot_dry_gym_fit": "Одежда для спортзала – Фитнес",
+                    "iot_dry_lingerie": "Белье",
+                    "iot_dry_mixed": "Смешанные ткани",
+                    "iot_dry_playsuits": "Пляжные костюмы",
+                    "iot_dry_rapid_30": "Быстрая 30'",
+                    "iot_dry_rapid_59": "Быстрая 59 мин.",
+                    "iot_dry_refresh": "Освежить",
+                    "iot_dry_regenerates_waterproof": "Восстановление водонепроницаемых тканей",
+                    "iot_dry_relax_creases": "Уменьшение образования складок",
+                    "iot_dry_shirts": "Рубашки",
+                    "iot_dry_small_load": "Малая загрузка",
+                    "iot_dry_swimsuits_and_bikinis": "Купальники",
+                    "iot_dry_synthetics": "Синтетика",
+                    "iot_dry_synthetic_dry": "Сушка синтетики",
+                    "iot_dry_tablecloths": "Скатерти",
+                    "iot_dry_technical_fabrics": "Технические ткани",
+                    "iot_dry_warm_embrace": "Обработка теплом",
+                    "iot_dry_wool": "Шерсть",
+                    "jeans": "джинсы",
+                    "mix_and_dry": "Смешанные+сушка",
+                    "pets": "Животные",
+                    "pre_iron": "Предварительная глажка",
+                    "rapid_30": "Быстрая 30'",
+                    "rapid_45": "Быстрая 45 мин",
+                    "rapid_59": "Быстрая идеальная 59 мин.",
+                    "refresh": "Освежить",
+                    "relax_creases": "Уменьшение образования складок",
+                    "saving_30_min": "ЭКО 30'",
+                    "shirts": "Рубашки",
+                    "shoes": "Обувь",
+                    "small_load": "Малая загрузка",
+                    "soft_care": "Деликатный уход",
+                    "sport_plus": "Спорт",
+                    "super_easy_iron_misti": "Суперлегкая глажка смешанные",
+                    "super_easy_iron_xxl": "Суперлегкая глажка XXL",
+                    "super_fast_cottons": "Супер-БЫСТРАЯ хлопок",
+                    "super_fast_delicates": "Супер-БЫСТРАЯ деликатные",
+                    "synthetics": "Синтетика",
+                    "total_care": "Общии уход",
+                    "trainers": "Спортивная обувь",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Восстановление водонепроницаемости",
+                    "whites": "Белые ткани",
+                    "wool": "Сушка шерсти",
+                    "woolmark": "Шерсть",
+                    "xxl_load": "Объемные вещи",
+                    "zoom_59": "Zoom 59 (Зум 59)"
+                },
+                "name": "Программа"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_coloured_cottons": "20° Цветные ткани и Хлопок",
@@ -556,7 +441,7 @@
                     "allergy_care_pro": "Уход для аллергиков про",
                     "all_in_one_49": "Все в одном 49 мин.",
                     "all_in_one_59": "Все в одном 59 мин.",
-                    "all_in_one_59_steam": "Активная стирка + пар",
+                    "all_in_one_59_steam": "Все в одном 59' + пар",
                     "autocare": "Автоуход",
                     "autoclean": "Очистка барабана",
                     "baby_60": "Стирка детского белья при 60°С",
@@ -622,7 +507,7 @@
                     "iot_active_steam": "Пар",
                     "iot_active_wash_steam": "Активная стирка",
                     "iot_allergy_care_pro": "Уход для аллергиков про",
-                    "iot_all_in_one_59_steam": "Активная стирка + пар",
+                    "iot_all_in_one_59_steam": "Все в одном 59' + пар",
                     "iot_checkup": "Проверка",
                     "iot_colour_59_steam": "Цветные ткани 59' + пар",
                     "iot_cottons_steam": "Хлопок + Пар",
@@ -889,9 +774,148 @@
                     "sparkling": "Игристое",
                     "white": "Белое"
                 }
+            },
+            "dry_time": {
+                "name": "Время сушки"
+            },
+            "power": {
+                "name": "Уровень мощности"
+            },
+            "remaining_time": {
+                "name": "Оставшееся время"
+            },
+            "temperature": {
+                "name": "Температура"
+            },
+            "water_efficiency": {
+                "name": "Эффективность расхода воды"
+            },
+            "water_saving": {
+                "name": "Экономия воды"
+            },
+            "duration": {
+                "name": "Длительность"
+            },
+            "target_temperature": {
+                "name": "Заданная температура"
+            },
+            "spin_speed": {
+                "name": "Отжим"
+            },
+            "steam_leve": {
+                "name": "Уровень пара"
+            },
+            "dirt_level": {
+                "name": "Уровень загрязнения"
+            },
+            "delay_time": {
+                "name": "Отложенный пуск"
+            },
+            "suggested_load": {
+                "name": "Допустимая загрузка"
+            },
+            "energy_label": {
+                "name": "Энергоэффективность"
+            },
+            "det_dust": {
+                "name": "Стиральный порошок"
+            },
+            "det_liquid": {
+                "name": "Жидкое средство"
+            },
+            "errors": {
+                "name": "Ошибка"
+            },
+            "programs": {
+                "name": "Текущая программа"
+            },
+            "room_temperature": {
+                "name": "Комнатная температура"
+            },
+            "humidity": {
+                "name": "Влажность"
+            },
+            "cycles_total": {
+                "name": "Циклы Итого"
+            },
+            "energy_total": {
+                "name": "Потребление энергии Итого"
+            },
+            "water_total": {
+                "name": "Эффективность расхода воды Итого"
+            },
+            "energy_current": {
+                "name": "Потребление энергии Текущий"
+            },
+            "water_current": {
+                "name": "Эффективность расхода воды Текущий"
+            },
+            "freezer_temp": {
+                "name": "Температура в морозильном отделении"
+            },
+            "fridge_temp": {
+                "name": "Температура в холодильнике"
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Без сушки",
+                    "iron_dry": "Под утюг",
+                    "no_dry_iron": "В шкаф",
+                    "cupboard_dry": "Готово в шкаф",
+                    "extra_dry": "Экстра сушка",
+                    "ready_to_wear": "Готово для надевания"
+                },
+                "name": "Уровень сухости"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "ВЫКЛ",
+                    "avoid_touch": "Не прикасайтесь",
+                    "follow_touch": "Следование"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Высокий",
+                    "mid": "Средний   ",
+                    "low": "Низкий",
+                    "auto": "Авто"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Холодильник",
+                    "freezer": "Морозильник",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Холодильник & Морозильник"
+                },
+                "name": "Зона"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Функция нагрева до 10°C",
+                    "iot_auto": "Авто",
+                    "iot_cool": "Охлаждение",
+                    "iot_dry": "Сушка",
+                    "iot_fan": "Вентилятор",
+                    "iot_heat": "Нагрев",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Самоочищение",
+                    "iot_self_clean": "Самоочистка",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Пуск сейчас",
+                    "iot_uv": "Ультрафиолет",
+                    "iot_uv_and_auto": "УФ + Авто",
+                    "iot_uv_and_cool": "УФ + Охлаждение",
+                    "iot_uv_and_dry": "УФ + Осушитель",
+                    "iot_uv_and_fan": "УФ + Вентилятор",
+                    "iot_uv_and_heat": "УФ + Нагрев"
+                },
+                "name": "Программа"
+            },
             "programs_dw": {
                 "state": {
                     "59_min": "Быcтрая Мойkа 59'",
@@ -1241,7 +1265,7 @@
                     "allergy_care_pro": "Уход для аллергиков про",
                     "all_in_one_49": "Все в одном 49 мин.",
                     "all_in_one_59": "Все в одном 59 мин.",
-                    "all_in_one_59_steam": "Активная стирка + пар",
+                    "all_in_one_59_steam": "Все в одном 59' + пар",
                     "autocare": "Автоуход",
                     "autoclean": "Очистка барабана",
                     "baby_60": "Стирка детского белья при 60°С",
@@ -1307,7 +1331,7 @@
                     "iot_active_steam": "Пар",
                     "iot_active_wash_steam": "Активная стирка",
                     "iot_allergy_care_pro": "Уход для аллергиков про",
-                    "iot_all_in_one_59_steam": "Активная стирка + пар",
+                    "iot_all_in_one_59_steam": "Все в одном 59' + пар",
                     "iot_checkup": "Проверка",
                     "iot_colour_59_steam": "Цветные ткани 59' + пар",
                     "iot_cottons_steam": "Хлопок + Пар",
@@ -1540,69 +1564,6 @@
                 },
                 "name": "Программа"
             },
-            "dry_levels": {
-                "state": {
-                    "0": "Без сушки",
-                    "1": "Под утюг",
-                    "2": "В шкаф",
-                    "3": "Готово в шкаф",
-                    "4": "Экстра сушка",
-                    "12": "Под утюг",
-                    "13": "Готово в шкаф",
-                    "14": "Готово для надевания",
-                    "15": "Экстра сушка",
-                    "11": "Без сушки"
-                },
-                "name": "Уровень сухости"
-            },
-            "spin_speed": {
-                "name": "Отжим"
-            },
-            "temperature": {
-                "name": "Температура"
-            },
-            "dry_time": {
-                "name": "Время сушки"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "ВЫКЛ",
-                    "1": "Не прикасайтесь",
-                    "2": "Следование"
-                },
-                "name": "Eco pilot"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "Высокий",
-                    "2": "Средний   ",
-                    "3": "Низкий",
-                    "4": "Авто",
-                    "5": "Авто"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_10_heating": "Функция нагрева до 10°C",
-                    "iot_auto": "Авто",
-                    "iot_cool": "Охлаждение",
-                    "iot_dry": "Сушка",
-                    "iot_fan": "Вентилятор",
-                    "iot_heat": "Нагрев",
-                    "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Самоочищение",
-                    "iot_self_clean": "Самоочистка",
-                    "iot_self_clean_56": "Steri-Clean 56°C",
-                    "iot_simple_start": "Пуск сейчас",
-                    "iot_uv": "Ультрафиолет",
-                    "iot_uv_and_auto": "УФ + Авто",
-                    "iot_uv_and_cool": "УФ + Охлаждение",
-                    "iot_uv_and_dry": "УФ + Осушитель",
-                    "iot_uv_and_fan": "УФ + Вентилятор",
-                    "iot_uv_and_heat": "УФ + Нагрев"
-                },
-                "name": "Программа"
-            },
             "programs_ref": {
                 "state": {
                     "auto_set": "АВТОМАТИЧЕСКАЯ НАСТРОЙКА",
@@ -1626,17 +1587,17 @@
                 },
                 "name": "Программа"
             },
+            "dry_time": {
+                "name": "Время сушки"
+            },
+            "spin_speed": {
+                "name": "Отжим"
+            },
+            "temperature": {
+                "name": "Температура"
+            },
             "remaining_time": {
                 "name": "Оставшееся время"
-            },
-            "ref_zones": {
-                "state": {
-                    "fridge": "Холодильник",
-                    "freezer": "Морозильник",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "Холодильник & Морозильник"
-                },
-                "name": "Зона"
             }
         },
         "switch": {
@@ -1724,17 +1685,14 @@
             "acqua_plus": {
                 "name": "Акваплюс"
             },
-            "auto_dose": {
-                "name": "Автодозирование"
-            },
-            "good_night": {
-                "name": "Спокойной ночи"
-            },
             "auto_dose_softener": {
                 "name": "Автодозирование Кондиционер"
             },
             "auto_dose_detergent": {
                 "name": "Автодозирование Средство для стирки"
+            },
+            "good_night": {
+                "name": "Спокойной ночи"
             },
             "auto_set": {
                 "name": "Автоматическая установка"
@@ -1768,26 +1726,11 @@
             "anti_crease": {
                 "name": "Противосминание"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Акваплюс"
             },
             "spin_speed": {
                 "name": "Отжим"
-            },
-            "programs_dw": {
-                "name": "Программа"
-            },
-            "programs_ih": {
-                "name": "Программа"
-            },
-            "programs_ov": {
-                "name": "Программа"
-            },
-            "programs_td": {
-                "name": "Программа"
-            },
-            "programs_wm": {
-                "name": "Программа"
             },
             "still_hot": {
                 "name": "Еще горячий"
@@ -1819,12 +1762,6 @@
             "prewash": {
                 "name": "предварительная мойка"
             },
-            "acqua_plus": {
-                "name": "Акваплюс"
-            },
-            "auto_dose": {
-                "name": "Автодозирование"
-            },
             "buzzer": {
                 "name": "Звуковой сигнал окончания цикла"
             },
@@ -1848,6 +1785,17 @@
             },
             "filter_replacement": {
                 "name": "Замена фильтра"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Индукционная варочная панель"
+            },
+            "start_program": {
+                "name": "Программа Начать"
+            },
+            "stop_program": {
+                "name": "Программа Стоп"
             }
         },
         "number": {
@@ -1886,17 +1834,6 @@
             },
             "fridge_temp_sel": {
                 "name": "Заданная температура Холодильник"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "Индукционная варочная панель"
-            },
-            "start_program": {
-                "name": "Программа Начать"
-            },
-            "stop_program": {
-                "name": "Программа Стоп"
             }
         },
         "climate": {

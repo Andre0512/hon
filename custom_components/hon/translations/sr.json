@@ -3,324 +3,72 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "Spremno",
-                    "1": "Spremno",
-                    "3": "Pauza",
-                    "4": "Planirano",
-                    "5": "Planirano",
-                    "6": "Greška",
-                    "7": "Spremno",
-                    "2": "Program u toku",
-                    "8": "Test",
-                    "9": "Zaustavljanje ciklusa..."
+                    "ready": "Spremno",
+                    "running": "Program u toku",
+                    "pause": "Pauza",
+                    "scheduled": "Planirano",
+                    "error": "Greška",
+                    "test": "Test",
+                    "ending": "Zaustavljanje ciklusa..."
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Automatski",
+                    "cool": "Hlađenje",
+                    "dry": "Sušenje",
+                    "heat": "Toplota",
+                    "fan": "Ventilator"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "Spremno",
-                    "1": "Pranje",
-                    "2": "Pranje",
-                    "3": "Centrifuga",
-                    "4": "Ispiranje",
-                    "5": "Ispiranje",
-                    "6": "Ispiranje",
-                    "7": "Sušenje",
-                    "9": "Vodena para",
-                    "10": "Spremno",
-                    "11": "Centrifuga",
-                    "12": "Vaganje ",
-                    "13": "Vaganje ",
-                    "14": "Pranje",
-                    "15": "Pranje",
-                    "16": "Pranje",
-                    "17": "Ispiranje",
-                    "18": "Ispiranje",
-                    "19": "Planirano",
-                    "20": "Održavanje svežine",
-                    "24": "Osvežavanje",
-                    "25": "Pranje",
-                    "26": "Grejanje",
-                    "27": "Pranje"
+                    "ready": "Spremno",
+                    "spin": "Centrifuga",
+                    "rinse": "Ispiranje",
+                    "drying": "Sušenje",
+                    "steam": "Vodena para",
+                    "weighting": "Vaganje ",
+                    "scheduled": "Planirano",
+                    "tumbling": "Održavanje svežine",
+                    "refresh": "Osvežavanje",
+                    "heating": "Grejanje",
+                    "washing": "Pranje"
                 },
                 "name": "Faza"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "Spremno",
-                    "1": "Sušenje",
-                    "2": "Sušenje",
-                    "3": "Hlađenje",
-                    "13": "Hlađenje",
-                    "14": "Sušenje",
-                    "15": "Sušenje",
-                    "16": "Hlađenje",
-                    "18": "Očuvanje svežine",
-                    "19": "Sušenje",
-                    "20": "Sušenje",
-                    "11": "Spremno",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "Spremno",
+                    "heat_stroke": "Sušenje",
+                    "drying": "Sušenje",
+                    "cooldown": "Hlađenje",
+                    "unknown": "unknown",
+                    "tumbling": "Očuvanje svežine"
                 },
                 "name": "Faza"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "Spremno",
-                    "1": "Pretpranje",
-                    "2": "Pranje",
-                    "3": "Ispiranje",
-                    "4": "Sušenje",
-                    "5": "Spremno",
-                    "6": "Hot rinse"
+                    "ready": "Spremno",
+                    "prewash": "Pretpranje",
+                    "washing": "Pranje",
+                    "rinse": "Ispiranje",
+                    "drying": "Sušenje",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "Faza"
             },
             "dry_levels": {
                 "state": {
-                    "0": "Bez sušenja",
-                    "1": "Peglanje",
-                    "2": "Suvo za ormar",
-                    "3": "Suvo za ormar",
-                    "4": "Ekstra suvo",
-                    "12": "Peglanje",
-                    "13": "Suvo za ormar",
-                    "14": "Spremno za nošenje",
-                    "15": "Ekstra suvo",
-                    "11": "Bez sušenja"
+                    "no_dry": "Bez sušenja",
+                    "iron_dry": "Peglanje",
+                    "no_dry_iron": "Suvo za ormar",
+                    "cupboard_dry": "Suvo za ormar",
+                    "extra_dry": "Ekstra suvo",
+                    "ready_to_wear": "Spremno za nošenje"
                 },
                 "name": "Nivo sušenja"
-            },
-            "anti_crease": {
-                "name": "Protiv gužvanja"
-            },
-            "power": {
-                "name": "Jačina"
-            },
-            "remaining_time": {
-                "name": "Preostalo vreme"
-            },
-            "temperature": {
-                "name": "Temperatura"
-            },
-            "water_efficiency": {
-                "name": "Efikasnost vode"
-            },
-            "water_saving": {
-                "name": "Ušteda vode"
-            },
-            "duration": {
-                "name": "Trajanje"
-            },
-            "target_temperature": {
-                "name": "Željena temperatura"
-            },
-            "spin_speed": {
-                "name": "Centrifuga"
-            },
-            "steam_leve": {
-                "name": "Nivo pare"
-            },
-            "dirt_level": {
-                "name": "Nivo zaprljanosti"
-            },
-            "delay_time": {
-                "name": "Odloženi start"
-            },
-            "dry_time": {
-                "name": "Vreme sušenja"
-            },
-            "suggested_load": {
-                "name": "Kapacitet punjenja"
-            },
-            "energy_label": {
-                "name": "Energetska efikasnost"
-            },
-            "det_dust": {
-                "name": "Prašak"
-            },
-            "det_liquid": {
-                "name": "Tečni"
-            },
-            "errors": {
-                "name": "Greška"
-            },
-            "programs": {
-                "name": "Trenutni program"
-            },
-            "cycles_total": {
-                "name": "Ciklusi Ukupno"
-            },
-            "energy_total": {
-                "name": "Potrošnja energije Ukupno"
-            },
-            "water_total": {
-                "name": "Efikasnost vode Ukupno"
-            },
-            "energy_current": {
-                "name": "Potrošnja energije Current"
-            },
-            "water_current": {
-                "name": "Efikasnost vode Current"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "Automatski",
-                    "1": "Hlađenje",
-                    "2": "Hlađenje",
-                    "3": "Sušenje",
-                    "4": "Toplota",
-                    "5": "Ventilator",
-                    "6": "Ventilator"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "active_dry": "Aktivno sušenje",
-                    "allergy_care": "Antialergijski",
-                    "all_in_one": "All in One",
-                    "antiallergy": "Antialergijski",
-                    "anti_odours": "Protiv neugodnih mirisa",
-                    "auto_care": "Aktivna nega",
-                    "baby": "Baby",
-                    "bed_quilt": "Ćebad i jorgani",
-                    "care_30": "Nega 30",
-                    "care_45": "Nega 45",
-                    "care_59": "Nega 59",
-                    "coloured": "Obojeno",
-                    "daily_45_min": "SVAKODNEVNI 45'",
-                    "daily_perfect_59_min": "PERFECT SVAKODNEVNI 59'",
-                    "darks_and_coloured": "Tamno i obojeno",
-                    "delicates": "Osetljivo",
-                    "duvet": "Jorgani",
-                    "eco": "Eko pamuk",
-                    "ecospeed_cottons": "Ecospeed Pamuk",
-                    "ecospeed_delicates": "Ecospeed osetljive tkanine",
-                    "ecospeed_mixed": "Ecospeed Mešano",
-                    "extra_hygiene": "EXTRA HIGIJENA",
-                    "fitness": "Fitnes",
-                    "fresh_care": "Tretman za osvežavanje",
-                    "genius": "Genius",
-                    "hqd_baby_care": "Baby Care",
-                    "hqd_bath_towel": "Peškiri",
-                    "hqd_bed_sheets": "Posteljina",
-                    "hqd_bulky": "Glomazni artikli",
-                    "hqd_casual": "Neformalno",
-                    "hqd_cold_wind_30": "Hladan vazduh 30 minuta",
-                    "hqd_cold_wind_timing": "Hladan vazduh ",
-                    "hqd_cotton": "Pamuk",
-                    "hqd_curtain": "Zavese",
-                    "hqd_delicate": "Osetljive tkanine",
-                    "hqd_diaper": "Pelene",
-                    "hqd_duvet": "Jorgan",
-                    "hqd_feather": "Perjane jakne",
-                    "hqd_hot_wind_timing": "Vruć vazduh",
-                    "hqd_hygienic": "Higijenski",
-                    "hqd_i_refresh": "I-Refresh",
-                    "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_jacket": "Jakne",
-                    "hqd_jeans": "Džins",
-                    "hqd_luxury": "Luksuzno",
-                    "hqd_mix": "Mešovito",
-                    "hqd_night_dry": "Noćno sušenje",
-                    "hqd_outdoor": "Outdoor",
-                    "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "Brzo 20",
-                    "hqd_quick_30": "Brzo 30",
-                    "hqd_quick_dry": "Brzo sušenje 30",
-                    "hqd_quilt": "Jorgani",
-                    "hqd_refresh": "Osvežavanje",
-                    "hqd_school_uniform": "Školska uniforma",
-                    "hqd_shirt": "Košulje",
-                    "hqd_shoes": "Cipele",
-                    "hqd_silk": "Svila",
-                    "hqd_sports": "Sportska odeća",
-                    "hqd_synthetics": "Sintetika",
-                    "hqd_timer": "Vremenski ograničeno",
-                    "hqd_towel": "Peškiri",
-                    "hqd_underwear": "Donji veš",
-                    "hqd_warm_up": "Zagrevanje",
-                    "hqd_wool": "Vuna",
-                    "hqd_working_suit": "Radna odeća",
-                    "hygiene": "Higijena",
-                    "iot_checkup": "Provera",
-                    "iot_dry_anti_mites": "Anti-grinje",
-                    "iot_dry_baby": "Baby",
-                    "iot_dry_backpacks": "Rančevi",
-                    "iot_dry_bathrobe": "Bade-mantili",
-                    "iot_dry_bed_linen": "Posteljine",
-                    "iot_dry_bed_quilt": "Ćebad i jorgani",
-                    "iot_dry_cotton": "Pamuk",
-                    "iot_dry_cuddly_toys": "Plišane igračke",
-                    "iot_dry_curtains": "Zavese",
-                    "iot_dry_dehumidifier": "Uklanjanje vlage",
-                    "iot_dry_delicates": "Delikatni",
-                    "iot_dry_delicate_tablecloths": "Osetljivi stoljnjaci",
-                    "iot_dry_denim_jeans": "Teksas - džins",
-                    "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "Jorgani",
-                    "iot_dry_easy_iron_cotton": "Super Lako peglanje",
-                    "iot_dry_easy_iron_synthetics": "Sintetika koja se veoma lako pegla",
-                    "iot_dry_gym_fit": "Gym fit - Fitness",
-                    "iot_dry_lingerie": "Donji veš",
-                    "iot_dry_mixed": "Mešani veš",
-                    "iot_dry_playsuits": "Kostimi",
-                    "iot_dry_rapid_30": "Rapid 30",
-                    "iot_dry_rapid_59": "Brzi program 59'.",
-                    "iot_dry_refresh": "Osvežavanje",
-                    "iot_dry_regenerates_waterproof": "Regenerisanje vodootpornosti",
-                    "iot_dry_relax_creases": "Otpuštanje prevoja",
-                    "iot_dry_shirts": "Košulje",
-                    "iot_dry_small_load": "Mala količina veša",
-                    "iot_dry_swimsuits_and_bikinis": "Odeća za kupanje",
-                    "iot_dry_synthetics": "Sintetika",
-                    "iot_dry_synthetic_dry": "Sušenje sintetike",
-                    "iot_dry_tablecloths": "Stolnjaci",
-                    "iot_dry_technical_fabrics": "Sintetički materijali",
-                    "iot_dry_warm_embrace": "Topao zagrljaj",
-                    "iot_dry_wool": "Woolmark",
-                    "jeans": "Jeans",
-                    "mix_and_dry": "Mix&Dry",
-                    "pets": "Ljubimci",
-                    "pre_iron": "Pre-peglanje",
-                    "rapid_30": "Rapid 30",
-                    "rapid_45": "Brzi 45 min",
-                    "rapid_59": "Perfect Rapid 59 Min",
-                    "refresh": "Osvežavanje",
-                    "relax_creases": "Otpuštanje prevoja",
-                    "saving_30_min": "EKO 30'",
-                    "shirts": "Košulje",
-                    "shoes": "Cipele",
-                    "small_load": "Mala količina veša",
-                    "soft_care": "Blagi tretman",
-                    "sport_plus": "Sportska odeca",
-                    "super_easy_iron_misti": "Mešani veš koji se veoma lako pegla",
-                    "super_easy_iron_xxl": "XXL veš koji se veoma lako pegla",
-                    "super_fast_cottons": "Super brzo Pamuk",
-                    "super_fast_delicates": "Super brzo Osetljivo",
-                    "synthetics": "Sintetika",
-                    "total_care": "Total Care",
-                    "trainers": "Trenerke i sportska obuća",
-                    "ultra_care": "Ultra Care",
-                    "waterproof_revitalize": "Revitalizacija vodootpornosti",
-                    "whites": "Beli veš",
-                    "wool": "Sušenje vune",
-                    "woolmark": "Woolmark",
-                    "xxl_load": "XXL veš",
-                    "zoom_59": "Zoom 59"
-                },
-                "name": "Program"
-            },
-            "room_temperature": {
-                "name": "Sobna temperatura"
-            },
-            "humidity": {
-                "name": "Vlažnost"
-            },
-            "freezer_temp": {
-                "name": "Temperatura zamrzivača"
-            },
-            "fridge_temp": {
-                "name": "Temperatura frižidera"
             },
             "programs_ac": {
                 "state": {
@@ -545,6 +293,143 @@
                 },
                 "name": "Program"
             },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Aktivno sušenje",
+                    "allergy_care": "Antialergijski",
+                    "all_in_one": "All in One",
+                    "antiallergy": "Antialergijski",
+                    "anti_odours": "Protiv neugodnih mirisa",
+                    "auto_care": "Aktivna nega",
+                    "baby": "Baby",
+                    "bed_quilt": "Ćebad i jorgani",
+                    "care_30": "Nega 30",
+                    "care_45": "Nega 45",
+                    "care_59": "Nega 59",
+                    "coloured": "Obojeno",
+                    "daily_45_min": "SVAKODNEVNI 45'",
+                    "daily_perfect_59_min": "PERFECT SVAKODNEVNI 59'",
+                    "darks_and_coloured": "Tamno i obojeno",
+                    "delicates": "Osetljivo",
+                    "duvet": "Jorgani",
+                    "eco": "Eko pamuk",
+                    "ecospeed_cottons": "Ecospeed Pamuk",
+                    "ecospeed_delicates": "Ecospeed osetljive tkanine",
+                    "ecospeed_mixed": "Ecospeed Mešano",
+                    "extra_hygiene": "EXTRA HIGIJENA",
+                    "fitness": "Fitnes",
+                    "fresh_care": "Tretman za osvežavanje",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Peškiri",
+                    "hqd_bed_sheets": "Posteljina",
+                    "hqd_bulky": "Glomazni artikli",
+                    "hqd_casual": "Neformalno",
+                    "hqd_cold_wind_30": "Hladan vazduh 30 minuta",
+                    "hqd_cold_wind_timing": "Hladan vazduh ",
+                    "hqd_cotton": "Pamuk",
+                    "hqd_curtain": "Zavese",
+                    "hqd_delicate": "Osetljive tkanine",
+                    "hqd_diaper": "Pelene",
+                    "hqd_duvet": "Jorgan",
+                    "hqd_feather": "Perjane jakne",
+                    "hqd_hot_wind_timing": "Vruć vazduh",
+                    "hqd_hygienic": "Higijenski",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_jacket": "Jakne",
+                    "hqd_jeans": "Džins",
+                    "hqd_luxury": "Luksuzno",
+                    "hqd_mix": "Mešovito",
+                    "hqd_night_dry": "Noćno sušenje",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious cure",
+                    "hqd_quick_20": "Brzo 20",
+                    "hqd_quick_30": "Brzo 30",
+                    "hqd_quick_dry": "Brzo sušenje 30",
+                    "hqd_quilt": "Jorgani",
+                    "hqd_refresh": "Osvežavanje",
+                    "hqd_school_uniform": "Školska uniforma",
+                    "hqd_shirt": "Košulje",
+                    "hqd_shoes": "Cipele",
+                    "hqd_silk": "Svila",
+                    "hqd_sports": "Sportska odeća",
+                    "hqd_synthetics": "Sintetika",
+                    "hqd_timer": "Vremenski ograničeno",
+                    "hqd_towel": "Peškiri",
+                    "hqd_underwear": "Donji veš",
+                    "hqd_warm_up": "Zagrevanje",
+                    "hqd_wool": "Vuna",
+                    "hqd_working_suit": "Radna odeća",
+                    "hygiene": "Higijena",
+                    "iot_checkup": "Provera",
+                    "iot_dry_anti_mites": "Anti-grinje",
+                    "iot_dry_baby": "Baby",
+                    "iot_dry_backpacks": "Rančevi",
+                    "iot_dry_bathrobe": "Bade-mantili",
+                    "iot_dry_bed_linen": "Posteljine",
+                    "iot_dry_bed_quilt": "Ćebad i jorgani",
+                    "iot_dry_cotton": "Pamuk",
+                    "iot_dry_cuddly_toys": "Plišane igračke",
+                    "iot_dry_curtains": "Zavese",
+                    "iot_dry_dehumidifier": "Uklanjanje vlage",
+                    "iot_dry_delicates": "Delikatni",
+                    "iot_dry_delicate_tablecloths": "Osetljivi stoljnjaci",
+                    "iot_dry_denim_jeans": "Teksas - džins",
+                    "iot_dry_down_jacket": "Jacket",
+                    "iot_dry_duvet": "Jorgani",
+                    "iot_dry_easy_iron_cotton": "Super Lako peglanje",
+                    "iot_dry_easy_iron_synthetics": "Sintetika koja se veoma lako pegla",
+                    "iot_dry_gym_fit": "Gym fit - Fitness",
+                    "iot_dry_lingerie": "Donji veš",
+                    "iot_dry_mixed": "Mešani veš",
+                    "iot_dry_playsuits": "Kostimi",
+                    "iot_dry_rapid_30": "Rapid 30",
+                    "iot_dry_rapid_59": "Brzi program 59'.",
+                    "iot_dry_refresh": "Osvežavanje",
+                    "iot_dry_regenerates_waterproof": "Regenerisanje vodootpornosti",
+                    "iot_dry_relax_creases": "Otpuštanje prevoja",
+                    "iot_dry_shirts": "Košulje",
+                    "iot_dry_small_load": "Mala količina veša",
+                    "iot_dry_swimsuits_and_bikinis": "Odeća za kupanje",
+                    "iot_dry_synthetics": "Sintetika",
+                    "iot_dry_synthetic_dry": "Sušenje sintetike",
+                    "iot_dry_tablecloths": "Stolnjaci",
+                    "iot_dry_technical_fabrics": "Sintetički materijali",
+                    "iot_dry_warm_embrace": "Topao zagrljaj",
+                    "iot_dry_wool": "Woolmark",
+                    "jeans": "Jeans",
+                    "mix_and_dry": "Mix&Dry",
+                    "pets": "Ljubimci",
+                    "pre_iron": "Pre-peglanje",
+                    "rapid_30": "Rapid 30",
+                    "rapid_45": "Brzi 45 min",
+                    "rapid_59": "Perfect Rapid 59 Min",
+                    "refresh": "Osvežavanje",
+                    "relax_creases": "Otpuštanje prevoja",
+                    "saving_30_min": "EKO 30'",
+                    "shirts": "Košulje",
+                    "shoes": "Cipele",
+                    "small_load": "Mala količina veša",
+                    "soft_care": "Blagi tretman",
+                    "sport_plus": "Sportska odeca",
+                    "super_easy_iron_misti": "Mešani veš koji se veoma lako pegla",
+                    "super_easy_iron_xxl": "XXL veš koji se veoma lako pegla",
+                    "super_fast_cottons": "Super brzo Pamuk",
+                    "super_fast_delicates": "Super brzo Osetljivo",
+                    "synthetics": "Sintetika",
+                    "total_care": "Total Care",
+                    "trainers": "Trenerke i sportska obuća",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Revitalizacija vodootpornosti",
+                    "whites": "Beli veš",
+                    "wool": "Sušenje vune",
+                    "woolmark": "Woolmark",
+                    "xxl_load": "XXL veš",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Program"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_coloured_cottons": "20° u boji i pamuk",
@@ -556,7 +441,7 @@
                     "allergy_care_pro": "Tretman protiv alergija Pro",
                     "all_in_one_49": "Sve u jedan 49'.",
                     "all_in_one_59": "Sve u jedan 59'.",
-                    "all_in_one_59_steam": "Aktivno pranje + para",
+                    "all_in_one_59_steam": "Sve u jedan 59' + para",
                     "autocare": "Automatska nega",
                     "autoclean": "Čišćenje bubnja",
                     "baby_60": "All Baby 60°C",
@@ -622,7 +507,7 @@
                     "iot_active_steam": "Para",
                     "iot_active_wash_steam": "Aktivno pranje",
                     "iot_allergy_care_pro": "Tretman protiv alergija Pro",
-                    "iot_all_in_one_59_steam": "Aktivno pranje + para",
+                    "iot_all_in_one_59_steam": "Sve u jedan 59' + para",
                     "iot_checkup": "Provera",
                     "iot_colour_59_steam": "Šarena odeća 59' + para",
                     "iot_cottons_steam": "Pamuk + Para",
@@ -889,9 +774,148 @@
                     "sparkling": "Penušavo",
                     "white": "Belo"
                 }
+            },
+            "dry_time": {
+                "name": "Vreme sušenja"
+            },
+            "power": {
+                "name": "Jačina"
+            },
+            "remaining_time": {
+                "name": "Preostalo vreme"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
+            "water_efficiency": {
+                "name": "Efikasnost vode"
+            },
+            "water_saving": {
+                "name": "Ušteda vode"
+            },
+            "duration": {
+                "name": "Trajanje"
+            },
+            "target_temperature": {
+                "name": "Željena temperatura"
+            },
+            "spin_speed": {
+                "name": "Centrifuga"
+            },
+            "steam_leve": {
+                "name": "Nivo pare"
+            },
+            "dirt_level": {
+                "name": "Nivo zaprljanosti"
+            },
+            "delay_time": {
+                "name": "Odloženi start"
+            },
+            "suggested_load": {
+                "name": "Kapacitet punjenja"
+            },
+            "energy_label": {
+                "name": "Energetska efikasnost"
+            },
+            "det_dust": {
+                "name": "Prašak"
+            },
+            "det_liquid": {
+                "name": "Tečni"
+            },
+            "errors": {
+                "name": "Greška"
+            },
+            "programs": {
+                "name": "Trenutni program"
+            },
+            "room_temperature": {
+                "name": "Sobna temperatura"
+            },
+            "humidity": {
+                "name": "Vlažnost"
+            },
+            "cycles_total": {
+                "name": "Ciklusi Ukupno"
+            },
+            "energy_total": {
+                "name": "Potrošnja energije Ukupno"
+            },
+            "water_total": {
+                "name": "Efikasnost vode Ukupno"
+            },
+            "energy_current": {
+                "name": "Potrošnja energije Current"
+            },
+            "water_current": {
+                "name": "Efikasnost vode Current"
+            },
+            "freezer_temp": {
+                "name": "Temperatura zamrzivača"
+            },
+            "fridge_temp": {
+                "name": "Temperatura frižidera"
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Bez sušenja",
+                    "iron_dry": "Peglanje",
+                    "no_dry_iron": "Suvo za ormar",
+                    "cupboard_dry": "Suvo za ormar",
+                    "extra_dry": "Ekstra suvo",
+                    "ready_to_wear": "Spremno za nošenje"
+                },
+                "name": "Nivo sušenja"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Isključeno",
+                    "avoid_touch": "Izbegavajte dodir",
+                    "follow_touch": "Pratiti"
+                },
+                "name": "Eko pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Visoko",
+                    "mid": "Srednje   ",
+                    "low": "Nisko",
+                    "auto": "Automatski"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Frižider",
+                    "freezer": "Zamrzivač",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Frižider & Zamrzivač"
+                },
+                "name": "Zona"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Funkcija grejanja – 10° C",
+                    "iot_auto": "Automatski",
+                    "iot_cool": "Hlađenje",
+                    "iot_dry": "Sušenje",
+                    "iot_fan": "Ventilator",
+                    "iot_heat": "Toplota",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Samopročišćavanje",
+                    "iot_self_clean": "Samočišćenje",
+                    "iot_self_clean_56": "Sterilno čišćenje 56°C",
+                    "iot_simple_start": "Pokrenuti sada",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + automatsko",
+                    "iot_uv_and_cool": "UV+ hladno",
+                    "iot_uv_and_dry": "UV + odvlaživač",
+                    "iot_uv_and_fan": "UV + ventilator",
+                    "iot_uv_and_heat": "UV + toplota"
+                },
+                "name": "Program"
+            },
             "programs_dw": {
                 "state": {
                     "59_min": "Brzi 59'",
@@ -1241,7 +1265,7 @@
                     "allergy_care_pro": "Tretman protiv alergija Pro",
                     "all_in_one_49": "Sve u jedan 49'.",
                     "all_in_one_59": "Sve u jedan 59'.",
-                    "all_in_one_59_steam": "Aktivno pranje + para",
+                    "all_in_one_59_steam": "Sve u jedan 59' + para",
                     "autocare": "Automatska nega",
                     "autoclean": "Čišćenje bubnja",
                     "baby_60": "All Baby 60°C",
@@ -1307,7 +1331,7 @@
                     "iot_active_steam": "Para",
                     "iot_active_wash_steam": "Aktivno pranje",
                     "iot_allergy_care_pro": "Tretman protiv alergija Pro",
-                    "iot_all_in_one_59_steam": "Aktivno pranje + para",
+                    "iot_all_in_one_59_steam": "Sve u jedan 59' + para",
                     "iot_checkup": "Provera",
                     "iot_colour_59_steam": "Šarena odeća 59' + para",
                     "iot_cottons_steam": "Pamuk + Para",
@@ -1540,69 +1564,6 @@
                 },
                 "name": "Program"
             },
-            "dry_levels": {
-                "state": {
-                    "0": "Bez sušenja",
-                    "1": "Peglanje",
-                    "2": "Suvo za ormar",
-                    "3": "Suvo za ormar",
-                    "4": "Ekstra suvo",
-                    "12": "Peglanje",
-                    "13": "Suvo za ormar",
-                    "14": "Spremno za nošenje",
-                    "15": "Ekstra suvo",
-                    "11": "Bez sušenja"
-                },
-                "name": "Nivo sušenja"
-            },
-            "spin_speed": {
-                "name": "Centrifuga"
-            },
-            "temperature": {
-                "name": "Temperatura"
-            },
-            "dry_time": {
-                "name": "Vreme sušenja"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "Isključeno",
-                    "1": "Izbegavajte dodir",
-                    "2": "Pratiti"
-                },
-                "name": "Eko pilot"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "Visoko",
-                    "2": "Srednje   ",
-                    "3": "Nisko",
-                    "4": "Automatski",
-                    "5": "Automatski"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_10_heating": "Funkcija grejanja – 10° C",
-                    "iot_auto": "Automatski",
-                    "iot_cool": "Hlađenje",
-                    "iot_dry": "Sušenje",
-                    "iot_fan": "Ventilator",
-                    "iot_heat": "Toplota",
-                    "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Samopročišćavanje",
-                    "iot_self_clean": "Samočišćenje",
-                    "iot_self_clean_56": "Sterilno čišćenje 56°C",
-                    "iot_simple_start": "Pokrenuti sada",
-                    "iot_uv": "UV",
-                    "iot_uv_and_auto": "UV + automatsko",
-                    "iot_uv_and_cool": "UV+ hladno",
-                    "iot_uv_and_dry": "UV + odvlaživač",
-                    "iot_uv_and_fan": "UV + ventilator",
-                    "iot_uv_and_heat": "UV + toplota"
-                },
-                "name": "Program"
-            },
             "programs_ref": {
                 "state": {
                     "auto_set": "AUTOMATSKO PODEŠAVANJE",
@@ -1626,17 +1587,17 @@
                 },
                 "name": "Program"
             },
+            "dry_time": {
+                "name": "Vreme sušenja"
+            },
+            "spin_speed": {
+                "name": "Centrifuga"
+            },
+            "temperature": {
+                "name": "Temperatura"
+            },
             "remaining_time": {
                 "name": "Preostalo vreme"
-            },
-            "ref_zones": {
-                "state": {
-                    "fridge": "Frižider",
-                    "freezer": "Zamrzivač",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "Frižider & Zamrzivač"
-                },
-                "name": "Zona"
             }
         },
         "switch": {
@@ -1724,17 +1685,14 @@
             "acqua_plus": {
                 "name": "Viši nivo vode"
             },
-            "auto_dose": {
-                "name": "Automatsko doziranje"
-            },
-            "good_night": {
-                "name": "Laku noć"
-            },
             "auto_dose_softener": {
                 "name": "Automatsko doziranje Omekšivač"
             },
             "auto_dose_detergent": {
                 "name": "Automatsko doziranje Deterdžent"
+            },
+            "good_night": {
+                "name": "Laku noć"
             },
             "auto_set": {
                 "name": "Automatsko podešavanje"
@@ -1768,26 +1726,11 @@
             "anti_crease": {
                 "name": "Protiv gužvanja"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Viši nivo vode"
             },
             "spin_speed": {
                 "name": "Centrifuga"
-            },
-            "programs_dw": {
-                "name": "Program"
-            },
-            "programs_ih": {
-                "name": "Program"
-            },
-            "programs_ov": {
-                "name": "Program"
-            },
-            "programs_td": {
-                "name": "Program"
-            },
-            "programs_wm": {
-                "name": "Program"
             },
             "still_hot": {
                 "name": "Još uvek vruće"
@@ -1819,12 +1762,6 @@
             "prewash": {
                 "name": "Predpranje"
             },
-            "acqua_plus": {
-                "name": "Viši nivo vode"
-            },
-            "auto_dose": {
-                "name": "Automatsko doziranje"
-            },
             "buzzer": {
                 "name": "Zvono na kraju ciklusa"
             },
@@ -1848,6 +1785,17 @@
             },
             "filter_replacement": {
                 "name": "Zamena filtera"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Indukciona ploča"
+            },
+            "start_program": {
+                "name": "Program Pokretanje"
+            },
+            "stop_program": {
+                "name": "Program Zaustavi"
             }
         },
         "number": {
@@ -1886,17 +1834,6 @@
             },
             "fridge_temp_sel": {
                 "name": "Željena temperatura Frižider"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "Indukciona ploča"
-            },
-            "start_program": {
-                "name": "Program Pokretanje"
-            },
-            "stop_program": {
-                "name": "Program Zaustavi"
             }
         },
         "climate": {

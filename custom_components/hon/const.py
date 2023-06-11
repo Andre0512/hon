@@ -70,123 +70,119 @@ LANGUAGES = [
 ]
 
 WASHING_PR_PHASE = {
-    "0": "WASHING_CMD&CTRL.PHASE_READY.TITLE",
-    "1": "WASHING_CMD&CTRL.PHASE_WASHING.TITLE",
-    "2": "WASHING_CMD&CTRL.PHASE_WASHING.TITLE",
-    "3": "WASHING_CMD&CTRL.PHASE_SPIN.TITLE",
-    "4": "WASHING_CMD&CTRL.PHASE_RINSE.TITLE",
-    "5": "WASHING_CMD&CTRL.PHASE_RINSE.TITLE",
-    "6": "WASHING_CMD&CTRL.PHASE_RINSE.TITLE",
-    "7": "WASHING_CMD&CTRL.PHASE_DRYING.TITLE",
-    "9": "WASHING_CMD&CTRL.PHASE_STEAM.TITLE",
-    "10": "WASHING_CMD&CTRL.PHASE_READY.TITLE",
-    "11": "WASHING_CMD&CTRL.PHASE_SPIN.TITLE",
-    "12": "WASHING_CMD&CTRL.PHASE_WEIGHTING.TITLE",
-    "13": "WASHING_CMD&CTRL.PHASE_WEIGHTING.TITLE",
-    "14": "WASHING_CMD&CTRL.PHASE_WASHING.TITLE",
-    "15": "WASHING_CMD&CTRL.PHASE_WASHING.TITLE",
-    "16": "WASHING_CMD&CTRL.PHASE_WASHING.TITLE",
-    "17": "WASHING_CMD&CTRL.PHASE_RINSE.TITLE",
-    "18": "WASHING_CMD&CTRL.PHASE_RINSE.TITLE",
-    "19": "WASHING_CMD&CTRL.PHASE_SCHEDULED.TITLE",
-    "20": "WASHING_CMD&CTRL.PHASE_TUMBLING.TITLE",
-    "24": "WASHING_CMD&CTRL.PHASE_REFRESH.TITLE",
-    "25": "WASHING_CMD&CTRL.PHASE_WASHING.TITLE",
-    "26": "WASHING_CMD&CTRL.PHASE_HEATING.TITLE",
-    "27": "WASHING_CMD&CTRL.PHASE_WASHING.TITLE",
+    "0": "ready",
+    "1": "washing",
+    "2": "washing",
+    "3": "spin",
+    "4": "rinse",
+    "5": "rinse",
+    "6": "rinse",
+    "7": "drying",
+    "9": "steam",
+    "10": "ready",
+    "11": "spin",
+    "12": "weighting",
+    "13": "weighting",
+    "14": "washing",
+    "15": "washing",
+    "16": "washing",
+    "17": "rinse",
+    "18": "rinse",
+    "19": "scheduled",
+    "20": "tumbling",
+    "24": "refresh",
+    "25": "washing",
+    "26": "heating",
+    "27": "washing",
 }
+
 MACH_MODE = {
-    "0": "WASHING_CMD&CTRL.PHASE_READY.TITLE",  # NO_STATE
-    "1": "WASHING_CMD&CTRL.PHASE_READY.TITLE",  # SELECTION_MODE
-    "2": "WASHING_CMD&CTRL.PHASE_RUNNING.TITLE",  # EXECUTION_MODE
-    "3": "WASHING_CMD&CTRL.PHASE_PAUSE.TITLE",  # PAUSE_MODE
-    "4": "WASHING_CMD&CTRL.PHASE_SCHEDULED.TITLE",  # DELAY_START_SELECTION_MODE
-    "5": "WASHING_CMD&CTRL.PHASE_SCHEDULED.TITLE",  # DELAY_START_EXECUTION_MODE
-    "6": "WASHING_CMD&CTRL.PHASE_ERROR.TITLE",  # ERROR_MODE
-    "7": "WASHING_CMD&CTRL.PHASE_READY.TITLE",  # END_MODE
-    "8": "Test",  # TEST_MODE
-    "9": "GLOBALS.APPLIANCE_STATUS.ENDING_PROGRAM",  # STOP_MODE
+    "0": "ready",  # NO_STATE
+    "1": "ready",  # SELECTION_MODE
+    "2": "running",  # EXECUTION_MODE
+    "3": "pause",  # PAUSE_MODE
+    "4": "scheduled",  # DELAY_START_SELECTION_MODE
+    "5": "scheduled",  # DELAY_START_EXECUTION_MODE
+    "6": "error",  # ERROR_MODE
+    "7": "ready",  # END_MODE
+    "8": "test",  # TEST_MODE
+    "9": "ending",  # STOP_MODE
 }
+
 TUMBLE_DRYER_PR_PHASE = {
-    "0": "WASHING_CMD&CTRL.PHASE_READY.TITLE",
-    "1": "TD_CMD&CTRL.STATUS_PHASE.PHASE_HEAT_STROKE",
-    "2": "WASHING_CMD&CTRL.PHASE_DRYING.TITLE",
-    "3": "TD_CMD&CTRL.STATUS_PHASE.PHASE_COOLDOWN",
+    "0": "ready",
+    "1": "heat_stroke",
+    "2": "drying",
+    "3": "cooldown",
     "8": "unknown",
-    "11": "WASHING_CMD&CTRL.PHASE_READY.TITLE",
+    "11": "ready",
     "12": "unknown",
-    "13": "TD_CMD&CTRL.STATUS_PHASE.PHASE_COOLDOWN",
-    "14": "TD_CMD&CTRL.STATUS_PHASE.PHASE_HEAT_STROKE",
-    "15": "TD_CMD&CTRL.STATUS_PHASE.PHASE_HEAT_STROKE",
-    "16": "TD_CMD&CTRL.STATUS_PHASE.PHASE_COOLDOWN",
+    "13": "cooldown",
+    "14": "heat_stroke",
+    "15": "heat_stroke",
+    "16": "cooldown",
     "17": "unknown",
-    "18": "WASHING_CMD&CTRL.PHASE_TUMBLING.DASHBOARD_TITLE",
-    "19": "WASHING_CMD&CTRL.PHASE_DRYING.TITLE",
-    "20": "WASHING_CMD&CTRL.PHASE_DRYING.TITLE",
+    "18": "tumbling",
+    "19": "drying",
+    "20": "drying",
 }
+
 DIRTY_LEVEL = {
-    "1": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OPTIONS_VALUES_DESCRIPTION.LITTLE",
-    "2": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OPTIONS_VALUES_DESCRIPTION.NORMAL",
-    "3": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OPTIONS_VALUES_DESCRIPTION.VERY",
+    "1": "little",
+    "2": "normal",
+    "3": "very",
 }
 
 STEAM_LEVEL = {
-    "0": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OPTIONS_VALUES_DESCRIPTION.NO_STEAM",
-    "1": "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_FABRICS.COTTON_TITLE",
-    "2": "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_FABRICS.DELICATE_TITLE",
-    "3": "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_FABRICS.SYNTHETIC_TITLE",
+    "0": "no_steam",
+    "1": "cotton",
+    "2": "delicate",
+    "3": "synthetic",
 }
 
 DISHWASHER_PR_PHASE = {
-    "0": "WASHING_CMD&CTRL.PHASE_READY.TITLE",
-    "1": "WASHING_CMD&CTRL.PHASE_PREWASH.TITLE",
-    "2": "WASHING_CMD&CTRL.PHASE_WASHING.TITLE",
-    "3": "WASHING_CMD&CTRL.PHASE_RINSE.TITLE",
-    "4": "WASHING_CMD&CTRL.PHASE_DRYING.TITLE",
-    "5": "WASHING_CMD&CTRL.PHASE_READY.TITLE",
-    "6": "WASHING_CMD&CTRL.PHASE_HOT_RINSE.TITLE",
+    "0": "ready",
+    "1": "prewash",
+    "2": "washing",
+    "3": "rinse",
+    "4": "drying",
+    "5": "ready",
+    "6": "hot_rinse",
 }
 
 TUMBLE_DRYER_DRY_LEVEL = {
-    "0": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.NO_DRY",
-    "1": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OPTIONS_VALUES_DESCRIPTION.IRON_DRY",
-    "2": "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.NO_DRY_IRON_TITLE",
-    "3": "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.CUPBOARD_DRY_TITLE",
-    "4": "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.EXTRA_DRY_TITLE",
-    "11": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.NO_DRY",
-    "12": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OPTIONS_VALUES_DESCRIPTION.IRON_DRY",
-    "13": "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.CUPBOARD_DRY_TITLE",
-    "14": "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.READY_TO_WEAR_TITLE",
-    "15": "WASHING_CMD&CTRL.GUIDED_WASHING_SYMBOLS_DRYING.EXTRA_DRY_TITLE",
+    "0": "no_dry",
+    "1": "iron_dry",
+    "2": "no_dry_iron",
+    "3": "cupboard_dry",
+    "4": "extra_dry",
+    "11": "no_dry",
+    "12": "iron_dry",
+    "13": "cupboard_dry",
+    "14": "ready_to_wear",
+    "15": "extra_dry",
 }
 
 AC_MACH_MODE = {
-    "0": "PROGRAMS.AC.IOT_AUTO",
-    "1": "PROGRAMS.AC.IOT_COOL",
-    "2": "PROGRAMS.AC.IOT_COOL",
-    "3": "PROGRAMS.AC.IOT_DRY",
-    "4": "PROGRAMS.AC.IOT_HEAT",
-    "5": "PROGRAMS.AC.IOT_FAN",
-    "6": "PROGRAMS.AC.IOT_FAN",
+    "0": "auto",
+    "1": "cool",
+    "2": "cool",
+    "3": "dry",
+    "4": "heat",
+    "5": "fan",
+    "6": "fan",
 }
 
 AC_FAN_MODE = {
-    "1": "AC.PROGRAM_CARD.WIND_SPEED_HIGH",
-    "2": "AC.PROGRAM_CARD.WIND_SPEED_MID",
-    "3": "AC.PROGRAM_CARD.WIND_SPEED_LOW",
-    "4": "AC.PROGRAM_CARD.WIND_SPEED_AUTO",
-    "5": "AC.PROGRAM_CARD.WIND_SPEED_AUTO",
+    "1": "high",
+    "2": "mid",
+    "3": "low",
+    "4": "auto",
+    "5": "auto",
 }
 
 AC_HUMAN_SENSE = {
-    "0": "AC.PROGRAM_DETAIL.TOUCH_OFF",
-    "1": "AC.PROGRAM_DETAIL.AVOID_TOUCH",
-    "2": "AC.PROGRAM_DETAIL.FOLLOW_TOUCH",
-}
-
-REF_ZONES = {
-    "fridge": "REF.ZONES.FRIDGE",
-    "freezer": "REF.ZONES.FREEZER",
-    "vtroom1": "REF.ZONES.MY_ZONE_1",
-    "fridge_freezer": ["REF.ZONES.FRIDGE", " & ", "REF.ZONES.FREEZER"],
+    "0": "touch_off",
+    "1": "avoid_touch",
+    "2": "follow_touch",
 }

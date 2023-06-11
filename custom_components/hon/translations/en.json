@@ -1,56 +1,6 @@
 {
-    "config": {
-        "step": {
-            "user": {
-                "description": "Do the login",
-                "data": {
-                    "email": "Email",
-                    "password": "Password"
-                }
-            }
-        }
-    },
     "entity": {
         "sensor": {
-            "mode": {
-                "state": {
-                    "0": "Disconnected",
-                    "1": "Ready",
-                    "2": "Running",
-                    "3": "Paused",
-                    "5": "Scheduled",
-                    "6": "Error",
-                    "7": "Finished"
-                }
-            },
-            "errors": {
-                "state": {
-                    "00": "No error",
-                    "100000000000": "E2: Check if the door is closed",
-                    "8000000000000": "E4: Check the water supply"
-                },
-                "name": "Error"
-            },
-            "programs": {
-                "state": {
-                    "0": "Default",
-                    "62": "Cotton",
-                    "63": "Synthetics",
-                    "64": "Mix",
-                    "66": "Bed Sheets",
-                    "71": "Curtains",
-                    "72": "Sports",
-                    "74": "i-time",
-                    "75": "Duvet",
-                    "76": "Wool",
-                    "78": "i-Refresh",
-                    "83": "Towel",
-                    "85": "Quick Dry",
-                    "92": "Delicate",
-                    "103": "Remote"
-                },
-                "name": "Current program"
-            },
             "tumbledryertemplevel": {
                 "state": {
                     "1": "Cool",
@@ -59,327 +9,74 @@
                     "4": "High temperature L-3"
                 }
             },
-            "mode_dw": {
-                "state": {
-                    "0": "Disconnected",
-                    "1": "Ready",
-                    "2": "Running",
-                    "3": "Delayed start",
-                    "5": "Delayed start cancelled",
-                    "7": "Finished"
-                }
-            },
             "washing_modes": {
                 "state": {
-                    "0": "Ready",
-                    "1": "Ready",
-                    "3": "Pause",
-                    "4": "Scheduled",
-                    "5": "Scheduled",
-                    "6": "Error",
-                    "7": "Ready",
-                    "2": "Program running",
-                    "8": "Test",
-                    "9": "Stopping cycle…"
+                    "ready": "Ready",
+                    "running": "Program running",
+                    "pause": "Pause",
+                    "scheduled": "Scheduled",
+                    "error": "Error",
+                    "test": "Test",
+                    "ending": "Stopping cycle…"
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Auto",
+                    "cool": "Cool",
+                    "dry": "Dry",
+                    "heat": "Heat",
+                    "fan": "Fan"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "Ready",
-                    "1": "Wash",
-                    "2": "Wash",
-                    "3": "Spin",
-                    "4": "Rinse",
-                    "5": "Rinse",
-                    "6": "Rinse",
-                    "7": "Drying",
-                    "9": "Steam",
-                    "10": "Ready",
-                    "11": "Spin",
-                    "12": "Weighing ",
-                    "13": "Weighing ",
-                    "14": "Wash",
-                    "15": "Wash",
-                    "16": "Wash",
-                    "17": "Rinse",
-                    "18": "Rinse",
-                    "19": "Scheduled",
-                    "20": "Keep Fresh",
-                    "24": "Refresh",
-                    "25": "Wash",
-                    "26": "Heating",
-                    "27": "Wash"
+                    "ready": "Ready",
+                    "spin": "Spin",
+                    "rinse": "Rinse",
+                    "drying": "Drying",
+                    "steam": "Steam",
+                    "weighting": "Weighing ",
+                    "scheduled": "Scheduled",
+                    "tumbling": "Keep Fresh",
+                    "refresh": "Refresh",
+                    "heating": "Heating",
+                    "washing": "Wash"
                 },
                 "name": "Phase"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "Ready",
-                    "1": "Drying",
-                    "2": "Drying",
-                    "3": "Cooldown",
-                    "13": "Cooldown",
-                    "14": "Drying",
-                    "15": "Drying",
-                    "16": "Cooldown",
-                    "18": "Keep Fresh",
-                    "19": "Drying",
-                    "20": "Drying",
-                    "11": "Ready",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "Ready",
+                    "heat_stroke": "Drying",
+                    "drying": "Drying",
+                    "cooldown": "Cooldown",
+                    "unknown": "unknown",
+                    "tumbling": "Keep Fresh"
                 },
                 "name": "Phase"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "Ready",
-                    "1": "Prewash",
-                    "2": "Wash",
-                    "3": "Rinse",
-                    "4": "Drying",
-                    "5": "Ready",
-                    "6": "Hot rinse"
+                    "ready": "Ready",
+                    "prewash": "Prewash",
+                    "washing": "Wash",
+                    "rinse": "Rinse",
+                    "drying": "Drying",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "Phase"
             },
             "dry_levels": {
                 "state": {
-                    "0": "No drying",
-                    "1": "Iron dry",
-                    "2": "Hang",
-                    "3": "Cupboard Dry",
-                    "4": "Extra dry",
-                    "12": "Iron dry",
-                    "13": "Cupboard Dry",
-                    "14": "Ready to wear",
-                    "15": "Extra dry",
-                    "11": "No drying"
+                    "no_dry": "No drying",
+                    "iron_dry": "Iron dry",
+                    "no_dry_iron": "Hang",
+                    "cupboard_dry": "Cupboard Dry",
+                    "extra_dry": "Extra dry",
+                    "ready_to_wear": "Ready to wear"
                 },
                 "name": "Drying level"
-            },
-            "power": {
-                "name": "Power level"
-            },
-            "remaining_time": {
-                "name": "Time remaining"
-            },
-            "temperature": {
-                "name": "Temperature"
-            },
-            "water_efficiency": {
-                "name": "Water efficiency"
-            },
-            "water_saving": {
-                "name": "Water savings"
-            },
-            "duration": {
-                "name": "Duration"
-            },
-            "target_temperature": {
-                "name": "Target temperature"
-            },
-            "spin_speed": {
-                "name": "Spin"
-            },
-            "steam_leve": {
-                "name": "Steam Level"
-            },
-            "dirt_level": {
-                "name": "Dirt level"
-            },
-            "delay_time": {
-                "name": "Delay Start"
-            },
-            "dry_time": {
-                "name": "Drying time"
-            },
-            "suggested_load": {
-                "name": "Load capacity"
-            },
-            "energy_label": {
-                "name": "Energy efficiency"
-            },
-            "det_dust": {
-                "name": "Powder detergent"
-            },
-            "det_liquid": {
-                "name": "Liquid detergent"
-            },
-            "cycles_total": {
-                "name": "Cycles Total"
-            },
-            "energy_total": {
-                "name": "Energy Consumption Total"
-            },
-            "water_total": {
-                "name": "Water efficiency Total"
-            },
-            "energy_current": {
-                "name": "Energy Consumption Current"
-            },
-            "water_current": {
-                "name": "Water efficiency Current"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "Auto",
-                    "1": "Cool",
-                    "2": "Cool",
-                    "3": "Dry",
-                    "4": "Heat",
-                    "5": "Fan",
-                    "6": "Fan"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "active_dry": "Active Dry",
-                    "allergy_care": "Anti-allergy",
-                    "all_in_one": "All in One",
-                    "antiallergy": "Anti-allergy",
-                    "anti_odours": "Anti-odours",
-                    "auto_care": "Auto Care",
-                    "baby": "Baby",
-                    "bed_quilt": "Bed Quilt",
-                    "care_30": "Care 30",
-                    "care_45": "Care 45",
-                    "care_59": "Care 59",
-                    "coloured": "Colored",
-                    "daily_45_min": "Daily 45'",
-                    "daily_perfect_59_min": "Daily Perfect 59'",
-                    "darks_and_coloured": "Darks & Colored",
-                    "delicates": "Delicates",
-                    "duvet": "Duvet",
-                    "eco": "Eco Cotton",
-                    "ecospeed_cottons": "Ecospeed Cottons",
-                    "ecospeed_delicates": "Ecospeed Delicates",
-                    "ecospeed_mixed": "Ecospeed Mixed",
-                    "extra_hygiene": "Extra Hygiene",
-                    "fitness": "Fitness",
-                    "fresh_care": "Fresh Care",
-                    "genius": "Genius",
-                    "hqd_baby_care": "Baby Care",
-                    "hqd_bath_towel": "Towels",
-                    "hqd_bed_sheets": "Bed Sheets",
-                    "hqd_bulky": "Bulky Items",
-                    "hqd_casual": "Casual",
-                    "hqd_cold_wind_30": "Cool Breeze 30m",
-                    "hqd_cold_wind_timing": "Cool Breeze ",
-                    "hqd_cotton": "Cotton",
-                    "hqd_curtain": "Curtains",
-                    "hqd_delicate": "Delicates",
-                    "hqd_diaper": "Diapers",
-                    "hqd_duvet": "Duvet",
-                    "hqd_feather": "Down Jackets",
-                    "hqd_hot_wind_timing": "Hot Air",
-                    "hqd_hygienic": "Hygienising",
-                    "hqd_i_refresh": "I-Refresh",
-                    "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_jacket": "Jackets",
-                    "hqd_jeans": "Jeans",
-                    "hqd_luxury": "Luxury",
-                    "hqd_mix": "Mixed",
-                    "hqd_night_dry": "Overnight drying",
-                    "hqd_outdoor": "Outdoor",
-                    "hqd_precious_cure": "Precious Cure",
-                    "hqd_quick_20": "Quick 20m",
-                    "hqd_quick_30": "Quick 30m",
-                    "hqd_quick_dry": "Quick dry (30 min)",
-                    "hqd_quilt": "Quilts",
-                    "hqd_refresh": "Refresh",
-                    "hqd_school_uniform": "School Uniform",
-                    "hqd_shirt": "Shirts",
-                    "hqd_shoes": "Shoes",
-                    "hqd_silk": "Silk",
-                    "hqd_sports": "Sports",
-                    "hqd_synthetics": "Synthetics",
-                    "hqd_timer": "Timed",
-                    "hqd_towel": "Towels",
-                    "hqd_underwear": "Underwear",
-                    "hqd_warm_up": "Warm up",
-                    "hqd_wool": "Wool",
-                    "hqd_working_suit": "Workwear",
-                    "hygiene": "Hygiene",
-                    "iot_checkup": "Check-Up",
-                    "iot_dry_anti_mites": "Anti-mites",
-                    "iot_dry_baby": "Baby",
-                    "iot_dry_backpacks": "Backpacks",
-                    "iot_dry_bathrobe": "Bathrobe",
-                    "iot_dry_bed_linen": "Bed Linen",
-                    "iot_dry_bed_quilt": "Bed Quilt",
-                    "iot_dry_cotton": "Cotton",
-                    "iot_dry_cuddly_toys": "Cuddly Toys",
-                    "iot_dry_curtains": "Curtains",
-                    "iot_dry_dehumidifier": "Humidity Remover",
-                    "iot_dry_delicates": "Delicates",
-                    "iot_dry_delicate_tablecloths": "Delicate Tablecloths",
-                    "iot_dry_denim_jeans": "Denim - Jeans",
-                    "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "Duvet",
-                    "iot_dry_easy_iron_cotton": "Super Easy Iron",
-                    "iot_dry_easy_iron_synthetics": "Super Easy Iron Synthetics",
-                    "iot_dry_gym_fit": "Gym fit - Fitness",
-                    "iot_dry_lingerie": "Lingerie",
-                    "iot_dry_mixed": "Mixed",
-                    "iot_dry_playsuits": "Playsuits",
-                    "iot_dry_rapid_30": "Rapid 30m",
-                    "iot_dry_rapid_59": "Rapid 59'",
-                    "iot_dry_refresh": "Refresh",
-                    "iot_dry_regenerates_waterproof": "Regenerates Waterproof",
-                    "iot_dry_relax_creases": "Relax Creases",
-                    "iot_dry_shirts": "Shirts",
-                    "iot_dry_small_load": "Small Load",
-                    "iot_dry_swimsuits_and_bikinis": "Swimsuits and Bikinis",
-                    "iot_dry_synthetics": "Synthetics",
-                    "iot_dry_synthetic_dry": "Synthetic Dry",
-                    "iot_dry_tablecloths": "Tablecloths",
-                    "iot_dry_technical_fabrics": "Technical Fabrics",
-                    "iot_dry_warm_embrace": "Warm Embrace",
-                    "iot_dry_wool": "Wool",
-                    "jeans": "Jeans",
-                    "mix_and_dry": "Mix&Dry",
-                    "pets": "Pets",
-                    "pre_iron": "Pre-Iron",
-                    "rapid_30": "Rapid 30",
-                    "rapid_45": "Rapid 45 min",
-                    "rapid_59": "Perfect Rapid 59 Min",
-                    "refresh": "Refresh",
-                    "relax_creases": "Relax Creases",
-                    "saving_30_min": "Saving 30'",
-                    "shirts": "Shirts",
-                    "shoes": "Shoes",
-                    "small_load": "Small Load",
-                    "soft_care": "Soft Care",
-                    "sport_plus": "Sport Plus",
-                    "super_easy_iron_misti": "Super Easy Iron Mixed",
-                    "super_easy_iron_xxl": "Super Easy Iron XXL",
-                    "super_fast_cottons": "Super Fast Cottons",
-                    "super_fast_delicates": "Super Fast Delicates",
-                    "synthetics": "Syntethics",
-                    "total_care": "Total Care",
-                    "trainers": "Trainers",
-                    "ultra_care": "Ultra Care",
-                    "waterproof_revitalize": "Waterproof Revitalize",
-                    "whites": "Whites",
-                    "wool": "Dry Wool",
-                    "woolmark": "Wool",
-                    "xxl_load": "XXL Load",
-                    "zoom_59": "Zoom 59"
-                },
-                "name": "Program"
-            },
-            "room_temperature": {
-                "name": "Room temperature"
-            },
-            "humidity": {
-                "name": "Humidity"
-            },
-            "freezer_temp": {
-                "name": "Freezer temperature"
-            },
-            "fridge_temp": {
-                "name": "Fridge temperature"
             },
             "programs_ac": {
                 "state": {
@@ -611,6 +308,143 @@
                 },
                 "name": "Program"
             },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Active Dry",
+                    "allergy_care": "Anti-allergy",
+                    "all_in_one": "All in One",
+                    "antiallergy": "Anti-allergy",
+                    "anti_odours": "Anti-odours",
+                    "auto_care": "Auto Care",
+                    "baby": "Baby",
+                    "bed_quilt": "Bed Quilt",
+                    "care_30": "Care 30",
+                    "care_45": "Care 45",
+                    "care_59": "Care 59",
+                    "coloured": "Colored",
+                    "daily_45_min": "Daily 45'",
+                    "daily_perfect_59_min": "Daily Perfect 59'",
+                    "darks_and_coloured": "Darks & Colored",
+                    "delicates": "Delicates",
+                    "duvet": "Duvet",
+                    "eco": "Eco Cotton",
+                    "ecospeed_cottons": "Ecospeed Cottons",
+                    "ecospeed_delicates": "Ecospeed Delicates",
+                    "ecospeed_mixed": "Ecospeed Mixed",
+                    "extra_hygiene": "Extra Hygiene",
+                    "fitness": "Fitness",
+                    "fresh_care": "Fresh Care",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Towels",
+                    "hqd_bed_sheets": "Bed Sheets",
+                    "hqd_bulky": "Bulky Items",
+                    "hqd_casual": "Casual",
+                    "hqd_cold_wind_30": "Cool Breeze 30m",
+                    "hqd_cold_wind_timing": "Cool Breeze ",
+                    "hqd_cotton": "Cotton",
+                    "hqd_curtain": "Curtains",
+                    "hqd_delicate": "Delicates",
+                    "hqd_diaper": "Diapers",
+                    "hqd_duvet": "Duvet",
+                    "hqd_feather": "Down Jackets",
+                    "hqd_hot_wind_timing": "Hot Air",
+                    "hqd_hygienic": "Hygienising",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_jacket": "Jackets",
+                    "hqd_jeans": "Jeans",
+                    "hqd_luxury": "Luxury",
+                    "hqd_mix": "Mixed",
+                    "hqd_night_dry": "Overnight drying",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious Cure",
+                    "hqd_quick_20": "Quick 20m",
+                    "hqd_quick_30": "Quick 30m",
+                    "hqd_quick_dry": "Quick dry (30 min)",
+                    "hqd_quilt": "Quilts",
+                    "hqd_refresh": "Refresh",
+                    "hqd_school_uniform": "School Uniform",
+                    "hqd_shirt": "Shirts",
+                    "hqd_shoes": "Shoes",
+                    "hqd_silk": "Silk",
+                    "hqd_sports": "Sports",
+                    "hqd_synthetics": "Synthetics",
+                    "hqd_timer": "Timed",
+                    "hqd_towel": "Towels",
+                    "hqd_underwear": "Underwear",
+                    "hqd_warm_up": "Warm up",
+                    "hqd_wool": "Wool",
+                    "hqd_working_suit": "Workwear",
+                    "hygiene": "Hygiene",
+                    "iot_checkup": "Check-Up",
+                    "iot_dry_anti_mites": "Anti-mites",
+                    "iot_dry_baby": "Baby",
+                    "iot_dry_backpacks": "Backpacks",
+                    "iot_dry_bathrobe": "Bathrobe",
+                    "iot_dry_bed_linen": "Bed Linen",
+                    "iot_dry_bed_quilt": "Bed Quilt",
+                    "iot_dry_cotton": "Cotton",
+                    "iot_dry_cuddly_toys": "Cuddly Toys",
+                    "iot_dry_curtains": "Curtains",
+                    "iot_dry_dehumidifier": "Humidity Remover",
+                    "iot_dry_delicates": "Delicates",
+                    "iot_dry_delicate_tablecloths": "Delicate Tablecloths",
+                    "iot_dry_denim_jeans": "Denim - Jeans",
+                    "iot_dry_down_jacket": "Jacket",
+                    "iot_dry_duvet": "Duvet",
+                    "iot_dry_easy_iron_cotton": "Super Easy Iron",
+                    "iot_dry_easy_iron_synthetics": "Super Easy Iron Synthetics",
+                    "iot_dry_gym_fit": "Gym fit - Fitness",
+                    "iot_dry_lingerie": "Lingerie",
+                    "iot_dry_mixed": "Mixed",
+                    "iot_dry_playsuits": "Playsuits",
+                    "iot_dry_rapid_30": "Rapid 30m",
+                    "iot_dry_rapid_59": "Rapid 59'",
+                    "iot_dry_refresh": "Refresh",
+                    "iot_dry_regenerates_waterproof": "Regenerates Waterproof",
+                    "iot_dry_relax_creases": "Relax Creases",
+                    "iot_dry_shirts": "Shirts",
+                    "iot_dry_small_load": "Small Load",
+                    "iot_dry_swimsuits_and_bikinis": "Swimsuits and Bikinis",
+                    "iot_dry_synthetics": "Synthetics",
+                    "iot_dry_synthetic_dry": "Synthetic Dry",
+                    "iot_dry_tablecloths": "Tablecloths",
+                    "iot_dry_technical_fabrics": "Technical Fabrics",
+                    "iot_dry_warm_embrace": "Warm Embrace",
+                    "iot_dry_wool": "Wool",
+                    "jeans": "Jeans",
+                    "mix_and_dry": "Mix&Dry",
+                    "pets": "Pets",
+                    "pre_iron": "Pre-Iron",
+                    "rapid_30": "Rapid 30",
+                    "rapid_45": "Rapid 45 min",
+                    "rapid_59": "Perfect Rapid 59 Min",
+                    "refresh": "Refresh",
+                    "relax_creases": "Relax Creases",
+                    "saving_30_min": "Saving 30'",
+                    "shirts": "Shirts",
+                    "shoes": "Shoes",
+                    "small_load": "Small Load",
+                    "soft_care": "Soft Care",
+                    "sport_plus": "Sport Plus",
+                    "super_easy_iron_misti": "Super Easy Iron Mixed",
+                    "super_easy_iron_xxl": "Super Easy Iron XXL",
+                    "super_fast_cottons": "Super Fast Cottons",
+                    "super_fast_delicates": "Super Fast Delicates",
+                    "synthetics": "Syntethics",
+                    "total_care": "Total Care",
+                    "trainers": "Trainers",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Waterproof Revitalize",
+                    "whites": "Whites",
+                    "wool": "Dry Wool",
+                    "woolmark": "Wool",
+                    "xxl_load": "XXL Load",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Program"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_coloured_cottons": "20° Colored and Cottons",
@@ -622,7 +456,7 @@
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "All in One 49'",
                     "all_in_one_59": "All in One 59'",
-                    "all_in_one_59_steam": "Active Wash + Steam",
+                    "all_in_one_59_steam": "All in One 59' + Vapore",
                     "autocare": "Autocare",
                     "autoclean": "Drum cleaning and descaling ",
                     "baby_60": "All Baby 60°C",
@@ -688,7 +522,7 @@
                     "iot_active_steam": "Steam",
                     "iot_active_wash_steam": "Active Wash + Steam",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "Active Wash + Steam",
+                    "iot_all_in_one_59_steam": "All in One 59' + Vapore",
                     "iot_checkup": "Check-Up",
                     "iot_colour_59_steam": "Colored 59' + Steam",
                     "iot_cottons_steam": "Cotton + Steam",
@@ -956,133 +790,152 @@
                     "sparkling": "Sparkling",
                     "white": "White"
                 }
-            }
-        },
-        "switch": {
-            "anti_crease": {
-                "name": "Anticrease"
             },
-            "add_dish": {
-                "name": "Add dishes"
+            "dry_time": {
+                "name": "Drying time"
             },
-            "eco_express": {
-                "name": "Eco"
+            "power": {
+                "name": "Power level"
             },
-            "extra_dry": {
-                "name": "Extra dry"
+            "remaining_time": {
+                "name": "Time remaining"
             },
-            "half_load": {
-                "name": "Half load"
+            "temperature": {
+                "name": "Temperature"
             },
-            "open_door": {
-                "name": "Open door"
+            "water_efficiency": {
+                "name": "Water efficiency"
             },
-            "three_in_one": {
-                "name": "3 in 1"
+            "water_saving": {
+                "name": "Water savings"
             },
-            "preheat": {
-                "name": "Preheat"
+            "duration": {
+                "name": "Duration"
             },
-            "dish_washer": {
-                "name": "Dish washer"
+            "target_temperature": {
+                "name": "Target temperature"
             },
-            "tumble_dryer": {
-                "name": "Tumble dryer"
+            "spin_speed": {
+                "name": "Spin"
             },
-            "washing_machine": {
-                "name": "Washing machine"
+            "steam_leve": {
+                "name": "Steam Level"
             },
-            "washer_dryer": {
-                "name": "Washer dryer"
-            },
-            "oven": {
-                "name": "Oven"
-            },
-            "prewash": {
-                "name": "Pre-wash "
-            },
-            "pause": {
-                "name": "Pause"
-            },
-            "keep_fresh": {
-                "name": "Keep Fresh"
+            "dirt_level": {
+                "name": "Dirt level"
             },
             "delay_time": {
                 "name": "Delay Start"
             },
-            "rapid_mode": {
-                "name": "Rapid mode"
+            "suggested_load": {
+                "name": "Load capacity"
             },
-            "eco_mode": {
-                "name": "ECO mode"
+            "energy_label": {
+                "name": "Energy efficiency"
             },
-            "10_degree_heating": {
-                "name": "10°C Heating function"
+            "det_dust": {
+                "name": "Powder detergent"
             },
-            "self_clean": {
-                "name": "Self-clean"
+            "det_liquid": {
+                "name": "Liquid detergent"
             },
-            "self_clean_56": {
-                "name": "Steri-Clean 56°C"
+            "errors": {
+                "state": {
+                    "00": "No error",
+                    "100000000000": "E2: Check if the door is closed",
+                    "8000000000000": "E4: Check the water supply"
+                },
+                "name": "Error"
             },
-            "silent_mode": {
-                "name": "Silent mode"
+            "programs": {
+                "name": "Current program"
             },
-            "mute_mode": {
-                "name": "Mute mode"
+            "room_temperature": {
+                "name": "Room temperature"
             },
-            "extra_rinse_1": {
-                "name": "+1 Rinse"
+            "humidity": {
+                "name": "Humidity"
             },
-            "extra_rinse_2": {
-                "name": "+2 Rinses"
+            "cycles_total": {
+                "name": "Cycles Total"
             },
-            "extra_rinse_3": {
-                "name": "+3 Rinses"
+            "energy_total": {
+                "name": "Energy Consumption Total"
             },
-            "acqua_plus": {
-                "name": "Acquaplus"
+            "water_total": {
+                "name": "Water efficiency Total"
             },
-            "auto_dose": {
-                "name": "Autodose"
+            "energy_current": {
+                "name": "Energy Consumption Current"
             },
-            "good_night": {
-                "name": "Good Night"
+            "water_current": {
+                "name": "Water efficiency Current"
             },
-            "auto_dose_softener": {
-                "name": "Autodose Softener"
+            "freezer_temp": {
+                "name": "Freezer temperature"
             },
-            "auto_dose_detergent": {
-                "name": "Autodose Detergent"
-            },
-            "auto_set": {
-                "name": "Auto-Set"
-            },
-            "super_cool": {
-                "name": "Super Cool"
-            },
-            "super_freeze": {
-                "name": "Super Freeze"
-            },
-            "refrigerator": {
-                "name": "Refrigerator"
+            "fridge_temp": {
+                "name": "Fridge temperature"
             }
         },
         "select": {
             "dry_levels": {
                 "state": {
-                    "0": "No drying",
-                    "1": "Iron dry",
-                    "2": "Hang",
-                    "3": "Cupboard Dry",
-                    "4": "Extra dry",
-                    "12": "Iron dry",
-                    "13": "Cupboard Dry",
-                    "14": "Ready to wear",
-                    "15": "Extra dry",
-                    "11": "No drying"
+                    "no_dry": "No drying",
+                    "iron_dry": "Iron dry",
+                    "no_dry_iron": "Hang",
+                    "cupboard_dry": "Cupboard Dry",
+                    "extra_dry": "Extra dry",
+                    "ready_to_wear": "Ready to wear"
                 },
                 "name": "Drying level"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Off",
+                    "avoid_touch": "Avoid touch",
+                    "follow_touch": "Follow"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "High",
+                    "mid": "Medium   ",
+                    "low": "Low",
+                    "auto": "Auto"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Fridge",
+                    "freezer": "Freezer",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Fridge & Freezer"
+                },
+                "name": "Zone"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10°C Heating function",
+                    "iot_auto": "Auto",
+                    "iot_cool": "Cool",
+                    "iot_dry": "Dry",
+                    "iot_fan": "Fan",
+                    "iot_heat": "Heat",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Self-purify",
+                    "iot_self_clean": "Self-clean",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Start now",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Auto",
+                    "iot_uv_and_cool": "UV + Cold",
+                    "iot_uv_and_dry": "UV + Dehumidifier",
+                    "iot_uv_and_fan": "UV + Fan",
+                    "iot_uv_and_heat": "UV + Heat"
+                },
+                "name": "Program"
             },
             "programs_dw": {
                 "state": {
@@ -1440,7 +1293,7 @@
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "All in One 49'",
                     "all_in_one_59": "All in One 59'",
-                    "all_in_one_59_steam": "Active Wash + Steam",
+                    "all_in_one_59_steam": "All in One 59' + Vapore",
                     "autocare": "Autocare",
                     "autoclean": "Drum cleaning and descaling ",
                     "baby_60": "All Baby 60°C",
@@ -1506,7 +1359,7 @@
                     "iot_active_steam": "Steam",
                     "iot_active_wash_steam": "Active Wash + Steam",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "Active Wash + Steam",
+                    "iot_all_in_one_59_steam": "All in One 59' + Vapore",
                     "iot_checkup": "Check-Up",
                     "iot_colour_59_steam": "Colored 59' + Steam",
                     "iot_cottons_steam": "Cotton + Steam",
@@ -1739,54 +1592,6 @@
                 },
                 "name": "Program"
             },
-            "spin_speed": {
-                "name": "Spin"
-            },
-            "temperature": {
-                "name": "Temperature"
-            },
-            "dry_time": {
-                "name": "Drying time"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "Off",
-                    "1": "Avoid touch",
-                    "2": "Follow"
-                },
-                "name": "Eco pilot"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "High",
-                    "2": "Medium   ",
-                    "3": "Low",
-                    "4": "Auto",
-                    "5": "Auto"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_10_heating": "10°C Heating function",
-                    "iot_auto": "Auto",
-                    "iot_cool": "Cool",
-                    "iot_dry": "Dry",
-                    "iot_fan": "Fan",
-                    "iot_heat": "Heat",
-                    "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Self-purify",
-                    "iot_self_clean": "Self-clean",
-                    "iot_self_clean_56": "Steri-Clean 56°C",
-                    "iot_simple_start": "Start now",
-                    "iot_uv": "UV",
-                    "iot_uv_and_auto": "UV + Auto",
-                    "iot_uv_and_cool": "UV + Cold",
-                    "iot_uv_and_dry": "UV + Dehumidifier",
-                    "iot_uv_and_fan": "UV + Fan",
-                    "iot_uv_and_heat": "UV + Heat"
-                },
-                "name": "Program"
-            },
             "programs_ref": {
                 "state": {
                     "auto_set": "AUTO-SET",
@@ -1811,17 +1616,124 @@
                 },
                 "name": "Program"
             },
+            "dry_time": {
+                "name": "Drying time"
+            },
+            "spin_speed": {
+                "name": "Spin"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
             "remaining_time": {
                 "name": "Time remaining"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Anticrease"
             },
-            "ref_zones": {
-                "state": {
-                    "fridge": "Fridge",
-                    "freezer": "Freezer",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "Fridge & Freezer"
-                },
-                "name": "Zone"
+            "add_dish": {
+                "name": "Add dishes"
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Extra dry"
+            },
+            "half_load": {
+                "name": "Half load"
+            },
+            "open_door": {
+                "name": "Open door"
+            },
+            "three_in_one": {
+                "name": "3 in 1"
+            },
+            "preheat": {
+                "name": "Preheat"
+            },
+            "dish_washer": {
+                "name": "Dish washer"
+            },
+            "tumble_dryer": {
+                "name": "Tumble dryer"
+            },
+            "washing_machine": {
+                "name": "Washing machine"
+            },
+            "washer_dryer": {
+                "name": "Washer dryer"
+            },
+            "oven": {
+                "name": "Oven"
+            },
+            "prewash": {
+                "name": "Pre-wash "
+            },
+            "pause": {
+                "name": "Pause"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Delay Start"
+            },
+            "rapid_mode": {
+                "name": "Rapid mode"
+            },
+            "eco_mode": {
+                "name": "ECO mode"
+            },
+            "10_degree_heating": {
+                "name": "10°C Heating function"
+            },
+            "self_clean": {
+                "name": "Self-clean"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Silent mode"
+            },
+            "mute_mode": {
+                "name": "Mute mode"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Rinse"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Rinses"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Rinses"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose_softener": {
+                "name": "Autodose Softener"
+            },
+            "auto_dose_detergent": {
+                "name": "Autodose Detergent"
+            },
+            "good_night": {
+                "name": "Good Night"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Refrigerator"
             }
         },
         "binary_sensor": {
@@ -1843,26 +1755,11 @@
             "anti_crease": {
                 "name": "Anticrease"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Acquaplus"
             },
             "spin_speed": {
                 "name": "Spin"
-            },
-            "programs_dw": {
-                "name": "Program"
-            },
-            "programs_ih": {
-                "name": "Program"
-            },
-            "programs_ov": {
-                "name": "Program"
-            },
-            "programs_td": {
-                "name": "Program"
-            },
-            "programs_wm": {
-                "name": "Program"
             },
             "still_hot": {
                 "name": "Still hot"
@@ -1894,12 +1791,6 @@
             "prewash": {
                 "name": "Pre-wash "
             },
-            "acqua_plus": {
-                "name": "Acquaplus"
-            },
-            "auto_dose": {
-                "name": "Autodose"
-            },
             "buzzer": {
                 "name": "Cycle end chime"
             },
@@ -1923,6 +1814,17 @@
             },
             "filter_replacement": {
                 "name": "Filter replacement"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Induction Hob"
+            },
+            "start_program": {
+                "name": "Program Start"
+            },
+            "stop_program": {
+                "name": "Program Stop"
             }
         },
         "number": {
@@ -1961,17 +1863,6 @@
             },
             "fridge_temp_sel": {
                 "name": "Target temperature Fridge"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "Induction Hob"
-            },
-            "start_program": {
-                "name": "Program Start"
-            },
-            "stop_program": {
-                "name": "Program Stop"
             }
         },
         "climate": {
@@ -2089,6 +1980,17 @@
         "fan": {
             "air_extraction": {
                 "name": "Air extraction"
+            }
+        }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Do the login",
+                "data": {
+                    "email": "Email",
+                    "password": "Password"
+                }
             }
         }
     }

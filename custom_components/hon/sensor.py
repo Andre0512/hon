@@ -1,5 +1,6 @@
 import logging
 from dataclasses import dataclass
+from typing import List
 
 from homeassistant.components.sensor import (
     SensorEntity,
@@ -36,7 +37,7 @@ class HonConfigSensorEntityDescription(SensorEntityDescription):
 
 @dataclass
 class HonSensorEntityDescription(SensorEntityDescription):
-    pass
+    option_list: List = None
 
 
 SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
@@ -47,7 +48,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:washing-machine",
             device_class=SensorDeviceClass.ENUM,
             translation_key="program_phases_wm",
-            options=list(const.WASHING_PR_PHASE),
+            option_list=const.WASHING_PR_PHASE,
         ),
         HonSensorEntityDescription(
             key="totalElectricityUsed",
@@ -102,7 +103,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:information",
             device_class=SensorDeviceClass.ENUM,
             translation_key="washing_modes",
-            options=list(const.MACH_MODE),
+            option_list=const.MACH_MODE,
         ),
         HonSensorEntityDescription(
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
@@ -187,7 +188,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:information",
             device_class=SensorDeviceClass.ENUM,
             translation_key="washing_modes",
-            options=list(const.MACH_MODE),
+            option_list=const.MACH_MODE,
         ),
         HonSensorEntityDescription(
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
@@ -221,7 +222,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:washing-machine",
             device_class=SensorDeviceClass.ENUM,
             translation_key="program_phases_td",
-            options=list(const.TUMBLE_DRYER_PR_PHASE),
+            option_list=const.TUMBLE_DRYER_PR_PHASE,
         ),
         HonSensorEntityDescription(
             key="dryLevel",
@@ -229,7 +230,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:hair-dryer",
             device_class=SensorDeviceClass.ENUM,
             translation_key="dry_levels",
-            options=list(const.TUMBLE_DRYER_DRY_LEVEL),
+            option_list=const.TUMBLE_DRYER_DRY_LEVEL,
         ),
         HonSensorEntityDescription(
             key="tempLevel",
@@ -391,7 +392,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:information",
             device_class=SensorDeviceClass.ENUM,
             translation_key="washing_modes",
-            options=list(const.MACH_MODE),
+            option_list=const.MACH_MODE,
         ),
         HonSensorEntityDescription(
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
@@ -410,7 +411,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:washing-machine",
             device_class=SensorDeviceClass.ENUM,
             translation_key="program_phases_dw",
-            options=list(const.DISHWASHER_PR_PHASE),
+            option_list=const.DISHWASHER_PR_PHASE,
         ),
         HonSensorEntityDescription(
             key="programName",
@@ -697,14 +698,18 @@ class HonSensorEntity(HonEntity, SensorEntity):
 
     def __init__(self, hass, entry, device: HonAppliance, description):
         super().__init__(hass, entry, device, description)
-        if self.entity_description.key == "programName":
+        if description.key == "programName":
             self._attr_options = self._device.settings.get(
                 "startProgram.program"
             ).values + ["No Program"]
+        elif description.option_list is not None:
+            self._attr_options = list(description.option_list.values())
 
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
         value = self._device.get(self.entity_description.key, "")
+        if self.entity_description.option_list is not None:
+            value = self.entity_description.option_list[value]
         if not value and self.entity_description.state_class is not None:
             self._attr_native_value = 0
         self._attr_native_value = value

@@ -3,324 +3,72 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "Hazır",
-                    "1": "Hazır",
-                    "3": "Duraklat",
-                    "4": "Planlandı",
-                    "5": "Planlandı",
-                    "6": "Hata",
-                    "7": "Hazır",
-                    "2": "Program çalışıyor",
-                    "8": "Test",
-                    "9": "Program durduruluyor…"
+                    "ready": "Hazır",
+                    "running": "Program çalışıyor",
+                    "pause": "Duraklat",
+                    "scheduled": "Planlandı",
+                    "error": "Hata",
+                    "test": "Test",
+                    "ending": "Program durduruluyor…"
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Otomatik",
+                    "cool": "Soğuk",
+                    "dry": "Kuru",
+                    "heat": "Isı",
+                    "fan": "Fan"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "Hazır",
-                    "1": "Yıkama",
-                    "2": "Yıkama",
-                    "3": "Sıkma",
-                    "4": "Durulama",
-                    "5": "Durulama",
-                    "6": "Durulama",
-                    "7": "Kurutma",
-                    "9": "Buhar",
-                    "10": "Hazır",
-                    "11": "Sıkma",
-                    "12": "Tartma ",
-                    "13": "Tartma ",
-                    "14": "Yıkama",
-                    "15": "Yıkama",
-                    "16": "Yıkama",
-                    "17": "Durulama",
-                    "18": "Durulama",
-                    "19": "Planlandı",
-                    "20": "Tazeleme",
-                    "24": "Tazeleme",
-                    "25": "Yıkama",
-                    "26": "Isıtma",
-                    "27": "Yıkama"
+                    "ready": "Hazır",
+                    "spin": "Sıkma",
+                    "rinse": "Durulama",
+                    "drying": "Kurutma",
+                    "steam": "Buhar",
+                    "weighting": "Tartma ",
+                    "scheduled": "Planlandı",
+                    "tumbling": "Tazeleme",
+                    "refresh": "Tazeleme",
+                    "heating": "Isıtma",
+                    "washing": "Yıkama"
                 },
                 "name": "Aşama"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "Hazır",
-                    "1": "Kurutma",
-                    "2": "Kurutma",
-                    "3": "Soğutma",
-                    "13": "Soğutma",
-                    "14": "Kurutma",
-                    "15": "Kurutma",
-                    "16": "Soğutma",
-                    "18": "Tazeleme",
-                    "19": "Kurutma",
-                    "20": "Kurutma",
-                    "11": "Hazır",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "Hazır",
+                    "heat_stroke": "Kurutma",
+                    "drying": "Kurutma",
+                    "cooldown": "Soğutma",
+                    "unknown": "unknown",
+                    "tumbling": "Tazeleme"
                 },
                 "name": "Aşama"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "Hazır",
-                    "1": "Ön Yıkama",
-                    "2": "Yıkama",
-                    "3": "Durulama",
-                    "4": "Kurutma",
-                    "5": "Hazır",
-                    "6": "Hot rinse"
+                    "ready": "Hazır",
+                    "prewash": "Ön Yıkama",
+                    "washing": "Yıkama",
+                    "rinse": "Durulama",
+                    "drying": "Kurutma",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "Aşama"
             },
             "dry_levels": {
                 "state": {
-                    "0": "Kurutma yok",
-                    "1": "Ütü",
-                    "2": "Gardırop hazır",
-                    "3": "Gardırop hazır",
-                    "4": "Ekstra kurutma",
-                    "12": "Ütü",
-                    "13": "Gardırop hazır",
-                    "14": "Giyilmeye hazır",
-                    "15": "Ekstra kurutma",
-                    "11": "Kurutma yok"
+                    "no_dry": "Kurutma yok",
+                    "iron_dry": "Ütü",
+                    "no_dry_iron": "Gardırop hazır",
+                    "cupboard_dry": "Gardırop hazır",
+                    "extra_dry": "Ekstra kurutma",
+                    "ready_to_wear": "Giyilmeye hazır"
                 },
                 "name": "Kurutma seviyesi"
-            },
-            "anti_crease": {
-                "name": "Kırışık açma"
-            },
-            "power": {
-                "name": "Güç seviyesi"
-            },
-            "remaining_time": {
-                "name": "Kalan süre"
-            },
-            "temperature": {
-                "name": "Sıcaklık"
-            },
-            "water_efficiency": {
-                "name": "Su verimliliği"
-            },
-            "water_saving": {
-                "name": "Su tasarrufu"
-            },
-            "duration": {
-                "name": "Süre"
-            },
-            "target_temperature": {
-                "name": "Hedef sıcaklık"
-            },
-            "spin_speed": {
-                "name": "Sıkma"
-            },
-            "steam_leve": {
-                "name": "Buhar Seviyesi"
-            },
-            "dirt_level": {
-                "name": "Kir seviyesi"
-            },
-            "delay_time": {
-                "name": "Gecikmeli Başlatma"
-            },
-            "dry_time": {
-                "name": "Kurutma zamanı"
-            },
-            "suggested_load": {
-                "name": "Yük kapasitesi"
-            },
-            "energy_label": {
-                "name": "Enerji verimliliği"
-            },
-            "det_dust": {
-                "name": "Toz"
-            },
-            "det_liquid": {
-                "name": "Sıvı"
-            },
-            "errors": {
-                "name": "Hata"
-            },
-            "programs": {
-                "name": "Geçerli program"
-            },
-            "cycles_total": {
-                "name": "Programlar Toplam"
-            },
-            "energy_total": {
-                "name": "Enerji Tüketimi Toplam"
-            },
-            "water_total": {
-                "name": "Su verimliliği Toplam"
-            },
-            "energy_current": {
-                "name": "Enerji Tüketimi Current"
-            },
-            "water_current": {
-                "name": "Su verimliliği Current"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "Otomatik",
-                    "1": "Soğuk",
-                    "2": "Soğuk",
-                    "3": "Kuru",
-                    "4": "Isı",
-                    "5": "Fan",
-                    "6": "Fan"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "active_dry": "Aktif Kurutma",
-                    "allergy_care": "Antialerji",
-                    "all_in_one": "Hepsi Bir Arada",
-                    "antiallergy": "Antialerji",
-                    "anti_odours": "Koku giderme",
-                    "auto_care": "Oto. Bakım",
-                    "baby": "Bebek",
-                    "bed_quilt": "Yorgan",
-                    "care_30": "Bakım 30",
-                    "care_45": "Bakım 45",
-                    "care_59": "Bakım 59",
-                    "coloured": "Renkli",
-                    "daily_45_min": "GUNLUK 45'",
-                    "daily_perfect_59_min": "GUNLUK 59'",
-                    "darks_and_coloured": "Koyu Renkliler ve Renkliler",
-                    "delicates": "Hassas",
-                    "duvet": "Yorgan",
-                    "eco": "Eko Pamuk",
-                    "ecospeed_cottons": "Eko hız Pamuklu",
-                    "ecospeed_delicates": "ECOSEPEED Hassas",
-                    "ecospeed_mixed": "Eko hız Karışık",
-                    "extra_hygiene": "EKSTRA HIJYEN",
-                    "fitness": "Fitness",
-                    "fresh_care": "Yenileme Bakımı",
-                    "genius": "Genius",
-                    "hqd_baby_care": "Baby Care",
-                    "hqd_bath_towel": "Havlular",
-                    "hqd_bed_sheets": "Çarşaflar",
-                    "hqd_bulky": "Hacimli eşyalar",
-                    "hqd_casual": "Gündelik",
-                    "hqd_cold_wind_30": "Serin esinti 30 dakika",
-                    "hqd_cold_wind_timing": "Serin esinti ",
-                    "hqd_cotton": "Pamuk",
-                    "hqd_curtain": "Perdeler",
-                    "hqd_delicate": "Narin Çamaşırlar",
-                    "hqd_diaper": "Bebek bezi",
-                    "hqd_duvet": "Nevresim",
-                    "hqd_feather": "Şişme montlar",
-                    "hqd_hot_wind_timing": "Sıcak hava",
-                    "hqd_hygienic": "Hijyen",
-                    "hqd_i_refresh": "I-Refresh",
-                    "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_jacket": "Ceketler",
-                    "hqd_jeans": "Kot pantolon",
-                    "hqd_luxury": "Konfor",
-                    "hqd_mix": "Karışık",
-                    "hqd_night_dry": "Gece kurutma",
-                    "hqd_outdoor": "Outdoor",
-                    "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "Hızlı 20",
-                    "hqd_quick_30": "Hızlı 30",
-                    "hqd_quick_dry": "Hızlı kurutma 30",
-                    "hqd_quilt": "Yorganlar",
-                    "hqd_refresh": "Yenileme",
-                    "hqd_school_uniform": "Okul üniforması",
-                    "hqd_shirt": "Gömlekler",
-                    "hqd_shoes": "Ayakkabılar",
-                    "hqd_silk": "İpek",
-                    "hqd_sports": "Spor",
-                    "hqd_synthetics": "Sentetikler",
-                    "hqd_timer": "Zaman Ayarlı",
-                    "hqd_towel": "Havlular",
-                    "hqd_underwear": "İç çamaşırı",
-                    "hqd_warm_up": "Isıtma",
-                    "hqd_wool": "Yün",
-                    "hqd_working_suit": "İş giysisi",
-                    "hygiene": "Hijyen",
-                    "iot_checkup": "Kontrol",
-                    "iot_dry_anti_mites": "Anti-akar",
-                    "iot_dry_baby": "Bebek",
-                    "iot_dry_backpacks": "Sırt Çantaları",
-                    "iot_dry_bathrobe": "Bornoz",
-                    "iot_dry_bed_linen": "Çarşaf",
-                    "iot_dry_bed_quilt": "Yorgan",
-                    "iot_dry_cotton": "Pamuklular",
-                    "iot_dry_cuddly_toys": "Yumuşak Oyuncaklar",
-                    "iot_dry_curtains": "Perdeler",
-                    "iot_dry_dehumidifier": "Nem giderici",
-                    "iot_dry_delicates": "Hassas",
-                    "iot_dry_delicate_tablecloths": "Hassas masa örtüleri",
-                    "iot_dry_denim_jeans": "Denim - kot pantolon",
-                    "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "Yorgan",
-                    "iot_dry_easy_iron_cotton": "Süper Kolay Ütüleme",
-                    "iot_dry_easy_iron_synthetics": "Sentetikler Süper Kolay Ütü",
-                    "iot_dry_gym_fit": "Spor kıyafetleri",
-                    "iot_dry_lingerie": "İç Çamaşırı",
-                    "iot_dry_mixed": "Karışık",
-                    "iot_dry_playsuits": "Oyun elbiseleri",
-                    "iot_dry_rapid_30": "Rapid 30",
-                    "iot_dry_rapid_59": "Hızlı 59'.",
-                    "iot_dry_refresh": "Yenileme",
-                    "iot_dry_regenerates_waterproof": "Su geçirmezliği artırmak",
-                    "iot_dry_relax_creases": "Kırışıklık Açma",
-                    "iot_dry_shirts": "Gömlek",
-                    "iot_dry_small_load": "Az Çamaşır",
-                    "iot_dry_swimsuits_and_bikinis": "Mayolar",
-                    "iot_dry_synthetics": "Sentetik",
-                    "iot_dry_synthetic_dry": "Sentetik Kurutma",
-                    "iot_dry_tablecloths": "Masa örtüleri",
-                    "iot_dry_technical_fabrics": "Teknik Kumaşlar",
-                    "iot_dry_warm_embrace": "Sıcak Hava",
-                    "iot_dry_wool": "Saf yün markası",
-                    "jeans": "Kot",
-                    "mix_and_dry": "Karışık ve Kuru",
-                    "pets": "Evcil hayvanlar",
-                    "pre_iron": "Ön Ütüleme",
-                    "rapid_30": "Rapid 30",
-                    "rapid_45": "45 dak. hızlı",
-                    "rapid_59": "Mükemmel Hızlı 59 dk",
-                    "refresh": "Yenileme",
-                    "relax_creases": "Kırışıklık Açma",
-                    "saving_30_min": "EKO 30'",
-                    "shirts": "Gömlekler",
-                    "shoes": "Ayakkabılar",
-                    "small_load": "Az Çamaşır",
-                    "soft_care": "Yumuşak Bakım",
-                    "sport_plus": "Spor+",
-                    "super_easy_iron_misti": "Süper Kolay Ütü karışık",
-                    "super_easy_iron_xxl": "Süper Kolay Ütü XXL",
-                    "super_fast_cottons": "Süper Hızlı Pamuklu",
-                    "super_fast_delicates": "Süper Hızlı Hassas",
-                    "synthetics": "Sentetik",
-                    "total_care": "Total Care",
-                    "trainers": "Spor Ayakkabıları",
-                    "ultra_care": "Ultra Care",
-                    "waterproof_revitalize": "Su Geçirmez Canlandırma",
-                    "whites": "Beyazlar",
-                    "wool": "Yünlüleri Kurutma",
-                    "woolmark": "Saf yün markası",
-                    "xxl_load": "XXL Çamaşır",
-                    "zoom_59": "Yakınlaştır 59"
-                },
-                "name": "Program"
-            },
-            "room_temperature": {
-                "name": "Oda sıcaklığı"
-            },
-            "humidity": {
-                "name": "Nem"
-            },
-            "freezer_temp": {
-                "name": "Dondurucu sıcaklığı"
-            },
-            "fridge_temp": {
-                "name": "Buzdolabı sıcaklığı"
             },
             "programs_ac": {
                 "state": {
@@ -545,6 +293,143 @@
                 },
                 "name": "Program"
             },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Aktif Kurutma",
+                    "allergy_care": "Antialerji",
+                    "all_in_one": "Hepsi Bir Arada",
+                    "antiallergy": "Antialerji",
+                    "anti_odours": "Koku giderme",
+                    "auto_care": "Oto. Bakım",
+                    "baby": "Bebek",
+                    "bed_quilt": "Yorgan",
+                    "care_30": "Bakım 30",
+                    "care_45": "Bakım 45",
+                    "care_59": "Bakım 59",
+                    "coloured": "Renkli",
+                    "daily_45_min": "GUNLUK 45'",
+                    "daily_perfect_59_min": "GUNLUK 59'",
+                    "darks_and_coloured": "Koyu Renkliler ve Renkliler",
+                    "delicates": "Hassas",
+                    "duvet": "Yorgan",
+                    "eco": "Eko Pamuk",
+                    "ecospeed_cottons": "Eko hız Pamuklu",
+                    "ecospeed_delicates": "ECOSEPEED Hassas",
+                    "ecospeed_mixed": "Eko hız Karışık",
+                    "extra_hygiene": "EKSTRA HIJYEN",
+                    "fitness": "Fitness",
+                    "fresh_care": "Yenileme Bakımı",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Havlular",
+                    "hqd_bed_sheets": "Çarşaflar",
+                    "hqd_bulky": "Hacimli eşyalar",
+                    "hqd_casual": "Gündelik",
+                    "hqd_cold_wind_30": "Serin esinti 30 dakika",
+                    "hqd_cold_wind_timing": "Serin esinti ",
+                    "hqd_cotton": "Pamuk",
+                    "hqd_curtain": "Perdeler",
+                    "hqd_delicate": "Narin Çamaşırlar",
+                    "hqd_diaper": "Bebek bezi",
+                    "hqd_duvet": "Nevresim",
+                    "hqd_feather": "Şişme montlar",
+                    "hqd_hot_wind_timing": "Sıcak hava",
+                    "hqd_hygienic": "Hijyen",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_jacket": "Ceketler",
+                    "hqd_jeans": "Kot pantolon",
+                    "hqd_luxury": "Konfor",
+                    "hqd_mix": "Karışık",
+                    "hqd_night_dry": "Gece kurutma",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious cure",
+                    "hqd_quick_20": "Hızlı 20",
+                    "hqd_quick_30": "Hızlı 30",
+                    "hqd_quick_dry": "Hızlı kurutma 30",
+                    "hqd_quilt": "Yorganlar",
+                    "hqd_refresh": "Yenileme",
+                    "hqd_school_uniform": "Okul üniforması",
+                    "hqd_shirt": "Gömlekler",
+                    "hqd_shoes": "Ayakkabılar",
+                    "hqd_silk": "İpek",
+                    "hqd_sports": "Spor",
+                    "hqd_synthetics": "Sentetikler",
+                    "hqd_timer": "Zaman Ayarlı",
+                    "hqd_towel": "Havlular",
+                    "hqd_underwear": "İç çamaşırı",
+                    "hqd_warm_up": "Isıtma",
+                    "hqd_wool": "Yün",
+                    "hqd_working_suit": "İş giysisi",
+                    "hygiene": "Hijyen",
+                    "iot_checkup": "Kontrol",
+                    "iot_dry_anti_mites": "Anti-akar",
+                    "iot_dry_baby": "Bebek",
+                    "iot_dry_backpacks": "Sırt Çantaları",
+                    "iot_dry_bathrobe": "Bornoz",
+                    "iot_dry_bed_linen": "Çarşaf",
+                    "iot_dry_bed_quilt": "Yorgan",
+                    "iot_dry_cotton": "Pamuklular",
+                    "iot_dry_cuddly_toys": "Yumuşak Oyuncaklar",
+                    "iot_dry_curtains": "Perdeler",
+                    "iot_dry_dehumidifier": "Nem giderici",
+                    "iot_dry_delicates": "Hassas",
+                    "iot_dry_delicate_tablecloths": "Hassas masa örtüleri",
+                    "iot_dry_denim_jeans": "Denim - kot pantolon",
+                    "iot_dry_down_jacket": "Jacket",
+                    "iot_dry_duvet": "Yorgan",
+                    "iot_dry_easy_iron_cotton": "Süper Kolay Ütüleme",
+                    "iot_dry_easy_iron_synthetics": "Sentetikler Süper Kolay Ütü",
+                    "iot_dry_gym_fit": "Spor kıyafetleri",
+                    "iot_dry_lingerie": "İç Çamaşırı",
+                    "iot_dry_mixed": "Karışık",
+                    "iot_dry_playsuits": "Oyun elbiseleri",
+                    "iot_dry_rapid_30": "Rapid 30",
+                    "iot_dry_rapid_59": "Hızlı 59'.",
+                    "iot_dry_refresh": "Yenileme",
+                    "iot_dry_regenerates_waterproof": "Su geçirmezliği artırmak",
+                    "iot_dry_relax_creases": "Kırışıklık Açma",
+                    "iot_dry_shirts": "Gömlek",
+                    "iot_dry_small_load": "Az Çamaşır",
+                    "iot_dry_swimsuits_and_bikinis": "Mayolar",
+                    "iot_dry_synthetics": "Sentetik",
+                    "iot_dry_synthetic_dry": "Sentetik Kurutma",
+                    "iot_dry_tablecloths": "Masa örtüleri",
+                    "iot_dry_technical_fabrics": "Teknik Kumaşlar",
+                    "iot_dry_warm_embrace": "Sıcak Hava",
+                    "iot_dry_wool": "Saf yün markası",
+                    "jeans": "Kot",
+                    "mix_and_dry": "Karışık ve Kuru",
+                    "pets": "Evcil hayvanlar",
+                    "pre_iron": "Ön Ütüleme",
+                    "rapid_30": "Rapid 30",
+                    "rapid_45": "45 dak. hızlı",
+                    "rapid_59": "Mükemmel Hızlı 59 dk",
+                    "refresh": "Yenileme",
+                    "relax_creases": "Kırışıklık Açma",
+                    "saving_30_min": "EKO 30'",
+                    "shirts": "Gömlekler",
+                    "shoes": "Ayakkabılar",
+                    "small_load": "Az Çamaşır",
+                    "soft_care": "Yumuşak Bakım",
+                    "sport_plus": "Spor+",
+                    "super_easy_iron_misti": "Süper Kolay Ütü karışık",
+                    "super_easy_iron_xxl": "Süper Kolay Ütü XXL",
+                    "super_fast_cottons": "Süper Hızlı Pamuklu",
+                    "super_fast_delicates": "Süper Hızlı Hassas",
+                    "synthetics": "Sentetik",
+                    "total_care": "Total Care",
+                    "trainers": "Spor Ayakkabıları",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Su Geçirmez Canlandırma",
+                    "whites": "Beyazlar",
+                    "wool": "Yünlüleri Kurutma",
+                    "woolmark": "Saf yün markası",
+                    "xxl_load": "XXL Çamaşır",
+                    "zoom_59": "Yakınlaştır 59"
+                },
+                "name": "Program"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_coloured_cottons": "20° Renkli ve Pamuklular",
@@ -556,7 +441,7 @@
                     "allergy_care_pro": "Anti-Alerji Pro",
                     "all_in_one_49": "Hepsi bir Arada 49'.",
                     "all_in_one_59": "Hepsi bir Arada 59'.",
-                    "all_in_one_59_steam": "Aktif Yıkama + Buhar",
+                    "all_in_one_59_steam": "Hepsi bir Arada 59' + Buhar",
                     "autocare": "Otomatik bakım",
                     "autoclean": "Tambur temizliği",
                     "baby_60": "Bebek Kıyafetleri 60°C",
@@ -622,7 +507,7 @@
                     "iot_active_steam": "Buhar",
                     "iot_active_wash_steam": "Aktif Yıkama",
                     "iot_allergy_care_pro": "Anti-Alerji Pro",
-                    "iot_all_in_one_59_steam": "Aktif Yıkama + Buhar",
+                    "iot_all_in_one_59_steam": "Hepsi bir Arada 59' + Buhar",
                     "iot_checkup": "Check-up",
                     "iot_colour_59_steam": "Renkliler 59' + Buhar",
                     "iot_cottons_steam": "Pamuklular + Buhar",
@@ -889,9 +774,148 @@
                     "sparkling": "Köpüklü",
                     "white": "Beyaz"
                 }
+            },
+            "dry_time": {
+                "name": "Kurutma zamanı"
+            },
+            "power": {
+                "name": "Güç seviyesi"
+            },
+            "remaining_time": {
+                "name": "Kalan süre"
+            },
+            "temperature": {
+                "name": "Sıcaklık"
+            },
+            "water_efficiency": {
+                "name": "Su verimliliği"
+            },
+            "water_saving": {
+                "name": "Su tasarrufu"
+            },
+            "duration": {
+                "name": "Süre"
+            },
+            "target_temperature": {
+                "name": "Hedef sıcaklık"
+            },
+            "spin_speed": {
+                "name": "Sıkma"
+            },
+            "steam_leve": {
+                "name": "Buhar Seviyesi"
+            },
+            "dirt_level": {
+                "name": "Kir seviyesi"
+            },
+            "delay_time": {
+                "name": "Gecikmeli Başlatma"
+            },
+            "suggested_load": {
+                "name": "Yük kapasitesi"
+            },
+            "energy_label": {
+                "name": "Enerji verimliliği"
+            },
+            "det_dust": {
+                "name": "Toz"
+            },
+            "det_liquid": {
+                "name": "Sıvı"
+            },
+            "errors": {
+                "name": "Hata"
+            },
+            "programs": {
+                "name": "Geçerli program"
+            },
+            "room_temperature": {
+                "name": "Oda sıcaklığı"
+            },
+            "humidity": {
+                "name": "Nem"
+            },
+            "cycles_total": {
+                "name": "Programlar Toplam"
+            },
+            "energy_total": {
+                "name": "Enerji Tüketimi Toplam"
+            },
+            "water_total": {
+                "name": "Su verimliliği Toplam"
+            },
+            "energy_current": {
+                "name": "Enerji Tüketimi Current"
+            },
+            "water_current": {
+                "name": "Su verimliliği Current"
+            },
+            "freezer_temp": {
+                "name": "Dondurucu sıcaklığı"
+            },
+            "fridge_temp": {
+                "name": "Buzdolabı sıcaklığı"
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Kurutma yok",
+                    "iron_dry": "Ütü",
+                    "no_dry_iron": "Gardırop hazır",
+                    "cupboard_dry": "Gardırop hazır",
+                    "extra_dry": "Ekstra kurutma",
+                    "ready_to_wear": "Giyilmeye hazır"
+                },
+                "name": "Kurutma seviyesi"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Kapali",
+                    "avoid_touch": "Dokunmaktan kaçının",
+                    "follow_touch": "Takip et"
+                },
+                "name": "Eko pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Yüksek",
+                    "mid": "Orta   ",
+                    "low": "Düşük",
+                    "auto": "Otomatik"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Buzdolabı",
+                    "freezer": "Dondurucu",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Buzdolabı & Dondurucu"
+                },
+                "name": "Ocak gözü"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10°C Isıtma fonksiyonu",
+                    "iot_auto": "Otomatik",
+                    "iot_cool": "Soğuk",
+                    "iot_dry": "Kuru",
+                    "iot_fan": "Fan",
+                    "iot_heat": "Isı",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Kendi kendini arındırma",
+                    "iot_self_clean": "Kendi kendini temizleme",
+                    "iot_self_clean_56": "Steril Temizleme 56°C",
+                    "iot_simple_start": "Şimdi başlat",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Otomatik",
+                    "iot_uv_and_cool": "UV + Soğuk",
+                    "iot_uv_and_dry": "UV + Nem giderici",
+                    "iot_uv_and_fan": "UV + Fan",
+                    "iot_uv_and_heat": "UV + Isıtma"
+                },
+                "name": "Program"
+            },
             "programs_dw": {
                 "state": {
                     "59_min": "Hizli 59'",
@@ -1241,7 +1265,7 @@
                     "allergy_care_pro": "Anti-Alerji Pro",
                     "all_in_one_49": "Hepsi bir Arada 49'.",
                     "all_in_one_59": "Hepsi bir Arada 59'.",
-                    "all_in_one_59_steam": "Aktif Yıkama + Buhar",
+                    "all_in_one_59_steam": "Hepsi bir Arada 59' + Buhar",
                     "autocare": "Otomatik bakım",
                     "autoclean": "Tambur temizliği",
                     "baby_60": "Bebek Kıyafetleri 60°C",
@@ -1307,7 +1331,7 @@
                     "iot_active_steam": "Buhar",
                     "iot_active_wash_steam": "Aktif Yıkama",
                     "iot_allergy_care_pro": "Anti-Alerji Pro",
-                    "iot_all_in_one_59_steam": "Aktif Yıkama + Buhar",
+                    "iot_all_in_one_59_steam": "Hepsi bir Arada 59' + Buhar",
                     "iot_checkup": "Check-up",
                     "iot_colour_59_steam": "Renkliler 59' + Buhar",
                     "iot_cottons_steam": "Pamuklular + Buhar",
@@ -1540,69 +1564,6 @@
                 },
                 "name": "Program"
             },
-            "dry_levels": {
-                "state": {
-                    "0": "Kurutma yok",
-                    "1": "Ütü",
-                    "2": "Gardırop hazır",
-                    "3": "Gardırop hazır",
-                    "4": "Ekstra kurutma",
-                    "12": "Ütü",
-                    "13": "Gardırop hazır",
-                    "14": "Giyilmeye hazır",
-                    "15": "Ekstra kurutma",
-                    "11": "Kurutma yok"
-                },
-                "name": "Kurutma seviyesi"
-            },
-            "spin_speed": {
-                "name": "Sıkma"
-            },
-            "temperature": {
-                "name": "Sıcaklık"
-            },
-            "dry_time": {
-                "name": "Kurutma zamanı"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "Kapali",
-                    "1": "Dokunmaktan kaçının",
-                    "2": "Takip et"
-                },
-                "name": "Eko pilot"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "Yüksek",
-                    "2": "Orta   ",
-                    "3": "Düşük",
-                    "4": "Otomatik",
-                    "5": "Otomatik"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_10_heating": "10°C Isıtma fonksiyonu",
-                    "iot_auto": "Otomatik",
-                    "iot_cool": "Soğuk",
-                    "iot_dry": "Kuru",
-                    "iot_fan": "Fan",
-                    "iot_heat": "Isı",
-                    "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Kendi kendini arındırma",
-                    "iot_self_clean": "Kendi kendini temizleme",
-                    "iot_self_clean_56": "Steril Temizleme 56°C",
-                    "iot_simple_start": "Şimdi başlat",
-                    "iot_uv": "UV",
-                    "iot_uv_and_auto": "UV + Otomatik",
-                    "iot_uv_and_cool": "UV + Soğuk",
-                    "iot_uv_and_dry": "UV + Nem giderici",
-                    "iot_uv_and_fan": "UV + Fan",
-                    "iot_uv_and_heat": "UV + Isıtma"
-                },
-                "name": "Program"
-            },
             "programs_ref": {
                 "state": {
                     "auto_set": "OTOMATİK AYAR",
@@ -1626,17 +1587,17 @@
                 },
                 "name": "Program"
             },
+            "dry_time": {
+                "name": "Kurutma zamanı"
+            },
+            "spin_speed": {
+                "name": "Sıkma"
+            },
+            "temperature": {
+                "name": "Sıcaklık"
+            },
             "remaining_time": {
                 "name": "Kalan süre"
-            },
-            "ref_zones": {
-                "state": {
-                    "fridge": "Buzdolabı",
-                    "freezer": "Dondurucu",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "Buzdolabı & Dondurucu"
-                },
-                "name": "Ocak gözü"
             }
         },
         "switch": {
@@ -1724,17 +1685,14 @@
             "acqua_plus": {
                 "name": "Acquaplus"
             },
-            "auto_dose": {
-                "name": "Otomatik doz"
-            },
-            "good_night": {
-                "name": "İyi Geceler"
-            },
             "auto_dose_softener": {
                 "name": "Otomatik doz Yumuşatıcı"
             },
             "auto_dose_detergent": {
                 "name": "Otomatik doz Deterjan"
+            },
+            "good_night": {
+                "name": "İyi Geceler"
             },
             "auto_set": {
                 "name": "Otomatik Ayarla"
@@ -1768,26 +1726,11 @@
             "anti_crease": {
                 "name": "Kırışık açma"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Acquaplus"
             },
             "spin_speed": {
                 "name": "Sıkma"
-            },
-            "programs_dw": {
-                "name": "Program"
-            },
-            "programs_ih": {
-                "name": "Program"
-            },
-            "programs_ov": {
-                "name": "Program"
-            },
-            "programs_td": {
-                "name": "Program"
-            },
-            "programs_wm": {
-                "name": "Program"
             },
             "still_hot": {
                 "name": "Hala sıcak"
@@ -1819,12 +1762,6 @@
             "prewash": {
                 "name": "Pre-wash"
             },
-            "acqua_plus": {
-                "name": "Acquaplus"
-            },
-            "auto_dose": {
-                "name": "Otomatik doz"
-            },
             "buzzer": {
                 "name": "Program sonu zili"
             },
@@ -1848,6 +1785,17 @@
             },
             "filter_replacement": {
                 "name": "Filtre değişimi"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "İndüksiyonlu Ocak"
+            },
+            "start_program": {
+                "name": "Program Başlangıç"
+            },
+            "stop_program": {
+                "name": "Program Durdur"
             }
         },
         "number": {
@@ -1886,17 +1834,6 @@
             },
             "fridge_temp_sel": {
                 "name": "Hedef sıcaklık Buzdolabı"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "İndüksiyonlu Ocak"
-            },
-            "start_program": {
-                "name": "Program Başlangıç"
-            },
-            "stop_program": {
-                "name": "Program Durdur"
             }
         },
         "climate": {

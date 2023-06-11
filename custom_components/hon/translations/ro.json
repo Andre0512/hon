@@ -3,324 +3,72 @@
         "sensor": {
             "washing_modes": {
                 "state": {
-                    "0": "Pregătit",
-                    "1": "Pregătit",
-                    "3": "Pauză",
-                    "4": "Programat",
-                    "5": "Programat",
-                    "6": "Eroare",
-                    "7": "Pregătit",
-                    "2": "Program în desfășurare",
-                    "8": "Test",
-                    "9": "Ciclul de oprire..."
+                    "ready": "Pregătit",
+                    "running": "Program în desfășurare",
+                    "pause": "Pauză",
+                    "scheduled": "Programat",
+                    "error": "Eroare",
+                    "test": "Test",
+                    "ending": "Ciclul de oprire..."
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Automat",
+                    "cool": "Răcire",
+                    "dry": "Uscare",
+                    "heat": "Încălzire",
+                    "fan": "Ventilare"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "0": "Pregătit",
-                    "1": "Spălare",
-                    "2": "Spălare",
-                    "3": "Stoarcere",
-                    "4": "Clătire",
-                    "5": "Clătire",
-                    "6": "Clătire",
-                    "7": "Uscare",
-                    "9": "Abur",
-                    "10": "Pregătit",
-                    "11": "Stoarcere",
-                    "12": "Cântărire ",
-                    "13": "Cântărire ",
-                    "14": "Spălare",
-                    "15": "Spălare",
-                    "16": "Spălare",
-                    "17": "Clătire",
-                    "18": "Clătire",
-                    "19": "Programat",
-                    "20": "Menținere prospețime",
-                    "24": "Reîmprospătare",
-                    "25": "Spălare",
-                    "26": "Încălzire",
-                    "27": "Spălare"
+                    "ready": "Pregătit",
+                    "spin": "Stoarcere",
+                    "rinse": "Clătire",
+                    "drying": "Uscare",
+                    "steam": "Abur",
+                    "weighting": "Cântărire ",
+                    "scheduled": "Programat",
+                    "tumbling": "Menținere prospețime",
+                    "refresh": "Reîmprospătare",
+                    "heating": "Încălzire",
+                    "washing": "Spălare"
                 },
                 "name": "Fază"
             },
             "program_phases_td": {
                 "state": {
-                    "0": "Pregătit",
-                    "1": "Uscare",
-                    "2": "Uscare",
-                    "3": "Răcire",
-                    "13": "Răcire",
-                    "14": "Uscare",
-                    "15": "Uscare",
-                    "16": "Răcire",
-                    "18": "Menținere prospețime",
-                    "19": "Uscare",
-                    "20": "Uscare",
-                    "11": "Pregătit",
-                    "17": "unknown",
-                    "12": "unknown"
+                    "ready": "Pregătit",
+                    "heat_stroke": "Uscare",
+                    "drying": "Uscare",
+                    "cooldown": "Răcire",
+                    "unknown": "unknown",
+                    "tumbling": "Menținere prospețime"
                 },
                 "name": "Fază"
             },
             "program_phases_dw": {
                 "state": {
-                    "0": "Pregătit",
-                    "1": "Prespălare",
-                    "2": "Spălare",
-                    "3": "Clătire",
-                    "4": "Uscare",
-                    "5": "Pregătit",
-                    "6": "Hot rinse"
+                    "ready": "Pregătit",
+                    "prewash": "Prespălare",
+                    "washing": "Spălare",
+                    "rinse": "Clătire",
+                    "drying": "Uscare",
+                    "hot_rinse": "Hot rinse"
                 },
                 "name": "Fază"
             },
             "dry_levels": {
                 "state": {
-                    "0": "Fără uscare",
-                    "1": "Călcare",
-                    "2": "Șifonier pregătit",
-                    "3": "Șifonier pregătit",
-                    "4": "Uscare suplimentară",
-                    "12": "Călcare",
-                    "13": "Șifonier pregătit",
-                    "14": "Gata de purtat",
-                    "15": "Uscare suplimentară",
-                    "11": "Fără uscare"
+                    "no_dry": "Fără uscare",
+                    "iron_dry": "Călcare",
+                    "no_dry_iron": "Șifonier pregătit",
+                    "cupboard_dry": "Șifonier pregătit",
+                    "extra_dry": "Uscare suplimentară",
+                    "ready_to_wear": "Gata de purtat"
                 },
                 "name": "Nivel de uscare"
-            },
-            "anti_crease": {
-                "name": "Antișifonare"
-            },
-            "power": {
-                "name": "Nivel de putere"
-            },
-            "remaining_time": {
-                "name": "Timp rămas"
-            },
-            "temperature": {
-                "name": "Temperatură"
-            },
-            "water_efficiency": {
-                "name": "Eficiența apei"
-            },
-            "water_saving": {
-                "name": "Economii de apă"
-            },
-            "duration": {
-                "name": "Durată"
-            },
-            "target_temperature": {
-                "name": "Temperatură vizată"
-            },
-            "spin_speed": {
-                "name": "Stoarcere"
-            },
-            "steam_leve": {
-                "name": "Nivel abur"
-            },
-            "dirt_level": {
-                "name": "Nivel de murdărie"
-            },
-            "delay_time": {
-                "name": "Pornire întârziată"
-            },
-            "dry_time": {
-                "name": "Timp de uscare"
-            },
-            "suggested_load": {
-                "name": "Capacitate de încărcare"
-            },
-            "energy_label": {
-                "name": "Eficiență energetică"
-            },
-            "det_dust": {
-                "name": "Pudră"
-            },
-            "det_liquid": {
-                "name": "Lichid"
-            },
-            "errors": {
-                "name": "Eroare"
-            },
-            "programs": {
-                "name": "Program actual"
-            },
-            "cycles_total": {
-                "name": "Cicluri Total"
-            },
-            "energy_total": {
-                "name": "Consumul de energie Total"
-            },
-            "water_total": {
-                "name": "Eficiența apei Total"
-            },
-            "energy_current": {
-                "name": "Consumul de energie Current"
-            },
-            "water_current": {
-                "name": "Eficiența apei Current"
-            },
-            "mach_modes_ac": {
-                "state": {
-                    "0": "Automat",
-                    "1": "Răcire",
-                    "2": "Răcire",
-                    "3": "Uscare",
-                    "4": "Încălzire",
-                    "5": "Ventilare",
-                    "6": "Ventilare"
-                }
-            },
-            "programs_td": {
-                "state": {
-                    "active_dry": "Uscare activă",
-                    "allergy_care": "Anti-alergic",
-                    "all_in_one": "Tot în unu",
-                    "antiallergy": "Anti-alergic",
-                    "anti_odours": "Anti mirosuri",
-                    "auto_care": "Îngrijire automată",
-                    "baby": "Haine copii",
-                    "bed_quilt": "Pilote",
-                    "care_30": "Îngrijire 30",
-                    "care_45": "Îngrijire 45",
-                    "care_59": "Îngrijire 59",
-                    "coloured": "Colorate",
-                    "daily_45_min": "ZILNIC 45'",
-                    "daily_perfect_59_min": "ZILNIC PERFECT 59'",
-                    "darks_and_coloured": "Țesături închise & colorate",
-                    "delicates": "Delicate",
-                    "duvet": "Pătură",
-                    "eco": "Bumbac Eco",
-                    "ecospeed_cottons": "Bumbac Ecospeed",
-                    "ecospeed_delicates": "Delicate Ecospeed",
-                    "ecospeed_mixed": "Țesături mixte Ecospeed",
-                    "extra_hygiene": "EXTRA IGIENIZARE",
-                    "fitness": "Fitness",
-                    "fresh_care": "Îngrijire proaspătă",
-                    "genius": "Genius",
-                    "hqd_baby_care": "Baby Care",
-                    "hqd_bath_towel": "Prosoape",
-                    "hqd_bed_sheets": "Cearceafuri",
-                    "hqd_bulky": "Articole voluminoase",
-                    "hqd_casual": "Articole obișnuite",
-                    "hqd_cold_wind_30": "Vânt rece 30 minute",
-                    "hqd_cold_wind_timing": "Vânt rece ",
-                    "hqd_cotton": "Bumbac",
-                    "hqd_curtain": "Perdele",
-                    "hqd_delicate": "Delicate",
-                    "hqd_diaper": "Scutece",
-                    "hqd_duvet": "Cuvertură",
-                    "hqd_feather": "Geci",
-                    "hqd_hot_wind_timing": "Aer cald",
-                    "hqd_hygienic": "Igienizare",
-                    "hqd_i_refresh": "I-Refresh",
-                    "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_jacket": "Jachete",
-                    "hqd_jeans": "Blugi",
-                    "hqd_luxury": "Luxury",
-                    "hqd_mix": "Mixte",
-                    "hqd_night_dry": "Uscare peste noapte",
-                    "hqd_outdoor": "Outdoor",
-                    "hqd_precious_cure": "Precious cure",
-                    "hqd_quick_20": "Rapid 20",
-                    "hqd_quick_30": "Rapid 30",
-                    "hqd_quick_dry": "Uscare rapidă 30",
-                    "hqd_quilt": "Pilote",
-                    "hqd_refresh": "Reîmprospătare",
-                    "hqd_school_uniform": "Uniformă școlară",
-                    "hqd_shirt": "Cămăși",
-                    "hqd_shoes": "Încălțăminte",
-                    "hqd_silk": "Mătase",
-                    "hqd_sports": "Articole sportive",
-                    "hqd_synthetics": "Sintetice",
-                    "hqd_timer": "Cronometrat",
-                    "hqd_towel": "Prosoape",
-                    "hqd_underwear": "Lenjerie",
-                    "hqd_warm_up": "Încălzire",
-                    "hqd_wool": "Lână",
-                    "hqd_working_suit": "Îmbrăcăminte de lucru",
-                    "hygiene": "Igienizare",
-                    "iot_checkup": "Verificare",
-                    "iot_dry_anti_mites": "Anti-acarieni",
-                    "iot_dry_baby": "Haine copii",
-                    "iot_dry_backpacks": "Rucsaci",
-                    "iot_dry_bathrobe": "Halat de baie",
-                    "iot_dry_bed_linen": "Lenjerie de pat",
-                    "iot_dry_bed_quilt": "Pilote",
-                    "iot_dry_cotton": "Bumbac",
-                    "iot_dry_cuddly_toys": "Jucării",
-                    "iot_dry_curtains": "Perdele",
-                    "iot_dry_dehumidifier": "Dispozitiv pentru îndepărtarea umidității",
-                    "iot_dry_delicates": "Delicate",
-                    "iot_dry_delicate_tablecloths": "Fețe de masă delicate",
-                    "iot_dry_denim_jeans": "Denim - Blugi",
-                    "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "Pătură",
-                    "iot_dry_easy_iron_cotton": "Călcare Super Easy",
-                    "iot_dry_easy_iron_synthetics": "Călcare super ușoară a rufelor sintetice",
-                    "iot_dry_gym_fit": "Articole sportive - Fitness",
-                    "iot_dry_lingerie": "Lenjerie",
-                    "iot_dry_mixed": "Mixte",
-                    "iot_dry_playsuits": "Haine de joacă",
-                    "iot_dry_rapid_30": "Rapid 30",
-                    "iot_dry_rapid_59": "Rapid 59'.",
-                    "iot_dry_refresh": "Reîmprospătare",
-                    "iot_dry_regenerates_waterproof": "Rezistente la apă",
-                    "iot_dry_relax_creases": "Reducere șifonare",
-                    "iot_dry_shirts": "Cămăși",
-                    "iot_dry_small_load": "Încărcare mică",
-                    "iot_dry_swimsuits_and_bikinis": "Costume de baie",
-                    "iot_dry_synthetics": "Sintetice",
-                    "iot_dry_synthetic_dry": "Uscare material sintetic",
-                    "iot_dry_tablecloths": "Fețe de masă",
-                    "iot_dry_technical_fabrics": "Țesături industriale",
-                    "iot_dry_warm_embrace": "Îmbrățișare caldă",
-                    "iot_dry_wool": "Woolmark",
-                    "jeans": "Jeans",
-                    "mix_and_dry": "Mix&Uscare",
-                    "pets": "Animale de companie",
-                    "pre_iron": "Pre-Călcare",
-                    "rapid_30": "Rapid 30",
-                    "rapid_45": "Rapid 45 min",
-                    "rapid_59": "Rapid Perfect 59 Min",
-                    "refresh": "Reîmprospătare",
-                    "relax_creases": "Reducere șifonare",
-                    "saving_30_min": "ECO 30'",
-                    "shirts": "Cămăși",
-                    "shoes": "Încălțăminte",
-                    "small_load": "Încărcare mică",
-                    "soft_care": "Îngrijire blândă",
-                    "sport_plus": "Haine sport",
-                    "super_easy_iron_misti": "Călcare super ușoară a rufelor cu fibre mixte",
-                    "super_easy_iron_xxl": "Călcare super ușoară a rufelor XXL",
-                    "super_fast_cottons": "Bumbac Super Rapid",
-                    "super_fast_delicates": "Delicate Super Rapid",
-                    "synthetics": "Sintetice",
-                    "total_care": "Total Care",
-                    "trainers": "Încălțăminte sport",
-                    "ultra_care": "Ultra Care",
-                    "waterproof_revitalize": "Revitalizare impermeabile",
-                    "whites": "Albe",
-                    "wool": "Uscare lână",
-                    "woolmark": "Woolmark",
-                    "xxl_load": "Încărcare XXL",
-                    "zoom_59": "Zoom 59"
-                },
-                "name": "Program"
-            },
-            "room_temperature": {
-                "name": "Temperatura camerei"
-            },
-            "humidity": {
-                "name": "Umiditate"
-            },
-            "freezer_temp": {
-                "name": "Temperatura congelatorului"
-            },
-            "fridge_temp": {
-                "name": "Temperatura frigiderului"
             },
             "programs_ac": {
                 "state": {
@@ -545,6 +293,143 @@
                 },
                 "name": "Program"
             },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Uscare activă",
+                    "allergy_care": "Anti-alergic",
+                    "all_in_one": "Tot în unu",
+                    "antiallergy": "Anti-alergic",
+                    "anti_odours": "Anti mirosuri",
+                    "auto_care": "Îngrijire automată",
+                    "baby": "Haine copii",
+                    "bed_quilt": "Pilote",
+                    "care_30": "Îngrijire 30",
+                    "care_45": "Îngrijire 45",
+                    "care_59": "Îngrijire 59",
+                    "coloured": "Colorate",
+                    "daily_45_min": "ZILNIC 45'",
+                    "daily_perfect_59_min": "ZILNIC PERFECT 59'",
+                    "darks_and_coloured": "Țesături închise & colorate",
+                    "delicates": "Delicate",
+                    "duvet": "Pătură",
+                    "eco": "Bumbac Eco",
+                    "ecospeed_cottons": "Bumbac Ecospeed",
+                    "ecospeed_delicates": "Delicate Ecospeed",
+                    "ecospeed_mixed": "Țesături mixte Ecospeed",
+                    "extra_hygiene": "EXTRA IGIENIZARE",
+                    "fitness": "Fitness",
+                    "fresh_care": "Îngrijire proaspătă",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Prosoape",
+                    "hqd_bed_sheets": "Cearceafuri",
+                    "hqd_bulky": "Articole voluminoase",
+                    "hqd_casual": "Articole obișnuite",
+                    "hqd_cold_wind_30": "Vânt rece 30 minute",
+                    "hqd_cold_wind_timing": "Vânt rece ",
+                    "hqd_cotton": "Bumbac",
+                    "hqd_curtain": "Perdele",
+                    "hqd_delicate": "Delicate",
+                    "hqd_diaper": "Scutece",
+                    "hqd_duvet": "Cuvertură",
+                    "hqd_feather": "Geci",
+                    "hqd_hot_wind_timing": "Aer cald",
+                    "hqd_hygienic": "Igienizare",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_jacket": "Jachete",
+                    "hqd_jeans": "Blugi",
+                    "hqd_luxury": "Luxury",
+                    "hqd_mix": "Mixte",
+                    "hqd_night_dry": "Uscare peste noapte",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious cure",
+                    "hqd_quick_20": "Rapid 20",
+                    "hqd_quick_30": "Rapid 30",
+                    "hqd_quick_dry": "Uscare rapidă 30",
+                    "hqd_quilt": "Pilote",
+                    "hqd_refresh": "Reîmprospătare",
+                    "hqd_school_uniform": "Uniformă școlară",
+                    "hqd_shirt": "Cămăși",
+                    "hqd_shoes": "Încălțăminte",
+                    "hqd_silk": "Mătase",
+                    "hqd_sports": "Articole sportive",
+                    "hqd_synthetics": "Sintetice",
+                    "hqd_timer": "Cronometrat",
+                    "hqd_towel": "Prosoape",
+                    "hqd_underwear": "Lenjerie",
+                    "hqd_warm_up": "Încălzire",
+                    "hqd_wool": "Lână",
+                    "hqd_working_suit": "Îmbrăcăminte de lucru",
+                    "hygiene": "Igienizare",
+                    "iot_checkup": "Verificare",
+                    "iot_dry_anti_mites": "Anti-acarieni",
+                    "iot_dry_baby": "Haine copii",
+                    "iot_dry_backpacks": "Rucsaci",
+                    "iot_dry_bathrobe": "Halat de baie",
+                    "iot_dry_bed_linen": "Lenjerie de pat",
+                    "iot_dry_bed_quilt": "Pilote",
+                    "iot_dry_cotton": "Bumbac",
+                    "iot_dry_cuddly_toys": "Jucării",
+                    "iot_dry_curtains": "Perdele",
+                    "iot_dry_dehumidifier": "Dispozitiv pentru îndepărtarea umidității",
+                    "iot_dry_delicates": "Delicate",
+                    "iot_dry_delicate_tablecloths": "Fețe de masă delicate",
+                    "iot_dry_denim_jeans": "Denim - Blugi",
+                    "iot_dry_down_jacket": "Jacket",
+                    "iot_dry_duvet": "Pătură",
+                    "iot_dry_easy_iron_cotton": "Călcare Super Easy",
+                    "iot_dry_easy_iron_synthetics": "Călcare super ușoară a rufelor sintetice",
+                    "iot_dry_gym_fit": "Articole sportive - Fitness",
+                    "iot_dry_lingerie": "Lenjerie",
+                    "iot_dry_mixed": "Mixte",
+                    "iot_dry_playsuits": "Haine de joacă",
+                    "iot_dry_rapid_30": "Rapid 30",
+                    "iot_dry_rapid_59": "Rapid 59'.",
+                    "iot_dry_refresh": "Reîmprospătare",
+                    "iot_dry_regenerates_waterproof": "Rezistente la apă",
+                    "iot_dry_relax_creases": "Reducere șifonare",
+                    "iot_dry_shirts": "Cămăși",
+                    "iot_dry_small_load": "Încărcare mică",
+                    "iot_dry_swimsuits_and_bikinis": "Costume de baie",
+                    "iot_dry_synthetics": "Sintetice",
+                    "iot_dry_synthetic_dry": "Uscare material sintetic",
+                    "iot_dry_tablecloths": "Fețe de masă",
+                    "iot_dry_technical_fabrics": "Țesături industriale",
+                    "iot_dry_warm_embrace": "Îmbrățișare caldă",
+                    "iot_dry_wool": "Woolmark",
+                    "jeans": "Jeans",
+                    "mix_and_dry": "Mix&Uscare",
+                    "pets": "Animale de companie",
+                    "pre_iron": "Pre-Călcare",
+                    "rapid_30": "Rapid 30",
+                    "rapid_45": "Rapid 45 min",
+                    "rapid_59": "Rapid Perfect 59 Min",
+                    "refresh": "Reîmprospătare",
+                    "relax_creases": "Reducere șifonare",
+                    "saving_30_min": "ECO 30'",
+                    "shirts": "Cămăși",
+                    "shoes": "Încălțăminte",
+                    "small_load": "Încărcare mică",
+                    "soft_care": "Îngrijire blândă",
+                    "sport_plus": "Haine sport",
+                    "super_easy_iron_misti": "Călcare super ușoară a rufelor cu fibre mixte",
+                    "super_easy_iron_xxl": "Călcare super ușoară a rufelor XXL",
+                    "super_fast_cottons": "Bumbac Super Rapid",
+                    "super_fast_delicates": "Delicate Super Rapid",
+                    "synthetics": "Sintetice",
+                    "total_care": "Total Care",
+                    "trainers": "Încălțăminte sport",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Revitalizare impermeabile",
+                    "whites": "Albe",
+                    "wool": "Uscare lână",
+                    "woolmark": "Woolmark",
+                    "xxl_load": "Încărcare XXL",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Program"
+            },
             "programs_wm": {
                 "state": {
                     "20_degrees_coloured_cottons": "20° Colorate și bumbac",
@@ -556,7 +441,7 @@
                     "allergy_care_pro": "Îngrijire alergie pro",
                     "all_in_one_49": "Toate în One 49'.",
                     "all_in_one_59": "Toate în One 59'.",
-                    "all_in_one_59_steam": "Spălare activă + abur",
+                    "all_in_one_59_steam": "Toate în One 59' + abur",
                     "autocare": "Autoîngrijire",
                     "autoclean": "Curățarea tamburului",
                     "baby_60": "Haine bebeluși 60°C",
@@ -622,7 +507,7 @@
                     "iot_active_steam": "Abur",
                     "iot_active_wash_steam": "Spălare activă",
                     "iot_allergy_care_pro": "Îngrijire alergie pro",
-                    "iot_all_in_one_59_steam": "Spălare activă + abur",
+                    "iot_all_in_one_59_steam": "Toate în One 59' + abur",
                     "iot_checkup": "Verificare",
                     "iot_colour_59_steam": "Colorate 59' + Abur",
                     "iot_cottons_steam": "Bumbac + Abur",
@@ -889,9 +774,148 @@
                     "sparkling": "Spumant",
                     "white": "Alb"
                 }
+            },
+            "dry_time": {
+                "name": "Timp de uscare"
+            },
+            "power": {
+                "name": "Nivel de putere"
+            },
+            "remaining_time": {
+                "name": "Timp rămas"
+            },
+            "temperature": {
+                "name": "Temperatură"
+            },
+            "water_efficiency": {
+                "name": "Eficiența apei"
+            },
+            "water_saving": {
+                "name": "Economii de apă"
+            },
+            "duration": {
+                "name": "Durată"
+            },
+            "target_temperature": {
+                "name": "Temperatură vizată"
+            },
+            "spin_speed": {
+                "name": "Stoarcere"
+            },
+            "steam_leve": {
+                "name": "Nivel abur"
+            },
+            "dirt_level": {
+                "name": "Nivel de murdărie"
+            },
+            "delay_time": {
+                "name": "Pornire întârziată"
+            },
+            "suggested_load": {
+                "name": "Capacitate de încărcare"
+            },
+            "energy_label": {
+                "name": "Eficiență energetică"
+            },
+            "det_dust": {
+                "name": "Pudră"
+            },
+            "det_liquid": {
+                "name": "Lichid"
+            },
+            "errors": {
+                "name": "Eroare"
+            },
+            "programs": {
+                "name": "Program actual"
+            },
+            "room_temperature": {
+                "name": "Temperatura camerei"
+            },
+            "humidity": {
+                "name": "Umiditate"
+            },
+            "cycles_total": {
+                "name": "Cicluri Total"
+            },
+            "energy_total": {
+                "name": "Consumul de energie Total"
+            },
+            "water_total": {
+                "name": "Eficiența apei Total"
+            },
+            "energy_current": {
+                "name": "Consumul de energie Current"
+            },
+            "water_current": {
+                "name": "Eficiența apei Current"
+            },
+            "freezer_temp": {
+                "name": "Temperatura congelatorului"
+            },
+            "fridge_temp": {
+                "name": "Temperatura frigiderului"
             }
         },
         "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Fără uscare",
+                    "iron_dry": "Călcare",
+                    "no_dry_iron": "Șifonier pregătit",
+                    "cupboard_dry": "Șifonier pregătit",
+                    "extra_dry": "Uscare suplimentară",
+                    "ready_to_wear": "Gata de purtat"
+                },
+                "name": "Nivel de uscare"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Oprit",
+                    "avoid_touch": "Evitați atingerea",
+                    "follow_touch": "Urmărire"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Ridicat",
+                    "mid": "Mediu   ",
+                    "low": "Scăzut",
+                    "auto": "Automat"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Frigider",
+                    "freezer": "Congelator",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Frigider & Congelator"
+                },
+                "name": "Zonă"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Funcția de încălzire la 10 °C",
+                    "iot_auto": "Automat",
+                    "iot_cool": "Răcire",
+                    "iot_dry": "Uscare",
+                    "iot_fan": "Ventilare",
+                    "iot_heat": "Încălzire",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Auto-purificare",
+                    "iot_self_clean": "Autocurățare",
+                    "iot_self_clean_56": "Curățare-sterilizare la 56°C",
+                    "iot_simple_start": "Începeți acum",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + automat",
+                    "iot_uv_and_cool": "UV + răcire",
+                    "iot_uv_and_dry": "UV + dezumidificator",
+                    "iot_uv_and_fan": "UV + ventilator",
+                    "iot_uv_and_heat": "UV + încălzire"
+                },
+                "name": "Program"
+            },
             "programs_dw": {
                 "state": {
                     "59_min": "Rapid 59'",
@@ -1241,7 +1265,7 @@
                     "allergy_care_pro": "Îngrijire alergie pro",
                     "all_in_one_49": "Toate în One 49'.",
                     "all_in_one_59": "Toate în One 59'.",
-                    "all_in_one_59_steam": "Spălare activă + abur",
+                    "all_in_one_59_steam": "Toate în One 59' + abur",
                     "autocare": "Autoîngrijire",
                     "autoclean": "Curățarea tamburului",
                     "baby_60": "Haine bebeluși 60°C",
@@ -1307,7 +1331,7 @@
                     "iot_active_steam": "Abur",
                     "iot_active_wash_steam": "Spălare activă",
                     "iot_allergy_care_pro": "Îngrijire alergie pro",
-                    "iot_all_in_one_59_steam": "Spălare activă + abur",
+                    "iot_all_in_one_59_steam": "Toate în One 59' + abur",
                     "iot_checkup": "Verificare",
                     "iot_colour_59_steam": "Colorate 59' + Abur",
                     "iot_cottons_steam": "Bumbac + Abur",
@@ -1540,69 +1564,6 @@
                 },
                 "name": "Program"
             },
-            "dry_levels": {
-                "state": {
-                    "0": "Fără uscare",
-                    "1": "Călcare",
-                    "2": "Șifonier pregătit",
-                    "3": "Șifonier pregătit",
-                    "4": "Uscare suplimentară",
-                    "12": "Călcare",
-                    "13": "Șifonier pregătit",
-                    "14": "Gata de purtat",
-                    "15": "Uscare suplimentară",
-                    "11": "Fără uscare"
-                },
-                "name": "Nivel de uscare"
-            },
-            "spin_speed": {
-                "name": "Stoarcere"
-            },
-            "temperature": {
-                "name": "Temperatură"
-            },
-            "dry_time": {
-                "name": "Timp de uscare"
-            },
-            "eco_pilot": {
-                "state": {
-                    "0": "Oprit",
-                    "1": "Evitați atingerea",
-                    "2": "Urmărire"
-                },
-                "name": "Eco pilot"
-            },
-            "fan_mode": {
-                "state": {
-                    "1": "Ridicat",
-                    "2": "Mediu   ",
-                    "3": "Scăzut",
-                    "4": "Automat",
-                    "5": "Automat"
-                }
-            },
-            "programs_ac": {
-                "state": {
-                    "iot_10_heating": "Funcția de încălzire la 10 °C",
-                    "iot_auto": "Automat",
-                    "iot_cool": "Răcire",
-                    "iot_dry": "Uscare",
-                    "iot_fan": "Ventilare",
-                    "iot_heat": "Încălzire",
-                    "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Auto-purificare",
-                    "iot_self_clean": "Autocurățare",
-                    "iot_self_clean_56": "Curățare-sterilizare la 56°C",
-                    "iot_simple_start": "Începeți acum",
-                    "iot_uv": "UV",
-                    "iot_uv_and_auto": "UV + automat",
-                    "iot_uv_and_cool": "UV + răcire",
-                    "iot_uv_and_dry": "UV + dezumidificator",
-                    "iot_uv_and_fan": "UV + ventilator",
-                    "iot_uv_and_heat": "UV + încălzire"
-                },
-                "name": "Program"
-            },
             "programs_ref": {
                 "state": {
                     "auto_set": "AUTO-SET (Setare automată)",
@@ -1626,17 +1587,17 @@
                 },
                 "name": "Program"
             },
+            "dry_time": {
+                "name": "Timp de uscare"
+            },
+            "spin_speed": {
+                "name": "Stoarcere"
+            },
+            "temperature": {
+                "name": "Temperatură"
+            },
             "remaining_time": {
                 "name": "Timp rămas"
-            },
-            "ref_zones": {
-                "state": {
-                    "fridge": "Frigider",
-                    "freezer": "Congelator",
-                    "vtroom1": "My Zone",
-                    "fridge_freezer": "Frigider & Congelator"
-                },
-                "name": "Zonă"
             }
         },
         "switch": {
@@ -1724,17 +1685,14 @@
             "acqua_plus": {
                 "name": "Acquaplus"
             },
-            "auto_dose": {
-                "name": "Autodozare"
-            },
-            "good_night": {
-                "name": "Noapte bună"
-            },
             "auto_dose_softener": {
                 "name": "Autodozare Balsam"
             },
             "auto_dose_detergent": {
                 "name": "Autodozare Detergent"
+            },
+            "good_night": {
+                "name": "Noapte bună"
             },
             "auto_set": {
                 "name": "Setare automată"
@@ -1768,26 +1726,11 @@
             "anti_crease": {
                 "name": "Antișifonare"
             },
-            "aqua_plus": {
+            "acqua_plus": {
                 "name": "Acquaplus"
             },
             "spin_speed": {
                 "name": "Stoarcere"
-            },
-            "programs_dw": {
-                "name": "Program"
-            },
-            "programs_ih": {
-                "name": "Program"
-            },
-            "programs_ov": {
-                "name": "Program"
-            },
-            "programs_td": {
-                "name": "Program"
-            },
-            "programs_wm": {
-                "name": "Program"
             },
             "still_hot": {
                 "name": "Încă fierbinte"
@@ -1819,12 +1762,6 @@
             "prewash": {
                 "name": "Prespălare"
             },
-            "acqua_plus": {
-                "name": "Acquaplus"
-            },
-            "auto_dose": {
-                "name": "Autodozare"
-            },
             "buzzer": {
                 "name": "Sonerie la finalul ciclului"
             },
@@ -1848,6 +1785,17 @@
             },
             "filter_replacement": {
                 "name": "Înlocuirea filtrului"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Plita cu inducție"
+            },
+            "start_program": {
+                "name": "Program Pornire"
+            },
+            "stop_program": {
+                "name": "Program Oprire"
             }
         },
         "number": {
@@ -1886,17 +1834,6 @@
             },
             "fridge_temp_sel": {
                 "name": "Temperatură vizată Frigider"
-            }
-        },
-        "button": {
-            "induction_hob": {
-                "name": "Plita cu inducție"
-            },
-            "start_program": {
-                "name": "Program Pornire"
-            },
-            "stop_program": {
-                "name": "Program Oprire"
             }
         },
         "climate": {
