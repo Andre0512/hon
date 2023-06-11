@@ -4,7 +4,7 @@
 [![PyPI](https://img.shields.io/pypi/v/pyhon?label=pyhOn)](https://github.com/Andre0512/pyhOn)
 [![GitHub](https://img.shields.io/github/license/Andre0512/hon?color=red)](https://github.com/Andre0512/hon/blob/main/LICENSE)
 [![GitHub all releases](https://img.shields.io/github/downloads/Andre0512/hon/total?color=blue)](https://tooomm.github.io/github-release-stats/?username=Andre0512&repository=hon)  
-Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.com/).
+Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.com/) based on [pyhOn](https://github.com/Andre0512/pyhon).
 
 ## Supported Appliances
 - [Washing Machine](https://github.com/Andre0512/hon#washing-machine)
@@ -34,6 +34,22 @@ _Restart Home Assistant_
 **Method 2**: Settings > Devices & Services > Add Integration > **Haier hOn**  
 _If the integration is not in the list, you need to clear the browser cache._
 
+## Supported Models
+Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+|                     | **Haier**                                                                                                        | **Hoover**                                                                                                            | **Candy**                                                  |
+|---------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
+| **Washing Machine** | HW90-B14TEAM5 <br/> HW100-B14959U1                                                                               | H-WASH 500 <br/> H7W4 48MBC-S                                                                                         | RO441286DWMC4-07 <br/> HW 68AMC/1-80 <br/> HWPD 69AMBC/1-S |
+| **Tumble Dryer**    | HD80-A3959                                                                                                       | H-DRY 500 <br/> H9A3TCBEXS-S <br/> HLE C10DCE-80 <br/> NDE H10A2TCE-80 <br/> NDE H9A2TSBEXS-S <br/> NDPHY10A2TCBEXSS  | BCTDH7A1TE <br/> CSOE C10DE-80 <br/> ROE H9A3TCEX-S        |
+| **Washer Dryer**    | HWD100-B14979                                                                                                    | HWPS4954DAMR-11                                                                                                       | RPW41066BWMR/1-S                                           |
+| **Oven**            | HWO60SM2F3XH                                                                                                     | HSOT3161WG                                                                                                            |                                                            |
+| **Dish Washer**     | XIB 3B2SFS-80 <br/> XIB 6B2D3FB                                                                                  | HFB 6B2S3FX                                                                                                           |                                                            |
+| **Air conditioner** | AD105S2SM3FA <br/> AS20HPL1HRA <br/> AS25PBAHRA <br/> AS25S2SF1FA-WH <br/> AS25TADHRA-2 <br/> AS35TADHRA-2 <br/> |                                                                                                                       |                                                            |
+| **Fridge**          | HFW7720ENMB                                                                                                      |                                                                                                                       | CCE4T620EWU                                                |
+| **Hob**             | HA2MTSJ68MC                                                                                                      |                                                                                                                       | CIS633SCTTWIFI                                             |
+| **Hood**            | HADG6DS46BWIFI                                                                                                   |                                                                                                                       |                                                            |
+| **Wine Cellar**     | HWS247FDU1                                                                                                       |                                                                                                                       |                                                            |
+
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:
 * 🇨🇳 Chinese
@@ -59,21 +75,6 @@ Translation of internal names like programs are available for all languages whic
 ## Examples
 ### Washing Machine
 ![washing_machine.png](assets/washing_machine.png)
-
-## Supported Models
-Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
-
-|                    | **Haier**                                                                                                        | **Hoover**                                                                                                            | **Candy**                                           |
-|--------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| **Washing Machine** | HW90-B14TEAM5 <br/> HW100-B14959U1                                                                               | H-WASH 500 <br/> H7W4 48MBC-S                                                                                         | RO44 1286DWMC4-07 <br/> HW 68AMC/1-80 <br/> HWPD 69AMBC/1-S        |
-| **Tumble Dryer**   | HD80-A3959                                                                                                       | H-DRY 500 <br/> H9A3TCBEXS-S <br/> HLE C10DCE-80 <br/> NDE H10A2TCE-80 <br/> NDE H9A2TSBEXS-S <br/> NDPHY10A2TCBEXSS  | BCTDH7A1TE <br/> CSOE C10DE-80 <br/> ROE H9A3TCEX-S |
-| **Washer Dryer**   | HWD100-B14979                                                                                                    | HWPS4954DAMR-11                                                                                                       | RPW41066BWMR/1-S                                    |
-| **Oven**           | HWO60SM2F3XH                                                                                                     | HSOT3161WG                                                                                                            |                                                     |
-| **Dish Washer**    | XIB 3B2SFS-80 <br/> XIB 6B2D3FB                                                                                  | HFB 6B2S3FX                                                                                                           |                                                     |
-| **Air conditioner** | AD105S2SM3FA <br/> AS20HPL1HRA <br/> AS25PBAHRA <br/> AS25S2SF1FA-WH <br/> AS25TADHRA-2 <br/> AS35TADHRA-2 <br/> |                                                                                                                       |                                                     |
-| **Fridge**         | HFW7720ENMB                                                                                                                 |                                                                                                                       | CCE4T620EWU                                         |
-| **Hob**            | HA2MTSJ68MC                                                                                                      |                                                                                                                       | CIS633SCTTWIFI                                      |
-| **Hood**           | HADG6DS46BWIFI                                                                                                   |                                                                                                                       |                                                     |
 
 ## Contribute
 Any kind of contribution is welcome!
