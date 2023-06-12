@@ -17,7 +17,7 @@ _LOGGER = logging.getLogger(__name__)
 
 @dataclass
 class HonBinarySensorEntityDescriptionMixin:
-    on_value: str = ""
+    on_value: str | float = ""
 
 
 @dataclass
@@ -41,14 +41,14 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="doorLockStatus",
             name="Door Lock",
             device_class=BinarySensorDeviceClass.LOCK,
-            on_value="0",
+            on_value=0,
             translation_key="door_lock",
         ),
         HonBinarySensorEntityDescription(
             key="doorStatus",
             name="Door",
             device_class=BinarySensorDeviceClass.DOOR,
-            on_value="1",
+            on_value=1,
             translation_key="door_open",
         ),
         HonBinarySensorEntityDescription(
@@ -82,7 +82,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="doorStatus",
             name="Door",
             device_class=BinarySensorDeviceClass.DOOR,
-            on_value="1",
+            on_value=1,
             translation_key="door_open",
         ),
         HonBinarySensorEntityDescription(
@@ -102,7 +102,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="attributes.parameters.onOffStatus",
             name="On",
             device_class=BinarySensorDeviceClass.RUNNING,
-            on_value="1",
+            on_value=1,
             icon="mdi:power-cycle",
             translation_key="on",
         ),
@@ -120,7 +120,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="attributes.parameters.onOffStatus",
             name="On",
             device_class=BinarySensorDeviceClass.RUNNING,
-            on_value="1",
+            on_value=1,
             icon="mdi:power-cycle",
             translation_key="on",
         ),
@@ -128,13 +128,13 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="hotStatus",
             name="Hot Status",
             device_class=BinarySensorDeviceClass.HEAT,
-            on_value="1",
+            on_value=1,
             translation_key="still_hot",
         ),
         HonBinarySensorEntityDescription(
             key="panStatus",
             name="Pan Status",
-            on_value="1",
+            on_value=1,
             icon="mdi:pot-mix",
             translation_key="pan_status",
         ),
@@ -142,7 +142,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="hobLockStatus",
             name="Hob Lock",
             device_class=BinarySensorDeviceClass.LOCK,
-            on_value="0",
+            on_value=0,
             translation_key="child_lock",
         ),
     ),
@@ -151,7 +151,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="saltStatus",
             name="Salt",
             device_class=BinarySensorDeviceClass.PROBLEM,
-            on_value="1",
+            on_value=1,
             icon="mdi:shaker-outline",
             translation_key="salt_level",
         ),
@@ -159,7 +159,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="rinseAidStatus",
             name="Rinse Aid",
             device_class=BinarySensorDeviceClass.PROBLEM,
-            on_value="1",
+            on_value=1,
             icon="mdi:spray-bottle",
             translation_key="rinse_aid",
         ),
@@ -174,7 +174,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="doorStatus",
             name="Door",
             device_class=BinarySensorDeviceClass.DOOR,
-            on_value="1",
+            on_value=1,
             translation_key="door_open",
         ),
     ),
@@ -183,13 +183,13 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             key="filterChangeStatusLocal",
             name="Filter Replacement",
             device_class=BinarySensorDeviceClass.PROBLEM,
-            on_value="1",
+            on_value=1,
             translation_key="filter_replacement",
         ),
         HonBinarySensorEntityDescription(
             key="ch2oCleaningStatus",
             name="Ch2O Cleaning",
-            on_value="1",
+            on_value=1,
         ),
     ),
     "REF": (
@@ -198,7 +198,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Super Cool",
             icon="mdi:snowflake",
             device_class=BinarySensorDeviceClass.RUNNING,
-            on_value="1",
+            on_value=1,
             translation_key="super_cool",
         ),
         HonBinarySensorEntityDescription(
@@ -206,7 +206,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Super Freeze",
             icon="mdi:snowflake-variant",
             device_class=BinarySensorDeviceClass.RUNNING,
-            on_value="1",
+            on_value=1,
             translation_key="super_freeze",
         ),
         HonBinarySensorEntityDescription(
@@ -214,7 +214,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Door Status Freezer",
             device_class=BinarySensorDeviceClass.DOOR,
             icon="mdi:fridge-top",
-            on_value="1",
+            on_value=1,
             translation_key="freezer_door",
         ),
         HonBinarySensorEntityDescription(
@@ -222,7 +222,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Door Status Fridge",
             icon="mdi:fridge-bottom",
             device_class=BinarySensorDeviceClass.DOOR,
-            on_value="1",
+            on_value=1,
             translation_key="fridge_door",
         ),
         HonBinarySensorEntityDescription(
@@ -230,7 +230,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Auto-Set Mode",
             icon="mdi:thermometer-auto",
             device_class=BinarySensorDeviceClass.RUNNING,
-            on_value="1",
+            on_value=1,
             translation_key="auto_set",
         ),
         HonBinarySensorEntityDescription(
@@ -238,12 +238,11 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             name="Holiday Mode",
             icon="mdi:palm-tree",
             device_class=BinarySensorDeviceClass.RUNNING,
-            on_value="1",
+            on_value=1,
             translation_key="holiday_mode",
         ),
     ),
 }
-
 
 BINARY_SENSORS["WD"] = unique_entities(BINARY_SENSORS["WM"], BINARY_SENSORS["TD"])
 
@@ -252,7 +251,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
     entities = []
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in BINARY_SENSORS.get(device.appliance_type, []):
-            if not device.get(description.key):
+            if device.get(description.key) is None:
                 continue
             entity = HonBinarySensorEntity(hass, entry, device, description)
             await entity.coordinator.async_config_entry_first_refresh()

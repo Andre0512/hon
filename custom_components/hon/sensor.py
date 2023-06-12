@@ -24,7 +24,7 @@ from homeassistant.helpers.entity import EntityCategory
 
 from . import const
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities
+from .hon import HonEntity, unique_entities, get_readable
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -32,12 +32,12 @@ _LOGGER = logging.getLogger(__name__)
 @dataclass
 class HonConfigSensorEntityDescription(SensorEntityDescription):
     entity_category: EntityCategory = EntityCategory.CONFIG
-    option_list: Dict[str, str] = None
+    option_list: Dict[int, str] = None
 
 
 @dataclass
 class HonSensorEntityDescription(SensorEntityDescription):
-    option_list: Dict[str, str] = None
+    option_list: Dict[int, str] = None
 
 
 SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
@@ -692,7 +692,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in SENSORS.get(device.appliance_type, []):
             if isinstance(description, HonSensorEntityDescription):
-                if not device.get(description.key):
+                if device.get(description.key) is None:
                     continue
                 entity = HonSensorEntity(hass, entry, device, description)
             elif isinstance(description, HonConfigSensorEntityDescription):
@@ -719,7 +719,7 @@ class HonSensorEntity(HonEntity, SensorEntity):
             ).values + ["No Program"]
         elif self.entity_description.option_list is not None:
             self._attr_options = list(self.entity_description.option_list.values())
-            value = self.entity_description.option_list.get(value, value)
+            value = get_readable(self.entity_description, value)
         if not value and self.entity_description.state_class is not None:
             self._attr_native_value = 0
         self._attr_native_value = value
@@ -744,7 +744,7 @@ class HonConfigSensorEntity(HonEntity, SensorEntity):
             value = value.value
         if self.entity_description.option_list is not None and not value == 0:
             self._attr_options = list(self.entity_description.option_list.values())
-            value = self.entity_description.option_list.get(value, value)
+            value = get_readable(self.entity_description, value)
         self._attr_native_value = value
         if update:
             self.async_write_ha_state()

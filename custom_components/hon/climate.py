@@ -121,10 +121,10 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
 
         self._attr_hvac_modes = [HVACMode.OFF]
         for mode in device.settings["settings.machMode"].values:
-            self._attr_hvac_modes.append(HON_HVAC_MODE[mode])
+            self._attr_hvac_modes.append(HON_HVAC_MODE[int(mode)])
         self._attr_fan_modes = [FAN_OFF]
         for mode in device.settings["settings.windSpeed"].values:
-            self._attr_fan_modes.append(HON_FAN[mode])
+            self._attr_fan_modes.append(HON_FAN[int(mode)])
         self._attr_swing_modes = [
             SWING_OFF,
             SWING_VERTICAL,
@@ -142,12 +142,12 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
     @property
     def target_temperature(self) -> int | None:
         """Return the temperature we try to reach."""
-        return int(float(self._device.get("tempSel")))
+        return self._device.get("tempSel")
 
     @property
     def current_temperature(self) -> float | None:
         """Return the current temperature."""
-        return float(self._device.get("tempIndoor"))
+        return self._device.get("tempIndoor")
 
     async def async_set_temperature(self, **kwargs):
         if (temperature := kwargs.get(ATTR_TEMPERATURE)) is None:
@@ -158,7 +158,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
 
     @property
     def hvac_mode(self) -> HVACMode | str | None:
-        if self._device.get("onOffStatus") == "0":
+        if self._device.get("onOffStatus") == 0:
             return HVACMode.OFF
         else:
             return HON_HVAC_MODE[self._device.get("machMode")]
@@ -193,11 +193,11 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         """Return the swing setting."""
         horizontal = self._device.get("windDirectionHorizontal")
         vertical = self._device.get("windDirectionVertical")
-        if horizontal == "7" and vertical == "8":
+        if horizontal == 7 and vertical == 8:
             return SWING_BOTH
-        elif horizontal == "7":
+        elif horizontal == 7:
             return SWING_HORIZONTAL
-        elif vertical == "8":
+        elif vertical == 8:
             return SWING_VERTICAL
         else:
             return SWING_OFF
@@ -263,13 +263,13 @@ class HonClimateEntity(HonEntity, ClimateEntity):
     @property
     def target_temperature(self) -> float | None:
         """Return the temperature we try to reach."""
-        return float(self._device.get(self.entity_description.key))
+        return self._device.get(self.entity_description.key)
 
     @property
     def current_temperature(self) -> float | None:
         """Return the current temperature."""
         temp_key = self.entity_description.key.split(".")[-1].replace("Sel", "")
-        return float(self._device.get(temp_key))
+        return self._device.get(temp_key)
 
     async def async_set_temperature(self, **kwargs):
         if (temperature := kwargs.get(ATTR_TEMPERATURE)) is None:
@@ -280,7 +280,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
 
     @property
     def hvac_mode(self) -> HVACMode | str | None:
-        if self._device.get("onOffStatus") == "0":
+        if self._device.get("onOffStatus") == 0:
             return HVACMode.OFF
         else:
             return self.entity_description.mode

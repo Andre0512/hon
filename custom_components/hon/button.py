@@ -77,7 +77,7 @@ class HonButtonEntity(HonEntity, ButtonEntity):
         """Return True if entity is available."""
         return (
             super().available
-            and self._device.get("remoteCtrValid", "1") == "1"
+            and int(self._device.get("remoteCtrValid", "1")) == 1
             and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
         )
 

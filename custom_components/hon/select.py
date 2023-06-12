@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+from contextlib import suppress
 from dataclasses import dataclass
 from typing import Dict, List
 
@@ -13,20 +14,20 @@ from pyhon.appliance import HonAppliance
 
 from . import const
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities
+from .hon import HonEntity, unique_entities, get_readable
 
 _LOGGER = logging.getLogger(__name__)
 
 
 @dataclass
 class HonSelectEntityDescription(SelectEntityDescription):
-    option_list: Dict[str, str] = None
+    option_list: Dict[int, str] = None
 
 
 @dataclass
 class HonConfigSelectEntityDescription(SelectEntityDescription):
     entity_category: EntityCategory = EntityCategory.CONFIG
-    option_list: Dict[str, str] = None
+    option_list: Dict[int, str] = None
 
 
 SELECTS = {
@@ -180,19 +181,18 @@ class HonSelectEntity(HonEntity, SelectEntity):
         setting = self._device.settings.get(self.entity_description.key)
         if setting is None:
             self._attr_available = False
-            self._attr_options: List[str] = []
+            options = []
             value = None
         else:
             self._attr_available = True
-            self._attr_options: List[str] = setting.values
+            options = setting.values
             value = setting.value
         if self.entity_description.option_list is not None:
-            self._attr_options = [
-                self.entity_description.option_list.get(k, k)
-                for k in self._attr_options
-            ]
+            with suppress(ValueError):
+                options = [get_readable(self.entity_description, k) for k in options]
             if value is not None:
-                value = self.entity_description.option_list.get(value, value)
+                value = get_readable(self.entity_description, value)
+        self._attr_options: List[str] = options
         self._attr_native_value = value
         if update:
             self.async_write_ha_state()
@@ -202,7 +202,7 @@ class HonSelectEntity(HonEntity, SelectEntity):
         """Return True if entity is available."""
         return (
             super().available
-            and self._device.get("remoteCtrValid", "1") == "1"
+            and int(self._device.get("remoteCtrValid", 1)) == 1
             and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
         )
 

@@ -1,4 +1,5 @@
 import logging
+from contextlib import suppress
 from datetime import timedelta
 
 from homeassistant.core import callback
@@ -81,3 +82,8 @@ def get_coordinator(hass, appliance):
         coordinator = HonCoordinator(hass, appliance)
         hass.data[DOMAIN]["coordinators"][appliance.unique_id] = coordinator
     return coordinator
+
+
+def get_readable(description, value):
+    with suppress(ValueError):
+        return description.option_list.get(int(value), value)

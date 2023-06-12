@@ -358,7 +358,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             elif isinstance(description, HonSwitchEntityDescription):
                 if (
                     f"settings.{description.key}" not in device.available_settings
-                    or not device.get(description.key)
+                    or device.get(description.key) is None
                 ):
                     continue
                 entity = HonSwitchEntity(hass, entry, device, description)
@@ -376,7 +376,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
     @property
     def is_on(self) -> bool | None:
         """Return True if entity is on."""
-        return self._device.get(self.entity_description.key, "0") == "1"
+        return self._device.get(self.entity_description.key, 0) == 1
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         setting = self._device.settings[f"settings.{self.entity_description.key}"]
@@ -401,14 +401,14 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         """Return True if entity is available."""
         return (
             super().available
-            and self._device.get("remoteCtrValid", "1") == "1"
+            and int(self._device.get("remoteCtrValid", 1)) == 1
             and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
         )
 
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
-        value = self._device.get(self.entity_description.key, "0")
-        self._attr_state = value == "1"
+        value = self._device.get(self.entity_description.key, 0)
+        self._attr_state = value == 1
         if update:
             self.async_write_ha_state()
 
@@ -436,7 +436,7 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
         """Return True if entity is available."""
         return (
             super().available
-            and self._device.get("remoteCtrValid", "1") == "1"
+            and int(self._device.get("remoteCtrValid", 1)) == 1
             and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
         )
 
@@ -444,8 +444,8 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
     def extra_state_attributes(self) -> dict[str, Any]:
         """Return the optional state attributes."""
         result = {}
-        if remaining_time := int(self._device.get("remainingTimeMM", 0)):
-            delay_time = int(self._device.get("delayTime", 0))
+        if remaining_time := self._device.get("remainingTimeMM", 0):
+            delay_time = self._device.get("delayTime", 0)
             result["start_time"] = datetime.now() + timedelta(minutes=delay_time)
             result["end_time"] = datetime.now() + timedelta(
                 minutes=delay_time + remaining_time

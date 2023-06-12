@@ -44,8 +44,8 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in FANS.get(device.appliance_type, []):
             if isinstance(description, HonFanEntityDescription):
-                if description.key not in device.available_settings or not device.get(
-                    description.key.split(".")[-1]
+                if description.key not in device.available_settings or device.get(
+                    description.key.split(".")[-1] is None
                 ):
                     continue
                 entity = HonFanEntity(hass, entry, device, description)
@@ -74,7 +74,7 @@ class HonFanEntity(HonEntity, FanEntity):
     @property
     def percentage(self) -> int | None:
         """Return the current speed."""
-        value = int(self._device.get(self._parameter, "0"))
+        value = self._device.get(self._parameter, 0)
         return ranged_value_to_percentage(self._speed_range, value)
 
     @property
