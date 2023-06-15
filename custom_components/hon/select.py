@@ -164,13 +164,24 @@ class HonSelectEntity(HonEntity, SelectEntity):
 
     @property
     def current_option(self) -> str | None:
-        value = self._device.settings.get(self.entity_description.key)
-        if value is None or value.value not in self._attr_options:
+        if not (setting := self._device.settings.get(self.entity_description.key)):
             return None
-        return value.value
+        value = setting.value
+        if self.entity_description.option_list:
+            value = self.entity_description.option_list.get(str(value), value)
+        if value not in self._attr_options:
+            return None
+        return value
 
     async def async_select_option(self, option: str) -> None:
-        self._device.settings[self.entity_description.key].value = option
+        setting = self._device.settings[self.entity_description.key]
+        if (options := self.entity_description.option_list) is not None:
+            setting.value = next(
+                (k for k, v in options.items() if k in setting.values and v == option),
+                option,
+            )
+        else:
+            setting.value = option
         command = self.entity_description.key.split(".")[0]
         await self._device.commands[command].send()
         await self.coordinator.async_refresh()
@@ -185,7 +196,7 @@ class HonSelectEntity(HonEntity, SelectEntity):
         else:
             self._attr_available = True
             self._attr_options: List[str] = setting.values
-            value = setting.value
+            value = str(setting.value)
         if self.entity_description.option_list is not None:
             self._attr_options = [
                 self.entity_description.option_list.get(k, k)
@@ -211,7 +222,14 @@ class HonConfigSelectEntity(HonSelectEntity):
     entity_description: HonConfigSelectEntityDescription
 
     async def async_select_option(self, option: str) -> None:
-        self._device.settings[self.entity_description.key].value = option
+        setting = self._device.settings[self.entity_description.key]
+        if (options := self.entity_description.option_list) is not None:
+            setting.value = next(
+                (k for k, v in options.items() if k in setting.values and v == option),
+                option,
+            )
+        else:
+            setting.value = option
         await self.coordinator.async_refresh()
 
     @property
