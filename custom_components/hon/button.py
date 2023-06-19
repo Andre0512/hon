@@ -4,7 +4,7 @@ import pkg_resources
 from homeassistant.components import persistent_notification
 from homeassistant.components.button import ButtonEntityDescription, ButtonEntity
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import EntityCategory
+from homeassistant.helpers.entity import EntityCategory
 from pyhon.appliance import HonAppliance
 
 from .const import DOMAIN
