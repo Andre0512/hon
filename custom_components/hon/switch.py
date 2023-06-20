@@ -333,6 +333,16 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             key="lightStatus", name="Light", icon="mdi:lightbulb"
         ),
     ),
+    "AP": (
+        HonSwitchEntityDescription(
+            key="touchToneStatus",
+            name="Touch Tone",
+        ),
+        HonSwitchEntityDescription(
+            key="lockStatus",
+            name="Lock Status",
+        ),
+    ),
 }
 
 SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["WM"])

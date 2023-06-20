@@ -167,7 +167,29 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             key="startProgram.lightStatus",
             name="Light status",
             icon="mdi:lightbulb",
-            entity_category=EntityCategory.CONFIG,
+        ),
+    ),
+    "AP": (
+        HonNumberEntityDescription(
+            key="settings.aromaTimeOn",
+            name="Aroma Time On",
+            icon="mdi:thermometer",
+            native_unit_of_measurement=UnitOfTime.SECONDS,
+        ),
+        HonNumberEntityDescription(
+            key="settings.aromaTimeOff",
+            name="Aroma Time Off",
+            icon="mdi:thermometer",
+            native_unit_of_measurement=UnitOfTime.SECONDS,
+        ),
+        HonNumberEntityDescription(
+            key="settings.lightStatus",
+            name="Light status",
+            icon="mdi:lightbulb",
+        ),
+        HonNumberEntityDescription(
+            key="settings.pollenLevel",
+            name="Pollen Level",
         ),
     ),
 }
@@ -206,7 +228,7 @@ class HonNumberEntity(HonEntity, NumberEntity):
 
     @property
     def native_value(self) -> float | None:
-        return self._device.get(self.entity_description.key)
+        return self._device.get(self.entity_description.key.split(".")[-1])
 
     async def async_set_native_value(self, value: float) -> None:
         setting = self._device.settings[self.entity_description.key]
@@ -223,7 +245,7 @@ class HonNumberEntity(HonEntity, NumberEntity):
             self._attr_native_max_value = setting.max
             self._attr_native_min_value = setting.min
             self._attr_native_step = setting.step
-        self._attr_native_value = setting.value
+        self._attr_native_value = self.native_value
         if update:
             self.async_write_ha_state()
 

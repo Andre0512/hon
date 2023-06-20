@@ -133,6 +133,19 @@ SELECTS = {
             translation_key="ref_zones",
         ),
     ),
+    "AP": (
+        HonSelectEntityDescription(
+            key="settings.aromaStatus",
+            name="Diffuser Level",
+            option_list=const.AP_DIFFUSER_LEVEL,
+        ),
+        HonSelectEntityDescription(
+            key="settings.machMode",
+            name="Mode",
+            icon="mdi:run",
+            option_list=const.AP_MACH_MODE,
+        ),
+    ),
 }
 
 SELECTS["WD"] = unique_entities(SELECTS["WM"], SELECTS["TD"])
