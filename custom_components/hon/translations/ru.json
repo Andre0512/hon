@@ -1839,7 +1839,31 @@
         },
         "climate": {
             "air_conditioner": {
-                "name": "Кондиционер воздуха"
+                "name": "Кондиционер воздуха",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Программы",
+                        "state": {
+                            "iot_10_heating": "Функция нагрева до 10°C",
+                            "iot_auto": "Авто",
+                            "iot_cool": "Охлаждение",
+                            "iot_dry": "Сушка",
+                            "iot_fan": "Вентилятор",
+                            "iot_heat": "Нагрев",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "Самоочищение",
+                            "iot_self_clean": "Самоочистка",
+                            "iot_self_clean_56": "Steri-Clean 56°C",
+                            "iot_simple_start": "Пуск сейчас",
+                            "iot_uv": "Ультрафиолет",
+                            "iot_uv_and_auto": "УФ + Авто",
+                            "iot_uv_and_cool": "УФ + Охлаждение",
+                            "iot_uv_and_dry": "УФ + Осушитель",
+                            "iot_uv_and_fan": "УФ + Вентилятор",
+                            "iot_uv_and_heat": "УФ + Нагрев"
+                        }
+                    }
+                }
             },
             "fridge": {
                 "name": "Холодильник",

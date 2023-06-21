@@ -236,6 +236,8 @@ class HonNumberEntity(HonEntity, NumberEntity):
             setting.value = value
         command = self.entity_description.key.split(".")[0]
         await self._device.commands[command].send()
+        if command != "settings":
+            self._device.sync_command(command, "settings")
         await self.coordinator.async_refresh()
 
     @callback

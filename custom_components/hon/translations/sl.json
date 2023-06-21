@@ -1839,7 +1839,31 @@
         },
         "climate": {
             "air_conditioner": {
-                "name": "Klimatska naprava"
+                "name": "Klimatska naprava",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programi",
+                        "state": {
+                            "iot_10_heating": "Funkcija ogrevanja pri 10 °C",
+                            "iot_auto": "Samodejno",
+                            "iot_cool": "Hlajenje",
+                            "iot_dry": "Sušenje",
+                            "iot_fan": "Ventilator",
+                            "iot_heat": "Segrevanje",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "Samoočiščevanje",
+                            "iot_self_clean": "Samodejno čiščenje",
+                            "iot_self_clean_56": "Sterilno čiščenje 56°C",
+                            "iot_simple_start": "Zaženi zdaj",
+                            "iot_uv": "UV",
+                            "iot_uv_and_auto": "UV + samodejno",
+                            "iot_uv_and_cool": "UV + hlajenje",
+                            "iot_uv_and_dry": "UV + razvlaževanje",
+                            "iot_uv_and_fan": "UV + ventilator",
+                            "iot_uv_and_heat": "UV + gretje"
+                        }
+                    }
+                }
             },
             "fridge": {
                 "name": "Hladilnik",

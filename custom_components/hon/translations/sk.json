@@ -1839,7 +1839,31 @@
         },
         "climate": {
             "air_conditioner": {
-                "name": "Klimatizácia"
+                "name": "Klimatizácia",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programy",
+                        "state": {
+                            "iot_10_heating": "Funkcia vykurovania na 10 °C",
+                            "iot_auto": "Automatika",
+                            "iot_cool": "Chladiť",
+                            "iot_dry": "Sušiť",
+                            "iot_fan": "Ventilátor",
+                            "iot_heat": "Ohrev",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "Samoprečisťovanie",
+                            "iot_self_clean": "Samočistenie",
+                            "iot_self_clean_56": "Sterilné čistenie 56°C",
+                            "iot_simple_start": "Spustiť teraz",
+                            "iot_uv": "UV",
+                            "iot_uv_and_auto": "UV + Auto",
+                            "iot_uv_and_cool": "UV + Studené",
+                            "iot_uv_and_dry": "UV + Odvlhčovač",
+                            "iot_uv_and_fan": "UV + Ventilátor",
+                            "iot_uv_and_heat": "UV + Ohrev"
+                        }
+                    }
+                }
             },
             "fridge": {
                 "name": "Chladnička",

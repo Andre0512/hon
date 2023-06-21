@@ -1844,7 +1844,31 @@
         },
         "climate": {
             "air_conditioner": {
-                "name": "Condizionatore"
+                "name": "Condizionatore",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programmi",
+                        "state": {
+                            "iot_10_heating": "Funzione 10°C Heating ",
+                            "iot_auto": "Auto",
+                            "iot_cool": "Freddo",
+                            "iot_dry": "Deumidificazione",
+                            "iot_fan": "Ventilatore",
+                            "iot_heat": "Caldo",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "Self purify",
+                            "iot_self_clean": "Self clean",
+                            "iot_self_clean_56": "Steri-Clean 56°C",
+                            "iot_simple_start": "Avvia ora",
+                            "iot_uv": "UV",
+                            "iot_uv_and_auto": "UV + Auto",
+                            "iot_uv_and_cool": "UV + Freddo",
+                            "iot_uv_and_dry": "UV + Deumidificatore",
+                            "iot_uv_and_fan": "UV + Ventola",
+                            "iot_uv_and_heat": "UV + Caldo"
+                        }
+                    }
+                }
             },
             "fridge": {
                 "name": "Frigorifero",
