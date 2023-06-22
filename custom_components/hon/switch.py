@@ -5,8 +5,8 @@ from typing import Any
 
 from homeassistant.components.switch import SwitchEntityDescription, SwitchEntity
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.helpers.entity import EntityCategory
 from homeassistant.core import callback
+from homeassistant.helpers.entity import EntityCategory
 from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
 
@@ -262,9 +262,9 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         ),
         HonSwitchEntityDescription(
             key="muteStatus",
-            name="Mute",
+            name="Silent Mode",
             icon="mdi:volume-off",
-            translation_key="mute_mode",
+            translation_key="silent_mode",
         ),
         HonSwitchEntityDescription(
             key="rapidMode",
@@ -291,9 +291,9 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         ),
         HonSwitchEntityDescription(
             key="silentSleepStatus",
-            name="Silent Sleep",
+            name="Night Mode",
             icon="mdi:bed",
-            translation_key="silent_mode",
+            translation_key="night_mode",
         ),
     ),
     "REF": (

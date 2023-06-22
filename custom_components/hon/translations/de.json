@@ -1706,6 +1706,9 @@
             },
             "refrigerator": {
                 "name": "Kühlschrank"
+            },
+            "night_mode": {
+                "name": "Nachtmodus"
             }
         },
         "binary_sensor": {

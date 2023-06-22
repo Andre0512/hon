@@ -148,12 +148,12 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Eco Mode |  | `switch` | `ecoMode` |
 | Eco Pilot | `run` | `select` | `settings.humanSensingStatus` |
 | Health Mode | `medication-outline` | `switch` | `healthMode` |
-| Mute | `volume-off` | `switch` | `muteStatus` |
+| Night Mode | `bed` | `switch` | `silentSleepStatus` |
 | Rapid Mode | `run-fast` | `switch` | `rapidMode` |
 | Screen Display | `monitor-small` | `switch` | `screenDisplayStatus` |
 | Self Cleaning | `air-filter` | `switch` | `selfCleaningStatus` |
 | Self Cleaning 56 | `air-filter` | `switch` | `selfCleaning56Status` |
-| Silent Sleep | `bed` | `switch` | `silentSleepStatus` |
+| Silent Mode | `volume-off` | `switch` | `muteStatus` |
 | Target Temperature | `thermometer` | `number` | `settings.tempSel` |
 #### Sensors
 | Name | Icon | Entity | Key |

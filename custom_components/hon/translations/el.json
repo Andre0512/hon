@@ -1706,6 +1706,9 @@
             },
             "refrigerator": {
                 "name": "Ψυγείο"
+            },
+            "night_mode": {
+                "name": "Νυχτερινή λειτουργία"
             }
         },
         "binary_sensor": {

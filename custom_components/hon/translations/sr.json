@@ -1706,6 +1706,9 @@
             },
             "refrigerator": {
                 "name": "Frižider"
+            },
+            "night_mode": {
+                "name": "Noćni režim"
             }
         },
         "binary_sensor": {

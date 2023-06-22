@@ -1706,6 +1706,9 @@
             },
             "refrigerator": {
                 "name": "Buzdolabı"
+            },
+            "night_mode": {
+                "name": "Gece modu"
             }
         },
         "binary_sensor": {

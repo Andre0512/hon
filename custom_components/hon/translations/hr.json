@@ -1706,6 +1706,9 @@
             },
             "refrigerator": {
                 "name": "Hladnjak"
+            },
+            "night_mode": {
+                "name": "Noćni način rada"
             }
         },
         "binary_sensor": {
