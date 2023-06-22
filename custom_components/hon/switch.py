@@ -5,7 +5,7 @@ from typing import Any
 
 from homeassistant.components.switch import SwitchEntityDescription, SwitchEntity
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import EntityCategory
+from homeassistant.helpers.entity import EntityCategory
 from homeassistant.core import callback
 from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
@@ -331,6 +331,16 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         ),
         HonSwitchEntityDescription(
             key="lightStatus", name="Light", icon="mdi:lightbulb"
+        ),
+    ),
+    "AP": (
+        HonSwitchEntityDescription(
+            key="touchToneStatus",
+            name="Touch Tone",
+        ),
+        HonSwitchEntityDescription(
+            key="lockStatus",
+            name="Lock Status",
         ),
     ),
 }

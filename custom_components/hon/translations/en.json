@@ -1868,7 +1868,31 @@
         },
         "climate": {
             "air_conditioner": {
-                "name": "Air conditioner"
+                "name": "Air conditioner",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programs",
+                        "state": {
+                            "iot_10_heating": "10°C Heating function",
+                            "iot_auto": "Auto",
+                            "iot_cool": "Cool",
+                            "iot_dry": "Dry",
+                            "iot_fan": "Fan",
+                            "iot_heat": "Heat",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "Self-purify",
+                            "iot_self_clean": "Self-clean",
+                            "iot_self_clean_56": "Steri-Clean 56°C",
+                            "iot_simple_start": "Start now",
+                            "iot_uv": "UV",
+                            "iot_uv_and_auto": "UV + Auto",
+                            "iot_uv_and_cool": "UV + Cold",
+                            "iot_uv_and_dry": "UV + Dehumidifier",
+                            "iot_uv_and_fan": "UV + Fan",
+                            "iot_uv_and_heat": "UV + Heat"
+                        }
+                    }
+                }
             },
             "fridge": {
                 "name": "Fridge",

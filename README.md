@@ -14,9 +14,10 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 - [Dish Washer](https://github.com/Andre0512/hon#dish-washer)
 - [Air conditioner](https://github.com/Andre0512/hon#air-conditioner)
 - [Fridge](https://github.com/Andre0512/hon#fridge)
-- [Hob](https://github.com/Andre0512/hon#hob) [BETA]
+- [Induction Hob](https://github.com/Andre0512/hon#induction-hob) [BETA]
 - [Hood](https://github.com/Andre0512/hon#hood) [BETA]
 - [Wine Cellar](https://github.com/Andre0512/hon#wine-cellar) [BETA]
+- [Air Purifier](https://github.com/Andre0512/hon#air-purifier) [BETA]
 
 ## Installation
 **Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
@@ -37,18 +38,18 @@ _If the integration is not in the list, you need to clear the browser cache._
 ## Supported Models
 Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
-|                     | **Haier**                                                                                                        | **Hoover**                                                                                                            | **Candy**                                                  |
-|---------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
-| **Washing Machine** | HW90-B14TEAM5 <br/> HW100-B14959U1                                                                               | H-WASH 500 <br/> H7W4 48MBC-S                                                                                         | RO441286DWMC4-07 <br/> HW 68AMC/1-80 <br/> HWPD 69AMBC/1-S |
-| **Tumble Dryer**    | HD80-A3959                                                                                                       | H-DRY 500 <br/> H9A3TCBEXS-S <br/> HLE C10DCE-80 <br/> NDE H10A2TCE-80 <br/> NDE H9A2TSBEXS-S <br/> NDPHY10A2TCBEXSS  | BCTDH7A1TE <br/> CSOE C10DE-80 <br/> ROE H9A3TCEX-S        |
-| **Washer Dryer**    | HWD100-B14979                                                                                                    | HWPS4954DAMR-11                                                                                                       | RPW41066BWMR/1-S                                           |
-| **Oven**            | HWO60SM2F3XH                                                                                                     | HSOT3161WG                                                                                                            |                                                            |
-| **Dish Washer**     | XIB 3B2SFS-80 <br/> XIB 6B2D3FB                                                                                  | HFB 6B2S3FX                                                                                                           |                                                            |
-| **Air conditioner** | AD105S2SM3FA <br/> AS20HPL1HRA <br/> AS25PBAHRA <br/> AS25S2SF1FA-WH <br/> AS25TADHRA-2 <br/> AS35TADHRA-2 <br/> |                                                                                                                       |                                                            |
-| **Fridge**          | HFW7720ENMB                                                                                                      |                                                                                                                       | CCE4T620EWU                                                |
-| **Hob**             | HA2MTSJ68MC                                                                                                      |                                                                                                                       | CIS633SCTTWIFI                                             |
-| **Hood**            | HADG6DS46BWIFI                                                                                                   |                                                                                                                       |                                                            |
-| **Wine Cellar**     | HWS247FDU1                                                                                                       |                                                                                                                       |                                                            |
+|                     | **Haier**                                                                                                                                          | **Hoover**                                                                                                            | **Candy**                                                                                           |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| **Washing Machine** | HW90-B14TEAM5 <br/> HW100-B14959U1                                                                                                                 | H-WASH 500 <br/> H7W4 48MBC-S                                                                                         | CO4 107T1/2-07 <br/> CBWO49TWME-S <br/> RO44 1286DWMC4-07 <br/> HW 68AMC/1-80 <br/> HWPD 69AMBC/1-S |
+| **Tumble Dryer**    | HD80-A3959                                                                                                                                         | H-DRY 500 <br/> H9A3TCBEXS-S <br/> HLE C10DCE-80 <br/> NDE H10A2TCE-80 <br/> NDE H9A2TSBEXS-S <br/> NDPHY10A2TCBEXSS  | BCTDH7A1TE <br/> CSOE C10DE-80 <br/> ROE H9A3TCEX-S                                                 |
+| **Washer Dryer**    | HWD100-B14979                                                                                                                                      | HWPS4954DAMR-11                                                                                                       | RPW41066BWMR/1-S                                                                                    |
+| **Oven**            | HWO60SM2F3XH                                                                                                                                       | HSOT3161WG                                                                                                            |                                                                                                     |
+| **Dish Washer**     | XIB 3B2SFS-80 <br/> XIB 6B2D3FB                                                                                                                    | HFB 6B2S3FX                                                                                                           |                                                                                                     |
+| **Air Conditioner** | AD105S2SM3FA <br/> AS20HPL1HRA <br/> AS25PBAHRA <br/> AS25S2SF1FA-WH <br/> AS25TADHRA-2 <br/> AS35S2SF2FA-3 <br/> AS35TADHRA-2 <br/> AS35TAMHRA-C  |                                                                                                                       |                                                                                                     |
+| **Fridge**          | HFW7720ENMB                                                                                                                                        |                                                                                                                       | CCE4T620EWU                                                                                         |
+| **Hob**             | HA2MTSJ68MC                                                                                                                                        |                                                                                                                       | CIS633SCTTWIFI                                                                                      |
+| **Hood**            | HADG6DS46BWIFI                                                                                                                                     |                                                                                                                       |                                                                                                     |
+| **Wine Cellar**     | HWS247FDU1                                                                                                                                         |                                                                                                                       |                                                                                                     |
 
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:
@@ -137,7 +138,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 
 ## Appliance Features
 
-### Air conditioner
+### Air Conditioner
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -171,7 +172,36 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Program | `play` | `sensor` | `programName` |
 | Selected Temperature | `thermometer` | `sensor` | `tempSel` |
 
-### Dish washer
+### Air Purifier
+#### Controls
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Aroma Time Off | `thermometer` | `number` | `settings.aromaTimeOff` |
+| Aroma Time On | `thermometer` | `number` | `settings.aromaTimeOn` |
+| Diffuser Level |  | `select` | `settings.aromaStatus` |
+| Light status | `lightbulb` | `number` | `settings.lightStatus` |
+| Lock Status |  | `switch` | `lockStatus` |
+| Mode | `run` | `select` | `settings.machMode` |
+| Pollen Level |  | `number` | `settings.pollenLevel` |
+| Touch Tone |  | `switch` | `touchToneStatus` |
+#### Sensors
+| Name | Icon | Entity | Key |
+| --- | --- | --- | --- |
+| Air Quality |  | `sensor` | `airQuality` |
+| CO Level |  | `sensor` | `coLevel` |
+| Error | `math-log` | `sensor` | `errors` |
+| Humidity |  | `sensor` | `humidityIndoor` |
+| Main Filter Status |  | `sensor` | `mainFilterStatus` |
+| On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
+| Pre Filter Status |  | `sensor` | `preFilterStatus` |
+| Temperature |  | `sensor` | `temp` |
+| Total Work Time |  | `sensor` | `totalWorkTime` |
+| VOC |  | `sensor` | `vocValueIndoor` |
+| Wind Speed |  | `sensor` | `windSpeed` |
+| pm10 |  | `sensor` | `pm10ValueIndoor` |
+| pm2p5 |  | `sensor` | `pm2p5ValueIndoor` |
+
+### Dish Washer
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -217,10 +247,6 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Start Program | `hvac` | `button` | `startProgram` |
 | Stop Program | `hvac-off` | `button` | `stopProgram` |
 | Wind Speed |  | `fan` | `settings.windSpeed` |
-#### Configs
-| Name | Icon | Entity | Key |
-| --- | --- | --- | --- |
-| Light status | `lightbulb` | `number` | `startProgram.lightStatus` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -231,13 +257,14 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Filter Cleaning Status |  | `sensor` | `filterCleaningStatus` |
 | Last Work Time | `clock-start` | `sensor` | `lastWorkTime` |
 | Light Status | `lightbulb` | `sensor` | `lightStatus` |
+| Light status | `lightbulb` | `number` | `startProgram.lightStatus` |
 | Mach Mode |  | `sensor` | `machMode` |
 | On / Off Status | `lightbulb` | `sensor` | `onOffStatus` |
 | Quick Delay Time Status |  | `sensor` | `quickDelayTimeStatus` |
 | RGB Light Color | `lightbulb` | `sensor` | `rgbLightColors` |
 | RGB Light Status | `lightbulb` | `sensor` | `rgbLightStatus` |
 
-### Hob
+### Induction Hob
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -321,7 +348,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Temperature Freezer | `snowflake-thermometer` | `sensor` | `tempZ2` |
 | Temperature Fridge | `thermometer` | `sensor` | `tempZ1` |
 
-### Tumble dryer
+### Tumble Dryer
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -380,7 +407,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Temperature | `thermometer` | `sensor` | `temp` |
 | Temperature 2 | `thermometer` | `sensor` | `tempZ2` |
 
-### Washer dryer
+### Washer Dryer
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -455,7 +482,7 @@ For every device exists a hidden button which can be used to log all infos of yo
 | Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` |
 | Total Water |  | `sensor` | `totalWaterUsed` |
 
-### Washing machine
+### Washing Machine
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |

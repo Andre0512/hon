@@ -188,3 +188,18 @@ AC_HUMAN_SENSE = {
     2: "follow_touch",
     3: "unknown",
 }
+
+AP_MACH_MODE = {
+    0: "standby",
+    1: "sleep",
+    2: "auto",
+    3: "allergens",
+    4: "max",
+}
+
+AP_DIFFUSER_LEVEL = {
+    1: "soft",
+    2: "mid",
+    3: "h_biotics",
+    4: "custom",
+}

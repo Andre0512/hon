@@ -22,21 +22,21 @@ from custom_components.hon.switch import (
 )
 
 APPLIANCES = {
-    "AC": "Air conditioner",
-    "AP": "Air purifier",
-    "AS": "Air scanner",
-    "DW": "Dish washer",
+    "AC": "Air Conditioner",
+    "AP": "Air Purifier",
+    "AS": "Air Scanner",
+    "DW": "Dish Washer",
     "HO": "Hood",
-    "IH": "Hob",
+    "IH": "Induction Hob",
     "MW": "Microwave",
     "OV": "Oven",
     "REF": "Fridge",
-    "RVC": "Robot vacuum cleaner",
-    "TD": "Tumble dryer",
+    "RVC": "Robot Vacuum Cleaner",
+    "TD": "Tumble Dryer",
     "WC": "Wine Cellar",
-    "WD": "Washer dryer",
+    "WD": "Washer Dryer",
     "WH": "Water Heater",
-    "WM": "Washing machine",
+    "WM": "Washing Machine",
 }
 
 ENTITY_CATEGORY_SORT = ["control", "config", "sensor"]

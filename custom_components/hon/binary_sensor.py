@@ -242,6 +242,16 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             translation_key="holiday_mode",
         ),
     ),
+    "AP": (
+        HonBinarySensorEntityDescription(
+            key="attributes.parameters.onOffStatus",
+            name="On",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value="1",
+            icon="mdi:power-cycle",
+            translation_key="on",
+        ),
+    ),
 }
 
 BINARY_SENSORS["WD"] = unique_entities(BINARY_SENSORS["WM"], BINARY_SENSORS["TD"])

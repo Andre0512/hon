@@ -85,5 +85,7 @@ def get_coordinator(hass, appliance):
 
 
 def get_readable(description, value):
-    with suppress(ValueError):
-        return description.option_list.get(int(value), value)
+    if description.option_list is not None:
+        with suppress(ValueError):
+            return description.option_list.get(int(value), value)
+    return value

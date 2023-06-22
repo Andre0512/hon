@@ -1839,7 +1839,31 @@
         },
         "climate": {
             "air_conditioner": {
-                "name": "Aire acondicionado"
+                "name": "Aire acondicionado",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programas",
+                        "state": {
+                            "iot_10_heating": "Función de calentamiento de 10° C",
+                            "iot_auto": "Automático",
+                            "iot_cool": "Frío",
+                            "iot_dry": "Deshumidificar",
+                            "iot_fan": "Ventilador",
+                            "iot_heat": "Calor",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "Autopurificar",
+                            "iot_self_clean": "Autolimpieza",
+                            "iot_self_clean_56": "Limpieza desinfectante 56°",
+                            "iot_simple_start": "Iniciar ahora",
+                            "iot_uv": "UV",
+                            "iot_uv_and_auto": "UV + Automático",
+                            "iot_uv_and_cool": "UV + Frío",
+                            "iot_uv_and_dry": "UV + Deshumidificador",
+                            "iot_uv_and_fan": "UV + Ventilador",
+                            "iot_uv_and_heat": "UV + Calor"
+                        }
+                    }
+                }
             },
             "fridge": {
                 "name": "Frigorífico",

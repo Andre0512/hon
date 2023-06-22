@@ -1839,7 +1839,31 @@
         },
         "climate": {
             "air_conditioner": {
-                "name": "Aer condiționat"
+                "name": "Aer condiționat",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programe",
+                        "state": {
+                            "iot_10_heating": "Funcția de încălzire la 10 °C",
+                            "iot_auto": "Automat",
+                            "iot_cool": "Răcire",
+                            "iot_dry": "Uscare",
+                            "iot_fan": "Ventilare",
+                            "iot_heat": "Încălzire",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "Auto-purificare",
+                            "iot_self_clean": "Autocurățare",
+                            "iot_self_clean_56": "Curățare-sterilizare la 56°C",
+                            "iot_simple_start": "Începeți acum",
+                            "iot_uv": "UV",
+                            "iot_uv_and_auto": "UV + automat",
+                            "iot_uv_and_cool": "UV + răcire",
+                            "iot_uv_and_dry": "UV + dezumidificator",
+                            "iot_uv_and_fan": "UV + ventilator",
+                            "iot_uv_and_heat": "UV + încălzire"
+                        }
+                    }
+                }
             },
             "fridge": {
                 "name": "Frigider",

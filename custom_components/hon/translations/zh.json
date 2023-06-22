@@ -1839,7 +1839,31 @@
         },
         "climate": {
             "air_conditioner": {
-                "name": "空调"
+                "name": "空调",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "程序",
+                        "state": {
+                            "iot_10_heating": "10°C 加热功能",
+                            "iot_auto": "自动",
+                            "iot_cool": "冷却",
+                            "iot_dry": "烘干",
+                            "iot_fan": "风扇",
+                            "iot_heat": "加热",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "自净",
+                            "iot_self_clean": "自洁",
+                            "iot_self_clean_56": "无菌清洁 56°C",
+                            "iot_simple_start": "立即启动",
+                            "iot_uv": "UV",
+                            "iot_uv_and_auto": "UV + 自动",
+                            "iot_uv_and_cool": "UV + 制冷",
+                            "iot_uv_and_dry": "UV + 减湿器",
+                            "iot_uv_and_fan": "UV + 风扇",
+                            "iot_uv_and_heat": "UV + 加热"
+                        }
+                    }
+                }
             },
             "fridge": {
                 "name": "冰箱",

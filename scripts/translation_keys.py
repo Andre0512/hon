@@ -159,6 +159,12 @@ CLIMATE = {
             "state": "PROGRAMS.OV",
         }
     },
+    "air_conditioner": {
+        "preset_mode": {
+            "name": "OV.TABS.PROGRAMS_TITLE",
+            "state": "PROGRAMS.AC",
+        }
+    },
     "wine": {
         "preset_mode": {
             "name": "WC.NAME",

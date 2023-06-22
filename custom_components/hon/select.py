@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import logging
-from contextlib import suppress
 from dataclasses import dataclass
 from typing import Dict, List
 
@@ -10,7 +9,6 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTemperature, UnitOfTime, REVOLUTIONS_PER_MINUTE
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
-from pyhon.appliance import HonAppliance
 
 from . import const
 from .const import DOMAIN
@@ -135,6 +133,19 @@ SELECTS = {
             translation_key="ref_zones",
         ),
     ),
+    "AP": (
+        HonSelectEntityDescription(
+            key="settings.aromaStatus",
+            name="Diffuser Level",
+            option_list=const.AP_DIFFUSER_LEVEL,
+        ),
+        HonSelectEntityDescription(
+            key="settings.machMode",
+            name="Mode",
+            icon="mdi:run",
+            option_list=const.AP_MACH_MODE,
+        ),
+    ),
 }
 
 SELECTS["WD"] = unique_entities(SELECTS["WM"], SELECTS["TD"])
@@ -157,45 +168,63 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
     async_add_entities(entities)
 
 
-class HonSelectEntity(HonEntity, SelectEntity):
-    entity_description: HonSelectEntityDescription
-
-    def __init__(self, hass, entry, device: HonAppliance, description) -> None:
-        super().__init__(hass, entry, device, description)
+class HonConfigSelectEntity(HonEntity, SelectEntity):
+    entity_description: HonConfigSelectEntityDescription
 
     @property
     def current_option(self) -> str | None:
-        value = self._device.settings.get(self.entity_description.key)
-        if value is None or value.value not in self._attr_options:
+        if not (setting := self._device.settings.get(self.entity_description.key)):
             return None
-        return value.value
+        value = get_readable(self.entity_description, setting.value)
+        if value not in self._attr_options:
+            return None
+        return value
+
+    @property
+    def options(self) -> list[str]:
+        setting = self._device.settings.get(self.entity_description.key)
+        if setting is None:
+            return []
+        return [get_readable(self.entity_description, key) for key in setting.values]
+
+    def _option_to_number(self, option: str, values: List[str]):
+        if (options := self.entity_description.option_list) is not None:
+            return next(
+                (k for k, v in options.items() if str(k) in values and v == option),
+                option,
+            )
+        return option
 
     async def async_select_option(self, option: str) -> None:
-        self._device.settings[self.entity_description.key].value = option
-        command = self.entity_description.key.split(".")[0]
-        await self._device.commands[command].send()
+        setting = self._device.settings[self.entity_description.key]
+        setting.value = self._option_to_number(option, setting.values)
         await self.coordinator.async_refresh()
 
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
-        setting = self._device.settings.get(self.entity_description.key)
-        if setting is None:
-            self._attr_available = False
-            options = []
-            value = None
-        else:
-            self._attr_available = True
-            options = setting.values
-            value = setting.value
-        if self.entity_description.option_list is not None:
-            with suppress(ValueError):
-                options = [get_readable(self.entity_description, k) for k in options]
-            if value is not None:
-                value = get_readable(self.entity_description, value)
-        self._attr_options: List[str] = options
-        self._attr_native_value = value
+        self._attr_available = self.available
+        self._attr_options = self.options
+        self._attr_current_option = self.current_option
         if update:
             self.async_write_ha_state()
+
+    @property
+    def available(self) -> bool:
+        """Return True if entity is available."""
+        return self._device.settings.get(self.entity_description.key) is not None
+
+
+class HonSelectEntity(HonConfigSelectEntity):
+    entity_description: HonSelectEntityDescription
+
+    async def async_select_option(self, option: str) -> None:
+        setting = self._device.settings[self.entity_description.key]
+        setting.value = self._option_to_number(option, setting.values)
+        command = self.entity_description.key.split(".")[0]
+        await self._device.commands[command].send()
+        if command != "settings":
+            self._device.sync_command(command, "settings")
+        await self.coordinator.async_refresh()
 
     @property
     def available(self) -> bool:
@@ -205,16 +234,3 @@ class HonSelectEntity(HonEntity, SelectEntity):
             and int(self._device.get("remoteCtrValid", 1)) == 1
             and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
         )
-
-
-class HonConfigSelectEntity(HonSelectEntity):
-    entity_description: HonConfigSelectEntityDescription
-
-    async def async_select_option(self, option: str) -> None:
-        self._device.settings[self.entity_description.key].value = option
-        await self.coordinator.async_refresh()
-
-    @property
-    def available(self) -> bool:
-        """Return True if entity is available."""
-        return super(SelectEntity, self).available
