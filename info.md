@@ -40,6 +40,9 @@ Support has been confirmed for these models, but many more will work. Please add
 | **Hood**            | HADG6DS46BWIFI                                                                                                                                     |                                                                                                                       |                                                                                                     |
 | **Wine Cellar**     | HWS247FDU1                                                                                                                                         |                                                                                                                       |                                                                                                     |
 
+| Please add your appliances data to our [hon-test-data collection](https://github.com/Andre0512/hon-test-data). <br/>This helps us to develop new features and not to break compatibility in newer versions. |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:
 * 🇨🇳 Chinese
@@ -67,6 +70,8 @@ Translation of internal names like programs are available for all languages whic
 ![washing_machine.png](assets/washing_machine.png)
 
 ## Contribute
+
+
 Want to help us to support more appliances? Or add more sensors? Or help with translating? Or beautify some icons or captions? 
 Check out the [project on GitHub](https://github.com/Andre0512/hon), every contribution is welcome!
 

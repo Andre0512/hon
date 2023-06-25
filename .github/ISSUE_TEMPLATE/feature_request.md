@@ -24,3 +24,11 @@ _This button can be found in the diagnostic section of your device or in the ent
 3. Open home assistant notifications and copy the message (Crtl+A, Ctrl+C)
 **Additional context**
 Add any other context or screenshots about the feature request here.
+
+**Data Archive**
+For further analysis, please add your appliance data archive here.
+Navigate to `Settings` -> `Device & Services` -> `Haier hOn` -> _your device_ and press the _Create Data Archive_ button. 
+Then open notifications to download the data zip archive.
+To attach the file:
+* GitHub Web: Use the "Attach files by dragging & dropping, selecting or pasting them." function
+* GitHub Mobile: Upload the zip archive as image

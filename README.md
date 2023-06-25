@@ -51,6 +51,9 @@ Support has been confirmed for these models, but many more will work. Please add
 | **Hood**            | HADG6DS46BWIFI                                                                                                                                     |                                                                                                                       |                                                                                                     |
 | **Wine Cellar**     | HWS247FDU1                                                                                                                                         |                                                                                                                       |                                                                                                     |
 
+| Please add your appliances data to our [hon-test-data collection](https://github.com/Andre0512/hon-test-data). <br/>This helps us to develop new features and not to break compatibility in newer versions. |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:
 * 🇨🇳 Chinese
@@ -81,11 +84,9 @@ Translation of internal names like programs are available for all languages whic
 Any kind of contribution is welcome!
 ### Read out device data
 If you want to make a request for adding new appliances or additional attributes and don't want to use the command line, here is how you can read out your device data.
-For every device exists a hidden button which can be used to log all infos of your appliance.
-1. Enable the "Show Device Info" button  
-   _This button can be found in the diagnostic section of your device or in the entity overview if "show disabled entities" is enabled._
-2. Press the button to create a notification
-3. Open home assistant notifications and copy the message (Crtl+A, Ctrl+C)
+For every device exists a button under diagnostics which can be used to log all info of your appliance.
+1. Press the button to create a notification
+2. Open home assistant notifications and copy the message (Crtl+A, Ctrl+C)
 ### Add appliances or additional attributes
 1. Install [pyhOn](https://github.com/Andre0512/pyhOn)
    ```commandline
