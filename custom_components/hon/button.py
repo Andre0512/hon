@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 
 import pkg_resources
 from homeassistant.components import persistent_notification
@@ -61,7 +62,8 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
             entity = HonButtonEntity(hass, entry, device, description)
             await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
-        entities.append(HonFeatureRequestButton(hass, entry, device))
+        entities.append(HonDeviceInfo(hass, entry, device))
+        entities.append(HonDataArchive(hass, entry, device))
         await entities[-1].coordinator.async_config_entry_first_refresh()
     async_add_entities(entities)
 
@@ -82,21 +84,41 @@ class HonButtonEntity(HonEntity, ButtonEntity):
         )
 
 
-class HonFeatureRequestButton(HonEntity, ButtonEntity):
+class HonDeviceInfo(HonEntity, ButtonEntity):
     def __init__(self, hass, entry, device: HonAppliance) -> None:
         super().__init__(hass, entry, device)
 
-        self._attr_unique_id = f"{super().unique_id}_log_device_info"
+        self._attr_unique_id = f"{super().unique_id}_show_device_info"
         self._attr_icon = "mdi:information"
         self._attr_name = "Show Device Info"
         self._attr_entity_category = EntityCategory.DIAGNOSTIC
-        self._attr_entity_registry_enabled_default = False
 
     async def async_press(self) -> None:
         pyhon_version = pkg_resources.get_distribution("pyhon").version
-        info = f"{self._device.diagnose()}pyhOnVersion: {pyhon_version}"
+        info = f"{self._device.diagnose}pyhOnVersion: {pyhon_version}"
         title = f"{self._device.nick_name} Device Info"
         persistent_notification.create(
             self._hass, f"````\n```\n{info}\n```\n````", title
         )
         _LOGGER.info(info.replace(" ", "\u200B "))
+
+
+class HonDataArchive(HonEntity, ButtonEntity):
+    def __init__(self, hass, entry, device: HonAppliance) -> None:
+        super().__init__(hass, entry, device)
+
+        self._attr_unique_id = f"{super().unique_id}_create_data_archive"
+        self._attr_icon = "mdi:archive-arrow-down"
+        self._attr_name = "Create Data Archive"
+        self._attr_entity_category = EntityCategory.DIAGNOSTIC
+
+    async def async_press(self) -> None:
+        path = Path(self._hass.config.config_dir) / "www"
+        data = await self._device.data_archive(path)
+        title = f"{self._device.nick_name} Data Archive"
+        text = (
+            f'<a href="/local/{data}" target="_blank">{data}</a> <br/><br/> '
+            f"Use this data for [GitHub Issues of Haier hOn](https://github.com/Andre0512/hon).<br/>"
+            f"Or add it to the [hon-test-data collection](https://github.com/Andre0512/hon-test-data)."
+        )
+        persistent_notification.create(self._hass, text, title)

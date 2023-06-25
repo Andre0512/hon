@@ -1,17 +1,16 @@
 import logging
+from pathlib import Path
 
 import voluptuous as vol
-from pyhon import Hon
-
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_EMAIL, CONF_PASSWORD
 from homeassistant.helpers import config_validation as cv, aiohttp_client
 from homeassistant.helpers.typing import HomeAssistantType
+from pyhon import Hon
 
 from .const import DOMAIN, PLATFORMS
 
 _LOGGER = logging.getLogger(__name__)
-
 
 HON_SCHEMA = vol.Schema(
     {
@@ -29,7 +28,10 @@ CONFIG_SCHEMA = vol.Schema(
 async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry):
     session = aiohttp_client.async_get_clientsession(hass)
     hon = await Hon(
-        entry.data["email"], entry.data["password"], session=session
+        entry.data["email"],
+        entry.data["password"],
+        session=session,
+        test_data_path=Path(hass.config.config_dir),
     ).create()
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.unique_id] = hon
