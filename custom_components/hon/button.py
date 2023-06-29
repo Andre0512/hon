@@ -1,7 +1,6 @@
 import logging
 from pathlib import Path
 
-import pkg_resources
 from homeassistant.components import persistent_notification
 from homeassistant.components.button import ButtonEntityDescription, ButtonEntity
 from homeassistant.config_entries import ConfigEntry
@@ -92,10 +91,14 @@ class HonDeviceInfo(HonEntity, ButtonEntity):
         self._attr_icon = "mdi:information"
         self._attr_name = "Show Device Info"
         self._attr_entity_category = EntityCategory.DIAGNOSTIC
+        if "beta" not in self.coordinator.info.hon_version:
+            self._attr_entity_registry_enabled_default = False
 
     async def async_press(self) -> None:
-        pyhon_version = pkg_resources.get_distribution("pyhon").version
-        info = f"{self._device.diagnose}pyhOnVersion: {pyhon_version}"
+        versions = "versions:\n"
+        versions += f"  hon: {self.coordinator.info.hon_version}\n"
+        versions += f"  pyhOn: {self.coordinator.info.pyhon_version}\n"
+        info = f"{self._device.diagnose}{versions}"
         title = f"{self._device.nick_name} Device Info"
         persistent_notification.create(
             self._hass, f"````\n```\n{info}\n```\n````", title
@@ -111,6 +114,8 @@ class HonDataArchive(HonEntity, ButtonEntity):
         self._attr_icon = "mdi:archive-arrow-down"
         self._attr_name = "Create Data Archive"
         self._attr_entity_category = EntityCategory.DIAGNOSTIC
+        if "beta" not in self.coordinator.info.hon_version:
+            self._attr_entity_registry_enabled_default = False
 
     async def async_press(self) -> None:
         path = Path(self._hass.config.config_dir) / "www"

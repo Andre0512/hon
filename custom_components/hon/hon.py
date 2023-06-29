@@ -1,7 +1,10 @@
+import json
 import logging
 from contextlib import suppress
 from datetime import timedelta
+from pathlib import Path
 
+import pkg_resources
 from homeassistant.core import callback
 from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
@@ -37,9 +40,7 @@ class HonEntity(CoordinatorEntity):
         return DeviceInfo(
             identifiers={(DOMAIN, self._device.unique_id)},
             manufacturer=self._device.get("brand", ""),
-            name=self._device.nick_name
-            if self._device.nick_name
-            else self._device.model_name,
+            name=self._device.nick_name,
             model=self._device.model_name,
             sw_version=self._device.get("fwVersion", ""),
         )
@@ -48,6 +49,31 @@ class HonEntity(CoordinatorEntity):
     def _handle_coordinator_update(self, update: bool = True) -> None:
         if update:
             self.async_write_ha_state()
+
+
+class HonInfo:
+    def __init__(self):
+        self._manifest = self._get_manifest()
+        self._hon_version = self._manifest.get("version", "")
+        self._pyhon_version = pkg_resources.get_distribution("pyhon").version
+
+    @staticmethod
+    def _get_manifest():
+        manifest = Path(__file__).parent / "manifest.json"
+        with open(manifest, "r", encoding="utf-8") as file:
+            return json.loads(file.read())
+
+    @property
+    def manifest(self):
+        return self._manifest
+
+    @property
+    def hon_version(self):
+        return self._hon_version
+
+    @property
+    def pyhon_version(self):
+        return self._pyhon_version
 
 
 class HonCoordinator(DataUpdateCoordinator):
@@ -60,9 +86,14 @@ class HonCoordinator(DataUpdateCoordinator):
             update_interval=timedelta(seconds=UPDATE_INTERVAL),
         )
         self._device = device
+        self._info = HonInfo()
 
     async def _async_update_data(self):
         await self._device.update()
+
+    @property
+    def info(self) -> HonInfo:
+        return self._info
 
 
 def unique_entities(base_entities, new_entities):
