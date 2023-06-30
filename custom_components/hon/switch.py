@@ -329,9 +329,6 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:palm-tree",
             translation_key="holiday_mode",
         ),
-        HonSwitchEntityDescription(
-            key="lightStatus", name="Light", icon="mdi:lightbulb"
-        ),
     ),
     "AP": (
         HonSwitchEntityDescription(

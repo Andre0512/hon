@@ -44,8 +44,9 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in FANS.get(device.appliance_type, []):
             if isinstance(description, HonFanEntityDescription):
-                if description.key not in device.available_settings or device.get(
-                    description.key.split(".")[-1] is None
+                if (
+                    description.key not in device.available_settings
+                    or device.get(description.key.split(".")[-1]) is None
                 ):
                     continue
                 entity = HonFanEntity(hass, entry, device, description)

@@ -162,13 +162,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             translation_key="freezer_temp_sel",
         ),
     ),
-    "HO": (
-        HonNumberEntityDescription(
-            key="startProgram.lightStatus",
-            name="Light status",
-            icon="mdi:lightbulb",
-        ),
-    ),
     "AP": (
         HonNumberEntityDescription(
             key="settings.aromaTimeOn",
@@ -181,11 +174,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             name="Aroma Time Off",
             icon="mdi:thermometer",
             native_unit_of_measurement=UnitOfTime.SECONDS,
-        ),
-        HonNumberEntityDescription(
-            key="settings.lightStatus",
-            name="Light status",
-            icon="mdi:lightbulb",
         ),
         HonNumberEntityDescription(
             key="settings.pollenLevel",
