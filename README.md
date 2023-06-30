@@ -180,7 +180,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Aroma Time Off | `thermometer` | `number` | `settings.aromaTimeOff` |
 | Aroma Time On | `thermometer` | `number` | `settings.aromaTimeOn` |
 | Diffuser Level |  | `select` | `settings.aromaStatus` |
-| Light status | `lightbulb` | `number` | `settings.lightStatus` |
+| Light status |  | `light` | `settings.lightStatus` |
 | Lock Status |  | `switch` | `lockStatus` |
 | Mode | `run` | `select` | `settings.machMode` |
 | Pollen Level |  | `number` | `settings.pollenLevel` |
@@ -258,7 +258,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Filter Cleaning Status |  | `sensor` | `filterCleaningStatus` |
 | Last Work Time | `clock-start` | `sensor` | `lastWorkTime` |
 | Light Status | `lightbulb` | `sensor` | `lightStatus` |
-| Light status | `lightbulb` | `number` | `startProgram.lightStatus` |
+| Light status |  | `light` | `startProgram.lightStatus` |
 | Mach Mode |  | `sensor` | `machMode` |
 | On / Off Status | `lightbulb` | `sensor` | `onOffStatus` |
 | Quick Delay Time Status |  | `sensor` | `quickDelayTimeStatus` |
@@ -391,7 +391,7 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Light | `lightbulb` | `switch` | `lightStatus` |
+| Light |  | `light` | `settings.lightStatus` |
 | Sabbath Mode | `palm-tree` | `switch` | `sabbathStatus` |
 | Wine Cellar | `thermometer` | `climate` | `settings.tempSel` |
 | Wine Cellar | `thermometer` | `climate` | `settings.tempSelZ2` |

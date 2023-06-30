@@ -55,7 +55,7 @@
                     "washing": "Lavaggio",
                     "rinse": "Risciacqui",
                     "drying": "Asciugatura",
-                    "hot_rinse": "Risciacquo caldo "
+                    "hot_rinse": "Risciacquo caldo"
                 },
                 "name": "Fase"
             },
@@ -72,7 +72,7 @@
             },
             "programs_ac": {
                 "state": {
-                    "iot_10_heating": "Funzione 10°C Heating ",
+                    "iot_10_heating": "Funzione 10°C Heating",
                     "iot_auto": "Auto",
                     "iot_cool": "Freddo",
                     "iot_dry": "Deumidificazione",
@@ -97,7 +97,9 @@
                     "59_min": "Rapido 59'",
                     "auto_care": "Auto Care",
                     "auto_care_soil": "Auto Care",
+                    "auto_hygiene": "Auto Igiene",
                     "auto_plus": "AutoPlus",
+                    "auto_rapid": "Auto Rapido",
                     "auto_sensor": "Auto Sensor",
                     "auto_sensor_soil": "Auto Sensor",
                     "auto_universal": "Auto Universale 50 - 60°C",
@@ -119,7 +121,7 @@
                     "glass_care": "Glass Care",
                     "hygiene": "Igiene",
                     "hygiene_plus": "Igiene 75°C",
-                    "intensive": "Intensivo ",
+                    "intensive": "Intensivo",
                     "intensive_rapid": "Forte Veloce",
                     "iot_auto_sensor": "Auto Sensor",
                     "iot_auto_universal_soil": "Auto Universale 50 - 60°C",
@@ -345,8 +347,8 @@
                     "hqd_outdoor": "Outdoor",
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rapido 20m",
-                    "hqd_quick_30": "Rapido 30m",
-                    "hqd_quick_dry": "Asciugatura veloce (30 min)",
+                    "hqd_quick_30": "Rapido 30'",
+                    "hqd_quick_dry": "Asciugatura veloce 30'",
                     "hqd_quilt": "Trapunte",
                     "hqd_refresh": "Refresh",
                     "hqd_school_uniform": "Uniforme scolastica",
@@ -384,7 +386,7 @@
                     "iot_dry_lingerie": "Lingerie",
                     "iot_dry_mixed": "Misti",
                     "iot_dry_playsuits": "Tutine",
-                    "iot_dry_rapid_30": "Rapido 30m",
+                    "iot_dry_rapid_30": "Rapido 30'",
                     "iot_dry_rapid_59": "Rapido 59'.",
                     "iot_dry_refresh": "Rinfresca",
                     "iot_dry_regenerates_waterproof": "Rigenera Tessuti Impermeabili",
@@ -630,7 +632,7 @@
                     "iot_wash_masks_sanification": "Sanificazione Mascherine",
                     "iot_wash_masks_sanification_steam": "Sanificazione Mascherine + Vapore",
                     "iot_wash_mats": "Tappetini",
-                    "iot_wash_men_s_trousers": "Pantaloni ",
+                    "iot_wash_men_s_trousers": "Pantaloni",
                     "iot_wash_mixed": "Misti",
                     "iot_wash_mixed_steam": "Misti + Vapore",
                     "iot_wash_mix_and_coloured_44": "Misti e colorati 44'",
@@ -676,7 +678,7 @@
                     "iot_wash_technical_jackets": "Giacconi Tecnici",
                     "iot_wash_technical_jackets_zelig": "Giacconi Tecnici",
                     "iot_wash_trainers": "Scarpe da ginnastica",
-                    "iot_wash_whites": "Bianchi ",
+                    "iot_wash_whites": "Bianchi",
                     "iot_wash_whites_44": "Bianchi 44'",
                     "iot_wash_whites_59": "Bianchi 59'",
                     "iot_wash_whites_xl": "Bianchi XL",
@@ -753,7 +755,7 @@
                     "holiday": "HOLIDAY",
                     "keep_fresh": "0° Fresh",
                     "no_mode_selected": "Nessuna modalità selezionata",
-                    "quick_cool": " QUICK COOL",
+                    "quick_cool": "QUICK COOL",
                     "sea_food": "Ready to cook meal",
                     "soft_frozen": "Soft freezing",
                     "super_cool": "SUPER COOL",
@@ -902,7 +904,7 @@
             },
             "programs_ac": {
                 "state": {
-                    "iot_10_heating": "Funzione 10°C Heating ",
+                    "iot_10_heating": "Funzione 10°C Heating",
                     "iot_auto": "Auto",
                     "iot_cool": "Freddo",
                     "iot_dry": "Deumidificazione",
@@ -927,7 +929,9 @@
                     "59_min": "Rapido 59'",
                     "auto_care": "Auto Care",
                     "auto_care_soil": "Auto Care",
+                    "auto_hygiene": "Auto Igiene",
                     "auto_plus": "AutoPlus",
+                    "auto_rapid": "Auto Rapido",
                     "auto_sensor": "Auto Sensor",
                     "auto_sensor_soil": "Auto Sensor",
                     "auto_universal": "Auto Universale 50 - 60°C",
@@ -949,7 +953,7 @@
                     "glass_care": "Glass Care",
                     "hygiene": "Igiene",
                     "hygiene_plus": "Igiene 75°C",
-                    "intensive": "Intensivo ",
+                    "intensive": "Intensivo",
                     "intensive_rapid": "Forte Veloce",
                     "iot_auto_sensor": "Auto Sensor",
                     "iot_auto_universal_soil": "Auto Universale 50 - 60°C",
@@ -1175,8 +1179,8 @@
                     "hqd_outdoor": "Outdoor",
                     "hqd_precious_cure": "Precious cure",
                     "hqd_quick_20": "Rapido 20m",
-                    "hqd_quick_30": "Rapido 30m",
-                    "hqd_quick_dry": "Asciugatura veloce (30 min)",
+                    "hqd_quick_30": "Rapido 30'",
+                    "hqd_quick_dry": "Asciugatura veloce 30'",
                     "hqd_quilt": "Trapunte",
                     "hqd_refresh": "Refresh",
                     "hqd_school_uniform": "Uniforme scolastica",
@@ -1214,7 +1218,7 @@
                     "iot_dry_lingerie": "Lingerie",
                     "iot_dry_mixed": "Misti",
                     "iot_dry_playsuits": "Tutine",
-                    "iot_dry_rapid_30": "Rapido 30m",
+                    "iot_dry_rapid_30": "Rapido 30'",
                     "iot_dry_rapid_59": "Rapido 59'.",
                     "iot_dry_refresh": "Rinfresca",
                     "iot_dry_regenerates_waterproof": "Rigenera Tessuti Impermeabili",
@@ -1460,7 +1464,7 @@
                     "iot_wash_masks_sanification": "Sanificazione Mascherine",
                     "iot_wash_masks_sanification_steam": "Sanificazione Mascherine + Vapore",
                     "iot_wash_mats": "Tappetini",
-                    "iot_wash_men_s_trousers": "Pantaloni ",
+                    "iot_wash_men_s_trousers": "Pantaloni",
                     "iot_wash_mixed": "Misti",
                     "iot_wash_mixed_steam": "Misti + Vapore",
                     "iot_wash_mix_and_coloured_44": "Misti e colorati 44'",
@@ -1506,7 +1510,7 @@
                     "iot_wash_technical_jackets": "Giacconi Tecnici",
                     "iot_wash_technical_jackets_zelig": "Giacconi Tecnici",
                     "iot_wash_trainers": "Scarpe da ginnastica",
-                    "iot_wash_whites": "Bianchi ",
+                    "iot_wash_whites": "Bianchi",
                     "iot_wash_whites_44": "Bianchi 44'",
                     "iot_wash_whites_59": "Bianchi 59'",
                     "iot_wash_whites_xl": "Bianchi XL",
@@ -1583,7 +1587,7 @@
                     "holiday": "HOLIDAY",
                     "keep_fresh": "0° Fresh",
                     "no_mode_selected": "Nessuna modalità selezionata",
-                    "quick_cool": " QUICK COOL",
+                    "quick_cool": "QUICK COOL",
                     "sea_food": "Ready to cook meal",
                     "soft_frozen": "Soft freezing",
                     "super_cool": "SUPER COOL",
@@ -1608,7 +1612,7 @@
         },
         "switch": {
             "anti_crease": {
-                "name": "Antipieghe "
+                "name": "Antipieghe"
             },
             "add_dish": {
                 "name": "Aggiungi stoviglie"
@@ -1665,7 +1669,7 @@
                 "name": "Modalità ECO"
             },
             "10_degree_heating": {
-                "name": "Funzione 10°C Heating "
+                "name": "Funzione 10°C Heating"
             },
             "self_clean": {
                 "name": "Self clean"
@@ -1733,7 +1737,7 @@
                 "name": "Buona notte"
             },
             "anti_crease": {
-                "name": "Antipieghe "
+                "name": "Antipieghe"
             },
             "acqua_plus": {
                 "name": "Acquaplus"
@@ -1852,7 +1856,7 @@
                     "preset_mode": {
                         "name": "Programmi",
                         "state": {
-                            "iot_10_heating": "Funzione 10°C Heating ",
+                            "iot_10_heating": "Funzione 10°C Heating",
                             "iot_auto": "Auto",
                             "iot_cool": "Freddo",
                             "iot_dry": "Deumidificazione",

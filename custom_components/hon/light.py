@@ -18,7 +18,7 @@ from .hon import HonEntity
 _LOGGER = logging.getLogger(__name__)
 
 
-FANS = {
+LIGHTS = {
     "WC": (LightEntityDescription(key="settings.lightStatus", name="Light"),),
     "HO": (
         LightEntityDescription(
@@ -33,7 +33,7 @@ FANS = {
 async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
     entities = []
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
-        for description in FANS.get(device.appliance_type, []):
+        for description in LIGHTS.get(device.appliance_type, []):
             if (
                 description.key not in device.available_settings
                 or device.get(description.key.split(".")[-1]) is None

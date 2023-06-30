@@ -10,6 +10,7 @@ if __name__ == "__main__":
 
 from custom_components.hon.binary_sensor import BINARY_SENSORS
 from custom_components.hon.button import BUTTONS
+from custom_components.hon.light import LIGHTS
 from custom_components.hon.climate import CLIMATES
 from custom_components.hon.number import NUMBERS
 from custom_components.hon.select import SELECTS
@@ -50,6 +51,7 @@ entities = {
     "switch": SWITCHES,
     "climate": CLIMATES,
     "fan": FANS,
+    "light": LIGHTS,
 }
 
 result = {}

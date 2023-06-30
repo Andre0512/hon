@@ -28,7 +28,7 @@
                     "rinse": "לִשְׁטוֹף",
                     "drying": "יִבּוּשׁ",
                     "steam": "קִיטוֹר",
-                    "weighting": "Weighing ",
+                    "weighting": "Weighing",
                     "scheduled": "מתוזמן",
                     "tumbling": "שמור על טריות",
                     "refresh": "Refresh",
@@ -439,7 +439,7 @@
             "fan_mode": {
                 "state": {
                     "high": "High",
-                    "mid": "Medium   ",
+                    "mid": "Medium",
                     "low": "Low",
                     "auto": "Auto"
                 }
