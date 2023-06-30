@@ -21,6 +21,24 @@ PLATFORMS = [
     "light",
 ]
 
+APPLIANCES = {
+    "AC": "Air Conditioner",
+    "AP": "Air Purifier",
+    "AS": "Air Scanner",
+    "DW": "Dish Washer",
+    "HO": "Hood",
+    "IH": "Induction Hob",
+    "MW": "Microwave",
+    "OV": "Oven",
+    "REF": "Fridge",
+    "RVC": "Robot Vacuum Cleaner",
+    "TD": "Tumble Dryer",
+    "WC": "Wine Cellar",
+    "WD": "Washer Dryer",
+    "WH": "Water Heater",
+    "WM": "Washing Machine",
+}
+
 HON_HVAC_MODE = {
     0: HVACMode.AUTO,
     1: HVACMode.COOL,

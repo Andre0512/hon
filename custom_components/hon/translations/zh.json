@@ -857,6 +857,9 @@
             },
             "fridge_temp": {
                 "name": "冰箱温度"
+            },
+            "voc": {
+                "name": "气体（VOC)"
             }
         },
         "select": {
@@ -1603,6 +1606,12 @@
             },
             "remaining_time": {
                 "name": "剩余时间"
+            },
+            "diffuser": {
+                "name": "扩散器"
+            },
+            "mode": {
+                "name": "Mode"
             }
         },
         "switch": {
@@ -1713,6 +1722,9 @@
             },
             "night_mode": {
                 "name": "夜间模式"
+            },
+            "touch_tone": {
+                "name": "按键音量"
             }
         },
         "binary_sensor": {
@@ -1842,6 +1854,9 @@
             },
             "fridge_temp_sel": {
                 "name": "目标温度 冰箱"
+            },
+            "pollen_level": {
+                "name": "花粉水平"
             }
         },
         "climate": {
@@ -1981,6 +1996,11 @@
         "fan": {
             "air_extraction": {
                 "name": "抽气"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "照明"
             }
         }
     },

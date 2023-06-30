@@ -216,6 +216,7 @@ NAMES = {
         "super_cool": "REF_CMD&CTRL.MODALITIES.SUPER_COOL",
         "super_freeze": "REF_CMD&CTRL.MODALITIES.SUPER_FREEZE",
         "refrigerator": "REF.NAME",
+        "touch_tone": "AP.FOOTER_MENU_MORE.TOUCH_TONE_VOLUME",
     },
     "binary_sensor": {
         "door_lock": "WASHING_CMD&CTRL.CHECK_UP_RESULTS.DOOR_LOCK",
@@ -265,6 +266,8 @@ NAMES = {
         "eco_pilot": "AC.PROGRAM_DETAIL.ECO_PILOT",
         "remaining_time": "ENROLLMENT_COMMON.GENERAL.REMAINING_TIME",
         "ref_zones": "IH.COMMON.COIL",
+        "diffuser": "AP.TITLES.DIFFUSER",
+        "mode": "CUBE90_GLOBAL.GENERAL.MODE",
     },
     "sensor": {
         "dry_levels": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_LEVEL",
@@ -320,6 +323,7 @@ NAMES = {
         "programs_wm": "WC.SET_PROGRAM.PROGRAM",
         "programs_ac": "WC.SET_PROGRAM.PROGRAM",
         "programs_ref": "WC.SET_PROGRAM.PROGRAM",
+        "voc": "HINTS.WHAT_POLLUTES_THE_AIR_IN_OUR_HOMES.GAS_VOC_TITLE",
     },
     "number": {
         "power_management": "HINTS.COOKING_WITH_INDUCTION.POWER_MANAGEMENT",
@@ -334,6 +338,7 @@ NAMES = {
         "steam_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.STEAM_LEVEL",
         "freezer_temp_sel": ["OV.COMMON.GOAL_TEMPERATURE", "REF.ZONES.FREEZER"],
         "fridge_temp_sel": ["OV.COMMON.GOAL_TEMPERATURE", "REF.ZONES.FRIDGE"],
+        "pollen_level": "AP.AIR_QUALITY.POLLEN_LEVEL",
     },
     "climate": {
         "air_conditioner": "GLOBALS.APPLIANCES_NAME.AC",
@@ -342,4 +347,5 @@ NAMES = {
         "oven": "GLOBALS.APPLIANCES_NAME.OV",
     },
     "fan": {"air_extraction": "HO.DASHBOARD.AIR_EXTRACTION_TITLE"},
+    "light": {"light": "WC.DASHBOARD_MENU_MORE.LIGHT"},
 }

@@ -194,13 +194,13 @@ For every device exists a button under diagnostics which can be used to log all 
 | Humidity |  | `sensor` | `humidityIndoor` |
 | Main Filter Status |  | `sensor` | `mainFilterStatus` |
 | On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
+| PM 10 |  | `sensor` | `pm10ValueIndoor` |
+| PM 2.5 |  | `sensor` | `pm2p5ValueIndoor` |
 | Pre Filter Status |  | `sensor` | `preFilterStatus` |
 | Temperature |  | `sensor` | `temp` |
 | Total Work Time |  | `sensor` | `totalWorkTime` |
 | VOC |  | `sensor` | `vocValueIndoor` |
 | Wind Speed |  | `sensor` | `windSpeed` |
-| pm10 |  | `sensor` | `pm10ValueIndoor` |
-| pm2p5 |  | `sensor` | `pm2p5ValueIndoor` |
 
 ### Dish Washer
 #### Controls
@@ -294,8 +294,8 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Oven | `toaster-oven` | `switch` | `startProgram` / `stopProgram` |
 | Oven | `thermometer` | `climate` | `settings.tempSel` |
+| Oven | `toaster-oven` | `switch` | `startProgram` / `stopProgram` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |

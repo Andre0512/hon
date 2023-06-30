@@ -719,14 +719,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         ),
         HonSensorEntityDescription(
             key="pm10ValueIndoor",
-            name="pm10",
+            name="PM 10",
             state_class=SensorStateClass.MEASUREMENT,
             device_class=SensorDeviceClass.PM10,
             native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
         ),
         HonSensorEntityDescription(
             key="pm2p5ValueIndoor",
-            name="pm2p5",
+            name="PM 2.5",
             state_class=SensorStateClass.MEASUREMENT,
             device_class=SensorDeviceClass.PM25,
             native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
@@ -737,6 +737,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             state_class=SensorStateClass.MEASUREMENT,
             device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
             native_unit_of_measurement=CONCENTRATION_PARTS_PER_BILLION,
+            translation_key="voc",
         ),
         HonSensorEntityDescription(
             key="humidityIndoor",

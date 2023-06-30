@@ -857,6 +857,9 @@
             },
             "fridge_temp": {
                 "name": "Temperatura hladilnika"
+            },
+            "voc": {
+                "name": "Lahkohlapne organske spojine (HOS)"
             }
         },
         "select": {
@@ -1603,6 +1606,12 @@
             },
             "remaining_time": {
                 "name": "Time remaining"
+            },
+            "diffuser": {
+                "name": "Razpršilnik"
+            },
+            "mode": {
+                "name": "Mode"
             }
         },
         "switch": {
@@ -1713,6 +1722,9 @@
             },
             "night_mode": {
                 "name": "Nočni način"
+            },
+            "touch_tone": {
+                "name": "Glasnost tona dotika"
             }
         },
         "binary_sensor": {
@@ -1842,6 +1854,9 @@
             },
             "fridge_temp_sel": {
                 "name": "Ciljna temperatura Hladilnik"
+            },
+            "pollen_level": {
+                "name": "Raven cvetnega prahu"
             }
         },
         "climate": {
@@ -1981,6 +1996,11 @@
         "fan": {
             "air_extraction": {
                 "name": "Odvajanje zraka"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Osvetljava"
             }
         }
     },

@@ -334,10 +334,12 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         HonSwitchEntityDescription(
             key="touchToneStatus",
             name="Touch Tone",
+            translation_key="touch_tone",
         ),
         HonSwitchEntityDescription(
             key="lockStatus",
             name="Lock Status",
+            translation_key="mode",
         ),
     ),
 }

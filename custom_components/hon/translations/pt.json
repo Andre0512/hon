@@ -857,6 +857,9 @@
             },
             "fridge_temp": {
                 "name": "Temperatura do frigorífico"
+            },
+            "voc": {
+                "name": "Gás (VOC)"
             }
         },
         "select": {
@@ -1603,6 +1606,12 @@
             },
             "remaining_time": {
                 "name": "Tempo restante"
+            },
+            "diffuser": {
+                "name": "Difusor"
+            },
+            "mode": {
+                "name": "Modo"
             }
         },
         "switch": {
@@ -1713,6 +1722,9 @@
             },
             "night_mode": {
                 "name": "Modo noturno"
+            },
+            "touch_tone": {
+                "name": "Volume do tom de toque"
             }
         },
         "binary_sensor": {
@@ -1842,6 +1854,9 @@
             },
             "fridge_temp_sel": {
                 "name": "Temperatura alvo Frigorífico"
+            },
+            "pollen_level": {
+                "name": "Nível de pólenes"
             }
         },
         "climate": {
@@ -1981,6 +1996,11 @@
         "fan": {
             "air_extraction": {
                 "name": "Extração de ar"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Luz"
             }
         }
     },

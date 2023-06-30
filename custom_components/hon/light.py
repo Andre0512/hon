@@ -19,14 +19,27 @@ _LOGGER = logging.getLogger(__name__)
 
 
 LIGHTS = {
-    "WC": (LightEntityDescription(key="settings.lightStatus", name="Light"),),
+    "WC": (
+        LightEntityDescription(
+            key="settings.lightStatus",
+            name="Light",
+            translation_key="light",
+        ),
+    ),
     "HO": (
         LightEntityDescription(
             key="startProgram.lightStatus",
             name="Light status",
+            translation_key="light",
         ),
     ),
-    "AP": (LightEntityDescription(key="settings.lightStatus", name="Light status"),),
+    "AP": (
+        LightEntityDescription(
+            key="settings.lightStatus",
+            name="Light status",
+            translation_key="light",
+        ),
+    ),
 }
 
 

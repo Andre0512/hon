@@ -857,6 +857,9 @@
             },
             "fridge_temp": {
                 "name": "Temperatura hladnjaka"
+            },
+            "voc": {
+                "name": "Plinovi (HOS-ovi)"
             }
         },
         "select": {
@@ -1603,6 +1606,12 @@
             },
             "remaining_time": {
                 "name": "Preostalo vrijeme"
+            },
+            "diffuser": {
+                "name": "Raspršivač"
+            },
+            "mode": {
+                "name": "Mode"
             }
         },
         "switch": {
@@ -1713,6 +1722,9 @@
             },
             "night_mode": {
                 "name": "Noćni način rada"
+            },
+            "touch_tone": {
+                "name": "Glasnoća tona pri dodiru"
             }
         },
         "binary_sensor": {
@@ -1842,6 +1854,9 @@
             },
             "fridge_temp_sel": {
                 "name": "Ciljana temperatura Hladnjak"
+            },
+            "pollen_level": {
+                "name": "Razina peludi"
             }
         },
         "climate": {
@@ -1981,6 +1996,11 @@
         "fan": {
             "air_extraction": {
                 "name": "Odvođenje zraka"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Svjetlo"
             }
         }
     },

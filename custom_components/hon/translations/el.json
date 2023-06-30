@@ -857,6 +857,9 @@
             },
             "fridge_temp": {
                 "name": "Θερμοκρασία ψυγείου"
+            },
+            "voc": {
+                "name": "Αέριο (VOC)"
             }
         },
         "select": {
@@ -1603,6 +1606,12 @@
             },
             "remaining_time": {
                 "name": "Χρόνος που απομένει"
+            },
+            "diffuser": {
+                "name": "Διαχύτης"
+            },
+            "mode": {
+                "name": "Mode"
             }
         },
         "switch": {
@@ -1713,6 +1722,9 @@
             },
             "night_mode": {
                 "name": "Νυχτερινή λειτουργία"
+            },
+            "touch_tone": {
+                "name": "Ένταση τόνου αφής"
             }
         },
         "binary_sensor": {
@@ -1842,6 +1854,9 @@
             },
             "fridge_temp_sel": {
                 "name": "Στοχευμένη θερμοκρασία Ψυγείο"
+            },
+            "pollen_level": {
+                "name": "Επίπεδο γύρης"
             }
         },
         "climate": {
@@ -1981,6 +1996,11 @@
         "fan": {
             "air_extraction": {
                 "name": "Εξαγωγή αέρα"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Φως"
             }
         }
     },

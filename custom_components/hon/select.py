@@ -138,12 +138,14 @@ SELECTS = {
             key="settings.aromaStatus",
             name="Diffuser Level",
             option_list=const.AP_DIFFUSER_LEVEL,
+            translation_key="diffuser",
         ),
         HonSelectEntityDescription(
             key="settings.machMode",
             name="Mode",
             icon="mdi:run",
             option_list=const.AP_MACH_MODE,
+            translation_key="mode",
         ),
     ),
 }

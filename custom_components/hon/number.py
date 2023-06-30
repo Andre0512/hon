@@ -178,6 +178,7 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
         HonNumberEntityDescription(
             key="settings.pollenLevel",
             name="Pollen Level",
+            translation_key="pollen_level",
         ),
     ),
 }

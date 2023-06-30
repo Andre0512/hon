@@ -857,6 +857,9 @@
             },
             "fridge_temp": {
                 "name": "Température du réfrigérateur"
+            },
+            "voc": {
+                "name": "COV gazeux"
             }
         },
         "select": {
@@ -1603,6 +1606,12 @@
             },
             "remaining_time": {
                 "name": "Temps restant"
+            },
+            "diffuser": {
+                "name": "Diffuseur"
+            },
+            "mode": {
+                "name": "Mode"
             }
         },
         "switch": {
@@ -1713,6 +1722,9 @@
             },
             "night_mode": {
                 "name": "Mode nuit"
+            },
+            "touch_tone": {
+                "name": "Volume des tonalités"
             }
         },
         "binary_sensor": {
@@ -1842,6 +1854,9 @@
             },
             "fridge_temp_sel": {
                 "name": "Température cible Réfrigérateur"
+            },
+            "pollen_level": {
+                "name": "Niveau de pollen"
             }
         },
         "climate": {
@@ -1981,6 +1996,11 @@
         "fan": {
             "air_extraction": {
                 "name": "Extraction de l'air"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Luminosité"
             }
         }
     },

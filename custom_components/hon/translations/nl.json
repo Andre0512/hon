@@ -857,6 +857,9 @@
             },
             "fridge_temp": {
                 "name": "Koelkasttemperatuur"
+            },
+            "voc": {
+                "name": "Gas (VOC)"
             }
         },
         "select": {
@@ -1603,6 +1606,12 @@
             },
             "remaining_time": {
                 "name": "Resterende tijd"
+            },
+            "diffuser": {
+                "name": "Diffuser"
+            },
+            "mode": {
+                "name": "Modus"
             }
         },
         "switch": {
@@ -1713,6 +1722,9 @@
             },
             "night_mode": {
                 "name": "Nachtmodus"
+            },
+            "touch_tone": {
+                "name": "Volume van geluid bij aanraking"
             }
         },
         "binary_sensor": {
@@ -1842,6 +1854,9 @@
             },
             "fridge_temp_sel": {
                 "name": "Doeltemperatuur Koelkast"
+            },
+            "pollen_level": {
+                "name": "Pollenniveau"
             }
         },
         "climate": {
@@ -1981,6 +1996,11 @@
         "fan": {
             "air_extraction": {
                 "name": "Luchtafvoer"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Licht"
             }
         }
     },

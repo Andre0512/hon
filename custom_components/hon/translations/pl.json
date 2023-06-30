@@ -857,6 +857,9 @@
             },
             "fridge_temp": {
                 "name": "Temperatura lodówki"
+            },
+            "voc": {
+                "name": "Gaz (VOC)"
             }
         },
         "select": {
@@ -1603,6 +1606,12 @@
             },
             "remaining_time": {
                 "name": "Pozostały czas"
+            },
+            "diffuser": {
+                "name": "Dyfuzor"
+            },
+            "mode": {
+                "name": "Tryb"
             }
         },
         "switch": {
@@ -1713,6 +1722,9 @@
             },
             "night_mode": {
                 "name": "Tryb nocny"
+            },
+            "touch_tone": {
+                "name": "Dźwięk przycisku dotykowego"
             }
         },
         "binary_sensor": {
@@ -1842,6 +1854,9 @@
             },
             "fridge_temp_sel": {
                 "name": "Temperatura docelowa Lodówka"
+            },
+            "pollen_level": {
+                "name": "Poziom pyłków"
             }
         },
         "climate": {
@@ -1981,6 +1996,11 @@
         "fan": {
             "air_extraction": {
                 "name": "Wyciąg powietrza"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Światło"
             }
         }
     },

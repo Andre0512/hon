@@ -857,6 +857,9 @@
             },
             "fridge_temp": {
                 "name": "Buzdolabı sıcaklığı"
+            },
+            "voc": {
+                "name": "Gaz (VOC)"
             }
         },
         "select": {
@@ -1603,6 +1606,12 @@
             },
             "remaining_time": {
                 "name": "Kalan süre"
+            },
+            "diffuser": {
+                "name": "Difüzör"
+            },
+            "mode": {
+                "name": "Mode"
             }
         },
         "switch": {
@@ -1713,6 +1722,9 @@
             },
             "night_mode": {
                 "name": "Gece modu"
+            },
+            "touch_tone": {
+                "name": "Dokunma tonu seviyesi"
             }
         },
         "binary_sensor": {
@@ -1842,6 +1854,9 @@
             },
             "fridge_temp_sel": {
                 "name": "Hedef sıcaklık Buzdolabı"
+            },
+            "pollen_level": {
+                "name": "Polen seviyesi"
             }
         },
         "climate": {
@@ -1981,6 +1996,11 @@
         "fan": {
             "air_extraction": {
                 "name": "Hava tahliyesi"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Işık"
             }
         }
     },

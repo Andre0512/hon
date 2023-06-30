@@ -857,6 +857,9 @@
             },
             "fridge_temp": {
                 "name": "Teplota chladničky"
+            },
+            "voc": {
+                "name": "Plyn (VOC)"
             }
         },
         "select": {
@@ -1603,6 +1606,12 @@
             },
             "remaining_time": {
                 "name": "Zbývající čas"
+            },
+            "diffuser": {
+                "name": "Difuzér"
+            },
+            "mode": {
+                "name": "Režim"
             }
         },
         "switch": {
@@ -1713,6 +1722,9 @@
             },
             "night_mode": {
                 "name": "Noční režim"
+            },
+            "touch_tone": {
+                "name": "Hlasitost tónu klepnutí"
             }
         },
         "binary_sensor": {
@@ -1842,6 +1854,9 @@
             },
             "fridge_temp_sel": {
                 "name": "Cílová teplota Chladnička"
+            },
+            "pollen_level": {
+                "name": "Hladina pylu"
             }
         },
         "climate": {
@@ -1981,6 +1996,11 @@
         "fan": {
             "air_extraction": {
                 "name": "Odsávání vzduchu"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Světlo"
             }
         }
     },
