@@ -252,6 +252,10 @@ class HonNumberEntity(HonEntity, NumberEntity):
 class HonConfigNumberEntity(HonNumberEntity):
     entity_description: HonConfigNumberEntityDescription
 
+    @property
+    def native_value(self) -> float | None:
+        return self._device.settings[self.entity_description.key].value
+
     async def async_set_native_value(self, value: str) -> None:
         setting = self._device.settings[self.entity_description.key]
         if isinstance(setting, HonParameterRange):
