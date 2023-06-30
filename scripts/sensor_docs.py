@@ -8,6 +8,7 @@ from pathlib import Path
 if __name__ == "__main__":
     sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from custom_components.hon.const import APPLIANCES
 from custom_components.hon.binary_sensor import BINARY_SENSORS
 from custom_components.hon.button import BUTTONS
 from custom_components.hon.light import LIGHTS
@@ -22,36 +23,18 @@ from custom_components.hon.switch import (
     HonSwitchEntityDescription,
 )
 
-APPLIANCES = {
-    "AC": "Air Conditioner",
-    "AP": "Air Purifier",
-    "AS": "Air Scanner",
-    "DW": "Dish Washer",
-    "HO": "Hood",
-    "IH": "Induction Hob",
-    "MW": "Microwave",
-    "OV": "Oven",
-    "REF": "Fridge",
-    "RVC": "Robot Vacuum Cleaner",
-    "TD": "Tumble Dryer",
-    "WC": "Wine Cellar",
-    "WD": "Washer Dryer",
-    "WH": "Water Heater",
-    "WM": "Washing Machine",
-}
-
 ENTITY_CATEGORY_SORT = ["control", "config", "sensor"]
 
 entities = {
     "binary_sensor": BINARY_SENSORS,
     "button": BUTTONS,
+    "light": LIGHTS,
+    "climate": CLIMATES,
     "number": NUMBERS,
     "select": SELECTS,
     "sensor": SENSORS,
-    "switch": SWITCHES,
-    "climate": CLIMATES,
     "fan": FANS,
-    "light": LIGHTS,
+    "switch": SWITCHES,
 }
 
 result = {}
