@@ -210,7 +210,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
     async def async_set_fan_mode(self, fan_mode):
         mode_number = list(HON_FAN.values()).index(fan_mode)
         mode = list(HON_FAN.keys())[mode_number]
-        self._device.settings["settings.windSpeed"].value = mode
+        self._device.settings["settings.windSpeed"].value = str(mode)
         self._attr_fan_mode = fan_mode
         await self._device.commands["settings"].send()
         self.async_write_ha_state()
