@@ -53,7 +53,7 @@ for entity_type, appliances in entities.items():
                 if entity.key.startswith("settings")
                 or isinstance(entity, HonSwitchEntityDescription)
                 or isinstance(entity, HonControlSwitchEntityDescription)
-                or entity_type in ["button", "climate"]
+                or entity_type in ["button", "climate", "lock", "light", "fan"]
                 else "sensor"
             )
             result.setdefault(appliance, {}).setdefault(

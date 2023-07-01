@@ -181,6 +181,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Aroma Time On | `thermometer` | `number` | `settings.aromaTimeOn` |
 | Diffuser Level |  | `select` | `settings.aromaStatus` |
 | Light status |  | `light` | `settings.lightStatus` |
+| Lock Status |  | `lock` | `lockStatus` |
 | Mode | `run` | `select` | `settings.machMode` |
 | Pollen Level |  | `number` | `settings.pollenLevel` |
 | Touch Tone |  | `switch` | `touchToneStatus` |
@@ -191,7 +192,6 @@ For every device exists a button under diagnostics which can be used to log all 
 | CO Level |  | `sensor` | `coLevel` |
 | Error | `math-log` | `sensor` | `errors` |
 | Humidity |  | `sensor` | `humidityIndoor` |
-| Lock Status |  | `lock` | `lockStatus` |
 | Main Filter Status |  | `sensor` | `mainFilterStatus` |
 | On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
 | PM 10 |  | `sensor` | `pm10ValueIndoor` |
@@ -245,6 +245,7 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
+| Light status |  | `light` | `startProgram.lightStatus` |
 | Start Program | `hvac` | `button` | `startProgram` |
 | Stop Program | `hvac-off` | `button` | `stopProgram` |
 | Wind Speed |  | `fan` | `settings.windSpeed` |
@@ -258,7 +259,6 @@ For every device exists a button under diagnostics which can be used to log all 
 | Filter Cleaning Status |  | `sensor` | `filterCleaningStatus` |
 | Last Work Time | `clock-start` | `sensor` | `lastWorkTime` |
 | Light Status | `lightbulb` | `sensor` | `lightStatus` |
-| Light status |  | `light` | `startProgram.lightStatus` |
 | Mach Mode |  | `sensor` | `machMode` |
 | On / Off Status | `lightbulb` | `sensor` | `onOffStatus` |
 | Quick Delay Time Status |  | `sensor` | `quickDelayTimeStatus` |
