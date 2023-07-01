@@ -12,7 +12,6 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (
     PERCENTAGE,
     CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
-    CONCENTRATION_PARTS_PER_BILLION,
     CONCENTRATION_PARTS_PER_MILLION,
 )
 from homeassistant.const import (
@@ -736,7 +735,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="VOC",
             state_class=SensorStateClass.MEASUREMENT,
             device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
-            native_unit_of_measurement=CONCENTRATION_PARTS_PER_BILLION,
+            native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
             translation_key="voc",
         ),
         HonSensorEntityDescription(

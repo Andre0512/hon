@@ -19,6 +19,7 @@ PLATFORMS = [
     "climate",
     "fan",
     "light",
+    "lock",
 ]
 
 APPLIANCES = {

@@ -181,7 +181,6 @@ For every device exists a button under diagnostics which can be used to log all 
 | Aroma Time On | `thermometer` | `number` | `settings.aromaTimeOn` |
 | Diffuser Level |  | `select` | `settings.aromaStatus` |
 | Light status |  | `light` | `settings.lightStatus` |
-| Lock Status |  | `switch` | `lockStatus` |
 | Mode | `run` | `select` | `settings.machMode` |
 | Pollen Level |  | `number` | `settings.pollenLevel` |
 | Touch Tone |  | `switch` | `touchToneStatus` |
@@ -192,6 +191,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | CO Level |  | `sensor` | `coLevel` |
 | Error | `math-log` | `sensor` | `errors` |
 | Humidity |  | `sensor` | `humidityIndoor` |
+| Lock Status |  | `lock` | `lockStatus` |
 | Main Filter Status |  | `sensor` | `mainFilterStatus` |
 | On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
 | PM 10 |  | `sensor` | `pm10ValueIndoor` |
