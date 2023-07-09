@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Volume des tonalités"
+            },
+            "hygiene": {
+                "name": "Hygiène plus"
             }
         },
         "binary_sensor": {

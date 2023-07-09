@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "按键音量"
+            },
+            "hygiene": {
+                "name": "卫生增强"
             }
         },
         "binary_sensor": {

@@ -893,6 +893,9 @@
             },
             "touch_tone": {
                 "name": "Touch tone volume"
+            },
+            "hygiene": {
+                "name": "היגיינה פלוס"
             }
         },
         "binary_sensor": {

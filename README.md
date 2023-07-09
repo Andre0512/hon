@@ -433,6 +433,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `startProgram.extraRinse2` |
 | Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `startProgram.extraRinse3` |
 | Good Night | `weather-night` | `switch` | `startProgram.goodNight` |
+| Hygiene | `lotion-plus` | `switch` | `startProgram.hygiene` |
 | Keep Fresh | `refresh-circle` | `switch` | `startProgram.permanentPressStatus` |
 | Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
@@ -503,6 +504,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `startProgram.extraRinse2` |
 | Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `startProgram.extraRinse3` |
 | Good Night | `weather-night` | `switch` | `startProgram.goodNight` |
+| Hygiene | `lotion-plus` | `switch` | `startProgram.hygiene` |
 | Keep Fresh | `refresh-circle` | `switch` | `startProgram.permanentPressStatus` |
 | Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |

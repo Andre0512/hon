@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Volumen del tono táctil"
+            },
+            "hygiene": {
+                "name": "Higiene extra"
             }
         },
         "binary_sensor": {

@@ -1777,6 +1777,9 @@
             },
             "touch_tone": {
                 "name": "Volume Tasti"
+            },
+            "hygiene": {
+                "name": "Hygiene plus"
             }
         },
         "binary_sensor": {

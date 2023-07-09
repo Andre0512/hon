@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Volume do tom de toque"
+            },
+            "hygiene": {
+                "name": "Higiene mais"
             }
         },
         "binary_sensor": {

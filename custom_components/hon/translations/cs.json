@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Hlasitost tónu klepnutí"
+            },
+            "hygiene": {
+                "name": "Hygienický plus"
             }
         },
         "binary_sensor": {

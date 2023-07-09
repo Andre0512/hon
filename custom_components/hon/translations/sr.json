@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Jačina tona dodira"
+            },
+            "hygiene": {
+                "name": "Higijenski plus"
             }
         },
         "binary_sensor": {

@@ -116,6 +116,12 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             icon="mdi:weather-night",
             translation_key="good_night",
         ),
+        HonConfigSwitchEntityDescription(
+            key="startProgram.hygiene",
+            name="Hygiene",
+            icon="mdi:lotion-plus",
+            translation_key="hygiene",
+        ),
     ),
     "TD": (
         HonControlSwitchEntityDescription(

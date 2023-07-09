@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Dokunma tonu seviyesi"
+            },
+            "hygiene": {
+                "name": "Hygiene plus"
             }
         },
         "binary_sensor": {

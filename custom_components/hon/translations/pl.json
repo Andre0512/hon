@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Dźwięk przycisku dotykowego"
+            },
+            "hygiene": {
+                "name": "Higiena plus"
             }
         },
         "binary_sensor": {

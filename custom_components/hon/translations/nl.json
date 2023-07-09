@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Volume van geluid bij aanraking"
+            },
+            "hygiene": {
+                "name": "Hygiëne plus"
             }
         },
         "binary_sensor": {

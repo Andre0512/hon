@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Volum la atingerea tastelor"
+            },
+            "hygiene": {
+                "name": "Igienizare plus"
             }
         },
         "binary_sensor": {

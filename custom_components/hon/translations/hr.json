@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Glasnoća tona pri dodiru"
+            },
+            "hygiene": {
+                "name": "Hygiene Plus"
             }
         },
         "binary_sensor": {

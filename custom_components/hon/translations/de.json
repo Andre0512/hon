@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Tastentonlautstärke"
+            },
+            "hygiene": {
+                "name": "Hygiene plus"
             }
         },
         "binary_sensor": {

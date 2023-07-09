@@ -1772,6 +1772,9 @@
             },
             "touch_tone": {
                 "name": "Hlasitosť tónu dotyku"
+            },
+            "hygiene": {
+                "name": "Hygiena plus"
             }
         },
         "binary_sensor": {
