@@ -405,11 +405,16 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
     @property
     def available(self) -> bool:
         """Return True if entity is available."""
-        return (
-            super().available
-            and int(self._device.get("remoteCtrValid", 1)) == 1
-            and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
-        )
+        if not super().available:
+            return False
+        if not self._device.get("remoteCtrValid", 1) == 1:
+            return False
+        if self._device.get("attributes.lastConnEvent.category") == "DISCONNECTED":
+            return False
+        setting = self._device.settings[f"settings.{self.entity_description.key}"]
+        if isinstance(setting, HonParameterRange) and len(setting.values) < 2:
+            return False
+        return True
 
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
