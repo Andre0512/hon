@@ -148,7 +148,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | 10° Heating | `heat-wave` | `switch` | `10degreeHeatingStatus` |
 | Air Conditioner | `air-conditioner` | `climate` | `settings` |
 | Echo | `account-voice` | `switch` | `echoStatus` |
-| Eco Mode |  | `switch` | `ecoMode` |
+| Eco Mode | `sprout` | `switch` | `ecoMode` |
 | Eco Pilot | `run` | `select` | `settings.humanSensingStatus` |
 | Health Mode | `medication-outline` | `switch` | `healthMode` |
 | Night Mode | `bed` | `switch` | `silentSleepStatus` |
@@ -179,14 +179,14 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Aroma Time Off | `thermometer` | `number` | `settings.aromaTimeOff` |
-| Aroma Time On | `thermometer` | `number` | `settings.aromaTimeOn` |
-| Diffuser Level |  | `select` | `settings.aromaStatus` |
+| Aroma Time Off | `scent-off` | `number` | `settings.aromaTimeOff` |
+| Aroma Time On | `scent` | `number` | `settings.aromaTimeOn` |
+| Diffuser Level | `air-filter` | `select` | `settings.aromaStatus` |
 | Light status |  | `light` | `settings.lightStatus` |
 | Lock Status |  | `lock` | `lockStatus` |
-| Mode | `run` | `select` | `settings.machMode` |
-| Pollen Level |  | `number` | `settings.pollenLevel` |
-| Touch Tone |  | `switch` | `touchToneStatus` |
+| Mode | `play` | `select` | `settings.machMode` |
+| Pollen Level | `flower-pollen` | `number` | `settings.pollenLevel` |
+| Touch Tone | `account-voice` | `switch` | `touchToneStatus` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -360,8 +360,8 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Anti-Crease | `timer` | `switch` | `startProgram.antiCreaseTime` |
-| Anti-Crease | `timer` | `switch` | `startProgram.anticrease` |
+| Anti-Crease | `iron` | `switch` | `startProgram.antiCreaseTime` |
+| Anti-Crease | `iron` | `switch` | `startProgram.anticrease` |
 | Delay time | `timer-plus` | `number` | `startProgram.delayTime` |
 | Dry Time |  | `number` | `startProgram.dryTime` |
 | Dry Time | `timer` | `select` | `startProgram.dryTimeMM` |
@@ -369,14 +369,13 @@ For every device exists a button under diagnostics which can be used to log all 
 | Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
 | Program |  | `select` | `startProgram.program` |
 | Steam Type | `weather-dust` | `sensor` | `steamType` |
-| Steam level | `smoke` | `sensor` | `startProgram.steamLevel` |
 | Sterilization | `clock-start` | `switch` | `startProgram.sterilizationStatus` |
 | Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` |
 | Temperature level | `thermometer` | `number` | `startProgram.tempLevel` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Anti-Crease |  | `binary_sensor` | `anticrease` |
+| Anti-Crease | `iron` | `binary_sensor` | `anticrease` |
 | Connection |  | `binary_sensor` | `attributes.lastConnEvent.category` |
 | Door |  | `binary_sensor` | `doorStatus` |
 | Dry level | `hair-dryer` | `sensor` | `dryLevel` |
@@ -386,7 +385,6 @@ For every device exists a button under diagnostics which can be used to log all 
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Start Time | `clock-start` | `sensor` | `delayTime` |
-| Steam level | `smoke` | `sensor` | `steamLevel` |
 | Temperature level | `thermometer` | `sensor` | `tempLevel` |
 
 ### Wine Cellar
@@ -420,8 +418,8 @@ For every device exists a button under diagnostics which can be used to log all 
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Acqua Plus | `water-plus` | `switch` | `startProgram.acquaplus` |
-| Anti-Crease | `timer` | `switch` | `startProgram.antiCreaseTime` |
-| Anti-Crease | `timer` | `switch` | `startProgram.anticrease` |
+| Anti-Crease | `iron` | `switch` | `startProgram.antiCreaseTime` |
+| Anti-Crease | `iron` | `switch` | `startProgram.anticrease` |
 | Auto Dose Detergent | `cup` | `switch` | `startProgram.autoDetergentStatus` |
 | Auto Dose Softener | `teddy-bear` | `switch` | `startProgram.autoSoftenerStatus` |
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
@@ -443,9 +441,8 @@ For every device exists a button under diagnostics which can be used to log all 
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
 | Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` |
 | Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |
-| Steam Level | `weather-dust` | `number` | `startProgram.steamLevel` |
 | Steam Type | `weather-dust` | `sensor` | `steamType` |
-| Steam level | `smoke` | `sensor` | `startProgram.steamLevel` |
+| Steam level | `weather-dust` | `select` | `startProgram.steamLevel` |
 | Sterilization | `clock-start` | `switch` | `startProgram.sterilizationStatus` |
 | Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadW` |
 | Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` |
@@ -457,8 +454,8 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Acqua Plus |  | `binary_sensor` | `acquaplus` |
-| Anti-Crease |  | `binary_sensor` | `anticrease` |
+| Acqua Plus | `water-plus` | `binary_sensor` | `acquaplus` |
+| Anti-Crease | `iron` | `binary_sensor` | `anticrease` |
 | Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
 | Current Temperature | `thermometer` | `sensor` | `temp` |
 | Current Water Used | `water` | `sensor` | `currentWaterUsed` |
@@ -467,19 +464,19 @@ For every device exists a button under diagnostics which can be used to log all 
 | Door Lock |  | `binary_sensor` | `doorLockStatus` |
 | Dry level | `hair-dryer` | `sensor` | `dryLevel` |
 | Error | `math-log` | `sensor` | `errors` |
-| Extra Rinse 1 |  | `binary_sensor` | `extraRinse1` |
-| Extra Rinse 2 |  | `binary_sensor` | `extraRinse2` |
-| Extra Rinse 3 |  | `binary_sensor` | `extraRinse3` |
-| Good Night Mode |  | `binary_sensor` | `goodNight` |
+| Extra Rinse 1 | `numeric-1-box-multiple-outline` | `binary_sensor` | `extraRinse1` |
+| Extra Rinse 2 | `numeric-2-box-multiple-outline` | `binary_sensor` | `extraRinse2` |
+| Extra Rinse 3 | `numeric-3-box-multiple-outline` | `binary_sensor` | `extraRinse3` |
+| Good Night Mode | `weather-night` | `binary_sensor` | `goodNight` |
 | Machine Status | `information` | `sensor` | `machMode` |
-| Pre Wash |  | `binary_sensor` | `startProgram.prewash` |
+| Pre Wash | `tshirt-crew` | `binary_sensor` | `prewash` |
 | Program | `play` | `sensor` | `programName` |
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
 | Spin Speed | `speedometer` | `sensor` | `spinSpeed` |
 | Start Time | `clock-start` | `sensor` | `delayTime` |
-| Steam level | `smoke` | `sensor` | `steamLevel` |
+| Steam level | `weather-dust` | `sensor` | `steamLevel` |
 | Temperature level | `thermometer` | `sensor` | `tempLevel` |
 | Total Power |  | `sensor` | `totalElectricityUsed` |
 | Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` |
@@ -513,7 +510,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
 | Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` |
 | Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |
-| Steam Level | `weather-dust` | `number` | `startProgram.steamLevel` |
+| Steam level | `weather-dust` | `select` | `startProgram.steamLevel` |
 | Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadW` |
 | Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` |
 | Temperature | `thermometer` | `select` | `startProgram.temp` |
@@ -522,7 +519,7 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Acqua Plus |  | `binary_sensor` | `acquaplus` |
+| Acqua Plus | `water-plus` | `binary_sensor` | `acquaplus` |
 | Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
 | Current Temperature | `thermometer` | `sensor` | `temp` |
 | Current Water Used | `water` | `sensor` | `currentWaterUsed` |
@@ -530,17 +527,18 @@ For every device exists a button under diagnostics which can be used to log all 
 | Door |  | `binary_sensor` | `doorStatus` |
 | Door Lock |  | `binary_sensor` | `doorLockStatus` |
 | Error | `math-log` | `sensor` | `errors` |
-| Extra Rinse 1 |  | `binary_sensor` | `extraRinse1` |
-| Extra Rinse 2 |  | `binary_sensor` | `extraRinse2` |
-| Extra Rinse 3 |  | `binary_sensor` | `extraRinse3` |
-| Good Night Mode |  | `binary_sensor` | `goodNight` |
+| Extra Rinse 1 | `numeric-1-box-multiple-outline` | `binary_sensor` | `extraRinse1` |
+| Extra Rinse 2 | `numeric-2-box-multiple-outline` | `binary_sensor` | `extraRinse2` |
+| Extra Rinse 3 | `numeric-3-box-multiple-outline` | `binary_sensor` | `extraRinse3` |
+| Good Night Mode | `weather-night` | `binary_sensor` | `goodNight` |
 | Machine Status | `information` | `sensor` | `machMode` |
-| Pre Wash |  | `binary_sensor` | `startProgram.prewash` |
+| Pre Wash | `tshirt-crew` | `binary_sensor` | `prewash` |
 | Program | `play` | `sensor` | `programName` |
 | Program Phase | `washing-machine` | `sensor` | `prPhase` |
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
 | Spin Speed | `speedometer` | `sensor` | `spinSpeed` |
+| Steam level | `weather-dust` | `sensor` | `steamLevel` |
 | Total Power |  | `sensor` | `totalElectricityUsed` |
 | Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` |
 | Total Water |  | `sensor` | `totalWaterUsed` |
