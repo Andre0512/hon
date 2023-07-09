@@ -16,15 +16,8 @@ _LOGGER = logging.getLogger(__name__)
 
 
 @dataclass
-class HonBinarySensorEntityDescriptionMixin:
+class HonBinarySensorEntityDescription(BinarySensorEntityDescription):
     on_value: str | float = ""
-
-
-@dataclass
-class HonBinarySensorEntityDescription(
-    HonBinarySensorEntityDescriptionMixin, BinarySensorEntityDescription
-):
-    pass
 
 
 BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {

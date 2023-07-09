@@ -388,7 +388,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         setting = self._device.settings[f"settings.{self.entity_description.key}"]
         if type(setting) == HonParameter:
             return
-        setting.value = setting.max if isinstance(setting, HonParameterRange) else "1"
+        setting.value = setting.max if isinstance(setting, HonParameterRange) else 1
         self.async_write_ha_state()
         await self._device.commands["settings"].send()
         await self.coordinator.async_refresh()
@@ -397,7 +397,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         setting = self._device.settings[f"settings.{self.entity_description.key}"]
         if type(setting) == HonParameter:
             return
-        setting.value = setting.min if isinstance(setting, HonParameterRange) else "0"
+        setting.value = setting.min if isinstance(setting, HonParameterRange) else 0
         self.async_write_ha_state()
         await self._device.commands["settings"].send()
         await self.coordinator.async_refresh()
@@ -413,8 +413,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
 
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
-        value = self._device.get(self.entity_description.key, 0)
-        self._attr_state = value == 1
+        self._attr_is_on = self.is_on
         if update:
             self.async_write_ha_state()
 
@@ -490,7 +489,6 @@ class HonConfigSwitchEntity(HonEntity, SwitchEntity):
 
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
-        value = self._device.settings.get(self.entity_description.key, "0")
-        self._attr_state = value == "1"
+        self._attr_is_on = self.is_on
         if update:
             self.async_write_ha_state()

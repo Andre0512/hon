@@ -199,9 +199,11 @@ class HonConfigSelectEntity(HonEntity, SelectEntity):
 
     def _option_to_number(self, option: str, values: List[str]):
         if (options := self.entity_description.option_list) is not None:
-            return next(
-                (k for k, v in options.items() if str(k) in values and v == option),
-                option,
+            return str(
+                next(
+                    (k for k, v in options.items() if str(k) in values and v == option),
+                    option,
+                )
             )
         return option
 

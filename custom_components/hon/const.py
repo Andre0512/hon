@@ -218,6 +218,7 @@ AP_MACH_MODE = {
 }
 
 AP_DIFFUSER_LEVEL = {
+    0: "off",
     1: "soft",
     2: "mid",
     3: "h_biotics",
