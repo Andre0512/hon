@@ -49,6 +49,13 @@ SELECTS = {
             name="Program",
             translation_key="programs_wm",
         ),
+        HonConfigSelectEntityDescription(
+            key="startProgram.steamLevel",
+            name="Steam level",
+            icon="mdi:weather-dust",
+            translation_key="steam_level",
+            option_list=const.STEAM_LEVEL,
+        ),
     ),
     "TD": (
         HonConfigSelectEntityDescription(

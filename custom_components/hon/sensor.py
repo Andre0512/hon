@@ -186,6 +186,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             device_class=SensorDeviceClass.ENUM,
             translation_key="programs_wm",
         ),
+        HonSensorEntityDescription(
+            key="steamLevel",
+            name="Steam level",
+            icon="mdi:weather-dust",
+            device_class=SensorDeviceClass.ENUM,
+            translation_key="steam_level",
+            option_list=const.STEAM_LEVEL,
+        ),
     ),
     "TD": (
         HonSensorEntityDescription(
@@ -258,22 +266,6 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:lightning-bolt-circle",
             state_class=SensorStateClass.MEASUREMENT,
             translation_key="energy_label",
-        ),
-        HonConfigSensorEntityDescription(
-            key="startProgram.steamLevel",
-            name="Steam level",
-            device_class=SensorDeviceClass.ENUM,
-            icon="mdi:smoke",
-            translation_key="steam_level",
-            option_list=const.STEAM_LEVEL,
-        ),
-        HonSensorEntityDescription(
-            key="steamLevel",
-            name="Steam level",
-            icon="mdi:smoke",
-            device_class=SensorDeviceClass.ENUM,
-            translation_key="steam_level",
-            option_list=const.STEAM_LEVEL,
         ),
         HonConfigSensorEntityDescription(
             key="steamType",

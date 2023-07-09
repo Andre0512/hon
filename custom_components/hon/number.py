@@ -49,12 +49,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             translation_key="wash_time",
         ),
         HonConfigNumberEntityDescription(
-            key="startProgram.steamLevel",
-            name="Steam Level",
-            icon="mdi:weather-dust",
-            translation_key="steam_level",
-        ),
-        HonConfigNumberEntityDescription(
             key="startProgram.waterHard",
             name="Water hard",
             icon="mdi:water",
