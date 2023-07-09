@@ -1650,6 +1650,15 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Úroveň páry"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Málo",
+                    "normal": "Normální",
+                    "very": "Velmi",
+                    "unknown": "unknown"
+                },
+                "name": "Míra znečištění"
             }
         },
         "switch": {

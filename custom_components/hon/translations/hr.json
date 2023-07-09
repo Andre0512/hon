@@ -1650,6 +1650,15 @@
                     "synthetic": "Sintetika"
                 },
                 "name": "Razina pare"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Neznatno",
+                    "normal": "Uobičajeno",
+                    "very": "Izuzetno",
+                    "unknown": "unknown"
+                },
+                "name": "Stupanj zaprljanosti"
             }
         },
         "switch": {

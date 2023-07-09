@@ -1650,6 +1650,15 @@
                     "synthetic": "Synthetik"
                 },
                 "name": "Dampfstufe"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Wenig",
+                    "normal": "Normal",
+                    "very": "Sehr",
+                    "unknown": "unknown"
+                },
+                "name": "Verschmutzungsgrad"
             }
         },
         "switch": {

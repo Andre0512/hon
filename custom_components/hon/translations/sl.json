@@ -1650,6 +1650,15 @@
                     "synthetic": "Sintetika"
                 },
                 "name": "Količina pare"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Malo",
+                    "normal": "Normalno",
+                    "very": "Zelo",
+                    "unknown": "unknown"
+                },
+                "name": "Stopnja umazanije"
             }
         },
         "switch": {

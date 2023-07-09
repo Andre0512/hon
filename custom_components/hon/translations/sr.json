@@ -1650,6 +1650,15 @@
                     "synthetic": "Sintetika"
                 },
                 "name": "Nivo pare"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Malo",
+                    "normal": "Normalno",
+                    "very": "Veoma",
+                    "unknown": "unknown"
+                },
+                "name": "Nivo zaprljanosti"
             }
         },
         "switch": {

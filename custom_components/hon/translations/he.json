@@ -771,6 +771,15 @@
                     "synthetic": "מְלָאכוּתִי"
                 },
                 "name": "מפלס קיטור"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "קטן",
+                    "normal": "נוֹרמָלִי",
+                    "very": "מאוד",
+                    "unknown": "unknown"
+                },
+                "name": "רמת עפר"
             }
         },
         "switch": {

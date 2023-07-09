@@ -424,6 +424,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Auto Dose Softener | `teddy-bear` | `switch` | `startProgram.autoSoftenerStatus` |
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
 | Delay Time | `timer-plus` | `number` | `startProgram.delayTime` |
+| Dirty level | `liquid-spot` | `select` | `startProgram.dirtyLevel` |
 | Dry Time |  | `number` | `startProgram.dryTime` |
 | Dry Time | `timer` | `select` | `startProgram.dryTimeMM` |
 | Dry level | `hair-dryer` | `select` | `startProgram.dryLevel` |
@@ -459,7 +460,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
 | Current Temperature | `thermometer` | `sensor` | `temp` |
 | Current Water Used | `water` | `sensor` | `currentWaterUsed` |
-| Dirt level | `liquid-spot` | `sensor` | `dirtyLevel` |
+| Dirty level | `liquid-spot` | `sensor` | `dirtyLevel` |
 | Door |  | `binary_sensor` | `doorStatus` |
 | Door Lock |  | `binary_sensor` | `doorLockStatus` |
 | Dry level | `hair-dryer` | `sensor` | `dryLevel` |
@@ -496,6 +497,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Auto Dose Softener | `teddy-bear` | `switch` | `startProgram.autoSoftenerStatus` |
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
 | Delay Time | `timer-plus` | `number` | `startProgram.delayTime` |
+| Dirty level | `liquid-spot` | `select` | `startProgram.dirtyLevel` |
 | Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
 | Extra Rinse 1 | `numeric-1-box-multiple-outline` | `switch` | `startProgram.extraRinse1` |
 | Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `startProgram.extraRinse2` |
@@ -523,7 +525,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Current Electricity Used | `lightning-bolt` | `sensor` | `currentElectricityUsed` |
 | Current Temperature | `thermometer` | `sensor` | `temp` |
 | Current Water Used | `water` | `sensor` | `currentWaterUsed` |
-| Dirt level | `liquid-spot` | `sensor` | `dirtyLevel` |
+| Dirty level | `liquid-spot` | `sensor` | `dirtyLevel` |
 | Door |  | `binary_sensor` | `doorStatus` |
 | Door Lock |  | `binary_sensor` | `doorLockStatus` |
 | Error | `math-log` | `sensor` | `errors` |

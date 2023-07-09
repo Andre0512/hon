@@ -1650,6 +1650,15 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Nivel abur"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Puțin",
+                    "normal": "Normal",
+                    "very": "Foarte",
+                    "unknown": "unknown"
+                },
+                "name": "Nivel de murdărie"
             }
         },
         "switch": {

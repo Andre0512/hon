@@ -1650,6 +1650,15 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Buhar Seviyesi"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Az",
+                    "normal": "Normal",
+                    "very": "Çok",
+                    "unknown": "unknown"
+                },
+                "name": "Kir seviyesi"
             }
         },
         "switch": {

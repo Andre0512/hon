@@ -56,6 +56,13 @@ SELECTS = {
             translation_key="steam_level",
             option_list=const.STEAM_LEVEL,
         ),
+        HonConfigSelectEntityDescription(
+            key="startProgram.dirtyLevel",
+            name="Dirty level",
+            icon="mdi:liquid-spot",
+            translation_key="dirt_level",
+            option_list=const.DIRTY_LEVEL,
+        ),
     ),
     "TD": (
         HonConfigSelectEntityDescription(

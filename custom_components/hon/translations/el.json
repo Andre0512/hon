@@ -1650,6 +1650,15 @@
                     "synthetic": "Συνθετικά"
                 },
                 "name": "Επίπεδο ατμού"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Λίγη",
+                    "normal": "Κανονική",
+                    "very": "Πολύ",
+                    "unknown": "unknown"
+                },
+                "name": "Επίπεδο βρωμιάς"
             }
         },
         "switch": {

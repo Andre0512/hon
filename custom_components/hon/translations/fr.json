@@ -1650,6 +1650,15 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Niveau de vapeur"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Faible",
+                    "normal": "Normal",
+                    "very": "Élevé",
+                    "unknown": "unknown"
+                },
+                "name": "Niveau de saleté"
             }
         },
         "switch": {

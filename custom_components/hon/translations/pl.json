@@ -1650,6 +1650,15 @@
                     "synthetic": "Syntetyczne"
                 },
                 "name": "Poziom pary"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Niskie",
+                    "normal": "Standardowe",
+                    "very": "Wysokie",
+                    "unknown": "unknown"
+                },
+                "name": "Stopień zabrudzenia"
             }
         },
         "switch": {

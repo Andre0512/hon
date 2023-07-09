@@ -1650,6 +1650,15 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Stoomniveau"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Weinig",
+                    "normal": "Normaal",
+                    "very": "Heel",
+                    "unknown": "unknown"
+                },
+                "name": "Vuilheid"
             }
         },
         "switch": {

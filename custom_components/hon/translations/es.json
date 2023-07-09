@@ -1650,6 +1650,15 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Nivel de vapor"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Poco",
+                    "normal": "Normal",
+                    "very": "Mucho",
+                    "unknown": "unknown"
+                },
+                "name": "Nivel de suciedad"
             }
         },
         "switch": {

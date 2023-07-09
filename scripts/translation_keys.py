@@ -129,6 +129,7 @@ SELECT = {
     "steam_level": STEAM_LEVEL,
     "mode": AP_MACH_MODE,
     "diffuser": AP_DIFFUSER_LEVEL,
+    "dirt_level": DIRTY_LEVEL,
 }
 
 PROGRAMS = {
@@ -291,6 +292,7 @@ NAMES = {
         "diffuser": "AP.TITLES.DIFFUSER",
         "mode": "CUBE90_GLOBAL.GENERAL.MODE",
         "steam_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.STEAM_LEVEL",
+        "dirt_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.DIRTY_LEVEL",
     },
     "sensor": {
         "dry_levels": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_LEVEL",

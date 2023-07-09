@@ -1677,6 +1677,15 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Steam Level"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Little",
+                    "normal": "Normal",
+                    "very": "Very",
+                    "unknown": "unknown"
+                },
+                "name": "Dirt level"
             }
         },
         "switch": {

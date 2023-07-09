@@ -1650,6 +1650,15 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "蒸汽档位"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "少量",
+                    "normal": "正常",
+                    "very": "非常",
+                    "unknown": "unknown"
+                },
+                "name": "脏污程度"
             }
         },
         "switch": {

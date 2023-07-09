@@ -157,7 +157,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         ),
         HonSensorEntityDescription(
             key="dirtyLevel",
-            name="Dirt level",
+            name="Dirty level",
             icon="mdi:liquid-spot",
             device_class=SensorDeviceClass.ENUM,
             translation_key="dirt_level",

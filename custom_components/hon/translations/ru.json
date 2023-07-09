@@ -1650,6 +1650,15 @@
                     "synthetic": "Синтетика"
                 },
                 "name": "Уровень пара"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Мало",
+                    "normal": "Нормально",
+                    "very": "Очень",
+                    "unknown": "unknown"
+                },
+                "name": "Уровень загрязнения"
             }
         },
         "switch": {

@@ -1655,6 +1655,15 @@
                     "synthetic": "Sintetici"
                 },
                 "name": "Livello vapore"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Poco",
+                    "normal": "Normale",
+                    "very": "Molto",
+                    "unknown": "unknown"
+                },
+                "name": "Livello di sporco"
             }
         },
         "switch": {
