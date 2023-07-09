@@ -166,18 +166,21 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
         HonNumberEntityDescription(
             key="settings.aromaTimeOn",
             name="Aroma Time On",
-            icon="mdi:thermometer",
+            icon="mdi:scent",
             native_unit_of_measurement=UnitOfTime.SECONDS,
+            translation_key="aroma_time_on",
         ),
         HonNumberEntityDescription(
             key="settings.aromaTimeOff",
             name="Aroma Time Off",
-            icon="mdi:thermometer",
+            icon="mdi:scent-off",
             native_unit_of_measurement=UnitOfTime.SECONDS,
+            translation_key="aroma_time_off",
         ),
         HonNumberEntityDescription(
             key="settings.pollenLevel",
             name="Pollen Level",
+            icon="mdi:flower-pollen",
             translation_key="pollen_level",
         ),
     ),

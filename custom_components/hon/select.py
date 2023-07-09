@@ -139,11 +139,12 @@ SELECTS = {
             name="Diffuser Level",
             option_list=const.AP_DIFFUSER_LEVEL,
             translation_key="diffuser",
+            icon="mdi:air-filter",
         ),
         HonSelectEntityDescription(
             key="settings.machMode",
             name="Mode",
-            icon="mdi:run",
+            icon="mdi:play",
             option_list=const.AP_MACH_MODE,
             translation_key="mode",
         ),

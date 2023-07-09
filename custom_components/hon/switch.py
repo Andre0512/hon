@@ -142,13 +142,13 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         HonConfigSwitchEntityDescription(
             key="startProgram.antiCreaseTime",
             name="Anti-Crease",
-            icon="mdi:timer",
+            icon="mdi:iron",
             translation_key="anti_crease",
         ),
         HonConfigSwitchEntityDescription(
             key="startProgram.anticrease",
             name="Anti-Crease",
-            icon="mdi:timer",
+            icon="mdi:iron",
             translation_key="anti_crease",
         ),
     ),
@@ -253,6 +253,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         HonSwitchEntityDescription(
             key="ecoMode",
             name="Eco Mode",
+            icon="mdi:sprout",
             translation_key="eco_mode",
         ),
         HonSwitchEntityDescription(
@@ -334,6 +335,7 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
         HonSwitchEntityDescription(
             key="touchToneStatus",
             name="Touch Tone",
+            icon="mdi:account-voice",
             translation_key="touch_tone",
         ),
     ),

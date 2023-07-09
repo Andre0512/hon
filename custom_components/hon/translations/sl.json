@@ -808,7 +808,13 @@
                 "name": "Količina pare"
             },
             "dirt_level": {
-                "name": "Stopnja umazanije"
+                "name": "Stopnja umazanije",
+                "state": {
+                    "little": "Malo",
+                    "normal": "Normalno",
+                    "very": "Zelo",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "S funkcijo Zamik vklopa je možno odložiti začetek sušilnega cikla od 1 do 24 ur. Na zaslonu se prikaže izbrana zakasnitev. Da bi videli kako se zmanjšuje iz ure v uro, pritisnite ZAČETEK. Na ta način bo perilo suho takrat, ko boste to želeli, in zagnali cikel, ko vam to najbolj ustreza, celo ponoči."
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Lahkohlapne organske spojine (HOS)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Brez pare",
+                    "cotton": "Bombaž",
+                    "delicate": "Občutljivo",
+                    "synthetic": "Sintetika"
+                },
+                "name": "Količina pare"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Time remaining"
             },
             "diffuser": {
-                "name": "Razpršilnik"
+                "name": "Razpršilnik",
+                "state": {
+                    "soft": "Nežno",
+                    "mid": "Srednje",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Prilagodi",
+                    "off": "Off"
+                }
             },
             "mode": {
-                "name": "Mode"
+                "name": "Mode",
+                "state": {
+                    "standby": "Stanje pripravljenosti",
+                    "sleep": "Spanje",
+                    "auto": "Samodejno",
+                    "allergens": "Alergeni",
+                    "max": "Maksimalno"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Brez pare",
+                    "cotton": "Bombaž",
+                    "delicate": "Občutljivo",
+                    "synthetic": "Sintetika"
+                },
+                "name": "Količina pare"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Raven cvetnega prahu"
+            },
+            "aroma_time_on": {
+                "name": "Razpršilnik (VKLOP)"
+            },
+            "aroma_time_off": {
+                "name": "Razpršilnik (IZKLOP)"
             }
         },
         "climate": {

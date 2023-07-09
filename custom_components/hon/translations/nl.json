@@ -808,7 +808,13 @@
                 "name": "Stoomniveau"
             },
             "dirt_level": {
-                "name": "Vuilheid"
+                "name": "Vuilheid",
+                "state": {
+                    "little": "Weinig",
+                    "normal": "Normaal",
+                    "very": "Heel",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Vertraag Start"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Gas (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Geen stoom",
+                    "cotton": "Katoen",
+                    "delicate": "Fijne was",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Stoomniveau"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Resterende tijd"
             },
             "diffuser": {
-                "name": "Diffuser"
+                "name": "Diffuser",
+                "state": {
+                    "soft": "Zacht",
+                    "mid": "Medium",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Personaliseren",
+                    "off": "Uit"
+                }
             },
             "mode": {
-                "name": "Modus"
+                "name": "Modus",
+                "state": {
+                    "standby": "Stand-by",
+                    "sleep": "Slaap",
+                    "auto": "Automatisch",
+                    "allergens": "Allergenen",
+                    "max": "Max"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Geen stoom",
+                    "cotton": "Katoen",
+                    "delicate": "Fijne was",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Stoomniveau"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Pollenniveau"
+            },
+            "aroma_time_on": {
+                "name": "Diffuser (AAN)"
+            },
+            "aroma_time_off": {
+                "name": "Diffuser (UIT)"
             }
         },
         "climate": {

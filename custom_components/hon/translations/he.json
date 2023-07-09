@@ -364,7 +364,13 @@
                 "name": "מפלס קיטור"
             },
             "dirt_level": {
-                "name": "רמת עפר"
+                "name": "רמת עפר",
+                "state": {
+                    "little": "קטן",
+                    "normal": "נוֹרמָלִי",
+                    "very": "מאוד",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Delay Start"
@@ -416,6 +422,15 @@
             },
             "voc": {
                 "name": "Gas (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "אין קיטור",
+                    "cotton": "כותנה",
+                    "delicate": "עָדִין",
+                    "synthetic": "מְלָאכוּתִי"
+                },
+                "name": "מפלס קיטור"
             }
         },
         "select": {
@@ -729,10 +744,33 @@
                 "name": "זמן שנותר"
             },
             "diffuser": {
-                "name": "Diffuser"
+                "name": "Diffuser",
+                "state": {
+                    "soft": "Soft",
+                    "mid": "Mid",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Customise",
+                    "off": "כבוי"
+                }
             },
             "mode": {
-                "name": "Mode"
+                "name": "Mode",
+                "state": {
+                    "standby": "Standby",
+                    "sleep": "Sleep",
+                    "auto": "Auto",
+                    "allergens": "Allergens",
+                    "max": "Max"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "אין קיטור",
+                    "cotton": "כותנה",
+                    "delicate": "עָדִין",
+                    "synthetic": "מְלָאכוּתִי"
+                },
+                "name": "מפלס קיטור"
             }
         },
         "switch": {
@@ -978,6 +1016,12 @@
             },
             "pollen_level": {
                 "name": "Pollen level"
+            },
+            "aroma_time_on": {
+                "name": "Diffuser (ON)"
+            },
+            "aroma_time_off": {
+                "name": "Diffuser (OFF)"
             }
         },
         "climate": {

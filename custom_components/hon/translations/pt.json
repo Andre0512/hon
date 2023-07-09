@@ -808,7 +808,13 @@
                 "name": "Nível de vapor"
             },
             "dirt_level": {
-                "name": "Nível de sujidade"
+                "name": "Nível de sujidade",
+                "state": {
+                    "little": "Pouco",
+                    "normal": "Normal",
+                    "very": "Muito",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Início adiado"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Gás (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Sem vapor",
+                    "cotton": "Algodão",
+                    "delicate": "Roupa delicada",
+                    "synthetic": "Sintéticos"
+                },
+                "name": "Nível de vapor"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Tempo restante"
             },
             "diffuser": {
-                "name": "Difusor"
+                "name": "Difusor",
+                "state": {
+                    "soft": "Suave",
+                    "mid": "Médio",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Personalizar",
+                    "off": "Off"
+                }
             },
             "mode": {
-                "name": "Modo"
+                "name": "Modo",
+                "state": {
+                    "standby": "Em espera",
+                    "sleep": "Sono",
+                    "auto": "Auto",
+                    "allergens": "Alergénios",
+                    "max": "Máx."
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Sem vapor",
+                    "cotton": "Algodão",
+                    "delicate": "Roupa delicada",
+                    "synthetic": "Sintéticos"
+                },
+                "name": "Nível de vapor"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Nível de pólenes"
+            },
+            "aroma_time_on": {
+                "name": "Difusor (ON)"
+            },
+            "aroma_time_off": {
+                "name": "Difusor (OFF)"
             }
         },
         "climate": {

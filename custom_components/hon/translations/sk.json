@@ -808,7 +808,13 @@
                 "name": "Úroveň nastavenia pary"
             },
             "dirt_level": {
-                "name": "Úroveň znečistenia"
+                "name": "Úroveň znečistenia",
+                "state": {
+                    "little": "Málo",
+                    "normal": "Normálne",
+                    "very": "Veľa",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Odložený štart"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Plyn (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Bez pary",
+                    "cotton": "Bavlna",
+                    "delicate": "Jemné materiály",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Úroveň nastavenia pary"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Zostávajúci čas"
             },
             "diffuser": {
-                "name": "Difuzér"
+                "name": "Difuzér",
+                "state": {
+                    "soft": "Mierny",
+                    "mid": "Stredný",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Prispôsobiť",
+                    "off": "Vyp."
+                }
             },
             "mode": {
-                "name": "Mode"
+                "name": "Mode",
+                "state": {
+                    "standby": "Pohotovostný režim",
+                    "sleep": "Spánok",
+                    "auto": "Automatika",
+                    "allergens": "Alergény",
+                    "max": "Max"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Bez pary",
+                    "cotton": "Bavlna",
+                    "delicate": "Jemné materiály",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Úroveň nastavenia pary"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Úroveň peľu"
+            },
+            "aroma_time_on": {
+                "name": "Difuzér (ZAP)"
+            },
+            "aroma_time_off": {
+                "name": "Difuzér (VYP)"
             }
         },
         "climate": {

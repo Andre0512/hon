@@ -85,6 +85,23 @@ AC_HUMAN_SENSE = {
     "unknown": "unknown",
 }
 
+AP_MACH_MODE = {
+    "standby": "AP.RUNNING_MODE.STANDBY",
+    "sleep": "AP.RUNNING_MODE.SLEEP",
+    "auto": "AP.RUNNING_MODE.AUTO",
+    "allergens": "AP.RUNNING_MODE.ALLERGENS",
+    "max": "AP.RUNNING_MODE.MAX",
+}
+
+AP_DIFFUSER_LEVEL = {
+    "off": "GLOBALS.GENERAL.OFF",
+    "soft": "AP.MODE_DIFFUSER.LEVEL_SOFT",
+    "mid": "AP.MODE_DIFFUSER.LEVEL_MID",
+    "h_biotics": "AP.MODE_DIFFUSER.LEVEL_H_BIOTICS",
+    "custom": "AP.MODE_DIFFUSER.LEVEL_CUSTOM",
+}
+
+
 REF_ZONES = {
     "fridge": "REF.ZONES.FRIDGE",
     "freezer": "REF.ZONES.FREEZER",
@@ -100,6 +117,8 @@ SENSOR = {
     "program_phases_td": TUMBLE_DRYER_PR_PHASE,
     "program_phases_dw": DISHWASHER_PR_PHASE,
     "dry_levels": TUMBLE_DRYER_DRY_LEVEL,
+    "dirt_level": DIRTY_LEVEL,
+    "steam_level": STEAM_LEVEL,
 }
 
 SELECT = {
@@ -107,6 +126,9 @@ SELECT = {
     "eco_pilot": AC_HUMAN_SENSE,
     "fan_mode": AC_FAN_MODE,
     "ref_zones": REF_ZONES,
+    "steam_level": STEAM_LEVEL,
+    "mode": AP_MACH_MODE,
+    "diffuser": AP_DIFFUSER_LEVEL,
 }
 
 PROGRAMS = {
@@ -335,10 +357,11 @@ NAMES = {
         "rinse_iterations": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL.DRAWER_HEADER_RINSE",
         "wash_time": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL.WASHING_TIME",
         "dry_time": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_TIME",
-        "steam_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.STEAM_LEVEL",
         "freezer_temp_sel": ["OV.COMMON.GOAL_TEMPERATURE", "REF.ZONES.FREEZER"],
         "fridge_temp_sel": ["OV.COMMON.GOAL_TEMPERATURE", "REF.ZONES.FRIDGE"],
         "pollen_level": "AP.AIR_QUALITY.POLLEN_LEVEL",
+        "aroma_time_on": "AP.TITLES.AROMA_ON",
+        "aroma_time_off": "AP.TITLES.AROMA_OFF",
     },
     "climate": {
         "air_conditioner": "GLOBALS.APPLIANCES_NAME.AC",

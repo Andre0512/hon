@@ -808,7 +808,13 @@
                 "name": "Nivo pare"
             },
             "dirt_level": {
-                "name": "Nivo zaprljanosti"
+                "name": "Nivo zaprljanosti",
+                "state": {
+                    "little": "Malo",
+                    "normal": "Normalno",
+                    "very": "Veoma",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Odloženi start"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Gas (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Bez vodene pare",
+                    "cotton": "Pamuk",
+                    "delicate": "Osetljivi materijali",
+                    "synthetic": "Sintetika"
+                },
+                "name": "Nivo pare"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Preostalo vreme"
             },
             "diffuser": {
-                "name": "Difuzor"
+                "name": "Difuzor",
+                "state": {
+                    "soft": "Meki",
+                    "mid": "Srednje",
+                    "h_biotics": "„H-BIOTICS“",
+                    "custom": "Prilagodi",
+                    "off": "Isključeno"
+                }
             },
             "mode": {
-                "name": "Mode"
+                "name": "Mode",
+                "state": {
+                    "standby": "U pripravnosti",
+                    "sleep": "Spavanje",
+                    "auto": "Automatski",
+                    "allergens": "Alergeni",
+                    "max": "Maks."
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Bez vodene pare",
+                    "cotton": "Pamuk",
+                    "delicate": "Osetljivi materijali",
+                    "synthetic": "Sintetika"
+                },
+                "name": "Nivo pare"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Nivo polena u vazduhu"
+            },
+            "aroma_time_on": {
+                "name": "Difuzor (UKLJUČENO)"
+            },
+            "aroma_time_off": {
+                "name": "Difuzor (ISKLJUČENO)"
             }
         },
         "climate": {

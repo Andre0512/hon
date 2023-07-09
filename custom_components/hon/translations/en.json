@@ -823,7 +823,13 @@
                 "name": "Steam Level"
             },
             "dirt_level": {
-                "name": "Dirt level"
+                "name": "Dirt level",
+                "state": {
+                    "little": "Little",
+                    "normal": "Normal",
+                    "very": "Very",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Delay Start"
@@ -880,6 +886,15 @@
             },
             "voc": {
                 "name": "Gas (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "No steam",
+                    "cotton": "Cotton",
+                    "delicate": "Delicate",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Steam Level"
             }
         },
         "select": {
@@ -1635,10 +1650,33 @@
                 "name": "Time remaining"
             },
             "diffuser": {
-                "name": "Diffuser"
+                "name": "Diffuser",
+                "state": {
+                    "soft": "Soft",
+                    "mid": "Mid",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Customise",
+                    "off": "Off"
+                }
             },
             "mode": {
-                "name": "Mode"
+                "name": "Mode",
+                "state": {
+                    "standby": "Standby",
+                    "sleep": "Sleep",
+                    "auto": "Auto",
+                    "allergens": "Allergens",
+                    "max": "Max"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "No steam",
+                    "cotton": "Cotton",
+                    "delicate": "Delicate",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Steam Level"
             }
         },
         "switch": {
@@ -1884,6 +1922,12 @@
             },
             "pollen_level": {
                 "name": "Pollen level"
+            },
+            "aroma_time_on": {
+                "name": "Diffuser (ON)"
+            },
+            "aroma_time_off": {
+                "name": "Diffuser (OFF)"
             }
         },
         "climate": {

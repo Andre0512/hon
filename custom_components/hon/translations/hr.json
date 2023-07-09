@@ -808,7 +808,13 @@
                 "name": "Razina pare"
             },
             "dirt_level": {
-                "name": "Stupanj zaprljanosti"
+                "name": "Stupanj zaprljanosti",
+                "state": {
+                    "little": "Neznatno",
+                    "normal": "Uobičajeno",
+                    "very": "Izuzetno",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Odgoda početka"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Plinovi (HOS-ovi)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Bez pare",
+                    "cotton": "Pamuk",
+                    "delicate": "Osjetljivo rublje",
+                    "synthetic": "Sintetika"
+                },
+                "name": "Razina pare"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Preostalo vrijeme"
             },
             "diffuser": {
-                "name": "Raspršivač"
+                "name": "Raspršivač",
+                "state": {
+                    "soft": "Manjeg intenziteta",
+                    "mid": "Srednje",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Prilagođavanje",
+                    "off": "Isključeno"
+                }
             },
             "mode": {
-                "name": "Mode"
+                "name": "Mode",
+                "state": {
+                    "standby": "Stanje pripravnosti",
+                    "sleep": "Način mirovanja",
+                    "auto": "Automatski",
+                    "allergens": "Alergeni",
+                    "max": "Najviše"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Bez pare",
+                    "cotton": "Pamuk",
+                    "delicate": "Osjetljivo rublje",
+                    "synthetic": "Sintetika"
+                },
+                "name": "Razina pare"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Razina peludi"
+            },
+            "aroma_time_on": {
+                "name": "Raspršivač (ISKLJUČEN)"
+            },
+            "aroma_time_off": {
+                "name": "Raspršivač (UKLJUČEN)"
             }
         },
         "climate": {

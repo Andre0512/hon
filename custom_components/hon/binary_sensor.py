@@ -52,22 +52,40 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             translation_key="door_open",
         ),
         HonBinarySensorEntityDescription(
-            key="startProgram.prewash", name="Pre Wash", translation_key="prewash"
+            key="prewash",
+            icon="mdi:tshirt-crew",
+            name="Pre Wash",
+            translation_key="prewash",
         ),
         HonBinarySensorEntityDescription(
-            key="extraRinse1", name="Extra Rinse 1", translation_key="extra_rinse_1"
+            key="extraRinse1",
+            icon="mdi:numeric-1-box-multiple-outline",
+            name="Extra Rinse 1",
+            translation_key="extra_rinse_1",
         ),
         HonBinarySensorEntityDescription(
-            key="extraRinse2", name="Extra Rinse 2", translation_key="extra_rinse_2"
+            key="extraRinse2",
+            icon="mdi:numeric-2-box-multiple-outline",
+            name="Extra Rinse 2",
+            translation_key="extra_rinse_2",
         ),
         HonBinarySensorEntityDescription(
-            key="extraRinse3", name="Extra Rinse 3", translation_key="extra_rinse_3"
+            key="extraRinse3",
+            icon="mdi:numeric-3-box-multiple-outline",
+            name="Extra Rinse 3",
+            translation_key="extra_rinse_3",
         ),
         HonBinarySensorEntityDescription(
-            key="goodNight", name="Good Night Mode", translation_key="good_night"
+            key="goodNight",
+            icon="mdi:weather-night",
+            name="Good Night Mode",
+            translation_key="good_night",
         ),
         HonBinarySensorEntityDescription(
-            key="acquaplus", name="Acqua Plus", translation_key="acqua_plus"
+            key="acquaplus",
+            icon="mdi:water-plus",
+            name="Acqua Plus",
+            translation_key="acqua_plus",
         ),
     ),
     "TD": (
@@ -86,7 +104,10 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             translation_key="door_open",
         ),
         HonBinarySensorEntityDescription(
-            key="anticrease", name="Anti-Crease", translation_key="anti_crease"
+            key="anticrease",
+            name="Anti-Crease",
+            icon="mdi:iron",
+            translation_key="anti_crease",
         ),
     ),
     "OV": (

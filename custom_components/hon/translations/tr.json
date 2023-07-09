@@ -808,7 +808,13 @@
                 "name": "Buhar Seviyesi"
             },
             "dirt_level": {
-                "name": "Kir seviyesi"
+                "name": "Kir seviyesi",
+                "state": {
+                    "little": "Az",
+                    "normal": "Normal",
+                    "very": "Çok",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Gecikmeli Başlatma"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Gaz (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Buhar yok",
+                    "cotton": "Pamuk",
+                    "delicate": "Hassas",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Buhar Seviyesi"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Kalan süre"
             },
             "diffuser": {
-                "name": "Difüzör"
+                "name": "Difüzör",
+                "state": {
+                    "soft": "Yumuşak",
+                    "mid": "Orta",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Özelleştir",
+                    "off": "Kapalı"
+                }
             },
             "mode": {
-                "name": "Mode"
+                "name": "Mode",
+                "state": {
+                    "standby": "Beklemede",
+                    "sleep": "Uyku",
+                    "auto": "Otomatik",
+                    "allergens": "Alerjenler",
+                    "max": "Maks"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Buhar yok",
+                    "cotton": "Pamuk",
+                    "delicate": "Hassas",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Buhar Seviyesi"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Polen seviyesi"
+            },
+            "aroma_time_on": {
+                "name": "Difüzör (AÇIK)"
+            },
+            "aroma_time_off": {
+                "name": "Difüzör (KAPALI)"
             }
         },
         "climate": {

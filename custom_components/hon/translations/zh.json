@@ -808,7 +808,13 @@
                 "name": "蒸汽档位"
             },
             "dirt_level": {
-                "name": "脏污程度"
+                "name": "脏污程度",
+                "state": {
+                    "little": "少量",
+                    "normal": "正常",
+                    "very": "非常",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "延时启动"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "气体（VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "无蒸汽",
+                    "cotton": "棉布",
+                    "delicate": "精致衣物",
+                    "synthetic": "Synthetic"
+                },
+                "name": "蒸汽档位"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "剩余时间"
             },
             "diffuser": {
-                "name": "扩散器"
+                "name": "扩散器",
+                "state": {
+                    "soft": "“软”程序",
+                    "mid": "中",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "定制",
+                    "off": "关闭"
+                }
             },
             "mode": {
-                "name": "Mode"
+                "name": "Mode",
+                "state": {
+                    "standby": "待机",
+                    "sleep": "睡眠",
+                    "auto": "自动",
+                    "allergens": "过敏原",
+                    "max": "最大"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "无蒸汽",
+                    "cotton": "棉布",
+                    "delicate": "精致衣物",
+                    "synthetic": "Synthetic"
+                },
+                "name": "蒸汽档位"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "花粉水平"
+            },
+            "aroma_time_on": {
+                "name": "扩散器（开）"
+            },
+            "aroma_time_off": {
+                "name": "扩散器（关）"
             }
         },
         "climate": {

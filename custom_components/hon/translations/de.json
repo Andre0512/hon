@@ -808,7 +808,13 @@
                 "name": "Dampfstufe"
             },
             "dirt_level": {
-                "name": "Verschmutzungsgrad"
+                "name": "Verschmutzungsgrad",
+                "state": {
+                    "little": "Wenig",
+                    "normal": "Normal",
+                    "very": "Sehr",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Einschaltverzögerung"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Gas (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Kein Dampf",
+                    "cotton": "Baumwolle",
+                    "delicate": "Feinwäsche",
+                    "synthetic": "Synthetik"
+                },
+                "name": "Dampfstufe"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Verbleibende Zeit"
             },
             "diffuser": {
-                "name": "Luftverteiler"
+                "name": "Luftverteiler",
+                "state": {
+                    "soft": "Weich",
+                    "mid": "Mittel",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Individuelle Anpassung",
+                    "off": "Aus"
+                }
             },
             "mode": {
-                "name": "Modus"
+                "name": "Modus",
+                "state": {
+                    "standby": "Standby-Modus",
+                    "sleep": "Sleep",
+                    "auto": "Auto",
+                    "allergens": "Allergene",
+                    "max": "Max"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Kein Dampf",
+                    "cotton": "Baumwolle",
+                    "delicate": "Feinwäsche",
+                    "synthetic": "Synthetik"
+                },
+                "name": "Dampfstufe"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Pollenkonzentration"
+            },
+            "aroma_time_on": {
+                "name": "Luftverteiler (AN)"
+            },
+            "aroma_time_off": {
+                "name": "Luftverteiler (AUS)"
             }
         },
         "climate": {

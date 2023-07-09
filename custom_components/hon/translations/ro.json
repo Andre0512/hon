@@ -808,7 +808,13 @@
                 "name": "Nivel abur"
             },
             "dirt_level": {
-                "name": "Nivel de murdărie"
+                "name": "Nivel de murdărie",
+                "state": {
+                    "little": "Puțin",
+                    "normal": "Normal",
+                    "very": "Foarte",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Pornire întârziată"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Gaze (COV)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Fără abur",
+                    "cotton": "Bumbac",
+                    "delicate": "Delicate",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Nivel abur"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Timp rămas"
             },
             "diffuser": {
-                "name": "Difuzor"
+                "name": "Difuzor",
+                "state": {
+                    "soft": "încet",
+                    "mid": "Mediu",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Personalizați",
+                    "off": "Oprit"
+                }
             },
             "mode": {
-                "name": "Mode"
+                "name": "Mode",
+                "state": {
+                    "standby": "Mod de așteptare",
+                    "sleep": "Somn",
+                    "auto": "Automat",
+                    "allergens": "Alergeni",
+                    "max": "Max"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Fără abur",
+                    "cotton": "Bumbac",
+                    "delicate": "Delicate",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Nivel abur"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Nivel polen"
+            },
+            "aroma_time_on": {
+                "name": "Difuzor (PORNIT)"
+            },
+            "aroma_time_off": {
+                "name": "Difuzor (OPRIT)"
             }
         },
         "climate": {

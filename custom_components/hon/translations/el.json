@@ -808,7 +808,13 @@
                 "name": "Επίπεδο ατμού"
             },
             "dirt_level": {
-                "name": "Επίπεδο βρωμιάς"
+                "name": "Επίπεδο βρωμιάς",
+                "state": {
+                    "little": "Λίγη",
+                    "normal": "Κανονική",
+                    "very": "Πολύ",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Καθυστερημένη έναρξη"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Αέριο (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Χωρίς ατμό",
+                    "cotton": "Βαμβακερό",
+                    "delicate": "Ευαίσθητα",
+                    "synthetic": "Συνθετικά"
+                },
+                "name": "Επίπεδο ατμού"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Χρόνος που απομένει"
             },
             "diffuser": {
-                "name": "Διαχύτης"
+                "name": "Διαχύτης",
+                "state": {
+                    "soft": "Μαλακό",
+                    "mid": "Μεσαίο",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Προσαρμογή",
+                    "off": "Ανενεργό"
+                }
             },
             "mode": {
-                "name": "Mode"
+                "name": "Mode",
+                "state": {
+                    "standby": "Αναμονή",
+                    "sleep": "Λειτουργία ύπνου",
+                    "auto": "Αυτόματο",
+                    "allergens": "Αλλεργιογόνα",
+                    "max": "Μέγιστο"
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Χωρίς ατμό",
+                    "cotton": "Βαμβακερό",
+                    "delicate": "Ευαίσθητα",
+                    "synthetic": "Συνθετικά"
+                },
+                "name": "Επίπεδο ατμού"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Επίπεδο γύρης"
+            },
+            "aroma_time_on": {
+                "name": "Μεταδότης διάχυσης (ΕΝΕΡΓΟΠΟΙΗΣΗ)"
+            },
+            "aroma_time_off": {
+                "name": "Μεταδότης διάχυσης (ΑΠΕΝΕΡΓΟΠΟΙΗΣΗ)"
             }
         },
         "climate": {

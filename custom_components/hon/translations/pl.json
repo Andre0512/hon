@@ -808,7 +808,13 @@
                 "name": "Poziom pary"
             },
             "dirt_level": {
-                "name": "Stopień zabrudzenia"
+                "name": "Stopień zabrudzenia",
+                "state": {
+                    "little": "Niskie",
+                    "normal": "Standardowe",
+                    "very": "Wysokie",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Opóźniony Start"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Gaz (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Bez pary",
+                    "cotton": "Bawełna",
+                    "delicate": "Delikatne",
+                    "synthetic": "Syntetyczne"
+                },
+                "name": "Poziom pary"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Pozostały czas"
             },
             "diffuser": {
-                "name": "Dyfuzor"
+                "name": "Dyfuzor",
+                "state": {
+                    "soft": "Program",
+                    "mid": "Średnie",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Dostosuj",
+                    "off": "Wył."
+                }
             },
             "mode": {
-                "name": "Tryb"
+                "name": "Tryb",
+                "state": {
+                    "standby": "Czuwanie",
+                    "sleep": "Uśpiony",
+                    "auto": "Auto",
+                    "allergens": "Alergeny",
+                    "max": "Maks."
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Bez pary",
+                    "cotton": "Bawełna",
+                    "delicate": "Delikatne",
+                    "synthetic": "Syntetyczne"
+                },
+                "name": "Poziom pary"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Poziom pyłków"
+            },
+            "aroma_time_on": {
+                "name": "Dyfuzor (WŁ.)"
+            },
+            "aroma_time_off": {
+                "name": "Dyfuzor (WYŁ.)"
             }
         },
         "climate": {

@@ -808,7 +808,13 @@
                 "name": "Úroveň páry"
             },
             "dirt_level": {
-                "name": "Míra znečištění"
+                "name": "Míra znečištění",
+                "state": {
+                    "little": "Málo",
+                    "normal": "Normální",
+                    "very": "Velmi",
+                    "unknown": "unknown"
+                }
             },
             "delay_time": {
                 "name": "Odložené spuštění"
@@ -860,6 +866,15 @@
             },
             "voc": {
                 "name": "Plyn (VOC)"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Bez páry",
+                    "cotton": "Bavlna",
+                    "delicate": "Jemné",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Úroveň páry"
             }
         },
         "select": {
@@ -1608,10 +1623,33 @@
                 "name": "Zbývající čas"
             },
             "diffuser": {
-                "name": "Difuzér"
+                "name": "Difuzér",
+                "state": {
+                    "soft": "Mírná",
+                    "mid": "Střední",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Přizpůsobit",
+                    "off": "Vypnout"
+                }
             },
             "mode": {
-                "name": "Režim"
+                "name": "Režim",
+                "state": {
+                    "standby": "Pohotovostní režim",
+                    "sleep": "Spánek",
+                    "auto": "Auto",
+                    "allergens": "Alergeny",
+                    "max": "Max."
+                }
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Bez páry",
+                    "cotton": "Bavlna",
+                    "delicate": "Jemné",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Úroveň páry"
             }
         },
         "switch": {
@@ -1857,6 +1895,12 @@
             },
             "pollen_level": {
                 "name": "Hladina pylu"
+            },
+            "aroma_time_on": {
+                "name": "Difuzér (ZAPNOUT)"
+            },
+            "aroma_time_off": {
+                "name": "Difuzér (VYPNOUT)"
             }
         },
         "climate": {
