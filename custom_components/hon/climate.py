@@ -6,7 +6,6 @@ from homeassistant.components.climate import (
     ClimateEntityDescription,
 )
 from homeassistant.components.climate.const import (
-    FAN_OFF,
     SWING_OFF,
     SWING_BOTH,
     SWING_VERTICAL,
@@ -22,7 +21,7 @@ from homeassistant.const import (
 from homeassistant.core import callback
 from pyhon.appliance import HonAppliance
 
-from .const import HON_HVAC_MODE, HON_FAN, DOMAIN
+from .const import HON_HVAC_MODE, HON_FAN, DOMAIN, HON_HVAC_PROGRAM
 from .hon import HonEntity
 
 _LOGGER = logging.getLogger(__name__)
@@ -123,9 +122,6 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         self._attr_preset_modes = []
         for mode in device.settings["startProgram.program"].values:
             self._attr_preset_modes.append(mode)
-        self._attr_fan_modes = [FAN_OFF]
-        for mode in device.settings["settings.windSpeed"].values:
-            self._attr_fan_modes.append(HON_FAN[int(mode)])
         self._attr_swing_modes = [
             SWING_OFF,
             SWING_VERTICAL,
@@ -181,7 +177,11 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
             self._device.settings["settings.onOffStatus"].value = "1"
             setting = self._device.settings["settings.machMode"]
             modes = {HON_HVAC_MODE[int(number)]: number for number in setting.values}
-            setting.value = modes[hvac_mode]
+            if hvac_mode in modes:
+                setting.value = modes[hvac_mode]
+            else:
+                await self.async_set_preset_mode(HON_HVAC_PROGRAM[hvac_mode])
+                return
             await self._device.commands["settings"].send()
         self.async_write_ha_state()
 
@@ -192,7 +192,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
 
     async def async_set_preset_mode(self, preset_mode: str) -> None:
         """Set the new preset mode."""
-        if program := self._device.settings.get(f"startProgram.program"):
+        if program := self._device.settings.get("startProgram.program"):
             program.value = preset_mode
         self._device.sync_command("startProgram", "settings")
         self._set_temperature_bound()
@@ -203,14 +203,23 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         self.async_write_ha_state()
 
     @property
+    def fan_modes(self) -> list[str]:
+        """Return the list of available fan modes."""
+        fan_modes = []
+        for mode in reversed(self._device.settings["settings.windSpeed"].values):
+            fan_modes.append(HON_FAN[int(mode)])
+        return fan_modes
+
+    @property
     def fan_mode(self) -> str | None:
         """Return the fan setting."""
         return HON_FAN[self._device.get("windSpeed")]
 
     async def async_set_fan_mode(self, fan_mode):
-        mode_number = list(HON_FAN.values()).index(fan_mode)
-        mode = list(HON_FAN.keys())[mode_number]
-        self._device.settings["settings.windSpeed"].value = str(mode)
+        fan_modes = {}
+        for mode in reversed(self._device.settings["settings.windSpeed"].values):
+            fan_modes[HON_FAN[int(mode)]] = mode
+        self._device.settings["settings.windSpeed"].value = str(fan_modes[fan_mode])
         self._attr_fan_mode = fan_mode
         await self._device.commands["settings"].send()
         self.async_write_ha_state()
@@ -249,6 +258,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         self._attr_target_temperature = self.target_temperature
         self._attr_current_temperature = self.current_temperature
         self._attr_hvac_mode = self.hvac_mode
+        self._attr_fan_modes = self.fan_modes
         self._attr_fan_mode = self.fan_mode
         self._attr_swing_mode = self.swing_mode
         if update:
