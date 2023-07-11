@@ -11,5 +11,5 @@
   "requirements": [
     "pyhOn==0.14.9"
   ],
-  "version": "0.9.0-beta.10"
+  "version": "0.9.0"
 }
