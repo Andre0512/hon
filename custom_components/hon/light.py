@@ -28,7 +28,7 @@ LIGHTS = {
     ),
     "HO": (
         LightEntityDescription(
-            key="startProgram.lightStatus",
+            key="settings.lightStatus",
             name="Light status",
             translation_key="light",
         ),
@@ -76,8 +76,7 @@ class HonLightEntity(HonEntity, LightEntity):
     @property
     def is_on(self) -> bool:
         """Return true if light is on."""
-        light = self._device.settings.get(self.entity_description.key)
-        return light.value != light.min
+        return self._device.get(self.entity_description.key.split(".")[-1]) > 0
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         """Turn on or control the light."""
@@ -120,3 +119,10 @@ class HonLightEntity(HonEntity, LightEntity):
         self._attr_brightness = self.brightness
         if update:
             self.async_write_ha_state()
+
+    @property
+    def available(self) -> bool:
+        return (
+            super().available
+            and len(self._device.settings.get(self.entity_description.key).values) > 1
+        )

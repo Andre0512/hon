@@ -247,9 +247,8 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Light status |  | `light` | `startProgram.lightStatus` |
-| Start Program | `hvac` | `button` | `startProgram` |
-| Stop Program | `hvac-off` | `button` | `stopProgram` |
+| Hood | `hvac` | `switch` | `startProgram` / `stopProgram` |
+| Light status |  | `light` | `settings.lightStatus` |
 | Wind Speed |  | `fan` | `settings.windSpeed` |
 #### Sensors
 | Name | Icon | Entity | Key |

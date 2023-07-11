@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Higijenski plus"
+            },
+            "hood": {
+                "name": "Aspirator"
             }
         },
         "binary_sensor": {

@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Hygiene Plus"
+            },
+            "hood": {
+                "name": "Napa"
             }
         },
         "binary_sensor": {

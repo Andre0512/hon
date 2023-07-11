@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Гигиена плюс"
+            },
+            "hood": {
+                "name": "Вытяжка"
             }
         },
         "binary_sensor": {

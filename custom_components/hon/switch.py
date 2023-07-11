@@ -337,6 +337,16 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             translation_key="holiday_mode",
         ),
     ),
+    "HO": (
+        HonControlSwitchEntityDescription(
+            key="onOffStatus",
+            name="Hood",
+            icon="mdi:hvac",
+            turn_on_key="startProgram",
+            turn_off_key="stopProgram",
+            translation_key="hood",
+        ),
+    ),
     "AP": (
         HonSwitchEntityDescription(
             key="touchToneStatus",
@@ -438,11 +448,15 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
         return self._device.get(self.entity_description.key, False)
 
     async def async_turn_on(self, **kwargs: Any) -> None:
+        self._device.sync_command(self.entity_description.turn_on_key, "settings")
+        await self.coordinator.async_refresh()
         await self._device.commands[self.entity_description.turn_on_key].send()
         self._device.attributes[self.entity_description.key] = True
         self.async_write_ha_state()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
+        self._device.sync_command(self.entity_description.turn_off_key, "settings")
+        await self.coordinator.async_refresh()
         await self._device.commands[self.entity_description.turn_off_key].send()
         self._device.attributes[self.entity_description.key] = False
         self.async_write_ha_state()

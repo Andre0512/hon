@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Higiena plus"
+            },
+            "hood": {
+                "name": "Okap"
             }
         },
         "binary_sensor": {

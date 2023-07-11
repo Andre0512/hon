@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Higiene mais"
+            },
+            "hood": {
+                "name": "Exaustor"
             }
         },
         "binary_sensor": {

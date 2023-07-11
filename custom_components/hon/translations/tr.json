@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Hygiene plus"
+            },
+            "hood": {
+                "name": "Davlumbaz"
             }
         },
         "binary_sensor": {

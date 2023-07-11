@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Higiene extra"
+            },
+            "hood": {
+                "name": "Campana extractora"
             }
         },
         "binary_sensor": {

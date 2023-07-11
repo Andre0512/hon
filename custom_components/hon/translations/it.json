@@ -1792,6 +1792,9 @@
             },
             "hygiene": {
                 "name": "Hygiene plus"
+            },
+            "hood": {
+                "name": "Cappa"
             }
         },
         "binary_sensor": {

@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Hygiène plus"
+            },
+            "hood": {
+                "name": "Hotte"
             }
         },
         "binary_sensor": {

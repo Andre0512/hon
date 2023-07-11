@@ -241,6 +241,7 @@ NAMES = {
         "refrigerator": "REF.NAME",
         "touch_tone": "AP.FOOTER_MENU_MORE.TOUCH_TONE_VOLUME",
         "hygiene": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_OTHER_OPTIONS.HYGIENE",
+        "hood": "GLOBALS.APPLIANCES_NAME.HO",
     },
     "binary_sensor": {
         "door_lock": "WASHING_CMD&CTRL.CHECK_UP_RESULTS.DOOR_LOCK",

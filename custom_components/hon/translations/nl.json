@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Hygiëne plus"
+            },
+            "hood": {
+                "name": "Afzuigkap"
             }
         },
         "binary_sensor": {

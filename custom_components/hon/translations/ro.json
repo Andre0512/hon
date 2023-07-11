@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Igienizare plus"
+            },
+            "hood": {
+                "name": "Hotă"
             }
         },
         "binary_sensor": {

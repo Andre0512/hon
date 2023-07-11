@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "卫生增强"
+            },
+            "hood": {
+                "name": "机盖"
             }
         },
         "binary_sensor": {

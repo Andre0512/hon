@@ -63,10 +63,6 @@ class HonFanEntity(HonEntity, FanEntity):
     def __init__(self, hass, entry, device: HonAppliance, description) -> None:
         self._attr_supported_features = FanEntityFeature.SET_SPEED
         self._wind_speed: HonParameterRange = device.settings.get(description.key)
-        self._speed_range = (
-            int(self._wind_speed.values[1]),
-            int(self._wind_speed.values[-1]),
-        )
         self._command, self._parameter = description.key.split(".")
 
         super().__init__(hass, entry, device, description)
@@ -118,6 +114,15 @@ class HonFanEntity(HonEntity, FanEntity):
     @callback
     def _handle_coordinator_update(self, update=True) -> None:
         self._wind_speed = self._device.settings.get(self.entity_description.key)
-        self._attr_percentage = self.percentage
+        if len(self._wind_speed.values) > 1:
+            self._speed_range = (
+                int(self._wind_speed.values[1]),
+                int(self._wind_speed.values[-1]),
+            )
+            self._attr_percentage = self.percentage
         if update:
             self.async_write_ha_state()
+
+    @property
+    def available(self) -> bool:
+        return super().available and len(self._wind_speed.values) > 1

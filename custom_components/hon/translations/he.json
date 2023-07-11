@@ -908,6 +908,9 @@
             },
             "hygiene": {
                 "name": "היגיינה פלוס"
+            },
+            "hood": {
+                "name": "Hood"
             }
         },
         "binary_sensor": {

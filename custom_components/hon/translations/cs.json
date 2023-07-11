@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Hygienický plus"
+            },
+            "hood": {
+                "name": "Odsavač par"
             }
         },
         "binary_sensor": {

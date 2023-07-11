@@ -1787,6 +1787,9 @@
             },
             "hygiene": {
                 "name": "Hygiena plus"
+            },
+            "hood": {
+                "name": "Digestor"
             }
         },
         "binary_sensor": {
