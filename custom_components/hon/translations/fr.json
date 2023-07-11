@@ -875,6 +875,18 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Niveau de vapeur"
+            },
+            "filter_cleaning": {
+                "name": "Nettoyage du filtre"
+            },
+            "filter_life": {
+                "name": "Durée de vie du filtre"
+            },
+            "air_quality": {
+                "name": "Qualité d’air"
+            },
+            "fan_speed": {
+                "name": "Vitesse du ventilateur"
             }
         },
         "select": {

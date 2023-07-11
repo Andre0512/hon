@@ -880,6 +880,18 @@
                     "synthetic": "Sintetici"
                 },
                 "name": "Livello vapore"
+            },
+            "filter_cleaning": {
+                "name": "Pulizia del filtro"
+            },
+            "filter_life": {
+                "name": "Durata filtro"
+            },
+            "air_quality": {
+                "name": "Qualità dell'Aria"
+            },
+            "fan_speed": {
+                "name": "Velocità ventole"
             }
         },
         "select": {

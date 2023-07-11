@@ -350,6 +350,10 @@ NAMES = {
         "programs_ac": "WC.SET_PROGRAM.PROGRAM",
         "programs_ref": "WC.SET_PROGRAM.PROGRAM",
         "voc": "HINTS.WHAT_POLLUTES_THE_AIR_IN_OUR_HOMES.GAS_VOC_TITLE",
+        "filter_cleaning": "AP.MAINTENANCE.FILTER_CLEANING",
+        "filter_life": "AP.MAINTENANCE.FILTER_LIFE",
+        "air_quality": "AP.DISCOVER.AIR_QUALITY",
+        "fan_speed": "AP.TITLES.FAN_SPEED",
     },
     "number": {
         "power_management": "HINTS.COOKING_WITH_INDUCTION.POWER_MANAGEMENT",

@@ -875,6 +875,18 @@
                     "synthetic": "Syntetyczne"
                 },
                 "name": "Poziom pary"
+            },
+            "filter_cleaning": {
+                "name": "Czyszczenie filtra"
+            },
+            "filter_life": {
+                "name": "Żywotność filtra"
+            },
+            "air_quality": {
+                "name": "Jakość powietrza"
+            },
+            "fan_speed": {
+                "name": "Prędkość wentylatora"
             }
         },
         "select": {

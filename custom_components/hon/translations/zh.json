@@ -875,6 +875,18 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "蒸汽档位"
+            },
+            "filter_cleaning": {
+                "name": "滤网清洁"
+            },
+            "filter_life": {
+                "name": "过滤器寿命"
+            },
+            "air_quality": {
+                "name": "空气质量"
+            },
+            "fan_speed": {
+                "name": "风扇速度"
             }
         },
         "select": {

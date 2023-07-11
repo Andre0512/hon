@@ -875,6 +875,18 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Nivel abur"
+            },
+            "filter_cleaning": {
+                "name": "Curățarea filtrului"
+            },
+            "filter_life": {
+                "name": "Viața filtrului"
+            },
+            "air_quality": {
+                "name": "Calitatea aerului"
+            },
+            "fan_speed": {
+                "name": "Viteza ventilatorului"
             }
         },
         "select": {

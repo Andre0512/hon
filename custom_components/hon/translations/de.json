@@ -875,6 +875,18 @@
                     "synthetic": "Synthetik"
                 },
                 "name": "Dampfstufe"
+            },
+            "filter_cleaning": {
+                "name": "Reinigung der Filter"
+            },
+            "filter_life": {
+                "name": "Filterlebensdauer"
+            },
+            "air_quality": {
+                "name": "Luftqualität"
+            },
+            "fan_speed": {
+                "name": "Gebläsegeschwindigkeit"
             }
         },
         "select": {

@@ -688,11 +688,15 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         HonSensorEntityDescription(
             key="mainFilterStatus",
             name="Main Filter Status",
+            icon="mdi:air-filter",
+            translation_key="filter_life",
             native_unit_of_measurement=PERCENTAGE,
         ),
         HonSensorEntityDescription(
             key="preFilterStatus",
             name="Pre Filter Status",
+            icon="mdi:air-filter",
+            translation_key="filter_cleaning",
             native_unit_of_measurement=PERCENTAGE,
         ),
         HonSensorEntityDescription(
@@ -746,10 +750,17 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="temperature",
         ),
-        HonSensorEntityDescription(key="windSpeed", name="Wind Speed"),
+        HonSensorEntityDescription(
+            key="windSpeed",
+            name="Wind Speed",
+            icon="mdi:fan",
+            translation_key="fan_speed",
+        ),
         HonSensorEntityDescription(
             key="airQuality",
             name="Air Quality",
+            icon="mdi:weather-dust",
+            translation_key="air_quality",
         ),
     ),
 }

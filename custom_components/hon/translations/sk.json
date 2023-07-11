@@ -875,6 +875,18 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Úroveň nastavenia pary"
+            },
+            "filter_cleaning": {
+                "name": "Čistenie filtra"
+            },
+            "filter_life": {
+                "name": "Životnosť filtra"
+            },
+            "air_quality": {
+                "name": "Kvalita vzduchu"
+            },
+            "fan_speed": {
+                "name": "Rýchlosť ventilátora"
             }
         },
         "select": {

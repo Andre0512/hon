@@ -875,6 +875,18 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Stoomniveau"
+            },
+            "filter_cleaning": {
+                "name": "Filterreiniging"
+            },
+            "filter_life": {
+                "name": "Levensduur filter"
+            },
+            "air_quality": {
+                "name": "Luchtkwaliteit"
+            },
+            "fan_speed": {
+                "name": "Ventilatorsnelheid"
             }
         },
         "select": {

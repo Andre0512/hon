@@ -181,7 +181,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | --- | --- | --- | --- |
 | Aroma Time Off | `scent-off` | `number` | `settings.aromaTimeOff` |
 | Aroma Time On | `scent` | `number` | `settings.aromaTimeOn` |
-| Diffuser Level | `air-filter` | `select` | `settings.aromaStatus` |
+| Diffuser Level | `air-purifier` | `select` | `settings.aromaStatus` |
 | Light status |  | `light` | `settings.lightStatus` |
 | Lock Status |  | `lock` | `lockStatus` |
 | Mode | `play` | `select` | `settings.machMode` |
@@ -190,19 +190,19 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
-| Air Quality |  | `sensor` | `airQuality` |
+| Air Quality | `weather-dust` | `sensor` | `airQuality` |
 | CO Level |  | `sensor` | `coLevel` |
 | Error | `math-log` | `sensor` | `errors` |
 | Humidity |  | `sensor` | `humidityIndoor` |
-| Main Filter Status |  | `sensor` | `mainFilterStatus` |
+| Main Filter Status | `air-filter` | `sensor` | `mainFilterStatus` |
 | On | `power-cycle` | `binary_sensor` | `attributes.parameters.onOffStatus` |
 | PM 10 |  | `sensor` | `pm10ValueIndoor` |
 | PM 2.5 |  | `sensor` | `pm2p5ValueIndoor` |
-| Pre Filter Status |  | `sensor` | `preFilterStatus` |
+| Pre Filter Status | `air-filter` | `sensor` | `preFilterStatus` |
 | Temperature |  | `sensor` | `temp` |
 | Total Work Time |  | `sensor` | `totalWorkTime` |
 | VOC |  | `sensor` | `vocValueIndoor` |
-| Wind Speed |  | `sensor` | `windSpeed` |
+| Wind Speed | `fan` | `sensor` | `windSpeed` |
 
 ### Dish Washer
 #### Controls

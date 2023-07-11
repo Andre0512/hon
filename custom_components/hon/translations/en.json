@@ -895,6 +895,18 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Steam Level"
+            },
+            "filter_cleaning": {
+                "name": "Filter cleaning"
+            },
+            "filter_life": {
+                "name": "Filter life"
+            },
+            "air_quality": {
+                "name": "Air Quality"
+            },
+            "fan_speed": {
+                "name": "Fan speed"
             }
         },
         "select": {

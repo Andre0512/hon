@@ -875,6 +875,18 @@
                     "synthetic": "Sintetika"
                 },
                 "name": "Količina pare"
+            },
+            "filter_cleaning": {
+                "name": "Čiščenje filtra"
+            },
+            "filter_life": {
+                "name": "Življenjska doba filtra"
+            },
+            "air_quality": {
+                "name": "Kakovost zraka"
+            },
+            "fan_speed": {
+                "name": "Hitrost ventilatorja"
             }
         },
         "select": {

@@ -875,6 +875,18 @@
                     "synthetic": "Synthetic"
                 },
                 "name": "Buhar Seviyesi"
+            },
+            "filter_cleaning": {
+                "name": "Filtre temizliği"
+            },
+            "filter_life": {
+                "name": "Filtre ömrü"
+            },
+            "air_quality": {
+                "name": "Hava kalitesi"
+            },
+            "fan_speed": {
+                "name": "Fan hızı"
             }
         },
         "select": {
