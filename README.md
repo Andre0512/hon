@@ -50,7 +50,7 @@ Support has been confirmed for these models, but many more will work. Please add
 | **Hob**             | HA2MTSJ68MC                                                                                                                                                                                                |                                                                                                                                             | CIS633SCTTWIFI                                                                                      |
 | **Hood**            | HADG6DS46BWIFI                                                                                                                                                                                             |                                                                                                                                             |                                                                                                     |
 | **Wine Cellar**     | HWS247FDU1                                                                                                                                                                                                 |                                                                                                                                             |                                                                                                     |
-| **Air Purifier**    |                                                                                                                                                                                                            | HHP50CA001                                                                                                                                  |                                                                                                     |
+| **Air Purifier**    |                                                                                                                                                                                                            | HHP30C011 <br/> HHP50CA001 <br/> HHP50CA011                                                                                                 |                                                                                                     |
 
 
 | Please add your appliances data to our [hon-test-data collection](https://github.com/Andre0512/hon-test-data). <br/>This helps us to develop new features and not to break compatibility in newer versions. |
@@ -77,6 +77,19 @@ Translation of internal names like programs are available for all languages whic
 * 🇸🇮 Slovenian
 * 🇪🇸 Spanish
 * 🇹🇷 Turkish
+
+## Compatiblity
+Haier offers different apps for different markets. Some appliances are compatible with more than one app. This integration only supports appliances that can be controlled via hOn. Please download the hOn app and check compatibilty before you open an issue.   
+The apps on this (incomplete) list have been requested so far:
+
+| App             | Main Market   | Supported                               | Alternative                                                                     |
+|-----------------|---------------|-----------------------------------------|---------------------------------------------------------------------------------|
+| Haier hOn       | Europe        | :heavy_check_mark:                      |                                                                                 |
+| Candy simply-Fi | Europe        | :grey_question: (only newer appliances) | [ofalvai/home-assistant-candy](https://github.com/ofalvai/home-assistant-candy) |
+| Hoover Wizard   | Europe        | :grey_question: (only newer appliances) |                                                                                 |
+| Haier Uhome     | China         | :x:                                     | [banto6/haier](https://github.com/banto6/haier)                                 |
+| Haier U+        | China         | :x:                                     |                                                                                 |
+| GE SmartHQ      | North America | :x:                                     | [simbaja/ha_gehome](https://github.com/simbaja/ha_gehome)                       |   
 
 ## Examples
 ### Washing Machine
