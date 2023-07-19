@@ -887,6 +887,14 @@
             },
             "fan_speed": {
                 "name": "风扇速度"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "低",
+                    "mid": "中",
+                    "high": "高"
+                },
+                "name": "湿度水平"
             }
         },
         "select": {

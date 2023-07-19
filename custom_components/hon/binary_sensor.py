@@ -208,7 +208,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
     ),
     "REF": (
         HonBinarySensorEntityDescription(
-            key="quickModeZ2",
+            key="quickModeZ1",
             name="Super Cool",
             icon="mdi:snowflake",
             device_class=BinarySensorDeviceClass.RUNNING,
@@ -216,7 +216,7 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             translation_key="super_cool",
         ),
         HonBinarySensorEntityDescription(
-            key="quickModeZ1",
+            key="quickModeZ2",
             name="Super Freeze",
             icon="mdi:snowflake-variant",
             device_class=BinarySensorDeviceClass.RUNNING,
@@ -225,19 +225,35 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
         ),
         HonBinarySensorEntityDescription(
             key="doorStatusZ1",
-            name="Door Status Freezer",
+            name="Door1 Status Fridge",
             device_class=BinarySensorDeviceClass.DOOR,
             icon="mdi:fridge-top",
+            on_value=1,
+            translation_key="fridge_door",
+        ),
+        HonBinarySensorEntityDescription(
+            key="door2StatusZ1",
+            name="Door2 Status Fridge",
+            icon="mdi:fridge-top",
+            device_class=BinarySensorDeviceClass.DOOR,
+            on_value=1,
+            translation_key="fridge_door",
+        ),
+        HonBinarySensorEntityDescription(
+            key="doorStatusZ2",
+            name="Door1 Status Freezer",
+            icon="mdi:fridge-bottom",
+            device_class=BinarySensorDeviceClass.DOOR,
             on_value=1,
             translation_key="freezer_door",
         ),
         HonBinarySensorEntityDescription(
-            key="door2StatusZ1",
-            name="Door Status Fridge",
+            key="door2StatusZ2",
+            name="Door2 Status Freezer",
             icon="mdi:fridge-bottom",
             device_class=BinarySensorDeviceClass.DOOR,
             on_value=1,
-            translation_key="fridge_door",
+            translation_key="freezer_door",
         ),
         HonBinarySensorEntityDescription(
             key="intelligenceMode",

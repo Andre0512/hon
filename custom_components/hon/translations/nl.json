@@ -887,6 +887,14 @@
             },
             "fan_speed": {
                 "name": "Ventilatorsnelheid"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Laag",
+                    "mid": "Gemiddeld",
+                    "high": "Hoog"
+                },
+                "name": "Vochtigheidsniveau"
             }
         },
         "select": {

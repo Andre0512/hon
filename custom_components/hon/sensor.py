@@ -545,6 +545,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
         HonSensorEntityDescription(
             key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
         ),
+        HonSensorEntityDescription(
+            key="humidityLevel",
+            name="Humidity Level",
+            icon="mdi:water-outline",
+            device_class=SensorDeviceClass.ENUM,
+            translation_key="humidity_level",
+            option_list=const.REF_HUMIDITY_LEVELS,
+        ),
     ),
     "HO": (
         HonSensorEntityDescription(

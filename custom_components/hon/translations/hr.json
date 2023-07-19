@@ -887,6 +887,14 @@
             },
             "fan_speed": {
                 "name": "Brzina ventilatora"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Nisko",
+                    "mid": "Srednje",
+                    "high": "Visoko"
+                },
+                "name": "Razina vlažnosti"
             }
         },
         "select": {

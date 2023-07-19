@@ -907,6 +907,14 @@
             },
             "fan_speed": {
                 "name": "Fan speed"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Low",
+                    "mid": "Medium",
+                    "high": "High"
+                },
+                "name": "Humidity level"
             }
         },
         "select": {

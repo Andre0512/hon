@@ -887,6 +887,14 @@
             },
             "fan_speed": {
                 "name": "Velocidade da bomba"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Baixa",
+                    "mid": "Média",
+                    "high": "Alta"
+                },
+                "name": "Nível de humidade"
             }
         },
         "select": {

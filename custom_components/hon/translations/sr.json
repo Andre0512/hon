@@ -887,6 +887,14 @@
             },
             "fan_speed": {
                 "name": "Brzina ventilatora"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Niska",
+                    "mid": "Srednja",
+                    "high": "Visoka"
+                },
+                "name": "Nivo vlage"
             }
         },
         "select": {

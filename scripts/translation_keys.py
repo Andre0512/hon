@@ -109,6 +109,12 @@ REF_ZONES = {
     "fridge_freezer": ["REF.ZONES.FRIDGE", " & ", "REF.ZONES.FREEZER"],
 }
 
+REF_HUMIDITY_LEVELS = {
+    "low": "GLOBALS.GENERAL.LOW",
+    "mid": "GLOBALS.GENERAL.MEDIUM",
+    "high": "GLOBALS.GENERAL.HIGH",
+}
+
 
 SENSOR = {
     "washing_modes": MACH_MODE,
@@ -119,6 +125,7 @@ SENSOR = {
     "dry_levels": TUMBLE_DRYER_DRY_LEVEL,
     "dirt_level": DIRTY_LEVEL,
     "steam_level": STEAM_LEVEL,
+    "humidity_level": REF_HUMIDITY_LEVELS,
 }
 
 SELECT = {
@@ -355,6 +362,7 @@ NAMES = {
         "filter_life": "AP.MAINTENANCE.FILTER_LIFE",
         "air_quality": "AP.DISCOVER.AIR_QUALITY",
         "fan_speed": "AP.TITLES.FAN_SPEED",
+        "humidity_level": "WC.MAINTENANCE_HUMIDITY.TITLE",
     },
     "number": {
         "power_management": "HINTS.COOKING_WITH_INDUCTION.POWER_MANAGEMENT",

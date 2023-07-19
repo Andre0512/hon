@@ -887,6 +887,14 @@
             },
             "fan_speed": {
                 "name": "Viteza ventilatorului"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Scăzută",
+                    "mid": "Medie",
+                    "high": "Crescută"
+                },
+                "name": "Nivelul de umiditate"
             }
         },
         "select": {

@@ -892,6 +892,14 @@
             },
             "fan_speed": {
                 "name": "Velocità ventole"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Basso",
+                    "mid": "Medio",
+                    "high": "Alto"
+                },
+                "name": "Livello di umidità"
             }
         },
         "select": {

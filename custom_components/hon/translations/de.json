@@ -887,6 +887,14 @@
             },
             "fan_speed": {
                 "name": "Gebläsegeschwindigkeit"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Niedrig",
+                    "mid": "Mittel",
+                    "high": "Hoch"
+                },
+                "name": "Grad der Luftfeuchtigkeit"
             }
         },
         "select": {

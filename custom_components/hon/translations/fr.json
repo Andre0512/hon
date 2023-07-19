@@ -887,6 +887,14 @@
             },
             "fan_speed": {
                 "name": "Vitesse du ventilateur"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Faible",
+                    "mid": "Moyen",
+                    "high": "Élevé"
+                },
+                "name": "Niveau d’humidité"
             }
         },
         "select": {

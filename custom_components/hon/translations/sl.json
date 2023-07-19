@@ -887,6 +887,14 @@
             },
             "fan_speed": {
                 "name": "Hitrost ventilatorja"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Low",
+                    "mid": "Medium",
+                    "high": "High"
+                },
+                "name": "Nivo vlažnosti"
             }
         },
         "select": {

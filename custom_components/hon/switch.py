@@ -311,22 +311,16 @@ SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
             translation_key="auto_set",
         ),
         HonSwitchEntityDescription(
-            key="quickModeZ1",
+            key="quickModeZ2",
             name="Super Freeze",
             icon="mdi:snowflake-variant",
             translation_key="super_freeze",
         ),
         HonSwitchEntityDescription(
-            key="quickModeZ2",
+            key="quickModeZ1",
             name="Super Cool",
             icon="mdi:snowflake",
             translation_key="super_cool",
-        ),
-        HonSwitchEntityDescription(
-            key="holidayMode",
-            name="Holiday Mode",
-            icon="mdi:palm-tree",
-            translation_key="holiday_mode",
         ),
     ),
     "WC": (

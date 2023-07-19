@@ -443,6 +443,14 @@
             },
             "fan_speed": {
                 "name": "Fan speed"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "נָמוּך",
+                    "mid": "בינוני",
+                    "high": "גָבוֹהַ"
+                },
+                "name": "Humidity level"
             }
         },
         "select": {

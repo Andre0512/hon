@@ -224,3 +224,5 @@ AP_DIFFUSER_LEVEL = {
     3: "h_biotics",
     4: "custom",
 }
+
+REF_HUMIDITY_LEVELS = {1: "low", 2: "mid", 3: "high"}
