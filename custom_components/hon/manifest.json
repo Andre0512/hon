@@ -9,7 +9,7 @@
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/Andre0512/hon/issues",
   "requirements": [
-    "pyhOn==0.14.10"
+    "pyhOn==0.14.11"
   ],
-  "version": "0.9.1-beta.1"
+  "version": "0.9.1"
 }
