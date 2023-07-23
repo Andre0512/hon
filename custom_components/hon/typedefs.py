@@ -92,4 +92,3 @@ T = TypeVar(
     SelectEntityDescription,
     NumberEntityDescription,
 )
-

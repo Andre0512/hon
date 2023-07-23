@@ -20,7 +20,6 @@ from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
 from .hon import HonEntity
-from .typedefs import HonEntityDescription
 
 _LOGGER = logging.getLogger(__name__)
 

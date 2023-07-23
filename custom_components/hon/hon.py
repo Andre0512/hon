@@ -3,9 +3,9 @@ import logging
 from contextlib import suppress
 from datetime import timedelta
 from pathlib import Path
-from typing import Optional, Any, TypeVar
+from typing import Optional, Any
 
-import pkg_resources
+import pkg_resources  # type: ignore[import, unused-ignore]
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
 from homeassistant.helpers.entity import DeviceInfo
