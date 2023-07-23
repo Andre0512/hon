@@ -1,6 +1,5 @@
 import logging
 import math
-from dataclasses import dataclass
 from typing import Any
 
 from homeassistant.components.fan import (
@@ -10,6 +9,8 @@ from homeassistant.components.fan import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.typing import HomeAssistantType
 from homeassistant.util.percentage import (
     percentage_to_ranged_value,
     ranged_value_to_percentage,
@@ -19,18 +20,14 @@ from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
 from .hon import HonEntity
+from .typedefs import HonEntityDescription
 
 _LOGGER = logging.getLogger(__name__)
 
 
-@dataclass
-class HonFanEntityDescription(FanEntityDescription):
-    pass
-
-
-FANS = {
+FANS: dict[str, tuple[FanEntityDescription, ...]] = {
     "HO": (
-        HonFanEntityDescription(
+        FanEntityDescription(
             key="settings.windSpeed",
             name="Wind Speed",
             translation_key="air_extraction",
@@ -39,30 +36,36 @@ FANS = {
 }
 
 
-async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
+async def async_setup_entry(
+    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+) -> None:
     entities = []
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in FANS.get(device.appliance_type, []):
-            if isinstance(description, HonFanEntityDescription):
-                if (
-                    description.key not in device.available_settings
-                    or device.get(description.key.split(".")[-1]) is None
-                ):
-                    continue
-                entity = HonFanEntity(hass, entry, device, description)
-            else:
+            if (
+                description.key not in device.available_settings
+                or device.get(description.key.split(".")[-1]) is None
+            ):
                 continue
+            entity = HonFanEntity(hass, entry, device, description)
             await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
     async_add_entities(entities)
 
 
 class HonFanEntity(HonEntity, FanEntity):
-    entity_description: HonFanEntityDescription
+    entity_description: FanEntityDescription
 
-    def __init__(self, hass, entry, device: HonAppliance, description) -> None:
+    def __init__(
+        self,
+        hass: HomeAssistantType,
+        entry: ConfigEntry,
+        device: HonAppliance,
+        description: FanEntityDescription,
+    ) -> None:
         self._attr_supported_features = FanEntityFeature.SET_SPEED
-        self._wind_speed: HonParameterRange = device.settings.get(description.key)
+        self._wind_speed: HonParameterRange
+        self._speed_range: tuple[int, int]
         self._command, self._parameter = description.key.split(".")
 
         super().__init__(hass, entry, device, description)
@@ -89,8 +92,10 @@ class HonFanEntity(HonEntity, FanEntity):
     @property
     def is_on(self) -> bool | None:
         """Return true if device is on."""
+        if self.percentage is None:
+            return False
         mode = math.ceil(percentage_to_ranged_value(self._speed_range, self.percentage))
-        return mode > self._wind_speed.min
+        return bool(mode > self._wind_speed.min)
 
     async def async_turn_on(
         self,
@@ -112,9 +117,10 @@ class HonFanEntity(HonEntity, FanEntity):
         self.async_write_ha_state()
 
     @callback
-    def _handle_coordinator_update(self, update=True) -> None:
-        self._wind_speed = self._device.settings.get(self.entity_description.key)
-        if len(self._wind_speed.values) > 1:
+    def _handle_coordinator_update(self, update: bool = True) -> None:
+        wind_speed = self._device.settings.get(self.entity_description.key)
+        if isinstance(wind_speed, HonParameterRange) and len(wind_speed.values) > 1:
+            self._wind_speed = wind_speed
             self._speed_range = (
                 int(self._wind_speed.values[1]),
                 int(self._wind_speed.values[-1]),

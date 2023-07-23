@@ -7,6 +7,8 @@ from homeassistant.components.switch import SwitchEntityDescription, SwitchEntit
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.typing import HomeAssistantType
 from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
 
@@ -17,16 +19,9 @@ _LOGGER = logging.getLogger(__name__)
 
 
 @dataclass
-class HonSwitchEntityDescriptionMixin:
+class HonControlSwitchEntityDescription(SwitchEntityDescription):
     turn_on_key: str = ""
     turn_off_key: str = ""
-
-
-@dataclass
-class HonControlSwitchEntityDescription(
-    HonSwitchEntityDescriptionMixin, SwitchEntityDescription
-):
-    pass
 
 
 class HonSwitchEntityDescription(SwitchEntityDescription):
@@ -38,7 +33,7 @@ class HonConfigSwitchEntityDescription(SwitchEntityDescription):
     entity_category: EntityCategory = EntityCategory.CONFIG
 
 
-SWITCHES: dict[str, tuple[HonSwitchEntityDescription, ...]] = {
+SWITCHES: dict[str, tuple[SwitchEntityDescription, ...]] = {
     "WM": (
         HonControlSwitchEntityDescription(
             key="active",
@@ -355,8 +350,11 @@ SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["WM"])
 SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["TD"])
 
 
-async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
+async def async_setup_entry(
+    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+) -> None:
     entities = []
+    entity: HonConfigSwitchEntity | HonControlSwitchEntity | HonSwitchEntity
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in SWITCHES.get(device.appliance_type, []):
             if isinstance(description, HonConfigSwitchEntityDescription):
@@ -427,7 +425,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         return True
 
     @callback
-    def _handle_coordinator_update(self, update=True) -> None:
+    def _handle_coordinator_update(self, update: bool = True) -> None:
         self._attr_is_on = self.is_on
         if update:
             self.async_write_ha_state()
@@ -507,7 +505,7 @@ class HonConfigSwitchEntity(HonEntity, SwitchEntity):
         await self.coordinator.async_refresh()
 
     @callback
-    def _handle_coordinator_update(self, update=True) -> None:
+    def _handle_coordinator_update(self, update: bool = True) -> None:
         self._attr_is_on = self.is_on
         if update:
             self.async_write_ha_state()

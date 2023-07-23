@@ -1,6 +1,5 @@
 import logging
 from dataclasses import dataclass
-from typing import Dict
 
 from homeassistant.components.sensor import (
     SensorEntity,
@@ -25,6 +24,8 @@ from homeassistant.const import (
 )
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.typing import HomeAssistantType
 
 from . import const
 from .const import DOMAIN
@@ -36,12 +37,12 @@ _LOGGER = logging.getLogger(__name__)
 @dataclass
 class HonConfigSensorEntityDescription(SensorEntityDescription):
     entity_category: EntityCategory = EntityCategory.CONFIG
-    option_list: Dict[int, str] = None
+    option_list: dict[int, str] | None = None
 
 
 @dataclass
 class HonSensorEntityDescription(SensorEntityDescription):
-    option_list: Dict[int, str] = None
+    option_list: dict[int, str] | None = None
 
 
 SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
@@ -775,8 +776,11 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
 SENSORS["WD"] = unique_entities(SENSORS["WM"], SENSORS["TD"])
 
 
-async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
+async def async_setup_entry(
+    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+) -> None:
     entities = []
+    entity: HonSensorEntity | HonConfigSensorEntity
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in SENSORS.get(device.appliance_type, []):
             if isinstance(description, HonSensorEntityDescription):
@@ -799,15 +803,15 @@ class HonSensorEntity(HonEntity, SensorEntity):
     entity_description: HonSensorEntityDescription
 
     @callback
-    def _handle_coordinator_update(self, update=True) -> None:
+    def _handle_coordinator_update(self, update: bool = True) -> None:
         value = self._device.get(self.entity_description.key, "")
         if self.entity_description.key == "programName":
-            self._attr_options = self._device.settings.get(
-                "startProgram.program"
-            ).values + ["No Program"]
+            if not (options := self._device.settings.get("startProgram.program")):
+                raise ValueError
+            self._attr_options = options.values + ["No Program"]
         elif self.entity_description.option_list is not None:
             self._attr_options = list(self.entity_description.option_list.values())
-            value = get_readable(self.entity_description, value)
+            value = str(get_readable(self.entity_description, value))
         if not value and self.entity_description.state_class is not None:
             self._attr_native_value = 0
         self._attr_native_value = value
@@ -819,17 +823,22 @@ class HonConfigSensorEntity(HonEntity, SensorEntity):
     entity_description: HonConfigSensorEntityDescription
 
     @callback
-    def _handle_coordinator_update(self, update=True) -> None:
-        value = self._device.settings.get(self.entity_description.key, None)
+    def _handle_coordinator_update(self, update: bool = True) -> None:
+        sensor = self._device.settings.get(self.entity_description.key, None)
+        value: float | str
         if self.entity_description.state_class is not None:
-            if value and value.value:
+            if sensor and sensor.value:
                 value = (
-                    float(value.value) if "." in str(value.value) else int(value.value)
+                    float(sensor.value)
+                    if "." in str(sensor.value)
+                    else int(sensor.value)
                 )
             else:
                 value = 0
+        elif sensor is not None:
+            value = sensor.value
         else:
-            value = value.value
+            value = 0
         if self.entity_description.option_list is not None and not value == 0:
             self._attr_options = list(self.entity_description.option_list.values())
             value = get_readable(self.entity_description, value)

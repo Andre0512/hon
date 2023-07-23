@@ -1,3 +1,4 @@
-pyhOn
 black
-homeassistant
+flake8
+mypy
+pylint

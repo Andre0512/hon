@@ -10,6 +10,9 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTime, UnitOfTemperature
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.typing import HomeAssistantType
+from pyhon.appliance import HonAppliance
 from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
@@ -183,8 +186,11 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
 NUMBERS["WD"] = unique_entities(NUMBERS["WM"], NUMBERS["TD"])
 
 
-async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
+async def async_setup_entry(
+    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+) -> None:
     entities = []
+    entity: HonNumberEntity | HonConfigNumberEntity
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in NUMBERS.get(device.appliance_type, []):
             if description.key not in device.available_settings:
@@ -203,7 +209,13 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 class HonNumberEntity(HonEntity, NumberEntity):
     entity_description: HonNumberEntityDescription
 
-    def __init__(self, hass, entry, device, description) -> None:
+    def __init__(
+        self,
+        hass: HomeAssistantType,
+        entry: ConfigEntry,
+        device: HonAppliance,
+        description: HonNumberEntityDescription,
+    ) -> None:
         super().__init__(hass, entry, device, description)
 
         self._data = device.settings[description.key]
@@ -214,7 +226,9 @@ class HonNumberEntity(HonEntity, NumberEntity):
 
     @property
     def native_value(self) -> float | None:
-        return self._device.get(self.entity_description.key.split(".")[-1])
+        if value := self._device.get(self.entity_description.key.split(".")[-1]):
+            return float(value)
+        return None
 
     async def async_set_native_value(self, value: float) -> None:
         setting = self._device.settings[self.entity_description.key]
@@ -227,7 +241,7 @@ class HonNumberEntity(HonEntity, NumberEntity):
         await self.coordinator.async_refresh()
 
     @callback
-    def _handle_coordinator_update(self, update=True) -> None:
+    def _handle_coordinator_update(self, update: bool = True) -> None:
         setting = self._device.settings[self.entity_description.key]
         if isinstance(setting, HonParameterRange):
             self._attr_native_max_value = setting.max
@@ -247,14 +261,31 @@ class HonNumberEntity(HonEntity, NumberEntity):
         )
 
 
-class HonConfigNumberEntity(HonNumberEntity):
+class HonConfigNumberEntity(HonEntity, NumberEntity):
     entity_description: HonConfigNumberEntityDescription
+
+    def __init__(
+        self,
+        hass: HomeAssistantType,
+        entry: ConfigEntry,
+        device: HonAppliance,
+        description: HonConfigNumberEntityDescription,
+    ) -> None:
+        super().__init__(hass, entry, device, description)
+
+        self._data = device.settings[description.key]
+        if isinstance(self._data, HonParameterRange):
+            self._attr_native_max_value = self._data.max
+            self._attr_native_min_value = self._data.min
+            self._attr_native_step = self._data.step
 
     @property
     def native_value(self) -> float | None:
-        return self._device.settings[self.entity_description.key].value
+        if value := self._device.settings[self.entity_description.key].value:
+            return float(value)
+        return None
 
-    async def async_set_native_value(self, value: str) -> None:
+    async def async_set_native_value(self, value: float) -> None:
         setting = self._device.settings[self.entity_description.key]
         if isinstance(setting, HonParameterRange):
             setting.value = value
@@ -264,3 +295,14 @@ class HonConfigNumberEntity(HonNumberEntity):
     def available(self) -> bool:
         """Return True if entity is available."""
         return super(NumberEntity, self).available
+
+    @callback
+    def _handle_coordinator_update(self, update: bool = True) -> None:
+        setting = self._device.settings[self.entity_description.key]
+        if isinstance(setting, HonParameterRange):
+            self._attr_native_max_value = setting.max
+            self._attr_native_min_value = setting.min
+            self._attr_native_step = setting.step
+        self._attr_native_value = self.native_value
+        if update:
+            self.async_write_ha_state()

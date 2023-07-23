@@ -4,6 +4,8 @@ from typing import Any
 from homeassistant.components.lock import LockEntity, LockEntityDescription
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.typing import HomeAssistantType
 from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
 
@@ -23,7 +25,9 @@ LOCKS: dict[str, tuple[LockEntityDescription, ...]] = {
 }
 
 
-async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
+async def async_setup_entry(
+    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+) -> None:
     entities = []
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in LOCKS.get(device.appliance_type, []):
@@ -45,13 +49,12 @@ class HonLockEntity(HonEntity, LockEntity):
     @property
     def is_locked(self) -> bool | None:
         """Return a boolean for the state of the lock."""
-        """Return True if entity is on."""
-        return self._device.get(self.entity_description.key, 0) == 1
+        return bool(self._device.get(self.entity_description.key, 0) == 1)
 
     async def async_lock(self, **kwargs: Any) -> None:
         """Lock method."""
-        setting = self._device.settings[f"settings.{self.entity_description.key}"]
-        if type(setting) == HonParameter:
+        setting = self._device.settings.get(f"settings.{self.entity_description.key}")
+        if type(setting) == HonParameter or setting is None:
             return
         setting.value = setting.max if isinstance(setting, HonParameterRange) else 1
         self.async_write_ha_state()
@@ -78,8 +81,7 @@ class HonLockEntity(HonEntity, LockEntity):
         )
 
     @callback
-    def _handle_coordinator_update(self, update=True) -> None:
-        value = self._device.get(self.entity_description.key, 0)
+    def _handle_coordinator_update(self, update: bool = True) -> None:
         self._attr_is_locked = self.is_locked
         if update:
             self.async_write_ha_state()

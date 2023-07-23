@@ -9,6 +9,8 @@ from homeassistant.components.light import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.typing import HomeAssistantType
 from pyhon.appliance import HonAppliance
 from pyhon.parameter.range import HonParameterRange
 
@@ -18,7 +20,7 @@ from .hon import HonEntity
 _LOGGER = logging.getLogger(__name__)
 
 
-LIGHTS = {
+LIGHTS: dict[str, tuple[LightEntityDescription, ...]] = {
     "WC": (
         LightEntityDescription(
             key="settings.lightStatus",
@@ -43,7 +45,9 @@ LIGHTS = {
 }
 
 
-async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
+async def async_setup_entry(
+    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+) -> None:
     entities = []
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in LIGHTS.get(device.appliance_type, []):
@@ -61,8 +65,16 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> Non
 class HonLightEntity(HonEntity, LightEntity):
     entity_description: LightEntityDescription
 
-    def __init__(self, hass, entry, device: HonAppliance, description) -> None:
-        light: HonParameterRange = device.settings.get(description.key)
+    def __init__(
+        self,
+        hass: HomeAssistantType,
+        entry: ConfigEntry,
+        device: HonAppliance,
+        description: LightEntityDescription,
+    ) -> None:
+        light = self._device.settings.get(self.entity_description.key)
+        if not isinstance(light, HonParameterRange):
+            raise ValueError()
         self._light_range = (light.min, light.max)
         self._attr_supported_color_modes: set[ColorMode] = set()
         if len(light.values) == 2:
@@ -76,13 +88,13 @@ class HonLightEntity(HonEntity, LightEntity):
     @property
     def is_on(self) -> bool:
         """Return true if light is on."""
-        return self._device.get(self.entity_description.key.split(".")[-1]) > 0
+        return bool(self._device.get(self.entity_description.key.split(".")[-1]) > 0)
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         """Turn on or control the light."""
-        light: HonParameterRange = self._device.settings.get(
-            self.entity_description.key
-        )
+        light = self._device.settings.get(self.entity_description.key)
+        if not isinstance(light, HonParameterRange):
+            raise ValueError()
         if ColorMode.BRIGHTNESS in self._attr_supported_color_modes:
             percent = int(100 / 255 * kwargs.get(ATTR_BRIGHTNESS, 128))
             light.value = round(light.max / 100 * percent)
@@ -96,9 +108,9 @@ class HonLightEntity(HonEntity, LightEntity):
 
     async def async_turn_off(self, **kwargs: Any) -> None:
         """Instruct the light to turn off."""
-        light: HonParameterRange = self._device.settings.get(
-            self.entity_description.key
-        )
+        light = self._device.settings.get(self.entity_description.key)
+        if not isinstance(light, HonParameterRange):
+            raise ValueError()
         light.value = light.min
         await self._device.commands[self._command].send()
         self.async_write_ha_state()
@@ -106,15 +118,15 @@ class HonLightEntity(HonEntity, LightEntity):
     @property
     def brightness(self) -> int | None:
         """Return the brightness of the light."""
-        light: HonParameterRange = self._device.settings.get(
-            self.entity_description.key
-        )
+        light = self._device.settings.get(self.entity_description.key)
+        if not isinstance(light, HonParameterRange):
+            raise ValueError()
         if light.value == light.min:
             return None
-        return int(255 / light.max * light.value)
+        return int(255 / light.max * float(light.value))
 
     @callback
-    def _handle_coordinator_update(self, update=True) -> None:
+    def _handle_coordinator_update(self, update: bool = True) -> None:
         self._attr_is_on = self.is_on
         self._attr_brightness = self.brightness
         if update:
@@ -122,7 +134,6 @@ class HonLightEntity(HonEntity, LightEntity):
 
     @property
     def available(self) -> bool:
-        return (
-            super().available
-            and len(self._device.settings.get(self.entity_description.key).values) > 1
-        )
+        if (entity := self._device.settings.get(self.entity_description.key)) is None:
+            return False
+        return super().available and len(entity.values) > 1

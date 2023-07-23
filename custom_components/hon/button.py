@@ -5,10 +5,13 @@ from homeassistant.components import persistent_notification
 from homeassistant.components.button import ButtonEntityDescription, ButtonEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers.entity import EntityCategory
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.typing import HomeAssistantType
 from pyhon.appliance import HonAppliance
 
 from .const import DOMAIN
 from .hon import HonEntity
+from .typedefs import HonButtonType
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -38,8 +41,10 @@ BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
 }
 
 
-async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
-    entities = []
+async def async_setup_entry(
+    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+) -> None:
+    entities: list[HonButtonType] = []
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in BUTTONS.get(device.appliance_type, []):
             if not device.commands.get(description.key):
@@ -70,7 +75,9 @@ class HonButtonEntity(HonEntity, ButtonEntity):
 
 
 class HonDeviceInfo(HonEntity, ButtonEntity):
-    def __init__(self, hass, entry, device: HonAppliance) -> None:
+    def __init__(
+        self, hass: HomeAssistantType, entry: ConfigEntry, device: HonAppliance
+    ) -> None:
         super().__init__(hass, entry, device)
 
         self._attr_unique_id = f"{super().unique_id}_show_device_info"
@@ -93,7 +100,9 @@ class HonDeviceInfo(HonEntity, ButtonEntity):
 
 
 class HonDataArchive(HonEntity, ButtonEntity):
-    def __init__(self, hass, entry, device: HonAppliance) -> None:
+    def __init__(
+        self, hass: HomeAssistantType, entry: ConfigEntry, device: HonAppliance
+    ) -> None:
         super().__init__(hass, entry, device)
 
         self._attr_unique_id = f"{super().unique_id}_create_data_archive"
@@ -104,7 +113,9 @@ class HonDataArchive(HonEntity, ButtonEntity):
             self._attr_entity_registry_enabled_default = False
 
     async def async_press(self) -> None:
-        path = Path(self._hass.config.config_dir) / "www"
+        if (config_dir := self._hass.config.config_dir) is None:
+            raise ValueError("Missing Config Dir")
+        path = Path(config_dir) / "www"
         data = await self._device.data_archive(path)
         title = f"{self._device.nick_name} Data Archive"
         text = (

@@ -6,10 +6,10 @@ from homeassistant.components.climate import (
     FAN_AUTO,
 )
 
-DOMAIN = "hon"
-UPDATE_INTERVAL = 10
+DOMAIN: str = "hon"
+UPDATE_INTERVAL: int = 10
 
-PLATFORMS = [
+PLATFORMS: list[str] = [
     "sensor",
     "select",
     "number",
@@ -22,7 +22,7 @@ PLATFORMS = [
     "lock",
 ]
 
-APPLIANCES = {
+APPLIANCES: dict[str, str] = {
     "AC": "Air Conditioner",
     "AP": "Air Purifier",
     "AS": "Air Scanner",
@@ -40,7 +40,7 @@ APPLIANCES = {
     "WM": "Washing Machine",
 }
 
-HON_HVAC_MODE = {
+HON_HVAC_MODE: dict[int, HVACMode] = {
     0: HVACMode.AUTO,
     1: HVACMode.COOL,
     2: HVACMode.DRY,
@@ -50,7 +50,7 @@ HON_HVAC_MODE = {
     6: HVACMode.FAN_ONLY,
 }
 
-HON_HVAC_PROGRAM = {
+HON_HVAC_PROGRAM: dict[str, str] = {
     HVACMode.AUTO: "iot_auto",
     HVACMode.COOL: "iot_cool",
     HVACMode.DRY: "iot_dry",
@@ -58,7 +58,7 @@ HON_HVAC_PROGRAM = {
     HVACMode.FAN_ONLY: "iot_fan",
 }
 
-HON_FAN = {
+HON_FAN: dict[int, str] = {
     1: FAN_HIGH,
     2: FAN_MEDIUM,
     3: FAN_LOW,
@@ -67,7 +67,7 @@ HON_FAN = {
 }
 
 # These languages are official supported by hOn
-LANGUAGES = [
+LANGUAGES: list[str] = [
     "cs",  # Czech
     "de",  # German
     "el",  # Greek
@@ -89,7 +89,7 @@ LANGUAGES = [
     "zh",  # Chinese
 ]
 
-WASHING_PR_PHASE = {
+WASHING_PR_PHASE: dict[int, str] = {
     0: "ready",
     1: "washing",
     2: "washing",
@@ -116,7 +116,7 @@ WASHING_PR_PHASE = {
     27: "washing",
 }
 
-MACH_MODE = {
+MACH_MODE: dict[int, str] = {
     0: "ready",  # NO_STATE
     1: "ready",  # SELECTION_MODE
     2: "running",  # EXECUTION_MODE
@@ -129,7 +129,7 @@ MACH_MODE = {
     9: "ending",  # STOP_MODE
 }
 
-TUMBLE_DRYER_PR_PHASE = {
+TUMBLE_DRYER_PR_PHASE: dict[int, str] = {
     0: "ready",
     1: "heat_stroke",
     2: "drying",
@@ -147,21 +147,21 @@ TUMBLE_DRYER_PR_PHASE = {
     20: "drying",
 }
 
-DIRTY_LEVEL = {
+DIRTY_LEVEL: dict[int, str] = {
     0: "unknown",
     1: "little",
     2: "normal",
     3: "very",
 }
 
-STEAM_LEVEL = {
+STEAM_LEVEL: dict[int, str] = {
     0: "no_steam",
     1: "cotton",
     2: "delicate",
     3: "synthetic",
 }
 
-DISHWASHER_PR_PHASE = {
+DISHWASHER_PR_PHASE: dict[int, str] = {
     0: "ready",
     1: "prewash",
     2: "washing",
@@ -171,7 +171,7 @@ DISHWASHER_PR_PHASE = {
     6: "hot_rinse",
 }
 
-TUMBLE_DRYER_DRY_LEVEL = {
+TUMBLE_DRYER_DRY_LEVEL: dict[int, str] = {
     0: "no_dry",
     1: "iron_dry",
     2: "no_dry_iron",
@@ -184,7 +184,7 @@ TUMBLE_DRYER_DRY_LEVEL = {
     15: "extra_dry",
 }
 
-AC_MACH_MODE = {
+AC_MACH_MODE: dict[int, str] = {
     0: "auto",
     1: "cool",
     2: "cool",
@@ -194,7 +194,7 @@ AC_MACH_MODE = {
     6: "fan",
 }
 
-AC_FAN_MODE = {
+AC_FAN_MODE: dict[int, str] = {
     1: "high",
     2: "mid",
     3: "low",
@@ -202,14 +202,14 @@ AC_FAN_MODE = {
     5: "auto",
 }
 
-AC_HUMAN_SENSE = {
+AC_HUMAN_SENSE: dict[int, str] = {
     0: "touch_off",
     1: "avoid_touch",
     2: "follow_touch",
     3: "unknown",
 }
 
-AP_MACH_MODE = {
+AP_MACH_MODE: dict[int, str] = {
     0: "standby",
     1: "sleep",
     2: "auto",
@@ -217,7 +217,7 @@ AP_MACH_MODE = {
     4: "max",
 }
 
-AP_DIFFUSER_LEVEL = {
+AP_DIFFUSER_LEVEL: dict[int, str] = {
     0: "off",
     1: "soft",
     2: "mid",
@@ -225,4 +225,4 @@ AP_DIFFUSER_LEVEL = {
     4: "custom",
 }
 
-REF_HUMIDITY_LEVELS = {1: "low", 2: "mid", 3: "high"}
+REF_HUMIDITY_LEVELS: dict[int, str] = {1: "low", 2: "mid", 3: "high"}

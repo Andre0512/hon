@@ -3,23 +3,79 @@ import logging
 from contextlib import suppress
 from datetime import timedelta
 from pathlib import Path
+from typing import Optional, Any, TypeVar
 
 import pkg_resources
+from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
 from homeassistant.helpers.entity import DeviceInfo
+from homeassistant.helpers.typing import HomeAssistantType
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from pyhon.appliance import HonAppliance
 
 from .const import DOMAIN, UPDATE_INTERVAL
+from .typedefs import HonEntityDescription, HonOptionEntityDescription, T
 
 _LOGGER = logging.getLogger(__name__)
 
 
-class HonEntity(CoordinatorEntity):
+class HonInfo:
+    def __init__(self) -> None:
+        self._manifest: dict[str, Any] = self._get_manifest()
+        self._hon_version: str = self._manifest.get("version", "")
+        self._pyhon_version: str = pkg_resources.get_distribution("pyhon").version
+
+    @staticmethod
+    def _get_manifest() -> dict[str, Any]:
+        manifest = Path(__file__).parent / "manifest.json"
+        with open(manifest, "r", encoding="utf-8") as file:
+            result: dict[str, Any] = json.loads(file.read())
+        return result
+
+    @property
+    def manifest(self) -> dict[str, Any]:
+        return self._manifest
+
+    @property
+    def hon_version(self) -> str:
+        return self._hon_version
+
+    @property
+    def pyhon_version(self) -> str:
+        return self._pyhon_version
+
+
+class HonCoordinator(DataUpdateCoordinator[None]):
+    def __init__(self, hass: HomeAssistantType, device: HonAppliance):
+        """Initialize my coordinator."""
+        super().__init__(
+            hass,
+            _LOGGER,
+            name=device.unique_id,
+            update_interval=timedelta(seconds=UPDATE_INTERVAL),
+        )
+        self._device = device
+        self._info = HonInfo()
+
+    async def _async_update_data(self) -> None:
+        return await self._device.update()
+
+    @property
+    def info(self) -> HonInfo:
+        return self._info
+
+
+class HonEntity(CoordinatorEntity[HonCoordinator]):
     _attr_has_entity_name = True
 
-    def __init__(self, hass, entry, device: HonAppliance, description=None) -> None:
+    def __init__(
+        self,
+        hass: HomeAssistantType,
+        entry: ConfigEntry,
+        device: HonAppliance,
+        description: Optional[HonEntityDescription] = None,
+    ) -> None:
         coordinator = get_coordinator(hass, device)
         super().__init__(coordinator)
 
@@ -36,7 +92,7 @@ class HonEntity(CoordinatorEntity):
         self._handle_coordinator_update(update=False)
 
     @property
-    def device_info(self):
+    def device_info(self) -> DeviceInfo:
         return DeviceInfo(
             identifiers={(DOMAIN, self._device.unique_id)},
             manufacturer=self._device.get("brand", ""),
@@ -51,71 +107,34 @@ class HonEntity(CoordinatorEntity):
             self.async_write_ha_state()
 
 
-class HonInfo:
-    def __init__(self):
-        self._manifest = self._get_manifest()
-        self._hon_version = self._manifest.get("version", "")
-        self._pyhon_version = pkg_resources.get_distribution("pyhon").version
-
-    @staticmethod
-    def _get_manifest():
-        manifest = Path(__file__).parent / "manifest.json"
-        with open(manifest, "r", encoding="utf-8") as file:
-            return json.loads(file.read())
-
-    @property
-    def manifest(self):
-        return self._manifest
-
-    @property
-    def hon_version(self):
-        return self._hon_version
-
-    @property
-    def pyhon_version(self):
-        return self._pyhon_version
-
-
-class HonCoordinator(DataUpdateCoordinator):
-    def __init__(self, hass, device: HonAppliance):
-        """Initialize my coordinator."""
-        super().__init__(
-            hass,
-            _LOGGER,
-            name=device.unique_id,
-            update_interval=timedelta(seconds=UPDATE_INTERVAL),
-        )
-        self._device = device
-        self._info = HonInfo()
-
-    async def _async_update_data(self):
-        await self._device.update()
-
-    @property
-    def info(self) -> HonInfo:
-        return self._info
-
-
-def unique_entities(base_entities, new_entities):
+def unique_entities(
+    base_entities: tuple[T, ...],
+    new_entities: tuple[T, ...],
+) -> tuple[T, ...]:
     result = list(base_entities)
     existing_entities = [entity.key for entity in base_entities]
+    entity: HonEntityDescription
     for entity in new_entities:
         if entity.key not in existing_entities:
             result.append(entity)
     return tuple(result)
 
 
-def get_coordinator(hass, appliance):
+def get_coordinator(hass: HomeAssistantType, appliance: HonAppliance) -> HonCoordinator:
     coordinators = hass.data[DOMAIN]["coordinators"]
     if appliance.unique_id in coordinators:
-        coordinator = hass.data[DOMAIN]["coordinators"][appliance.unique_id]
+        coordinator: HonCoordinator = hass.data[DOMAIN]["coordinators"][
+            appliance.unique_id
+        ]
     else:
         coordinator = HonCoordinator(hass, appliance)
         hass.data[DOMAIN]["coordinators"][appliance.unique_id] = coordinator
     return coordinator
 
 
-def get_readable(description, value):
+def get_readable(
+    description: HonOptionEntityDescription, value: float | str
+) -> float | str:
     if description.option_list is not None:
         with suppress(ValueError):
             return description.option_list.get(int(value), value)

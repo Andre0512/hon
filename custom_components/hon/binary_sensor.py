@@ -8,6 +8,8 @@ from homeassistant.components.binary_sensor import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.typing import HomeAssistantType
 
 from .const import DOMAIN
 from .hon import HonEntity, unique_entities
@@ -287,7 +289,9 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
 BINARY_SENSORS["WD"] = unique_entities(BINARY_SENSORS["WM"], BINARY_SENSORS["TD"])
 
 
-async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities) -> None:
+async def async_setup_entry(
+    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+) -> None:
     entities = []
     for device in hass.data[DOMAIN][entry.unique_id].appliances:
         for description in BINARY_SENSORS.get(device.appliance_type, []):
@@ -304,13 +308,13 @@ class HonBinarySensorEntity(HonEntity, BinarySensorEntity):
 
     @property
     def is_on(self) -> bool:
-        return (
+        return bool(
             self._device.get(self.entity_description.key, "")
             == self.entity_description.on_value
         )
 
     @callback
-    def _handle_coordinator_update(self, update=True) -> None:
+    def _handle_coordinator_update(self, update: bool = True) -> None:
         self._attr_native_value = (
             self._device.get(self.entity_description.key, "")
             == self.entity_description.on_value

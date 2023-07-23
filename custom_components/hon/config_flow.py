@@ -1,8 +1,10 @@
 import logging
+from typing import Any
 
-import voluptuous as vol
+import voluptuous as vol  # type: ignore[import]
 from homeassistant import config_entries
 from homeassistant.const import CONF_EMAIL, CONF_PASSWORD
+from homeassistant.data_entry_flow import FlowResult
 
 from .const import DOMAIN
 
@@ -13,11 +15,13 @@ class HonFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
     VERSION = 1
     CONNECTION_CLASS = config_entries.CONN_CLASS_LOCAL_POLL
 
-    def __init__(self):
-        self._email = None
-        self._password = None
+    def __init__(self) -> None:
+        self._email: str | None = None
+        self._password: str | None = None
 
-    async def async_step_user(self, user_input=None):
+    async def async_step_user(
+        self, user_input: dict[str, Any] | None = None
+    ) -> FlowResult:
         if user_input is None:
             return self.async_show_form(
                 step_id="user",
@@ -28,6 +32,14 @@ class HonFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 
         self._email = user_input[CONF_EMAIL]
         self._password = user_input[CONF_PASSWORD]
+
+        if self._email is None or self._password is None:
+            return self.async_show_form(
+                step_id="user",
+                data_schema=vol.Schema(
+                    {vol.Required(CONF_EMAIL): str, vol.Required(CONF_PASSWORD): str}
+                ),
+            )
 
         # Check if already configured
         await self.async_set_unique_id(self._email)
@@ -41,5 +53,5 @@ class HonFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             },
         )
 
-    async def async_step_import(self, user_input=None):
+    async def async_step_import(self, user_input: dict[str, str]) -> FlowResult:
         return await self.async_step_user(user_input)
