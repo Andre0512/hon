@@ -155,7 +155,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         self._handle_coordinator_update(update=False)
 
     def _set_temperature_bound(self) -> None:
-        temperature = self._device.settings[self.entity_description.key]
+        temperature = self._device.settings["settings.tempSel"]
         if not isinstance(temperature, HonParameterRange):
             raise ValueError
         self._attr_max_temp = temperature.max

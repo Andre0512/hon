@@ -25,7 +25,7 @@ CONFIG_SCHEMA = vol.Schema(
 )
 
 
-async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry) -> None:
+async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry) -> bool:
     session = aiohttp_client.async_get_clientsession(hass)
     if (config_dir := hass.config.config_dir) is None:
         raise ValueError("Missing Config Dir")
@@ -43,7 +43,7 @@ async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry) -> None
         hass.async_create_task(
             hass.config_entries.async_forward_entry_setup(entry, platform)
         )
-    return
+    return True
 
 
 async def async_unload_entry(hass: HomeAssistantType, entry: ConfigEntry) -> bool:

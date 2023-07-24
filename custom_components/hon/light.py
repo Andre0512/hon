@@ -72,7 +72,7 @@ class HonLightEntity(HonEntity, LightEntity):
         device: HonAppliance,
         description: LightEntityDescription,
     ) -> None:
-        light = self._device.settings.get(self.entity_description.key)
+        light = device.settings.get(description.key)
         if not isinstance(light, HonParameterRange):
             raise ValueError()
         self._light_range = (light.min, light.max)
