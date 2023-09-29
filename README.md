@@ -4,7 +4,17 @@
 [![PyPI](https://img.shields.io/pypi/v/pyhon?label=pyhOn)](https://github.com/Andre0512/pyhOn)
 [![GitHub](https://img.shields.io/github/license/Andre0512/hon?color=red)](https://github.com/Andre0512/hon/blob/main/LICENSE)
 [![GitHub all releases](https://img.shields.io/github/downloads/Andre0512/hon/total?color=blue)](https://tooomm.github.io/github-release-stats/?username=Andre0512&repository=hon)  
+
+---
+
 Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.com/) based on [pyhOn](https://github.com/Andre0512/pyhon).
+
+---
+
+[![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
+[![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
+[![Supported Models](https://img.shields.io/badge/Models-69-yellowgreen)](https://github.com/Andre0512/hon#supported-models)
+[![Supported Entities](https://img.shields.io/badge/Entities-241-crimson)](https://github.com/Andre0512/hon#appliance-features)  
 
 ## Supported Appliances
 - [Washing Machine](https://github.com/Andre0512/hon#washing-machine)
@@ -36,7 +46,7 @@ _Restart Home Assistant_
 _If the integration is not in the list, you need to clear the browser cache._
 
 ## Supported Models
-Support has been confirmed for these models, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **69 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 |                     | **Haier**                                                                                                                                                                                                                       | **Hoover**                                                                                                                                  | **Candy**                                                                                                               |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
