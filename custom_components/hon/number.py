@@ -57,6 +57,12 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             icon="mdi:water",
             translation_key="water_hard",
         ),
+        HonNumberEntityDescription(
+            key="settings.waterHard",
+            name="Water hard",
+            icon="mdi:water",
+            translation_key="water_hard",
+        ),
         HonConfigNumberEntityDescription(
             key="startProgram.lang",
             name="lang",

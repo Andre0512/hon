@@ -383,9 +383,10 @@ For every device exists a button under diagnostics which can be used to log all 
 | Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
 | Program |  | `select` | `startProgram.program` |
 | Steam Type | `weather-dust` | `sensor` | `steamType` |
-| Sterilization | `clock-start` | `switch` | `startProgram.sterilizationStatus` |
+| Sterilization | `lotion-plus` | `switch` | `startProgram.sterilizationStatus` |
 | Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` |
 | Temperature level | `thermometer` | `number` | `startProgram.tempLevel` |
+| Tumbling | `refresh-circle` | `switch` | `startProgram.tumblingStatus` |
 #### Sensors
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -426,14 +427,17 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
+| Auto Dose Detergent | `cup` | `switch` | `autoDetergentStatus` |
+| Auto Dose Softener | `teddy-bear` | `switch` | `autoSoftenerStatus` |
 | Pause Washer Dryer | `pause` | `switch` | `pauseProgram` / `resumeProgram` |
 | Washer Dryer | `washing-machine` | `switch` | `startProgram` / `stopProgram` |
+| Water hard | `water` | `number` | `settings.waterHard` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Acqua Plus | `water-plus` | `switch` | `startProgram.acquaplus` |
-| Anti-Crease | `iron` | `switch` | `startProgram.antiCreaseTime` |
 | Anti-Crease | `iron` | `switch` | `startProgram.anticrease` |
+| Anti-Crease | `iron` | `switch` | `startProgram.antiCreaseTime` |
 | Auto Dose Detergent | `cup` | `switch` | `startProgram.autoDetergentStatus` |
 | Auto Dose Softener | `teddy-bear` | `switch` | `startProgram.autoSoftenerStatus` |
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
@@ -452,6 +456,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
 | Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` |
+| Prewash | `tshirt-crew` | `switch` | `startProgram.prewash` |
 | Program |  | `select` | `startProgram.program` |
 | Remaining Time | `timer` | `sensor` | `startProgram.remainingTime` |
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
@@ -459,12 +464,13 @@ For every device exists a button under diagnostics which can be used to log all 
 | Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |
 | Steam Type | `weather-dust` | `sensor` | `steamType` |
 | Steam level | `weather-dust` | `select` | `startProgram.steamLevel` |
-| Sterilization | `clock-start` | `switch` | `startProgram.sterilizationStatus` |
+| Sterilization | `lotion-plus` | `switch` | `startProgram.sterilizationStatus` |
 | Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadW` |
 | Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` |
 | Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` |
 | Temperature | `thermometer` | `select` | `startProgram.temp` |
 | Temperature level | `thermometer` | `number` | `startProgram.tempLevel` |
+| Tumbling | `refresh-circle` | `switch` | `startProgram.tumblingStatus` |
 | Water hard | `water` | `number` | `startProgram.waterHard` |
 | lang |  | `number` | `startProgram.lang` |
 #### Sensors
@@ -502,12 +508,16 @@ For every device exists a button under diagnostics which can be used to log all 
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
+| Auto Dose Detergent | `cup` | `switch` | `autoDetergentStatus` |
+| Auto Dose Softener | `teddy-bear` | `switch` | `autoSoftenerStatus` |
 | Pause Washing Machine | `pause` | `switch` | `pauseProgram` / `resumeProgram` |
 | Washing Machine | `washing-machine` | `switch` | `startProgram` / `stopProgram` |
+| Water hard | `water` | `number` | `settings.waterHard` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Acqua Plus | `water-plus` | `switch` | `startProgram.acquaplus` |
+| Anti-Crease | `iron` | `switch` | `startProgram.anticrease` |
 | Auto Dose Detergent | `cup` | `switch` | `startProgram.autoDetergentStatus` |
 | Auto Dose Softener | `teddy-bear` | `switch` | `startProgram.autoSoftenerStatus` |
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
@@ -523,6 +533,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
 | Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` |
+| Prewash | `tshirt-crew` | `switch` | `startProgram.prewash` |
 | Program |  | `select` | `startProgram.program` |
 | Remaining Time | `timer` | `sensor` | `startProgram.remainingTime` |
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |

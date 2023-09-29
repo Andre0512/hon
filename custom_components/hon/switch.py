@@ -64,6 +64,12 @@ SWITCHES: dict[str, tuple[SwitchEntityDescription, ...]] = {
             translation_key="prewash",
         ),
         HonConfigSwitchEntityDescription(
+            key="startProgram.prewash",
+            name="Prewash",
+            icon="mdi:tshirt-crew",
+            translation_key="prewash",
+        ),
+        HonConfigSwitchEntityDescription(
             key="startProgram.permanentPressStatus",
             name="Keep Fresh",
             icon="mdi:refresh-circle",
@@ -77,6 +83,18 @@ SWITCHES: dict[str, tuple[SwitchEntityDescription, ...]] = {
         ),
         HonConfigSwitchEntityDescription(
             key="startProgram.autoDetergentStatus",
+            name="Auto Dose Detergent",
+            icon="mdi:cup",
+            translation_key="auto_dose_detergent",
+        ),
+        HonSwitchEntityDescription(
+            key="autoSoftenerStatus",
+            name="Auto Dose Softener",
+            icon="mdi:teddy-bear",
+            translation_key="auto_dose_softener",
+        ),
+        HonSwitchEntityDescription(
+            key="autoDetergentStatus",
             name="Auto Dose Detergent",
             icon="mdi:cup",
             translation_key="auto_dose_detergent",
@@ -117,6 +135,12 @@ SWITCHES: dict[str, tuple[SwitchEntityDescription, ...]] = {
             icon="mdi:lotion-plus",
             translation_key="hygiene",
         ),
+        HonConfigSwitchEntityDescription(
+            key="startProgram.anticrease",
+            name="Anti-Crease",
+            icon="mdi:iron",
+            translation_key="anti_crease",
+        ),
     ),
     "TD": (
         HonControlSwitchEntityDescription(
@@ -138,7 +162,13 @@ SWITCHES: dict[str, tuple[SwitchEntityDescription, ...]] = {
         HonConfigSwitchEntityDescription(
             key="startProgram.sterilizationStatus",
             name="Sterilization",
-            icon="mdi:clock-start",
+            icon="mdi:lotion-plus",
+        ),
+        HonConfigSwitchEntityDescription(
+            key="startProgram.tumblingStatus",
+            name="Tumbling",
+            icon="mdi:refresh-circle",
+            translation_key="keep_fresh",
         ),
         HonConfigSwitchEntityDescription(
             key="startProgram.antiCreaseTime",
@@ -370,10 +400,7 @@ async def async_setup_entry(
                     continue
                 entity = HonControlSwitchEntity(hass, entry, device, description)
             elif isinstance(description, HonSwitchEntityDescription):
-                if (
-                    f"settings.{description.key}" not in device.available_settings
-                    or device.get(description.key) is None
-                ):
+                if f"settings.{description.key}" not in device.available_settings:
                     continue
                 entity = HonSwitchEntity(hass, entry, device, description)
             else:

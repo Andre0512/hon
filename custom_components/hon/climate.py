@@ -363,7 +363,13 @@ class HonClimateEntity(HonEntity, ClimateEntity):
 
     async def async_set_preset_mode(self, preset_mode: str) -> None:
         """Set the new preset mode."""
-        command = "stopProgram" if preset_mode == "no_mode" else "startProgram"
+        if preset_mode == "no_mode" and HVACMode.OFF in self.hvac_modes:
+            command = "stopProgram"
+        elif preset_mode == "no_mode":
+            command = "settings"
+            self._device.commands["settings"].reset()
+        else:
+            command = "startProgram"
         if program := self._device.settings.get(f"{command}.program"):
             program.value = preset_mode
         zone = self._device.settings.get(f"{command}.zone")
@@ -371,9 +377,9 @@ class HonClimateEntity(HonEntity, ClimateEntity):
             zone.value = self.entity_description.name.lower()
         self._device.sync_command(command, "settings")
         self._set_temperature_bound()
+        self._attr_preset_mode = preset_mode
         await self.coordinator.async_refresh()
         await self._device.commands[command].send()
-        self._attr_preset_mode = preset_mode
         self.async_write_ha_state()
 
     def _set_temperature_bound(self) -> None:
