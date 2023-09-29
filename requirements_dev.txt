@@ -1,4 +1,4 @@
-homeassistant~=2023.10.0b2
+homeassistant~=2023.9.3
 black~=23.7.0
 flake8~=6.0.0
 mypy~=1.4.1
