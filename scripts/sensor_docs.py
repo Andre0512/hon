@@ -79,5 +79,7 @@ readme = re.sub(
     readme,
     re.DOTALL,
 )
+entities = sum(len(x) for cat in result.values() for x in cat.values())
+readme = re.sub("badge/Entities-\\d+", f"badge/Entities-{entities}", readme)
 with open(Path(__file__).parent.parent / "README.md", "w") as file:
     file.write(readme)

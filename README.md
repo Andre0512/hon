@@ -14,7 +14,7 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 [![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
 [![Supported Models](https://img.shields.io/badge/Models-72-yellowgreen)](https://github.com/Andre0512/hon#supported-models)
-[![Supported Entities](https://img.shields.io/badge/Entities-241-crimson)](https://github.com/Andre0512/hon#appliance-features)  
+[![Supported Entities](https://img.shields.io/badge/Entities-313-crimson)](https://github.com/Andre0512/hon#appliance-features)  
 
 ## Supported Appliances
 - [Washing Machine](https://github.com/Andre0512/hon#washing-machine)
@@ -471,6 +471,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
 | Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` |
 | Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |
+| Stain Type | `liquid-spot` | `select` | `startProgram.extendedStainType` |
 | Steam Type | `weather-dust` | `sensor` | `steamType` |
 | Steam level | `weather-dust` | `select` | `startProgram.steamLevel` |
 | Sterilization | `lotion-plus` | `switch` | `startProgram.sterilizationStatus` |
@@ -506,6 +507,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
 | Spin Speed | `speedometer` | `sensor` | `spinSpeed` |
+| Stain Type | `liquid-spot` | `sensor` | `stainType` |
 | Start Time | `clock-start` | `sensor` | `delayTime` |
 | Steam level | `weather-dust` | `sensor` | `steamLevel` |
 | Temperature level | `thermometer` | `sensor` | `tempLevel` |
@@ -548,6 +550,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
 | Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` |
 | Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |
+| Stain Type | `liquid-spot` | `select` | `startProgram.extendedStainType` |
 | Steam level | `weather-dust` | `select` | `startProgram.steamLevel` |
 | Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadW` |
 | Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` |
@@ -576,6 +579,7 @@ For every device exists a button under diagnostics which can be used to log all 
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Remote Control | `remote` | `binary_sensor` | `attributes.lastConnEvent.category` |
 | Spin Speed | `speedometer` | `sensor` | `spinSpeed` |
+| Stain Type | `liquid-spot` | `sensor` | `stainType` |
 | Steam level | `weather-dust` | `sensor` | `steamLevel` |
 | Total Power |  | `sensor` | `totalElectricityUsed` |
 | Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` |

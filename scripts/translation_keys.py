@@ -115,6 +115,46 @@ REF_HUMIDITY_LEVELS = {
     "high": "GLOBALS.GENERAL.HIGH",
 }
 
+STAINS = {
+    "baby_food": "STAIN_TYPE_LIST.STAINS.BABY_FOOD",
+    "bean_paste": "STAIN_TYPE_LIST.STAINS.BEAN_PASTE",
+    "blood": "STAIN_TYPE_LIST.STAINS.BLOOD",
+    "blueberry": "STAIN_TYPE_LIST.STAINS.BLUEBERRY",
+    "blue_ink": "STAIN_TYPE_LIST.STAINS.BLUE_INK",
+    "butter": "STAIN_TYPE_LIST.STAINS.BUTTER",
+    "chili_oil": "STAIN_TYPE_LIST.STAINS.CHILI_OIL",
+    "chili_sauce": "STAIN_TYPE_LIST.STAINS.CHILI_SAUCE",
+    "chocolate": "STAIN_TYPE_LIST.STAINS.CHOCOLATE",
+    "coffe": "STAIN_TYPE_LIST.STAINS.COFFE",
+    "coffee": "STAIN_TYPE_LIST.STAINS.COFFEE",
+    "color_pencil": "STAIN_TYPE_LIST.STAINS.COLOR_PENCIL",
+    "cooking_oil": "STAIN_TYPE_LIST.STAINS.COOKING_OIL",
+    "curry": "STAIN_TYPE_LIST.STAINS.CURRY",
+    "deodorant": "STAIN_TYPE_LIST.STAINS.DEODORANT",
+    "egg": "STAIN_TYPE_LIST.STAINS.EGG",
+    "fruit": "STAIN_TYPE_LIST.STAINS.FRUIT",
+    "glue": "STAIN_TYPE_LIST.STAINS.GLUE",
+    "grass": "STAIN_TYPE_LIST.STAINS.GRASS",
+    "ice_cream": "STAIN_TYPE_LIST.STAINS.ICE_CREAM",
+    "ketchup": "STAIN_TYPE_LIST.STAINS.KETCHUP",
+    "lip_gloss": "STAIN_TYPE_LIST.STAINS.LIP_GLOSS",
+    "mayonnaise": "STAIN_TYPE_LIST.STAINS.MAYONNAISE",
+    "mech_grease": "STAIN_TYPE_LIST.STAINS.MECH_GREASE",
+    "milk": "STAIN_TYPE_LIST.STAINS.MILK",
+    "milk_tea": "STAIN_TYPE_LIST.STAINS.MILK_TEA",
+    "oil": "STAIN_TYPE_LIST.STAINS.OIL",
+    "oil_pastel": "STAIN_TYPE_LIST.STAINS.OIL_PASTEL",
+    "perfume": "STAIN_TYPE_LIST.STAINS.PERFUME",
+    "rust": "STAIN_TYPE_LIST.STAINS.RUST",
+    "shoe_cream": "STAIN_TYPE_LIST.STAINS.SHOE_CREAM",
+    "soil": "STAIN_TYPE_LIST.STAINS.SOIL",
+    "soy_sauce": "STAIN_TYPE_LIST.STAINS.SOY_SAUCE",
+    "sweat": "STAIN_TYPE_LIST.STAINS.SWEAT",
+    "tea": "STAIN_TYPE_LIST.STAINS.TEA",
+    "wine": "STAIN_TYPE_LIST.STAINS.WINE",
+    "unknown": "unknown",
+}
+
 
 SENSOR = {
     "washing_modes": MACH_MODE,
@@ -137,6 +177,7 @@ SELECT = {
     "mode": AP_MACH_MODE,
     "diffuser": AP_DIFFUSER_LEVEL,
     "dirt_level": DIRTY_LEVEL,
+    "stain_type": STAINS,
 }
 
 PROGRAMS = {
@@ -302,6 +343,7 @@ NAMES = {
         "mode": "CUBE90_GLOBAL.GENERAL.MODE",
         "steam_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.STEAM_LEVEL",
         "dirt_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.DIRTY_LEVEL",
+        "stain_type": "STAIN_TYPE_LIST.STAINS.STAIN_LEVEL",
     },
     "sensor": {
         "dry_levels": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_LEVEL",

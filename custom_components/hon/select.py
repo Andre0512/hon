@@ -64,6 +64,12 @@ SELECTS: dict[str, tuple[SelectEntityDescription, ...]] = {
             translation_key="dirt_level",
             option_list=const.DIRTY_LEVEL,
         ),
+        HonConfigSelectEntityDescription(
+            key="startProgram.extendedStainType",
+            name="Stain Type",
+            icon="mdi:liquid-spot",
+            translation_key="stain_type",
+        ),
     ),
     "TD": (
         HonConfigSelectEntityDescription(

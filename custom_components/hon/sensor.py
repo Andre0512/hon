@@ -195,6 +195,14 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             translation_key="steam_level",
             option_list=const.STEAM_LEVEL,
         ),
+        HonSensorEntityDescription(
+            key="stainType",
+            name="Stain Type",
+            icon="mdi:liquid-spot",
+            device_class=SensorDeviceClass.ENUM,
+            translation_key="stain_type",
+            option_list=const.STAIN_TYPES,
+        ),
     ),
     "TD": (
         HonSensorEntityDescription(
