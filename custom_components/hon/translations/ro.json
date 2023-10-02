@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Nivelul de pătare"
+            },
+            "fan_horizontal": {
+                "name": "Direcția ventilatorului Orizontal",
+                "state": {
+                    "position_1": "Fix - Poziție 1",
+                    "position_2": "Fix - Poziție 2",
+                    "position_3": "Fix - Poziție 3",
+                    "position_4": "Fix - Poziție 4",
+                    "position_5": "Fix - Poziție 5",
+                    "swing": "Baleiere"
+                }
+            },
+            "fan_vertical": {
+                "name": "Direcția ventilatorului Vertical",
+                "state": {
+                    "position_1": "Fix - Poziție 1",
+                    "position_2": "Fix - Poziție 2",
+                    "position_3": "Fix - Poziție 3",
+                    "position_4": "Fix - Poziție 4",
+                    "position_5": "Fix - Poziție 5",
+                    "swing": "Baleiere"
+                }
             }
         },
         "switch": {

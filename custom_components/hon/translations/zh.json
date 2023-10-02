@@ -1750,6 +1750,28 @@
                     "unknown": "unknown"
                 },
                 "name": "污渍水平"
+            },
+            "fan_horizontal": {
+                "name": "风扇方向 水平",
+                "state": {
+                    "position_1": "固定 - 位置 1",
+                    "position_2": "固定 - 位置 2",
+                    "position_3": "固定 - 位置 3",
+                    "position_4": "固定 - 位置 4",
+                    "position_5": "固定 - 位置 5",
+                    "swing": "摆动"
+                }
+            },
+            "fan_vertical": {
+                "name": "风扇方向 垂直",
+                "state": {
+                    "position_1": "固定 - 位置 1",
+                    "position_2": "固定 - 位置 2",
+                    "position_3": "固定 - 位置 3",
+                    "position_4": "固定 - 位置 4",
+                    "position_5": "固定 - 位置 5",
+                    "swing": "摆动"
+                }
             }
         },
         "switch": {

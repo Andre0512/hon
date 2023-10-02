@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Grad der Verschmutzung"
+            },
+            "fan_horizontal": {
+                "name": "Richtung des Gebläses Horizontal",
+                "state": {
+                    "position_1": "Fest - Position 1",
+                    "position_2": "Fest - Position 2",
+                    "position_3": "Fest - Position 3",
+                    "position_4": "Fest - Position 4",
+                    "position_5": "Fest - Position 5",
+                    "swing": "Schwenkbewegung"
+                }
+            },
+            "fan_vertical": {
+                "name": "Richtung des Gebläses Vertikal",
+                "state": {
+                    "position_1": "Fest - Position 1",
+                    "position_2": "Fest - Position 2",
+                    "position_3": "Fest - Position 3",
+                    "position_4": "Fest - Position 4",
+                    "position_5": "Fest - Position 5",
+                    "swing": "Schwenkbewegung"
+                }
             }
         },
         "switch": {

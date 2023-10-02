@@ -140,6 +140,20 @@ SELECTS: dict[str, tuple[SelectEntityDescription, ...]] = {
             translation_key="eco_pilot",
             option_list=const.AC_HUMAN_SENSE,
         ),
+        HonSelectEntityDescription(
+            key="settings.windDirectionHorizontal",
+            name="Fan Direction Horizontal",
+            icon="mdi:fan",
+            translation_key="fan_horizontal",
+            option_list=const.AC_POSITION_HORIZONTAL,
+        ),
+        HonSelectEntityDescription(
+            key="settings.windDirectionVertical",
+            name="Fan Direction Vertical",
+            icon="mdi:fan",
+            translation_key="fan_vertical",
+            option_list=const.AC_POSITION_VERTICAL,
+        ),
     ),
     "REF": (
         HonConfigSelectEntityDescription(

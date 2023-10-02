@@ -85,6 +85,40 @@ AC_HUMAN_SENSE = {
     "unknown": "unknown",
 }
 
+AC_POSITIONS = {
+    "position_1": [
+        "AC.PROGRAM_DETAIL.FAN_MODE_FIXED",
+        "-",
+        "AC.PROGRAM_DETAIL.POSITION",
+        "1",
+    ],
+    "position_2": [
+        "AC.PROGRAM_DETAIL.FAN_MODE_FIXED",
+        "-",
+        "AC.PROGRAM_DETAIL.POSITION",
+        "2",
+    ],
+    "position_3": [
+        "AC.PROGRAM_DETAIL.FAN_MODE_FIXED",
+        "-",
+        "AC.PROGRAM_DETAIL.POSITION",
+        "3",
+    ],
+    "position_4": [
+        "AC.PROGRAM_DETAIL.FAN_MODE_FIXED",
+        "-",
+        "AC.PROGRAM_DETAIL.POSITION",
+        "4",
+    ],
+    "position_5": [
+        "AC.PROGRAM_DETAIL.FAN_MODE_FIXED",
+        "-",
+        "AC.PROGRAM_DETAIL.POSITION",
+        "5",
+    ],
+    "swing": "AC.PROGRAM_DETAIL.FAN_MODE_SWING",
+}
+
 AP_MACH_MODE = {
     "standby": "AP.RUNNING_MODE.STANDBY",
     "sleep": "AP.RUNNING_MODE.SLEEP",
@@ -178,6 +212,8 @@ SELECT = {
     "diffuser": AP_DIFFUSER_LEVEL,
     "dirt_level": DIRTY_LEVEL,
     "stain_type": STAINS,
+    "fan_horizontal": AC_POSITIONS,
+    "fan_vertical": AC_POSITIONS,
 }
 
 PROGRAMS = {
@@ -344,6 +380,14 @@ NAMES = {
         "steam_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.STEAM_LEVEL",
         "dirt_level": "WASHING_CMD&CTRL.PROGRAM_CYCLE_DETAIL_MAIN_OPTIONS.DIRTY_LEVEL",
         "stain_type": "STAIN_TYPE_LIST.STAINS.STAIN_LEVEL",
+        "fan_horizontal": [
+            "AC.PROGRAM_DETAIL.FAN_DIRECTION",
+            "AC.PROGRAM_DETAIL.FAN_DIRECTION_HORIZONTAL",
+        ],
+        "fan_vertical": [
+            "AC.PROGRAM_DETAIL.FAN_DIRECTION",
+            "AC.PROGRAM_DETAIL.FAN_DIRECTION_VERTICAL",
+        ],
     },
     "sensor": {
         "dry_levels": "WASHING_CMD&CTRL.DRAWER_CYCLE_DRYING.TAB_LEVEL",

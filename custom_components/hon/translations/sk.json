@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Úroveň škvŕn"
+            },
+            "fan_horizontal": {
+                "name": "Smer ventilátora Horizontálny",
+                "state": {
+                    "position_1": "Pevný - Poloha 1",
+                    "position_2": "Pevný - Poloha 2",
+                    "position_3": "Pevný - Poloha 3",
+                    "position_4": "Pevný - Poloha 4",
+                    "position_5": "Pevný - Poloha 5",
+                    "swing": "Otáčanie"
+                }
+            },
+            "fan_vertical": {
+                "name": "Smer ventilátora Vertikálny",
+                "state": {
+                    "position_1": "Pevný - Poloha 1",
+                    "position_2": "Pevný - Poloha 2",
+                    "position_3": "Pevný - Poloha 3",
+                    "position_4": "Pevný - Poloha 4",
+                    "position_5": "Pevný - Poloha 5",
+                    "swing": "Otáčanie"
+                }
             }
         },
         "switch": {

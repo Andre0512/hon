@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Nivel de manchas"
+            },
+            "fan_horizontal": {
+                "name": "Dirección del ventilador Horizontal",
+                "state": {
+                    "position_1": "Fijo - Posición 1",
+                    "position_2": "Fijo - Posición 2",
+                    "position_3": "Fijo - Posición 3",
+                    "position_4": "Fijo - Posición 4",
+                    "position_5": "Fijo - Posición 5",
+                    "swing": "Oscilar"
+                }
+            },
+            "fan_vertical": {
+                "name": "Dirección del ventilador Vertical",
+                "state": {
+                    "position_1": "Fijo - Posición 1",
+                    "position_2": "Fijo - Posición 2",
+                    "position_3": "Fijo - Posición 3",
+                    "position_4": "Fijo - Posición 4",
+                    "position_5": "Fijo - Posición 5",
+                    "swing": "Oscilar"
+                }
             }
         },
         "switch": {

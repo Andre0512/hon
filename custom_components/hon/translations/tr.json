@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Leke seviyesi"
+            },
+            "fan_horizontal": {
+                "name": "Fan yönü Yatay",
+                "state": {
+                    "position_1": "Sabit - Pozisyon 1",
+                    "position_2": "Sabit - Pozisyon 2",
+                    "position_3": "Sabit - Pozisyon 3",
+                    "position_4": "Sabit - Pozisyon 4",
+                    "position_5": "Sabit - Pozisyon 5",
+                    "swing": "Salınım"
+                }
+            },
+            "fan_vertical": {
+                "name": "Fan yönü Dikey",
+                "state": {
+                    "position_1": "Sabit - Pozisyon 1",
+                    "position_2": "Sabit - Pozisyon 2",
+                    "position_3": "Sabit - Pozisyon 3",
+                    "position_4": "Sabit - Pozisyon 4",
+                    "position_5": "Sabit - Pozisyon 5",
+                    "swing": "Salınım"
+                }
             }
         },
         "switch": {

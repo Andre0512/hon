@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Niveau de salissure"
+            },
+            "fan_horizontal": {
+                "name": "Direction du ventilateur Horizontale",
+                "state": {
+                    "position_1": "Fixe - Position 1",
+                    "position_2": "Fixe - Position 2",
+                    "position_3": "Fixe - Position 3",
+                    "position_4": "Fixe - Position 4",
+                    "position_5": "Fixe - Position 5",
+                    "swing": "Oscillation"
+                }
+            },
+            "fan_vertical": {
+                "name": "Direction du ventilateur Verticale",
+                "state": {
+                    "position_1": "Fixe - Position 1",
+                    "position_2": "Fixe - Position 2",
+                    "position_3": "Fixe - Position 3",
+                    "position_4": "Fixe - Position 4",
+                    "position_5": "Fixe - Position 5",
+                    "swing": "Oscillation"
+                }
             }
         },
         "switch": {

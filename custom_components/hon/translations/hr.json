@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Razina mrlja"
+            },
+            "fan_horizontal": {
+                "name": "Smjer ventilatora Vodoravno",
+                "state": {
+                    "position_1": "Fiksno - Položaj 1",
+                    "position_2": "Fiksno - Položaj 2",
+                    "position_3": "Fiksno - Položaj 3",
+                    "position_4": "Fiksno - Položaj 4",
+                    "position_5": "Fiksno - Položaj 5",
+                    "swing": "Njihanje"
+                }
+            },
+            "fan_vertical": {
+                "name": "Smjer ventilatora Okomito",
+                "state": {
+                    "position_1": "Fiksno - Položaj 1",
+                    "position_2": "Fiksno - Položaj 2",
+                    "position_3": "Fiksno - Položaj 3",
+                    "position_4": "Fiksno - Položaj 4",
+                    "position_5": "Fiksno - Položaj 5",
+                    "swing": "Njihanje"
+                }
             }
         },
         "switch": {

@@ -1773,6 +1773,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Livello di sporco"
+            },
+            "fan_horizontal": {
+                "name": "Direzione ventola Orizzontale",
+                "state": {
+                    "position_1": "Fissa - Posizione 1",
+                    "position_2": "Fissa - Posizione 2",
+                    "position_3": "Fissa - Posizione 3",
+                    "position_4": "Fissa - Posizione 4",
+                    "position_5": "Fissa - Posizione 5",
+                    "swing": "Swing"
+                }
+            },
+            "fan_vertical": {
+                "name": "Direzione ventola Verticale",
+                "state": {
+                    "position_1": "Fissa - Posizione 1",
+                    "position_2": "Fissa - Posizione 2",
+                    "position_3": "Fissa - Posizione 3",
+                    "position_4": "Fissa - Posizione 4",
+                    "position_5": "Fissa - Posizione 5",
+                    "swing": "Swing"
+                }
             }
         },
         "switch": {

@@ -1793,6 +1793,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Stain level"
+            },
+            "fan_horizontal": {
+                "name": "Fan direction Horizontal",
+                "state": {
+                    "position_1": "Fixed - Position 1",
+                    "position_2": "Fixed - Position 2",
+                    "position_3": "Fixed - Position 3",
+                    "position_4": "Fixed - Position 4",
+                    "position_5": "Fixed - Position 5",
+                    "swing": "Swing"
+                }
+            },
+            "fan_vertical": {
+                "name": "Fan direction Vertical",
+                "state": {
+                    "position_1": "Fixed - Position 1",
+                    "position_2": "Fixed - Position 2",
+                    "position_3": "Fixed - Position 3",
+                    "position_4": "Fixed - Position 4",
+                    "position_5": "Fixed - Position 5",
+                    "swing": "Swing"
+                }
             }
         },
         "switch": {

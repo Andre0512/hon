@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Nível da nódoa"
+            },
+            "fan_horizontal": {
+                "name": "Direção do ventilador Horizontal",
+                "state": {
+                    "position_1": "Fixa - Posição 1",
+                    "position_2": "Fixa - Posição 2",
+                    "position_3": "Fixa - Posição 3",
+                    "position_4": "Fixa - Posição 4",
+                    "position_5": "Fixa - Posição 5",
+                    "swing": "Oscilação"
+                }
+            },
+            "fan_vertical": {
+                "name": "Direção do ventilador Vertical",
+                "state": {
+                    "position_1": "Fixa - Posição 1",
+                    "position_2": "Fixa - Posição 2",
+                    "position_3": "Fixa - Posição 3",
+                    "position_4": "Fixa - Posição 4",
+                    "position_5": "Fixa - Posição 5",
+                    "swing": "Oscilação"
+                }
             }
         },
         "switch": {

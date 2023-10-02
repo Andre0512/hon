@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Stopień zabrudzenia"
+            },
+            "fan_horizontal": {
+                "name": "Kierunek wentylatora Poziomy",
+                "state": {
+                    "position_1": "Stały - Pozycja 1",
+                    "position_2": "Stały - Pozycja 2",
+                    "position_3": "Stały - Pozycja 3",
+                    "position_4": "Stały - Pozycja 4",
+                    "position_5": "Stały - Pozycja 5",
+                    "swing": "Swing"
+                }
+            },
+            "fan_vertical": {
+                "name": "Kierunek wentylatora Pionowy",
+                "state": {
+                    "position_1": "Stały - Pozycja 1",
+                    "position_2": "Stały - Pozycja 2",
+                    "position_3": "Stały - Pozycja 3",
+                    "position_4": "Stały - Pozycja 4",
+                    "position_5": "Stały - Pozycja 5",
+                    "swing": "Swing"
+                }
             }
         },
         "switch": {

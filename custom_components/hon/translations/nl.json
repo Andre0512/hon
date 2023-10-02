@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Vlekniveau"
+            },
+            "fan_horizontal": {
+                "name": "Ventilatorrichting Horizontaal",
+                "state": {
+                    "position_1": "Vast - Positie 1",
+                    "position_2": "Vast - Positie 2",
+                    "position_3": "Vast - Positie 3",
+                    "position_4": "Vast - Positie 4",
+                    "position_5": "Vast - Positie 5",
+                    "swing": "Draaiend"
+                }
+            },
+            "fan_vertical": {
+                "name": "Ventilatorrichting Verticaal",
+                "state": {
+                    "position_1": "Vast - Positie 1",
+                    "position_2": "Vast - Positie 2",
+                    "position_3": "Vast - Positie 3",
+                    "position_4": "Vast - Positie 4",
+                    "position_5": "Vast - Positie 5",
+                    "swing": "Draaiend"
+                }
             }
         },
         "switch": {

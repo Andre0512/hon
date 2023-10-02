@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Stopnja madežev"
+            },
+            "fan_horizontal": {
+                "name": "Smer ventilatorja Vodoravno",
+                "state": {
+                    "position_1": "Fiksno - Položaj 1",
+                    "position_2": "Fiksno - Položaj 2",
+                    "position_3": "Fiksno - Položaj 3",
+                    "position_4": "Fiksno - Položaj 4",
+                    "position_5": "Fiksno - Položaj 5",
+                    "swing": "Nihanje"
+                }
+            },
+            "fan_vertical": {
+                "name": "Smer ventilatorja Navpično",
+                "state": {
+                    "position_1": "Fiksno - Položaj 1",
+                    "position_2": "Fiksno - Položaj 2",
+                    "position_3": "Fiksno - Položaj 3",
+                    "position_4": "Fiksno - Položaj 4",
+                    "position_5": "Fiksno - Položaj 5",
+                    "swing": "Nihanje"
+                }
             }
         },
         "switch": {

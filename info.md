@@ -12,7 +12,7 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 [![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
 [![Supported Models](https://img.shields.io/badge/Models-73-yellowgreen)](https://github.com/Andre0512/hon#supported-models)
-[![Supported Entities](https://img.shields.io/badge/Entities-313-crimson)](https://github.com/Andre0512/hon#appliance-features)  
+[![Supported Entities](https://img.shields.io/badge/Entities-315-crimson)](https://github.com/Andre0512/hon#appliance-features)  
 
 ## Supported Appliances
 - [Washing Machine](https://github.com/Andre0512/hon#washing-machine)

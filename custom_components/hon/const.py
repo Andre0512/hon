@@ -264,3 +264,21 @@ STAIN_TYPES: dict[int, str] = {
     25: "chili_sauce",
     26: "fruit",
 }
+
+AC_POSITION_HORIZONTAL = {
+    0: "position_1",
+    3: "position_2",
+    4: "position_3",
+    5: "position_4",
+    6: "position_5",
+    7: "swing",
+}
+
+AC_POSITION_VERTICAL = {
+    2: "position_1",
+    4: "position_2",
+    5: "position_3",
+    6: "position_4",
+    7: "position_5",
+    8: "swing",
+}

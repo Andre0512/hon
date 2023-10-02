@@ -1764,6 +1764,28 @@
                     "unknown": "unknown"
                 },
                 "name": "Nivo mrlje"
+            },
+            "fan_horizontal": {
+                "name": "Pravac duvanja ventilatora Horizontalan",
+                "state": {
+                    "position_1": "Fiksiran - Položaj 1",
+                    "position_2": "Fiksiran - Položaj 2",
+                    "position_3": "Fiksiran - Položaj 3",
+                    "position_4": "Fiksiran - Položaj 4",
+                    "position_5": "Fiksiran - Položaj 5",
+                    "swing": "Njihanje"
+                }
+            },
+            "fan_vertical": {
+                "name": "Pravac duvanja ventilatora Vertikalan",
+                "state": {
+                    "position_1": "Fiksiran - Položaj 1",
+                    "position_2": "Fiksiran - Položaj 2",
+                    "position_3": "Fiksiran - Položaj 3",
+                    "position_4": "Fiksiran - Položaj 4",
+                    "position_5": "Fiksiran - Položaj 5",
+                    "swing": "Njihanje"
+                }
             }
         },
         "switch": {
