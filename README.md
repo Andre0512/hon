@@ -45,6 +45,54 @@ _Restart Home Assistant_
 **Method 2**: Settings > Devices & Services > Add Integration > **Haier hOn**  
 _If the integration is not in the list, you need to clear the browser cache._
 
+## Examples
+_Click to expand..._
+<details>
+  <summary>Washing Machine</summary>
+
+![Washing Machine](assets/example_wm.png)
+</details>
+<details>
+  <summary>Tumble Dryer</summary>
+
+![Tumble Dryer](assets/example_td.png)
+</details>
+<details>
+  <summary>Washer Dryer</summary>
+
+![Washer Dryer](assets/example_wd.png)
+</details>
+<details>
+  <summary>Oven</summary>
+
+![Oven](assets/example_ov.png)
+</details>
+<details>
+  <summary>Dish Washer</summary>
+
+![Dish Washer](assets/example_dw.png)
+</details>
+<details>
+  <summary>Air conditioner</summary>
+
+![Air conditioner](assets/example_ac.png)
+</details>
+<details>
+  <summary>Fridge</summary>
+
+![Fridge](assets/example_ref.png)
+</details>
+<details>
+  <summary>Wine Cellar</summary>
+
+![Wine Cellar](assets/example_wc.png)
+</details>
+<details>
+  <summary>Air Purifier</summary>
+
+![Air Purifier](assets/example_ap.png)
+</details>
+
 ## Supported Models
 Support has been confirmed for these **73 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
@@ -100,10 +148,6 @@ The apps on this (incomplete) list have been requested so far:
 | Haier U+        | China         | :x:                                     |                                                                                 |
 | GE SmartHQ      | North America | :x:                                     | [simbaja/ha_gehome](https://github.com/simbaja/ha_gehome)                       |   
 | Haier Evo       | Russia        | :x:                                     |                                                                                 |
-
-## Examples
-### Washing Machine
-![washing_machine.png](assets/washing_machine.png)
 
 ## Contribute
 Any kind of contribution is welcome!
