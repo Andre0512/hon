@@ -1,7 +1,7 @@
 # Haier hOn
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Andre0512/hon?color=green)](https://github.com/Andre0512/hon/releases/latest)
+[![GitHub all releases](https://img.shields.io/github/downloads/Andre0512/hon/total?color=blue&label=total%20downloads)](https://tooomm.github.io/github-release-stats/?username=Andre0512&repository=hon)
 [![GitHub](https://img.shields.io/github/license/Andre0512/hon?color=red)](https://github.com/Andre0512/hon/blob/main/LICENSE)
-[![GitHub all releases](https://img.shields.io/github/downloads/Andre0512/hon/total?color=blue)](https://tooomm.github.io/github-release-stats/?username=Andre0512&repository=hon)  
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-orange.svg)](https://www.buymeacoffee.com/andre0512)
 
 ---
 
@@ -143,8 +143,15 @@ Want to help us to support more appliances? Or add more sensors? Or help with tr
 Check out the [project on GitHub](https://github.com/Andre0512/hon), every contribution is welcome!
 
 ## Useful Links
-* [GitHub repository](https://github.com/Andre0512/hon) (please add a star if you like this integration!)
+* [GitHub repository](https://github.com/Andre0512/hon)
 * [pyhOn library](https://github.com/Andre0512/pyhOn)
 * [Release notes](https://github.com/Andre0512/hon/releases)
 * [Discussion and help](https://github.com/Andre0512/hon/discussions)
 * [Issues](https://github.com/Andre0512/hon/issues)
+
+## Support
+If you find this project helpful and would like to support its development, you can buy me a coffee! ☕
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/andre0512)
+
+Don't forget to star the repository if you found it useful! ⭐
