@@ -318,11 +318,12 @@ class HonClimateEntity(HonEntity, ClimateEntity):
 
         if modes:
             self._attr_supported_features = (
-                    ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.PRESET_MODE
+                ClimateEntityFeature.TARGET_TEMPERATURE
+                | ClimateEntityFeature.PRESET_MODE
             )
             self._attr_preset_modes = modes
         else:
-            self._attr_supported_features =  ClimateEntityFeature.TARGET_TEMPERATURE
+            self._attr_supported_features = ClimateEntityFeature.TARGET_TEMPERATURE
 
         self._handle_coordinator_update(update=False)
 
