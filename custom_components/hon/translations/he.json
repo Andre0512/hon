@@ -311,15 +311,16 @@
                     "chiller": "Quick cool",
                     "cold_drinks": "Soft chill",
                     "cool_drink": "Cool Drink",
-                    "fruits": "Fruits",
+                    "fruits": "Fruit",
                     "fruit_and_veg": "Fruit & Veg",
-                    "keep_fresh": "0° Fresh",
+                    "keep_fresh": "0°C Fresh",
                     "milk_and_eggs": "Milk & Eggs",
                     "sea_food": "Ready to cook meal",
                     "smart_mode_title": "Smart Mode",
                     "soft_frozen": "Soft freezing",
                     "tea": "Cold drinks or Beverages",
-                    "vegetables": "Vegetables"
+                    "vegetables": "Vegetable",
+                    "zero_fresh": "0°C Fresh"
                 },
                 "name": "Program"
             },
@@ -725,15 +726,16 @@
                     "chiller": "Quick cool",
                     "cold_drinks": "Soft chill",
                     "cool_drink": "Cool Drink",
-                    "fruits": "Fruits",
+                    "fruits": "Fruit",
                     "fruit_and_veg": "Fruit & Veg",
-                    "keep_fresh": "0° Fresh",
+                    "keep_fresh": "0°C Fresh",
                     "milk_and_eggs": "Milk & Eggs",
                     "sea_food": "Ready to cook meal",
                     "smart_mode_title": "Smart Mode",
                     "soft_frozen": "Soft freezing",
                     "tea": "Cold drinks or Beverages",
-                    "vegetables": "Vegetables"
+                    "vegetables": "Vegetable",
+                    "zero_fresh": "0°C Fresh"
                 },
                 "name": "Program"
             },
