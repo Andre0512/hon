@@ -15,210 +15,48 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 
 [![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
-[![Supported Models](https://img.shields.io/badge/Models-110-yellowgreen)](https://github.com/Andre0512/hon#supported-models)
-[![Supported Entities](https://img.shields.io/badge/Entities-317-crimson)](https://github.com/Andre0512/hon#appliance-features)  
+[![Supported Models](https://img.shields.io/badge/Models-111-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
+[![Supported Entities](https://img.shields.io/badge/Entities-317-crimson)](https://github.com/Andre0512/hon#supported-appliances)  
 
 ## Supported Appliances
-- [Washing Machine](https://github.com/Andre0512/hon#washing-machine)
-- [Tumble Dryer](https://github.com/Andre0512/hon#tumble-dryer)
-- [Washer Dryer](https://github.com/Andre0512/hon#washer-dryer)
-- [Oven](https://github.com/Andre0512/hon#oven)
-- [Dish Washer](https://github.com/Andre0512/hon#dish-washer)
-- [Air conditioner](https://github.com/Andre0512/hon#air-conditioner)
-- [Fridge](https://github.com/Andre0512/hon#fridge)
-- [Induction Hob](https://github.com/Andre0512/hon#induction-hob) [BETA]
-- [Hood](https://github.com/Andre0512/hon#hood) [BETA]
-- [Wine Cellar](https://github.com/Andre0512/hon#wine-cellar) [BETA]
-- [Air Purifier](https://github.com/Andre0512/hon#air-purifier) [BETA]
-
-## Installation
-**Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
-
-**Method 2:** [HACS](https://hacs.xyz/) > Integrations > Add Integration > **Haier hOn** > Install  
-
-**Method 3:** Manually copy `hon` folder from [latest release](https://github.com/Andre0512/hon/releases/latest) to `config/custom_components` folder.
-
-_Restart Home Assistant_
-
-## Configuration
-
-**Method 1**: [![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=hon)
-
-**Method 2**: Settings > Devices & Services > Add Integration > **Haier hOn**  
-_If the integration is not in the list, you need to clear the browser cache._
-
-## Examples
 _Click to expand..._
+
 <details>
-  <summary>Washing Machine</summary>
+<summary>Air Conditioner</summary>
 
-![Washing Machine](assets/example_wm.png)
-</details>
-<details>
-  <summary>Tumble Dryer</summary>
+### Air Conditioner Example
+![Air Conditioner](assets/example_ac.png)
 
-![Tumble Dryer](assets/example_td.png)
-</details>
-<details>
-  <summary>Washer Dryer</summary>
+### Supported Air Conditioner models
+Support has been confirmed for these **22 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
-![Washer Dryer](assets/example_wd.png)
-</details>
-<details>
-  <summary>Oven</summary>
+#### Haier
+- AD105S2SM3FA
+- AD71S2SM3FA(H)
+- AS07TS4HRA-M
+- AS07TS5HRA
+- AS09TS4HRA-M
+- AS25PBAHRA
+- AS25S2SF1FA
+- AS25TADHRA-2
+- AS25TEDHRA(M1)
+- AS25THMHRA-C
+- AS25XCAHRA
+- AS35PBAHRA
+- AS35S2SF1FA
+- AS35S2SF2FA-3
+- AS35TADHRA-2
+- AS35TAMHRA-C
+- AS35TEDHRA(M1)
+- AS35XCAHRA
+- AS50S2SF1FA
+- AS50S2SF2FA-1
+- AS50XCAHR
 
-![Oven](assets/example_ov.png)
-</details>
-<details>
-  <summary>Dish Washer</summary>
+#### Candy
+- CY-12TAIN
 
-![Dish Washer](assets/example_dw.png)
-</details>
-<details>
-  <summary>Air conditioner</summary>
-
-![Air conditioner](assets/example_ac.png)
-</details>
-<details>
-  <summary>Fridge</summary>
-
-![Fridge](assets/example_ref.png)
-</details>
-<details>
-  <summary>Wine Cellar</summary>
-
-![Wine Cellar](assets/example_wc.png)
-</details>
-<details>
-  <summary>Air Purifier</summary>
-
-![Air Purifier](assets/example_ap.png)
-</details>
-
-## Supported Models
-Support has been confirmed for these **110 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
-
-
-|                     | **Haier**                                                                                                                                                                                                                                                                                                                                                                                         | **Hoover**                                                                                                                                                                                                                                                                                                                                                                                    | **Candy**                                                                                                                                                 |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Washing Machine** | HW80-B14959TU1 <br/> HW80-B14959S8U1S <br/> HW80-B14979TU1 <br/> HW90-B14TEAM5 <br/> HW90-B14959U1 <br/> HW90-B14959S8U1 <br/> HW90G-BD14979UD <br/> HW100-B14959U1 <br/> HW110-14979                                                                                                                                                                                                             | H5WPB447AMBC/1-S <br/> H7W 412MBCR-80 <br/> H7W4 48MBC-S <br/> HLWPS495TAMBE-11 <br/> HW 28AMBS/1-S <br/> HW 410AMBCB/1-80 <br/> HW 411AMBCB/1-80 <br/> HW 49AMC/1-80 <br/> HW 68AMC/1-80 <br/> HW4 37AMBS/1-S <br/> HW4 37XMBB/1-S <br/> HWB 410AMC/1-80 <br/> HWB 414AMC/1-80 <br/> HWE 49AMBS/1-S <br/> HWP 48AMBCR/1-S <br/> HWPD 69AMBC/1-S <br/> HWPDQ49AMBC/1-S <br/> HWPD 610AMBC/1-S | CO4 107T1/2-07 <br/> CBWO49TWME-S <br/> RO14126DWMST-S <br/> RO441286DWMC4-07 <br/> RO4H7A2TEX-S  <br/> ROW42646DWMC-07 <br/> RP 696BWMRR/1-S             |
-| **Tumble Dryer**    | HD80-A3959 <br/> HD90-A3TEAM5 <br/> HD90-A2959 <br/> HD90-A3959 <br/> HD90-A2959S                                                                                                                                                                                                                                                                                                                 | HLE H9A2TCE-80 <br/> HLE C10DCE-80 <br/> NDE H10A2TCE-80 <br/> NDE H10RA2TCE-80 <br/> NDE H9A2TSBEXS-S <br/> NDP H9A3TCBEXS-S                                                                                                                                                                                                                                                                 | BCTDH7A1TE <br/> CSOE C10TREX-47 <br/> CSOE C10DE-80 <br/> CSOE H9A2DE-S <br/> ROE H9A3TCEX-S <br/> ROE H10A2TCE-07                                       |
-| **Washer Dryer**    | HWD80-B14979U1 <br/> HWD100-B14979 <br/> HWD100-B14978 <br/> HWD100-B14959U1                                                                                                                                                                                                                                                                                                                      | HD 485AMBB/1-S <br/> HD 495AMC/1-S <br/> HD 4106AMC/1-80 <br/> HDB 5106AMC/1-80 <br/> HDQ 496AMBS/1-S <br/> HDP 4149AMBC/1-S <br/> HWPS4954DAMR-11                                                                                                                                                                                                                                            | RPW41066BWMR/1-S <br/> RPW4966BWMR/1-S                                                                                                                    |
-| **Oven**            | HWO60SM2F3XH                                                                                                                                                                                                                                                                                                                                                                                      | HSOT3161WG                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                           |
-| **Dish Washer**     | XIB 3B2SFS-80 <br/> XIB 6B2D3FB                                                                                                                                                                                                                                                                                                                                                                   | HDPN 4S603PW/E <br/> HFB 5B2D3FW <br/> HFB 6B2S3FX                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                                           |
-| **Air Conditioner** | AD71S2SM3FA(H) <br/> AD105S2SM3FA <br/> AS07TS4HRA-M <br/> AS07TS5HRA <br/> AS09TS4HRA-M <br/> AS25PBAHRA <br/> AS25S2SF1FA <br/> AS25TADHRA-2 <br/> AS25TEDHRA(M1) <br/> AS25THMHRA-C <br/> AS25XCAHRA <br/> AS35PBAHRA <br/> AS35S2SF1FA <br/> AS35S2SF2FA-3 <br/> AS35TADHRA-2 <br/> AS35TAMHRA-C <br/> AS35TEDHRA(M1) <br/> AS35XCAHRA <br/> AS50S2SF1FA <br/> AS50S2SF2FA-1 <br/> AS50XCAHRA |                                                                                                                                                                                                                                                                                                                                                                                               | CY-12TAIN                                                                                                                                                 |
-| **Fridge**          | HFW7720ENMB <br/> HFW7819EWMP <br/> HSW59F18EIPT <br/> HTW5620DNMG                                                                                                                                                                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                               | CCE4T620EB <br/> CCE4T620EWU <br/> CCE4T618EW                                                                                                             |
-| **Hob**             | HA2MTSJ68MC                                                                                                                                                                                                                                                                                                                                                                                       |                                                                                                                                                                                                                                                                                                                                                                                               | CIS633SCTTWIFI                                                                                                                                            |
-| **Hood**            | HADG6DS46BWIFI                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                               |                                                                                                                                                           |
-| **Wine Cellar**     | HWS247FDU1 <br/> HWS42GDAU1                                                                                                                                                                                                                                                                                                                                                                       |                                                                                                                                                                                                                                                                                                                                                                                               |                                                                                                                                                           |
-| **Air Purifier**    |                                                                                                                                                                                                                                                                                                                                                                                                   | HHP30C011 <br/> HHP50CA001 <br/> HHP50CA011 <br/> HHP70CAH011                                                                                                                                                                                                                                                                                                                                 |                                                                                                                                                           |
-
-| Please add your appliances data to our [hon-test-data collection](https://github.com/Andre0512/hon-test-data). <br/>This helps us to develop new features and not to break compatibility in newer versions. |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-## Supported Languages
-Translation of internal names like programs are available for all languages which are official supported by the hOn app:
-* 🇨🇳 Chinese
-* 🇭🇷 Croatian
-* 🇨🇿 Czech
-* 🇳🇱 Dutch
-* 🇬🇧 English
-* 🇫🇷 French
-* 🇩🇪 German
-* 🇬🇷 Greek
-* 🇮🇱 Hebrew
-* 🇮🇹 Italian
-* 🇵🇱 Polish
-* 🇵🇹 Portuguese
-* 🇷🇴 Romanian
-* 🇷🇺 Russian
-* 🇷🇸 Serbian
-* 🇸🇰 Slovak
-* 🇸🇮 Slovenian
-* 🇪🇸 Spanish
-* 🇹🇷 Turkish
-
-## Compatiblity
-Haier offers different apps for different markets. Some appliances are compatible with more than one app. This integration only supports appliances that can be controlled via hOn. Please download the hOn app and check compatibilty before you open an issue.   
-The apps on this (incomplete) list have been requested so far:
-
-| App             | Main Market   | Supported                               | Alternative                                                                     |
-|-----------------|---------------|-----------------------------------------|---------------------------------------------------------------------------------|
-| Haier hOn       | Europe        | :heavy_check_mark:                      |                                                                                 |
-| Candy simply-Fi | Europe        | :grey_question: (only newer appliances) | [ofalvai/home-assistant-candy](https://github.com/ofalvai/home-assistant-candy) |
-| Hoover Wizard   | Europe        | :grey_question: (only newer appliances) |                                                                                 |
-| Haier Uhome     | China         | :x:                                     | [banto6/haier](https://github.com/banto6/haier)                                 |
-| Haier U+        | China         | :x:                                     |                                                                                 |
-| GE SmartHQ      | North America | :x:                                     | [simbaja/ha_gehome](https://github.com/simbaja/ha_gehome)                       |   
-| Haier Evo       | Russia        | :x:                                     |                                                                                 |
-
-## Contribute
-Any kind of contribution is welcome!
-### Read out device data
-If you want to make a request for adding new appliances or additional attributes and don't want to use the command line, here is how you can read out your device data.
-For every device exists a button under diagnostics which can be used to log all info of your appliance.
-1. Press the button to create a notification
-2. Open home assistant notifications and copy the message (Crtl+A, Ctrl+C)
-### Add appliances or additional attributes
-1. Install [pyhOn](https://github.com/Andre0512/pyhOn)
-   ```commandline
-    $ pip install pyhOn
-    ```
-2. Use the command line tool to read out all appliance data from your account
-    ```commandline
-    $ pyhOn
-    User for hOn account: user.name@example.com
-    Password for hOn account: ********
-    ========== WM - Washing Machine ==========
-    commands:
-      pauseProgram: pauseProgram command
-      resumeProgram: resumeProgram command
-      startProgram: startProgram command
-      stopProgram: stopProgram command
-    data:
-      actualWeight: 0
-      airWashTempLevel: 0
-      airWashTime: 0
-      antiAllergyStatus: 0
-      ...
-    ```
-3. Fork this repository and clone it to your local machine
-4. Add the keys of the attributes you'd like to have as `EntityDescription` into this Repository  
-   _Example: Add pause button_
-    ```python
-    BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
-        "WM": (                        # WM is the applianceTypeName
-            ButtonEntityDescription(
-                key="pauseProgram",    # key from pyhOn
-                name="Pause Program",  # name in home assistant
-                icon="mdi:pause",      # icon in home assistant
-                ...
-            ),
-        ...
-    ```
-5. Create a [pull request](https://github.com/Andre0512/hon/pulls)
-
-#### Tips and Tricks
-- If you want to have some states humanreadable, have a look at the `translation_key` parameter of the `EntityDescription`.
-- If you need to implement some more logic, create a pull request to the underlying library. There we collect special requirements in the `appliances` directory.
-- Use [pyhOn's translate command](https://github.com/Andre0512/pyhOn#translation) to read out the official translations
-
-## Special Thanks
-- to [@alexandre-leites](https://github.com/alexandre-leites), [@MiguelAngelLV](https://github.com/MiguelAngelLV) and [@drudgebg](https://github.com/drudgebg) for contributing early to this project and adding new integrations.
-- to [gvigroux/hon](https://github.com/gvigroux/hon), [signalize/hon-app-research](https://github.com/signalize/hon-app-research) and [slegars56/hon](https://github.com/slegars56/hon) for inspiring me to do this integration and for doing pioneer work on the hOn api.
-- to everyone who contributed, created an issue, gave this repo a star, and used this integration.
-- to the patience of my girlfriend as I work on this integration.
-
-## Support
-If you find this project helpful and would like to support its development, you can buy me a coffee! ☕
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/andre0512)
-
-Don't forget to star the repository if you found it useful! ⭐
-
-## Appliance Features
-
-### Air Conditioner
+### Air Conditioner Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -254,7 +92,24 @@ Don't forget to star the repository if you found it useful! ⭐
 | Program | `play` | `sensor` | `programName` |
 | Selected Temperature | `thermometer` | `sensor` | `tempSel` |
 
-### Air Purifier
+</details>
+
+<details>
+<summary>Air Purifier</summary>
+
+### Air Purifier Example
+![Air Purifier](assets/example_ap.png)
+
+### Supported Air Purifier models
+Support has been confirmed for these **4 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+#### Hoover
+- HHP30C011
+- HHP50CA001
+- HHP50CA011
+- HHP70CAH011
+
+### Air Purifier Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -283,7 +138,27 @@ Don't forget to star the repository if you found it useful! ⭐
 | VOC |  | `sensor` | `vocValueIndoor` |
 | Wind Speed | `fan` | `sensor` | `windSpeed` |
 
-### Dish Washer
+</details>
+
+<details>
+<summary>Dish Washer</summary>
+
+### Dish Washer Example
+![Dish Washer](assets/example_dw.png)
+
+### Supported Dish Washer models
+Support has been confirmed for these **5 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+#### Haier
+- XIB 3B2SFS-80
+- XIB 6B2D3FB
+
+#### Hoover
+- HDPN 4S603PW/E
+- HFB 5B2D3FW
+- HFB 6B2S3FX
+
+### Dish Washer Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -316,7 +191,18 @@ Don't forget to star the repository if you found it useful! ⭐
 | Rinse Aid | `spray-bottle` | `binary_sensor` | `rinseAidStatus` |
 | Salt | `shaker-outline` | `binary_sensor` | `saltStatus` |
 
-### Hood
+</details>
+
+<details>
+<summary>Hood</summary>
+
+### Supported Hood models
+Support has been confirmed for these **1 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+#### Haier
+- HADG6DS46BWIFI
+
+### Hood Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -339,7 +225,21 @@ Don't forget to star the repository if you found it useful! ⭐
 | RGB Light Color | `lightbulb` | `sensor` | `rgbLightColors` |
 | RGB Light Status | `lightbulb` | `sensor` | `rgbLightStatus` |
 
-### Induction Hob
+</details>
+
+<details>
+<summary>Induction Hob</summary>
+
+### Supported Induction Hob models
+Support has been confirmed for these **2 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+#### Haier
+- HA2MTSJ68MC
+
+#### Candy
+- CIS633SCTTWIFI
+
+### Induction Hob Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -364,7 +264,24 @@ Don't forget to star the repository if you found it useful! ⭐
 | Remaining Time | `timer` | `sensor` | `remainingTimeMM` |
 | Temperature | `thermometer` | `sensor` | `temp` |
 
-### Oven
+</details>
+
+<details>
+<summary>Oven</summary>
+
+### Oven Example
+![Oven](assets/example_ov.png)
+
+### Supported Oven models
+Support has been confirmed for these **2 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+#### Haier
+- HWO60SM2F3XH
+
+#### Hoover
+- HSOT3161WG
+
+### Oven Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -389,7 +306,29 @@ Don't forget to star the repository if you found it useful! ⭐
 | Temperature | `thermometer` | `sensor` | `temp` |
 | Temperature Selected | `thermometer` | `sensor` | `tempSel` |
 
-### Fridge
+</details>
+
+<details>
+<summary>Fridge</summary>
+
+### Fridge Example
+![Fridge](assets/example_ref.png)
+
+### Supported Fridge models
+Support has been confirmed for these **7 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+#### Haier
+- HFW7720ENMB
+- HFW7819EWMP
+- HSW59F18EIPT
+- HTW5620DNMG
+
+#### Candy
+- CE4T620EB
+- CCE4T620EWU
+- CCE4T618EW
+
+### Fridge Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -427,7 +366,43 @@ Don't forget to star the repository if you found it useful! ⭐
 | Temperature Freezer | `snowflake-thermometer` | `sensor` | `tempZ2` |
 | Temperature Fridge | `thermometer` | `sensor` | `tempZ1` |
 
-### Tumble Dryer
+</details>
+
+<details>
+<summary>Tumble Dryer</summary>
+
+### Tumble Dryer Example
+![Tumble Dryer](assets/example_td.png)
+
+### Supported Tumble Dryer models
+Support has been confirmed for these **19 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+#### Haier
+- HD80-A3959
+- HD90-A3TEAM5
+- HD90-A2959
+- HD90-A2959S
+- HD90-A3959
+
+#### Hoover
+- HLE H8A2TE-S
+- HLE H9A2TCE-80
+- HLE C10DCE-80
+- NDE H10A2TCE-80
+- NDE H10RA2TCE-80
+- NDE H9A2TSBEXS-S
+- NDP H9A3TCBEXS-S
+
+#### Candy
+- BCTDH7A1TE
+- CSOE C10DE-80
+- CSOE C10TREX-47
+- CSOE H9A2DE-S
+- ROE H9A2TCE-80
+- ROE H9A3TCEX-S
+- ROE H10A2TCE-07
+
+### Tumble Dryer Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -461,7 +436,22 @@ Don't forget to star the repository if you found it useful! ⭐
 | Start Time | `clock-start` | `sensor` | `delayTime` |
 | Temperature level | `thermometer` | `sensor` | `tempLevel` |
 
-### Wine Cellar
+</details>
+
+<details>
+<summary>Wine Cellar</summary>
+
+### Wine Cellar Example
+![Wine Cellar](assets/example_wc.png)
+
+### Supported Wine Cellar models
+Support has been confirmed for these **2 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+#### Haier
+- HWS247FDU1
+- HWS42GDAU1
+
+### Wine Cellar Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -482,7 +472,37 @@ Don't forget to star the repository if you found it useful! ⭐
 | Temperature | `thermometer` | `sensor` | `temp` |
 | Temperature 2 | `thermometer` | `sensor` | `tempZ2` |
 
-### Washer Dryer
+</details>
+
+<details>
+<summary>Washer Dryer</summary>
+
+### Washer Dryer Example
+![Washer Dryer](assets/example_wd.png)
+
+### Supported Washer Dryer models
+Support has been confirmed for these **13 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+#### Haier
+- HWD100-B14978
+- HWD100-B14979
+- HWD100-B14959U1
+- HWD80-B14979U1
+
+#### Hoover
+- HD 4106AMC/1-80
+- HD 485AMBB/1-S
+- HD 495AMC/1-S
+- HDB 5106AMC/1-80
+- HDQ 496AMBS/1-S
+- HDP 4149AMBC/1-S
+- HWPS4954DAMR-11
+
+#### Candy
+- RPW41066BWMR/1-S
+- RPW4966BWMR/1-S
+
+### Washer Dryer Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -557,7 +577,58 @@ Don't forget to star the repository if you found it useful! ⭐
 | Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` |
 | Total Water |  | `sensor` | `totalWaterUsed` |
 
-### Washing Machine
+</details>
+
+<details>
+<summary>Washing Machine</summary>
+
+### Washing Machine Example
+![Washing Machine](assets/example_wm.png)
+
+### Supported Washing Machine models
+Support has been confirmed for these **34 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+
+#### Haier
+- HW80-B14959TU1
+- HW80-B14959S8U1S
+- HW80-B14979TU1
+- HW90-B14TEAM5
+- HW90-B14959U1
+- HW90-B14959S8U1
+- HW90G-BD14979UD
+- HW100-B14959U1
+- HW110-14979
+
+#### Hoover
+- H5WPB447AMBC/1-S
+- H7W 412MBCR-80
+- H7W4 48MBC-S
+- HLWPS495TAMBE-11
+- HW 28AMBS/1-S
+- HW 410AMBCB/1-80
+- HW 411AMBCB/1-80
+- HW 49AMC/1-80
+- HW 68AMC/1-80
+- HW4 37AMBS/1-S
+- HW4 37XMBB/1-S
+- HWB 410AMC/1-80
+- HWB 414AMC/1-80
+- HWE 49AMBS/1-S
+- HWP 48AMBCR/1-S
+- HWPD 69AMBC/1-S
+- HWPDQ49AMBC/1-S
+- HWPD 610AMBC/1-S
+
+#### Candy
+- CO4 107T1/2-07
+- CBWO49TWME-S
+- RO14126DWMST-S
+- RO441286DWMC4-07
+- RO4H7A2TEX-S
+- ROW42646DWMC-07
+- RP 696BWMRR/1-S
+
+### Washing Machine Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -620,3 +691,128 @@ Don't forget to star the repository if you found it useful! ⭐
 | Total Power |  | `sensor` | `totalElectricityUsed` |
 | Total Wash Cycle | `counter` | `sensor` | `totalWashCycle` |
 | Total Water |  | `sensor` | `totalWaterUsed` |
+
+</details>
+
+
+## Installation
+**Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
+
+**Method 2:** [HACS](https://hacs.xyz/) > Integrations > Add Integration > **Haier hOn** > Install  
+
+**Method 3:** Manually copy `hon` folder from [latest release](https://github.com/Andre0512/hon/releases/latest) to `config/custom_components` folder.
+
+_Restart Home Assistant_
+
+## Configuration
+
+**Method 1**: [![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=hon)
+
+**Method 2**: Settings > Devices & Services > Add Integration > **Haier hOn**  
+_If the integration is not in the list, you need to clear the browser cache._
+
+## Supported Languages
+Translation of internal names like programs are available for all languages which are official supported by the hOn app:
+* 🇨🇳 Chinese
+* 🇭🇷 Croatian
+* 🇨🇿 Czech
+* 🇳🇱 Dutch
+* 🇬🇧 English
+* 🇫🇷 French
+* 🇩🇪 German
+* 🇬🇷 Greek
+* 🇮🇱 Hebrew
+* 🇮🇹 Italian
+* 🇵🇱 Polish
+* 🇵🇹 Portuguese
+* 🇷🇴 Romanian
+* 🇷🇺 Russian
+* 🇷🇸 Serbian
+* 🇸🇰 Slovak
+* 🇸🇮 Slovenian
+* 🇪🇸 Spanish
+* 🇹🇷 Turkish
+
+## Compatiblity
+Haier offers different apps for different markets. Some appliances are compatible with more than one app. This integration only supports appliances that can be controlled via hOn. Please download the hOn app and check compatibilty before you open an issue.   
+The apps on this (incomplete) list have been requested so far:
+
+| App             | Main Market   | Supported                               | Alternative                                                                     |
+|-----------------|---------------|-----------------------------------------|---------------------------------------------------------------------------------|
+| Haier hOn       | Europe        | :heavy_check_mark:                      |                                                                                 |
+| Candy simply-Fi | Europe        | :grey_question: (only newer appliances) | [ofalvai/home-assistant-candy](https://github.com/ofalvai/home-assistant-candy) |
+| Hoover Wizard   | Europe        | :grey_question: (only newer appliances) |                                                                                 |
+| Haier Uhome     | China         | :x:                                     | [banto6/haier](https://github.com/banto6/haier)                                 |
+| Haier U+        | China         | :x:                                     |                                                                                 |
+| GE SmartHQ      | North America | :x:                                     | [simbaja/ha_gehome](https://github.com/simbaja/ha_gehome)                       |   
+| Haier Evo       | Russia        | :x:                                     |                                                                                 |
+
+## Contribute
+Any kind of contribution is welcome!
+
+
+| Please add your appliances data to our [hon-test-data collection](https://github.com/Andre0512/hon-test-data). <br/>This helps us to develop new features and not to break compatibility in newer versions. |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+### Read out device data
+If you want to make a request for adding new appliances or additional attributes and don't want to use the command line, here is how you can read out your device data.
+For every device exists a button under diagnostics which can be used to log all info of your appliance.
+1. Press the button to create a notification
+2. Open home assistant notifications and copy the message (Crtl+A, Ctrl+C)
+### Add appliances or additional attributes
+1. Install [pyhOn](https://github.com/Andre0512/pyhOn)
+   ```commandline
+    $ pip install pyhOn
+    ```
+2. Use the command line tool to read out all appliance data from your account
+    ```commandline
+    $ pyhOn
+    User for hOn account: user.name@example.com
+    Password for hOn account: ********
+    ========== WM - Washing Machine ==========
+    commands:
+      pauseProgram: pauseProgram command
+      resumeProgram: resumeProgram command
+      startProgram: startProgram command
+      stopProgram: stopProgram command
+    data:
+      actualWeight: 0
+      airWashTempLevel: 0
+      airWashTime: 0
+      antiAllergyStatus: 0
+      ...
+    ```
+3. Fork this repository and clone it to your local machine
+4. Add the keys of the attributes you'd like to have as `EntityDescription` into this Repository  
+   _Example: Add pause button_
+    ```python
+    BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
+        "WM": (                        # WM is the applianceTypeName
+            ButtonEntityDescription(
+                key="pauseProgram",    # key from pyhOn
+                name="Pause Program",  # name in home assistant
+                icon="mdi:pause",      # icon in home assistant
+                ...
+            ),
+        ...
+    ```
+5. Create a [pull request](https://github.com/Andre0512/hon/pulls)
+
+#### Tips and Tricks
+- If you want to have some states humanreadable, have a look at the `translation_key` parameter of the `EntityDescription`.
+- If you need to implement some more logic, create a pull request to the underlying library. There we collect special requirements in the `appliances` directory.
+- Use [pyhOn's translate command](https://github.com/Andre0512/pyhOn#translation) to read out the official translations
+
+## Special Thanks
+- to [@alexandre-leites](https://github.com/alexandre-leites), [@MiguelAngelLV](https://github.com/MiguelAngelLV) and [@drudgebg](https://github.com/drudgebg) for contributing early to this project and adding new integrations.
+- to [gvigroux/hon](https://github.com/gvigroux/hon), [signalize/hon-app-research](https://github.com/signalize/hon-app-research) and [slegars56/hon](https://github.com/slegars56/hon) for inspiring me to do this integration and for doing pioneer work on the hOn api.
+- to everyone who contributed, created an issue, gave this repo a star, and used this integration.
+- to the patience of my girlfriend as I work on this integration.
+
+## Support
+If you find this project helpful and would like to support its development, you can buy me a coffee! ☕
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/andre0512)
+
+Don't forget to star the repository if you found it useful! ⭐
