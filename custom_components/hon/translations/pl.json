@@ -2043,6 +2043,9 @@
             },
             "aroma_time_off": {
                 "name": "Dyfuzor (WYŁ.)"
+            },
+            "my_zone_temp_sel": {
+                "name": "Temperatura docelowa My Zone"
             }
         },
         "climate": {
@@ -2177,6 +2180,9 @@
                         }
                     }
                 }
+            },
+            "my_zone": {
+                "name": "My Zone"
             }
         },
         "fan": {

@@ -16,7 +16,7 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 [![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
 [![Supported Models](https://img.shields.io/badge/Models-110-yellowgreen)](https://github.com/Andre0512/hon#supported-models)
-[![Supported Entities](https://img.shields.io/badge/Entities-315-crimson)](https://github.com/Andre0512/hon#appliance-features)  
+[![Supported Entities](https://img.shields.io/badge/Entities-317-crimson)](https://github.com/Andre0512/hon#appliance-features)  
 
 ## Supported Appliances
 - [Washing Machine](https://github.com/Andre0512/hon#washing-machine)
@@ -295,19 +295,13 @@ Don't forget to star the repository if you found it useful! ⭐
 | Add Dish | `silverware-fork-knife` | `switch` | `startProgram.addDish` |
 | Delay time | `timer-plus` | `number` | `startProgram.delayTime` |
 | Eco Express | `sprout` | `switch` | `startProgram.ecoExpress` |
-| Eco Index | `sprout` | `sensor` | `startProgram.ecoIndex` |
-| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
 | Extra Dry | `hair-dryer` | `switch` | `startProgram.extraDry` |
 | Half Load | `fraction-one-half` | `switch` | `startProgram.halfLoad` |
 | Open Door | `door-open` | `switch` | `startProgram.openDoor` |
 | Program |  | `select` | `startProgram.program` |
 | Remaining Time | `timer` | `select` | `startProgram.remainingTime` |
 | Temperature | `thermometer` | `select` | `startProgram.temp` |
-| Temperature | `thermometer` | `sensor` | `startProgram.temp` |
 | Three in One | `numeric-3-box-outline` | `switch` | `startProgram.threeInOne` |
-| Time | `timer` | `sensor` | `startProgram.remainingTime` |
-| Water Efficiency | `water` | `sensor` | `startProgram.waterEfficiency` |
-| Water Saving | `water-percent` | `sensor` | `startProgram.waterSaving` |
 | Water hard | `water` | `number` | `startProgram.waterHard` |
 #### Sensors
 | Name | Icon | Entity | Key |
@@ -404,6 +398,8 @@ Don't forget to star the repository if you found it useful! ⭐
 | Freezer Temperature | `thermometer` | `number` | `settings.tempSelZ2` |
 | Fridge | `thermometer` | `climate` | `settings.tempSelZ1` |
 | Fridge Temperature | `thermometer` | `number` | `settings.tempSelZ1` |
+| MyZone | `thermometer` | `climate` | `settings.tempSelZ3` |
+| MyZone Temperature | `thermometer` | `number` | `settings.tempSelZ3` |
 | Program Start | `play` | `button` | `startProgram` |
 | Program Stop | `stop` | `button` | `stopProgram` |
 | Super Cool | `snowflake` | `switch` | `quickModeZ1` |
@@ -446,11 +442,8 @@ Don't forget to star the repository if you found it useful! ⭐
 | Dry Time |  | `number` | `startProgram.dryTime` |
 | Dry Time | `timer` | `select` | `startProgram.dryTimeMM` |
 | Dry level | `hair-dryer` | `select` | `startProgram.dryLevel` |
-| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
 | Program |  | `select` | `startProgram.program` |
-| Steam Type | `weather-dust` | `sensor` | `steamType` |
 | Sterilization | `lotion-plus` | `switch` | `startProgram.sterilizationStatus` |
-| Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` |
 | Temperature level | `thermometer` | `number` | `startProgram.tempLevel` |
 | Tumbling | `refresh-circle` | `switch` | `startProgram.tumblingStatus` |
 #### Sensors
@@ -512,29 +505,21 @@ Don't forget to star the repository if you found it useful! ⭐
 | Dry Time |  | `number` | `startProgram.dryTime` |
 | Dry Time | `timer` | `select` | `startProgram.dryTimeMM` |
 | Dry level | `hair-dryer` | `select` | `startProgram.dryLevel` |
-| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
 | Extra Rinse 1 | `numeric-1-box-multiple-outline` | `switch` | `startProgram.extraRinse1` |
 | Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `startProgram.extraRinse2` |
 | Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `startProgram.extraRinse3` |
 | Good Night | `weather-night` | `switch` | `startProgram.goodNight` |
 | Hygiene | `lotion-plus` | `switch` | `startProgram.hygiene` |
 | Keep Fresh | `refresh-circle` | `switch` | `startProgram.permanentPressStatus` |
-| Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
-| Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` |
 | Prewash | `tshirt-crew` | `switch` | `startProgram.prewash` |
 | Program |  | `select` | `startProgram.program` |
-| Remaining Time | `timer` | `sensor` | `startProgram.remainingTime` |
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
 | Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` |
 | Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |
 | Stain Type | `liquid-spot` | `select` | `startProgram.extendedStainType` |
-| Steam Type | `weather-dust` | `sensor` | `steamType` |
 | Steam level | `weather-dust` | `select` | `startProgram.steamLevel` |
 | Sterilization | `lotion-plus` | `switch` | `startProgram.sterilizationStatus` |
-| Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadW` |
-| Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadD` |
-| Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` |
 | Temperature | `thermometer` | `select` | `startProgram.temp` |
 | Temperature level | `thermometer` | `number` | `startProgram.tempLevel` |
 | Tumbling | `refresh-circle` | `switch` | `startProgram.tumblingStatus` |
@@ -591,26 +576,20 @@ Don't forget to star the repository if you found it useful! ⭐
 | Delay Status | `timer-check` | `switch` | `startProgram.delayStatus` |
 | Delay Time | `timer-plus` | `number` | `startProgram.delayTime` |
 | Dirty level | `liquid-spot` | `select` | `startProgram.dirtyLevel` |
-| Energy Label | `lightning-bolt-circle` | `sensor` | `startProgram.energyLabel` |
 | Extra Rinse 1 | `numeric-1-box-multiple-outline` | `switch` | `startProgram.extraRinse1` |
 | Extra Rinse 2 | `numeric-2-box-multiple-outline` | `switch` | `startProgram.extraRinse2` |
 | Extra Rinse 3 | `numeric-3-box-multiple-outline` | `switch` | `startProgram.extraRinse3` |
 | Good Night | `weather-night` | `switch` | `startProgram.goodNight` |
 | Hygiene | `lotion-plus` | `switch` | `startProgram.hygiene` |
 | Keep Fresh | `refresh-circle` | `switch` | `startProgram.permanentPressStatus` |
-| Liquid Detergent Dose | `cup-water` | `sensor` | `startProgram.liquidDetergentDose` |
 | Main Wash Time | `clock-start` | `number` | `startProgram.mainWashTime` |
-| Powder Detergent Dose | `cup` | `sensor` | `startProgram.powderDetergentDose` |
 | Prewash | `tshirt-crew` | `switch` | `startProgram.prewash` |
 | Program |  | `select` | `startProgram.program` |
-| Remaining Time | `timer` | `sensor` | `startProgram.remainingTime` |
 | Rinse Iterations | `rotate-right` | `number` | `startProgram.rinseIterations` |
 | Soak Prewash Selection | `tshirt-crew` | `switch` | `startProgram.haier_SoakPrewashSelection` |
 | Spin speed | `numeric` | `select` | `startProgram.spinSpeed` |
 | Stain Type | `liquid-spot` | `select` | `startProgram.extendedStainType` |
 | Steam level | `weather-dust` | `select` | `startProgram.steamLevel` |
-| Suggested Load | `weight-kilogram` | `sensor` | `startProgram.suggestedLoadW` |
-| Suggested weight | `weight-kilogram` | `sensor` | `startProgram.weight` |
 | Temperature | `thermometer` | `select` | `startProgram.temp` |
 | Water hard | `water` | `number` | `startProgram.waterHard` |
 | lang |  | `number` | `startProgram.lang` |

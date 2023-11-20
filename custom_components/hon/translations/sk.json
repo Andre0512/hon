@@ -2043,6 +2043,9 @@
             },
             "aroma_time_off": {
                 "name": "Difuzér (VYP)"
+            },
+            "my_zone_temp_sel": {
+                "name": "Cieľová teplota My Zone"
             }
         },
         "climate": {
@@ -2177,6 +2180,9 @@
                         }
                     }
                 }
+            },
+            "my_zone": {
+                "name": "My Zone"
             }
         },
         "fan": {

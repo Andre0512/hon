@@ -2029,6 +2029,9 @@
             },
             "aroma_time_off": {
                 "name": "扩散器（关）"
+            },
+            "my_zone_temp_sel": {
+                "name": "目标温度 My Zone"
             }
         },
         "climate": {
@@ -2163,6 +2166,9 @@
                         }
                     }
                 }
+            },
+            "my_zone": {
+                "name": "My Zone"
             }
         },
         "fan": {

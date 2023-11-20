@@ -164,6 +164,13 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="freezer_temp_sel",
         ),
+        HonNumberEntityDescription(
+            key="settings.tempSelZ3",
+            name="MyZone Temperature",
+            icon="mdi:thermometer",
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="my_zone_temp_sel",
+        ),
     ),
     "AP": (
         HonNumberEntityDescription(

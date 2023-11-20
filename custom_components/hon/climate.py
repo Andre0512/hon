@@ -67,6 +67,13 @@ CLIMATES: dict[
             icon="mdi:snowflake-thermometer",
             translation_key="freezer",
         ),
+        HonClimateEntityDescription(
+            key="settings.tempSelZ3",
+            mode=HVACMode.COOL,
+            name="MyZone",
+            icon="mdi:thermometer",
+            translation_key="my_zone",
+        ),
     ),
     "OV": (
         HonClimateEntityDescription(
@@ -291,10 +298,6 @@ class HonClimateEntity(HonEntity, ClimateEntity):
         self._attr_temperature_unit = TEMP_CELSIUS
         self._set_temperature_bound()
 
-        self._attr_supported_features = (
-            ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.PRESET_MODE
-        )
-
         self._attr_hvac_modes = [description.mode]
         if "stopProgram" in device.commands:
             self._attr_hvac_modes += [HVACMode.OFF]
@@ -312,7 +315,14 @@ class HonClimateEntity(HonEntity, ClimateEntity):
                     modes.append(mode)
             else:
                 modes.append(mode)
-        self._attr_preset_modes = modes
+
+        if modes:
+            self._attr_supported_features = (
+                    ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.PRESET_MODE
+            )
+            self._attr_preset_modes = modes
+        else:
+            self._attr_supported_features =  ClimateEntityFeature.TARGET_TEMPERATURE
 
         self._handle_coordinator_update(update=False)
 

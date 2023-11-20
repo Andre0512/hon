@@ -2052,6 +2052,9 @@
             },
             "aroma_time_off": {
                 "name": "Diffusore (OFF)"
+            },
+            "my_zone_temp_sel": {
+                "name": "Temperatura target My Zone"
             }
         },
         "climate": {
@@ -2186,6 +2189,9 @@
                         }
                     }
                 }
+            },
+            "my_zone": {
+                "name": "My Zone"
             }
         },
         "fan": {
