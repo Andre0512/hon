@@ -1,5 +1,6 @@
-homeassistant~=2023.9.3
-black~=23.7.0
-flake8~=6.0.0
-mypy~=1.4.1
-pylint~=2.17.4
+homeassistant>=2023.11.3
+black>=23.11
+flake8>=6.1
+mypy>=1.7
+pylint>=3.0
+setuptools>=68.2

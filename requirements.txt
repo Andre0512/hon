@@ -1,2 +1,1 @@
-pyhOn
-homeassistant
+pyhOn==0.15.12
