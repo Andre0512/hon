@@ -36,7 +36,7 @@ _LOGGER = logging.getLogger(__name__)
 
 @dataclass
 class HonConfigSensorEntityDescription(SensorEntityDescription):
-    entity_category: EntityCategory = EntityCategory.CONFIG
+    entity_category: EntityCategory = EntityCategory.DIAGNOSTIC
     option_list: dict[int, str] | None = None
 
 
