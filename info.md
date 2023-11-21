@@ -10,7 +10,7 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 
 [![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
-[![Supported Models](https://img.shields.io/badge/Models-111-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
+[![Supported Models](https://img.shields.io/badge/Models-112-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
 [![Supported Entities](https://img.shields.io/badge/Entities-317-crimson)](https://github.com/Andre0512/hon#supported-appliances)  
 
 ## Supported Appliances
@@ -581,7 +581,7 @@ Support has been confirmed for these **13 models**, but many more will work. Ple
 ![Washing Machine](assets/example_wm.png)
 
 ### Supported Washing Machine models
-Support has been confirmed for these **34 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **35 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HW80-B14959TU1
@@ -602,6 +602,7 @@ Support has been confirmed for these **34 models**, but many more will work. Ple
 - HW 28AMBS/1-S
 - HW 410AMBCB/1-80
 - HW 411AMBCB/1-80
+- HW 48AMC/1-S
 - HW 49AMC/1-80
 - HW 68AMC/1-80
 - HW4 37AMBS/1-S
