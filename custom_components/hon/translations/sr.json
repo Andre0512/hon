@@ -917,6 +917,13 @@
                     "high": "Visoka"
                 },
                 "name": "Nivo vlage"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1788,6 +1795,13 @@
                     "position_5": "Fiksiran - Položaj 5",
                     "swing": "Njihanje"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -1987,6 +2001,9 @@
             },
             "filter_replacement": {
                 "name": "Zamena filtera"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {

@@ -924,6 +924,13 @@
                     "high": "Alto"
                 },
                 "name": "Livello di umidità"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1797,6 +1804,13 @@
                     "position_5": "Fissa - Posizione 5",
                     "swing": "Swing"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -1996,6 +2010,9 @@
             },
             "filter_replacement": {
                 "name": "Sostituzione filtro"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {

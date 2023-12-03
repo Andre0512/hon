@@ -917,6 +917,13 @@
                     "high": "Visoko"
                 },
                 "name": "Razina vlažnosti"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1788,6 +1795,13 @@
                     "position_5": "Fiksno - Položaj 5",
                     "swing": "Njihanje"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -1987,6 +2001,9 @@
             },
             "filter_replacement": {
                 "name": "Zamjena filtra"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {

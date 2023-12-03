@@ -917,6 +917,13 @@
                     "high": "Υψηλός"
                 },
                 "name": "Επίπεδο υγρασίας"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1788,6 +1795,13 @@
                     "position_5": "Σταθερός - Θέση 5",
                     "swing": "Ταλάντευση"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -1987,6 +2001,9 @@
             },
             "filter_replacement": {
                 "name": "Αντικατάσταση φίλτρου"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {

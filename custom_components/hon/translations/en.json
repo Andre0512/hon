@@ -937,6 +937,13 @@
                     "high": "High"
                 },
                 "name": "Humidity level"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1815,6 +1822,13 @@
                     "position_5": "Fixed - Position 5",
                     "swing": "Swing"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -2014,6 +2028,9 @@
             },
             "filter_replacement": {
                 "name": "Filter replacement"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {

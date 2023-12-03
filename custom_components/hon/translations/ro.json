@@ -917,6 +917,13 @@
                     "high": "Crescută"
                 },
                 "name": "Nivelul de umiditate"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1788,6 +1795,13 @@
                     "position_5": "Fix - Poziție 5",
                     "swing": "Baleiere"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -1987,6 +2001,9 @@
             },
             "filter_replacement": {
                 "name": "Înlocuirea filtrului"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {

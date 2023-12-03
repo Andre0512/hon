@@ -72,6 +72,13 @@
           "13": "Готови за съхранение H-2",
           "14": "Екстра сухо H-3"
         }
+      },
+      "mach_modes_wh": {
+          "state": {
+              "eco": "Eco",
+              "max": "Max",
+              "bps": "BPS"
+          }
       }
     },
     "select": {
@@ -82,6 +89,18 @@
           "13": "Готови за съхранение H-2",
           "14": "Екстра сухо H-3"
         }
+      },
+      "mach_modes_wh": {
+        "state": {
+            "eco": "Eco",
+            "max": "Max",
+            "bps": "BPS"
+        }
+      }
+    },
+    "binary_sensor": {
+      "power-state": {
+        "name": "Power State"
       }
     }
   }
