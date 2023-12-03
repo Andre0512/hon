@@ -314,12 +314,10 @@ class HonSelectEntity(HonEntity, SelectEntity):
         setting.value = self._option_to_number(option, setting.values)
         key_parts = self.entity_description.key.split(".")
         command = key_parts[0]
-
-        if (self.entity_description.send_key_only):
+        if self.entity_description.send_key_only:
             await self._device.commands[command].send_specific([key_parts[1]])
         else:
             await self._device.commands[command].send()
-
         if command != "settings":
             self._device.sync_command(command, "settings")
         await self.coordinator.async_refresh()
