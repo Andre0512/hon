@@ -316,7 +316,7 @@ class HonSelectEntity(HonEntity, SelectEntity):
         command = key_parts[0]
 
         if (self.entity_description.send_key_only):
-            await self._device.commands[command].send_specific(key_parts[1])
+            await self._device.commands[command].send_specific([key_parts[1]])
         else:
             await self._device.commands[command].send()
 
