@@ -6,7 +6,6 @@ from homeassistant.components.number import (
     NumberEntity,
     NumberEntityDescription,
     NumberDeviceClass,
-    NumberMode,
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTime, UnitOfTemperature
@@ -201,7 +200,6 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             key="settings.tempSel",
             name="Target Temperature",
             icon="mdi:thermometer",
-            mode=NumberMode.SLIDER,
             device_class=NumberDeviceClass.TEMPERATURE,
             native_unit_of_measurement=UnitOfTemperature.CELSIUS,
             translation_key="target_temperature",
