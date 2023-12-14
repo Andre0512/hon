@@ -170,7 +170,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:weight-kilogram",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfMass.KILOGRAMS,
-            translation_key="suggested_load",
+            translation_key="suggested_load_wash",
         ),
         HonSensorEntityDescription(
             key="temp",
@@ -267,7 +267,15 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             icon="mdi:weight-kilogram",
             state_class=SensorStateClass.MEASUREMENT,
             native_unit_of_measurement=UnitOfMass.KILOGRAMS,
-            translation_key="suggested_load",
+            translation_key="suggested_load_dry",
+        ),
+        HonConfigSensorEntityDescription(
+            key="startProgram.suggestedLoadWD",
+            name="Suggested Load Wash & Dry",
+            icon="mdi:weight-kilogram",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfMass.KILOGRAMS,
+            translation_key="suggested_load_wash_dry",
         ),
         HonConfigSensorEntityDescription(
             key="startProgram.energyLabel",

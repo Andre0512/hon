@@ -834,8 +834,14 @@
             "delay_time": {
                 "name": "延时启动"
             },
-            "suggested_load": {
-                "name": "负载能力"
+            "suggested_load_wash": {
+                "name": "负载能力 - 洗涤"
+            },
+            "suggested_load_dry": {
+                "name": "负载能力 - 烘干"
+            },
+            "suggested_load_wash_dry": {
+                "name": "负载能力 - 洗涤 & 烘干"
             },
             "energy_label": {
                 "name": "能效"

@@ -841,8 +841,14 @@
             "delay_time": {
                 "name": "Inicio Diferido"
             },
-            "suggested_load": {
-                "name": "Capacidad de carga"
+            "suggested_load_wash": {
+                "name": "Carga sugerida de lavado"
+            },
+            "suggested_load_dry": {
+                "name": "Carga sugerida de secado"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Carga sugerida de lavado y secado"
             },
             "energy_label": {
                 "name": "Eficiencia energética"

@@ -856,8 +856,14 @@
             "delay_time": {
                 "name": "Delay Start"
             },
-            "suggested_load": {
-                "name": "Load capacity"
+            "suggested_load_wash": {
+                "name": "Load capacity (wash)"
+            },
+            "suggested_load_dry": {
+                "name": "Load capacity (dry)"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Load capacity (wash & dry)"
             },
             "energy_label": {
                 "name": "Energy efficiency"

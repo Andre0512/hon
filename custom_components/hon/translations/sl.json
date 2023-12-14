@@ -841,8 +841,14 @@
             "delay_time": {
                 "name": "S funkcijo Zamik vklopa je možno odložiti začetek sušilnega cikla od 1 do 24 ur. Na zaslonu se prikaže izbrana zakasnitev. Da bi videli kako se zmanjšuje iz ure v uro, pritisnite ZAČETEK. Na ta način bo perilo suho takrat, ko boste to želeli, in zagnali cikel, ko vam to najbolj ustreza, celo ponoči."
             },
-            "suggested_load": {
+            "suggested_load_wash": {
                 "name": "Zmogljivost pranja"
+            },
+            "suggested_load_dry": {
+                "name": "Zmogljivost sušenja"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Zmogljivost pranja in sušenja"
             },
             "energy_label": {
                 "name": "Energijska učinkovitost"

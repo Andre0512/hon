@@ -841,8 +841,14 @@
             "delay_time": {
                 "name": "Отложенный пуск"
             },
-            "suggested_load": {
-                "name": "Допустимая загрузка"
+            "suggested_load_wash": {
+                "name": "Рекомендуемая загрузка стирки"
+            },
+            "suggested_load_dry": {
+                "name": "Рекомендуемая загрузка сушки"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Рекомендуемая загрузка стирки и сушки"
             },
             "energy_label": {
                 "name": "Энергоэффективность"

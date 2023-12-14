@@ -841,8 +841,14 @@
             "delay_time": {
                 "name": "Gecikmeli Başlatma"
             },
-            "suggested_load": {
-                "name": "Yük kapasitesi"
+            "suggested_load_wash": {
+                "name": "Yük önerisi (Yıkama)"
+            },
+            "suggested_load_dry": {
+                "name": "Yük önerisi (Kurutma)"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Yük önerisi (Yıkama ve kurutma)"
             },
             "energy_label": {
                 "name": "Enerji verimliliği"
