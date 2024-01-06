@@ -172,6 +172,7 @@
                     "iot_voice_automatic": "Automatico",
                     "iot_voice_delicate": "Delicato 45°C",
                     "iot_voice_eco": "Eco 45°C",
+                    "iot_voice_eco_bldc": "Eco 45°C",
                     "iot_voice_intensive": "Intensivo 75°C",
                     "iot_voice_prewash": "Prelavaggio",
                     "iot_voice_rapid_59": "Rapido 59'",
@@ -472,6 +473,7 @@
                     "cottons_prewash": "Cotone + Prelavaggio",
                     "cottons_steam": "Cotone + Vapore",
                     "cotton_care_59": "Cotton Care 59'",
+                    "crystals": "Crystals 45°C",
                     "delicate_59": "Delicati 59'",
                     "delicate_silk": "Delicati e Seta 59'",
                     "delicate_silk_steam": "Delicati e Seta + Vapore",
@@ -673,7 +675,7 @@
                     "iot_wash_resistant_colored": "Colorati Resistenti",
                     "iot_wash_resistant_dark": "Scuri Resistenti",
                     "iot_wash_resistant_whites": "Bianchi Resistenti",
-                    "iot_wash_rinse": "Risciacqui",
+                    "iot_wash_rinse": "Risciacquo",
                     "iot_wash_shirts": "Camicie",
                     "iot_wash_shirts_steam": "Camicie + Vapore",
                     "iot_wash_silk": "Seta",
@@ -724,7 +726,7 @@
                     "rapid_wash_and_dry_59_min": "Lavasciuga 59'",
                     "resistant_cotton": "Cotone Resistente",
                     "resistant_cotton_steam": "Cotone Resistente + Vapore",
-                    "rinse": "Risciacqui",
+                    "rinse": "Risciacquo",
                     "shirts_steam": "Camicie + Vapore",
                     "silent_night": "Ciclo Notturno",
                     "single_item": "Capo Singolo 20'",
@@ -781,6 +783,7 @@
                     "smart_mode": "SMART MODE",
                     "smart_mode_title": "Smart Mode",
                     "soft_frozen": "Soft freezing",
+                    "soft_frozen\n": "Soft freezing",
                     "super_cool": "SUPER COOL",
                     "super_freeze": "SUPER FREEZE",
                     "tea": "Cold drinks or Beverages",
@@ -856,12 +859,12 @@
                 "name": "Detersivo liquido"
             },
             "errors": {
-                "name": "Errore",
                 "state": {
                     "00": "Nessun Errore",
                     "100000000000": "E2: Controllare se la porta è chiusa correttamente",
                     "8000000000000": "E4: Controllare l'approvvigionamento idrico"
-                }
+                },
+                "name": "Errore"
             },
             "programs": {
                 "name": "Programma attuale"
@@ -1066,6 +1069,7 @@
                     "iot_voice_automatic": "Automatico",
                     "iot_voice_delicate": "Delicato 45°C",
                     "iot_voice_eco": "Eco 45°C",
+                    "iot_voice_eco_bldc": "Eco 45°C",
                     "iot_voice_intensive": "Intensivo 75°C",
                     "iot_voice_prewash": "Prelavaggio",
                     "iot_voice_rapid_59": "Rapido 59'",
@@ -1171,6 +1175,8 @@
                     "iot_bread": "Pane",
                     "iot_h20_clean": "h2O clean",
                     "leavening": "Lievitazione",
+                    "light_fan": "Light Fan",
+                    "light_fan\n": "Light Fan",
                     "low_temp_cooking": "Cottura a bassa temperatura",
                     "low_temp_cooking_fish": "Cottura a bassa temperatura Pesce",
                     "low_temp_cooking_fish_steam": "Cottura a bassa temperatura Pesce al vapore",
@@ -1366,6 +1372,7 @@
                     "cottons_prewash": "Cotone + Prelavaggio",
                     "cottons_steam": "Cotone + Vapore",
                     "cotton_care_59": "Cotton Care 59'",
+                    "crystals": "Crystals 45°C",
                     "delicate_59": "Delicati 59'",
                     "delicate_silk": "Delicati e Seta 59'",
                     "delicate_silk_steam": "Delicati e Seta + Vapore",
@@ -1675,6 +1682,7 @@
                     "smart_mode": "SMART MODE",
                     "smart_mode_title": "Smart Mode",
                     "soft_frozen": "Soft freezing",
+                    "soft_frozen\n": "Soft freezing",
                     "super_cool": "SUPER COOL",
                     "super_freeze": "SUPER FREEZE",
                     "tea": "Cold drinks or Beverages",
@@ -1950,7 +1958,7 @@
                 "name": "Pentola"
             },
             "remote_control": {
-                "name": "远程控制"
+                "name": "Controllo Remoto"
             },
             "rinse_aid": {
                 "name": "Livello Brillantante"
@@ -1965,7 +1973,7 @@
                 "name": "Connessione dell'elettrodomestico"
             },
             "child_lock": {
-                "name": "Child Lock"
+                "name": "Blocco bambini"
             },
             "on": {
                 "name": "On"
@@ -1977,7 +1985,7 @@
                 "name": "Avviso di fine ciclo"
             },
             "holiday_mode": {
-                "name": "Modalità Holiday"
+                "name": "Modalità Vancanza"
             },
             "auto_set": {
                 "name": "Impostazione automatica"
@@ -2143,6 +2151,8 @@
                             "iot_bread": "Pane",
                             "iot_h20_clean": "h2O clean",
                             "leavening": "Lievitazione",
+                            "light_fan": "Light Fan",
+                            "light_fan\n": "Light Fan",
                             "low_temp_cooking": "Cottura a bassa temperatura",
                             "low_temp_cooking_fish": "Cottura a bassa temperatura Pesce",
                             "low_temp_cooking_fish_steam": "Cottura a bassa temperatura Pesce al vapore",
