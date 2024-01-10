@@ -31,12 +31,12 @@ from .hon import HonEntity
 _LOGGER = logging.getLogger(__name__)
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonACClimateEntityDescription(ClimateEntityDescription):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonClimateEntityDescription(ClimateEntityDescription):
     mode: HVACMode = HVACMode.AUTO
 

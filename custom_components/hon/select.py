@@ -18,12 +18,12 @@ from .hon import HonEntity, unique_entities, get_readable
 _LOGGER = logging.getLogger(__name__)
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonSelectEntityDescription(SelectEntityDescription):
     option_list: dict[int, str] | None = None
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonConfigSelectEntityDescription(SelectEntityDescription):
     entity_category: EntityCategory = EntityCategory.CONFIG
     option_list: dict[int, str] | None = None

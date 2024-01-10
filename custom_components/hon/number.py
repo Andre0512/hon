@@ -19,12 +19,12 @@ from .const import DOMAIN
 from .hon import HonEntity, unique_entities
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonConfigNumberEntityDescription(NumberEntityDescription):
     entity_category: EntityCategory = EntityCategory.CONFIG
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonNumberEntityDescription(NumberEntityDescription):
     pass
 
