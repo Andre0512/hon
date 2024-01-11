@@ -10,7 +10,7 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 
 [![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
-[![Supported Models](https://img.shields.io/badge/Models-112-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
+[![Supported Models](https://img.shields.io/badge/Models-127-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
 [![Supported Entities](https://img.shields.io/badge/Entities-317-crimson)](https://github.com/Andre0512/hon#supported-appliances)  
 
 ## Supported Appliances
@@ -142,7 +142,7 @@ Support has been confirmed for these **4 models**, but many more will work. Plea
 ![Dish Washer](assets/example_dw.png)
 
 ### Supported Dish Washer models
-Support has been confirmed for these **5 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **6 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - XIB 3B2SFS-80
@@ -152,6 +152,9 @@ Support has been confirmed for these **5 models**, but many more will work. Plea
 - HDPN 4S603PW/E
 - HFB 5B2D3FW
 - HFB 6B2S3FX
+
+#### Candy
+- CF 3C7L0X
 
 ### Dish Washer Entities
 #### Controls
@@ -226,10 +229,11 @@ Support has been confirmed for these **1 models**, but many more will work. Plea
 <summary>Induction Hob</summary>
 
 ### Supported Induction Hob models
-Support has been confirmed for these **2 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **3 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HA2MTSJ68MC
+- HAIDSJ63MC
 
 #### Candy
 - CIS633SCTTWIFI
@@ -310,13 +314,19 @@ Support has been confirmed for these **2 models**, but many more will work. Plea
 ![Fridge](assets/example_ref.png)
 
 ### Supported Fridge models
-Support has been confirmed for these **7 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **11 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
+- HDPW5620ANPD
+- HBW5519ECM
+- HDW5620CNPK
 - HFW7720ENMB
 - HFW7819EWMP
 - HSW59F18EIPT
 - HTW5620DNMG
+
+#### Hoover
+- HOCE7620DX
 
 #### Candy
 - CE4T620EB
@@ -370,7 +380,7 @@ Support has been confirmed for these **7 models**, but many more will work. Plea
 ![Tumble Dryer](assets/example_td.png)
 
 ### Supported Tumble Dryer models
-Support has been confirmed for these **19 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **22 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HD80-A3959
@@ -387,11 +397,14 @@ Support has been confirmed for these **19 models**, but many more will work. Ple
 - NDE H10RA2TCE-80
 - NDE H9A2TSBEXS-S
 - NDP H9A3TCBEXS-S
+- NDP4 H7A2TCBEX-S
+- NDPEH9A3TCBEXS-S
 
 #### Candy
 - BCTDH7A1TE
 - CSOE C10DE-80
 - CSOE C10TREX-47
+- CSOE H10A2DE-S
 - CSOE H9A2DE-S
 - ROE H9A2TCE-80
 - ROE H9A3TCEX-S
@@ -476,7 +489,7 @@ Support has been confirmed for these **2 models**, but many more will work. Plea
 ![Washer Dryer](assets/example_wd.png)
 
 ### Supported Washer Dryer models
-Support has been confirmed for these **13 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **15 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HWD100-B14978
@@ -485,10 +498,12 @@ Support has been confirmed for these **13 models**, but many more will work. Ple
 - HWD80-B14979U1
 
 #### Hoover
+- H7D 4128MBC-S
 - HD 4106AMC/1-80
 - HD 485AMBB/1-S
 - HD 495AMC/1-S
 - HDB 5106AMC/1-80
+- HDD4106AMBCR-80
 - HDQ 496AMBS/1-S
 - HDP 4149AMBC/1-S
 - HWPS4954DAMR-11
@@ -581,15 +596,16 @@ Support has been confirmed for these **13 models**, but many more will work. Ple
 ![Washing Machine](assets/example_wm.png)
 
 ### Supported Washing Machine models
-Support has been confirmed for these **35 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **39 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HW80-B14959TU1
 - HW80-B14959S8U1S
 - HW80-B14979TU1
-- HW90-B14TEAM5
+- HW90-B145XLINEDE
 - HW90-B14959U1
 - HW90-B14959S8U1
+- HW90-B14TEAM5
 - HW90G-BD14979UD
 - HW100-B14959U1
 - HW110-14979
@@ -597,8 +613,10 @@ Support has been confirmed for these **35 models**, but many more will work. Ple
 #### Hoover
 - H5WPB447AMBC/1-S
 - H7W 412MBCR-80
+- H7W 610AMBC-80
 - H7W4 48MBC-S
 - HLWPS495TAMBE-11
+- HPS484DAMB7/1-11
 - HW 28AMBS/1-S
 - HW 410AMBCB/1-80
 - HW 411AMBCB/1-80
@@ -611,6 +629,7 @@ Support has been confirmed for these **35 models**, but many more will work. Ple
 - HWB 414AMC/1-80
 - HWE 49AMBS/1-S
 - HWP 48AMBCR/1-S
+- HWP 610AMBC/1-S
 - HWPD 69AMBC/1-S
 - HWPDQ49AMBC/1-S
 - HWPD 610AMBC/1-S
