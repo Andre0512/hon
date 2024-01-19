@@ -1,4 +1,4 @@
-## Haier wants to force me to delete this repository, have a look to the [takedown FAQs](https://github.com/Andre0512/hon/takedown_faqs.md) and [discuss here](https://github.com/Andre0512/hon/issues/147)
+## Haier wants to force me to delete this repository, have a look to the [takedown FAQs](https://github.com/Andre0512/hon/blob/main/takedown_faq.md) and [discuss here](https://github.com/Andre0512/hon/issues/147)
 
 # Haier hOn
 [![GitHub all releases](https://img.shields.io/github/downloads/Andre0512/hon/total?color=blue&label=total%20downloads)](https://tooomm.github.io/github-release-stats/?username=Andre0512&repository=hon)
