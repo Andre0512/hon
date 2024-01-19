@@ -765,8 +765,8 @@ Translation of internal names like programs are available for all languages whic
 * 🇪🇸 Spanish
 * 🇹🇷 Turkish
 
-## Compatiblity
-Haier offers different apps for different markets. Some appliances are compatible with more than one app. This integration only supports appliances that can be controlled via hOn. Please download the hOn app and check compatibilty before you open an issue.   
+## Compatibility
+Haier offers different apps for different markets. Some appliances are compatible with more than one app. This integration only supports appliances that can be controlled via hOn. Please download the hOn app and check compatibility before you open an issue.   
 The apps on this (incomplete) list have been requested so far:
 
 | App             | Main Market   | Supported                               | Alternative                                                                     |
