@@ -28,7 +28,7 @@ Haier Europe created [a blog post](https://corporate.haier-europe.com/press-rele
 Gianpiero Morbello, Head of Brand & IOT Haier Europe, wrote this mail:
 ![haier response](assets/haier_response.png)
  
-### Are you in concat with Home Assistant?
+### Are you in contact with Home Assistant?
 The Home Assistant team got in touch with me and will be part of a conversation with Haier.
 
 ### Did you agree to Haier's tos?
