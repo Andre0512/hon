@@ -1,21 +1,42 @@
-# Takedown Notice FAQs
+## Takedown FAQs
 
-_Last update: 2024-01-19_
+_Last update: 2024-01-21_
 
 ### What did Haier wrote?
-Until now, I got only the [known mail from Haier](assets/takedown.eml):
+Haier Europe wrote me on 2024-01-15 [this email](assets/takedown.eml):
 ![Screenshot of mail](assets/takedown.png)
 In the course of public interest, I am taking the risk of publishing the e-mail without Haier's consent.
 
 ### Is Haier's claim true?
 I think the points are very questionable, but I'm a software developer and not a lawyer or judge. So I can only try to explain here what the plugin does, but the legal assessment must be made by others.
 
+### What did you answer Haier?
+**2024-01-15**  
+In the first moment of getting the mail I was absolutely shocked, I didn't think that someone cares about me and my little plugin and I know Haier is a billion dollar company, so I answered
+![answer 1](assets/answer_1.png)
+after that i announced to take it down and then you guys happened.  
+**2024-01-19**  
+I'm getting so much support, and you started a huge wave, I mean we are now an example for the [Streisand effect on wikipedia](https://en.wikipedia.org/wiki/List_of_Streisand_effect_examples#By_businesses) xD    
+I wrote another mail on and tried to get some clarification and reach some agreement:
+![answer 2](assets/answer_2.png)
+
+### What was Haier's reaction?
+**2024-01-19**  
+[Haier US answered](https://www.reddit.com/r/homeassistant/comments/19a615l/haier_us_supports_home_assistant_and_open_iot/) that they have nothing to do with it and support open IOT platforms.  
+Haier Europe created [a blog post](https://corporate.haier-europe.com/press-release/hon-app-a-message-about-our-iot-and-ecosystem-vision/) and said they are _committed to enhancing the smart home scenarios in line with authorized usages and intellectual property rights of Haier Europe._  
+**2024-01-20**  
+Gianpiero Morbello, Head of Brand & IOT Haier Europe, wrote this mail:
+![haier response](assets/haier_response.png)
+ 
+### Are you in concat with Home Assistant?
+The Home Assistant team got in touch with me and will be part of a conversation with Haier.
+
+### Did you agree to Haier's tos?
+To create an account for Haier hOn you have to accept the terms of service. Without it, you can't connect your appliances to hOn and so you can't use Andre0512/hon.
+
 ### How does Haier hOn works?
 Haier sells home appliances with internet connection and offers the free hOn app. As far as I can see, there is no ads, no subscription and nothing else obvious to generate money with it.  
 The connection only works with the Haier servers, so your appliance sends data to the cloud and the hOn app communicates with it, there is no direct connection.
-
-### Did you agree to the tos?
-To create an account you have to accept the terms of service. Without it you can't connect your appliances to hOn and so you can't use Andre0512/hon
 
 ### How was the plugin created?
 I used [HTTP Tookit](https://httptoolkit.com/) to monitor the HTTP requests between hOn and the Haier servers and then rebuilt the requests in Python (with aiohttp). This takes me a few days to figure out and rebuild the necessary requests and I can now also explain why the hOn app is so extremely slow. The login alone hammers ~20 requests to the servers and also the communication with the devices is made of super many requests (at least at the time of my analysis).  
@@ -51,21 +72,3 @@ Requesting every 5 seconds is a bit much (even if the app makes more requests mo
 ### Are there some secret keys stored in the repository?
 There is a constant for a [client ID](https://github.com/Andre0512/pyhOn/blob/main/pyhon/const.py) and an [api key](https://github.com/Andre0512/pyhOn/blob/main/pyhon/const.py). They seems to be static because they are the same for requests from every account I saw.
 The client id is necessary for doing the OAuth of the login process. The api key is to get some static data (the readable names of the programs etc) and would not necessarily be included in the release.
-
-### What did you answer Haier?
-In the first moment of getting the mail I was absolutely shocked, I didn't think that someone cares about me and my little plugin and I know Haier is a billion dollar company, so I answered
-![answer 1](assets/answer_1.png)
-after that i announced to take it down and then you guys happened.  
-I'm getting so much support and you started a huge wave, I mean we are now an example for the [Streisand effect on wikipedia](https://en.wikipedia.org/wiki/List_of_Streisand_effect_examples#By_businesses) xD  
-And so I wrote another mail and tried to get some clarification and reach some agreement, it's worth a try
-![answer 2](assets/answer_2.png)
-
-### What was Haier's reaction?
-Haier didn't answer me, after their first mail they didn't respond on any channel. None of us has received an answer yet.
-Only [Haier US answered](https://www.reddit.com/r/homeassistant/comments/19a615l/haier_us_supports_home_assistant_and_open_iot/) that they have nothing to do with it and support open IOT platforms.
-
-### When will you delete the repositories?
-I will now wait how Haier reacts to my questions and all the riot you make. I'm a 27-year-old software developer who make these plugins in my free time as a little hobby and haven't the resources so I hope you understand if I can't go all in. But I will try to keep it online for as long as possible.
-
-### Can't Home Assistant do anything?
-The Home Assistant team got in touch with me and is actively trying to get Haier to rethink its position.

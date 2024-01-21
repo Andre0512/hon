@@ -1,4 +1,5 @@
 ## Update: [Answer from Haier](https://github.com/Andre0512/hon/issues/147#issuecomment-1902075829) 
+## Have a look at [Takedown FAQs](https://github.com/Andre0512/hon/blob/main/takedown_faq.md) and [Timeline of events](https://github.com/Andre0512/hon/blob/main/takedown_timeline.md)
 ## Announcement: I have to take the project down in the next few days
 > Dear User,
 > 
