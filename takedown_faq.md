@@ -22,14 +22,16 @@ I wrote another mail on and tried to get some clarification and reach some agree
 
 ### What was Haier's reaction?
 **2024-01-19**  
-[Haier US answered](https://www.reddit.com/r/homeassistant/comments/19a615l/haier_us_supports_home_assistant_and_open_iot/) that they have nothing to do with it and support open IOT platforms.  
-Haier Europe created [a blog post](https://corporate.haier-europe.com/press-release/hon-app-a-message-about-our-iot-and-ecosystem-vision/) and said they are _committed to enhancing the smart home scenarios in line with authorized usages and intellectual property rights of Haier Europe._  
+Haier US [answered on X](https://www.reddit.com/r/homeassistant/comments/19a615l/haier_us_supports_home_assistant_and_open_iot/) that they have nothing to do with it and support open IOT platforms.  
+Haier Europe [created a blog post](https://corporate.haier-europe.com/press-release/hon-app-a-message-about-our-iot-and-ecosystem-vision/) and said they are _committed to enhancing the smart home scenarios in line with authorized usages and intellectual property rights of Haier Europe._  
 **2024-01-20**  
 Gianpiero Morbello, Head of Brand & IOT Haier Europe, wrote this mail:
-![haier response](assets/haier_response.png)
+![haier response](assets/haier_response.png)  
+
+As far as I know, none of the numerous requests from the community have been answered, but if they have, please let me know.
  
 ### Are you in contact with Home Assistant?
-The Home Assistant team got in touch with me and will be part of a conversation with Haier.
+The Home Assistant/Nabu Casa team got in touch with me and will be part of a conversation with Haier.
 
 ### Did you agree to Haier's tos?
 To create an account for Haier hOn you have to accept the terms of service. Without it, you can't connect your appliances to hOn and so you can't use Andre0512/hon.
@@ -39,7 +41,7 @@ Haier sells home appliances with internet connection and offers the free hOn app
 The connection only works with the Haier servers, so your appliance sends data to the cloud and the hOn app communicates with it, there is no direct connection.
 
 ### How was the plugin created?
-I used [HTTP Tookit](https://httptoolkit.com/) to monitor the HTTP requests between hOn and the Haier servers and then rebuilt the requests in Python (with aiohttp). This takes me a few days to figure out and rebuild the necessary requests and I can now also explain why the hOn app is so extremely slow. The login alone hammers ~20 requests to the servers and also the communication with the devices is made of super many requests (at least at the time of my analysis).  
+I used [HTTP Tookit](https://httptoolkit.com/) to monitor the HTTP requests between hOn and the Haier servers and then rebuilt the requests in Python (with aiohttp). I have tried to make the requests in the same way as the app does, except for the ones we don't need.  
 The pretty complex login can be found in [auth.py](https://github.com/Andre0512/pyhOn/blob/main/pyhon/connection/auth.py) and the API requests that I have adopted as relevant for the integration are these [api.py](https://github.com/Andre0512/pyhOn/blob/main/pyhon/connection/api.py).  
 Beyond that, there is no communication with the hOn servers in the code.
 
@@ -58,7 +60,7 @@ This are all requests the plugin sends to Haiers servers
 - Loading of all appliance functions (In [hon-test-data](https://github.com/Andre0512/hon-test-data/tree/main/test_data) you can have an overview of which data this is for each appliance)
 
 **Status polling**
-- 1 request every 5 seconds to fetch the current state for each appliance ([something like this](https://github.com/Andre0512/hon-test-data/blob/main/test_data/ac_312/appliance_data.json))
+- 1 request every 10 seconds to fetch the current state for each appliance ([something like this](https://github.com/Andre0512/hon-test-data/blob/main/test_data/ac_312/appliance_data.json))
 
 **Triggering action**
 - If any action is triggerd, e.g. start some appliance or set a new a/c mode, some data have to be posted
@@ -66,8 +68,13 @@ This are all requests the plugin sends to Haiers servers
 **Creating a new releases**
 - If I create a new release, program names and translations in all languages are fetched from the api and loaded to the [translation folder](https://github.com/Andre0512/hon/tree/main/custom_components/hon/translations)
 
-### What could bother Haier?
-Requesting every 5 seconds is a bit much (even if the app makes more requests more frequent, but only in use). With a poorly implemented application, this could perhaps provide some load. The default interval for most integrations is 10 seconds. I would totally understand if haier wanted a higher value here and would increase it, I have already asked them suggest a poll interval.
+### What bothers Haier?
+Polling every 10 seconds is a bit much. The default interval for most integrations is 30 seconds. Even if the hOn app makes more requests more frequent, but it does it only in use and not 24/7.  
+As Haier explained in their answer, this generates a lot of traffic on the not so cheap aws hosting. I understand if Haier wishes a higher value here and will hopefully find a good solution with them.  
+_I had initially claimed 5 seconds, but it is actually "only" 10 seconds, see [this constant](https://github.com/Andre0512/hon/blob/main/custom_components/hon/const.py#L10)._
+
+### How often has your plugin been installed?
+Since the latest versions are downloaded about 3000 times each on GitHub, I assume 2000-5000 active installations.
 
 ### Are there some secret keys stored in the repository?
 There is a constant for a [client ID](https://github.com/Andre0512/pyhOn/blob/main/pyhon/const.py) and an [api key](https://github.com/Andre0512/pyhOn/blob/main/pyhon/const.py). They seems to be static because they are the same for requests from every account I saw.
