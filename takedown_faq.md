@@ -1,6 +1,6 @@
 ## Takedown FAQs
 
-_Last update: 2024-01-21_
+_Last update: 2024-01-24_
 
 ### What did Haier wrote?
 Haier Europe wrote me on 2024-01-15 [this email](assets/takedown.eml):
@@ -74,7 +74,7 @@ As Haier explained in their answer, this generates a lot of traffic on the not s
 _I had initially claimed 5 seconds, but it is actually "only" 10 seconds, see [this constant](https://github.com/Andre0512/hon/blob/main/custom_components/hon/const.py#L10)._
 
 ### How often has your plugin been installed?
-Since the latest versions are downloaded about 3000 times each on GitHub, I assume 2000-5000 active installations.
+Since the latest versions are downloaded [about 3000 times](https://tooomm.github.io/github-release-stats/?username=Andre0512&repository=hon) each on GitHub, I assume 2000-5000 active installations.
 
 ### Are there some secret keys stored in the repository?
 There is a constant for a [client ID](https://github.com/Andre0512/pyhOn/blob/main/pyhon/const.py) and an [api key](https://github.com/Andre0512/pyhOn/blob/main/pyhon/const.py). They seems to be static because they are the same for requests from every account I saw.

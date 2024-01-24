@@ -27,7 +27,7 @@ pyhOn | 18 Stars | 13 Forks
 hon | 111 Stars | 73 Forks  
 pyhOn | 20 Stars | 42 Forks  
 
-- [hectorzin](https://github.com/hectorzin) creates a first [YouTube video](https://www.youtube.com/watch?v=u2rEVW0grsk)
+- [hectorzin](https://github.com/hectorzin) created a first [YouTube video](https://www.youtube.com/watch?v=u2rEVW0grsk)
 
 ### 2024-01-18
 hon | 122 Stars | 103 Forks  
@@ -61,12 +61,18 @@ pyhOn | 228 Stars | 1199 Forks
 hon | 779 Stars | 1948 Forks  
 pyhOn | 315 Stars | 1477 Forks
 - [The Register](https://www.theregister.com/2024/01/22/haier_plugin_takedown/) reported about the story
-- [Hackaday](https://hackaday.com/2024/01/22/haier-europe-eases-off-on-legal-threat-and-seeks-dialogue/) and [Tweakers](https://tweakers.net/nieuws/217840/haier-trekt-takedownverzoek-aan-plug-indeveloper-in-geeft-api-calls-de-schuld.html) posted a follow up article about Haier eases off on legal threat and seeking a dialogue
+- [Hackaday](https://hackaday.com/2024/01/22/haier-europe-eases-off-on-legal-threat-and-seeks-dialogue/), [Caschys Blog](https://stadt-bremerhaven.de/haier-und-home-assistant-es-koennte-weitergehen/) and [Tweakers](https://tweakers.net/nieuws/217840/haier-trekt-takedownverzoek-aan-plug-indeveloper-in-geeft-api-calls-de-schuld.html) posted a follow up article about Haier eases off on legal threat and seeking a dialogue
 
 ### 2024-01-23
 hon | 874 Stars | 2123 Forks  
 pyhOn | 349 Stars | 1590 Forks  
 - [heise online](https://www.heise.de/news/Hausgeraete-Hersteller-wollte-Open-Source-Projekt-loeschen-lassen-Loesung-in-Sicht-9606349.html) published an article 
+
+### 2024-01-24
+hon | 894 Stars | 2194 Forks  
+pyhOn | 358 Stars | 1650 Forks  
+- [Everything Smart Home](https://www.youtube.com/watch?v=ayG7o74kdbc) uploaded a good summary on YouTube
+
 
 ## Stats
 
