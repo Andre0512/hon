@@ -17,7 +17,7 @@ from homeassistant.components.climate.const import (
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (
     ATTR_TEMPERATURE,
-    TEMP_CELSIUS,
+    UnitOfTemperature,
 )
 from homeassistant.core import callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -31,12 +31,12 @@ from .hon import HonEntity
 _LOGGER = logging.getLogger(__name__)
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonACClimateEntityDescription(ClimateEntityDescription):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonClimateEntityDescription(ClimateEntityDescription):
     mode: HVACMode = HVACMode.AUTO
 
@@ -137,7 +137,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
     ) -> None:
         super().__init__(hass, entry, device, description)
 
-        self._attr_temperature_unit = TEMP_CELSIUS
+        self._attr_temperature_unit = UnitOfTemperature.CELSIUS
         self._set_temperature_bound()
 
         self._attr_hvac_modes = [HVACMode.OFF]
@@ -295,7 +295,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
     ) -> None:
         super().__init__(hass, entry, device, description)
 
-        self._attr_temperature_unit = TEMP_CELSIUS
+        self._attr_temperature_unit = UnitOfTemperature.CELSIUS
         self._set_temperature_bound()
 
         self._attr_hvac_modes = [description.mode]

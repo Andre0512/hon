@@ -34,13 +34,13 @@ from .hon import HonEntity, unique_entities, get_readable
 _LOGGER = logging.getLogger(__name__)
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonConfigSensorEntityDescription(SensorEntityDescription):
     entity_category: EntityCategory = EntityCategory.DIAGNOSTIC
     option_list: dict[int, str] | None = None
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonSensorEntityDescription(SensorEntityDescription):
     option_list: dict[int, str] | None = None
 
