@@ -32,7 +32,7 @@
                     "scheduled": "Geplant",
                     "tumbling": "Frisch halten",
                     "refresh": "Auffrischen",
-                    "heating": "Heizung",
+                    "heating": "Heizen",
                     "washing": "Waschen"
                 },
                 "name": "Phase"
@@ -40,7 +40,7 @@
             "program_phases_td": {
                 "state": {
                     "ready": "Bereit",
-                    "heat_stroke": "Heizung",
+                    "heat_stroke": "Heizen",
                     "drying": "Trocknen",
                     "cooldown": "Abkühlen",
                     "unknown": "Unbekannt",
