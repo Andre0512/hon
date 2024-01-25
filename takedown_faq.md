@@ -41,7 +41,7 @@ Haier sells home appliances with internet connection and offers the free hOn app
 The connection only works with the Haier servers, so your appliance sends data to the cloud and the hOn app communicates with it, there is no direct connection.
 
 ### How was the plugin created?
-I used [HTTP Tookit](https://httptoolkit.com/) to monitor the HTTP requests between hOn and the Haier servers and then rebuilt the requests in Python (with aiohttp). I have tried to make the requests in the same way as the app does, except for the ones we don't need.  
+I used [HTTP Toolkit](https://httptoolkit.com/) to monitor the HTTP requests between hOn and the Haier servers and then rebuilt the requests in Python (with aiohttp). I have tried to make the requests in the same way as the app does, except for the ones we don't need.  
 The pretty complex login can be found in [auth.py](https://github.com/Andre0512/pyhOn/blob/main/pyhon/connection/auth.py) and the API requests that I have adopted as relevant for the integration are these [api.py](https://github.com/Andre0512/pyhOn/blob/main/pyhon/connection/api.py).  
 Beyond that, there is no communication with the hOn servers in the code.
 
