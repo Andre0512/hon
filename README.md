@@ -16,8 +16,8 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 
 [![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
-[![Supported Models](https://img.shields.io/badge/Models-127-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
-[![Supported Entities](https://img.shields.io/badge/Entities-317-crimson)](https://github.com/Andre0512/hon#supported-appliances)
+[![Supported Models](https://img.shields.io/badge/Models-130-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
+[![Supported Entities](https://img.shields.io/badge/Entities-320-crimson)](https://github.com/Andre0512/hon#supported-appliances)
 
 ## Takedown Story
 Haier sent a takedown notice and threatened legal action. The community started a big riot and called for a Haier boycott, the repository was forked over 2000+ times to make the code undeletable. Haier starts a dialog to find a joint solution. Read all about it here:  
@@ -176,6 +176,8 @@ Support has been confirmed for these **6 models**, but many more will work. Plea
 | --- | --- | --- | --- |
 | Buzzer Disabled | `volume-off` | `switch` | `buzzerDisabled` |
 | Dish Washer | `dishwasher` | `switch` | `startProgram` / `stopProgram` |
+| Light status |  | `light` | `settings.lightStatus` |
+| Water hard | `water` | `number` | `settings.waterHard` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -187,6 +189,7 @@ Support has been confirmed for these **6 models**, but many more will work. Plea
 | Open Door | `door-open` | `switch` | `startProgram.openDoor` |
 | Program |  | `select` | `startProgram.program` |
 | Remaining Time | `timer` | `select` | `startProgram.remainingTime` |
+| Tab Status | `silverware-clean` | `switch` | `startProgram.tabStatus` |
 | Temperature | `thermometer` | `select` | `startProgram.temp` |
 | Three in One | `numeric-3-box-outline` | `switch` | `startProgram.threeInOne` |
 | Water hard | `water` | `number` | `startProgram.waterHard` |
@@ -467,11 +470,12 @@ Support has been confirmed for these **22 models**, but many more will work. Ple
 ![Wine Cellar](assets/example_wc.png)
 
 ### Supported Wine Cellar models
-Support has been confirmed for these **2 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **3 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HWS247FDU1
 - HWS42GDAU1
+- HWS77GDAU1
 
 ### Wine Cellar Entities
 #### Controls
@@ -610,9 +614,10 @@ Support has been confirmed for these **15 models**, but many more will work. Ple
 ![Washing Machine](assets/example_wm.png)
 
 ### Supported Washing Machine models
-Support has been confirmed for these **39 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **41 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
+- HW80-B1439N
 - HW80-B14959TU1
 - HW80-B14959S8U1S
 - HW80-B14979TU1
@@ -625,6 +630,7 @@ Support has been confirmed for these **39 models**, but many more will work. Ple
 - HW110-14979
 
 #### Hoover
+- H5WPB4 27BC8/1-S
 - H5WPB447AMBC/1-S
 - H7W 412MBCR-80
 - H7W 610AMBC-80

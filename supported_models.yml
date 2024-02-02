@@ -1,5 +1,10 @@
+# This file helps to manage the model lists for README.md and info.md
+# Execute scripts/create_docs.py to refresh
+# Add your device here or use this https://forms.gle/bTSD8qFotdZFytbf8
+
 wm:
   haier:
+    - "HW80-B1439N"
     - "HW80-B14959TU1"
     - "HW80-B14959S8U1S"
     - "HW80-B14979TU1"
@@ -11,6 +16,7 @@ wm:
     - "HW100-B14959U1"
     - "HW110-14979"
   hoover:
+    - "H5WPB4 27BC8/1-S"
     - "H5WPB447AMBC/1-S"
     - "H7W 412MBCR-80"
     - "H7W 610AMBC-80"
@@ -154,6 +160,7 @@ wc:
   haier:
     - "HWS247FDU1"
     - "HWS42GDAU1"
+    - "HWS77GDAU1"
 ap:
   hoover:
     - "HHP30C011"
