@@ -20,11 +20,12 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 [![Supported Entities](https://img.shields.io/badge/Entities-317-crimson)](https://github.com/Andre0512/hon#supported-appliances)
 
 ## Takedown Story
-Haier sent a takedown notice and threatened legal action. The community started a big riot and called for a Haier boycott, the repository was forked over 2000+ times to make the code undeletable. Haier was made to rethink and plans to support the integration. Read all about it here:  
+Haier sent a takedown notice and threatened legal action. The community started a big riot and called for a Haier boycott, the repository was forked over 2000+ times to make the code undeletable. Haier starts a dialog to find a joint solution. Read all about it here:  
 - [Timeline of events](https://github.com/Andre0512/hon/blob/main/takedown_timeline.md)
 - [Takedown FAQs](https://github.com/Andre0512/hon/blob/main/takedown_faq.md)
 - [Main discussion](https://github.com/Andre0512/hon/issues/147)
 - [Summary video](https://www.youtube.com/watch?v=ayG7o74kdbc)
+- [Haier's Statement](https://github.com/Andre0512/hon/issues/147#issuecomment-1923622715)
 
 ## Supported Appliances
 _Click to expand..._
