@@ -8,6 +8,8 @@ from homeassistant.components.climate import (
 
 DOMAIN: str = "hon"
 UPDATE_INTERVAL: int = 60
+MOBILE_ID: str = "homassistant"
+CONF_REFRESH_TOKEN = "refresh_token"
 
 PLATFORMS: list[str] = [
     "sensor",

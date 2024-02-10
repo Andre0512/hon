@@ -8,7 +8,7 @@ from homeassistant.helpers import config_validation as cv, aiohttp_client
 from homeassistant.helpers.typing import HomeAssistantType
 from pyhon import Hon
 
-from .const import DOMAIN, PLATFORMS
+from .const import DOMAIN, PLATFORMS, MOBILE_ID, CONF_REFRESH_TOKEN
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -30,9 +30,11 @@ async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry) -> bool
     if (config_dir := hass.config.config_dir) is None:
         raise ValueError("Missing Config Dir")
     hon = await Hon(
-        entry.data["email"],
-        entry.data["password"],
+        entry.data[CONF_EMAIL],
+        entry.data[CONF_PASSWORD],
+        mobile_id=MOBILE_ID,
         session=session,
+        refresh_token=entry.data[CONF_REFRESH_TOKEN],
         test_data_path=Path(config_dir),
     ).create()
     hass.data.setdefault(DOMAIN, {})
@@ -47,6 +49,7 @@ async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry) -> bool
 
 
 async def async_unload_entry(hass: HomeAssistantType, entry: ConfigEntry) -> bool:
+    entry.data[CONF_REFRESH_TOKEN] = hass.data[DOMAIN][entry.unique_id].api.auth.refresh_token
     unload = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
     if unload:
         if not hass.data[DOMAIN]:
