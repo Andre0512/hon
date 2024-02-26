@@ -928,6 +928,13 @@
                     "high": "Hoch"
                 },
                 "name": "Grad der Luftfeuchtigkeit"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1810,6 +1817,13 @@
                     "position_5": "Fest - Position 5",
                     "swing": "Schwenkbewegung"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -2009,6 +2023,9 @@
             },
             "filter_replacement": {
                 "name": "Filteraustausch"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {

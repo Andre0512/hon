@@ -928,6 +928,13 @@
                     "high": "Vysoké"
                 },
                 "name": "Úroveň vlhkosti"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1810,6 +1817,13 @@
                     "position_5": "Pevný - Poloha 5",
                     "swing": "Otáčanie"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -2009,6 +2023,9 @@
             },
             "filter_replacement": {
                 "name": "Výmena filtra"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {

@@ -928,6 +928,13 @@
                     "high": "Hoog"
                 },
                 "name": "Vochtigheidsniveau"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1810,6 +1817,13 @@
                     "position_5": "Vast - Positie 5",
                     "swing": "Draaiend"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -2009,6 +2023,9 @@
             },
             "filter_replacement": {
                 "name": "Filter vervangen"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {

@@ -928,6 +928,13 @@
                     "high": "Wysokie"
                 },
                 "name": "Poziom wilgotności"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1810,6 +1817,13 @@
                     "position_5": "Stały - Pozycja 5",
                     "swing": "Swing"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -2009,6 +2023,9 @@
             },
             "filter_replacement": {
                 "name": "Wymiana filtra"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {
