@@ -18,7 +18,7 @@ from .hon import HonEntity, unique_entities
 _LOGGER = logging.getLogger(__name__)
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonControlSwitchEntityDescription(SwitchEntityDescription):
     turn_on_key: str = ""
     turn_off_key: str = ""
@@ -28,11 +28,12 @@ class HonControlSwitchEntityDescription(SwitchEntityDescription):
     to_sync: bool = False
 
 
+@dataclass(frozen=True)
 class HonSwitchEntityDescription(SwitchEntityDescription):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonConfigSwitchEntityDescription(SwitchEntityDescription):
     entity_category: EntityCategory = EntityCategory.CONFIG
 

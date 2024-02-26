@@ -17,7 +17,7 @@ from .hon import HonEntity, unique_entities
 _LOGGER = logging.getLogger(__name__)
 
 
-@dataclass
+@dataclass(frozen=True)
 class HonBinarySensorEntityDescription(BinarySensorEntityDescription):
     on_value: str | float = ""
 

@@ -13,10 +13,19 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 
 ---
 
+
 [![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
-[![Supported Models](https://img.shields.io/badge/Models-112-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
-[![Supported Entities](https://img.shields.io/badge/Entities-317-crimson)](https://github.com/Andre0512/hon#supported-appliances)  
+[![Supported Models](https://img.shields.io/badge/Models-130-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
+[![Supported Entities](https://img.shields.io/badge/Entities-320-crimson)](https://github.com/Andre0512/hon#supported-appliances)
+
+## Takedown Story
+Haier sent a takedown notice and threatened legal action. The community started a big riot and called for a Haier boycott, the repository was forked over 2000+ times to make the code undeletable. Haier starts a dialog to find a joint solution. Read all about it here:  
+- [Timeline of events](https://github.com/Andre0512/hon/blob/main/takedown_timeline.md)
+- [Takedown FAQs](https://github.com/Andre0512/hon/blob/main/takedown_faq.md)
+- [Main discussion](https://github.com/Andre0512/hon/issues/147)
+- [Summary video](https://www.youtube.com/watch?v=ayG7o74kdbc)
+- [Haier's Statement](https://github.com/Andre0512/hon/issues/147#issuecomment-1923622715)
 
 ## Supported Appliances
 _Click to expand..._
@@ -147,7 +156,7 @@ Support has been confirmed for these **4 models**, but many more will work. Plea
 ![Dish Washer](assets/example_dw.png)
 
 ### Supported Dish Washer models
-Support has been confirmed for these **5 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **6 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - XIB 3B2SFS-80
@@ -158,12 +167,17 @@ Support has been confirmed for these **5 models**, but many more will work. Plea
 - HFB 5B2D3FW
 - HFB 6B2S3FX
 
+#### Candy
+- CF 3C7L0X
+
 ### Dish Washer Entities
 #### Controls
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
 | Buzzer Disabled | `volume-off` | `switch` | `buzzerDisabled` |
 | Dish Washer | `dishwasher` | `switch` | `startProgram` / `stopProgram` |
+| Light status |  | `light` | `settings.lightStatus` |
+| Water hard | `water` | `number` | `settings.waterHard` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -175,6 +189,7 @@ Support has been confirmed for these **5 models**, but many more will work. Plea
 | Open Door | `door-open` | `switch` | `startProgram.openDoor` |
 | Program |  | `select` | `startProgram.program` |
 | Remaining Time | `timer` | `select` | `startProgram.remainingTime` |
+| Tab Status | `silverware-clean` | `switch` | `startProgram.tabStatus` |
 | Temperature | `thermometer` | `select` | `startProgram.temp` |
 | Three in One | `numeric-3-box-outline` | `switch` | `startProgram.threeInOne` |
 | Water hard | `water` | `number` | `startProgram.waterHard` |
@@ -231,10 +246,11 @@ Support has been confirmed for these **1 models**, but many more will work. Plea
 <summary>Induction Hob</summary>
 
 ### Supported Induction Hob models
-Support has been confirmed for these **2 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **3 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HA2MTSJ68MC
+- HAIDSJ63MC
 
 #### Candy
 - CIS633SCTTWIFI
@@ -315,13 +331,19 @@ Support has been confirmed for these **2 models**, but many more will work. Plea
 ![Fridge](assets/example_ref.png)
 
 ### Supported Fridge models
-Support has been confirmed for these **7 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **11 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
+- HDPW5620ANPD
+- HBW5519ECM
+- HDW5620CNPK
 - HFW7720ENMB
 - HFW7819EWMP
 - HSW59F18EIPT
 - HTW5620DNMG
+
+#### Hoover
+- HOCE7620DX
 
 #### Candy
 - CE4T620EB
@@ -375,7 +397,7 @@ Support has been confirmed for these **7 models**, but many more will work. Plea
 ![Tumble Dryer](assets/example_td.png)
 
 ### Supported Tumble Dryer models
-Support has been confirmed for these **19 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **22 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HD80-A3959
@@ -392,11 +414,14 @@ Support has been confirmed for these **19 models**, but many more will work. Ple
 - NDE H10RA2TCE-80
 - NDE H9A2TSBEXS-S
 - NDP H9A3TCBEXS-S
+- NDP4 H7A2TCBEX-S
+- NDPEH9A3TCBEXS-S
 
 #### Candy
 - BCTDH7A1TE
 - CSOE C10DE-80
 - CSOE C10TREX-47
+- CSOE H10A2DE-S
 - CSOE H9A2DE-S
 - ROE H9A2TCE-80
 - ROE H9A3TCEX-S
@@ -445,11 +470,12 @@ Support has been confirmed for these **19 models**, but many more will work. Ple
 ![Wine Cellar](assets/example_wc.png)
 
 ### Supported Wine Cellar models
-Support has been confirmed for these **2 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **3 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HWS247FDU1
 - HWS42GDAU1
+- HWS77GDAU1
 
 ### Wine Cellar Entities
 #### Controls
@@ -481,7 +507,7 @@ Support has been confirmed for these **2 models**, but many more will work. Plea
 ![Washer Dryer](assets/example_wd.png)
 
 ### Supported Washer Dryer models
-Support has been confirmed for these **13 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **15 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HWD100-B14978
@@ -490,10 +516,12 @@ Support has been confirmed for these **13 models**, but many more will work. Ple
 - HWD80-B14979U1
 
 #### Hoover
+- H7D 4128MBC-S
 - HD 4106AMC/1-80
 - HD 485AMBB/1-S
 - HD 495AMC/1-S
 - HDB 5106AMC/1-80
+- HDD4106AMBCR-80
 - HDQ 496AMBS/1-S
 - HDP 4149AMBC/1-S
 - HWPS4954DAMR-11
@@ -586,24 +614,29 @@ Support has been confirmed for these **13 models**, but many more will work. Ple
 ![Washing Machine](assets/example_wm.png)
 
 ### Supported Washing Machine models
-Support has been confirmed for these **35 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **41 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
+- HW80-B1439N
 - HW80-B14959TU1
 - HW80-B14959S8U1S
 - HW80-B14979TU1
-- HW90-B14TEAM5
+- HW90-B145XLINEDE
 - HW90-B14959U1
 - HW90-B14959S8U1
+- HW90-B14TEAM5
 - HW90G-BD14979UD
 - HW100-B14959U1
 - HW110-14979
 
 #### Hoover
+- H5WPB4 27BC8/1-S
 - H5WPB447AMBC/1-S
 - H7W 412MBCR-80
+- H7W 610AMBC-80
 - H7W4 48MBC-S
 - HLWPS495TAMBE-11
+- HPS484DAMB7/1-11
 - HW 28AMBS/1-S
 - HW 410AMBCB/1-80
 - HW 411AMBCB/1-80
@@ -616,6 +649,7 @@ Support has been confirmed for these **35 models**, but many more will work. Ple
 - HWB 414AMC/1-80
 - HWE 49AMBS/1-S
 - HWP 48AMBCR/1-S
+- HWP 610AMBC/1-S
 - HWPD 69AMBC/1-S
 - HWPDQ49AMBC/1-S
 - HWPD 610AMBC/1-S
@@ -734,8 +768,8 @@ Translation of internal names like programs are available for all languages whic
 * 🇪🇸 Spanish
 * 🇹🇷 Turkish
 
-## Compatiblity
-Haier offers different apps for different markets. Some appliances are compatible with more than one app. This integration only supports appliances that can be controlled via hOn. Please download the hOn app and check compatibilty before you open an issue.   
+## Compatibility
+Haier offers different apps for different markets. Some appliances are compatible with more than one app. This integration only supports appliances that can be controlled via hOn. Please download the hOn app and check compatibility before you open an issue.   
 The apps on this (incomplete) list have been requested so far:
 
 | App             | Main Market   | Supported                               | Alternative                                                                     |
