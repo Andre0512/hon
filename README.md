@@ -1,15 +1,3 @@
-## Update: [Answer from Haier](https://github.com/Andre0512/hon/issues/147#issuecomment-1902075829) 
-## Have a look at [Takedown FAQs](https://github.com/Andre0512/hon/blob/main/takedown_faq.md) and [Timeline of events](https://github.com/Andre0512/hon/blob/main/takedown_timeline.md)
-## Announcement: I have to take the project down in the next few days
-> Dear User,
-> 
-> We are writing to inform you that we have discovered two Home Assistant integration plug-ins developed by you ( https://github.com/Andre0512/hon and https://github.com/Andre0512/pyhOn ) that are in violation of our terms of service. Specifically, the plug-ins are using our services in an unauthorized manner which is causing significant economic harm to our Company.
-> We take the protection of our intellectual property very seriously and demand that you immediately cease and desist all illegal activities related to the development and distribution of these plug-ins. We also request that you remove the plug-ins from all stores and code hosting platforms where they are currently available.
-> Please be advised that we will take all necessary legal action to protect our interests if you fail to comply with this notice. We reserve the right to pursue all available remedies, including but not limited to monetary damages, injunctive relief, and attorney's fees.
-> We strongly urge you to take immediate action to rectify this situation and avoid any further legal action. If you have any questions or concerns, please do not hesitate to contact us.
-> 
-> Haier Europe Security and Governance Department
-
 # Haier hOn
 [![hacs_badge](https://img.shields.io/badge/hacs-Default-41BDF5.svg)](https://hacs.xyz)
 [![GitHub](https://img.shields.io/github/license/Andre0512/hon?color=red)](https://github.com/Andre0512/hon/blob/main/LICENSE)
@@ -25,10 +13,19 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 
 ---
 
+
 [![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
-[![Supported Models](https://img.shields.io/badge/Models-127-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
-[![Supported Entities](https://img.shields.io/badge/Entities-317-crimson)](https://github.com/Andre0512/hon#supported-appliances)  
+[![Supported Models](https://img.shields.io/badge/Models-130-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
+[![Supported Entities](https://img.shields.io/badge/Entities-320-crimson)](https://github.com/Andre0512/hon#supported-appliances)
+
+## Takedown Story
+Haier sent a takedown notice and threatened legal action. The community started a big riot and called for a Haier boycott, the repository was forked over 2000+ times to make the code undeletable. Haier starts a dialog to find a joint solution. Read all about it here:  
+- [Timeline of events](https://github.com/Andre0512/hon/blob/main/takedown_timeline.md)
+- [Takedown FAQs](https://github.com/Andre0512/hon/blob/main/takedown_faq.md)
+- [Main discussion](https://github.com/Andre0512/hon/issues/147)
+- [Summary video](https://www.youtube.com/watch?v=ayG7o74kdbc)
+- [Haier's Statement](https://github.com/Andre0512/hon/issues/147#issuecomment-1923622715)
 
 ## Supported Appliances
 _Click to expand..._
@@ -179,6 +176,8 @@ Support has been confirmed for these **6 models**, but many more will work. Plea
 | --- | --- | --- | --- |
 | Buzzer Disabled | `volume-off` | `switch` | `buzzerDisabled` |
 | Dish Washer | `dishwasher` | `switch` | `startProgram` / `stopProgram` |
+| Light status |  | `light` | `settings.lightStatus` |
+| Water hard | `water` | `number` | `settings.waterHard` |
 #### Configs
 | Name | Icon | Entity | Key |
 | --- | --- | --- | --- |
@@ -190,6 +189,7 @@ Support has been confirmed for these **6 models**, but many more will work. Plea
 | Open Door | `door-open` | `switch` | `startProgram.openDoor` |
 | Program |  | `select` | `startProgram.program` |
 | Remaining Time | `timer` | `select` | `startProgram.remainingTime` |
+| Tab Status | `silverware-clean` | `switch` | `startProgram.tabStatus` |
 | Temperature | `thermometer` | `select` | `startProgram.temp` |
 | Three in One | `numeric-3-box-outline` | `switch` | `startProgram.threeInOne` |
 | Water hard | `water` | `number` | `startProgram.waterHard` |
@@ -470,11 +470,12 @@ Support has been confirmed for these **22 models**, but many more will work. Ple
 ![Wine Cellar](assets/example_wc.png)
 
 ### Supported Wine Cellar models
-Support has been confirmed for these **2 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **3 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HWS247FDU1
 - HWS42GDAU1
+- HWS77GDAU1
 
 ### Wine Cellar Entities
 #### Controls
@@ -613,9 +614,10 @@ Support has been confirmed for these **15 models**, but many more will work. Ple
 ![Washing Machine](assets/example_wm.png)
 
 ### Supported Washing Machine models
-Support has been confirmed for these **39 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **41 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
+- HW80-B1439N
 - HW80-B14959TU1
 - HW80-B14959S8U1S
 - HW80-B14979TU1
@@ -628,6 +630,7 @@ Support has been confirmed for these **39 models**, but many more will work. Ple
 - HW110-14979
 
 #### Hoover
+- H5WPB4 27BC8/1-S
 - H5WPB447AMBC/1-S
 - H7W 412MBCR-80
 - H7W 610AMBC-80
