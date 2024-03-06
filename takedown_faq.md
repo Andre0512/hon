@@ -1,6 +1,6 @@
 ## Takedown FAQs
 
-_Last update: 2024-01-21_
+_Last update: 2024-02-02_
 
 ### What did Haier wrote?
 Haier Europe wrote me on 2024-01-15 [this email](assets/takedown.eml):
@@ -14,9 +14,9 @@ I think the points are very questionable, but I'm a software developer and not a
 **2024-01-15**  
 In the first moment of getting the mail I was absolutely shocked, I didn't think that someone cares about me and my little plugin and I know Haier is a billion dollar company, so I answered
 ![answer 1](assets/answer_1.png)
-after that i announced to take it down and then you guys happened.  
+after that I announced to take it down and then the community does its thing.  
 **2024-01-19**  
-I'm getting so much support, and you started a huge wave, I mean we are now an example for the [Streisand effect on wikipedia](https://en.wikipedia.org/wiki/List_of_Streisand_effect_examples#By_businesses) xD    
+I'm getting so much support, and the community started a huge wave and created the Streisand effect.    
 I wrote another mail on and tried to get some clarification and reach some agreement:
 ![answer 2](assets/answer_2.png)
 
@@ -27,11 +27,10 @@ Haier Europe [created a blog post](https://corporate.haier-europe.com/press-rele
 **2024-01-20**  
 Gianpiero Morbello, Head of Brand & IOT Haier Europe, wrote this mail:
 ![haier response](assets/haier_response.png)  
+**Update: See [Timeline of events](https://github.com/Andre0512/hon/blob/main/takedown_timeline.md) for further development**
 
-As far as I know, none of the numerous requests from the community have been answered, but if they have, please let me know.
- 
 ### Are you in contact with Home Assistant?
-The Home Assistant/Nabu Casa team got in touch with me and will be part of a conversation with Haier.
+The Home Assistant/Nabu Casa team got in touch with me and Paulus Schoutsen is part of the conversation with Haier.
 
 ### Did you agree to Haier's tos?
 To create an account for Haier hOn you have to accept the terms of service. Without it, you can't connect your appliances to hOn and so you can't use Andre0512/hon.
@@ -41,7 +40,7 @@ Haier sells home appliances with internet connection and offers the free hOn app
 The connection only works with the Haier servers, so your appliance sends data to the cloud and the hOn app communicates with it, there is no direct connection.
 
 ### How was the plugin created?
-I used [HTTP Tookit](https://httptoolkit.com/) to monitor the HTTP requests between hOn and the Haier servers and then rebuilt the requests in Python (with aiohttp). I have tried to make the requests in the same way as the app does, except for the ones we don't need.  
+I used [HTTP Toolkit](https://httptoolkit.com/) to monitor the HTTP requests between hOn and the Haier servers and then rebuilt the requests in Python (with aiohttp). I have tried to make the requests in the same way as the app does, except for the ones we don't need.  
 The pretty complex login can be found in [auth.py](https://github.com/Andre0512/pyhOn/blob/main/pyhon/connection/auth.py) and the API requests that I have adopted as relevant for the integration are these [api.py](https://github.com/Andre0512/pyhOn/blob/main/pyhon/connection/api.py).  
 Beyond that, there is no communication with the hOn servers in the code.
 
@@ -60,7 +59,7 @@ This are all requests the plugin sends to Haiers servers
 - Loading of all appliance functions (In [hon-test-data](https://github.com/Andre0512/hon-test-data/tree/main/test_data) you can have an overview of which data this is for each appliance)
 
 **Status polling**
-- 1 request every 10 seconds to fetch the current state for each appliance ([something like this](https://github.com/Andre0512/hon-test-data/blob/main/test_data/ac_312/appliance_data.json))
+- 1 request every 10 seconds (**Update: 60 seconds**) to fetch the current state for each appliance ([something like this](https://github.com/Andre0512/hon-test-data/blob/main/test_data/ac_312/appliance_data.json))
 
 **Triggering action**
 - If any action is triggerd, e.g. start some appliance or set a new a/c mode, some data have to be posted
@@ -71,10 +70,11 @@ This are all requests the plugin sends to Haiers servers
 ### What bothers Haier?
 Polling every 10 seconds is a bit much. The default interval for most integrations is 30 seconds. Even if the hOn app makes more requests more frequent, but it does it only in use and not 24/7.  
 As Haier explained in their answer, this generates a lot of traffic on the not so cheap aws hosting. I understand if Haier wishes a higher value here and will hopefully find a good solution with them.  
-_I had initially claimed 5 seconds, but it is actually "only" 10 seconds, see [this constant](https://github.com/Andre0512/hon/blob/main/custom_components/hon/const.py#L10)._
+**Update 1: I had initially claimed 5 seconds, but it is actually "only" 10 seconds, see [this constant](https://github.com/Andre0512/hon/blob/main/custom_components/hon/const.py#L10).**  
+**Update 2: After discussion with Haier, we have switched to 60-second polling and are trying to work out a better solution.**
 
 ### How often has your plugin been installed?
-Since the latest versions are downloaded about 3000 times each on GitHub, I assume 2000-5000 active installations.
+Since the latest versions are downloaded [about 3000 times](https://tooomm.github.io/github-release-stats/?username=Andre0512&repository=hon) each on GitHub, I assume 2000-4000 active installations.
 
 ### Are there some secret keys stored in the repository?
 There is a constant for a [client ID](https://github.com/Andre0512/pyhOn/blob/main/pyhon/const.py) and an [api key](https://github.com/Andre0512/pyhOn/blob/main/pyhon/const.py). They seems to be static because they are the same for requests from every account I saw.
