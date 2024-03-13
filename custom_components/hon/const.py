@@ -100,6 +100,7 @@ WASHING_PR_PHASE: dict[int, str] = {
     5: "rinse",
     6: "rinse",
     7: "drying",
+    8: "drying",
     9: "steam",
     10: "ready",
     11: "spin",
