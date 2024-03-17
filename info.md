@@ -10,7 +10,7 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 
 [![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
-[![Supported Models](https://img.shields.io/badge/Models-130-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
+[![Supported Models](https://img.shields.io/badge/Models-134-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
 [![Supported Entities](https://img.shields.io/badge/Entities-320-crimson)](https://github.com/Andre0512/hon#supported-appliances)  
 
 ## Supported Appliances
@@ -142,10 +142,11 @@ Support has been confirmed for these **4 models**, but many more will work. Plea
 ![Dish Washer](assets/example_dw.png)
 
 ### Supported Dish Washer models
-Support has been confirmed for these **6 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **7 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - XIB 3B2SFS-80
+- XIB 5C1S3FS
 - XIB 6B2D3FB
 
 #### Hoover
@@ -600,7 +601,7 @@ Support has been confirmed for these **15 models**, but many more will work. Ple
 ![Washing Machine](assets/example_wm.png)
 
 ### Supported Washing Machine models
-Support has been confirmed for these **41 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
+Support has been confirmed for these **44 models**, but many more will work. Please add already supported devices [with this form to complete the list](https://forms.gle/bTSD8qFotdZFytbf8).
 
 #### Haier
 - HW80-B1439N
@@ -611,11 +612,13 @@ Support has been confirmed for these **41 models**, but many more will work. Ple
 - HW90-B14959U1
 - HW90-B14959S8U1
 - HW90-B14TEAM5
+- HW90-BD14979U1
 - HW90G-BD14979UD
 - HW100-B14959U1
 - HW110-14979
 
 #### Hoover
+- H3WOSQ495TA4-84
 - H5WPB4 27BC8/1-S
 - H5WPB447AMBC/1-S
 - H7W 412MBCR-80
@@ -635,6 +638,7 @@ Support has been confirmed for these **41 models**, but many more will work. Ple
 - HWB 414AMC/1-80
 - HWE 49AMBS/1-S
 - HWP 48AMBCR/1-S
+- HWP 49AMBCR/1-S
 - HWP 610AMBC/1-S
 - HWPD 69AMBC/1-S
 - HWPDQ49AMBC/1-S

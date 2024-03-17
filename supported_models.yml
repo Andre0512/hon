@@ -12,10 +12,12 @@ wm:
     - "HW90-B14959U1"
     - "HW90-B14959S8U1"
     - "HW90-B14TEAM5"
+    - "HW90-BD14979U1"
     - "HW90G-BD14979UD"
     - "HW100-B14959U1"
     - "HW110-14979"
   hoover:
+    - "H3WOSQ495TA4-84"
     - "H5WPB4 27BC8/1-S"
     - "H5WPB447AMBC/1-S"
     - "H7W 412MBCR-80"
@@ -35,6 +37,7 @@ wm:
     - "HWB 414AMC/1-80"
     - "HWE 49AMBS/1-S"
     - "HWP 48AMBCR/1-S"
+    - "HWP 49AMBCR/1-S"
     - "HWP 610AMBC/1-S"
     - "HWPD 69AMBC/1-S"
     - "HWPDQ49AMBC/1-S"
@@ -100,6 +103,7 @@ ov:
 dw:
   haier:
     - "XIB 3B2SFS-80"
+    - "XIB 5C1S3FS"
     - "XIB 6B2D3FB"
   hoover:
     - "HDPN 4S603PW/E"
