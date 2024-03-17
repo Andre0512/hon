@@ -1,0 +1,2208 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "ready": "Redo",
+                    "running": "Program körs",
+                    "pause": "Paus",
+                    "scheduled": "Schemalagda",
+                    "error": "Fel",
+                    "test": "Test",
+                    "ending": "Stoppar cykeln..."
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Auto",
+                    "cool": "Kyla",
+                    "dry": "Avfuktning",
+                    "heat": "Värme",
+                    "fan": "Fläkt"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "ready": "Redo",
+                    "spin": "Centrifugering",
+                    "rinse": "Skölj",
+                    "drying": "Torkning",
+                    "steam": "Ånga",
+                    "weighting": "Vägning",
+                    "scheduled": "Schemalagda",
+                    "tumbling": "Håll fräsch",
+                    "refresh": "Refresh",
+                    "heating": "Uppvärmning",
+                    "washing": "Tvätta"
+                },
+                "name": "Fas"
+            },
+            "program_phases_td": {
+                "state": {
+                    "ready": "Redo",
+                    "heat_stroke": "Torkning",
+                    "drying": "Torkning",
+                    "cooldown": "Avkylning",
+                    "unknown": "unknown",
+                    "tumbling": "Håll fräsch"
+                },
+                "name": "Fas"
+            },
+            "program_phases_dw": {
+                "state": {
+                    "ready": "Redo",
+                    "prewash": "Förtvätt",
+                    "washing": "Tvätta",
+                    "rinse": "Skölj",
+                    "drying": "Torkning",
+                    "hot_rinse": "Varmsköljning"
+                },
+                "name": "Fas"
+            },
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Ingen torkning",
+                    "iron_dry": "Strykning",
+                    "no_dry_iron": "Torka strykfritt",
+                    "cupboard_dry": "Skåptorrt",
+                    "extra_dry": "Extra torrt",
+                    "ready_to_wear": "Klar att användas"
+                },
+                "name": "Torknivå"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Liten",
+                    "normal": "Normal",
+                    "very": "Mycket",
+                    "unknown": "unknown"
+                },
+                "name": "Smutsnivå"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Ingen ånga",
+                    "cotton": "Bomull",
+                    "delicate": "Fintvätt",
+                    "synthetic": "Syntet"
+                },
+                "name": "Ångnivå"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Låg",
+                    "mid": "Medium",
+                    "high": "Hög"
+                },
+                "name": "Fuktighetsnivå"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10 °C uppvärmningsfunktion",
+                    "iot_auto": "Auto",
+                    "iot_cool": "Kyla",
+                    "iot_dry": "Avfuktning",
+                    "iot_fan": "Fläkt",
+                    "iot_heat": "Värme",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Självrenande",
+                    "iot_self_clean": "Självrengöring",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Start",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Auto",
+                    "iot_uv_and_cool": "UV + Kyla",
+                    "iot_uv_and_dry": "UV + Avfuktare",
+                    "iot_uv_and_fan": "UV + Fläkt",
+                    "iot_uv_and_heat": "UV + Värme"
+                },
+                "name": "Program"
+            },
+            "programs_dw": {
+                "state": {
+                    "59_min": "Snabb 59'",
+                    "auto_care": "Auto Care",
+                    "auto_care_soil": "Auto Care",
+                    "auto_plus": "AutoPlus",
+                    "auto_plus_soil": "Auto Plus Soil",
+                    "auto_rapid_soil": "Auto rapid Soil",
+                    "auto_sensor": "Auto Sensor",
+                    "auto_sensor_soil": "Auto Sensor",
+                    "auto_universal": "Auto Universal 50 - 60 °C",
+                    "auto_universal_plus": "Auto Universal+ 65 - 75 °C",
+                    "auto_universal_plus_soil": "Auto Universal+ 65 - 75 °C",
+                    "auto_universal_soil": "Auto Universal 50 - 60 °C",
+                    "auto_wash": "Auto Wash",
+                    "auto_wash_soil": "Auto Wash",
+                    "classe_a_59": "Klass A tvätt 59' 65 °C",
+                    "delicate": "Ömtålig 45 °C",
+                    "dishwasher_care": "Avkalkning",
+                    "eco": "Eco",
+                    "eco_asynch": "Eco 45°C",
+                    "eco_bldc": "Eco 45°C",
+                    "eco_synch": "Eco 45°C",
+                    "gentle_wash": "Gentle wash",
+                    "glass": "Glas",
+                    "glassware": "Kristall 45°C",
+                    "glass_care": "Glass Care",
+                    "hygiene": "Hygien",
+                    "hygiene_plus": "Hygien+ 75 °C",
+                    "intensive": "Intensiv",
+                    "intensive_rapid": "Intensiv snabb",
+                    "iot_auto_sensor": "Auto Sensor",
+                    "iot_auto_universal_soil": "Auto Universal 50 - 60 °C",
+                    "iot_auto_wash_soil": "Auto Wash",
+                    "iot_baby_care": "Baby Care",
+                    "iot_breakfast": "Frukost",
+                    "iot_checkup": "Check-Up",
+                    "iot_china_crystals": "Kina kristallföremål",
+                    "iot_classe_a_59": "Snabb 59'",
+                    "iot_cocktail_glasses": "Coktailglas",
+                    "iot_cocktail_glasses_soil": "Coktailglas",
+                    "iot_daily_care": "Daglig",
+                    "iot_daily_care_soil": "Daglig",
+                    "iot_delicate": "Ömtålig 45 °C",
+                    "iot_dinner_for_two": "Middag för 2",
+                    "iot_dinner_for_two_soil": "Middag för 2",
+                    "iot_dreft_quick_cycle": "Dreft Quick",
+                    "iot_eco_asynch": "Eco 45°C",
+                    "iot_eco_bldc": "Eco 45°C",
+                    "iot_eco_synch": "Eco 45°C",
+                    "iot_extra_hygiene": "Extra hygien",
+                    "iot_fairy_quick_cycle": "Fairy Short",
+                    "iot_happy_hour": "Happy Hour",
+                    "iot_jar_quick_cycle": "Jar Quick",
+                    "iot_party": "Party",
+                    "iot_party_soil": "Party",
+                    "iot_pizza_menu": "Pizza meny",
+                    "iot_pizza_menu_soil": "Pizza meny",
+                    "iot_plastic_tupperware": "Plast & Tupperware",
+                    "iot_porcelain": "Porslin",
+                    "iot_power_mix_wash": "Power Mix Wash",
+                    "iot_power_mix_wash_soil": "Power Mix Wash",
+                    "iot_prewash": "Förtvätt",
+                    "iot_pyrex_and_glassware": "Pyrex & Glasvaror",
+                    "iot_rapid_29": "Snabb 29'",
+                    "iot_rapid_39": "Snabb 39' 60 °C",
+                    "iot_single": "Singel",
+                    "iot_steam": "Ånga 75 °C",
+                    "iot_super_flash": "Super Flash",
+                    "iot_super_wash": "Supertvätt",
+                    "iot_turbopower": "TurboPower",
+                    "iot_universal": "Universal 60 °C",
+                    "iot_voice_automatic": "Automatic",
+                    "iot_voice_delicate": "Ömtålig 45 °C",
+                    "iot_voice_eco": "Eco 45°C",
+                    "iot_voice_intensive": "Intensiv 75°C",
+                    "iot_voice_prewash": "Förtvätt",
+                    "iot_voice_rapid_59": "Snabb 59'",
+                    "iot_voice_universal": "Universal 60 °C",
+                    "iot_wok_grids_maxi_pans": "Specialpannor (Wok, Grids & Maxi Pans)",
+                    "iot_wok_grids_maxi_pans_soil": "Specialpannor (Wok, Grids & Maxi Pans)",
+                    "iot_yes_quick_cycle": "Yes Quick",
+                    "night": "Natt 55 °C",
+                    "prewash": "Förtvätt",
+                    "rapid_20": "Snabb 20'",
+                    "rapid_24": "Snabb 24'",
+                    "rapid_29": "Snabb 29' 50 °C",
+                    "rapid_35": "Wash&Dry 35'",
+                    "rapid_39": "Snabb 39' 60 °C",
+                    "rapid_49": "Snabb 49'",
+                    "rapid_59": "Snabb 59'",
+                    "sanitising": "Sanering",
+                    "silence": "Silence",
+                    "silent": "Tyst",
+                    "silent_care": "Silent Care",
+                    "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
+                    "special": "Special",
+                    "special_pw_prz": "Special",
+                    "steam": "Ånga 75 °C",
+                    "steam_plus": "Ånga Plus 75 °C",
+                    "total_care": "Total Care 50°C",
+                    "ultra_silence": "Ultratyst 55 °C",
+                    "ultra_silent": "Ultratyst 55°C",
+                    "universal": "Universal 60 °C",
+                    "universal_plus": "Universal Plus 70 °C",
+                    "zone_wash": "Flex Zone Wash",
+                    "zoom_39": "Zoom 39 min"
+                },
+                "name": "Program"
+            },
+            "programs_ih": {
+                "state": {
+                    "iot_special_ash_brown": "Askbrun",
+                    "iot_special_beef_fillet": "Oxfilé",
+                    "iot_special_beef_veal_stew": "Nöt- och kalvgryta",
+                    "iot_special_boiled_rice": "Kokat ris",
+                    "iot_special_chicken_breast": "Kycklingbröst",
+                    "iot_special_chicken_legs": "Kycklingben",
+                    "iot_special_chocolate_pudding": "Chokladpudding",
+                    "iot_special_entrecote": "Entrecote",
+                    "iot_special_fresh_tuna": "Färsk tonfisk",
+                    "iot_special_grilled_vegetables": "Grillade grönsaker",
+                    "iot_special_lamb_cutlet": "Lammkotlett",
+                    "iot_special_meatballs": "Köttbullar",
+                    "iot_special_minestrone": "Minestrone",
+                    "iot_special_mussels": "Musslor",
+                    "iot_special_omelette": "Omelett",
+                    "iot_special_pancakes": "Pannkakor",
+                    "iot_special_paris_style_peas": "Franska ärter",
+                    "iot_special_poached_eggs": "Pocherade ägg",
+                    "iot_special_pork_fillet": "Fläskfilé",
+                    "iot_special_pork_ribs": "Revbensspjäll",
+                    "iot_special_prawns": "Räkor",
+                    "iot_special_quinoa": "Quinoa",
+                    "iot_special_ratatouille": "Ratatouille",
+                    "iot_special_salmon_fillet": "Laxfilé",
+                    "iot_special_saute_potatoes": "Stekt potatis",
+                    "iot_special_scallops": "Pilgrimsmusslor",
+                    "iot_special_scrambled_eggs": "Äggröra",
+                    "iot_special_spelt": "Spelt",
+                    "iot_special_veggy_noodles": "Vegetariska nudlar",
+                    "iot_special_white_fish_fillet": "Vit fiskfilé",
+                    "iot_standard_boiling": "Kokning",
+                    "iot_standard_frying": "Stekning",
+                    "iot_standard_keep_warm": "Varmhållning",
+                    "iot_standard_melting": "Smältning",
+                    "iot_standard_simmering": "Sjudning"
+                },
+                "name": "Program"
+            },
+            "programs_ov": {
+                "state": {
+                    "bakery": "Bakverk",
+                    "bakery_steam": "Bakning med ånga",
+                    "bottom_heating": "Bottenvärme",
+                    "bottom_heating_fan": "Bottenvärme + Fläkt",
+                    "bread": "Bröd",
+                    "bread_steam": "Ångat bröd",
+                    "combi": "Combi",
+                    "convection_fan": "Varmluft + Fläkt",
+                    "convection_fan_turnspit": "Varmluftsfläkt + Grillspett",
+                    "conventional": "Konventionell",
+                    "conventional_turnspit": "Statisk+Grillspett",
+                    "defrost": "Avfrostning",
+                    "descaling": "Kalkborttagning",
+                    "fish": "Fisk",
+                    "fish_steam": "Ångad fisk",
+                    "grill_cata": "Grill",
+                    "grill_fan_cata": "Grill Fläkt",
+                    "grill_fan_pyro": "Grill + Fläkt",
+                    "grill_pyro": "Grill",
+                    "h20_clean": "H2O-Clean",
+                    "iot_bread": "Bröd",
+                    "iot_h20_clean": "h2O-clean",
+                    "leavening": "Jäsning",
+                    "low_temp_cooking": "Tillagning på låg temperatur",
+                    "low_temp_cooking_fish": "Tillagning på låg temperatur fisk",
+                    "low_temp_cooking_fish_steam": "Tillagning på låg temperatur ångad fisk",
+                    "low_temp_cooking_meat": "Tillagning på låg temperatur kött",
+                    "low_temp_cooking_meat_steam": "Tillagning på låg temperatur ångat kött",
+                    "low_temp_cooking_steam": "Tillagning på låg temperatur ånga",
+                    "meat": "Kött",
+                    "meat_steam": "Ångat kött",
+                    "multi_level": "Flernivå",
+                    "paella": "Paella",
+                    "pasta_and_bakery": "Pasta och bakning",
+                    "pizza": "Pizza",
+                    "pyrolysis": "Pyrolys",
+                    "pyrolysis_plus": "Pyrolys +",
+                    "red_meat": "Rött kött",
+                    "red_meat_steam": "Ångat rött kött",
+                    "regenerate": "Regenerera",
+                    "soft_plus": "Soft+",
+                    "super_grill": "Super Grill",
+                    "tailor_bake": "Tailor bake",
+                    "tailor_bake_cata": "Tailor Bake",
+                    "tailor_bake_pyro": "Tailor Bake",
+                    "vegetables": "Grönsaker",
+                    "vegetables_cata": "Grönsaker",
+                    "vegetables_pyro": "Grönsaker",
+                    "water_discharge": "Vattenutsläpp",
+                    "white_meat": "Vitt kött",
+                    "white_meat_steam": "Ångat vitt kött"
+                },
+                "name": "Program"
+            },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Active Dry",
+                    "allergy_care": "Anti-allergi",
+                    "all_in_one": "Allt i ett",
+                    "antiallergy": "Anti-allergi",
+                    "anti_odours": "Anti-lukt",
+                    "auto_care": "Auto Care",
+                    "baby": "Baby",
+                    "bed_quilt": "Sängtäcken",
+                    "care_30": "Care 30",
+                    "care_45": "Care 45",
+                    "care_59": "Care 59",
+                    "coloured": "Färgad",
+                    "daily_45_min": "Daglig 45'",
+                    "daily_perfect_59_min": "Daily Perfect 59'",
+                    "darks_and_coloured": "Mörka & Färgade",
+                    "delicates": "Fintvätt",
+                    "duvet": "Täcke",
+                    "eco": "Eco Bomull",
+                    "ecospeed_cottons": "Ecospeed bomull",
+                    "ecospeed_delicates": "Ecospeed skonsam",
+                    "ecospeed_mixed": "Ecospeed Blandat",
+                    "extra_hygiene": "Extra hygien",
+                    "fitness": "Fitness",
+                    "fresh_care": "Fresh Care",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Handdukar",
+                    "hqd_bed_sheets": "Lakan",
+                    "hqd_bulky": "Skrymmande föremål",
+                    "hqd_casual": "Casual",
+                    "hqd_checkup": "Check-Up",
+                    "hqd_cold_wind_30": "Cool Breeze 30 minuter",
+                    "hqd_cold_wind_timing": "Cool Breeze",
+                    "hqd_cotton": "Bomull",
+                    "hqd_curtain": "Gardiner",
+                    "hqd_delicate": "Fintvätt",
+                    "hqd_diaper": "Blöjor",
+                    "hqd_duvet": "Täcke",
+                    "hqd_eco": "Eco",
+                    "hqd_feather": "Dunjackor",
+                    "hqd_hot_wind_timing": "Varm luft",
+                    "hqd_hygienic": "Hygienisering",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro Babycare",
+                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro Skrymmande",
+                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro Fintvätt",
+                    "hqd_i_refresh_pro_down": "I-Refresh Pro Dun",
+                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro Skjorta",
+                    "hqd_i_refresh_pro_towel": "I-Refresh Pro Handduk",
+                    "hqd_i_refresh_pro_wool": "I-Refresh Pro Ull",
+                    "hqd_jacket": "Jackor",
+                    "hqd_jeans": "Jeans",
+                    "hqd_luxury": "Lyx",
+                    "hqd_mix": "Blandat",
+                    "hqd_night_dry": "Torkning över natten",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious Cure",
+                    "hqd_quick_20": "Snabb 20",
+                    "hqd_quick_30": "Snabb 30",
+                    "hqd_quick_dry": "Snabbtork",
+                    "hqd_quilt": "Täcken",
+                    "hqd_refresh": "Refresh",
+                    "hqd_school_uniform": "Skoluniform",
+                    "hqd_shirt": "Skjortor",
+                    "hqd_shoes": "Skor",
+                    "hqd_silk": "Silke",
+                    "hqd_sports": "Sport",
+                    "hqd_synthetics": "Syntet",
+                    "hqd_timer": "TIMER",
+                    "hqd_towel": "Handdukar",
+                    "hqd_underwear": "Underkläder",
+                    "hqd_warm_up": "Uppvärmning",
+                    "hqd_wool": "Ylle",
+                    "hqd_working_suit": "Arbetskläder",
+                    "hygiene": "Hygien",
+                    "iot_checkup": "Check-Up",
+                    "iot_dry_anti_mites": "Antikvalster",
+                    "iot_dry_baby": "Baby",
+                    "iot_dry_backpacks": "Ryggsäckar",
+                    "iot_dry_bathrobe": "Badrock",
+                    "iot_dry_bed_linen": "Sängkläder",
+                    "iot_dry_bed_quilt": "Sängtäcken",
+                    "iot_dry_cotton": "Bomull",
+                    "iot_dry_cuddly_toys": "Kramleksaker",
+                    "iot_dry_curtains": "Gardiner",
+                    "iot_dry_dehumidifier": "Fuktborttagning",
+                    "iot_dry_delicates": "Fintvätt",
+                    "iot_dry_delicate_tablecloths": "Ömtåliga dukar",
+                    "iot_dry_denim_jeans": "Denim - Jeans",
+                    "iot_dry_down_jacket": "Jacka",
+                    "iot_dry_duvet": "Täcke",
+                    "iot_dry_easy_iron_cotton": "Superlätt strykning",
+                    "iot_dry_easy_iron_synthetics": "Superlätt strykning syntet",
+                    "iot_dry_gym_fit": "Gym fit - Fitness",
+                    "iot_dry_lingerie": "Lingeri",
+                    "iot_dry_mixed": "Blandat",
+                    "iot_dry_playsuits": "Lekdräkter",
+                    "iot_dry_rapid_30": "Snabb 30",
+                    "iot_dry_rapid_59": "Snabb 59'",
+                    "iot_dry_refresh": "Refresh",
+                    "iot_dry_regenerates_waterproof": "Regenerate waterproof",
+                    "iot_dry_relax_creases": "Mindre skrynklor",
+                    "iot_dry_shirts": "Skjortor",
+                    "iot_dry_small_load": "Liten last",
+                    "iot_dry_swimsuits_and_bikinis": "Baddräkter och bikini",
+                    "iot_dry_synthetics": "Syntet",
+                    "iot_dry_synthetic_dry": "Torkning syntet",
+                    "iot_dry_tablecloths": "Bordsdukar",
+                    "iot_dry_technical_fabrics": "Tekniska tyger",
+                    "iot_dry_warm_embrace": "Varm omfamning",
+                    "iot_dry_wool": "Ylle",
+                    "jeans": "Jeans",
+                    "mix_and_dry": "Mix&Dry",
+                    "pets": "Husdjur",
+                    "pre_iron": "För-strykning",
+                    "rapid_30": "Snabb 30",
+                    "rapid_45": "Snabb 45 min",
+                    "rapid_59": "Perfekt Snabb 59 Min",
+                    "refresh": "Refresh",
+                    "relax_creases": "Mindre skrynklor",
+                    "saving_30_min": "Spara 30'",
+                    "shirts": "Skjortor",
+                    "shoes": "Sportskor",
+                    "small_load": "Liten last",
+                    "soft_care": "Soft Care",
+                    "sport_plus": "Sport Plus",
+                    "super_easy_iron_misti": "Superlätt strykning blandat",
+                    "super_easy_iron_xxl": "Superlätt strykning XXL",
+                    "super_fast_cottons": "Supersnabb bomull",
+                    "super_fast_delicates": "Supersnabb fintvätt",
+                    "synthetics": "Syntet",
+                    "total_care": "Total Care",
+                    "trainers": "Träningsskor",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Vattentätande",
+                    "whites": "Vita",
+                    "wool": "Torkning ylle",
+                    "woolmark": "Ylle",
+                    "xxl_load": "XXL last",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Program"
+            },
+            "programs_wm": {
+                "state": {
+                    "20_degrees_coloured_cottons": "Färgade och bomull 20°",
+                    "20_degrees_new_energy_label": "20 °C",
+                    "active_steam": "Ånga",
+                    "active_wash": "Aktiv tvätt",
+                    "active_wash_steam": "Aktiv tvätt + Ånga",
+                    "allergy_care": "Allergy Care",
+                    "allergy_care_pro": "Allergy Care Pro",
+                    "all_in_one_49": "Allt i ett 49'",
+                    "all_in_one_59": "Allt i ett 59'",
+                    "all_in_one_59_steam": "Aktiv tvätt + Ånga",
+                    "autocare": "Autocare",
+                    "autoclean": "Trumrengöring",
+                    "baby_60": "All Baby 60 °C",
+                    "care_14": "Rapid Care 14'",
+                    "care_30": "Rapid Care 30'",
+                    "care_44": "Rapid Care 44'",
+                    "checkup": "Check-Up",
+                    "colour_59": "Färgade 59'",
+                    "colour_59_steam": "Färgade 59' + Ånga",
+                    "cottons": "Bomull",
+                    "cottons_prewash": "Bomull + Förtvätt",
+                    "cottons_steam": "Bomull + Ånga",
+                    "cotton_care_59": "Cotton Care 59'",
+                    "cycle_ended": "Cykelslut",
+                    "delicate_59": "Fintvätt 59'",
+                    "delicate_silk": "Fintvätt och silke",
+                    "delicate_silk_steam": "Fintvätt och silke + Ånga",
+                    "delicati_59": "Fintvätt 59'",
+                    "delicati_59_steam": "Fintvätt 59' + Ånga",
+                    "drain_spin": "Tömning + Centrifugering",
+                    "easy_iron": "Lätt strykning",
+                    "eco_40_60_new_energy_label": "Eco 40-60",
+                    "extra_care": "Extra Care",
+                    "fitness": "Fitness Care",
+                    "fitness_care": "Fitness Care",
+                    "fresh_care": "Fresh Care",
+                    "fresh_care_steam": "Fresh Care + Ånga",
+                    "handwash_wool": "Handtvätt + Ylle",
+                    "high_dry": "Hög värme",
+                    "hqd_20_degrees": "Bomull 20 ℃",
+                    "hqd_allergy": "Allergy Care",
+                    "hqd_autoclean": "Trumrengöring",
+                    "hqd_babycare": "Baby Care",
+                    "hqd_checkup": "Check-Up",
+                    "hqd_cottons": "Bomull",
+                    "hqd_delicate": "Fintvätt",
+                    "hqd_delicate_cradle": "Fintvätt",
+                    "hqd_dry": "Bomullstorrt",
+                    "hqd_dry_synthetics": "Låg värme",
+                    "hqd_duvet": "Täcke",
+                    "hqd_eco_40_60_degrees": "Eco 40-60",
+                    "hqd_handwash_wool": "Ylle",
+                    "hqd_i_refresh": "i-Refresh",
+                    "hqd_mix": "Blandat",
+                    "hqd_quick_15": "Snabb 15'",
+                    "hqd_quick_wash_57": "Snabbtvätt 57'",
+                    "hqd_rapid_wash_and_dry": "Tvätt och tork",
+                    "hqd_refresh": "Refresh",
+                    "hqd_rinse": "Sköljningar",
+                    "hqd_shirts": "Skjortor",
+                    "hqd_smart": "Smart A.I.",
+                    "hqd_spin": "Centrifugering",
+                    "hqd_sport": "Sport",
+                    "hqd_super_fast": "Supersnabb 39'",
+                    "hqd_synthetic_and_coloured": "Syntet",
+                    "hygiene_59": "Hygien Plus 59'",
+                    "hygiene_60": "Hygien 60 °C",
+                    "hygiene_plus_59": "Hygien Plus 59'",
+                    "hygiene_plus_59_min": "Hygien Plus 59'",
+                    "hygiene_pro_49_min": "Hygien Pro 49'",
+                    "hygiene_pro_steam": "Hygien Pro + Ånga",
+                    "intensive_40": "Intensiv 40 °C",
+                    "intensive_40_steam": "Intensiv 40 °C + Ånga",
+                    "iot_active_steam": "Ånga",
+                    "iot_active_wash_steam": "Aktiv tvätt + Ånga",
+                    "iot_allergy_care_pro": "Allergy Care Pro",
+                    "iot_all_in_one_59_steam": "Aktiv tvätt + Ånga",
+                    "iot_baby_60_steam": "All Baby 60 °C",
+                    "iot_checkup": "Check-Up",
+                    "iot_colour_59_steam": "Färgade 59' + Ånga",
+                    "iot_cottons_steam": "Bomull + Ånga",
+                    "iot_delicate_silk_steam": "Fintvätt och silke + Ånga",
+                    "iot_delicati_59_steam": "Fintvätt 59' + Ånga",
+                    "iot_dry_air_refresh": "Air Refresh",
+                    "iot_dry_anti_mites": "Antikvalster",
+                    "iot_dry_baby": "Baby",
+                    "iot_dry_backpacks": "Ryggsäckar",
+                    "iot_dry_bathrobe": "Badrockar",
+                    "iot_dry_bed_linen": "Sängkläder",
+                    "iot_dry_cotton_dry": "Bomullstorrt",
+                    "iot_dry_cuddly_toys": "Kramleksaker",
+                    "iot_dry_curtains": "Gardiner",
+                    "iot_dry_dehumidifier": "Fuktborttagning",
+                    "iot_dry_delicates_antiallergy": "Anti-allergi fintvätt",
+                    "iot_dry_delicate_tablecloths": "Ömtåliga dukar",
+                    "iot_dry_denim_jeans": "Denim - Jeans",
+                    "iot_dry_easy_iron_cotton": "Lätt strykning - Bomull",
+                    "iot_dry_easy_iron_synthetics": "Lätt strykning - Syntet",
+                    "iot_dry_gym_fit": "Gym fit - Fitness",
+                    "iot_dry_lingerie": "Lingeri",
+                    "iot_dry_mixed_dry": "Torkning blandat",
+                    "iot_dry_rapid_60_min_delicates": "Snabb 60' - Fintvätt",
+                    "iot_dry_shirts": "Skjortor",
+                    "iot_dry_swimsuits_and_bikinis": "Baddräkter och bikini",
+                    "iot_dry_synthetics": "Torkning syntet",
+                    "iot_dry_synthetic_dry": "Torkning syntet",
+                    "iot_dry_tablecloths": "Bordsdukar",
+                    "iot_dry_technical_fabrics": "Tekniska tyger",
+                    "iot_dry_warm_embrace": "Varm omfamning",
+                    "iot_dry_wool_dry": "Torkning ylle",
+                    "iot_easy_iron": "Lätt strykning",
+                    "iot_fresh_care_steam": "Fresh Care + Ånga",
+                    "iot_hygiene_pro_steam": "Hygien Pro + Ånga",
+                    "iot_intensive_40_steam": "Intensiv 40 °C + Ånga",
+                    "iot_mixed_steam": "Blandat + Ånga",
+                    "iot_mix_and_colour_59_steam": "Blandat och färgat 59' + Ånga",
+                    "iot_perfect_cotton_59_steam": "Perfekt bomull 59' + Ånga",
+                    "iot_rapid_a_class_60_steam": "Snabb 59' A klass + Ånga",
+                    "iot_resistant_cotton_steam": "Tålig bomull + Ånga",
+                    "iot_shirts_steam": "Skjortor + Ånga",
+                    "iot_single_item_steam": "Enstaka plagg + Ånga",
+                    "iot_smart_wash": "Smart tvätt",
+                    "iot_soft_care_steam": "Soft Care + Ånga",
+                    "iot_special_39_full_load_steam": "Special 39' + Ånga",
+                    "iot_steam_hygiene_plus": "Hygien Plus + Ånga",
+                    "iot_synthetic_and_coloured_steam": "Syntet och färgat + Ånga",
+                    "iot_wash_and_dry": "Tvätt och tork",
+                    "iot_wash_anti_mites": "Antikvalster",
+                    "iot_wash_anti_odor": "Anti-lukt",
+                    "iot_wash_ariel_clean_cycle": "Ariel Ultimate Clean",
+                    "iot_wash_ariel_cold_cycle": "Ariel Cold Clean",
+                    "iot_wash_ariel_fresh_cycle": "Ariel Fresh Clean",
+                    "iot_wash_baby_sanitizer": "Sanitizer",
+                    "iot_wash_baby_sanitizer_steam": "Sanitiser + Ånga",
+                    "iot_wash_backpacks": "Ryggsäckar",
+                    "iot_wash_backpacks_zelig": "Ryggsäckar",
+                    "iot_wash_bathrobe": "Badrockar och handdukar",
+                    "iot_wash_bathrobe_steam": "Badrock och handdukar + Ånga",
+                    "iot_wash_bed_linen": "Sängkläder",
+                    "iot_wash_bed_linen_steam": "Sängkläder + Ånga",
+                    "iot_wash_bed_linen_zelig": "Sängkläder",
+                    "iot_wash_big_single_load": "Stort enstaka plagg",
+                    "iot_wash_bleaching": "Blekning",
+                    "iot_wash_blood_stains": "Blodfläckar",
+                    "iot_wash_cashmere": "Kashmir",
+                    "iot_wash_chocolate_stains": "Chokladfläckar",
+                    "iot_wash_cold_wash": "Kalltvätt",
+                    "iot_wash_colored": "Färgad",
+                    "iot_wash_colored_anti_stain": "Fläckborttagning färgade",
+                    "iot_wash_colored_delicate": "Färgad fintvätt",
+                    "iot_wash_coloured": "Färgad",
+                    "iot_wash_coloured_bed_linen": "Färgade sängkläder",
+                    "iot_wash_coloured_bed_linen_steam": "Färgade sängkläder + Ånga",
+                    "iot_wash_coloured_curtains": "Färgade Gardiner",
+                    "iot_wash_coloured_shirts": "Färgade skjortor",
+                    "iot_wash_coloured_shirts_steam": "Färgade skjortor + Ånga",
+                    "iot_wash_coloured_steam": "Färgat + Ånga",
+                    "iot_wash_coloured_tableclothes": "Färgade bordsdukar",
+                    "iot_wash_coloured_tableclothes_steam": "Färgade dukar + Ånga",
+                    "iot_wash_cotton": "Bomull",
+                    "iot_wash_cotton_steam": "Bomull + Ånga",
+                    "iot_wash_cuddly_toys": "Kramleksaker",
+                    "iot_wash_curtains": "Gardiner",
+                    "iot_wash_curtains_steam": "Gardiner + Ånga",
+                    "iot_wash_curtains_zelig": "Gardiner",
+                    "iot_wash_dark": "Mörka",
+                    "iot_wash_darks_and_coloured_44": "Mörka och färgade 44'",
+                    "iot_wash_darks_and_coloured_59": "Mörka och färgade 59'",
+                    "iot_wash_darks_and_coloured_xl": "Mörka och färgade XL",
+                    "iot_wash_dark_steam": "Mörka + Ånga",
+                    "iot_wash_dash_clean_cycle": "Dash Ultimate Clean",
+                    "iot_wash_dash_cold_cycle": "Dash Cold Clean",
+                    "iot_wash_dash_fresh_cycle": "Dash Fresh Clean",
+                    "iot_wash_delicate": "Fintvätt",
+                    "iot_wash_delicate_antiallergy": "Anti-allergi fintvätt",
+                    "iot_wash_delicate_antiallergy_steam": "Fintvätt anti-allergi + Ånga",
+                    "iot_wash_delicate_antiallergy_zelig": "Anti-allergi fintvätt",
+                    "iot_wash_delicate_colors": "Färgad fintvätt",
+                    "iot_wash_delicate_colors_steam": "Färgad fintvätt + Ånga",
+                    "iot_wash_delicate_dark": "Mörk fintvätt",
+                    "iot_wash_delicate_steam": "Fintvätt + Ånga",
+                    "iot_wash_delicate_tablecloths": "Ömtåliga dukar",
+                    "iot_wash_delicate_tablecloths_steam": "Ömtåliga dukar + Ånga",
+                    "iot_wash_delicate_whites": "Vit fintvätt",
+                    "iot_wash_denim_jeans": "Denim - Jeans",
+                    "iot_wash_diving_suits": "Dykardräkter",
+                    "iot_wash_diving_suits_zelig": "Dykardräkter",
+                    "iot_wash_down_jackets": "Dunjackor",
+                    "iot_wash_down_jackets_zelig": "Dunjackor",
+                    "iot_wash_duvet": "Täcke",
+                    "iot_wash_fruit_stains": "Fruktfläckar",
+                    "iot_wash_gym_fit": "Gym Fit - Fitness",
+                    "iot_wash_handwash": "Handtvätt",
+                    "iot_wash_handwash_colored": "Handtvätt färgade",
+                    "iot_wash_handwash_dark": "Handtvätt mörka",
+                    "iot_wash_lingerie": "Lingeri",
+                    "iot_wash_masks_refresh": "Munskydd och masker",
+                    "iot_wash_masks_sanification": "Desinficering munskydd och masker",
+                    "iot_wash_masks_sanification_steam": "Munskydd desinficering + Ånga",
+                    "iot_wash_mats": "Badmattor",
+                    "iot_wash_men_s_trousers": "Byxor",
+                    "iot_wash_mixed": "Blandat",
+                    "iot_wash_mixed_steam": "Blandat + Ånga",
+                    "iot_wash_mix_and_coloured_44": "Blandat och färgade 44'",
+                    "iot_wash_mix_and_coloured_59": "Blandat och färgade 59'",
+                    "iot_wash_mix_and_coloured_xl": "Blandat och färgade XL",
+                    "iot_wash_new_clothes": "Nya kläder",
+                    "iot_wash_perfect_white": "Perfekt vit",
+                    "iot_wash_perfect_white_steam": "Perfekt vit + Ånga",
+                    "iot_wash_pets": "Husdjurstillbehör",
+                    "iot_wash_pets_hair_removal": "Husdjurshår",
+                    "iot_wash_pets_odours_stains_removal": "Husdjurslukt och fläckar",
+                    "iot_wash_pets_steam": "Husdjurstillbehör + Ånga",
+                    "iot_wash_playsuits": "Lekdräkter",
+                    "iot_wash_playsuits_steam": "Lekdräkter + Ånga",
+                    "iot_wash_quick_drum_cleaner": "Snabb trumrengöring",
+                    "iot_wash_rapid_14": "Snabb 14’",
+                    "iot_wash_rapid_30": "Snabb 30’",
+                    "iot_wash_rapid_44": "Snabb 44'",
+                    "iot_wash_rapid_59": "Snabb 59'",
+                    "iot_wash_rapid_59_steam": "Snabb 59' + Ånga",
+                    "iot_wash_refresh_14_min": "Refresh 14'",
+                    "iot_wash_resistant_colored": "Tålig kulörtvätt",
+                    "iot_wash_resistant_dark": "Tåliga mörka",
+                    "iot_wash_resistant_whites": "Tåliga vita",
+                    "iot_wash_rinse": "Sköljningar",
+                    "iot_wash_shirts": "Skjortor",
+                    "iot_wash_shirts_steam": "Skjortor + Ånga",
+                    "iot_wash_silk": "Silke",
+                    "iot_wash_ski_suit": "Skiddräkt",
+                    "iot_wash_ski_suit_zelig": "Skiddräkt",
+                    "iot_wash_spin": "Centrifugering",
+                    "iot_wash_sport": "Sport",
+                    "iot_wash_sport_anti_odor": "Antilukt sportkläder",
+                    "iot_wash_sport_anti_odor_zelig": "Antilukt sportkläder",
+                    "iot_wash_stains_remover": "Fläckborttagning",
+                    "iot_wash_super_saving": "Extra energisnål 49 min",
+                    "iot_wash_swimsuits_and_bikinis": "Baddräkter och bikini",
+                    "iot_wash_synthetic": "Syntet",
+                    "iot_wash_synthetic_steam": "Syntet + Ånga",
+                    "iot_wash_tablecloths": "Bordsdukar",
+                    "iot_wash_tablecloths_steam": "Dukar + Ånga",
+                    "iot_wash_technical_fabrics": "Tekniska tyger",
+                    "iot_wash_technical_fabrics_zelig": "Tekniska tyger",
+                    "iot_wash_technical_jackets": "Tekniska jackor",
+                    "iot_wash_technical_jackets_zelig": "Tekniska jackor",
+                    "iot_wash_trainers": "Träningsskor",
+                    "iot_wash_whites": "Vita",
+                    "iot_wash_whites_44": "Vita 44'",
+                    "iot_wash_whites_59": "Vita 59'",
+                    "iot_wash_whites_xl": "Vita XL",
+                    "iot_wash_wine_stains": "Vinfläckar",
+                    "iot_wash_wool": "Ylle",
+                    "jeans": "Jeans",
+                    "jeans_60": "Jeans",
+                    "low_dry": "Låg värme",
+                    "mixed": "Blandat",
+                    "mixed_and_colored_59": "Blandat och färgade 59'",
+                    "mixed_steam": "Blandat + Ånga",
+                    "mix_and_colour_59": "Blandat och färgade 59'",
+                    "mix_and_colour_59_steam": "Blandat och färgat 59' + Ånga",
+                    "night_and_day": "Natt och dag",
+                    "night_wash": "Nattvätt",
+                    "perfect_59": "Perfekt 59'",
+                    "perfect_cotton_59": "Perfekt bomull 59'",
+                    "perfect_cotton_59_steam": "Perfekt bomull 59' + Ånga",
+                    "perfect_whites_59": "Perfekt vit 59'",
+                    "rapid_14_min": "Snabb 14'",
+                    "rapid_30_min": "Snabb 30'",
+                    "rapid_44_min": "Snabb 44'",
+                    "rapid_a_class_60": "Snabb 59' A klass",
+                    "rapid_a_class_60_steam": "Snabb 59' A klass + Ånga",
+                    "rapid_wash_and_dry_59_min": "Tvätt och tork 59'",
+                    "resistant_cotton": "Tålig bomull",
+                    "resistant_cotton_steam": "Tålig bomull + Ånga",
+                    "rinse": "Skölj",
+                    "shirts_steam": "Skjortor + Ånga",
+                    "silent_night": "Nattcykel",
+                    "single_item": "Enstaka plagg",
+                    "single_item_steam": "Enstaka plagg + Ånga",
+                    "smart_wash": "Smart tvätt",
+                    "soft_care": "Soft Care",
+                    "soft_care_steam": "Soft Care + Ånga",
+                    "soft_care_steam_title": "Soft Care + Ånga",
+                    "special_39": "Special 39'",
+                    "special_39_full_load": "Special 39'",
+                    "special_39_full_load_steam": "Special 39' + Ånga",
+                    "special_49": "Special 49'",
+                    "sport_39": "Sport 39'",
+                    "sport_plus_29": "Sport Plus 29\"",
+                    "sport_plus_39": "Sport Plus 39'",
+                    "steam_39": "Ånga 39'",
+                    "steam_care_pro": "Steam Care Pro",
+                    "steam_care_pro_cotton": "Steam Care Pro - Bomull",
+                    "steam_care_pro_delicates": "Steam Care Pro - Fintvätt",
+                    "steam_care_pro_synthetic": "Steam Care Pro - Syntet",
+                    "steam_hygiene_plus": "Hygien Plus + Ånga",
+                    "synthetics": "Syntet",
+                    "synthetic_and_coloured": "Syntet och färgat",
+                    "synthetic_and_coloured_steam": "Syntet och färgat + Ånga",
+                    "tailored_resistant_cotton": "Skräddad tålig bomull",
+                    "tailored_synthetic_and_coloured": "Skräddad färgad syntet",
+                    "total_care": "Total Care",
+                    "tumbling": "Tumling",
+                    "ultra_fresh": "Ultra Fresh",
+                    "wool": "Ylle",
+                    "wool_and_delicates_49": "Ylle och fintvätt 49'",
+                    "wool_dry": "Torkning ylle",
+                    "wool_soft_care": "Ylle och ömtåliga"
+                },
+                "name": "Program"
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "AUTO-SET",
+                    "cheese": "Ost",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Ecoläge",
+                    "fruits": "Fruit",
+                    "fruits_and_veg": "Fruit&Veg",
+                    "fruit_and_veg": "Fruit&Veg",
+                    "holiday": "SEMESTER",
+                    "keep_fresh": "0°C Fresh",
+                    "no_mode_selected": "Inget läge valt",
+                    "quick_cool": "QUICK COOL",
+                    "quick_set": "Snabbinställning",
+                    "sea_food": "Ready to cook meal",
+                    "smart_mode_title": "Smart Mode",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "SUPER COOL",
+                    "super_freeze": "SUPER FREEZE",
+                    "tea": "Cold Drinks",
+                    "vegetables": "Vegetable",
+                    "zero_fresh": "0°C Fresh"
+                },
+                "name": "Program"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Champagne",
+                    "iot_dessert": "Dessert",
+                    "iot_fortified": "Starkvin",
+                    "iot_rose": "Rosé",
+                    "iot_whisky": "Whisky",
+                    "red": "Rött",
+                    "sparkling": "Mousserande",
+                    "white": "Vitt"
+                }
+            },
+            "dry_time": {
+                "name": "Torktid"
+            },
+            "power": {
+                "name": "Effektnivå"
+            },
+            "remaining_time": {
+                "name": "Återstående tid"
+            },
+            "temperature": {
+                "name": "Temperatur"
+            },
+            "water_efficiency": {
+                "name": "Vatteneffektivitet"
+            },
+            "water_saving": {
+                "name": "Vattenbesparingar"
+            },
+            "duration": {
+                "name": "Varaktighet"
+            },
+            "target_temperature": {
+                "name": "Måltemperatur"
+            },
+            "spin_speed": {
+                "name": "Centrifugering"
+            },
+            "delay_time": {
+                "name": "Fördröjd start"
+            },
+            "suggested_load": {
+                "name": "Lastkapacitet"
+            },
+            "energy_label": {
+                "name": "Energieffektivitet"
+            },
+            "det_dust": {
+                "name": "Pulvertvättmedel"
+            },
+            "det_liquid": {
+                "name": "Flytande tvättmedel"
+            },
+            "errors": {
+                "name": "Fel"
+            },
+            "programs": {
+                "name": "Aktuellt program"
+            },
+            "room_temperature": {
+                "name": "Rumstemperatur"
+            },
+            "humidity": {
+                "name": "Fuktighet"
+            },
+            "cycles_total": {
+                "name": "Cykler Totalt"
+            },
+            "energy_total": {
+                "name": "Energiförbrukning Totalt"
+            },
+            "water_total": {
+                "name": "Vatteneffektivitet Totalt"
+            },
+            "energy_current": {
+                "name": "Energiförbrukning Aktuell"
+            },
+            "water_current": {
+                "name": "Vatteneffektivitet Aktuell"
+            },
+            "freezer_temp": {
+                "name": "Ställa in frysens temperatur"
+            },
+            "fridge_temp": {
+                "name": "Kylskåpstemperatur"
+            },
+            "voc": {
+                "name": "Gas (VOC)"
+            },
+            "filter_cleaning": {
+                "name": "Filterrengöring"
+            },
+            "filter_life": {
+                "name": "Filterlivslängd"
+            },
+            "air_quality": {
+                "name": "Luftkvalitet"
+            },
+            "fan_speed": {
+                "name": "Fläkthastighet"
+            }
+        },
+        "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Ingen torkning",
+                    "iron_dry": "Strykning",
+                    "no_dry_iron": "Torka strykfritt",
+                    "cupboard_dry": "Skåptorrt",
+                    "extra_dry": "Extra torrt",
+                    "ready_to_wear": "Klar att användas"
+                },
+                "name": "Torknivå"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Av",
+                    "avoid_touch": "Undvik beröring",
+                    "follow_touch": "Följ",
+                    "unknown": "unknown"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Hög",
+                    "mid": "Medium",
+                    "low": "Låg",
+                    "auto": "Auto"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Kyl",
+                    "freezer": "Frys",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Kyl & Frys"
+                },
+                "name": "Zon"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Ingen ånga",
+                    "cotton": "Bomull",
+                    "delicate": "Fintvätt",
+                    "synthetic": "Syntet"
+                },
+                "name": "Ångnivå"
+            },
+            "mode": {
+                "state": {
+                    "standby": "Standby",
+                    "sleep": "Sleep",
+                    "auto": "Auto",
+                    "allergens": "Allergener",
+                    "max": "Max"
+                },
+                "name": "Läge"
+            },
+            "diffuser": {
+                "state": {
+                    "off": "Av",
+                    "soft": "Soft",
+                    "mid": "Mid",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Anpassa"
+                },
+                "name": "Diffusor"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Liten",
+                    "normal": "Normal",
+                    "very": "Mycket",
+                    "unknown": "unknown"
+                },
+                "name": "Smutsnivå"
+            },
+            "stain_type": {
+                "state": {
+                    "baby_food": "Baby food",
+                    "bean_paste": "Bean soup",
+                    "blood": "Blood",
+                    "blueberry": "Blueberry",
+                    "blue_ink": "Blue ink",
+                    "butter": "Butter",
+                    "chili_oil": "Chili oil",
+                    "chili_sauce": "Chili sauce",
+                    "chocolate": "Chocolate",
+                    "coffe": "Coffee",
+                    "coffee": "Coffee",
+                    "color_pencil": "Pencil",
+                    "cooking_oil": "Cooking oil",
+                    "curry": "Curry",
+                    "deodorant": "Deodorant",
+                    "egg": "Egg",
+                    "fruit": "Fruit",
+                    "glue": "Glue",
+                    "grass": "Grass",
+                    "ice_cream": "Ice cream",
+                    "ketchup": "Ketchup",
+                    "lip_gloss": "Lip gloss",
+                    "mayonnaise": "Mayonnaise",
+                    "mech_grease": "Mech grease",
+                    "milk": "Milk",
+                    "milk_tea": "Milk tea",
+                    "oil": "Oil",
+                    "oil_pastel": "Oil pastel",
+                    "perfume": "Perfume",
+                    "rust": "Rust",
+                    "shoe_cream": "Shoe cream",
+                    "soil": "Soil",
+                    "soy_sauce": "Soy sauce",
+                    "sweat": "Sweat",
+                    "tea": "Tea",
+                    "wine": "Wine",
+                    "unknown": "unknown"
+                },
+                "name": "Stain level"
+            },
+            "fan_horizontal": {
+                "state": {
+                    "position_1": "Fast - Position 1",
+                    "position_2": "Fast - Position 2",
+                    "position_3": "Fast - Position 3",
+                    "position_4": "Fast - Position 4",
+                    "position_5": "Fast - Position 5",
+                    "swing": "Gunga"
+                },
+                "name": "Fläktriktning Horisontell"
+            },
+            "fan_vertical": {
+                "state": {
+                    "position_1": "Fast - Position 1",
+                    "position_2": "Fast - Position 2",
+                    "position_3": "Fast - Position 3",
+                    "position_4": "Fast - Position 4",
+                    "position_5": "Fast - Position 5",
+                    "swing": "Gunga"
+                },
+                "name": "Fläktriktning Vertikal"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10 °C uppvärmningsfunktion",
+                    "iot_auto": "Auto",
+                    "iot_cool": "Kyla",
+                    "iot_dry": "Avfuktning",
+                    "iot_fan": "Fläkt",
+                    "iot_heat": "Värme",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Självrenande",
+                    "iot_self_clean": "Självrengöring",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Start",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + Auto",
+                    "iot_uv_and_cool": "UV + Kyla",
+                    "iot_uv_and_dry": "UV + Avfuktare",
+                    "iot_uv_and_fan": "UV + Fläkt",
+                    "iot_uv_and_heat": "UV + Värme"
+                },
+                "name": "Program"
+            },
+            "programs_dw": {
+                "state": {
+                    "59_min": "Snabb 59'",
+                    "auto_care": "Auto Care",
+                    "auto_care_soil": "Auto Care",
+                    "auto_plus": "AutoPlus",
+                    "auto_plus_soil": "Auto Plus Soil",
+                    "auto_rapid_soil": "Auto rapid Soil",
+                    "auto_sensor": "Auto Sensor",
+                    "auto_sensor_soil": "Auto Sensor",
+                    "auto_universal": "Auto Universal 50 - 60 °C",
+                    "auto_universal_plus": "Auto Universal+ 65 - 75 °C",
+                    "auto_universal_plus_soil": "Auto Universal+ 65 - 75 °C",
+                    "auto_universal_soil": "Auto Universal 50 - 60 °C",
+                    "auto_wash": "Auto Wash",
+                    "auto_wash_soil": "Auto Wash",
+                    "classe_a_59": "Klass A tvätt 59' 65 °C",
+                    "delicate": "Ömtålig 45 °C",
+                    "dishwasher_care": "Avkalkning",
+                    "eco": "Eco",
+                    "eco_asynch": "Eco 45°C",
+                    "eco_bldc": "Eco 45°C",
+                    "eco_synch": "Eco 45°C",
+                    "gentle_wash": "Gentle wash",
+                    "glass": "Glas",
+                    "glassware": "Kristall 45°C",
+                    "glass_care": "Glass Care",
+                    "hygiene": "Hygien",
+                    "hygiene_plus": "Hygien+ 75 °C",
+                    "intensive": "Intensiv",
+                    "intensive_rapid": "Intensiv snabb",
+                    "iot_auto_sensor": "Auto Sensor",
+                    "iot_auto_universal_soil": "Auto Universal 50 - 60 °C",
+                    "iot_auto_wash_soil": "Auto Wash",
+                    "iot_baby_care": "Baby Care",
+                    "iot_breakfast": "Frukost",
+                    "iot_checkup": "Check-Up",
+                    "iot_china_crystals": "Kina kristallföremål",
+                    "iot_classe_a_59": "Snabb 59'",
+                    "iot_cocktail_glasses": "Coktailglas",
+                    "iot_cocktail_glasses_soil": "Coktailglas",
+                    "iot_daily_care": "Daglig",
+                    "iot_daily_care_soil": "Daglig",
+                    "iot_delicate": "Ömtålig 45 °C",
+                    "iot_dinner_for_two": "Middag för 2",
+                    "iot_dinner_for_two_soil": "Middag för 2",
+                    "iot_dreft_quick_cycle": "Dreft Quick",
+                    "iot_eco_asynch": "Eco 45°C",
+                    "iot_eco_bldc": "Eco 45°C",
+                    "iot_eco_synch": "Eco 45°C",
+                    "iot_extra_hygiene": "Extra hygien",
+                    "iot_fairy_quick_cycle": "Fairy Short",
+                    "iot_happy_hour": "Happy Hour",
+                    "iot_jar_quick_cycle": "Jar Quick",
+                    "iot_party": "Party",
+                    "iot_party_soil": "Party",
+                    "iot_pizza_menu": "Pizza meny",
+                    "iot_pizza_menu_soil": "Pizza meny",
+                    "iot_plastic_tupperware": "Plast & Tupperware",
+                    "iot_porcelain": "Porslin",
+                    "iot_power_mix_wash": "Power Mix Wash",
+                    "iot_power_mix_wash_soil": "Power Mix Wash",
+                    "iot_prewash": "Förtvätt",
+                    "iot_pyrex_and_glassware": "Pyrex & Glasvaror",
+                    "iot_rapid_29": "Snabb 29'",
+                    "iot_rapid_39": "Snabb 39' 60 °C",
+                    "iot_single": "Singel",
+                    "iot_steam": "Ånga 75 °C",
+                    "iot_super_flash": "Super Flash",
+                    "iot_super_wash": "Supertvätt",
+                    "iot_turbopower": "TurboPower",
+                    "iot_universal": "Universal 60 °C",
+                    "iot_voice_automatic": "Automatic",
+                    "iot_voice_delicate": "Ömtålig 45 °C",
+                    "iot_voice_eco": "Eco 45°C",
+                    "iot_voice_intensive": "Intensiv 75°C",
+                    "iot_voice_prewash": "Förtvätt",
+                    "iot_voice_rapid_59": "Snabb 59'",
+                    "iot_voice_universal": "Universal 60 °C",
+                    "iot_wok_grids_maxi_pans": "Specialpannor (Wok, Grids & Maxi Pans)",
+                    "iot_wok_grids_maxi_pans_soil": "Specialpannor (Wok, Grids & Maxi Pans)",
+                    "iot_yes_quick_cycle": "Yes Quick",
+                    "night": "Natt 55 °C",
+                    "prewash": "Förtvätt",
+                    "rapid_20": "Snabb 20'",
+                    "rapid_24": "Snabb 24'",
+                    "rapid_29": "Snabb 29' 50 °C",
+                    "rapid_35": "Wash&Dry 35'",
+                    "rapid_39": "Snabb 39' 60 °C",
+                    "rapid_49": "Snabb 49'",
+                    "rapid_59": "Snabb 59'",
+                    "sanitising": "Sanering",
+                    "silence": "Silence",
+                    "silent": "Tyst",
+                    "silent_care": "Silent Care",
+                    "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
+                    "special": "Special",
+                    "special_pw_prz": "Special",
+                    "steam": "Ånga 75 °C",
+                    "steam_plus": "Ånga Plus 75 °C",
+                    "total_care": "Total Care 50°C",
+                    "ultra_silence": "Ultratyst 55 °C",
+                    "ultra_silent": "Ultratyst 55°C",
+                    "universal": "Universal 60 °C",
+                    "universal_plus": "Universal Plus 70 °C",
+                    "zone_wash": "Flex Zone Wash",
+                    "zoom_39": "Zoom 39 min"
+                },
+                "name": "Program"
+            },
+            "programs_ih": {
+                "state": {
+                    "iot_special_ash_brown": "Askbrun",
+                    "iot_special_beef_fillet": "Oxfilé",
+                    "iot_special_beef_veal_stew": "Nöt- och kalvgryta",
+                    "iot_special_boiled_rice": "Kokat ris",
+                    "iot_special_chicken_breast": "Kycklingbröst",
+                    "iot_special_chicken_legs": "Kycklingben",
+                    "iot_special_chocolate_pudding": "Chokladpudding",
+                    "iot_special_entrecote": "Entrecote",
+                    "iot_special_fresh_tuna": "Färsk tonfisk",
+                    "iot_special_grilled_vegetables": "Grillade grönsaker",
+                    "iot_special_lamb_cutlet": "Lammkotlett",
+                    "iot_special_meatballs": "Köttbullar",
+                    "iot_special_minestrone": "Minestrone",
+                    "iot_special_mussels": "Musslor",
+                    "iot_special_omelette": "Omelett",
+                    "iot_special_pancakes": "Pannkakor",
+                    "iot_special_paris_style_peas": "Franska ärter",
+                    "iot_special_poached_eggs": "Pocherade ägg",
+                    "iot_special_pork_fillet": "Fläskfilé",
+                    "iot_special_pork_ribs": "Revbensspjäll",
+                    "iot_special_prawns": "Räkor",
+                    "iot_special_quinoa": "Quinoa",
+                    "iot_special_ratatouille": "Ratatouille",
+                    "iot_special_salmon_fillet": "Laxfilé",
+                    "iot_special_saute_potatoes": "Stekt potatis",
+                    "iot_special_scallops": "Pilgrimsmusslor",
+                    "iot_special_scrambled_eggs": "Äggröra",
+                    "iot_special_spelt": "Spelt",
+                    "iot_special_veggy_noodles": "Vegetariska nudlar",
+                    "iot_special_white_fish_fillet": "Vit fiskfilé",
+                    "iot_standard_boiling": "Kokning",
+                    "iot_standard_frying": "Stekning",
+                    "iot_standard_keep_warm": "Varmhållning",
+                    "iot_standard_melting": "Smältning",
+                    "iot_standard_simmering": "Sjudning"
+                },
+                "name": "Program"
+            },
+            "programs_ov": {
+                "state": {
+                    "bakery": "Bakverk",
+                    "bakery_steam": "Bakning med ånga",
+                    "bottom_heating": "Bottenvärme",
+                    "bottom_heating_fan": "Bottenvärme + Fläkt",
+                    "bread": "Bröd",
+                    "bread_steam": "Ångat bröd",
+                    "combi": "Combi",
+                    "convection_fan": "Varmluft + Fläkt",
+                    "convection_fan_turnspit": "Varmluftsfläkt + Grillspett",
+                    "conventional": "Konventionell",
+                    "conventional_turnspit": "Statisk+Grillspett",
+                    "defrost": "Avfrostning",
+                    "descaling": "Kalkborttagning",
+                    "fish": "Fisk",
+                    "fish_steam": "Ångad fisk",
+                    "grill_cata": "Grill",
+                    "grill_fan_cata": "Grill Fläkt",
+                    "grill_fan_pyro": "Grill + Fläkt",
+                    "grill_pyro": "Grill",
+                    "h20_clean": "H2O-Clean",
+                    "iot_bread": "Bröd",
+                    "iot_h20_clean": "h2O-clean",
+                    "leavening": "Jäsning",
+                    "low_temp_cooking": "Tillagning på låg temperatur",
+                    "low_temp_cooking_fish": "Tillagning på låg temperatur fisk",
+                    "low_temp_cooking_fish_steam": "Tillagning på låg temperatur ångad fisk",
+                    "low_temp_cooking_meat": "Tillagning på låg temperatur kött",
+                    "low_temp_cooking_meat_steam": "Tillagning på låg temperatur ångat kött",
+                    "low_temp_cooking_steam": "Tillagning på låg temperatur ånga",
+                    "meat": "Kött",
+                    "meat_steam": "Ångat kött",
+                    "multi_level": "Flernivå",
+                    "paella": "Paella",
+                    "pasta_and_bakery": "Pasta och bakning",
+                    "pizza": "Pizza",
+                    "pyrolysis": "Pyrolys",
+                    "pyrolysis_plus": "Pyrolys +",
+                    "red_meat": "Rött kött",
+                    "red_meat_steam": "Ångat rött kött",
+                    "regenerate": "Regenerera",
+                    "soft_plus": "Soft+",
+                    "super_grill": "Super Grill",
+                    "tailor_bake": "Tailor bake",
+                    "tailor_bake_cata": "Tailor Bake",
+                    "tailor_bake_pyro": "Tailor Bake",
+                    "vegetables": "Grönsaker",
+                    "vegetables_cata": "Grönsaker",
+                    "vegetables_pyro": "Grönsaker",
+                    "water_discharge": "Vattenutsläpp",
+                    "white_meat": "Vitt kött",
+                    "white_meat_steam": "Ångat vitt kött"
+                },
+                "name": "Program"
+            },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Active Dry",
+                    "allergy_care": "Anti-allergi",
+                    "all_in_one": "Allt i ett",
+                    "antiallergy": "Anti-allergi",
+                    "anti_odours": "Anti-lukt",
+                    "auto_care": "Auto Care",
+                    "baby": "Baby",
+                    "bed_quilt": "Sängtäcken",
+                    "care_30": "Care 30",
+                    "care_45": "Care 45",
+                    "care_59": "Care 59",
+                    "coloured": "Färgad",
+                    "daily_45_min": "Daglig 45'",
+                    "daily_perfect_59_min": "Daily Perfect 59'",
+                    "darks_and_coloured": "Mörka & Färgade",
+                    "delicates": "Fintvätt",
+                    "duvet": "Täcke",
+                    "eco": "Eco Bomull",
+                    "ecospeed_cottons": "Ecospeed bomull",
+                    "ecospeed_delicates": "Ecospeed skonsam",
+                    "ecospeed_mixed": "Ecospeed Blandat",
+                    "extra_hygiene": "Extra hygien",
+                    "fitness": "Fitness",
+                    "fresh_care": "Fresh Care",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Handdukar",
+                    "hqd_bed_sheets": "Lakan",
+                    "hqd_bulky": "Skrymmande föremål",
+                    "hqd_casual": "Casual",
+                    "hqd_checkup": "Check-Up",
+                    "hqd_cold_wind_30": "Cool Breeze 30 minuter",
+                    "hqd_cold_wind_timing": "Cool Breeze",
+                    "hqd_cotton": "Bomull",
+                    "hqd_curtain": "Gardiner",
+                    "hqd_delicate": "Fintvätt",
+                    "hqd_diaper": "Blöjor",
+                    "hqd_duvet": "Täcke",
+                    "hqd_eco": "Eco",
+                    "hqd_feather": "Dunjackor",
+                    "hqd_hot_wind_timing": "Varm luft",
+                    "hqd_hygienic": "Hygienisering",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro Babycare",
+                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro Skrymmande",
+                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro Fintvätt",
+                    "hqd_i_refresh_pro_down": "I-Refresh Pro Dun",
+                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro Skjorta",
+                    "hqd_i_refresh_pro_towel": "I-Refresh Pro Handduk",
+                    "hqd_i_refresh_pro_wool": "I-Refresh Pro Ull",
+                    "hqd_jacket": "Jackor",
+                    "hqd_jeans": "Jeans",
+                    "hqd_luxury": "Lyx",
+                    "hqd_mix": "Blandat",
+                    "hqd_night_dry": "Torkning över natten",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious Cure",
+                    "hqd_quick_20": "Snabb 20",
+                    "hqd_quick_30": "Snabb 30",
+                    "hqd_quick_dry": "Snabbtork",
+                    "hqd_quilt": "Täcken",
+                    "hqd_refresh": "Refresh",
+                    "hqd_school_uniform": "Skoluniform",
+                    "hqd_shirt": "Skjortor",
+                    "hqd_shoes": "Skor",
+                    "hqd_silk": "Silke",
+                    "hqd_sports": "Sport",
+                    "hqd_synthetics": "Syntet",
+                    "hqd_timer": "TIMER",
+                    "hqd_towel": "Handdukar",
+                    "hqd_underwear": "Underkläder",
+                    "hqd_warm_up": "Uppvärmning",
+                    "hqd_wool": "Ylle",
+                    "hqd_working_suit": "Arbetskläder",
+                    "hygiene": "Hygien",
+                    "iot_checkup": "Check-Up",
+                    "iot_dry_anti_mites": "Antikvalster",
+                    "iot_dry_baby": "Baby",
+                    "iot_dry_backpacks": "Ryggsäckar",
+                    "iot_dry_bathrobe": "Badrock",
+                    "iot_dry_bed_linen": "Sängkläder",
+                    "iot_dry_bed_quilt": "Sängtäcken",
+                    "iot_dry_cotton": "Bomull",
+                    "iot_dry_cuddly_toys": "Kramleksaker",
+                    "iot_dry_curtains": "Gardiner",
+                    "iot_dry_dehumidifier": "Fuktborttagning",
+                    "iot_dry_delicates": "Fintvätt",
+                    "iot_dry_delicate_tablecloths": "Ömtåliga dukar",
+                    "iot_dry_denim_jeans": "Denim - Jeans",
+                    "iot_dry_down_jacket": "Jacka",
+                    "iot_dry_duvet": "Täcke",
+                    "iot_dry_easy_iron_cotton": "Superlätt strykning",
+                    "iot_dry_easy_iron_synthetics": "Superlätt strykning syntet",
+                    "iot_dry_gym_fit": "Gym fit - Fitness",
+                    "iot_dry_lingerie": "Lingeri",
+                    "iot_dry_mixed": "Blandat",
+                    "iot_dry_playsuits": "Lekdräkter",
+                    "iot_dry_rapid_30": "Snabb 30",
+                    "iot_dry_rapid_59": "Snabb 59'",
+                    "iot_dry_refresh": "Refresh",
+                    "iot_dry_regenerates_waterproof": "Regenerate waterproof",
+                    "iot_dry_relax_creases": "Mindre skrynklor",
+                    "iot_dry_shirts": "Skjortor",
+                    "iot_dry_small_load": "Liten last",
+                    "iot_dry_swimsuits_and_bikinis": "Baddräkter och bikini",
+                    "iot_dry_synthetics": "Syntet",
+                    "iot_dry_synthetic_dry": "Torkning syntet",
+                    "iot_dry_tablecloths": "Bordsdukar",
+                    "iot_dry_technical_fabrics": "Tekniska tyger",
+                    "iot_dry_warm_embrace": "Varm omfamning",
+                    "iot_dry_wool": "Ylle",
+                    "jeans": "Jeans",
+                    "mix_and_dry": "Mix&Dry",
+                    "pets": "Husdjur",
+                    "pre_iron": "För-strykning",
+                    "rapid_30": "Snabb 30",
+                    "rapid_45": "Snabb 45 min",
+                    "rapid_59": "Perfekt Snabb 59 Min",
+                    "refresh": "Refresh",
+                    "relax_creases": "Mindre skrynklor",
+                    "saving_30_min": "Spara 30'",
+                    "shirts": "Skjortor",
+                    "shoes": "Sportskor",
+                    "small_load": "Liten last",
+                    "soft_care": "Soft Care",
+                    "sport_plus": "Sport Plus",
+                    "super_easy_iron_misti": "Superlätt strykning blandat",
+                    "super_easy_iron_xxl": "Superlätt strykning XXL",
+                    "super_fast_cottons": "Supersnabb bomull",
+                    "super_fast_delicates": "Supersnabb fintvätt",
+                    "synthetics": "Syntet",
+                    "total_care": "Total Care",
+                    "trainers": "Träningsskor",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Vattentätande",
+                    "whites": "Vita",
+                    "wool": "Torkning ylle",
+                    "woolmark": "Ylle",
+                    "xxl_load": "XXL last",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Program"
+            },
+            "programs_wm": {
+                "state": {
+                    "20_degrees_coloured_cottons": "Färgade och bomull 20°",
+                    "20_degrees_new_energy_label": "20 °C",
+                    "active_steam": "Ånga",
+                    "active_wash": "Aktiv tvätt",
+                    "active_wash_steam": "Aktiv tvätt + Ånga",
+                    "allergy_care": "Allergy Care",
+                    "allergy_care_pro": "Allergy Care Pro",
+                    "all_in_one_49": "Allt i ett 49'",
+                    "all_in_one_59": "Allt i ett 59'",
+                    "all_in_one_59_steam": "Aktiv tvätt + Ånga",
+                    "autocare": "Autocare",
+                    "autoclean": "Trumrengöring",
+                    "baby_60": "All Baby 60 °C",
+                    "care_14": "Rapid Care 14'",
+                    "care_30": "Rapid Care 30'",
+                    "care_44": "Rapid Care 44'",
+                    "checkup": "Check-Up",
+                    "colour_59": "Färgade 59'",
+                    "colour_59_steam": "Färgade 59' + Ånga",
+                    "cottons": "Bomull",
+                    "cottons_prewash": "Bomull + Förtvätt",
+                    "cottons_steam": "Bomull + Ånga",
+                    "cotton_care_59": "Cotton Care 59'",
+                    "cycle_ended": "Cykelslut",
+                    "delicate_59": "Fintvätt 59'",
+                    "delicate_silk": "Fintvätt och silke",
+                    "delicate_silk_steam": "Fintvätt och silke + Ånga",
+                    "delicati_59": "Fintvätt 59'",
+                    "delicati_59_steam": "Fintvätt 59' + Ånga",
+                    "drain_spin": "Tömning + Centrifugering",
+                    "easy_iron": "Lätt strykning",
+                    "eco_40_60_new_energy_label": "Eco 40-60",
+                    "extra_care": "Extra Care",
+                    "fitness": "Fitness Care",
+                    "fitness_care": "Fitness Care",
+                    "fresh_care": "Fresh Care",
+                    "fresh_care_steam": "Fresh Care + Ånga",
+                    "handwash_wool": "Handtvätt + Ylle",
+                    "high_dry": "Hög värme",
+                    "hqd_20_degrees": "Bomull 20 ℃",
+                    "hqd_allergy": "Allergy Care",
+                    "hqd_autoclean": "Trumrengöring",
+                    "hqd_babycare": "Baby Care",
+                    "hqd_checkup": "Check-Up",
+                    "hqd_cottons": "Bomull",
+                    "hqd_delicate": "Fintvätt",
+                    "hqd_delicate_cradle": "Fintvätt",
+                    "hqd_dry": "Bomullstorrt",
+                    "hqd_dry_synthetics": "Låg värme",
+                    "hqd_duvet": "Täcke",
+                    "hqd_eco_40_60_degrees": "Eco 40-60",
+                    "hqd_handwash_wool": "Ylle",
+                    "hqd_i_refresh": "i-Refresh",
+                    "hqd_mix": "Blandat",
+                    "hqd_quick_15": "Snabb 15'",
+                    "hqd_quick_wash_57": "Snabbtvätt 57'",
+                    "hqd_rapid_wash_and_dry": "Tvätt och tork",
+                    "hqd_refresh": "Refresh",
+                    "hqd_rinse": "Sköljningar",
+                    "hqd_shirts": "Skjortor",
+                    "hqd_smart": "Smart A.I.",
+                    "hqd_spin": "Centrifugering",
+                    "hqd_sport": "Sport",
+                    "hqd_super_fast": "Supersnabb 39'",
+                    "hqd_synthetic_and_coloured": "Syntet",
+                    "hygiene_59": "Hygien Plus 59'",
+                    "hygiene_60": "Hygien 60 °C",
+                    "hygiene_plus_59": "Hygien Plus 59'",
+                    "hygiene_plus_59_min": "Hygien Plus 59'",
+                    "hygiene_pro_49_min": "Hygien Pro 49'",
+                    "hygiene_pro_steam": "Hygien Pro + Ånga",
+                    "intensive_40": "Intensiv 40 °C",
+                    "intensive_40_steam": "Intensiv 40 °C + Ånga",
+                    "iot_active_steam": "Ånga",
+                    "iot_active_wash_steam": "Aktiv tvätt + Ånga",
+                    "iot_allergy_care_pro": "Allergy Care Pro",
+                    "iot_all_in_one_59_steam": "Aktiv tvätt + Ånga",
+                    "iot_baby_60_steam": "All Baby 60 °C",
+                    "iot_checkup": "Check-Up",
+                    "iot_colour_59_steam": "Färgade 59' + Ånga",
+                    "iot_cottons_steam": "Bomull + Ånga",
+                    "iot_delicate_silk_steam": "Fintvätt och silke + Ånga",
+                    "iot_delicati_59_steam": "Fintvätt 59' + Ånga",
+                    "iot_dry_air_refresh": "Air Refresh",
+                    "iot_dry_anti_mites": "Antikvalster",
+                    "iot_dry_baby": "Baby",
+                    "iot_dry_backpacks": "Ryggsäckar",
+                    "iot_dry_bathrobe": "Badrockar",
+                    "iot_dry_bed_linen": "Sängkläder",
+                    "iot_dry_cotton_dry": "Bomullstorrt",
+                    "iot_dry_cuddly_toys": "Kramleksaker",
+                    "iot_dry_curtains": "Gardiner",
+                    "iot_dry_dehumidifier": "Fuktborttagning",
+                    "iot_dry_delicates_antiallergy": "Anti-allergi fintvätt",
+                    "iot_dry_delicate_tablecloths": "Ömtåliga dukar",
+                    "iot_dry_denim_jeans": "Denim - Jeans",
+                    "iot_dry_easy_iron_cotton": "Lätt strykning - Bomull",
+                    "iot_dry_easy_iron_synthetics": "Lätt strykning - Syntet",
+                    "iot_dry_gym_fit": "Gym fit - Fitness",
+                    "iot_dry_lingerie": "Lingeri",
+                    "iot_dry_mixed_dry": "Torkning blandat",
+                    "iot_dry_rapid_60_min_delicates": "Snabb 60' - Fintvätt",
+                    "iot_dry_shirts": "Skjortor",
+                    "iot_dry_swimsuits_and_bikinis": "Baddräkter och bikini",
+                    "iot_dry_synthetics": "Torkning syntet",
+                    "iot_dry_synthetic_dry": "Torkning syntet",
+                    "iot_dry_tablecloths": "Bordsdukar",
+                    "iot_dry_technical_fabrics": "Tekniska tyger",
+                    "iot_dry_warm_embrace": "Varm omfamning",
+                    "iot_dry_wool_dry": "Torkning ylle",
+                    "iot_easy_iron": "Lätt strykning",
+                    "iot_fresh_care_steam": "Fresh Care + Ånga",
+                    "iot_hygiene_pro_steam": "Hygien Pro + Ånga",
+                    "iot_intensive_40_steam": "Intensiv 40 °C + Ånga",
+                    "iot_mixed_steam": "Blandat + Ånga",
+                    "iot_mix_and_colour_59_steam": "Blandat och färgat 59' + Ånga",
+                    "iot_perfect_cotton_59_steam": "Perfekt bomull 59' + Ånga",
+                    "iot_rapid_a_class_60_steam": "Snabb 59' A klass + Ånga",
+                    "iot_resistant_cotton_steam": "Tålig bomull + Ånga",
+                    "iot_shirts_steam": "Skjortor + Ånga",
+                    "iot_single_item_steam": "Enstaka plagg + Ånga",
+                    "iot_smart_wash": "Smart tvätt",
+                    "iot_soft_care_steam": "Soft Care + Ånga",
+                    "iot_special_39_full_load_steam": "Special 39' + Ånga",
+                    "iot_steam_hygiene_plus": "Hygien Plus + Ånga",
+                    "iot_synthetic_and_coloured_steam": "Syntet och färgat + Ånga",
+                    "iot_wash_and_dry": "Tvätt och tork",
+                    "iot_wash_anti_mites": "Antikvalster",
+                    "iot_wash_anti_odor": "Anti-lukt",
+                    "iot_wash_ariel_clean_cycle": "Ariel Ultimate Clean",
+                    "iot_wash_ariel_cold_cycle": "Ariel Cold Clean",
+                    "iot_wash_ariel_fresh_cycle": "Ariel Fresh Clean",
+                    "iot_wash_baby_sanitizer": "Sanitizer",
+                    "iot_wash_baby_sanitizer_steam": "Sanitiser + Ånga",
+                    "iot_wash_backpacks": "Ryggsäckar",
+                    "iot_wash_backpacks_zelig": "Ryggsäckar",
+                    "iot_wash_bathrobe": "Badrockar och handdukar",
+                    "iot_wash_bathrobe_steam": "Badrock och handdukar + Ånga",
+                    "iot_wash_bed_linen": "Sängkläder",
+                    "iot_wash_bed_linen_steam": "Sängkläder + Ånga",
+                    "iot_wash_bed_linen_zelig": "Sängkläder",
+                    "iot_wash_big_single_load": "Stort enstaka plagg",
+                    "iot_wash_bleaching": "Blekning",
+                    "iot_wash_blood_stains": "Blodfläckar",
+                    "iot_wash_cashmere": "Kashmir",
+                    "iot_wash_chocolate_stains": "Chokladfläckar",
+                    "iot_wash_cold_wash": "Kalltvätt",
+                    "iot_wash_colored": "Färgad",
+                    "iot_wash_colored_anti_stain": "Fläckborttagning färgade",
+                    "iot_wash_colored_delicate": "Färgad fintvätt",
+                    "iot_wash_coloured": "Färgad",
+                    "iot_wash_coloured_bed_linen": "Färgade sängkläder",
+                    "iot_wash_coloured_bed_linen_steam": "Färgade sängkläder + Ånga",
+                    "iot_wash_coloured_curtains": "Färgade Gardiner",
+                    "iot_wash_coloured_shirts": "Färgade skjortor",
+                    "iot_wash_coloured_shirts_steam": "Färgade skjortor + Ånga",
+                    "iot_wash_coloured_steam": "Färgat + Ånga",
+                    "iot_wash_coloured_tableclothes": "Färgade bordsdukar",
+                    "iot_wash_coloured_tableclothes_steam": "Färgade dukar + Ånga",
+                    "iot_wash_cotton": "Bomull",
+                    "iot_wash_cotton_steam": "Bomull + Ånga",
+                    "iot_wash_cuddly_toys": "Kramleksaker",
+                    "iot_wash_curtains": "Gardiner",
+                    "iot_wash_curtains_steam": "Gardiner + Ånga",
+                    "iot_wash_curtains_zelig": "Gardiner",
+                    "iot_wash_dark": "Mörka",
+                    "iot_wash_darks_and_coloured_44": "Mörka och färgade 44'",
+                    "iot_wash_darks_and_coloured_59": "Mörka och färgade 59'",
+                    "iot_wash_darks_and_coloured_xl": "Mörka och färgade XL",
+                    "iot_wash_dark_steam": "Mörka + Ånga",
+                    "iot_wash_dash_clean_cycle": "Dash Ultimate Clean",
+                    "iot_wash_dash_cold_cycle": "Dash Cold Clean",
+                    "iot_wash_dash_fresh_cycle": "Dash Fresh Clean",
+                    "iot_wash_delicate": "Fintvätt",
+                    "iot_wash_delicate_antiallergy": "Anti-allergi fintvätt",
+                    "iot_wash_delicate_antiallergy_steam": "Fintvätt anti-allergi + Ånga",
+                    "iot_wash_delicate_antiallergy_zelig": "Anti-allergi fintvätt",
+                    "iot_wash_delicate_colors": "Färgad fintvätt",
+                    "iot_wash_delicate_colors_steam": "Färgad fintvätt + Ånga",
+                    "iot_wash_delicate_dark": "Mörk fintvätt",
+                    "iot_wash_delicate_steam": "Fintvätt + Ånga",
+                    "iot_wash_delicate_tablecloths": "Ömtåliga dukar",
+                    "iot_wash_delicate_tablecloths_steam": "Ömtåliga dukar + Ånga",
+                    "iot_wash_delicate_whites": "Vit fintvätt",
+                    "iot_wash_denim_jeans": "Denim - Jeans",
+                    "iot_wash_diving_suits": "Dykardräkter",
+                    "iot_wash_diving_suits_zelig": "Dykardräkter",
+                    "iot_wash_down_jackets": "Dunjackor",
+                    "iot_wash_down_jackets_zelig": "Dunjackor",
+                    "iot_wash_duvet": "Täcke",
+                    "iot_wash_fruit_stains": "Fruktfläckar",
+                    "iot_wash_gym_fit": "Gym Fit - Fitness",
+                    "iot_wash_handwash": "Handtvätt",
+                    "iot_wash_handwash_colored": "Handtvätt färgade",
+                    "iot_wash_handwash_dark": "Handtvätt mörka",
+                    "iot_wash_lingerie": "Lingeri",
+                    "iot_wash_masks_refresh": "Munskydd och masker",
+                    "iot_wash_masks_sanification": "Desinficering munskydd och masker",
+                    "iot_wash_masks_sanification_steam": "Munskydd desinficering + Ånga",
+                    "iot_wash_mats": "Badmattor",
+                    "iot_wash_men_s_trousers": "Byxor",
+                    "iot_wash_mixed": "Blandat",
+                    "iot_wash_mixed_steam": "Blandat + Ånga",
+                    "iot_wash_mix_and_coloured_44": "Blandat och färgade 44'",
+                    "iot_wash_mix_and_coloured_59": "Blandat och färgade 59'",
+                    "iot_wash_mix_and_coloured_xl": "Blandat och färgade XL",
+                    "iot_wash_new_clothes": "Nya kläder",
+                    "iot_wash_perfect_white": "Perfekt vit",
+                    "iot_wash_perfect_white_steam": "Perfekt vit + Ånga",
+                    "iot_wash_pets": "Husdjurstillbehör",
+                    "iot_wash_pets_hair_removal": "Husdjurshår",
+                    "iot_wash_pets_odours_stains_removal": "Husdjurslukt och fläckar",
+                    "iot_wash_pets_steam": "Husdjurstillbehör + Ånga",
+                    "iot_wash_playsuits": "Lekdräkter",
+                    "iot_wash_playsuits_steam": "Lekdräkter + Ånga",
+                    "iot_wash_quick_drum_cleaner": "Snabb trumrengöring",
+                    "iot_wash_rapid_14": "Snabb 14’",
+                    "iot_wash_rapid_30": "Snabb 30’",
+                    "iot_wash_rapid_44": "Snabb 44'",
+                    "iot_wash_rapid_59": "Snabb 59'",
+                    "iot_wash_rapid_59_steam": "Snabb 59' + Ånga",
+                    "iot_wash_refresh_14_min": "Refresh 14'",
+                    "iot_wash_resistant_colored": "Tålig kulörtvätt",
+                    "iot_wash_resistant_dark": "Tåliga mörka",
+                    "iot_wash_resistant_whites": "Tåliga vita",
+                    "iot_wash_rinse": "Sköljningar",
+                    "iot_wash_shirts": "Skjortor",
+                    "iot_wash_shirts_steam": "Skjortor + Ånga",
+                    "iot_wash_silk": "Silke",
+                    "iot_wash_ski_suit": "Skiddräkt",
+                    "iot_wash_ski_suit_zelig": "Skiddräkt",
+                    "iot_wash_spin": "Centrifugering",
+                    "iot_wash_sport": "Sport",
+                    "iot_wash_sport_anti_odor": "Antilukt sportkläder",
+                    "iot_wash_sport_anti_odor_zelig": "Antilukt sportkläder",
+                    "iot_wash_stains_remover": "Fläckborttagning",
+                    "iot_wash_super_saving": "Extra energisnål 49 min",
+                    "iot_wash_swimsuits_and_bikinis": "Baddräkter och bikini",
+                    "iot_wash_synthetic": "Syntet",
+                    "iot_wash_synthetic_steam": "Syntet + Ånga",
+                    "iot_wash_tablecloths": "Bordsdukar",
+                    "iot_wash_tablecloths_steam": "Dukar + Ånga",
+                    "iot_wash_technical_fabrics": "Tekniska tyger",
+                    "iot_wash_technical_fabrics_zelig": "Tekniska tyger",
+                    "iot_wash_technical_jackets": "Tekniska jackor",
+                    "iot_wash_technical_jackets_zelig": "Tekniska jackor",
+                    "iot_wash_trainers": "Träningsskor",
+                    "iot_wash_whites": "Vita",
+                    "iot_wash_whites_44": "Vita 44'",
+                    "iot_wash_whites_59": "Vita 59'",
+                    "iot_wash_whites_xl": "Vita XL",
+                    "iot_wash_wine_stains": "Vinfläckar",
+                    "iot_wash_wool": "Ylle",
+                    "jeans": "Jeans",
+                    "jeans_60": "Jeans",
+                    "low_dry": "Låg värme",
+                    "mixed": "Blandat",
+                    "mixed_and_colored_59": "Blandat och färgade 59'",
+                    "mixed_steam": "Blandat + Ånga",
+                    "mix_and_colour_59": "Blandat och färgade 59'",
+                    "mix_and_colour_59_steam": "Blandat och färgat 59' + Ånga",
+                    "night_and_day": "Natt och dag",
+                    "night_wash": "Nattvätt",
+                    "perfect_59": "Perfekt 59'",
+                    "perfect_cotton_59": "Perfekt bomull 59'",
+                    "perfect_cotton_59_steam": "Perfekt bomull 59' + Ånga",
+                    "perfect_whites_59": "Perfekt vit 59'",
+                    "rapid_14_min": "Snabb 14'",
+                    "rapid_30_min": "Snabb 30'",
+                    "rapid_44_min": "Snabb 44'",
+                    "rapid_a_class_60": "Snabb 59' A klass",
+                    "rapid_a_class_60_steam": "Snabb 59' A klass + Ånga",
+                    "rapid_wash_and_dry_59_min": "Tvätt och tork 59'",
+                    "resistant_cotton": "Tålig bomull",
+                    "resistant_cotton_steam": "Tålig bomull + Ånga",
+                    "rinse": "Skölj",
+                    "shirts_steam": "Skjortor + Ånga",
+                    "silent_night": "Nattcykel",
+                    "single_item": "Enstaka plagg",
+                    "single_item_steam": "Enstaka plagg + Ånga",
+                    "smart_wash": "Smart tvätt",
+                    "soft_care": "Soft Care",
+                    "soft_care_steam": "Soft Care + Ånga",
+                    "soft_care_steam_title": "Soft Care + Ånga",
+                    "special_39": "Special 39'",
+                    "special_39_full_load": "Special 39'",
+                    "special_39_full_load_steam": "Special 39' + Ånga",
+                    "special_49": "Special 49'",
+                    "sport_39": "Sport 39'",
+                    "sport_plus_29": "Sport Plus 29\"",
+                    "sport_plus_39": "Sport Plus 39'",
+                    "steam_39": "Ånga 39'",
+                    "steam_care_pro": "Steam Care Pro",
+                    "steam_care_pro_cotton": "Steam Care Pro - Bomull",
+                    "steam_care_pro_delicates": "Steam Care Pro - Fintvätt",
+                    "steam_care_pro_synthetic": "Steam Care Pro - Syntet",
+                    "steam_hygiene_plus": "Hygien Plus + Ånga",
+                    "synthetics": "Syntet",
+                    "synthetic_and_coloured": "Syntet och färgat",
+                    "synthetic_and_coloured_steam": "Syntet och färgat + Ånga",
+                    "tailored_resistant_cotton": "Skräddad tålig bomull",
+                    "tailored_synthetic_and_coloured": "Skräddad färgad syntet",
+                    "total_care": "Total Care",
+                    "tumbling": "Tumling",
+                    "ultra_fresh": "Ultra Fresh",
+                    "wool": "Ylle",
+                    "wool_and_delicates_49": "Ylle och fintvätt 49'",
+                    "wool_dry": "Torkning ylle",
+                    "wool_soft_care": "Ylle och ömtåliga"
+                },
+                "name": "Program"
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "AUTO-SET",
+                    "cheese": "Ost",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Ecoläge",
+                    "fruits": "Fruit",
+                    "fruits_and_veg": "Fruit&Veg",
+                    "fruit_and_veg": "Fruit&Veg",
+                    "holiday": "SEMESTER",
+                    "keep_fresh": "0°C Fresh",
+                    "no_mode_selected": "Inget läge valt",
+                    "quick_cool": "QUICK COOL",
+                    "quick_set": "Snabbinställning",
+                    "sea_food": "Ready to cook meal",
+                    "smart_mode_title": "Smart Mode",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "SUPER COOL",
+                    "super_freeze": "SUPER FREEZE",
+                    "tea": "Cold Drinks",
+                    "vegetables": "Vegetable",
+                    "zero_fresh": "0°C Fresh"
+                },
+                "name": "Program"
+            },
+            "dry_time": {
+                "name": "Torktid"
+            },
+            "spin_speed": {
+                "name": "Centrifugering"
+            },
+            "temperature": {
+                "name": "Temperatur"
+            },
+            "remaining_time": {
+                "name": "Återstående tid"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Anti-veck"
+            },
+            "add_dish": {
+                "name": "Lägg till disk"
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Extra torrt"
+            },
+            "half_load": {
+                "name": "Halv last"
+            },
+            "open_door": {
+                "name": "Öppna lucka"
+            },
+            "three_in_one": {
+                "name": "3 i 1"
+            },
+            "preheat": {
+                "name": "Förvärma"
+            },
+            "dish_washer": {
+                "name": "Diskmaskin"
+            },
+            "tumble_dryer": {
+                "name": "Torktumlare"
+            },
+            "washing_machine": {
+                "name": "Tvättmaskin"
+            },
+            "washer_dryer": {
+                "name": "Tvätt-/torkmaskin"
+            },
+            "oven": {
+                "name": "Ugn"
+            },
+            "prewash": {
+                "name": "Förtvätt"
+            },
+            "pause": {
+                "name": "Pausa programmet"
+            },
+            "keep_fresh": {
+                "name": "Håll fräsch"
+            },
+            "delay_time": {
+                "name": "Fördröjd start"
+            },
+            "rapid_mode": {
+                "name": "Snabbläge"
+            },
+            "eco_mode": {
+                "name": "ECO-läge"
+            },
+            "10_degree_heating": {
+                "name": "10 °C uppvärmningsfunktion"
+            },
+            "self_clean": {
+                "name": "Självrengöring"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Tyst läge"
+            },
+            "night_mode": {
+                "name": "Nattläge"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Sköljning"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Sköljningar"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Sköljningar"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose_softener": {
+                "name": "Autodosering Sköljmedel"
+            },
+            "auto_dose_detergent": {
+                "name": "Autodosering Tvättmedel"
+            },
+            "good_night": {
+                "name": "Godnatt"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Kylskåp"
+            },
+            "touch_tone": {
+                "name": "Tryckljudsvolym"
+            },
+            "hygiene": {
+                "name": "Hygien plus"
+            },
+            "hood": {
+                "name": "Spisfläkt"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Lucklås"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Sköljning"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Sköljningar"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Sköljningar"
+            },
+            "good_night": {
+                "name": "Godnatt"
+            },
+            "anti_crease": {
+                "name": "Anti-veck"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "Centrifugering"
+            },
+            "still_hot": {
+                "name": "Fortfarande varm"
+            },
+            "pan_status": {
+                "name": "Panna"
+            },
+            "remote_control": {
+                "name": "Fjärrstyrning"
+            },
+            "rinse_aid": {
+                "name": "Spolglansnivå"
+            },
+            "salt_level": {
+                "name": "Saltnivå"
+            },
+            "door_open": {
+                "name": "Dörr öppen"
+            },
+            "connection": {
+                "name": "Apparatanslutning"
+            },
+            "child_lock": {
+                "name": "Barnlås"
+            },
+            "on": {
+                "name": "På"
+            },
+            "prewash": {
+                "name": "Förtvätt"
+            },
+            "buzzer": {
+                "name": "Cykelslut-signal"
+            },
+            "holiday_mode": {
+                "name": "Holiday-läge"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Dörr öppen Frys"
+            },
+            "fridge_door": {
+                "name": "Dörr öppen Kyl"
+            },
+            "filter_replacement": {
+                "name": "Filterbyte"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Induktionshäll"
+            },
+            "start_program": {
+                "name": "Program Start"
+            },
+            "stop_program": {
+                "name": "Program Stopp"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Energihantering"
+            },
+            "temperature": {
+                "name": "Temperatur"
+            },
+            "delay_time": {
+                "name": "Fördröjd start"
+            },
+            "water_hard": {
+                "name": "Vattenhårdhet"
+            },
+            "program_duration": {
+                "name": "Programlängd"
+            },
+            "target_temperature": {
+                "name": "Måltemperatur"
+            },
+            "rinse_iterations": {
+                "name": "Antal sköljningar"
+            },
+            "wash_time": {
+                "name": "Tvättintensitet"
+            },
+            "dry_time": {
+                "name": "Torktid"
+            },
+            "freezer_temp_sel": {
+                "name": "Måltemperatur Frys"
+            },
+            "fridge_temp_sel": {
+                "name": "Måltemperatur Kyl"
+            },
+            "my_zone_temp_sel": {
+                "name": "Måltemperatur My Zone"
+            },
+            "pollen_level": {
+                "name": "Pollennivå"
+            },
+            "aroma_time_on": {
+                "name": "Diffusor (PÅ)"
+            },
+            "aroma_time_off": {
+                "name": "Diffusor (AV)"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Luftkonditionering",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Program",
+                        "state": {
+                            "iot_10_heating": "10 °C uppvärmningsfunktion",
+                            "iot_auto": "Auto",
+                            "iot_cool": "Kyla",
+                            "iot_dry": "Avfuktning",
+                            "iot_fan": "Fläkt",
+                            "iot_heat": "Värme",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "Självrenande",
+                            "iot_self_clean": "Självrengöring",
+                            "iot_self_clean_56": "Steri-Clean 56°C",
+                            "iot_simple_start": "Start",
+                            "iot_uv": "UV",
+                            "iot_uv_and_auto": "UV + Auto",
+                            "iot_uv_and_cool": "UV + Kyla",
+                            "iot_uv_and_dry": "UV + Avfuktare",
+                            "iot_uv_and_fan": "UV + Fläkt",
+                            "iot_uv_and_heat": "UV + Värme"
+                        }
+                    }
+                }
+            },
+            "fridge": {
+                "name": "Kyl",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Kylskåpslägen",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_cool": "Super Cool",
+                            "holiday": "Semester",
+                            "no_mode": "Inget läge valt"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Frys",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Fryslägen",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Inget läge valt"
+                        }
+                    }
+                }
+            },
+            "oven": {
+                "name": "Ugn",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Program",
+                        "state": {
+                            "bakery": "Bakverk",
+                            "bakery_steam": "Bakning med ånga",
+                            "bottom_heating": "Bottenvärme",
+                            "bottom_heating_fan": "Bottenvärme + Fläkt",
+                            "bread": "Bröd",
+                            "bread_steam": "Ångat bröd",
+                            "combi": "Combi",
+                            "convection_fan": "Varmluft + Fläkt",
+                            "convection_fan_turnspit": "Varmluftsfläkt + Grillspett",
+                            "conventional": "Konventionell",
+                            "conventional_turnspit": "Statisk+Grillspett",
+                            "defrost": "Avfrostning",
+                            "descaling": "Kalkborttagning",
+                            "fish": "Fisk",
+                            "fish_steam": "Ångad fisk",
+                            "grill_cata": "Grill",
+                            "grill_fan_cata": "Grill Fläkt",
+                            "grill_fan_pyro": "Grill + Fläkt",
+                            "grill_pyro": "Grill",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Bröd",
+                            "iot_h20_clean": "h2O-clean",
+                            "leavening": "Jäsning",
+                            "low_temp_cooking": "Tillagning på låg temperatur",
+                            "low_temp_cooking_fish": "Tillagning på låg temperatur fisk",
+                            "low_temp_cooking_fish_steam": "Tillagning på låg temperatur ångad fisk",
+                            "low_temp_cooking_meat": "Tillagning på låg temperatur kött",
+                            "low_temp_cooking_meat_steam": "Tillagning på låg temperatur ångat kött",
+                            "low_temp_cooking_steam": "Tillagning på låg temperatur ånga",
+                            "meat": "Kött",
+                            "meat_steam": "Ångat kött",
+                            "multi_level": "Flernivå",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Pasta och bakning",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Pyrolys",
+                            "pyrolysis_plus": "Pyrolys +",
+                            "red_meat": "Rött kött",
+                            "red_meat_steam": "Ångat rött kött",
+                            "regenerate": "Regenerera",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super Grill",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Grönsaker",
+                            "vegetables_cata": "Grönsaker",
+                            "vegetables_pyro": "Grönsaker",
+                            "water_discharge": "Vattenutsläpp",
+                            "white_meat": "Vitt kött",
+                            "white_meat_steam": "Ångat vitt kött"
+                        }
+                    }
+                }
+            },
+            "my_zone": {
+                "name": "My Zone"
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Vinkällare",
+                        "state": {
+                            "iot_champagne": "Champagne",
+                            "iot_dessert": "Dessert",
+                            "iot_fortified": "Starkvin",
+                            "iot_rose": "Rosé",
+                            "iot_whisky": "Whisky",
+                            "red": "Rött",
+                            "sparkling": "Mousserande",
+                            "white": "Vitt"
+                        }
+                    }
+                }
+            }
+        },
+        "fan": {
+            "air_extraction": {
+                "name": "Luftutsug"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Lampa"
+            }
+        }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Logga in",
+                "data": {
+                    "email": "E-post",
+                    "password": "Lösenord"
+                }
+            }
+        }
+    }
+}

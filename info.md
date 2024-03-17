@@ -8,7 +8,7 @@ Home Assistant integration for [Haier's mobile app hOn](https://hon-smarthome.co
 
 ---
 
-[![Supported Languages](https://img.shields.io/badge/Languages-19-royalblue)](https://github.com/Andre0512/hon#supported-languages)
+[![Supported Languages](https://img.shields.io/badge/Languages-28-royalblue)](https://github.com/Andre0512/hon#supported-languages)
 [![Supported Appliances](https://img.shields.io/badge/Appliances-11-forestgreen)](https://github.com/Andre0512/hon#supported-appliances)
 [![Supported Models](https://img.shields.io/badge/Models-134-yellowgreen)](https://github.com/Andre0512/hon#supported-appliances)
 [![Supported Entities](https://img.shields.io/badge/Entities-320-crimson)](https://github.com/Andre0512/hon#supported-appliances)  
@@ -729,16 +729,22 @@ _If the integration is not in the list, you need to clear the browser cache._
 
 ## Supported Languages
 Translation of internal names like programs are available for all languages which are official supported by the hOn app:
+* 🇸🇦 Arabic
+* 🇧🇬 Bulgarian
 * 🇨🇳 Chinese
 * 🇭🇷 Croatian
 * 🇨🇿 Czech
+* 🇩🇰 Danish
 * 🇳🇱 Dutch
 * 🇬🇧 English
+* 🇫🇮 Finnish
 * 🇫🇷 French
 * 🇩🇪 German
 * 🇬🇷 Greek
 * 🇮🇱 Hebrew
+* 🇭🇺 Hungarian
 * 🇮🇹 Italian
+* 🇳🇴 Norwegian
 * 🇵🇱 Polish
 * 🇵🇹 Portuguese
 * 🇷🇴 Romanian
@@ -746,8 +752,11 @@ Translation of internal names like programs are available for all languages whic
 * 🇷🇸 Serbian
 * 🇸🇰 Slovak
 * 🇸🇮 Slovenian
+* 🇿🇦 Southern Ndebele
 * 🇪🇸 Spanish
+* 🇸🇪 Swedish
 * 🇹🇷 Turkish
+* 🇺🇦 Ukrainian
 
 ## Compatiblity
 Haier offers different apps for different markets. Some appliances are compatible with more than one app. This integration only supports appliances that can be controlled via hOn. Please download the hOn app and check compatibilty before you open an issue.   
