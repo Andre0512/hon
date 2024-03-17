@@ -284,6 +284,32 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             translation_key="on",
         ),
     ),
+    "FRE": (
+        HonBinarySensorEntityDescription(
+            key="quickModeZ1",
+            name="Super Cool",
+            icon="mdi:snowflake",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value=1,
+            translation_key="super_cool",
+        ),
+        HonBinarySensorEntityDescription(
+            key="quickModeZ2",
+            name="Super Freeze",
+            icon="mdi:snowflake-variant",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value=1,
+            translation_key="super_freeze",
+        ),
+        HonBinarySensorEntityDescription(
+            key="doorStatusZ2",
+            name="Door Status",
+            icon="mdi:fridge",
+            device_class=BinarySensorDeviceClass.DOOR,
+            on_value=1,
+            translation_key="door_open",
+        ),
+    ),
 }
 
 BINARY_SENSORS["WD"] = unique_entities(BINARY_SENSORS["WM"], BINARY_SENSORS["TD"])

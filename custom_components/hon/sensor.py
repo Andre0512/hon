@@ -780,6 +780,29 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             translation_key="air_quality",
         ),
     ),
+    "FRE": (
+        HonSensorEntityDescription(
+            key="tempEnv",
+            name="Room Temperature",
+            icon="mdi:home-thermometer-outline",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="room_temperature",
+        ),
+        HonSensorEntityDescription(
+            key="tempSelZ3",
+            name="Temperature",
+            icon="mdi:snowflake-thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
+        ),
+        HonSensorEntityDescription(
+            key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
+        ),
+    ),
 }
 SENSORS["WD"] = unique_entities(SENSORS["WM"], SENSORS["TD"])
 

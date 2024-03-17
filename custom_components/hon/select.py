@@ -184,6 +184,26 @@ SELECTS: dict[str, tuple[SelectEntityDescription, ...]] = {
             translation_key="mode",
         ),
     ),
+    "FRE": (
+        HonConfigSelectEntityDescription(
+            key="startProgram.program",
+            name="Program",
+            translation_key="programs_ref",
+        ),
+        HonConfigSelectEntityDescription(
+            key="startProgram.zone",
+            name="Zone",
+            icon="mdi:radiobox-marked",
+            translation_key="ref_zones",
+        ),
+        HonSelectEntityDescription(
+            key="settings.tempSelZ3",
+            name="Temperature",
+            icon="mdi:thermometer",
+            unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
+        ),
+    ),
 }
 
 SELECTS["WD"] = unique_entities(SELECTS["WM"], SELECTS["TD"])

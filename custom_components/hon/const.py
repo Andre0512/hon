@@ -29,6 +29,7 @@ APPLIANCES: dict[str, str] = {
     "AP": "Air Purifier",
     "AS": "Air Scanner",
     "DW": "Dish Washer",
+    "FRE": "Freezer",
     "HO": "Hood",
     "IH": "Induction Hob",
     "MW": "Microwave",
@@ -70,16 +71,23 @@ HON_FAN: dict[int, str] = {
 
 # These languages are official supported by hOn
 LANGUAGES: list[str] = [
+    "ar",  # Arabic
+    "bg",  # Bulgarian
     "cs",  # Czech
+    "da",  # Danish
     "de",  # German
     "el",  # Greek
     "en",  # English
     "es",  # Spanish
+    "fi",  # Finnish
     "fr",  # French
     "he",  # Hebrew
     "hr",  # Croatian
+    "hu",  # Hungarian
     "it",  # Italian
+    "nb",  # Norwegian
     "nl",  # Dutch
+    "nr",  # Southern Ndebele
     "pl",  # Polish
     "pt",  # Portuguese
     "ro",  # Romanian
@@ -87,7 +95,9 @@ LANGUAGES: list[str] = [
     "sk",  # Slovak
     "sl",  # Slovenian
     "sr",  # Serbian
+    "sv",  # Swedish
     "tr",  # Turkish
+    "uk",  # Ukrainian
     "zh",  # Chinese
 ]
 

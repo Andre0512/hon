@@ -375,6 +375,20 @@ SWITCHES: dict[str, tuple[SwitchEntityDescription, ...]] = {
             translation_key="touch_tone",
         ),
     ),
+    "FRE": (
+        HonSwitchEntityDescription(
+            key="quickModeZ2",
+            name="Super Freeze",
+            icon="mdi:snowflake-variant",
+            translation_key="super_freeze",
+        ),
+        HonSwitchEntityDescription(
+            key="quickModeZ1",
+            name="Super Cool",
+            icon="mdi:snowflake",
+            translation_key="super_cool",
+        ),
+    ),
 }
 
 SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["WM"])
