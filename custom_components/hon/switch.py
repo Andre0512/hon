@@ -414,9 +414,9 @@ async def async_setup_entry(
                 entity = HonConfigSwitchEntity(hass, entry, device, description)
             elif isinstance(description, HonControlSwitchEntityDescription):
                 if not (
-                        device.get(description.key) is not None
-                        or description.turn_on_key in list(device.commands)
-                        or description.turn_off_key in list(device.commands)
+                    device.get(description.key) is not None
+                    or description.turn_on_key in list(device.commands)
+                    or description.turn_off_key in list(device.commands)
                 ):
                     continue
                 entity = HonControlSwitchEntity(hass, entry, device, description)
