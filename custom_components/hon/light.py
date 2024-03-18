@@ -42,6 +42,13 @@ LIGHTS: dict[str, tuple[LightEntityDescription, ...]] = {
             translation_key="light",
         ),
     ),
+    "DW": (
+        LightEntityDescription(
+            key="settings.lightStatus",
+            name="Light status",
+            translation_key="light",
+        ),
+    ),
 }
 
 

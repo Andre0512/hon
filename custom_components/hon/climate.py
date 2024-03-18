@@ -153,7 +153,9 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
             SWING_BOTH,
         ]
         self._attr_supported_features = (
-            ClimateEntityFeature.TARGET_TEMPERATURE
+            ClimateEntityFeature.TURN_ON
+            | ClimateEntityFeature.TURN_OFF
+            | ClimateEntityFeature.TARGET_TEMPERATURE
             | ClimateEntityFeature.FAN_MODE
             | ClimateEntityFeature.SWING_MODE
             | ClimateEntityFeature.PRESET_MODE
@@ -295,11 +297,17 @@ class HonClimateEntity(HonEntity, ClimateEntity):
     ) -> None:
         super().__init__(hass, entry, device, description)
 
+        self._attr_supported_features = (
+                ClimateEntityFeature.TURN_ON
+                | ClimateEntityFeature.TARGET_TEMPERATURE
+            )
+
         self._attr_temperature_unit = UnitOfTemperature.CELSIUS
         self._set_temperature_bound()
 
         self._attr_hvac_modes = [description.mode]
         if "stopProgram" in device.commands:
+            self._attr_supported_features |= ClimateEntityFeature.TURN_OFF
             self._attr_hvac_modes += [HVACMode.OFF]
             modes = []
         else:
@@ -317,13 +325,8 @@ class HonClimateEntity(HonEntity, ClimateEntity):
                 modes.append(mode)
 
         if modes:
-            self._attr_supported_features = (
-                ClimateEntityFeature.TARGET_TEMPERATURE
-                | ClimateEntityFeature.PRESET_MODE
-            )
+            self._attr_supported_features |= ClimateEntityFeature.PRESET_MODE
             self._attr_preset_modes = modes
-        else:
-            self._attr_supported_features = ClimateEntityFeature.TARGET_TEMPERATURE
 
         self._handle_coordinator_update(update=False)
 
