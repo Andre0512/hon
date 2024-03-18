@@ -298,9 +298,8 @@ class HonClimateEntity(HonEntity, ClimateEntity):
         super().__init__(hass, entry, device, description)
 
         self._attr_supported_features = (
-                ClimateEntityFeature.TURN_ON
-                | ClimateEntityFeature.TARGET_TEMPERATURE
-            )
+            ClimateEntityFeature.TURN_ON | ClimateEntityFeature.TARGET_TEMPERATURE
+        )
 
         self._attr_temperature_unit = UnitOfTemperature.CELSIUS
         self._set_temperature_bound()
