@@ -324,7 +324,6 @@ async def async_setup_entry(
             if device.get(description.key) is None:
                 continue
             entity = HonBinarySensorEntity(hass, entry, device, description)
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
     async_add_entities(entities)
 

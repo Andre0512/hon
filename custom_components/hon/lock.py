@@ -37,7 +37,6 @@ async def async_setup_entry(
             ):
                 continue
             entity = HonLockEntity(hass, entry, device, description)
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
 
     async_add_entities(entities)

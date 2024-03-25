@@ -120,7 +120,6 @@ async def async_setup_entry(
                 entity = HonClimateEntity(hass, entry, device, description)
             else:
                 continue  # type: ignore[unreachable]
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
     async_add_entities(entities)
 

@@ -14,7 +14,7 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from pyhon.appliance import HonAppliance
 
-from .const import DOMAIN, UPDATE_INTERVAL
+from .const import DOMAIN
 from .typedefs import HonEntityDescription, HonOptionEntityDescription, T
 
 _LOGGER = logging.getLogger(__name__)
@@ -53,13 +53,13 @@ class HonCoordinator(DataUpdateCoordinator[None]):
             hass,
             _LOGGER,
             name=device.unique_id,
-            update_interval=timedelta(seconds=UPDATE_INTERVAL),
         )
         self._device = device
         self._info = HonInfo()
+        self._device.subscribe(self.async_set_updated_data)
 
     async def _async_update_data(self) -> None:
-        return await self._device.update()
+        return
 
     @property
     def info(self) -> HonInfo:
@@ -68,6 +68,7 @@ class HonCoordinator(DataUpdateCoordinator[None]):
 
 class HonEntity(CoordinatorEntity[HonCoordinator]):
     _attr_has_entity_name = True
+    _attr_should_poll = False
 
     def __init__(
         self,

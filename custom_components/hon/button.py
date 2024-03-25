@@ -64,11 +64,9 @@ async def async_setup_entry(
             if not device.commands.get(description.key):
                 continue
             entity = HonButtonEntity(hass, entry, device, description)
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
         entities.append(HonDeviceInfo(hass, entry, device))
         entities.append(HonDataArchive(hass, entry, device))
-        await entities[-1].coordinator.async_config_entry_first_refresh()
     async_add_entities(entities)
 
 
