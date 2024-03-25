@@ -9,7 +9,7 @@
   "iot_class": "cloud_push",
   "issue_tracker": "https://github.com/Andre0512/hon/issues",
   "requirements": [
-    "pyhOn==0.17.0"
+    "pyhOn==0.17.1"
   ],
-  "version": "0.14.0-beta.2"
+  "version": "0.14.0-beta.3"
 }
