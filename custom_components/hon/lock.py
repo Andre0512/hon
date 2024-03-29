@@ -76,7 +76,7 @@ class HonLockEntity(HonEntity, LockEntity):
         return (
             super().available
             and int(self._device.get("remoteCtrValid", 1)) == 1
-            and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
+            and self._device.connection
         )
 
     @callback
