@@ -12,7 +12,8 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import HomeAssistantType
 
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities
+from .entity import HonEntity
+from .util import unique_entities
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -319,7 +320,7 @@ async def async_setup_entry(
     hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities = []
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in BINARY_SENSORS.get(device.appliance_type, []):
             if device.get(description.key) is None:
                 continue

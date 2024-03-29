@@ -29,7 +29,8 @@ from homeassistant.helpers.typing import HomeAssistantType
 
 from . import const
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities, get_readable
+from .entity import HonEntity
+from .util import unique_entities, get_readable
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -812,7 +813,7 @@ async def async_setup_entry(
 ) -> None:
     entities = []
     entity: HonSensorEntity | HonConfigSensorEntity
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in SENSORS.get(device.appliance_type, []):
             if isinstance(description, HonSensorEntityDescription):
                 if device.get(description.key) is None:

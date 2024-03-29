@@ -16,7 +16,8 @@ from pyhon.appliance import HonAppliance
 from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities
+from .entity import HonEntity
+from .util import unique_entities
 
 
 @dataclass(frozen=True)
@@ -210,7 +211,7 @@ async def async_setup_entry(
 ) -> None:
     entities = []
     entity: HonNumberEntity | HonConfigNumberEntity
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in NUMBERS.get(device.appliance_type, []):
             if description.key not in device.available_settings:
                 continue
@@ -256,7 +257,7 @@ class HonNumberEntity(HonEntity, NumberEntity):
         await self._device.commands[command].send()
         if command != "settings":
             self._device.sync_command(command, "settings")
-        await self.coordinator.async_refresh()
+        self.async_write_ha_state()
 
     @callback
     def _handle_coordinator_update(self, update: bool = True) -> None:
@@ -307,7 +308,7 @@ class HonConfigNumberEntity(HonEntity, NumberEntity):
         setting = self._device.settings[self.entity_description.key]
         if isinstance(setting, HonParameterRange):
             setting.value = value
-        await self.coordinator.async_refresh()
+        self.async_write_ha_state()
 
     @property
     def available(self) -> bool:

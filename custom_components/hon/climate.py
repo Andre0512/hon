@@ -26,7 +26,7 @@ from pyhon.appliance import HonAppliance
 from pyhon.parameter.range import HonParameterRange
 
 from .const import HON_HVAC_MODE, HON_FAN, DOMAIN, HON_HVAC_PROGRAM
-from .hon import HonEntity
+from .entity import HonEntity
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -108,7 +108,7 @@ async def async_setup_entry(
 ) -> None:
     entities = []
     entity: HonClimateEntity | HonACClimateEntity
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in CLIMATES.get(device.appliance_type, []):
             if isinstance(description, HonACClimateEntityDescription):
                 if description.key not in list(device.commands):
@@ -223,7 +223,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         self._device.sync_command("startProgram", "settings")
         self._set_temperature_bound()
         self._handle_coordinator_update(update=False)
-        await self.coordinator.async_refresh()
+        self.async_write_ha_state()
         self._attr_preset_mode = preset_mode
         await self._device.commands["startProgram"].send()
         self.async_write_ha_state()
@@ -390,7 +390,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
         self._device.sync_command(command, "settings")
         self._set_temperature_bound()
         self._attr_preset_mode = preset_mode
-        await self.coordinator.async_refresh()
+        self.async_write_ha_state()
         await self._device.commands[command].send()
         self.async_write_ha_state()
 

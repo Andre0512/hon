@@ -10,7 +10,7 @@ from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
-from .hon import HonEntity
+from .entity import HonEntity
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -29,7 +29,7 @@ async def async_setup_entry(
     hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities = []
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in LOCKS.get(device.appliance_type, []):
             if (
                 f"settings.{description.key}" not in device.available_settings
@@ -58,7 +58,7 @@ class HonLockEntity(HonEntity, LockEntity):
         setting.value = setting.max if isinstance(setting, HonParameterRange) else 1
         self.async_write_ha_state()
         await self._device.commands["settings"].send()
-        await self.coordinator.async_refresh()
+        self.async_write_ha_state()
 
     async def async_unlock(self, **kwargs: Any) -> None:
         """Unlock method."""
@@ -68,7 +68,7 @@ class HonLockEntity(HonEntity, LockEntity):
         setting.value = setting.min if isinstance(setting, HonParameterRange) else 0
         self.async_write_ha_state()
         await self._device.commands["settings"].send()
-        await self.coordinator.async_refresh()
+        self.async_write_ha_state()
 
     @property
     def available(self) -> bool:

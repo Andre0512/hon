@@ -10,7 +10,7 @@ from homeassistant.helpers.typing import HomeAssistantType
 from pyhon.appliance import HonAppliance
 
 from .const import DOMAIN
-from .hon import HonEntity
+from .entity import HonEntity
 from .typedefs import HonButtonType
 
 _LOGGER = logging.getLogger(__name__)
@@ -59,7 +59,7 @@ async def async_setup_entry(
     hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities: list[HonButtonType] = []
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in BUTTONS.get(device.appliance_type, []):
             if not device.commands.get(description.key):
                 continue
@@ -96,19 +96,14 @@ class HonDeviceInfo(HonEntity, ButtonEntity):
         self._attr_icon = "mdi:information"
         self._attr_name = "Show Device Info"
         self._attr_entity_category = EntityCategory.DIAGNOSTIC
-        if "beta" not in self.coordinator.info.hon_version:
-            self._attr_entity_registry_enabled_default = False
+        self._attr_entity_registry_enabled_default = False
 
     async def async_press(self) -> None:
-        versions = "versions:\n"
-        versions += f"  hon: {self.coordinator.info.hon_version}\n"
-        versions += f"  pyhOn: {self.coordinator.info.pyhon_version}\n"
-        info = f"{self._device.diagnose}{versions}"
         title = f"{self._device.nick_name} Device Info"
         persistent_notification.create(
-            self._hass, f"````\n```\n{info}\n```\n````", title
+            self._hass, f"````\n```\n{self._device.diagnose}\n```\n````", title
         )
-        _LOGGER.info(info.replace(" ", "\u200B "))
+        _LOGGER.info(self._device.diagnose.replace(" ", "\u200B "))
 
 
 class HonDataArchive(HonEntity, ButtonEntity):
@@ -121,8 +116,7 @@ class HonDataArchive(HonEntity, ButtonEntity):
         self._attr_icon = "mdi:archive-arrow-down"
         self._attr_name = "Create Data Archive"
         self._attr_entity_category = EntityCategory.DIAGNOSTIC
-        if "beta" not in self.coordinator.info.hon_version:
-            self._attr_entity_registry_enabled_default = False
+        self._attr_entity_registry_enabled_default = False
 
     async def async_press(self) -> None:
         if (config_dir := self._hass.config.config_dir) is None:
