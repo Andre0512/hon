@@ -42,10 +42,12 @@ class HonEntity(CoordinatorEntity[DataUpdateCoordinator[dict[str, Any]]]):
     def device_info(self) -> DeviceInfo:
         return DeviceInfo(
             identifiers={(DOMAIN, self._device.unique_id)},
-            manufacturer=self._device.get("brand", ""),
+            manufacturer=self._device.get("brand", "").capitalize(),
             name=self._device.nick_name,
             model=self._device.model_name,
             sw_version=self._device.get("fwVersion", ""),
+            hw_version=f"{self._device.appliance_type}{self._device.model_id}",
+            serial_number=self._device.get("serialNumber", "")
         )
 
     @callback
