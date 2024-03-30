@@ -36,7 +36,7 @@ async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry) -> bool
         password=entry.data[CONF_PASSWORD],
         mobile_id=MOBILE_ID,
         session=session,
-        # test_data_path=Path(config_dir),
+        test_data_path=Path(config_dir),
         refresh_token=entry.data.get(CONF_REFRESH_TOKEN, ""),
     ).create()
 

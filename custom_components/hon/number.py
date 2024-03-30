@@ -257,7 +257,7 @@ class HonNumberEntity(HonEntity, NumberEntity):
         await self._device.commands[command].send()
         if command != "settings":
             self._device.sync_command(command, "settings")
-        self.coordinator.async_set_updated_data(None)
+        self.coordinator.async_set_updated_data({})
 
     @callback
     def _handle_coordinator_update(self, update: bool = True) -> None:
@@ -308,7 +308,7 @@ class HonConfigNumberEntity(HonEntity, NumberEntity):
         setting = self._device.settings[self.entity_description.key]
         if isinstance(setting, HonParameterRange):
             setting.value = value
-        self.coordinator.async_set_updated_data(None)
+        self.coordinator.async_set_updated_data({})
 
     @property
     def available(self) -> bool:
