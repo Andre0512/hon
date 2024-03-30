@@ -232,7 +232,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         self._device.sync_command("startProgram", "settings")
         self._set_temperature_bound()
         self._handle_coordinator_update(update=False)
-        self.async_write_ha_state()
+        self.coordinator.async_set_updated_data(None)
         self._attr_preset_mode = preset_mode
         await self._device.commands["startProgram"].send()
         self.async_write_ha_state()
@@ -408,7 +408,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
         self._device.sync_command(command, "settings")
         self._set_temperature_bound()
         self._attr_preset_mode = preset_mode
-        self.async_write_ha_state()
+        self.coordinator.async_set_updated_data(None)
         await self._device.commands[command].send()
         self.async_write_ha_state()
 
