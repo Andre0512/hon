@@ -300,7 +300,7 @@ class HonConfigNumberEntity(HonEntity, NumberEntity):
 
     @property
     def native_value(self) -> float | None:
-        if value := self._device.settings[self.entity_description.key].value:
+        if (value := self._device.settings[self.entity_description.key].value) != "":
             return float(value)
         return None
 
