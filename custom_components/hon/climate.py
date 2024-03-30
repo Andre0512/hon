@@ -126,6 +126,7 @@ async def async_setup_entry(
 
 class HonACClimateEntity(HonEntity, ClimateEntity):
     entity_description: HonACClimateEntityDescription
+    _enable_turn_on_off_backwards_compatibility = False
 
     def __init__(
         self,
@@ -211,6 +212,14 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
             await self._device.commands["settings"].send()
         self.async_write_ha_state()
 
+    async def async_turn_on(self, **kwargs: Any) -> None:
+        await self._device.commands["startProgram"].send()
+        self._device.sync_command("startProgram", "settings")
+
+    async def async_turn_off(self, **kwargs: Any) -> None:
+        await self._device.commands["stopProgram"].send()
+        self._device.sync_command("stopProgram", "settings")
+
     @property
     def preset_mode(self) -> str | None:
         """Return the current Preset for this channel."""
@@ -286,6 +295,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
 
 class HonClimateEntity(HonEntity, ClimateEntity):
     entity_description: HonClimateEntityDescription
+    _enable_turn_on_off_backwards_compatibility = False
 
     def __init__(
         self,
@@ -362,6 +372,14 @@ class HonClimateEntity(HonEntity, ClimateEntity):
             await self._device.commands["startProgram"].send()
         self._attr_hvac_mode = hvac_mode
         self.async_write_ha_state()
+
+    async def async_turn_on(self) -> None:
+        """Set the HVAC State to on."""
+        await self._device.commands["startProgram"].send()
+
+    async def async_turn_off(self) -> None:
+        """Set the HVAC State to off."""
+        await self._device.commands["stopProgram"].send()
 
     @property
     def preset_mode(self) -> str | None:
