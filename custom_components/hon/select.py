@@ -13,7 +13,8 @@ from homeassistant.helpers.typing import HomeAssistantType
 
 from . import const
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities, get_readable
+from .entity import HonEntity
+from .util import unique_entities, get_readable
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -184,6 +185,26 @@ SELECTS: dict[str, tuple[SelectEntityDescription, ...]] = {
             translation_key="mode",
         ),
     ),
+    "FRE": (
+        HonConfigSelectEntityDescription(
+            key="startProgram.program",
+            name="Program",
+            translation_key="programs_ref",
+        ),
+        HonConfigSelectEntityDescription(
+            key="startProgram.zone",
+            name="Zone",
+            icon="mdi:radiobox-marked",
+            translation_key="ref_zones",
+        ),
+        HonSelectEntityDescription(
+            key="settings.tempSelZ3",
+            name="Temperature",
+            icon="mdi:thermometer",
+            unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
+        ),
+    ),
 }
 
 SELECTS["WD"] = unique_entities(SELECTS["WM"], SELECTS["TD"])
@@ -194,7 +215,7 @@ async def async_setup_entry(
 ) -> None:
     entities = []
     entity: HonSelectEntity | HonConfigSelectEntity
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in SELECTS.get(device.appliance_type, []):
             if description.key not in device.available_settings:
                 continue
@@ -204,7 +225,6 @@ async def async_setup_entry(
                 entity = HonConfigSelectEntity(hass, entry, device, description)
             else:
                 continue
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
     async_add_entities(entities)
 
@@ -243,7 +263,7 @@ class HonConfigSelectEntity(HonEntity, SelectEntity):
     async def async_select_option(self, option: str) -> None:
         setting = self._device.settings[self.entity_description.key]
         setting.value = self._option_to_number(option, setting.values)
-        await self.coordinator.async_refresh()
+        self.coordinator.async_set_updated_data({})
 
     @callback
     def _handle_coordinator_update(self, update: bool = True) -> None:
@@ -297,7 +317,7 @@ class HonSelectEntity(HonEntity, SelectEntity):
         await self._device.commands[command].send()
         if command != "settings":
             self._device.sync_command(command, "settings")
-        await self.coordinator.async_refresh()
+        self.coordinator.async_set_updated_data({})
 
     @property
     def available(self) -> bool:
@@ -305,7 +325,7 @@ class HonSelectEntity(HonEntity, SelectEntity):
         return (
             super().available
             and int(self._device.get("remoteCtrValid", 1)) == 1
-            and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
+            and self._device.connection
         )
 
     @callback

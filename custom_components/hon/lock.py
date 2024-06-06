@@ -10,7 +10,7 @@ from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
-from .hon import HonEntity
+from .entity import HonEntity
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -29,7 +29,7 @@ async def async_setup_entry(
     hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities = []
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in LOCKS.get(device.appliance_type, []):
             if (
                 f"settings.{description.key}" not in device.available_settings
@@ -37,7 +37,6 @@ async def async_setup_entry(
             ):
                 continue
             entity = HonLockEntity(hass, entry, device, description)
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
 
     async_add_entities(entities)
@@ -59,7 +58,7 @@ class HonLockEntity(HonEntity, LockEntity):
         setting.value = setting.max if isinstance(setting, HonParameterRange) else 1
         self.async_write_ha_state()
         await self._device.commands["settings"].send()
-        await self.coordinator.async_refresh()
+        self.coordinator.async_set_updated_data({})
 
     async def async_unlock(self, **kwargs: Any) -> None:
         """Unlock method."""
@@ -69,7 +68,7 @@ class HonLockEntity(HonEntity, LockEntity):
         setting.value = setting.min if isinstance(setting, HonParameterRange) else 0
         self.async_write_ha_state()
         await self._device.commands["settings"].send()
-        await self.coordinator.async_refresh()
+        self.coordinator.async_set_updated_data({})
 
     @property
     def available(self) -> bool:
@@ -77,7 +76,7 @@ class HonLockEntity(HonEntity, LockEntity):
         return (
             super().available
             and int(self._device.get("remoteCtrValid", 1)) == 1
-            and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
+            and self._device.connection
         )
 
     @callback

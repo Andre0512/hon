@@ -13,7 +13,8 @@ from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities
+from .entity import HonEntity
+from .util import unique_entities
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -269,6 +270,12 @@ SWITCHES: dict[str, tuple[SwitchEntityDescription, ...]] = {
             icon="mdi:volume-off",
             translation_key="buzzer",
         ),
+        HonConfigSwitchEntityDescription(
+            key="startProgram.tabStatus",
+            name="Tab Status",
+            icon="mdi:silverware-clean",
+            # translation_key="buzzer",
+        ),
     ),
     "AC": (
         HonSwitchEntityDescription(
@@ -375,6 +382,20 @@ SWITCHES: dict[str, tuple[SwitchEntityDescription, ...]] = {
             translation_key="touch_tone",
         ),
     ),
+    "FRE": (
+        HonSwitchEntityDescription(
+            key="quickModeZ2",
+            name="Super Freeze",
+            icon="mdi:snowflake-variant",
+            translation_key="super_freeze",
+        ),
+        HonSwitchEntityDescription(
+            key="quickModeZ1",
+            name="Super Cool",
+            icon="mdi:snowflake",
+            translation_key="super_cool",
+        ),
+    ),
 }
 
 SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["WM"])
@@ -386,7 +407,7 @@ async def async_setup_entry(
 ) -> None:
     entities = []
     entity: HonConfigSwitchEntity | HonControlSwitchEntity | HonSwitchEntity
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in SWITCHES.get(device.appliance_type, []):
             if isinstance(description, HonConfigSwitchEntityDescription):
                 if description.key not in device.available_settings:
@@ -406,7 +427,6 @@ async def async_setup_entry(
                 entity = HonSwitchEntity(hass, entry, device, description)
             else:
                 continue
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
 
     async_add_entities(entities)
@@ -427,7 +447,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         setting.value = setting.max if isinstance(setting, HonParameterRange) else 1
         self.async_write_ha_state()
         await self._device.commands["settings"].send()
-        await self.coordinator.async_refresh()
+        self.coordinator.async_set_updated_data({})
 
     async def async_turn_off(self, **kwargs: Any) -> None:
         setting = self._device.settings[f"settings.{self.entity_description.key}"]
@@ -436,7 +456,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
         setting.value = setting.min if isinstance(setting, HonParameterRange) else 0
         self.async_write_ha_state()
         await self._device.commands["settings"].send()
-        await self.coordinator.async_refresh()
+        self.coordinator.async_set_updated_data({})
 
     @property
     def available(self) -> bool:
@@ -469,14 +489,14 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         self._device.sync_command(self.entity_description.turn_on_key, "settings")
-        await self.coordinator.async_refresh()
+        self.coordinator.async_set_updated_data({})
         await self._device.commands[self.entity_description.turn_on_key].send()
         self._device.attributes[self.entity_description.key] = True
         self.async_write_ha_state()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
         self._device.sync_command(self.entity_description.turn_off_key, "settings")
-        await self.coordinator.async_refresh()
+        self.coordinator.async_set_updated_data({})
         await self._device.commands[self.entity_description.turn_off_key].send()
         self._device.attributes[self.entity_description.key] = False
         self.async_write_ha_state()
@@ -487,7 +507,7 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
         return (
             super().available
             and int(self._device.get("remoteCtrValid", 1)) == 1
-            and self._device.get("attributes.lastConnEvent.category") != "DISCONNECTED"
+            and self._device.connection
         )
 
     @property
@@ -521,16 +541,16 @@ class HonConfigSwitchEntity(HonEntity, SwitchEntity):
         if type(setting) == HonParameter:
             return
         setting.value = setting.max if isinstance(setting, HonParameterRange) else "1"
+        self.coordinator.async_set_updated_data({})
         self.async_write_ha_state()
-        await self.coordinator.async_refresh()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
         setting = self._device.settings[self.entity_description.key]
         if type(setting) == HonParameter:
             return
         setting.value = setting.min if isinstance(setting, HonParameterRange) else "0"
+        self.coordinator.async_set_updated_data({})
         self.async_write_ha_state()
-        await self.coordinator.async_refresh()
 
     @callback
     def _handle_coordinator_update(self, update: bool = True) -> None:

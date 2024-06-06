@@ -1,0 +1,2208 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "ready": "Valmis",
+                    "running": "Ohjelma käynnissä",
+                    "pause": "Keskeytä",
+                    "scheduled": "Ajastettu",
+                    "error": "Virhe",
+                    "test": "Test",
+                    "ending": "Pysäytetään ohjelma…"
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Automaattinen",
+                    "cool": "Viilennys",
+                    "dry": "Kuivaus",
+                    "heat": "Lämmitys",
+                    "fan": "Puhallin"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "ready": "Valmis",
+                    "spin": "Linkous",
+                    "rinse": "Huuhtelu",
+                    "drying": "Kuivaus",
+                    "steam": "Höyry",
+                    "weighting": "Punnitus",
+                    "scheduled": "Ajastettu",
+                    "tumbling": "Raikastus",
+                    "refresh": "Raikastus",
+                    "heating": "Lämmitys",
+                    "washing": "Pesu"
+                },
+                "name": "Vaihe"
+            },
+            "program_phases_td": {
+                "state": {
+                    "ready": "Valmis",
+                    "heat_stroke": "Kuivaus",
+                    "drying": "Kuivaus",
+                    "cooldown": "Jäähdytys",
+                    "unknown": "unknown",
+                    "tumbling": "Raikastus"
+                },
+                "name": "Vaihe"
+            },
+            "program_phases_dw": {
+                "state": {
+                    "ready": "Valmis",
+                    "prewash": "Esipesu",
+                    "washing": "Pesu",
+                    "rinse": "Huuhtelu",
+                    "drying": "Kuivaus",
+                    "hot_rinse": "Lämmin huuhtelu"
+                },
+                "name": "Vaihe"
+            },
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Ei kuivausta",
+                    "iron_dry": "Silitys",
+                    "no_dry_iron": "Kuiva, ei silitystä",
+                    "cupboard_dry": "Kaappikuiva",
+                    "extra_dry": "Erittäin kuiva",
+                    "ready_to_wear": "Valmis puettavaksi"
+                },
+                "name": "Kuivaustaso"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Hieman",
+                    "normal": "Normaali",
+                    "very": "Erittäin",
+                    "unknown": "unknown"
+                },
+                "name": "Likaisuusaste"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Ei höyryä",
+                    "cotton": "Puuvilla",
+                    "delicate": "Hienopesu",
+                    "synthetic": "Synteettiset kuidut"
+                },
+                "name": "Höyryn taso"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Matala",
+                    "mid": "Keskitaso",
+                    "high": "Korkea"
+                },
+                "name": "Kosteustaso"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10 °C:n lämmitystoiminto",
+                    "iot_auto": "Automaattinen",
+                    "iot_cool": "Viilennys",
+                    "iot_dry": "Kuivaus",
+                    "iot_fan": "Puhallin",
+                    "iot_heat": "Lämmitys",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Itsepuhdistus",
+                    "iot_self_clean": "Itsepuhdistus",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Käynnistä",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + automaattinen",
+                    "iot_uv_and_cool": "UV + viilennys",
+                    "iot_uv_and_dry": "UV + kosteudenpoisto",
+                    "iot_uv_and_fan": "UV + tuuletin",
+                    "iot_uv_and_heat": "UV + lämmitys"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_dw": {
+                "state": {
+                    "59_min": "Pika 59'",
+                    "auto_care": "Auto Care",
+                    "auto_care_soil": "Auto Care",
+                    "auto_plus": "AutoPlus",
+                    "auto_plus_soil": "Auto Plus Soil",
+                    "auto_rapid_soil": "Auto Rapid Soil",
+                    "auto_sensor": "Auto Sensor",
+                    "auto_sensor_soil": "Auto Sensor",
+                    "auto_universal": "Auto Universal 50 - 60°C",
+                    "auto_universal_plus": "Auto Universal+ 65 - 75°C",
+                    "auto_universal_plus_soil": "Auto Universal+ 65 - 75°C",
+                    "auto_universal_soil": "Auto Universal 50 - 60°C",
+                    "auto_wash": "Auto Wash",
+                    "auto_wash_soil": "Auto Wash",
+                    "classe_a_59": "A Pesu 59' 65°C",
+                    "delicate": "Hellävarainen 45°C",
+                    "dishwasher_care": "Kalkinpoisto",
+                    "eco": "Eco",
+                    "eco_asynch": "Eco 45°C",
+                    "eco_bldc": "Eco 45°C",
+                    "eco_synch": "Eco 45°C",
+                    "gentle_wash": "Gentle wash",
+                    "glass": "Lasi",
+                    "glassware": "Glassware 45°C",
+                    "glass_care": "Glass Care",
+                    "hygiene": "Hygiene",
+                    "hygiene_plus": "Hygienia+ 75°C",
+                    "intensive": "Tehopesu",
+                    "intensive_rapid": "Nopea tehopesu",
+                    "iot_auto_sensor": "Auto Sensor",
+                    "iot_auto_universal_soil": "Auto Universal 50 - 60°C",
+                    "iot_auto_wash_soil": "Auto Wash",
+                    "iot_baby_care": "Baby Care",
+                    "iot_breakfast": "Aamiainen",
+                    "iot_checkup": "Tarkastus",
+                    "iot_china_crystals": "Posliini- ja kristalliastiat",
+                    "iot_classe_a_59": "Pika 59'",
+                    "iot_cocktail_glasses": "Coktaillasit",
+                    "iot_cocktail_glasses_soil": "Coktaillasit",
+                    "iot_daily_care": "Päivittäinen pesu",
+                    "iot_daily_care_soil": "Päivittäinen pesu",
+                    "iot_delicate": "Hellävarainen 45°C",
+                    "iot_dinner_for_two": "Illallinen kahdelle",
+                    "iot_dinner_for_two_soil": "Illallinen kahdelle",
+                    "iot_dreft_quick_cycle": "Dreft Quick",
+                    "iot_eco_asynch": "Eco 45°C",
+                    "iot_eco_bldc": "Eco 45°C",
+                    "iot_eco_synch": "Eco 45°C",
+                    "iot_extra_hygiene": "Extra-hygienia",
+                    "iot_fairy_quick_cycle": "Fairy Short",
+                    "iot_happy_hour": "Happy Hour",
+                    "iot_jar_quick_cycle": "Jar Quick",
+                    "iot_party": "Juhlat",
+                    "iot_party_soil": "Juhlat",
+                    "iot_pizza_menu": "Pizza",
+                    "iot_pizza_menu_soil": "Pizza",
+                    "iot_plastic_tupperware": "Muovi ja Tupperware",
+                    "iot_porcelain": "Posliini",
+                    "iot_power_mix_wash": "Tehopesu kaikille astioille",
+                    "iot_power_mix_wash_soil": "Tehopesu kaikille astioille",
+                    "iot_prewash": "Esipesu",
+                    "iot_pyrex_and_glassware": "Pyrex- ja lasiastiat",
+                    "iot_rapid_29": "Pika 29'",
+                    "iot_rapid_39": "Pika 39' 60°C",
+                    "iot_single": "Yksi henkilö",
+                    "iot_steam": "Höyry 75°C",
+                    "iot_super_flash": "Huippunopea",
+                    "iot_super_wash": "Superpesu",
+                    "iot_turbopower": "TurboPower",
+                    "iot_universal": "Yleispesu 60°C",
+                    "iot_voice_automatic": "Automatic",
+                    "iot_voice_delicate": "Hellävarainen 45°C",
+                    "iot_voice_eco": "Eco 45°C",
+                    "iot_voice_intensive": "Tehopesu 75°C",
+                    "iot_voice_prewash": "Esipesu",
+                    "iot_voice_rapid_59": "Pika 59'",
+                    "iot_voice_universal": "Yleispesu 60°C",
+                    "iot_wok_grids_maxi_pans": "Erikoispannut (wokki- ja parilapannut ja suurikokoiset pannut)",
+                    "iot_wok_grids_maxi_pans_soil": "Erikoispannut (wokki- ja parilapannut ja suurikokoiset pannut)",
+                    "iot_yes_quick_cycle": "Yes Quick",
+                    "night": "Yö 55°C",
+                    "prewash": "Esipesu",
+                    "rapid_20": "Pika 20'",
+                    "rapid_24": "Pika 24'",
+                    "rapid_29": "Pika 29' 50°C",
+                    "rapid_35": "Wash&Dry 35'",
+                    "rapid_39": "Pika 39' 60°C",
+                    "rapid_49": "Pika 49'",
+                    "rapid_59": "Pika 59'",
+                    "sanitising": "Desinfiointi",
+                    "silence": "Silence",
+                    "silent": "Yö",
+                    "silent_care": "Silent Care",
+                    "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
+                    "special": "Erikoisohjelma",
+                    "special_pw_prz": "Erikoisohjelma",
+                    "steam": "Höyry 75°C",
+                    "steam_plus": "Höyry Plus 75°C",
+                    "total_care": "Total Care 50°C",
+                    "ultra_silence": "Erittäin hiljainen 55°C",
+                    "ultra_silent": "Erittäin hiljainen 55°C",
+                    "universal": "Yleispesu 60°C",
+                    "universal_plus": "Yleispesu Plus 70°C",
+                    "zone_wash": "Flex Zone Wash",
+                    "zoom_39": "Zoom 39 min"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_ih": {
+                "state": {
+                    "iot_special_ash_brown": "Tuhkanruskea",
+                    "iot_special_beef_fillet": "Naudanlihafilee",
+                    "iot_special_beef_veal_stew": "Naudan- ja vasikanlihapata",
+                    "iot_special_boiled_rice": "Keitetty riisi",
+                    "iot_special_chicken_breast": "Kananrinta",
+                    "iot_special_chicken_legs": "Kanankoivet",
+                    "iot_special_chocolate_pudding": "Suklaavanukas",
+                    "iot_special_entrecote": "Entrecote",
+                    "iot_special_fresh_tuna": "Tuore tonnikala",
+                    "iot_special_grilled_vegetables": "Grillatut vihannekset",
+                    "iot_special_lamb_cutlet": "Lampaankyljykset",
+                    "iot_special_meatballs": "Lihapullat",
+                    "iot_special_minestrone": "Minestrone",
+                    "iot_special_mussels": "Sinisimpukat",
+                    "iot_special_omelette": "Munakas",
+                    "iot_special_pancakes": "Pannukakut",
+                    "iot_special_paris_style_peas": "Herneet Pariisin tapaan",
+                    "iot_special_poached_eggs": "Uppomunat",
+                    "iot_special_pork_fillet": "Porsaanfilee",
+                    "iot_special_pork_ribs": "Porsaan ribsit",
+                    "iot_special_prawns": "Katkaravut",
+                    "iot_special_quinoa": "Kvinoa",
+                    "iot_special_ratatouille": "Ratatouille",
+                    "iot_special_salmon_fillet": "Lohifilee",
+                    "iot_special_saute_potatoes": "Paistetut perunat",
+                    "iot_special_scallops": "Kampasimpukat",
+                    "iot_special_scrambled_eggs": "Munakokkeli",
+                    "iot_special_spelt": "Speltti",
+                    "iot_special_veggy_noodles": "Kasvisnuudelit",
+                    "iot_special_white_fish_fillet": "Vaalea kalafilee",
+                    "iot_standard_boiling": "Keittäminen",
+                    "iot_standard_frying": "Paistaminen",
+                    "iot_standard_keep_warm": "Lämpimänä pito",
+                    "iot_standard_melting": "Sulatus",
+                    "iot_standard_simmering": "Haudutus"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_ov": {
+                "state": {
+                    "bakery": "Leipominen",
+                    "bakery_steam": "Leipominen höyrytoimintoa käyttäen",
+                    "bottom_heating": "Alalämpö",
+                    "bottom_heating_fan": "Alalämpö + Tuuletin",
+                    "bread": "Leipä",
+                    "bread_steam": "Höyrytoiminnolla paistettu leipä",
+                    "combi": "Combi",
+                    "convection_fan": "Tavanomainen + puhallin",
+                    "convection_fan_turnspit": "Kiertoilma + puhallin + varras",
+                    "conventional": "Tavanomainen",
+                    "conventional_turnspit": "Tavanomainen + varras",
+                    "defrost": "Sulatus",
+                    "descaling": "Kalkinpoisto",
+                    "fish": "Kala",
+                    "fish_steam": "Höyrytoiminnolla paistettu kala",
+                    "grill_cata": "Grilli",
+                    "grill_fan_cata": "Grilli + puhallin",
+                    "grill_fan_pyro": "Grilli + puhallin",
+                    "grill_pyro": "Grilli",
+                    "h20_clean": "H2O-Clean",
+                    "iot_bread": "Leipä",
+                    "iot_h20_clean": "h2O clean",
+                    "leavening": "Kohotus",
+                    "low_temp_cooking": "Kypsennys alhaisessa lämpötilassa",
+                    "low_temp_cooking_fish": "Alhaisessa lämpötilassa kypsennetty kala",
+                    "low_temp_cooking_fish_steam": "Höyrytoiminnolla alhaisessa lämpötilassa kypsennetty kala",
+                    "low_temp_cooking_meat": "Alhaisessa lämpötilassa kypsennetty liha",
+                    "low_temp_cooking_meat_steam": "Höyrytoiminnolla alhaisessa lämpötilassa kypsennetty liha",
+                    "low_temp_cooking_steam": "Kypsennys alhaisessa lämpötilassa höyrytoiminnolla",
+                    "meat": "Liha",
+                    "meat_steam": "Höyrytoiminnolla kypsennetty liha",
+                    "multi_level": "Monitasoinen",
+                    "paella": "Paella",
+                    "pasta_and_bakery": "Pasta ja leivonnaiset",
+                    "pizza": "Pizza",
+                    "pyrolysis": "Pyrolyysi",
+                    "pyrolysis_plus": "Pyrolyysi +",
+                    "red_meat": "Punainen liha",
+                    "red_meat_steam": "Höyrytoiminnolla kypsennetty punainen liha",
+                    "regenerate": "Regenerointi",
+                    "soft_plus": "Soft+",
+                    "super_grill": "Super Grill",
+                    "tailor_bake": "Tailor Bake",
+                    "tailor_bake_cata": "Tailor Bake",
+                    "tailor_bake_pyro": "Tailor Bake",
+                    "vegetables": "Kasvikset",
+                    "vegetables_cata": "Kasvikset",
+                    "vegetables_pyro": "Kasvikset",
+                    "water_discharge": "Veden poisto",
+                    "white_meat": "Valkoinen liha",
+                    "white_meat_steam": "Höyrytoiminnolla kypsennetty valkoinen liha"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Active Dry",
+                    "allergy_care": "Antiallerginen",
+                    "all_in_one": "Kaikki yhdessä",
+                    "antiallergy": "Antiallerginen",
+                    "anti_odours": "Hajunpoisto",
+                    "auto_care": "Auto Care",
+                    "baby": "Vauva",
+                    "bed_quilt": "Päiväpeitto",
+                    "care_30": "Care 30",
+                    "care_45": "Care 45",
+                    "care_59": "Care 59",
+                    "coloured": "Kirjopyykki",
+                    "daily_45_min": "Päivittäinen 45'",
+                    "daily_perfect_59_min": "Täydellinen päivittäinen 59'",
+                    "darks_and_coloured": "Tumma ja kirjopyykki",
+                    "delicates": "Hienopesu",
+                    "duvet": "Pussilakana",
+                    "eco": "Eco-puuvilla",
+                    "ecospeed_cottons": "Ecospeed – puuvilla",
+                    "ecospeed_delicates": "Ecospeed – hienopesu",
+                    "ecospeed_mixed": "Ecospeed – sekoitekuidut",
+                    "extra_hygiene": "Extra-hygienia",
+                    "fitness": "Urheilu",
+                    "fresh_care": "Raikastus",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Pyyhkeet",
+                    "hqd_bed_sheets": "Lakanat",
+                    "hqd_bulky": "Suurikokoiset liinavaatteet",
+                    "hqd_casual": "Casual",
+                    "hqd_checkup": "Tarkastus",
+                    "hqd_cold_wind_30": "Tuuletus 30 minuuttia",
+                    "hqd_cold_wind_timing": "Tuuletus",
+                    "hqd_cotton": "Puuvilla",
+                    "hqd_curtain": "Verhot",
+                    "hqd_delicate": "Hienopesu",
+                    "hqd_diaper": "Vaipat",
+                    "hqd_duvet": "Pussilakana",
+                    "hqd_eco": "Eco",
+                    "hqd_feather": "Untuvatakit",
+                    "hqd_hot_wind_timing": "Kuuma ilma",
+                    "hqd_hygienic": "Hygienisointi",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro Vauvanvaatteet",
+                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro Isokokoinen pyykki",
+                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro Hienopesu",
+                    "hqd_i_refresh_pro_down": "I-Refresh Pro Untuva",
+                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro Paita",
+                    "hqd_i_refresh_pro_towel": "I-Refresh Pro Pyyhe",
+                    "hqd_i_refresh_pro_wool": "I-Refresh Pro Villa",
+                    "hqd_jacket": "Takit",
+                    "hqd_jeans": "Farkut",
+                    "hqd_luxury": "Luxury",
+                    "hqd_mix": "Sekoitekuidut",
+                    "hqd_night_dry": "Yökuivaus",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious Cure",
+                    "hqd_quick_20": "Pika 20",
+                    "hqd_quick_30": "Pika 30",
+                    "hqd_quick_dry": "Pikakuivaus",
+                    "hqd_quilt": "Peitteet",
+                    "hqd_refresh": "Raikastus",
+                    "hqd_school_uniform": "Koulupuku",
+                    "hqd_shirt": "Paidat",
+                    "hqd_shoes": "Kengät",
+                    "hqd_silk": "Silkki",
+                    "hqd_sports": "Urheilu",
+                    "hqd_synthetics": "Synteettiset materiaalit",
+                    "hqd_timer": "AJASTIN",
+                    "hqd_towel": "Pyyhkeet",
+                    "hqd_underwear": "Alusvaatteet",
+                    "hqd_warm_up": "Lämmitys",
+                    "hqd_wool": "Villa",
+                    "hqd_working_suit": "Työvaatteet",
+                    "hygiene": "Hygienia",
+                    "iot_checkup": "Tarkastus",
+                    "iot_dry_anti_mites": "Pölypunkkien poisto",
+                    "iot_dry_baby": "Vauva",
+                    "iot_dry_backpacks": "Reput",
+                    "iot_dry_bathrobe": "Kylpytakki",
+                    "iot_dry_bed_linen": "Liinavaatteet",
+                    "iot_dry_bed_quilt": "Päiväpeitto",
+                    "iot_dry_cotton": "Puuvilla",
+                    "iot_dry_cuddly_toys": "Pehmolelut",
+                    "iot_dry_curtains": "Verhot",
+                    "iot_dry_dehumidifier": "Kosteudenpoisto",
+                    "iot_dry_delicates": "Hienopesu",
+                    "iot_dry_delicate_tablecloths": "Herkästi vaurioituvat pöytäliinat",
+                    "iot_dry_denim_jeans": "Denim – farkut",
+                    "iot_dry_down_jacket": "Takki",
+                    "iot_dry_duvet": "Pussilakana",
+                    "iot_dry_easy_iron_cotton": "Helppo silitys",
+                    "iot_dry_easy_iron_synthetics": "Synteettisten kuitujen helppo silitys",
+                    "iot_dry_gym_fit": "Kuntosali- ja urheiluvaatteet",
+                    "iot_dry_lingerie": "Alusvaatteet",
+                    "iot_dry_mixed": "Sekoitekuidut",
+                    "iot_dry_playsuits": "Leikkipuvut",
+                    "iot_dry_rapid_30": "Pika 30'",
+                    "iot_dry_rapid_59": "Pika 59'",
+                    "iot_dry_refresh": "Raikastus",
+                    "iot_dry_regenerates_waterproof": "Vedenpitävien vaatteiden virkistys",
+                    "iot_dry_relax_creases": "Ryppyjen poisto",
+                    "iot_dry_shirts": "Paidat",
+                    "iot_dry_small_load": "Pieni täyttömäärä",
+                    "iot_dry_swimsuits_and_bikinis": "Uimapuvut ja bikinit",
+                    "iot_dry_synthetics": "Synteettiset materiaalit",
+                    "iot_dry_synthetic_dry": "Synteettisten materiaalien kuivaus",
+                    "iot_dry_tablecloths": "Pöytäliinat",
+                    "iot_dry_technical_fabrics": "Tekniset kankaat",
+                    "iot_dry_warm_embrace": "Lempeä kuivaus",
+                    "iot_dry_wool": "Villa",
+                    "jeans": "Farkut",
+                    "mix_and_dry": "Mix&Dry",
+                    "pets": "Lemmikkieläimet",
+                    "pre_iron": "Ennen silitystä",
+                    "rapid_30": "Pika 30'",
+                    "rapid_45": "Pika 45 min",
+                    "rapid_59": "Täydellinen pika 59 min",
+                    "refresh": "Raikastus",
+                    "relax_creases": "Ryppyjen poisto",
+                    "saving_30_min": "Eco 30'",
+                    "shirts": "Paidat",
+                    "shoes": "Kengät",
+                    "small_load": "Pieni täyttömäärä",
+                    "soft_care": "Hellävarainen kuivaus",
+                    "sport_plus": "Urheiluvaatteet",
+                    "super_easy_iron_misti": "Sekoitekankaiden helppo silitys",
+                    "super_easy_iron_xxl": "Sekoitekankaiden helppo silitys XXL",
+                    "super_fast_cottons": "Puuvillan supernopea kuivaus",
+                    "super_fast_delicates": "Herkkien materiaalien supernopea kuivaus",
+                    "synthetics": "Synteettiset",
+                    "total_care": "Total Care",
+                    "trainers": "Lenkkitossut",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Vedenpitävien vaatteiden virkistys",
+                    "whites": "Valkopyykki",
+                    "wool": "Villan kuivaus",
+                    "woolmark": "Villa",
+                    "xxl_load": "XXL-täyttö",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_wm": {
+                "state": {
+                    "20_degrees_coloured_cottons": "20° kirjopyykki ja puuvilla",
+                    "20_degrees_new_energy_label": "20 °C",
+                    "active_steam": "Höyry",
+                    "active_wash": "Aktiivinen pesu",
+                    "active_wash_steam": "Aktiivinen pesu + Höyry",
+                    "allergy_care": "Antiallerginen",
+                    "allergy_care_pro": "Antiallerginen Pro",
+                    "all_in_one_49": "Kaikki yhdessä 49'",
+                    "all_in_one_59": "Kaikki yhdessä 59'",
+                    "all_in_one_59_steam": "Aktiivinen pesu + Höyry",
+                    "autocare": "Automaattinen pesu",
+                    "autoclean": "Rummun puhdistaminen",
+                    "baby_60": "All Baby 60°C",
+                    "care_14": "Rapid Care 14'",
+                    "care_30": "Rapid Care 30'",
+                    "care_44": "Rapid Care 44'",
+                    "checkup": "Tarkastus",
+                    "colour_59": "Kirjopesu 59'",
+                    "colour_59_steam": "Kirjopesu 59' + höyry",
+                    "cottons": "Puuvilla",
+                    "cottons_prewash": "Puuvilla + esipesu",
+                    "cottons_steam": "Puuvilla + höyry",
+                    "cotton_care_59": "Cotton Care 59'",
+                    "cycle_ended": "Ohjelma päättyi",
+                    "delicate_59": "Hienopesu 59'",
+                    "delicate_silk": "Hienopesu ja silkki",
+                    "delicate_silk_steam": "Hienopesu ja silkki + höyry",
+                    "delicati_59": "Hienopesu 59'",
+                    "delicati_59_steam": "Hienopesu 59' + höyry",
+                    "drain_spin": "Tyhjennys + linkous",
+                    "easy_iron": "Helppo silitys",
+                    "eco_40_60_new_energy_label": "Eco 40-60",
+                    "extra_care": "Extra Care",
+                    "fitness": "Fitness Care",
+                    "fitness_care": "Fitness Care",
+                    "fresh_care": "Raikastus",
+                    "fresh_care_steam": "Raikastus + höyry",
+                    "handwash_wool": "Käsinpesu + villa",
+                    "high_dry": "Kuivaus korkeassa lämpötilassa",
+                    "hqd_20_degrees": "Puuvilla 20 ℃",
+                    "hqd_allergy": "Antiallerginen",
+                    "hqd_autoclean": "Rummun puhdistaminen",
+                    "hqd_babycare": "Baby Care",
+                    "hqd_checkup": "Tarkastus",
+                    "hqd_cottons": "Puuvilla",
+                    "hqd_delicate": "Hienopesu",
+                    "hqd_delicate_cradle": "Hienopesu",
+                    "hqd_dry": "Puuvillan kuivaus",
+                    "hqd_dry_synthetics": "Matalan lämpötilan kuivaus",
+                    "hqd_duvet": "Pussilakana",
+                    "hqd_eco_40_60_degrees": "Eco 40-60",
+                    "hqd_handwash_wool": "Villa",
+                    "hqd_i_refresh": "i-Refresh",
+                    "hqd_mix": "Sekoitekankaat",
+                    "hqd_quick_15": "Pika 15'",
+                    "hqd_quick_wash_57": "Pikapesu 57'",
+                    "hqd_rapid_wash_and_dry": "Pesu ja kuivaus",
+                    "hqd_refresh": "Raikastus",
+                    "hqd_rinse": "Huuhtelut",
+                    "hqd_shirts": "Paidat",
+                    "hqd_smart": "Smart A.I.",
+                    "hqd_spin": "Linkous",
+                    "hqd_sport": "Urheilu",
+                    "hqd_super_fast": "Supernopea 39'",
+                    "hqd_synthetic_and_coloured": "Synteettiset materiaalit",
+                    "hygiene_59": "Hygienia Plus 59'",
+                    "hygiene_60": "Hygienia 60°C",
+                    "hygiene_plus_59": "Hygienia Plus 59'",
+                    "hygiene_plus_59_min": "Hygienia Plus 59'",
+                    "hygiene_pro_49_min": "Hygienia Pro 49'",
+                    "hygiene_pro_steam": "Hygienia Pro + höyry",
+                    "intensive_40": "Tehopesu 40 °C",
+                    "intensive_40_steam": "Tehopesu 40 °C + höyry",
+                    "iot_active_steam": "Höyry",
+                    "iot_active_wash_steam": "Aktiivinen pesu + Höyry",
+                    "iot_allergy_care_pro": "Antiallerginen Pro",
+                    "iot_all_in_one_59_steam": "Aktiivinen pesu + Höyry",
+                    "iot_baby_60_steam": "All Baby 60°C",
+                    "iot_checkup": "Tarkastus",
+                    "iot_colour_59_steam": "Kirjopesu 59' + höyry",
+                    "iot_cottons_steam": "Puuvilla + höyry",
+                    "iot_delicate_silk_steam": "Hienopesu ja silkki + höyry",
+                    "iot_delicati_59_steam": "Hienopesu 59' + höyry",
+                    "iot_dry_air_refresh": "Ilmaraikastus",
+                    "iot_dry_anti_mites": "Pölypunkkien poisto",
+                    "iot_dry_baby": "Vauva",
+                    "iot_dry_backpacks": "Reput",
+                    "iot_dry_bathrobe": "Kylpytakit",
+                    "iot_dry_bed_linen": "Liinavaatteet",
+                    "iot_dry_cotton_dry": "Puuvillan kuivaus",
+                    "iot_dry_cuddly_toys": "Pehmolelut",
+                    "iot_dry_curtains": "Verhot",
+                    "iot_dry_dehumidifier": "Kosteudenpoisto",
+                    "iot_dry_delicates_antiallergy": "Hienopesu – antiallerginen",
+                    "iot_dry_delicate_tablecloths": "Herkästi vaurioituvat pöytäliinat",
+                    "iot_dry_denim_jeans": "Denim – farkut",
+                    "iot_dry_easy_iron_cotton": "Helppo silitys – puuvilla",
+                    "iot_dry_easy_iron_synthetics": "Helppo silitys – synteettiset kuidut",
+                    "iot_dry_gym_fit": "Kuntosali- ja urheiluvaatteet",
+                    "iot_dry_lingerie": "Alusvaatteet",
+                    "iot_dry_mixed_dry": "Sekoitekuitujen kuivaus",
+                    "iot_dry_rapid_60_min_delicates": "Pika 60' – hienopesu",
+                    "iot_dry_shirts": "Paidat",
+                    "iot_dry_swimsuits_and_bikinis": "Uimapuvut ja bikinit",
+                    "iot_dry_synthetics": "Synteettisten materiaalien kuivaus",
+                    "iot_dry_synthetic_dry": "Synteettisten materiaalien kuivaus",
+                    "iot_dry_tablecloths": "Pöytäliinat",
+                    "iot_dry_technical_fabrics": "Tekniset kankaat",
+                    "iot_dry_warm_embrace": "Lempeä kuivaus",
+                    "iot_dry_wool_dry": "Villan kuivaus",
+                    "iot_easy_iron": "Helppo silitys",
+                    "iot_fresh_care_steam": "Raikastus + höyry",
+                    "iot_hygiene_pro_steam": "Hygienia Pro + höyry",
+                    "iot_intensive_40_steam": "Tehopesu 40 °C + höyry",
+                    "iot_mixed_steam": "Sekoitekuidut + höyry",
+                    "iot_mix_and_colour_59_steam": "Sekoitekuidut ja kirjopyykki 59' + höyry",
+                    "iot_perfect_cotton_59_steam": "Täydellinen puuvilla 59' + höyry",
+                    "iot_rapid_a_class_60_steam": "Pika 59' A-luokka + höyry",
+                    "iot_resistant_cotton_steam": "Kestävä puuvilla + höyry",
+                    "iot_shirts_steam": "Paidat + höyry",
+                    "iot_single_item_steam": "Yksi vaate + höyry",
+                    "iot_smart_wash": "Smart Wash",
+                    "iot_soft_care_steam": "Soft Care + Steam",
+                    "iot_special_39_full_load_steam": "Erikoisohjelma 39' + höyry",
+                    "iot_steam_hygiene_plus": "Hygienia Plus + höyry",
+                    "iot_synthetic_and_coloured_steam": "Synteettiset kuidut ja kirjopyykki + höyry",
+                    "iot_wash_and_dry": "Pesu ja kuivaus",
+                    "iot_wash_anti_mites": "Pölypunkkien poisto",
+                    "iot_wash_anti_odor": "Hajunpoisto",
+                    "iot_wash_ariel_clean_cycle": "Ariel Ultimate Clean",
+                    "iot_wash_ariel_cold_cycle": "Ariel Cold Clean",
+                    "iot_wash_ariel_fresh_cycle": "Ariel Fresh Clean",
+                    "iot_wash_baby_sanitizer": "Desinfiointi",
+                    "iot_wash_baby_sanitizer_steam": "Desinfiointi + höyry",
+                    "iot_wash_backpacks": "Reput",
+                    "iot_wash_backpacks_zelig": "Reput",
+                    "iot_wash_bathrobe": "Kylpytakit ja pyyhkeet",
+                    "iot_wash_bathrobe_steam": "Kylpytakit ja pyyhkeet + höyry",
+                    "iot_wash_bed_linen": "Liinavaatteet",
+                    "iot_wash_bed_linen_steam": "Liinavaatteet + höyry",
+                    "iot_wash_bed_linen_zelig": "Liinavaatteet",
+                    "iot_wash_big_single_load": "Yhden isokokoisen vaatteen pesu",
+                    "iot_wash_bleaching": "Valkaisu",
+                    "iot_wash_blood_stains": "Veritahrat",
+                    "iot_wash_cashmere": "Kashmir",
+                    "iot_wash_chocolate_stains": "Suklaatahrat",
+                    "iot_wash_cold_wash": "Kylmä pesu",
+                    "iot_wash_colored": "Kirjopyykki",
+                    "iot_wash_colored_anti_stain": "Tahrojen poisto kirjopesussa",
+                    "iot_wash_colored_delicate": "Tahrojen poisto hienopesussa",
+                    "iot_wash_coloured": "Kirjopyykki",
+                    "iot_wash_coloured_bed_linen": "Värilliset vuodevaatteet",
+                    "iot_wash_coloured_bed_linen_steam": "Värilliset vuodevaatteet + höyry",
+                    "iot_wash_coloured_curtains": "Värilliset verhot",
+                    "iot_wash_coloured_shirts": "Värilliset paidat",
+                    "iot_wash_coloured_shirts_steam": "Värilliset paidat + höyry",
+                    "iot_wash_coloured_steam": "Kirjopyykki + höyry",
+                    "iot_wash_coloured_tableclothes": "Värilliset pöytäliinat",
+                    "iot_wash_coloured_tableclothes_steam": "Värilliset pöytäliinat + höyry",
+                    "iot_wash_cotton": "Puuvilla",
+                    "iot_wash_cotton_steam": "Puuvilla + höyry",
+                    "iot_wash_cuddly_toys": "Pehmolelut",
+                    "iot_wash_curtains": "Verhot",
+                    "iot_wash_curtains_steam": "Verhot + höyry",
+                    "iot_wash_curtains_zelig": "Verhot",
+                    "iot_wash_dark": "Tummat vaatteet",
+                    "iot_wash_darks_and_coloured_44": "Tummat ja värilliset 44'",
+                    "iot_wash_darks_and_coloured_59": "Tummat ja värilliset 59'",
+                    "iot_wash_darks_and_coloured_xl": "Tummat ja värilliset XL",
+                    "iot_wash_dark_steam": "Tummat + höyry",
+                    "iot_wash_dash_clean_cycle": "Dash Ultimate Clean",
+                    "iot_wash_dash_cold_cycle": "Dash Cold Clean",
+                    "iot_wash_dash_fresh_cycle": "Dash Fresh Clean",
+                    "iot_wash_delicate": "Hienopesu",
+                    "iot_wash_delicate_antiallergy": "Hienopesu – antiallerginen",
+                    "iot_wash_delicate_antiallergy_steam": "Hienopesu – antiallerginen + höyry",
+                    "iot_wash_delicate_antiallergy_zelig": "Hienopesu – antiallerginen",
+                    "iot_wash_delicate_colors": "Värillisten vaatteiden hienopesu",
+                    "iot_wash_delicate_colors_steam": "Värillisten vaatteiden hienopesu + höyry",
+                    "iot_wash_delicate_dark": "Tummien vaatteiden hienopesu",
+                    "iot_wash_delicate_steam": "Hienopesu + höyry",
+                    "iot_wash_delicate_tablecloths": "Herkästi vaurioituvat pöytäliinat",
+                    "iot_wash_delicate_tablecloths_steam": "Herkästi vaurioituvat pöytäliinat + höyry",
+                    "iot_wash_delicate_whites": "Valkoisten vaatteiden hienopesu",
+                    "iot_wash_denim_jeans": "Denim – farkut",
+                    "iot_wash_diving_suits": "Sukelluspuvut",
+                    "iot_wash_diving_suits_zelig": "Sukelluspuvut",
+                    "iot_wash_down_jackets": "Untuvatakit",
+                    "iot_wash_down_jackets_zelig": "Untuvatakit",
+                    "iot_wash_duvet": "Pussilakana",
+                    "iot_wash_fruit_stains": "Hedelmätahrat",
+                    "iot_wash_gym_fit": "Kuntosali- ja urheiluvaatteet",
+                    "iot_wash_handwash": "Käsinpesu",
+                    "iot_wash_handwash_colored": "Kirjopyykin käsinpesu",
+                    "iot_wash_handwash_dark": "Tummien vaatteiden käsinpesu",
+                    "iot_wash_lingerie": "Alusvaatteet",
+                    "iot_wash_masks_refresh": "Maskien raikastus",
+                    "iot_wash_masks_sanification": "Maskien desinfiointi",
+                    "iot_wash_masks_sanification_steam": "Maskien desinfiointi + höyry",
+                    "iot_wash_mats": "Matot",
+                    "iot_wash_men_s_trousers": "Housut",
+                    "iot_wash_mixed": "Sekoitekuidut",
+                    "iot_wash_mixed_steam": "Sekoitekuidut + höyry",
+                    "iot_wash_mix_and_coloured_44": "Sekoitekankaat ja värilliset 44'",
+                    "iot_wash_mix_and_coloured_59": "Sekoitekankaat ja värilliset 59'",
+                    "iot_wash_mix_and_coloured_xl": "Sekoitekankaat ja värilliset XL",
+                    "iot_wash_new_clothes": "Uudet vaatteet",
+                    "iot_wash_perfect_white": "Täydellisen valkoinen",
+                    "iot_wash_perfect_white_steam": "Täydellisen valkoinen + höyry",
+                    "iot_wash_pets": "Lemmikkieläinten tarvikkeet",
+                    "iot_wash_pets_hair_removal": "Lemmikkieläinten karvojen poisto",
+                    "iot_wash_pets_odours_stains_removal": "Lemmikkieläinten hajujen ja tahrojen poisto",
+                    "iot_wash_pets_steam": "Lemmikkieläinten tarvikkeet + höyry",
+                    "iot_wash_playsuits": "Leikkipuvut",
+                    "iot_wash_playsuits_steam": "Leikkipuvut + höyry",
+                    "iot_wash_quick_drum_cleaner": "Nopea rummun puhdistus",
+                    "iot_wash_rapid_14": "Pika 14'",
+                    "iot_wash_rapid_30": "Pika 30'",
+                    "iot_wash_rapid_44": "Pika 44'",
+                    "iot_wash_rapid_59": "Pika 59'",
+                    "iot_wash_rapid_59_steam": "Pika 59' + höyry",
+                    "iot_wash_refresh_14_min": "Raikastus 14'",
+                    "iot_wash_resistant_colored": "Kestävä kirjopyykki",
+                    "iot_wash_resistant_dark": "Kestävät tummat vaatteet",
+                    "iot_wash_resistant_whites": "Kestävät valkoiset vaatteet",
+                    "iot_wash_rinse": "Huuhtelut",
+                    "iot_wash_shirts": "Paidat",
+                    "iot_wash_shirts_steam": "Paidat + höyry",
+                    "iot_wash_silk": "Silkki",
+                    "iot_wash_ski_suit": "Hiihtopuvut",
+                    "iot_wash_ski_suit_zelig": "Hiihtopuvut",
+                    "iot_wash_spin": "Linkous",
+                    "iot_wash_sport": "Urheilu",
+                    "iot_wash_sport_anti_odor": "Hajunpoisto urheiluvaatteista",
+                    "iot_wash_sport_anti_odor_zelig": "Hajunpoisto urheiluvaatteista",
+                    "iot_wash_stains_remover": "Tahrojen poisto",
+                    "iot_wash_super_saving": "Supersäästö 49'",
+                    "iot_wash_swimsuits_and_bikinis": "Uimapuvut ja bikinit",
+                    "iot_wash_synthetic": "Synteettiset materiaalit",
+                    "iot_wash_synthetic_steam": "Synteettiset materiaalit + höyry",
+                    "iot_wash_tablecloths": "Pöytäliinat",
+                    "iot_wash_tablecloths_steam": "Pöytäliinat + höyry",
+                    "iot_wash_technical_fabrics": "Tekniset kankaat",
+                    "iot_wash_technical_fabrics_zelig": "Tekniset kankaat",
+                    "iot_wash_technical_jackets": "Tekniset takit",
+                    "iot_wash_technical_jackets_zelig": "Tekniset takit",
+                    "iot_wash_trainers": "Lenkkitossut",
+                    "iot_wash_whites": "Valkopyykki",
+                    "iot_wash_whites_44": "Valkopyykki 44'",
+                    "iot_wash_whites_59": "Valkopyykki 59'",
+                    "iot_wash_whites_xl": "Valkopyykki XL",
+                    "iot_wash_wine_stains": "Viinitahrat",
+                    "iot_wash_wool": "Villa",
+                    "jeans": "Farkut",
+                    "jeans_60": "Farkut",
+                    "low_dry": "Matalan lämpötilan kuivaus",
+                    "mixed": "Sekoitekuidut",
+                    "mixed_and_colored_59": "Sekoitekuidut ja värilliset 59'",
+                    "mixed_steam": "Sekoitekuidut + höyry",
+                    "mix_and_colour_59": "Sekoitekuidut ja värilliset 59'",
+                    "mix_and_colour_59_steam": "Sekoitekuidut ja kirjopyykki 59' + höyry",
+                    "night_and_day": "Yö ja päivä",
+                    "night_wash": "Yöpesu",
+                    "perfect_59": "Täydellinen 59'",
+                    "perfect_cotton_59": "Täydellinen puuvilla 59'",
+                    "perfect_cotton_59_steam": "Täydellinen puuvilla 59' + höyry",
+                    "perfect_whites_59": "Täydellisen valkoinen 59'",
+                    "rapid_14_min": "Pika 14'",
+                    "rapid_30_min": "Pika 30'",
+                    "rapid_44_min": "Pika 44'",
+                    "rapid_a_class_60": "Pika 59' A-luokka",
+                    "rapid_a_class_60_steam": "Pika 59' A-luokka + höyry",
+                    "rapid_wash_and_dry_59_min": "Pesu ja kuivaus 59'",
+                    "resistant_cotton": "Kestävä puuvilla",
+                    "resistant_cotton_steam": "Kestävä puuvilla + höyry",
+                    "rinse": "Huuhtelu",
+                    "shirts_steam": "Paidat + höyry",
+                    "silent_night": "Hiljainen yö",
+                    "single_item": "Yksittäinen tuote",
+                    "single_item_steam": "Yksi vaate + höyry",
+                    "smart_wash": "Smart Wash",
+                    "soft_care": "Hellävarainen kuivaus",
+                    "soft_care_steam": "Soft Care + Steam",
+                    "soft_care_steam_title": "Soft Care + Steam",
+                    "special_39": "Erikoisohjelma 39”",
+                    "special_39_full_load": "Erikoisohjelma 39”",
+                    "special_39_full_load_steam": "Erikoisohjelma 39' + höyry",
+                    "special_49": "Erikoisohjelma 49'",
+                    "sport_39": "Urheilu 39'",
+                    "sport_plus_29": "Urheilu Plus 29”",
+                    "sport_plus_39": "Urheilu Plus 39'",
+                    "steam_39": "Höyry 39'",
+                    "steam_care_pro": "Steam Care Pro",
+                    "steam_care_pro_cotton": "Steam Care Pro – puuvilla",
+                    "steam_care_pro_delicates": "Steam Care Pro – hienopesu",
+                    "steam_care_pro_synthetic": "Steam Care Pro – synteettiset kuidut",
+                    "steam_hygiene_plus": "Hygienia Plus + höyry",
+                    "synthetics": "Synteettiset materiaalit",
+                    "synthetic_and_coloured": "Synteettiset kuidut ja kirjopyykki",
+                    "synthetic_and_coloured_steam": "Synteettiset kuidut ja kirjopyykki + höyry",
+                    "tailored_resistant_cotton": "Tailored Resistant Cotton",
+                    "tailored_synthetic_and_coloured": "Tailored Synthetic Coloured",
+                    "total_care": "Total Care",
+                    "tumbling": "Pyöritys",
+                    "ultra_fresh": "Ultra Fresh",
+                    "wool": "Villa",
+                    "wool_and_delicates_49": "Villa ja hienopesu 49'",
+                    "wool_dry": "Villan kuivaus",
+                    "wool_soft_care": "Villa ja Soft Care"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "AUTO-SET",
+                    "cheese": "Juusto",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Eco-tila",
+                    "fruits": "Fruit",
+                    "fruits_and_veg": "Fruit&Veg",
+                    "fruit_and_veg": "Fruit&Veg",
+                    "holiday": "HOLIDAY",
+                    "keep_fresh": "0°C Fresh",
+                    "no_mode_selected": "Tilaa ei ole valittu",
+                    "quick_cool": "QUICK COOL",
+                    "quick_set": "Pika-asetus",
+                    "sea_food": "Ready to Cook Meal",
+                    "smart_mode_title": "Smart Mode",
+                    "soft_frozen": "Soft Freezing",
+                    "super_cool": "SUPER COOL",
+                    "super_freeze": "SUPER FREEZE",
+                    "tea": "Cold Drinks",
+                    "vegetables": "Vegetable",
+                    "zero_fresh": "0°C Fresh"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Samppanja",
+                    "iot_dessert": "Jälkiruoka",
+                    "iot_fortified": "Väkevä",
+                    "iot_rose": "Rosee",
+                    "iot_whisky": "Viski",
+                    "red": "Punainen",
+                    "sparkling": "Kuohuviini",
+                    "white": "Valkoinen"
+                }
+            },
+            "dry_time": {
+                "name": "Kuivausaika"
+            },
+            "power": {
+                "name": "Tehotaso"
+            },
+            "remaining_time": {
+                "name": "Jäljellä oleva aika"
+            },
+            "temperature": {
+                "name": "Lämpötila"
+            },
+            "water_efficiency": {
+                "name": "Vedenkäytön tehokkuus"
+            },
+            "water_saving": {
+                "name": "Vedensäästö"
+            },
+            "duration": {
+                "name": "Kesto"
+            },
+            "target_temperature": {
+                "name": "Tavoitelämpötila"
+            },
+            "spin_speed": {
+                "name": "Linkous"
+            },
+            "delay_time": {
+                "name": "Viivästetty käynnistys"
+            },
+            "suggested_load": {
+                "name": "Täyttömäärä"
+            },
+            "energy_label": {
+                "name": "Energiatehokkuus"
+            },
+            "det_dust": {
+                "name": "Jauhemainen pesuaine"
+            },
+            "det_liquid": {
+                "name": "Nestemäinen pesuaine"
+            },
+            "errors": {
+                "name": "Virhe"
+            },
+            "programs": {
+                "name": "Nykyinen ohjelma"
+            },
+            "room_temperature": {
+                "name": "Huoneenlämpötila"
+            },
+            "humidity": {
+                "name": "Kosteus"
+            },
+            "cycles_total": {
+                "name": "Ohjelmat Yhteensä"
+            },
+            "energy_total": {
+                "name": "Energiankulutus Yhteensä"
+            },
+            "water_total": {
+                "name": "Vedenkäytön tehokkuus Yhteensä"
+            },
+            "energy_current": {
+                "name": "Energiankulutus Nykyinen"
+            },
+            "water_current": {
+                "name": "Vedenkäytön tehokkuus Nykyinen"
+            },
+            "freezer_temp": {
+                "name": "Pakastimen lämpötila"
+            },
+            "fridge_temp": {
+                "name": "Jääkaapin lämpötila"
+            },
+            "voc": {
+                "name": "Kaasu (VOC)"
+            },
+            "filter_cleaning": {
+                "name": "Suodattimen puhdistus"
+            },
+            "filter_life": {
+                "name": "Suodattimen käyttöikä"
+            },
+            "air_quality": {
+                "name": "Ilmanlaatu"
+            },
+            "fan_speed": {
+                "name": "Puhaltimen nopeus"
+            }
+        },
+        "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Ei kuivausta",
+                    "iron_dry": "Silitys",
+                    "no_dry_iron": "Kuiva, ei silitystä",
+                    "cupboard_dry": "Kaappikuiva",
+                    "extra_dry": "Erittäin kuiva",
+                    "ready_to_wear": "Valmis puettavaksi"
+                },
+                "name": "Kuivaustaso"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Pois",
+                    "avoid_touch": "Vältä kosketusta",
+                    "follow_touch": "Seuraa",
+                    "unknown": "unknown"
+                },
+                "name": "Eco-pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Korkea",
+                    "mid": "Keskitaso",
+                    "low": "Matala",
+                    "auto": "Automaattinen"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Jääkaappi",
+                    "freezer": "Pakastin",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Jääkaappi & Pakastin"
+                },
+                "name": "Alue"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Ei höyryä",
+                    "cotton": "Puuvilla",
+                    "delicate": "Hienopesu",
+                    "synthetic": "Synteettiset kuidut"
+                },
+                "name": "Höyryn taso"
+            },
+            "mode": {
+                "state": {
+                    "standby": "Valmiustila",
+                    "sleep": "Yö",
+                    "auto": "Automaattinen",
+                    "allergens": "Allergeenit",
+                    "max": "Maksimi"
+                },
+                "name": "Tila"
+            },
+            "diffuser": {
+                "state": {
+                    "off": "Pois",
+                    "soft": "Pehmeä",
+                    "mid": "Keskitaso",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Mukauta"
+                },
+                "name": "Diffuusori"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Hieman",
+                    "normal": "Normaali",
+                    "very": "Erittäin",
+                    "unknown": "unknown"
+                },
+                "name": "Likaisuusaste"
+            },
+            "stain_type": {
+                "state": {
+                    "baby_food": "Baby food",
+                    "bean_paste": "Bean soup",
+                    "blood": "Blood",
+                    "blueberry": "Blueberry",
+                    "blue_ink": "Blue ink",
+                    "butter": "Butter",
+                    "chili_oil": "Chili oil",
+                    "chili_sauce": "Chili sauce",
+                    "chocolate": "Chocolate",
+                    "coffe": "Coffee",
+                    "coffee": "Coffee",
+                    "color_pencil": "Pencil",
+                    "cooking_oil": "Cooking oil",
+                    "curry": "Curry",
+                    "deodorant": "Deodorant",
+                    "egg": "Egg",
+                    "fruit": "Fruit",
+                    "glue": "Glue",
+                    "grass": "Grass",
+                    "ice_cream": "Ice cream",
+                    "ketchup": "Ketchup",
+                    "lip_gloss": "Lip gloss",
+                    "mayonnaise": "Mayonnaise",
+                    "mech_grease": "Mech grease",
+                    "milk": "Milk",
+                    "milk_tea": "Milk tea",
+                    "oil": "Oil",
+                    "oil_pastel": "Oil pastel",
+                    "perfume": "Perfume",
+                    "rust": "Rust",
+                    "shoe_cream": "Shoe cream",
+                    "soil": "Soil",
+                    "soy_sauce": "Soy sauce",
+                    "sweat": "Sweat",
+                    "tea": "Tea",
+                    "wine": "Wine",
+                    "unknown": "unknown"
+                },
+                "name": "Stain level"
+            },
+            "fan_horizontal": {
+                "state": {
+                    "position_1": "Kiinteä - Sijainti 1",
+                    "position_2": "Kiinteä - Sijainti 2",
+                    "position_3": "Kiinteä - Sijainti 3",
+                    "position_4": "Kiinteä - Sijainti 4",
+                    "position_5": "Kiinteä - Sijainti 5",
+                    "swing": "Keinu"
+                },
+                "name": "Puhaltimen suunta Vaakasuora"
+            },
+            "fan_vertical": {
+                "state": {
+                    "position_1": "Kiinteä - Sijainti 1",
+                    "position_2": "Kiinteä - Sijainti 2",
+                    "position_3": "Kiinteä - Sijainti 3",
+                    "position_4": "Kiinteä - Sijainti 4",
+                    "position_5": "Kiinteä - Sijainti 5",
+                    "swing": "Keinu"
+                },
+                "name": "Puhaltimen suunta Pystysuora"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "10 °C:n lämmitystoiminto",
+                    "iot_auto": "Automaattinen",
+                    "iot_cool": "Viilennys",
+                    "iot_dry": "Kuivaus",
+                    "iot_fan": "Puhallin",
+                    "iot_heat": "Lämmitys",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Itsepuhdistus",
+                    "iot_self_clean": "Itsepuhdistus",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Käynnistä",
+                    "iot_uv": "UV",
+                    "iot_uv_and_auto": "UV + automaattinen",
+                    "iot_uv_and_cool": "UV + viilennys",
+                    "iot_uv_and_dry": "UV + kosteudenpoisto",
+                    "iot_uv_and_fan": "UV + tuuletin",
+                    "iot_uv_and_heat": "UV + lämmitys"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_dw": {
+                "state": {
+                    "59_min": "Pika 59'",
+                    "auto_care": "Auto Care",
+                    "auto_care_soil": "Auto Care",
+                    "auto_plus": "AutoPlus",
+                    "auto_plus_soil": "Auto Plus Soil",
+                    "auto_rapid_soil": "Auto Rapid Soil",
+                    "auto_sensor": "Auto Sensor",
+                    "auto_sensor_soil": "Auto Sensor",
+                    "auto_universal": "Auto Universal 50 - 60°C",
+                    "auto_universal_plus": "Auto Universal+ 65 - 75°C",
+                    "auto_universal_plus_soil": "Auto Universal+ 65 - 75°C",
+                    "auto_universal_soil": "Auto Universal 50 - 60°C",
+                    "auto_wash": "Auto Wash",
+                    "auto_wash_soil": "Auto Wash",
+                    "classe_a_59": "A Pesu 59' 65°C",
+                    "delicate": "Hellävarainen 45°C",
+                    "dishwasher_care": "Kalkinpoisto",
+                    "eco": "Eco",
+                    "eco_asynch": "Eco 45°C",
+                    "eco_bldc": "Eco 45°C",
+                    "eco_synch": "Eco 45°C",
+                    "gentle_wash": "Gentle wash",
+                    "glass": "Lasi",
+                    "glassware": "Glassware 45°C",
+                    "glass_care": "Glass Care",
+                    "hygiene": "Hygiene",
+                    "hygiene_plus": "Hygienia+ 75°C",
+                    "intensive": "Tehopesu",
+                    "intensive_rapid": "Nopea tehopesu",
+                    "iot_auto_sensor": "Auto Sensor",
+                    "iot_auto_universal_soil": "Auto Universal 50 - 60°C",
+                    "iot_auto_wash_soil": "Auto Wash",
+                    "iot_baby_care": "Baby Care",
+                    "iot_breakfast": "Aamiainen",
+                    "iot_checkup": "Tarkastus",
+                    "iot_china_crystals": "Posliini- ja kristalliastiat",
+                    "iot_classe_a_59": "Pika 59'",
+                    "iot_cocktail_glasses": "Coktaillasit",
+                    "iot_cocktail_glasses_soil": "Coktaillasit",
+                    "iot_daily_care": "Päivittäinen pesu",
+                    "iot_daily_care_soil": "Päivittäinen pesu",
+                    "iot_delicate": "Hellävarainen 45°C",
+                    "iot_dinner_for_two": "Illallinen kahdelle",
+                    "iot_dinner_for_two_soil": "Illallinen kahdelle",
+                    "iot_dreft_quick_cycle": "Dreft Quick",
+                    "iot_eco_asynch": "Eco 45°C",
+                    "iot_eco_bldc": "Eco 45°C",
+                    "iot_eco_synch": "Eco 45°C",
+                    "iot_extra_hygiene": "Extra-hygienia",
+                    "iot_fairy_quick_cycle": "Fairy Short",
+                    "iot_happy_hour": "Happy Hour",
+                    "iot_jar_quick_cycle": "Jar Quick",
+                    "iot_party": "Juhlat",
+                    "iot_party_soil": "Juhlat",
+                    "iot_pizza_menu": "Pizza",
+                    "iot_pizza_menu_soil": "Pizza",
+                    "iot_plastic_tupperware": "Muovi ja Tupperware",
+                    "iot_porcelain": "Posliini",
+                    "iot_power_mix_wash": "Tehopesu kaikille astioille",
+                    "iot_power_mix_wash_soil": "Tehopesu kaikille astioille",
+                    "iot_prewash": "Esipesu",
+                    "iot_pyrex_and_glassware": "Pyrex- ja lasiastiat",
+                    "iot_rapid_29": "Pika 29'",
+                    "iot_rapid_39": "Pika 39' 60°C",
+                    "iot_single": "Yksi henkilö",
+                    "iot_steam": "Höyry 75°C",
+                    "iot_super_flash": "Huippunopea",
+                    "iot_super_wash": "Superpesu",
+                    "iot_turbopower": "TurboPower",
+                    "iot_universal": "Yleispesu 60°C",
+                    "iot_voice_automatic": "Automatic",
+                    "iot_voice_delicate": "Hellävarainen 45°C",
+                    "iot_voice_eco": "Eco 45°C",
+                    "iot_voice_intensive": "Tehopesu 75°C",
+                    "iot_voice_prewash": "Esipesu",
+                    "iot_voice_rapid_59": "Pika 59'",
+                    "iot_voice_universal": "Yleispesu 60°C",
+                    "iot_wok_grids_maxi_pans": "Erikoispannut (wokki- ja parilapannut ja suurikokoiset pannut)",
+                    "iot_wok_grids_maxi_pans_soil": "Erikoispannut (wokki- ja parilapannut ja suurikokoiset pannut)",
+                    "iot_yes_quick_cycle": "Yes Quick",
+                    "night": "Yö 55°C",
+                    "prewash": "Esipesu",
+                    "rapid_20": "Pika 20'",
+                    "rapid_24": "Pika 24'",
+                    "rapid_29": "Pika 29' 50°C",
+                    "rapid_35": "Wash&Dry 35'",
+                    "rapid_39": "Pika 39' 60°C",
+                    "rapid_49": "Pika 49'",
+                    "rapid_59": "Pika 59'",
+                    "sanitising": "Desinfiointi",
+                    "silence": "Silence",
+                    "silent": "Yö",
+                    "silent_care": "Silent Care",
+                    "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Smart AI",
+                    "special": "Erikoisohjelma",
+                    "special_pw_prz": "Erikoisohjelma",
+                    "steam": "Höyry 75°C",
+                    "steam_plus": "Höyry Plus 75°C",
+                    "total_care": "Total Care 50°C",
+                    "ultra_silence": "Erittäin hiljainen 55°C",
+                    "ultra_silent": "Erittäin hiljainen 55°C",
+                    "universal": "Yleispesu 60°C",
+                    "universal_plus": "Yleispesu Plus 70°C",
+                    "zone_wash": "Flex Zone Wash",
+                    "zoom_39": "Zoom 39 min"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_ih": {
+                "state": {
+                    "iot_special_ash_brown": "Tuhkanruskea",
+                    "iot_special_beef_fillet": "Naudanlihafilee",
+                    "iot_special_beef_veal_stew": "Naudan- ja vasikanlihapata",
+                    "iot_special_boiled_rice": "Keitetty riisi",
+                    "iot_special_chicken_breast": "Kananrinta",
+                    "iot_special_chicken_legs": "Kanankoivet",
+                    "iot_special_chocolate_pudding": "Suklaavanukas",
+                    "iot_special_entrecote": "Entrecote",
+                    "iot_special_fresh_tuna": "Tuore tonnikala",
+                    "iot_special_grilled_vegetables": "Grillatut vihannekset",
+                    "iot_special_lamb_cutlet": "Lampaankyljykset",
+                    "iot_special_meatballs": "Lihapullat",
+                    "iot_special_minestrone": "Minestrone",
+                    "iot_special_mussels": "Sinisimpukat",
+                    "iot_special_omelette": "Munakas",
+                    "iot_special_pancakes": "Pannukakut",
+                    "iot_special_paris_style_peas": "Herneet Pariisin tapaan",
+                    "iot_special_poached_eggs": "Uppomunat",
+                    "iot_special_pork_fillet": "Porsaanfilee",
+                    "iot_special_pork_ribs": "Porsaan ribsit",
+                    "iot_special_prawns": "Katkaravut",
+                    "iot_special_quinoa": "Kvinoa",
+                    "iot_special_ratatouille": "Ratatouille",
+                    "iot_special_salmon_fillet": "Lohifilee",
+                    "iot_special_saute_potatoes": "Paistetut perunat",
+                    "iot_special_scallops": "Kampasimpukat",
+                    "iot_special_scrambled_eggs": "Munakokkeli",
+                    "iot_special_spelt": "Speltti",
+                    "iot_special_veggy_noodles": "Kasvisnuudelit",
+                    "iot_special_white_fish_fillet": "Vaalea kalafilee",
+                    "iot_standard_boiling": "Keittäminen",
+                    "iot_standard_frying": "Paistaminen",
+                    "iot_standard_keep_warm": "Lämpimänä pito",
+                    "iot_standard_melting": "Sulatus",
+                    "iot_standard_simmering": "Haudutus"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_ov": {
+                "state": {
+                    "bakery": "Leipominen",
+                    "bakery_steam": "Leipominen höyrytoimintoa käyttäen",
+                    "bottom_heating": "Alalämpö",
+                    "bottom_heating_fan": "Alalämpö + Tuuletin",
+                    "bread": "Leipä",
+                    "bread_steam": "Höyrytoiminnolla paistettu leipä",
+                    "combi": "Combi",
+                    "convection_fan": "Tavanomainen + puhallin",
+                    "convection_fan_turnspit": "Kiertoilma + puhallin + varras",
+                    "conventional": "Tavanomainen",
+                    "conventional_turnspit": "Tavanomainen + varras",
+                    "defrost": "Sulatus",
+                    "descaling": "Kalkinpoisto",
+                    "fish": "Kala",
+                    "fish_steam": "Höyrytoiminnolla paistettu kala",
+                    "grill_cata": "Grilli",
+                    "grill_fan_cata": "Grilli + puhallin",
+                    "grill_fan_pyro": "Grilli + puhallin",
+                    "grill_pyro": "Grilli",
+                    "h20_clean": "H2O-Clean",
+                    "iot_bread": "Leipä",
+                    "iot_h20_clean": "h2O clean",
+                    "leavening": "Kohotus",
+                    "low_temp_cooking": "Kypsennys alhaisessa lämpötilassa",
+                    "low_temp_cooking_fish": "Alhaisessa lämpötilassa kypsennetty kala",
+                    "low_temp_cooking_fish_steam": "Höyrytoiminnolla alhaisessa lämpötilassa kypsennetty kala",
+                    "low_temp_cooking_meat": "Alhaisessa lämpötilassa kypsennetty liha",
+                    "low_temp_cooking_meat_steam": "Höyrytoiminnolla alhaisessa lämpötilassa kypsennetty liha",
+                    "low_temp_cooking_steam": "Kypsennys alhaisessa lämpötilassa höyrytoiminnolla",
+                    "meat": "Liha",
+                    "meat_steam": "Höyrytoiminnolla kypsennetty liha",
+                    "multi_level": "Monitasoinen",
+                    "paella": "Paella",
+                    "pasta_and_bakery": "Pasta ja leivonnaiset",
+                    "pizza": "Pizza",
+                    "pyrolysis": "Pyrolyysi",
+                    "pyrolysis_plus": "Pyrolyysi +",
+                    "red_meat": "Punainen liha",
+                    "red_meat_steam": "Höyrytoiminnolla kypsennetty punainen liha",
+                    "regenerate": "Regenerointi",
+                    "soft_plus": "Soft+",
+                    "super_grill": "Super Grill",
+                    "tailor_bake": "Tailor Bake",
+                    "tailor_bake_cata": "Tailor Bake",
+                    "tailor_bake_pyro": "Tailor Bake",
+                    "vegetables": "Kasvikset",
+                    "vegetables_cata": "Kasvikset",
+                    "vegetables_pyro": "Kasvikset",
+                    "water_discharge": "Veden poisto",
+                    "white_meat": "Valkoinen liha",
+                    "white_meat_steam": "Höyrytoiminnolla kypsennetty valkoinen liha"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Active Dry",
+                    "allergy_care": "Antiallerginen",
+                    "all_in_one": "Kaikki yhdessä",
+                    "antiallergy": "Antiallerginen",
+                    "anti_odours": "Hajunpoisto",
+                    "auto_care": "Auto Care",
+                    "baby": "Vauva",
+                    "bed_quilt": "Päiväpeitto",
+                    "care_30": "Care 30",
+                    "care_45": "Care 45",
+                    "care_59": "Care 59",
+                    "coloured": "Kirjopyykki",
+                    "daily_45_min": "Päivittäinen 45'",
+                    "daily_perfect_59_min": "Täydellinen päivittäinen 59'",
+                    "darks_and_coloured": "Tumma ja kirjopyykki",
+                    "delicates": "Hienopesu",
+                    "duvet": "Pussilakana",
+                    "eco": "Eco-puuvilla",
+                    "ecospeed_cottons": "Ecospeed – puuvilla",
+                    "ecospeed_delicates": "Ecospeed – hienopesu",
+                    "ecospeed_mixed": "Ecospeed – sekoitekuidut",
+                    "extra_hygiene": "Extra-hygienia",
+                    "fitness": "Urheilu",
+                    "fresh_care": "Raikastus",
+                    "genius": "Genius",
+                    "hqd_baby_care": "Baby Care",
+                    "hqd_bath_towel": "Pyyhkeet",
+                    "hqd_bed_sheets": "Lakanat",
+                    "hqd_bulky": "Suurikokoiset liinavaatteet",
+                    "hqd_casual": "Casual",
+                    "hqd_checkup": "Tarkastus",
+                    "hqd_cold_wind_30": "Tuuletus 30 minuuttia",
+                    "hqd_cold_wind_timing": "Tuuletus",
+                    "hqd_cotton": "Puuvilla",
+                    "hqd_curtain": "Verhot",
+                    "hqd_delicate": "Hienopesu",
+                    "hqd_diaper": "Vaipat",
+                    "hqd_duvet": "Pussilakana",
+                    "hqd_eco": "Eco",
+                    "hqd_feather": "Untuvatakit",
+                    "hqd_hot_wind_timing": "Kuuma ilma",
+                    "hqd_hygienic": "Hygienisointi",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro Vauvanvaatteet",
+                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro Isokokoinen pyykki",
+                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro Hienopesu",
+                    "hqd_i_refresh_pro_down": "I-Refresh Pro Untuva",
+                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro Paita",
+                    "hqd_i_refresh_pro_towel": "I-Refresh Pro Pyyhe",
+                    "hqd_i_refresh_pro_wool": "I-Refresh Pro Villa",
+                    "hqd_jacket": "Takit",
+                    "hqd_jeans": "Farkut",
+                    "hqd_luxury": "Luxury",
+                    "hqd_mix": "Sekoitekuidut",
+                    "hqd_night_dry": "Yökuivaus",
+                    "hqd_outdoor": "Outdoor",
+                    "hqd_precious_cure": "Precious Cure",
+                    "hqd_quick_20": "Pika 20",
+                    "hqd_quick_30": "Pika 30",
+                    "hqd_quick_dry": "Pikakuivaus",
+                    "hqd_quilt": "Peitteet",
+                    "hqd_refresh": "Raikastus",
+                    "hqd_school_uniform": "Koulupuku",
+                    "hqd_shirt": "Paidat",
+                    "hqd_shoes": "Kengät",
+                    "hqd_silk": "Silkki",
+                    "hqd_sports": "Urheilu",
+                    "hqd_synthetics": "Synteettiset materiaalit",
+                    "hqd_timer": "AJASTIN",
+                    "hqd_towel": "Pyyhkeet",
+                    "hqd_underwear": "Alusvaatteet",
+                    "hqd_warm_up": "Lämmitys",
+                    "hqd_wool": "Villa",
+                    "hqd_working_suit": "Työvaatteet",
+                    "hygiene": "Hygienia",
+                    "iot_checkup": "Tarkastus",
+                    "iot_dry_anti_mites": "Pölypunkkien poisto",
+                    "iot_dry_baby": "Vauva",
+                    "iot_dry_backpacks": "Reput",
+                    "iot_dry_bathrobe": "Kylpytakki",
+                    "iot_dry_bed_linen": "Liinavaatteet",
+                    "iot_dry_bed_quilt": "Päiväpeitto",
+                    "iot_dry_cotton": "Puuvilla",
+                    "iot_dry_cuddly_toys": "Pehmolelut",
+                    "iot_dry_curtains": "Verhot",
+                    "iot_dry_dehumidifier": "Kosteudenpoisto",
+                    "iot_dry_delicates": "Hienopesu",
+                    "iot_dry_delicate_tablecloths": "Herkästi vaurioituvat pöytäliinat",
+                    "iot_dry_denim_jeans": "Denim – farkut",
+                    "iot_dry_down_jacket": "Takki",
+                    "iot_dry_duvet": "Pussilakana",
+                    "iot_dry_easy_iron_cotton": "Helppo silitys",
+                    "iot_dry_easy_iron_synthetics": "Synteettisten kuitujen helppo silitys",
+                    "iot_dry_gym_fit": "Kuntosali- ja urheiluvaatteet",
+                    "iot_dry_lingerie": "Alusvaatteet",
+                    "iot_dry_mixed": "Sekoitekuidut",
+                    "iot_dry_playsuits": "Leikkipuvut",
+                    "iot_dry_rapid_30": "Pika 30'",
+                    "iot_dry_rapid_59": "Pika 59'",
+                    "iot_dry_refresh": "Raikastus",
+                    "iot_dry_regenerates_waterproof": "Vedenpitävien vaatteiden virkistys",
+                    "iot_dry_relax_creases": "Ryppyjen poisto",
+                    "iot_dry_shirts": "Paidat",
+                    "iot_dry_small_load": "Pieni täyttömäärä",
+                    "iot_dry_swimsuits_and_bikinis": "Uimapuvut ja bikinit",
+                    "iot_dry_synthetics": "Synteettiset materiaalit",
+                    "iot_dry_synthetic_dry": "Synteettisten materiaalien kuivaus",
+                    "iot_dry_tablecloths": "Pöytäliinat",
+                    "iot_dry_technical_fabrics": "Tekniset kankaat",
+                    "iot_dry_warm_embrace": "Lempeä kuivaus",
+                    "iot_dry_wool": "Villa",
+                    "jeans": "Farkut",
+                    "mix_and_dry": "Mix&Dry",
+                    "pets": "Lemmikkieläimet",
+                    "pre_iron": "Ennen silitystä",
+                    "rapid_30": "Pika 30'",
+                    "rapid_45": "Pika 45 min",
+                    "rapid_59": "Täydellinen pika 59 min",
+                    "refresh": "Raikastus",
+                    "relax_creases": "Ryppyjen poisto",
+                    "saving_30_min": "Eco 30'",
+                    "shirts": "Paidat",
+                    "shoes": "Kengät",
+                    "small_load": "Pieni täyttömäärä",
+                    "soft_care": "Hellävarainen kuivaus",
+                    "sport_plus": "Urheiluvaatteet",
+                    "super_easy_iron_misti": "Sekoitekankaiden helppo silitys",
+                    "super_easy_iron_xxl": "Sekoitekankaiden helppo silitys XXL",
+                    "super_fast_cottons": "Puuvillan supernopea kuivaus",
+                    "super_fast_delicates": "Herkkien materiaalien supernopea kuivaus",
+                    "synthetics": "Synteettiset",
+                    "total_care": "Total Care",
+                    "trainers": "Lenkkitossut",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "Vedenpitävien vaatteiden virkistys",
+                    "whites": "Valkopyykki",
+                    "wool": "Villan kuivaus",
+                    "woolmark": "Villa",
+                    "xxl_load": "XXL-täyttö",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_wm": {
+                "state": {
+                    "20_degrees_coloured_cottons": "20° kirjopyykki ja puuvilla",
+                    "20_degrees_new_energy_label": "20 °C",
+                    "active_steam": "Höyry",
+                    "active_wash": "Aktiivinen pesu",
+                    "active_wash_steam": "Aktiivinen pesu + Höyry",
+                    "allergy_care": "Antiallerginen",
+                    "allergy_care_pro": "Antiallerginen Pro",
+                    "all_in_one_49": "Kaikki yhdessä 49'",
+                    "all_in_one_59": "Kaikki yhdessä 59'",
+                    "all_in_one_59_steam": "Aktiivinen pesu + Höyry",
+                    "autocare": "Automaattinen pesu",
+                    "autoclean": "Rummun puhdistaminen",
+                    "baby_60": "All Baby 60°C",
+                    "care_14": "Rapid Care 14'",
+                    "care_30": "Rapid Care 30'",
+                    "care_44": "Rapid Care 44'",
+                    "checkup": "Tarkastus",
+                    "colour_59": "Kirjopesu 59'",
+                    "colour_59_steam": "Kirjopesu 59' + höyry",
+                    "cottons": "Puuvilla",
+                    "cottons_prewash": "Puuvilla + esipesu",
+                    "cottons_steam": "Puuvilla + höyry",
+                    "cotton_care_59": "Cotton Care 59'",
+                    "cycle_ended": "Ohjelma päättyi",
+                    "delicate_59": "Hienopesu 59'",
+                    "delicate_silk": "Hienopesu ja silkki",
+                    "delicate_silk_steam": "Hienopesu ja silkki + höyry",
+                    "delicati_59": "Hienopesu 59'",
+                    "delicati_59_steam": "Hienopesu 59' + höyry",
+                    "drain_spin": "Tyhjennys + linkous",
+                    "easy_iron": "Helppo silitys",
+                    "eco_40_60_new_energy_label": "Eco 40-60",
+                    "extra_care": "Extra Care",
+                    "fitness": "Fitness Care",
+                    "fitness_care": "Fitness Care",
+                    "fresh_care": "Raikastus",
+                    "fresh_care_steam": "Raikastus + höyry",
+                    "handwash_wool": "Käsinpesu + villa",
+                    "high_dry": "Kuivaus korkeassa lämpötilassa",
+                    "hqd_20_degrees": "Puuvilla 20 ℃",
+                    "hqd_allergy": "Antiallerginen",
+                    "hqd_autoclean": "Rummun puhdistaminen",
+                    "hqd_babycare": "Baby Care",
+                    "hqd_checkup": "Tarkastus",
+                    "hqd_cottons": "Puuvilla",
+                    "hqd_delicate": "Hienopesu",
+                    "hqd_delicate_cradle": "Hienopesu",
+                    "hqd_dry": "Puuvillan kuivaus",
+                    "hqd_dry_synthetics": "Matalan lämpötilan kuivaus",
+                    "hqd_duvet": "Pussilakana",
+                    "hqd_eco_40_60_degrees": "Eco 40-60",
+                    "hqd_handwash_wool": "Villa",
+                    "hqd_i_refresh": "i-Refresh",
+                    "hqd_mix": "Sekoitekankaat",
+                    "hqd_quick_15": "Pika 15'",
+                    "hqd_quick_wash_57": "Pikapesu 57'",
+                    "hqd_rapid_wash_and_dry": "Pesu ja kuivaus",
+                    "hqd_refresh": "Raikastus",
+                    "hqd_rinse": "Huuhtelut",
+                    "hqd_shirts": "Paidat",
+                    "hqd_smart": "Smart A.I.",
+                    "hqd_spin": "Linkous",
+                    "hqd_sport": "Urheilu",
+                    "hqd_super_fast": "Supernopea 39'",
+                    "hqd_synthetic_and_coloured": "Synteettiset materiaalit",
+                    "hygiene_59": "Hygienia Plus 59'",
+                    "hygiene_60": "Hygienia 60°C",
+                    "hygiene_plus_59": "Hygienia Plus 59'",
+                    "hygiene_plus_59_min": "Hygienia Plus 59'",
+                    "hygiene_pro_49_min": "Hygienia Pro 49'",
+                    "hygiene_pro_steam": "Hygienia Pro + höyry",
+                    "intensive_40": "Tehopesu 40 °C",
+                    "intensive_40_steam": "Tehopesu 40 °C + höyry",
+                    "iot_active_steam": "Höyry",
+                    "iot_active_wash_steam": "Aktiivinen pesu + Höyry",
+                    "iot_allergy_care_pro": "Antiallerginen Pro",
+                    "iot_all_in_one_59_steam": "Aktiivinen pesu + Höyry",
+                    "iot_baby_60_steam": "All Baby 60°C",
+                    "iot_checkup": "Tarkastus",
+                    "iot_colour_59_steam": "Kirjopesu 59' + höyry",
+                    "iot_cottons_steam": "Puuvilla + höyry",
+                    "iot_delicate_silk_steam": "Hienopesu ja silkki + höyry",
+                    "iot_delicati_59_steam": "Hienopesu 59' + höyry",
+                    "iot_dry_air_refresh": "Ilmaraikastus",
+                    "iot_dry_anti_mites": "Pölypunkkien poisto",
+                    "iot_dry_baby": "Vauva",
+                    "iot_dry_backpacks": "Reput",
+                    "iot_dry_bathrobe": "Kylpytakit",
+                    "iot_dry_bed_linen": "Liinavaatteet",
+                    "iot_dry_cotton_dry": "Puuvillan kuivaus",
+                    "iot_dry_cuddly_toys": "Pehmolelut",
+                    "iot_dry_curtains": "Verhot",
+                    "iot_dry_dehumidifier": "Kosteudenpoisto",
+                    "iot_dry_delicates_antiallergy": "Hienopesu – antiallerginen",
+                    "iot_dry_delicate_tablecloths": "Herkästi vaurioituvat pöytäliinat",
+                    "iot_dry_denim_jeans": "Denim – farkut",
+                    "iot_dry_easy_iron_cotton": "Helppo silitys – puuvilla",
+                    "iot_dry_easy_iron_synthetics": "Helppo silitys – synteettiset kuidut",
+                    "iot_dry_gym_fit": "Kuntosali- ja urheiluvaatteet",
+                    "iot_dry_lingerie": "Alusvaatteet",
+                    "iot_dry_mixed_dry": "Sekoitekuitujen kuivaus",
+                    "iot_dry_rapid_60_min_delicates": "Pika 60' – hienopesu",
+                    "iot_dry_shirts": "Paidat",
+                    "iot_dry_swimsuits_and_bikinis": "Uimapuvut ja bikinit",
+                    "iot_dry_synthetics": "Synteettisten materiaalien kuivaus",
+                    "iot_dry_synthetic_dry": "Synteettisten materiaalien kuivaus",
+                    "iot_dry_tablecloths": "Pöytäliinat",
+                    "iot_dry_technical_fabrics": "Tekniset kankaat",
+                    "iot_dry_warm_embrace": "Lempeä kuivaus",
+                    "iot_dry_wool_dry": "Villan kuivaus",
+                    "iot_easy_iron": "Helppo silitys",
+                    "iot_fresh_care_steam": "Raikastus + höyry",
+                    "iot_hygiene_pro_steam": "Hygienia Pro + höyry",
+                    "iot_intensive_40_steam": "Tehopesu 40 °C + höyry",
+                    "iot_mixed_steam": "Sekoitekuidut + höyry",
+                    "iot_mix_and_colour_59_steam": "Sekoitekuidut ja kirjopyykki 59' + höyry",
+                    "iot_perfect_cotton_59_steam": "Täydellinen puuvilla 59' + höyry",
+                    "iot_rapid_a_class_60_steam": "Pika 59' A-luokka + höyry",
+                    "iot_resistant_cotton_steam": "Kestävä puuvilla + höyry",
+                    "iot_shirts_steam": "Paidat + höyry",
+                    "iot_single_item_steam": "Yksi vaate + höyry",
+                    "iot_smart_wash": "Smart Wash",
+                    "iot_soft_care_steam": "Soft Care + Steam",
+                    "iot_special_39_full_load_steam": "Erikoisohjelma 39' + höyry",
+                    "iot_steam_hygiene_plus": "Hygienia Plus + höyry",
+                    "iot_synthetic_and_coloured_steam": "Synteettiset kuidut ja kirjopyykki + höyry",
+                    "iot_wash_and_dry": "Pesu ja kuivaus",
+                    "iot_wash_anti_mites": "Pölypunkkien poisto",
+                    "iot_wash_anti_odor": "Hajunpoisto",
+                    "iot_wash_ariel_clean_cycle": "Ariel Ultimate Clean",
+                    "iot_wash_ariel_cold_cycle": "Ariel Cold Clean",
+                    "iot_wash_ariel_fresh_cycle": "Ariel Fresh Clean",
+                    "iot_wash_baby_sanitizer": "Desinfiointi",
+                    "iot_wash_baby_sanitizer_steam": "Desinfiointi + höyry",
+                    "iot_wash_backpacks": "Reput",
+                    "iot_wash_backpacks_zelig": "Reput",
+                    "iot_wash_bathrobe": "Kylpytakit ja pyyhkeet",
+                    "iot_wash_bathrobe_steam": "Kylpytakit ja pyyhkeet + höyry",
+                    "iot_wash_bed_linen": "Liinavaatteet",
+                    "iot_wash_bed_linen_steam": "Liinavaatteet + höyry",
+                    "iot_wash_bed_linen_zelig": "Liinavaatteet",
+                    "iot_wash_big_single_load": "Yhden isokokoisen vaatteen pesu",
+                    "iot_wash_bleaching": "Valkaisu",
+                    "iot_wash_blood_stains": "Veritahrat",
+                    "iot_wash_cashmere": "Kashmir",
+                    "iot_wash_chocolate_stains": "Suklaatahrat",
+                    "iot_wash_cold_wash": "Kylmä pesu",
+                    "iot_wash_colored": "Kirjopyykki",
+                    "iot_wash_colored_anti_stain": "Tahrojen poisto kirjopesussa",
+                    "iot_wash_colored_delicate": "Tahrojen poisto hienopesussa",
+                    "iot_wash_coloured": "Kirjopyykki",
+                    "iot_wash_coloured_bed_linen": "Värilliset vuodevaatteet",
+                    "iot_wash_coloured_bed_linen_steam": "Värilliset vuodevaatteet + höyry",
+                    "iot_wash_coloured_curtains": "Värilliset verhot",
+                    "iot_wash_coloured_shirts": "Värilliset paidat",
+                    "iot_wash_coloured_shirts_steam": "Värilliset paidat + höyry",
+                    "iot_wash_coloured_steam": "Kirjopyykki + höyry",
+                    "iot_wash_coloured_tableclothes": "Värilliset pöytäliinat",
+                    "iot_wash_coloured_tableclothes_steam": "Värilliset pöytäliinat + höyry",
+                    "iot_wash_cotton": "Puuvilla",
+                    "iot_wash_cotton_steam": "Puuvilla + höyry",
+                    "iot_wash_cuddly_toys": "Pehmolelut",
+                    "iot_wash_curtains": "Verhot",
+                    "iot_wash_curtains_steam": "Verhot + höyry",
+                    "iot_wash_curtains_zelig": "Verhot",
+                    "iot_wash_dark": "Tummat vaatteet",
+                    "iot_wash_darks_and_coloured_44": "Tummat ja värilliset 44'",
+                    "iot_wash_darks_and_coloured_59": "Tummat ja värilliset 59'",
+                    "iot_wash_darks_and_coloured_xl": "Tummat ja värilliset XL",
+                    "iot_wash_dark_steam": "Tummat + höyry",
+                    "iot_wash_dash_clean_cycle": "Dash Ultimate Clean",
+                    "iot_wash_dash_cold_cycle": "Dash Cold Clean",
+                    "iot_wash_dash_fresh_cycle": "Dash Fresh Clean",
+                    "iot_wash_delicate": "Hienopesu",
+                    "iot_wash_delicate_antiallergy": "Hienopesu – antiallerginen",
+                    "iot_wash_delicate_antiallergy_steam": "Hienopesu – antiallerginen + höyry",
+                    "iot_wash_delicate_antiallergy_zelig": "Hienopesu – antiallerginen",
+                    "iot_wash_delicate_colors": "Värillisten vaatteiden hienopesu",
+                    "iot_wash_delicate_colors_steam": "Värillisten vaatteiden hienopesu + höyry",
+                    "iot_wash_delicate_dark": "Tummien vaatteiden hienopesu",
+                    "iot_wash_delicate_steam": "Hienopesu + höyry",
+                    "iot_wash_delicate_tablecloths": "Herkästi vaurioituvat pöytäliinat",
+                    "iot_wash_delicate_tablecloths_steam": "Herkästi vaurioituvat pöytäliinat + höyry",
+                    "iot_wash_delicate_whites": "Valkoisten vaatteiden hienopesu",
+                    "iot_wash_denim_jeans": "Denim – farkut",
+                    "iot_wash_diving_suits": "Sukelluspuvut",
+                    "iot_wash_diving_suits_zelig": "Sukelluspuvut",
+                    "iot_wash_down_jackets": "Untuvatakit",
+                    "iot_wash_down_jackets_zelig": "Untuvatakit",
+                    "iot_wash_duvet": "Pussilakana",
+                    "iot_wash_fruit_stains": "Hedelmätahrat",
+                    "iot_wash_gym_fit": "Kuntosali- ja urheiluvaatteet",
+                    "iot_wash_handwash": "Käsinpesu",
+                    "iot_wash_handwash_colored": "Kirjopyykin käsinpesu",
+                    "iot_wash_handwash_dark": "Tummien vaatteiden käsinpesu",
+                    "iot_wash_lingerie": "Alusvaatteet",
+                    "iot_wash_masks_refresh": "Maskien raikastus",
+                    "iot_wash_masks_sanification": "Maskien desinfiointi",
+                    "iot_wash_masks_sanification_steam": "Maskien desinfiointi + höyry",
+                    "iot_wash_mats": "Matot",
+                    "iot_wash_men_s_trousers": "Housut",
+                    "iot_wash_mixed": "Sekoitekuidut",
+                    "iot_wash_mixed_steam": "Sekoitekuidut + höyry",
+                    "iot_wash_mix_and_coloured_44": "Sekoitekankaat ja värilliset 44'",
+                    "iot_wash_mix_and_coloured_59": "Sekoitekankaat ja värilliset 59'",
+                    "iot_wash_mix_and_coloured_xl": "Sekoitekankaat ja värilliset XL",
+                    "iot_wash_new_clothes": "Uudet vaatteet",
+                    "iot_wash_perfect_white": "Täydellisen valkoinen",
+                    "iot_wash_perfect_white_steam": "Täydellisen valkoinen + höyry",
+                    "iot_wash_pets": "Lemmikkieläinten tarvikkeet",
+                    "iot_wash_pets_hair_removal": "Lemmikkieläinten karvojen poisto",
+                    "iot_wash_pets_odours_stains_removal": "Lemmikkieläinten hajujen ja tahrojen poisto",
+                    "iot_wash_pets_steam": "Lemmikkieläinten tarvikkeet + höyry",
+                    "iot_wash_playsuits": "Leikkipuvut",
+                    "iot_wash_playsuits_steam": "Leikkipuvut + höyry",
+                    "iot_wash_quick_drum_cleaner": "Nopea rummun puhdistus",
+                    "iot_wash_rapid_14": "Pika 14'",
+                    "iot_wash_rapid_30": "Pika 30'",
+                    "iot_wash_rapid_44": "Pika 44'",
+                    "iot_wash_rapid_59": "Pika 59'",
+                    "iot_wash_rapid_59_steam": "Pika 59' + höyry",
+                    "iot_wash_refresh_14_min": "Raikastus 14'",
+                    "iot_wash_resistant_colored": "Kestävä kirjopyykki",
+                    "iot_wash_resistant_dark": "Kestävät tummat vaatteet",
+                    "iot_wash_resistant_whites": "Kestävät valkoiset vaatteet",
+                    "iot_wash_rinse": "Huuhtelut",
+                    "iot_wash_shirts": "Paidat",
+                    "iot_wash_shirts_steam": "Paidat + höyry",
+                    "iot_wash_silk": "Silkki",
+                    "iot_wash_ski_suit": "Hiihtopuvut",
+                    "iot_wash_ski_suit_zelig": "Hiihtopuvut",
+                    "iot_wash_spin": "Linkous",
+                    "iot_wash_sport": "Urheilu",
+                    "iot_wash_sport_anti_odor": "Hajunpoisto urheiluvaatteista",
+                    "iot_wash_sport_anti_odor_zelig": "Hajunpoisto urheiluvaatteista",
+                    "iot_wash_stains_remover": "Tahrojen poisto",
+                    "iot_wash_super_saving": "Supersäästö 49'",
+                    "iot_wash_swimsuits_and_bikinis": "Uimapuvut ja bikinit",
+                    "iot_wash_synthetic": "Synteettiset materiaalit",
+                    "iot_wash_synthetic_steam": "Synteettiset materiaalit + höyry",
+                    "iot_wash_tablecloths": "Pöytäliinat",
+                    "iot_wash_tablecloths_steam": "Pöytäliinat + höyry",
+                    "iot_wash_technical_fabrics": "Tekniset kankaat",
+                    "iot_wash_technical_fabrics_zelig": "Tekniset kankaat",
+                    "iot_wash_technical_jackets": "Tekniset takit",
+                    "iot_wash_technical_jackets_zelig": "Tekniset takit",
+                    "iot_wash_trainers": "Lenkkitossut",
+                    "iot_wash_whites": "Valkopyykki",
+                    "iot_wash_whites_44": "Valkopyykki 44'",
+                    "iot_wash_whites_59": "Valkopyykki 59'",
+                    "iot_wash_whites_xl": "Valkopyykki XL",
+                    "iot_wash_wine_stains": "Viinitahrat",
+                    "iot_wash_wool": "Villa",
+                    "jeans": "Farkut",
+                    "jeans_60": "Farkut",
+                    "low_dry": "Matalan lämpötilan kuivaus",
+                    "mixed": "Sekoitekuidut",
+                    "mixed_and_colored_59": "Sekoitekuidut ja värilliset 59'",
+                    "mixed_steam": "Sekoitekuidut + höyry",
+                    "mix_and_colour_59": "Sekoitekuidut ja värilliset 59'",
+                    "mix_and_colour_59_steam": "Sekoitekuidut ja kirjopyykki 59' + höyry",
+                    "night_and_day": "Yö ja päivä",
+                    "night_wash": "Yöpesu",
+                    "perfect_59": "Täydellinen 59'",
+                    "perfect_cotton_59": "Täydellinen puuvilla 59'",
+                    "perfect_cotton_59_steam": "Täydellinen puuvilla 59' + höyry",
+                    "perfect_whites_59": "Täydellisen valkoinen 59'",
+                    "rapid_14_min": "Pika 14'",
+                    "rapid_30_min": "Pika 30'",
+                    "rapid_44_min": "Pika 44'",
+                    "rapid_a_class_60": "Pika 59' A-luokka",
+                    "rapid_a_class_60_steam": "Pika 59' A-luokka + höyry",
+                    "rapid_wash_and_dry_59_min": "Pesu ja kuivaus 59'",
+                    "resistant_cotton": "Kestävä puuvilla",
+                    "resistant_cotton_steam": "Kestävä puuvilla + höyry",
+                    "rinse": "Huuhtelu",
+                    "shirts_steam": "Paidat + höyry",
+                    "silent_night": "Hiljainen yö",
+                    "single_item": "Yksittäinen tuote",
+                    "single_item_steam": "Yksi vaate + höyry",
+                    "smart_wash": "Smart Wash",
+                    "soft_care": "Hellävarainen kuivaus",
+                    "soft_care_steam": "Soft Care + Steam",
+                    "soft_care_steam_title": "Soft Care + Steam",
+                    "special_39": "Erikoisohjelma 39”",
+                    "special_39_full_load": "Erikoisohjelma 39”",
+                    "special_39_full_load_steam": "Erikoisohjelma 39' + höyry",
+                    "special_49": "Erikoisohjelma 49'",
+                    "sport_39": "Urheilu 39'",
+                    "sport_plus_29": "Urheilu Plus 29”",
+                    "sport_plus_39": "Urheilu Plus 39'",
+                    "steam_39": "Höyry 39'",
+                    "steam_care_pro": "Steam Care Pro",
+                    "steam_care_pro_cotton": "Steam Care Pro – puuvilla",
+                    "steam_care_pro_delicates": "Steam Care Pro – hienopesu",
+                    "steam_care_pro_synthetic": "Steam Care Pro – synteettiset kuidut",
+                    "steam_hygiene_plus": "Hygienia Plus + höyry",
+                    "synthetics": "Synteettiset materiaalit",
+                    "synthetic_and_coloured": "Synteettiset kuidut ja kirjopyykki",
+                    "synthetic_and_coloured_steam": "Synteettiset kuidut ja kirjopyykki + höyry",
+                    "tailored_resistant_cotton": "Tailored Resistant Cotton",
+                    "tailored_synthetic_and_coloured": "Tailored Synthetic Coloured",
+                    "total_care": "Total Care",
+                    "tumbling": "Pyöritys",
+                    "ultra_fresh": "Ultra Fresh",
+                    "wool": "Villa",
+                    "wool_and_delicates_49": "Villa ja hienopesu 49'",
+                    "wool_dry": "Villan kuivaus",
+                    "wool_soft_care": "Villa ja Soft Care"
+                },
+                "name": "Ohjelma"
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "AUTO-SET",
+                    "cheese": "Juusto",
+                    "chiller": "Quick cool",
+                    "cold_drinks": "Soft chill",
+                    "eco": "Eco",
+                    "eco_mode": "Eco-tila",
+                    "fruits": "Fruit",
+                    "fruits_and_veg": "Fruit&Veg",
+                    "fruit_and_veg": "Fruit&Veg",
+                    "holiday": "HOLIDAY",
+                    "keep_fresh": "0°C Fresh",
+                    "no_mode_selected": "Tilaa ei ole valittu",
+                    "quick_cool": "QUICK COOL",
+                    "quick_set": "Pika-asetus",
+                    "sea_food": "Ready to Cook Meal",
+                    "smart_mode_title": "Smart Mode",
+                    "soft_frozen": "Soft Freezing",
+                    "super_cool": "SUPER COOL",
+                    "super_freeze": "SUPER FREEZE",
+                    "tea": "Cold Drinks",
+                    "vegetables": "Vegetable",
+                    "zero_fresh": "0°C Fresh"
+                },
+                "name": "Ohjelma"
+            },
+            "dry_time": {
+                "name": "Kuivausaika"
+            },
+            "spin_speed": {
+                "name": "Linkous"
+            },
+            "temperature": {
+                "name": "Lämpötila"
+            },
+            "remaining_time": {
+                "name": "Jäljellä oleva aika"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Rypistymisenesto"
+            },
+            "add_dish": {
+                "name": "Lisää astioita"
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Erittäin kuiva"
+            },
+            "half_load": {
+                "name": "Puolikas koneellinen"
+            },
+            "open_door": {
+                "name": "Avaa luukku"
+            },
+            "three_in_one": {
+                "name": "3 in 1"
+            },
+            "preheat": {
+                "name": "Esilämmitys"
+            },
+            "dish_washer": {
+                "name": "Astianpesukone"
+            },
+            "tumble_dryer": {
+                "name": "Kuivausrumpu"
+            },
+            "washing_machine": {
+                "name": "Pyykinpesukone"
+            },
+            "washer_dryer": {
+                "name": "Kuivaava pesukone"
+            },
+            "oven": {
+                "name": "Uuni"
+            },
+            "prewash": {
+                "name": "Esipesu"
+            },
+            "pause": {
+                "name": "Keskeytä ohjelma"
+            },
+            "keep_fresh": {
+                "name": "Raikastus"
+            },
+            "delay_time": {
+                "name": "Viivästetty käynnistys"
+            },
+            "rapid_mode": {
+                "name": "Nopea tila"
+            },
+            "eco_mode": {
+                "name": "ECO-tila"
+            },
+            "10_degree_heating": {
+                "name": "10 °C:n lämmitystoiminto"
+            },
+            "self_clean": {
+                "name": "Itsepuhdistus"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Äänetön tila"
+            },
+            "night_mode": {
+                "name": "Yötila"
+            },
+            "extra_rinse_1": {
+                "name": "+1 huuhtelu"
+            },
+            "extra_rinse_2": {
+                "name": "+2 huuhtelua"
+            },
+            "extra_rinse_3": {
+                "name": "+3 huuhtelua"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose_softener": {
+                "name": "Automaattinen annostelu Huuhteluaine"
+            },
+            "auto_dose_detergent": {
+                "name": "Automaattinen annostelu Pesuaine"
+            },
+            "good_night": {
+                "name": "Good Night"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Jääkaappi"
+            },
+            "touch_tone": {
+                "name": "Kosketusäänen voimakkuus"
+            },
+            "hygiene": {
+                "name": "Hygienia Plus"
+            },
+            "hood": {
+                "name": "Liesituuletin"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Luukun lukitus"
+            },
+            "extra_rinse_1": {
+                "name": "+1 huuhtelu"
+            },
+            "extra_rinse_2": {
+                "name": "+2 huuhtelua"
+            },
+            "extra_rinse_3": {
+                "name": "+3 huuhtelua"
+            },
+            "good_night": {
+                "name": "Good Night"
+            },
+            "anti_crease": {
+                "name": "Rypistymisenesto"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "Linkous"
+            },
+            "still_hot": {
+                "name": "Yhä kuuma"
+            },
+            "pan_status": {
+                "name": "Ruutu"
+            },
+            "remote_control": {
+                "name": "Etäohjaus"
+            },
+            "rinse_aid": {
+                "name": "Huuhtelukirkasteen taso"
+            },
+            "salt_level": {
+                "name": "Suolan määrä"
+            },
+            "door_open": {
+                "name": "Luukku auki"
+            },
+            "connection": {
+                "name": "Laitteen liitäntä"
+            },
+            "child_lock": {
+                "name": "Lapsilukko"
+            },
+            "on": {
+                "name": "Päällä"
+            },
+            "prewash": {
+                "name": "Esipesu"
+            },
+            "buzzer": {
+                "name": "Ohjelman päättymisen äänimerkki"
+            },
+            "holiday_mode": {
+                "name": "Holiday-tila"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Luukku auki Pakastin"
+            },
+            "fridge_door": {
+                "name": "Luukku auki Jääkaappi"
+            },
+            "filter_replacement": {
+                "name": "Suodattimen vaihto"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Induktiokeittotaso"
+            },
+            "start_program": {
+                "name": "Ohjelma Käynnistä"
+            },
+            "stop_program": {
+                "name": "Ohjelma Pysäytä"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Virranhallinta"
+            },
+            "temperature": {
+                "name": "Lämpötila"
+            },
+            "delay_time": {
+                "name": "Viivästetty käynnistys"
+            },
+            "water_hard": {
+                "name": "Veden kovuus"
+            },
+            "program_duration": {
+                "name": "Ohjelman kesto"
+            },
+            "target_temperature": {
+                "name": "Tavoitelämpötila"
+            },
+            "rinse_iterations": {
+                "name": "Huuhtelujen lukumäärä"
+            },
+            "wash_time": {
+                "name": "Pesun voimakkuus"
+            },
+            "dry_time": {
+                "name": "Kuivausaika"
+            },
+            "freezer_temp_sel": {
+                "name": "Tavoitelämpötila Pakastin"
+            },
+            "fridge_temp_sel": {
+                "name": "Tavoitelämpötila Jääkaappi"
+            },
+            "my_zone_temp_sel": {
+                "name": "Tavoitelämpötila My Zone"
+            },
+            "pollen_level": {
+                "name": "Siitepölytaso"
+            },
+            "aroma_time_on": {
+                "name": "Diffuusori (päällä)"
+            },
+            "aroma_time_off": {
+                "name": "Diffuusori (pois)"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Ilmastointilaite",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Ohjelmat",
+                        "state": {
+                            "iot_10_heating": "10 °C:n lämmitystoiminto",
+                            "iot_auto": "Automaattinen",
+                            "iot_cool": "Viilennys",
+                            "iot_dry": "Kuivaus",
+                            "iot_fan": "Puhallin",
+                            "iot_heat": "Lämmitys",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "Itsepuhdistus",
+                            "iot_self_clean": "Itsepuhdistus",
+                            "iot_self_clean_56": "Steri-Clean 56°C",
+                            "iot_simple_start": "Käynnistä",
+                            "iot_uv": "UV",
+                            "iot_uv_and_auto": "UV + automaattinen",
+                            "iot_uv_and_cool": "UV + viilennys",
+                            "iot_uv_and_dry": "UV + kosteudenpoisto",
+                            "iot_uv_and_fan": "UV + tuuletin",
+                            "iot_uv_and_heat": "UV + lämmitys"
+                        }
+                    }
+                }
+            },
+            "fridge": {
+                "name": "Jääkaappi",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Jääkaapin tilat",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "Tilaa ei ole valittu"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Pakastin",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Pakastimen tilat",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "Tilaa ei ole valittu"
+                        }
+                    }
+                }
+            },
+            "oven": {
+                "name": "Uuni",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Ohjelmat",
+                        "state": {
+                            "bakery": "Leipominen",
+                            "bakery_steam": "Leipominen höyrytoimintoa käyttäen",
+                            "bottom_heating": "Alalämpö",
+                            "bottom_heating_fan": "Alalämpö + Tuuletin",
+                            "bread": "Leipä",
+                            "bread_steam": "Höyrytoiminnolla paistettu leipä",
+                            "combi": "Combi",
+                            "convection_fan": "Tavanomainen + puhallin",
+                            "convection_fan_turnspit": "Kiertoilma + puhallin + varras",
+                            "conventional": "Tavanomainen",
+                            "conventional_turnspit": "Tavanomainen + varras",
+                            "defrost": "Sulatus",
+                            "descaling": "Kalkinpoisto",
+                            "fish": "Kala",
+                            "fish_steam": "Höyrytoiminnolla paistettu kala",
+                            "grill_cata": "Grilli",
+                            "grill_fan_cata": "Grilli + puhallin",
+                            "grill_fan_pyro": "Grilli + puhallin",
+                            "grill_pyro": "Grilli",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Leipä",
+                            "iot_h20_clean": "h2O clean",
+                            "leavening": "Kohotus",
+                            "low_temp_cooking": "Kypsennys alhaisessa lämpötilassa",
+                            "low_temp_cooking_fish": "Alhaisessa lämpötilassa kypsennetty kala",
+                            "low_temp_cooking_fish_steam": "Höyrytoiminnolla alhaisessa lämpötilassa kypsennetty kala",
+                            "low_temp_cooking_meat": "Alhaisessa lämpötilassa kypsennetty liha",
+                            "low_temp_cooking_meat_steam": "Höyrytoiminnolla alhaisessa lämpötilassa kypsennetty liha",
+                            "low_temp_cooking_steam": "Kypsennys alhaisessa lämpötilassa höyrytoiminnolla",
+                            "meat": "Liha",
+                            "meat_steam": "Höyrytoiminnolla kypsennetty liha",
+                            "multi_level": "Monitasoinen",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Pasta ja leivonnaiset",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Pyrolyysi",
+                            "pyrolysis_plus": "Pyrolyysi +",
+                            "red_meat": "Punainen liha",
+                            "red_meat_steam": "Höyrytoiminnolla kypsennetty punainen liha",
+                            "regenerate": "Regenerointi",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super Grill",
+                            "tailor_bake": "Tailor Bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Kasvikset",
+                            "vegetables_cata": "Kasvikset",
+                            "vegetables_pyro": "Kasvikset",
+                            "water_discharge": "Veden poisto",
+                            "white_meat": "Valkoinen liha",
+                            "white_meat_steam": "Höyrytoiminnolla kypsennetty valkoinen liha"
+                        }
+                    }
+                }
+            },
+            "my_zone": {
+                "name": "My Zone"
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Viinikellari",
+                        "state": {
+                            "iot_champagne": "Samppanja",
+                            "iot_dessert": "Jälkiruoka",
+                            "iot_fortified": "Väkevä",
+                            "iot_rose": "Rosee",
+                            "iot_whisky": "Viski",
+                            "red": "Punainen",
+                            "sparkling": "Kuohuviini",
+                            "white": "Valkoinen"
+                        }
+                    }
+                }
+            }
+        },
+        "fan": {
+            "air_extraction": {
+                "name": "Ilmanpoisto"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Kevyt"
+            }
+        }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Kirjaudu sisään",
+                "data": {
+                    "email": "Sähköposti",
+                    "password": "Salasana"
+                }
+            }
+        }
+    }
+}

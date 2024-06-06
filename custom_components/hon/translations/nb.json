@@ -1,191 +1,120 @@
 {
-    "config": {
-        "step": {
-            "user": {
-                "description": "Do the login",
-                "data": {
-                    "email": "Email",
-                    "password": "Password"
-                }
-            }
-        }
-    },
     "entity": {
         "sensor": {
-            "mode": {
-                "state": {
-                    "0": "Изключен",
-                    "1": "Готов",
-                    "2": "Работи",
-                    "3": "На пауза",
-                    "5": "Scheduled",
-                    "6": "Грешка",
-                    "7": "Завършен"
-                }
-            },
-            "errors": {
-                "state": {
-                    "00": "Няма грешки",
-                    "100000000000": "E2: Провери дали вратата е затворена",
-                    "8000000000000": "E4: Провери подаването на вода"
-                },
-                "name": "Error"
-            },
-            "programs": {
-                "state": {
-                    "0": "Стандартна",
-                    "62": "Памук",
-                    "63": "Синтетика",
-                    "64": "Смесен тип",
-                    "66": "Чаршафи",
-                    "71": "Пердета",
-                    "72": "Спорт",
-                    "74": "i-time",
-                    "75": "Олекотени завивки",
-                    "76": "Вълна",
-                    "78": "i-Refresh",
-                    "83": "Хавлиена кърпа",
-                    "85": "Бързо Сушене",
-                    "92": "Деликатно пране",
-                    "103": "Отдалечен"
-                },
-                "name": "Current program"
-            },
-            "program_phases_td": {
-                "state": {
-                    "0": "Изчаване",
-                    "2": "Сушене",
-                    "3": "Охлажане",
-                    "11": "11",
-                    "ready": "Ready",
-                    "heat_stroke": "Drying",
-                    "drying": "Drying",
-                    "cooldown": "Cooldown",
-                    "unknown": "unknown",
-                    "tumbling": "Keep Fresh"
-                },
-                "name": "Phase"
-            },
-            "tumbledryertemplevel": {
-                "state": {
-                    "1": "Хладен въздух",
-                    "2": "Ниска температура L-1",
-                    "3": "Средна температура L-2",
-                    "4": "Висока температура L-3"
-                }
-            },
-            "dry_levels": {
-                "state": {
-                    "3": "Готови за съхранение",
-                    "12": "Готови за гладене H-1",
-                    "13": "Готови за съхранение H-2",
-                    "14": "Екстра сухо H-3",
-                    "no_dry": "No drying",
-                    "iron_dry": "Iron dry",
-                    "no_dry_iron": "Hang",
-                    "cupboard_dry": "Cupboard",
-                    "extra_dry": "Extra dry",
-                    "ready_to_wear": "Ready to wear"
-                },
-                "name": "Drying level"
-            },
             "washing_modes": {
                 "state": {
-                    "ready": "Ready",
-                    "running": "Program running",
+                    "ready": "Klar",
+                    "running": "Program kjører",
                     "pause": "Pause",
-                    "scheduled": "Scheduled",
-                    "error": "Error",
+                    "scheduled": "Planlagt",
+                    "error": "Feil",
                     "test": "Test",
-                    "ending": "Stopping cycle…"
+                    "ending": "Stopper syklus..."
                 }
             },
             "mach_modes_ac": {
                 "state": {
                     "auto": "Auto",
-                    "cool": "Cool",
-                    "dry": "Dry",
-                    "heat": "Heat",
-                    "fan": "Fan"
+                    "cool": "Kjølig",
+                    "dry": "Tørr",
+                    "heat": "Varme",
+                    "fan": "Vifte"
                 }
             },
             "program_phases_wm": {
                 "state": {
-                    "ready": "Ready",
-                    "spin": "Spin",
-                    "rinse": "Rinse",
-                    "drying": "Drying",
-                    "steam": "Steam",
-                    "weighting": "Weighing",
-                    "scheduled": "Scheduled",
+                    "ready": "Klar",
+                    "spin": "Sentrifuge",
+                    "rinse": "Skyll",
+                    "drying": "Tørking",
+                    "steam": "Damp",
+                    "weighting": "Veier",
+                    "scheduled": "Planlagt",
                     "tumbling": "Keep Fresh",
                     "refresh": "Refresh",
-                    "heating": "Heating",
-                    "washing": "Wash"
+                    "heating": "Oppvarming",
+                    "washing": "Vask"
                 },
-                "name": "Phase"
+                "name": "Fase"
+            },
+            "program_phases_td": {
+                "state": {
+                    "ready": "Klar",
+                    "heat_stroke": "Tørker",
+                    "drying": "Tørking",
+                    "cooldown": "Avkjøling",
+                    "unknown": "unknown",
+                    "tumbling": "Keep Fresh"
+                },
+                "name": "Fase"
             },
             "program_phases_dw": {
                 "state": {
-                    "ready": "Ready",
-                    "prewash": "Prewash",
-                    "washing": "Wash",
-                    "rinse": "Rinse",
-                    "drying": "Drying",
-                    "hot_rinse": "Hot rinse"
+                    "ready": "Klar",
+                    "prewash": "Forvask",
+                    "washing": "Vask",
+                    "rinse": "Skyll",
+                    "drying": "Tørking",
+                    "hot_rinse": "Varm skyll"
                 },
-                "name": "Phase"
+                "name": "Fase"
+            },
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Ingen tørking",
+                    "iron_dry": "Stryke",
+                    "no_dry_iron": "Tørk uten stryking",
+                    "cupboard_dry": "Skaptørt",
+                    "extra_dry": "Ekstra tørr",
+                    "ready_to_wear": "Klar til å ha på"
+                },
+                "name": "Tørkenivå"
             },
             "dirt_level": {
                 "state": {
-                    "little": "Little",
+                    "little": "Litt",
                     "normal": "Normal",
-                    "very": "Very",
+                    "very": "Veldig",
                     "unknown": "unknown"
                 },
-                "name": "Dirt level"
+                "name": "Smussnivå"
             },
             "steam_level": {
                 "state": {
-                    "no_steam": "No steam",
-                    "cotton": "Cotton",
-                    "delicate": "Delicate",
-                    "synthetic": "Synthetic"
+                    "no_steam": "Ingen damp",
+                    "cotton": "Bomull",
+                    "delicate": "Delikat",
+                    "synthetic": "Syntetisk"
                 },
-                "name": "Steam Level"
+                "name": "Dampnivå"
             },
             "humidity_level": {
                 "state": {
-                    "low": "Low",
+                    "low": "Lav",
                     "mid": "Medium",
-                    "high": "High"
+                    "high": "Høy"
                 },
-                "name": "Humidity level"
+                "name": "Fuktighetsnivå"
             },
             "programs_ac": {
                 "state": {
-                    "iot_10_heating": "10°C Heating function",
+                    "iot_10_heating": "10°C oppvarmingsfunksjon",
                     "iot_auto": "Auto",
-                    "iot_cool": "Cool",
-                    "iot_dry": "Dry",
-                    "iot_dry_summer": "Dry summer",
-                    "iot_dry_winter": "Dry winter",
-                    "iot_fan": "Fan",
-                    "iot_heat": "Heat",
-                    "iot_humid_summer": "Humid summer",
+                    "iot_cool": "Kjølig",
+                    "iot_dry": "Tørr",
+                    "iot_fan": "Vifte",
+                    "iot_heat": "Varme",
                     "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Self-purify",
-                    "iot_rainy_winter": "Rainy winter",
-                    "iot_self_clean": "Self-clean",
+                    "iot_purify": "Selvrensende",
+                    "iot_self_clean": "Selvvask",
                     "iot_self_clean_56": "Steri-Clean 56°C",
-                    "iot_simple_start": "Start now",
+                    "iot_simple_start": "Start",
                     "iot_uv": "UV",
                     "iot_uv_and_auto": "UV + Auto",
-                    "iot_uv_and_cool": "UV + Cold",
-                    "iot_uv_and_dry": "UV + Dehumidifier",
-                    "iot_uv_and_fan": "UV + Fan",
-                    "iot_uv_and_heat": "UV + Heat",
-                    "iot_warm_spring": "Warm spring"
+                    "iot_uv_and_cool": "UV + kald",
+                    "iot_uv_and_dry": "UV + Avfukter",
+                    "iot_uv_and_fan": "UV + vifte",
+                    "iot_uv_and_heat": "UV + varme"
                 },
                 "name": "Program"
             },
@@ -194,49 +123,45 @@
                     "59_min": "Rapid 59'",
                     "auto_care": "Auto Care",
                     "auto_care_soil": "Auto Care",
-                    "auto_hygiene": "Auto Hygiene",
                     "auto_plus": "AutoPlus",
-                    "auto_plus_soil": "Auto Plus",
-                    "auto_rapid": "Auto Rapid",
-                    "auto_rapid_soil": "Auto Rapid",
+                    "auto_plus_soil": "Auto Plus Soil",
+                    "auto_rapid_soil": "Auto Rapid Soil",
                     "auto_sensor": "Auto Sensor",
                     "auto_sensor_soil": "Auto Sensor",
-                    "auto_universal": "Auto Universal 50-60°C",
-                    "auto_universal_plus": "Auto Universal Plus 65-75°C",
-                    "auto_universal_plus_soil": "Auto Universal Plus 65-75°C",
-                    "auto_universal_soil": "Auto Universal 50-60°C",
-                    "auto_wash": "Auto Wash",
-                    "auto_wash_soil": "Auto Wash",
-                    "classe_a_59": "A Wash 59' 65°C",
-                    "delicate": "Delicate 45°C",
-                    "dishwasher_care": "Limescale cleaning",
-                    "eco": "Eco 45°C",
+                    "auto_universal": "Auto Universal 50 - 60°C",
+                    "auto_universal_plus": "Auto Universal+ 65 - 75°C",
+                    "auto_universal_plus_soil": "Auto Universal+ 65 - 75°C",
+                    "auto_universal_soil": "Auto Universal 50 - 60°C",
+                    "auto_wash": "Autovask",
+                    "auto_wash_soil": "Autovask",
+                    "classe_a_59": "En Vask 59' 65°C",
+                    "delicate": "Delikat 45°C",
+                    "dishwasher_care": "Kalkrengjøring",
+                    "eco": "Eco",
                     "eco_asynch": "Eco 45°C",
                     "eco_bldc": "Eco 45°C",
                     "eco_synch": "Eco 45°C",
-                    "eco_voice": "Eco",
-                    "gentle_wash": "Gentle wash",
+                    "gentle_wash": "Skånsom vask",
                     "glass": "Glass",
-                    "glassware": "Glassware 45°C",
-                    "glass_care": "Glass Care",
+                    "glassware": "Glass 45°C",
+                    "glass_care": "Glasspleie",
                     "hygiene": "Hygiene",
-                    "hygiene_plus": "Hygiene Plus 75°C",
-                    "intensive": "Intensive",
+                    "hygiene_plus": "Hygiene+ 75°C",
+                    "intensive": "Intensiv",
                     "intensive_rapid": "Intensive Rapid",
-                    "intensive_voice": "Intensive",
                     "iot_auto_sensor": "Auto Sensor",
-                    "iot_auto_universal_soil": "Auto Universal 50-60°C",
-                    "iot_auto_wash_soil": "Auto Wash",
+                    "iot_auto_universal_soil": "Auto Universal 50 - 60°C",
+                    "iot_auto_wash_soil": "Autovask",
                     "iot_baby_care": "Baby Care",
                     "iot_breakfast": "Breakfast",
                     "iot_checkup": "Check-Up",
-                    "iot_china_crystals": "Crystals",
+                    "iot_china_crystals": "China Crystals",
                     "iot_classe_a_59": "Rapid 59'",
-                    "iot_cocktail_glasses": "Coktail Glasses",
-                    "iot_cocktail_glasses_soil": "Coktail Glasses",
+                    "iot_cocktail_glasses": "Cocktailglass",
+                    "iot_cocktail_glasses_soil": "Cocktailglass",
                     "iot_daily_care": "Daily Care",
                     "iot_daily_care_soil": "Daily Care",
-                    "iot_delicate": "Delicate 45°C",
+                    "iot_delicate": "Delikat 45°C",
                     "iot_dinner_for_two": "Dinner for 2",
                     "iot_dinner_for_two_soil": "Dinner for 2",
                     "iot_dreft_quick_cycle": "Dreft Quick",
@@ -244,49 +169,47 @@
                     "iot_eco_bldc": "Eco 45°C",
                     "iot_eco_synch": "Eco 45°C",
                     "iot_extra_hygiene": "Extra Hygiene",
-                    "iot_fairy_quick_cycle": "Fairy Quick",
+                    "iot_fairy_quick_cycle": "Fairy Short",
                     "iot_happy_hour": "Happy Hour",
                     "iot_jar_quick_cycle": "Jar Quick",
                     "iot_party": "Party",
                     "iot_party_soil": "Party",
-                    "iot_pet_bowls_toys": "Pet Bowls and Toys",
                     "iot_pizza_menu": "Pizza Menu",
                     "iot_pizza_menu_soil": "Pizza Menu",
                     "iot_plastic_tupperware": "Plastic & Tupperware",
-                    "iot_porcelain": "Porcelain",
+                    "iot_porcelain": "Porselen",
                     "iot_power_mix_wash": "Power Mix Wash",
                     "iot_power_mix_wash_soil": "Power Mix Wash",
-                    "iot_prewash": "Pre-wash",
-                    "iot_pyrex_and_glassware": "Pyrex & Glassware",
+                    "iot_prewash": "Forvask",
+                    "iot_pyrex_and_glassware": "Pyrex og glass",
                     "iot_rapid_29": "Rapid 29'",
                     "iot_rapid_39": "Rapid 39' 60°C",
-                    "iot_single": "Single",
+                    "iot_single": "Enkelt",
                     "iot_steam": "Steam 75°C",
                     "iot_super_flash": "Super Flash",
                     "iot_super_wash": "Super Wash",
                     "iot_turbopower": "TurboPower",
                     "iot_universal": "Universal 60°C",
                     "iot_voice_automatic": "Automatic",
-                    "iot_voice_delicate": "Delicate 45°C",
+                    "iot_voice_delicate": "Delikat 45°C",
                     "iot_voice_eco": "Eco 45°C",
-                    "iot_voice_eco_bldc": "Eco 45°C",
-                    "iot_voice_intensive": "Intensive 75°C",
-                    "iot_voice_prewash": "Pre-wash",
+                    "iot_voice_intensive": "Intensiv 75°C",
+                    "iot_voice_prewash": "Forvask",
                     "iot_voice_rapid_59": "Rapid 59'",
                     "iot_voice_universal": "Universal 60°C",
                     "iot_wok_grids_maxi_pans": "Special Pans (Wok, Grids & Maxi Pans)",
                     "iot_wok_grids_maxi_pans_soil": "Special Pans (Wok, Grids & Maxi Pans)",
                     "iot_yes_quick_cycle": "Yes Quick",
                     "night": "Night 55°C",
-                    "prewash": "Pre-wash",
+                    "prewash": "Forvask",
                     "rapid_20": "Rapid 20'",
                     "rapid_24": "Rapid 24'",
                     "rapid_29": "Rapid 29' 50°C",
-                    "rapid_35": "Wash&Dry 35'",
+                    "rapid_35": "Vask og tørk 35'",
                     "rapid_39": "Rapid 39' 60°C",
                     "rapid_49": "Rapid 49'",
                     "rapid_59": "Rapid 59'",
-                    "sanitising": "Sanitising",
+                    "sanitising": "Sanering",
                     "silence": "Silence",
                     "silent": "Silent",
                     "silent_care": "Silent Care",
@@ -296,8 +219,8 @@
                     "smart_ai_rapid": "Smart AI Rapid",
                     "smart_ai_rapid_soil": "Smart AI Rapid",
                     "smart_ai_soil": "Smart AI",
-                    "special": "Special",
-                    "special_pw_prz": "Special",
+                    "special": "Spesiell",
+                    "special_pw_prz": "Spesiell",
                     "steam": "Steam 75°C",
                     "steam_plus": "Steam Plus 75°C",
                     "total_care": "Total Care 50°C",
@@ -312,124 +235,119 @@
             },
             "programs_ih": {
                 "state": {
-                    "iot_special_ash_brown": "Ash brown",
-                    "iot_special_beef_fillet": "Beef fillet",
-                    "iot_special_beef_veal_stew": "Beef and veal stew",
-                    "iot_special_boiled_rice": "Boiled rice",
-                    "iot_special_chicken_breast": "Chicken breast",
-                    "iot_special_chicken_legs": "Chicken legs",
-                    "iot_special_chocolate_pudding": "Chocolate pudding",
+                    "iot_special_ash_brown": "Askebrun",
+                    "iot_special_beef_fillet": "Oksefilet",
+                    "iot_special_beef_veal_stew": "Okse- og kalvegryte",
+                    "iot_special_boiled_rice": "Kokt ris",
+                    "iot_special_chicken_breast": "Kyllingbryst",
+                    "iot_special_chicken_legs": "Kyllinglår",
+                    "iot_special_chocolate_pudding": "Sjokolade pudding",
                     "iot_special_entrecote": "Entrecote",
-                    "iot_special_fresh_tuna": "Fresh tuna",
-                    "iot_special_grilled_vegetables": "Grilled vegetables",
-                    "iot_special_lamb_cutlet": "Lamb cutle",
-                    "iot_special_meatballs": "Meatballs",
+                    "iot_special_fresh_tuna": "Fersk tunfisk",
+                    "iot_special_grilled_vegetables": "Grillede grønnsaker",
+                    "iot_special_lamb_cutlet": "Lammekotelett",
+                    "iot_special_meatballs": "Kjøttboller",
                     "iot_special_minestrone": "Minestrone",
-                    "iot_special_mussels": "Mussels",
-                    "iot_special_omelette": "Omelette",
-                    "iot_special_pancakes": "Pancakes",
-                    "iot_special_paris_style_peas": "Paris style peas",
-                    "iot_special_poached_eggs": "Poached eggs",
-                    "iot_special_pork_fillet": "Pork fillet",
-                    "iot_special_pork_ribs": "Pork ribs",
-                    "iot_special_prawns": "Prawns",
+                    "iot_special_mussels": "Blåskjell",
+                    "iot_special_omelette": "Omelett",
+                    "iot_special_pancakes": "Pannekaker",
+                    "iot_special_paris_style_peas": "Erter, Paris-stil",
+                    "iot_special_poached_eggs": "Posjerte egg",
+                    "iot_special_pork_fillet": "Svinefilet",
+                    "iot_special_pork_ribs": "Ribbe",
+                    "iot_special_prawns": "Reker",
                     "iot_special_quinoa": "Quinoa",
                     "iot_special_ratatouille": "Ratatouille",
-                    "iot_special_salmon_fillet": "Salmon fillet",
-                    "iot_special_saute_potatoes": "Saute potatoes",
-                    "iot_special_scallops": "Scallops",
-                    "iot_special_scrambled_eggs": "Scrambled eggs",
+                    "iot_special_salmon_fillet": "Laksefilet",
+                    "iot_special_saute_potatoes": "Stek poteter",
+                    "iot_special_scallops": "Kamskjell",
+                    "iot_special_scrambled_eggs": "Eggerøre",
                     "iot_special_spelt": "Spelt",
-                    "iot_special_veggy_noodles": "Veggy noodles",
-                    "iot_special_white_fish_fillet": "White fish fillet",
-                    "iot_standard_boiling": "Boiling",
-                    "iot_standard_frying": "Frying",
-                    "iot_standard_keep_warm": "Keep Warm",
-                    "iot_standard_melting": "Melting",
-                    "iot_standard_simmering": "Simmering"
+                    "iot_special_veggy_noodles": "Grønnsaknudler",
+                    "iot_special_white_fish_fillet": "Hvit fiskefilet",
+                    "iot_standard_boiling": "Koking",
+                    "iot_standard_frying": "Steking",
+                    "iot_standard_keep_warm": "Hold varm",
+                    "iot_standard_melting": "Smelting",
+                    "iot_standard_simmering": "Småkoking"
                 },
                 "name": "Program"
             },
             "programs_ov": {
                 "state": {
-                    "bakery": "Pasta and Bakery",
-                    "bakery_steam": "Steam oven",
-                    "bottom_heating": "Bottom Heating",
-                    "bottom_heating_fan": "Bottom Heating + Fan",
-                    "bread": "Bread",
-                    "bread_steam": "Steam baked bread",
+                    "bakery": "Bakeri",
+                    "bakery_steam": "Bakeridamp",
+                    "bottom_heating": "Bunnvarming",
+                    "bottom_heating_fan": "Bunnvarming + Vifte",
+                    "bread": "Brød",
+                    "bread_steam": "Brøddamp",
                     "combi": "Combi",
-                    "convection_fan": "Convection + Fan",
-                    "convection_fan_turnspit": "Convection + Fan + Turnspit",
-                    "conventional": "Conventional",
-                    "conventional_turnspit": "Convection + Turnspit",
-                    "defrost": "Defrosting",
-                    "descaling": "Descaling",
-                    "fish": "Fish",
-                    "fish_steam": "Steamed fish",
+                    "convection_fan": "Konveksjon + vifte",
+                    "convection_fan_turnspit": "Konveksjonsvifte, grillspidd",
+                    "conventional": "Konvensjonell",
+                    "conventional_turnspit": "Konvensjonelt grillspidd",
+                    "defrost": "Avriming",
+                    "descaling": "Avkalkning",
+                    "fish": "Fisk",
+                    "fish_steam": "Fiskedamp",
                     "grill_cata": "Grill",
-                    "grill_fan_cata": "Grill fan",
-                    "grill_fan_pyro": "Grill + Fan",
+                    "grill_fan_cata": "Grill + vifte",
+                    "grill_fan_pyro": "Grill + vifte",
                     "grill_pyro": "Grill",
                     "h20_clean": "H2O-Clean",
-                    "iot_bread": "Bread",
-                    "iot_h20_clean": "h2O clean",
+                    "iot_bread": "Brød",
+                    "iot_h20_clean": "h2O-Clean",
                     "leavening": "Leavening",
-                    "light_fan": "Light Fan",
-                    "light_fan\n": "Light Fan",
-                    "low_temp_cooking": "Low Temperature Cooking",
-                    "low_temp_cooking_fish": "Low Temperature Cooking - Fish",
-                    "low_temp_cooking_fish_steam": "Low Temperature Cooking - Steamed fish",
-                    "low_temp_cooking_meat": "Low Temperature Cooking - Meat",
-                    "low_temp_cooking_meat_steam": "Low Temperature Cooking - Steamed meat",
-                    "low_temp_cooking_steam": "Low Temperature Steam Cooking",
-                    "meat": "Meat",
-                    "meat_steam": "Steamed meat",
-                    "multi_level": "Multi-Level",
+                    "low_temp_cooking": "Matlaging på lav temperatur",
+                    "low_temp_cooking_fish": "Matlaging på lav temperatur, fisk",
+                    "low_temp_cooking_fish_steam": "Matlaging på lav temperatur, fiskedamping",
+                    "low_temp_cooking_meat": "Matlaging på lav temperatur, kjøtt",
+                    "low_temp_cooking_meat_steam": "Matlaging på lav temperatur, kjøttdamping",
+                    "low_temp_cooking_steam": "Matlaging på lav temperatur, damp",
+                    "meat": "Kjøtt",
+                    "meat_steam": "Kjøtt, damp",
+                    "multi_level": "Multinivå",
                     "paella": "Paella",
-                    "pasta_and_bakery": "Pasta and Bakery",
+                    "pasta_and_bakery": "Pasta og bakverk",
                     "pizza": "Pizza",
-                    "pyrolysis": "Pyrolysis",
-                    "pyrolysis_plus": "Pyrolysis +",
-                    "red_meat": "Red Meat",
-                    "red_meat_steam": "Steamed red meat",
-                    "regenerate": "Regenerate",
+                    "pyrolysis": "Pyrolyse",
+                    "pyrolysis_plus": "Pyrolyse +",
+                    "red_meat": "Rødt kjøtt",
+                    "red_meat_steam": "Rødt kjøtt, damp",
+                    "regenerate": "Regenerer",
                     "soft_plus": "Soft+",
                     "super_grill": "Super Grill",
                     "tailor_bake": "Tailor bake",
                     "tailor_bake_cata": "Tailor Bake",
                     "tailor_bake_pyro": "Tailor Bake",
-                    "vegetables": "Vegetables",
-                    "vegetables_cata": "Vegetables",
-                    "vegetables_pyro": "Vegetables",
-                    "water_discharge": "Water Discharge",
-                    "white_meat": "White Meat",
-                    "white_meat_steam": "Steamed white meat"
+                    "vegetables": "Grønnsaker",
+                    "vegetables_cata": "Grønnsaker",
+                    "vegetables_pyro": "Grønnsaker",
+                    "water_discharge": "Vannutslipp",
+                    "white_meat": "Hvitt kjøtt",
+                    "white_meat_steam": "Hvitt kjøtt, damp"
                 },
                 "name": "Program"
             },
             "programs_td": {
                 "state": {
                     "active_dry": "Active Dry",
-                    "allergy_care": "Anti-allergy",
+                    "allergy_care": "Anti-allergi",
                     "all_in_one": "All in One",
-                    "antiallergy": "Anti-allergy",
-                    "anti_odours": "Anti-odours",
+                    "antiallergy": "Anti-allergi",
+                    "anti_odours": "Lukftfritt",
                     "auto_care": "Auto Care",
                     "baby": "Baby",
-                    "babycare": "Babycare",
                     "bed_quilt": "Bed Quilt",
-                    "bulky": "Bulky",
                     "care_30": "Care 30",
                     "care_45": "Care 45",
                     "care_59": "Care 59",
-                    "coloured": "Colored",
-                    "daily_45_min": "Daily 45'",
+                    "coloured": "Farget",
+                    "daily_45_min": "Daglig 45'",
                     "daily_perfect_59_min": "Daily Perfect 59'",
                     "darks_and_coloured": "Darks & Colored",
-                    "delicates": "Delicates",
-                    "down": "Down",
-                    "duvet": "Duvet",
+                    "delicates": "Finvask",
+                    "duvet": "Dyne",
                     "eco": "Eco Cotton",
                     "ecospeed_cottons": "Ecospeed Cottons",
                     "ecospeed_delicates": "Ecospeed Delicates",
@@ -444,93 +362,90 @@
                     "hqd_bulky": "Bulky Items",
                     "hqd_casual": "Casual",
                     "hqd_checkup": "Check-Up",
-                    "hqd_cold_wind_30": "Cool Breeze 30m",
-                    "hqd_cold_wind_timing": "Cold Air",
-                    "hqd_cotton": "Cotton",
-                    "hqd_curtain": "Curtains",
-                    "hqd_delicate": "Delicates",
+                    "hqd_cold_wind_30": "Cool Breeze 30 minutter",
+                    "hqd_cold_wind_timing": "Cool Breeze",
+                    "hqd_cotton": "Bomull",
+                    "hqd_curtain": "Gardiner",
+                    "hqd_delicate": "Finvask",
                     "hqd_diaper": "Diapers",
-                    "hqd_duvet": "Synthetic fibre quilted jacket",
+                    "hqd_duvet": "Dyne",
                     "hqd_eco": "Eco",
-                    "hqd_feather": "Natural fibre quilted jacket",
-                    "hqd_hot_wind_timing": "Warm Embrace",
+                    "hqd_feather": "Down Jackets",
+                    "hqd_hot_wind_timing": "Varm luft",
                     "hqd_hygienic": "Hygienising",
                     "hqd_i_refresh": "I-Refresh",
                     "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro Babycare",
-                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro Bulky",
-                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro Delicates",
-                    "hqd_i_refresh_pro_down": "I-Refresh Pro Down",
-                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro Shirt",
-                    "hqd_i_refresh_pro_towel": "I-Refresh Pro Towel",
-                    "hqd_i_refresh_pro_wool": "I-Refresh Pro Wool",
+                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro-babypleie",
+                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro-bulkete",
+                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro-finvask",
+                    "hqd_i_refresh_pro_down": "I-Refresh Pro-ned",
+                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro-skjorte",
+                    "hqd_i_refresh_pro_towel": "I-Refresh Pro-håndkle",
+                    "hqd_i_refresh_pro_wool": "I-Refresh Pro-ull",
                     "hqd_jacket": "Jackets",
                     "hqd_jeans": "Jeans",
                     "hqd_luxury": "Luxury",
-                    "hqd_mix": "Mixed",
-                    "hqd_night_dry": "Overnight drying",
-                    "hqd_outdoor": "Outdoor",
+                    "hqd_mix": "Blandet",
+                    "hqd_night_dry": "Tørking over natten",
+                    "hqd_outdoor": "Utendørs",
                     "hqd_precious_cure": "Precious Cure",
-                    "hqd_quick_20": "Quick 20m",
-                    "hqd_quick_30": "Quick 30'",
-                    "hqd_quick_dry": "30' automatic quick drying",
+                    "hqd_quick_20": "Quick 20",
+                    "hqd_quick_30": "Quick 30",
+                    "hqd_quick_dry": "Hurtigtørk",
                     "hqd_quilt": "Quilts",
-                    "hqd_refresh": "Refresh",
+                    "hqd_refresh": "Oppdater",
                     "hqd_school_uniform": "School Uniform",
-                    "hqd_shirt": "Shirts",
+                    "hqd_shirt": "Skjorter",
                     "hqd_shoes": "Shoes",
-                    "hqd_silk": "Silk",
-                    "hqd_smart": "HQD SMART",
-                    "hqd_sports": "Sports",
-                    "hqd_synthetics": "Synthetics",
-                    "hqd_timer": "Timed",
+                    "hqd_silk": "Silke",
+                    "hqd_sports": "Sport",
+                    "hqd_synthetics": "Syntetiske stoffer",
+                    "hqd_timer": "TIMER",
                     "hqd_towel": "Towels",
-                    "hqd_underwear": "Underwear",
+                    "hqd_underwear": "Undertøy",
                     "hqd_warm_up": "Warm up",
-                    "hqd_wool": "Wool",
+                    "hqd_wool": "Ull",
                     "hqd_working_suit": "Workwear",
                     "hygiene": "Hygiene",
                     "iot_checkup": "Check-Up",
-                    "iot_dry_anti_mites": "Anti-mites",
+                    "iot_dry_anti_mites": "Antimidd",
                     "iot_dry_baby": "Baby",
-                    "iot_dry_backpacks": "Backpacks",
-                    "iot_dry_bathrobe": "Bathrobe",
+                    "iot_dry_backpacks": "Ryggsekker",
+                    "iot_dry_bathrobe": "Badekåpe",
                     "iot_dry_bed_linen": "Bed Linen",
                     "iot_dry_bed_quilt": "Bed Quilt",
-                    "iot_dry_cotton": "Cotton",
+                    "iot_dry_cotton": "Bomull",
                     "iot_dry_cuddly_toys": "Cuddly Toys",
-                    "iot_dry_curtains": "Curtains",
+                    "iot_dry_curtains": "Gardiner",
                     "iot_dry_dehumidifier": "Humidity Remover",
-                    "iot_dry_delicates": "Delicates",
+                    "iot_dry_delicates": "Finvask",
                     "iot_dry_delicate_tablecloths": "Delicate Tablecloths",
                     "iot_dry_denim_jeans": "Denim - Jeans",
                     "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "Duvet",
+                    "iot_dry_duvet": "Dyne",
                     "iot_dry_easy_iron_cotton": "Super Easy Iron",
                     "iot_dry_easy_iron_synthetics": "Super Easy Iron Synthetics",
                     "iot_dry_gym_fit": "Gym fit - Fitness",
-                    "iot_dry_lingerie": "Lingerie",
-                    "iot_dry_mixed": "Mixed",
-                    "iot_dry_pet_accessories": "Pet Accessories",
-                    "iot_dry_pet_hair_removal": "Pet hair removal (pre-washing)",
+                    "iot_dry_lingerie": "Undertøy",
+                    "iot_dry_mixed": "Blandet",
                     "iot_dry_playsuits": "Playsuits",
-                    "iot_dry_rapid_30": "Rapid 30'",
+                    "iot_dry_rapid_30": "Rapid 30",
                     "iot_dry_rapid_59": "Rapid 59'",
-                    "iot_dry_refresh": "Refresh",
+                    "iot_dry_refresh": "Oppdater",
                     "iot_dry_regenerates_waterproof": "Regenerates Waterproof",
                     "iot_dry_relax_creases": "Relax Creases",
-                    "iot_dry_shirts": "Shirts",
+                    "iot_dry_shirts": "Skjorter",
                     "iot_dry_small_load": "Small Load",
-                    "iot_dry_swimsuits_and_bikinis": "Swimsuits and Bikinis",
-                    "iot_dry_synthetics": "Synthetics",
+                    "iot_dry_swimsuits_and_bikinis": "Badedrakter og bikinier",
+                    "iot_dry_synthetics": "Syntetiske stoffer",
                     "iot_dry_synthetic_dry": "Synthetic Dry",
-                    "iot_dry_tablecloths": "Tablecloths",
+                    "iot_dry_tablecloths": "Duker",
                     "iot_dry_technical_fabrics": "Technical Fabrics",
                     "iot_dry_warm_embrace": "Warm Embrace",
-                    "iot_dry_wool": "Wool Dry",
+                    "iot_dry_wool": "Ull",
                     "jeans": "Jeans",
                     "mix_and_dry": "Mix&Dry",
-                    "pets": "Pets",
+                    "pets": "Kjæledyr",
                     "pre_iron": "Pre-Iron",
                     "rapid_30": "Rapid 30",
                     "rapid_45": "Rapid 45 min",
@@ -538,7 +453,7 @@
                     "refresh": "Refresh",
                     "relax_creases": "Relax Creases",
                     "saving_30_min": "Saving 30'",
-                    "shirts": "Shirts",
+                    "shirts": "Skjorter",
                     "shoes": "Shoes",
                     "small_load": "Small Load",
                     "soft_care": "Soft Care",
@@ -554,7 +469,7 @@
                     "waterproof_revitalize": "Waterproof Revitalize",
                     "whites": "Whites",
                     "wool": "Dry Wool",
-                    "woolmark": "Wool",
+                    "woolmark": "Ull",
                     "xxl_load": "XXL Load",
                     "zoom_59": "Zoom 59"
                 },
@@ -562,18 +477,18 @@
             },
             "programs_wm": {
                 "state": {
-                    "20_degrees_coloured_cottons": "20° Colored and Cottons",
+                    "20_degrees_coloured_cottons": "20° farget og bomull",
                     "20_degrees_new_energy_label": "20°C",
-                    "active_steam": "Steam 29'",
-                    "active_wash": "Active Wash 20'",
-                    "active_wash_steam": "Active Wash 20' + Steam",
+                    "active_steam": "Damp",
+                    "active_wash": "Active Wash",
+                    "active_wash_steam": "Active Wash + Steam",
                     "allergy_care": "Allergy Care",
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "All in One 49'",
                     "all_in_one_59": "All in One 59'",
-                    "all_in_one_59_steam": "All in One 59' + Steam",
+                    "all_in_one_59_steam": "Active Wash + Steam",
                     "autocare": "Autocare",
-                    "autoclean": "Drum cleaning and descaling",
+                    "autoclean": "Trommelrengjøring",
                     "baby_60": "All Baby 60°C",
                     "care_14": "Rapid Care 14'",
                     "care_30": "Rapid Care 30'",
@@ -581,41 +496,39 @@
                     "checkup": "Check-Up",
                     "colour_59": "Colored 59'",
                     "colour_59_steam": "Colored 59' + Steam",
-                    "cottons": "Cotton",
+                    "cottons": "Bomull",
                     "cottons_prewash": "Cottons + Prewash",
                     "cottons_steam": "Cotton + Steam",
                     "cotton_care_59": "Cotton Care 59'",
-                    "crystals": "Crystals 45°C",
-                    "cycle_ended": "Cycle ended",
+                    "cycle_ended": "Syklus avsluttet",
                     "delicate_59": "Delicate 59'",
-                    "delicate_silk": "Delicate and Silk 59'",
+                    "delicate_silk": "Delicate and Silk",
                     "delicate_silk_steam": "Delicate and Silk + Steam",
                     "delicati_59": "Delicate 59'",
-                    "delicati_59_steam": "Delicate 59' + Steam",
+                    "delicati_59_steam": "Delikat 59' + Steam",
                     "drain_spin": "Drain + Spin",
-                    "easy_iron": "Easy Iron 39'",
-                    "easy_iron_pro": "Easy Iron 39'",
+                    "easy_iron": "Easy Iron",
                     "eco_40_60_new_energy_label": "Eco 40-60",
                     "extra_care": "Extra Care",
                     "fitness": "Fitness Care",
                     "fitness_care": "Fitness Care",
-                    "fresh_care": "Fresh Care 59'",
+                    "fresh_care": "Fresh Care",
                     "fresh_care_steam": "Fresh Care + Steam",
-                    "handwash_wool": "Hand Wash + Wool 48'",
+                    "handwash_wool": "Hand Wash + Wool",
                     "high_dry": "High Heat Dry",
                     "hqd_20_degrees": "Cotton 20℃",
                     "hqd_allergy": "Allergy Care",
-                    "hqd_autoclean": "Drum Cleaning",
+                    "hqd_autoclean": "Trommelrengjøring",
                     "hqd_babycare": "Baby Care",
                     "hqd_checkup": "Check-Up",
-                    "hqd_cottons": "Cotton",
-                    "hqd_delicate": "Delicate 50'",
-                    "hqd_delicate_cradle": "Delicate",
+                    "hqd_cottons": "Bomull",
+                    "hqd_delicate": "Delikat",
+                    "hqd_delicate_cradle": "Delikat",
                     "hqd_dry": "Cotton Dry",
                     "hqd_dry_synthetics": "Low Heat Dry",
-                    "hqd_duvet": "Duvet",
+                    "hqd_duvet": "Dyne",
                     "hqd_eco_40_60_degrees": "Eco 40-60",
-                    "hqd_handwash_wool": "Wool 40'",
+                    "hqd_handwash_wool": "Ull",
                     "hqd_i_refresh": "i-Refresh",
                     "hqd_mix": "Mix",
                     "hqd_quick_15": "Quick 15'",
@@ -623,12 +536,12 @@
                     "hqd_rapid_wash_and_dry": "Wash and dry",
                     "hqd_refresh": "Refresh",
                     "hqd_rinse": "Rinses",
-                    "hqd_shirts": "Shirts",
+                    "hqd_shirts": "Skjorter",
                     "hqd_smart": "Smart A.I.",
-                    "hqd_spin": "Spin",
-                    "hqd_sport": "Sport 25'",
+                    "hqd_spin": "Sentrifuge",
+                    "hqd_sport": "Sport",
                     "hqd_super_fast": "Super Fast 39'",
-                    "hqd_synthetic_and_coloured": "Synthetics",
+                    "hqd_synthetic_and_coloured": "Syntetiske stoffer",
                     "hygiene_59": "Hygiene Plus 59'",
                     "hygiene_60": "Hygiene 60°C",
                     "hygiene_plus_59": "Hygiene Plus 59'",
@@ -637,16 +550,16 @@
                     "hygiene_pro_steam": "Hygiene Pro + Steam",
                     "intensive_40": "Intensive 40°C",
                     "intensive_40_steam": "Intensive 40°C + Steam",
-                    "iot_active_steam": "Steam 29'",
-                    "iot_active_wash_steam": "Active Wash 20' + Steam",
+                    "iot_active_steam": "Damp",
+                    "iot_active_wash_steam": "Active Wash + Steam",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "All in One 59' + Steam",
+                    "iot_all_in_one_59_steam": "Active Wash + Steam",
                     "iot_baby_60_steam": "All Baby 60°C + Steam",
                     "iot_checkup": "Check-Up",
                     "iot_colour_59_steam": "Colored 59' + Steam",
                     "iot_cottons_steam": "Cotton + Steam",
                     "iot_delicate_silk_steam": "Delicate and Silk + Steam",
-                    "iot_delicati_59_steam": "Delicate 59' + Steam",
+                    "iot_delicati_59_steam": "Delikat 59' + Steam",
                     "iot_dry_air_refresh": "Air Refresh",
                     "iot_dry_anti_mites": "Anti-mite",
                     "iot_dry_baby": "Baby",
@@ -657,45 +570,41 @@
                     "iot_dry_cuddly_toys": "Cuddly Toys",
                     "iot_dry_curtains": "Curtains",
                     "iot_dry_dehumidifier": "Humidity Remover",
-                    "iot_dry_delicates_antiallergy": "DelicatesAnti-allergy",
+                    "iot_dry_delicates_antiallergy": "Delicates Anti-allergy",
                     "iot_dry_delicate_tablecloths": "Delicate Tablecloths",
                     "iot_dry_denim_jeans": "Denim - Jeans",
                     "iot_dry_easy_iron_cotton": "Easy Iron - Cotton",
                     "iot_dry_easy_iron_synthetics": "Easy Iron - Synthetics",
                     "iot_dry_gym_fit": "Gym fit - Fitness",
-                    "iot_dry_lingerie": "Lingerie",
+                    "iot_dry_lingerie": "Undertøy",
                     "iot_dry_mixed_dry": "Mixed Dry",
                     "iot_dry_rapid_60_min_delicates": "Rapid 60' - Delicates",
-                    "iot_dry_shirts": "Shirts",
-                    "iot_dry_swimsuits_and_bikinis": "Swimsuits and Bikinis",
+                    "iot_dry_shirts": "Skjorter",
+                    "iot_dry_swimsuits_and_bikinis": "Badedrakter og bikinier",
                     "iot_dry_synthetics": "Synthetic Dry",
                     "iot_dry_synthetic_dry": "Synthetic Dry",
-                    "iot_dry_tablecloths": "Tablecloths",
+                    "iot_dry_tablecloths": "Duker",
                     "iot_dry_technical_fabrics": "Technical Fabrics",
                     "iot_dry_warm_embrace": "Warm Embrace",
                     "iot_dry_wool_dry": "Wool Dry",
-                    "iot_easy_iron": "Easy Iron 39'",
+                    "iot_easy_iron": "Easy Iron",
                     "iot_fresh_care_steam": "Fresh Care + Steam",
                     "iot_hygiene_pro_steam": "Hygiene Pro + Steam",
                     "iot_intensive_40_steam": "Intensive 40°C + Steam",
-                    "iot_jeans_60_steam": "Jeans + Steam",
-                    "iot_jeans_steam": "Jeans + Steam",
                     "iot_mixed_steam": "Mixed + Steam",
                     "iot_mix_and_colour_59_steam": "Mixed and Coloured 59' + Steam",
                     "iot_perfect_cotton_59_steam": "Perfect Cotton 59' + Steam",
                     "iot_rapid_a_class_60_steam": "Rapid 59' A Class + Steam",
                     "iot_resistant_cotton_steam": "Resistant Cotton + Steam",
                     "iot_shirts_steam": "Shirts + Steam",
-                    "iot_single_item_steam": "Single Item 20' + Steam",
+                    "iot_single_item_steam": "Single Item + Steam",
                     "iot_smart_wash": "Smart Wash",
                     "iot_soft_care_steam": "Soft Care + Steam",
                     "iot_special_39_full_load_steam": "Special 39' + Steam",
                     "iot_steam_hygiene_plus": "Hygiene Plus + Steam",
                     "iot_synthetic_and_coloured_steam": "Synthetic and Coloured + Steam",
-                    "iot_wash_100_custom_wash": "100% Custom Wash",
-                    "iot_wash_100_custom_wash_steam": "100% Custom Wash + Steam",
                     "iot_wash_and_dry": "Wash and dry",
-                    "iot_wash_anti_mites": "Anti-mites",
+                    "iot_wash_anti_mites": "Antimidd",
                     "iot_wash_anti_odor": "Anti-odour",
                     "iot_wash_ariel_clean_cycle": "Ariel Ultimate Clean",
                     "iot_wash_ariel_cold_cycle": "Ariel Cold Clean",
@@ -712,7 +621,7 @@
                     "iot_wash_big_single_load": "Big single load",
                     "iot_wash_bleaching": "Bleaching",
                     "iot_wash_blood_stains": "Bloodstains",
-                    "iot_wash_cashmere": "Cashmere",
+                    "iot_wash_cashmere": "Kasjmir",
                     "iot_wash_chocolate_stains": "Chocolate stains",
                     "iot_wash_cold_wash": "Cold Wash",
                     "iot_wash_colored": "Colored",
@@ -722,12 +631,12 @@
                     "iot_wash_coloured_bed_linen": "Colored Bed Linen",
                     "iot_wash_coloured_bed_linen_steam": "Coloured Bed Linen + Steam",
                     "iot_wash_coloured_curtains": "Colored Curtains",
-                    "iot_wash_coloured_shirts": "Colored Shirts 59'",
+                    "iot_wash_coloured_shirts": "Colored Shirts",
                     "iot_wash_coloured_shirts_steam": "Colored Shirts + Steam",
                     "iot_wash_coloured_steam": "Colored + Steam",
                     "iot_wash_coloured_tableclothes": "Colored Tableclothes",
                     "iot_wash_coloured_tableclothes_steam": "Coloured Tablecloths + Steam",
-                    "iot_wash_cotton": "Cotton",
+                    "iot_wash_cotton": "Bomull",
                     "iot_wash_cotton_steam": "Cotton + Steam",
                     "iot_wash_cuddly_toys": "Cuddly Toys",
                     "iot_wash_curtains": "Curtains",
@@ -741,7 +650,7 @@
                     "iot_wash_dash_clean_cycle": "Dash Ultimate Clean",
                     "iot_wash_dash_cold_cycle": "Dash Cold Clean",
                     "iot_wash_dash_fresh_cycle": "Dash Fresh Clean",
-                    "iot_wash_delicate": "Delicates",
+                    "iot_wash_delicate": "Finvask",
                     "iot_wash_delicate_antiallergy": "Delicate Anti-Allergy",
                     "iot_wash_delicate_antiallergy_steam": "Delicate Anti-Allergy + Steam",
                     "iot_wash_delicate_antiallergy_zelig": "Delicate Anti-Allergy",
@@ -757,19 +666,19 @@
                     "iot_wash_diving_suits_zelig": "Diving Suits",
                     "iot_wash_down_jackets": "Down Jackets",
                     "iot_wash_down_jackets_zelig": "Down Jackets",
-                    "iot_wash_duvet": "Duvet",
+                    "iot_wash_duvet": "Dyne",
                     "iot_wash_fruit_stains": "Fruit stains",
-                    "iot_wash_gym_fit": "Gym Fit - Fitness 59'",
+                    "iot_wash_gym_fit": "Gym Fit - Fitness",
                     "iot_wash_handwash": "Handwash",
                     "iot_wash_handwash_colored": "Handwash Colored",
                     "iot_wash_handwash_dark": "Handwash Darks",
-                    "iot_wash_lingerie": "Lingerie",
+                    "iot_wash_lingerie": "Undertøy",
                     "iot_wash_masks_refresh": "Masks Refresh",
                     "iot_wash_masks_sanification": "Masks Sanitization",
-                    "iot_wash_masks_sanification_steam": "Mask Sanitisation + Steam",
+                    "iot_wash_masks_sanification_steam": "Mask Sanitization + Steam",
                     "iot_wash_mats": "Mats",
                     "iot_wash_men_s_trousers": "Trousers",
-                    "iot_wash_mixed": "Mixed",
+                    "iot_wash_mixed": "Blandet",
                     "iot_wash_mixed_steam": "Mixed + Steam",
                     "iot_wash_mix_and_coloured_44": "Mix and Colored 44'",
                     "iot_wash_mix_and_coloured_59": "Mix and Colored 59'",
@@ -794,21 +703,21 @@
                     "iot_wash_resistant_dark": "Resistant Darks",
                     "iot_wash_resistant_whites": "Resistant Whites",
                     "iot_wash_rinse": "Rinses",
-                    "iot_wash_shirts": "Shirts",
+                    "iot_wash_shirts": "Skjorter",
                     "iot_wash_shirts_steam": "Shirts + Steam",
-                    "iot_wash_silk": "Silk",
+                    "iot_wash_silk": "Silke",
                     "iot_wash_ski_suit": "Ski Suit",
                     "iot_wash_ski_suit_zelig": "Ski Suit",
-                    "iot_wash_spin": "Spin",
+                    "iot_wash_spin": "Sentrifuge",
                     "iot_wash_sport": "Sport",
                     "iot_wash_sport_anti_odor": "Anti-odour Sportswear",
                     "iot_wash_sport_anti_odor_zelig": "Anti-odour Sportswear",
                     "iot_wash_stains_remover": "Stain Remover",
                     "iot_wash_super_saving": "Super Saving 49'",
-                    "iot_wash_swimsuits_and_bikinis": "Swimsuits and Bikinis",
-                    "iot_wash_synthetic": "Synthetics",
+                    "iot_wash_swimsuits_and_bikinis": "Badedrakter og bikinier",
+                    "iot_wash_synthetic": "Syntetiske stoffer",
                     "iot_wash_synthetic_steam": "Synthetics + Steam",
-                    "iot_wash_tablecloths": "Tablecloths",
+                    "iot_wash_tablecloths": "Duker",
                     "iot_wash_tablecloths_steam": "Tablecloths + Steam",
                     "iot_wash_technical_fabrics": "Technical Fabrics",
                     "iot_wash_technical_fabrics_zelig": "Technical Fabrics",
@@ -820,10 +729,9 @@
                     "iot_wash_whites_59": "Whites 59'",
                     "iot_wash_whites_xl": "Whites XL",
                     "iot_wash_wine_stains": "Wine Stains",
-                    "iot_wash_wool": "Wool",
+                    "iot_wash_wool": "Ull",
                     "jeans": "Jeans",
                     "jeans_60": "Jeans",
-                    "jeans_60_steam": "Jeans + Steam",
                     "low_dry": "Low Heat Dry",
                     "mixed": "Mixed",
                     "mixed_and_colored_59": "Mixed and Colored 59'",
@@ -844,10 +752,10 @@
                     "rapid_wash_and_dry_59_min": "Wash and Dry 59'",
                     "resistant_cotton": "Resistant Cotton",
                     "resistant_cotton_steam": "Resistant Cotton + Steam",
-                    "rinse": "Rinse",
+                    "rinse": "Skyll",
                     "shirts_steam": "Shirts + Steam",
                     "silent_night": "Silent Night",
-                    "single_item": "Single Item 20'",
+                    "single_item": "Single Item",
                     "single_item_steam": "Single Item + Steam",
                     "smart_wash": "Smart Wash",
                     "soft_care": "Soft Care",
@@ -861,50 +769,45 @@
                     "sport_plus_29": "Sport Plus 29\"",
                     "sport_plus_39": "Sport Plus 39'",
                     "steam_39": "Steam 39'",
-                    "steam_care": "Steam Care Pro",
                     "steam_care_pro": "Steam Care Pro",
                     "steam_care_pro_cotton": "Steam Care Pro - Cottons",
-                    "steam_care_pro_delicates": "Steam Care Pro - Delicates 16'",
-                    "steam_care_pro_synthetic": "Steam Care Pro - Synthetics 20'",
+                    "steam_care_pro_delicates": "Steam Care Pro - Delicates",
+                    "steam_care_pro_synthetic": "Steam Care Pro - Synthetics",
                     "steam_hygiene_plus": "Hygiene Plus + Steam",
-                    "synthetics": "Synthetics",
+                    "synthetics": "Syntetiske stoffer",
                     "synthetic_and_coloured": "Synthetic and Colored",
                     "synthetic_and_coloured_steam": "Synthetic and Coloured + Steam",
-                    "tailored_resistant_cotton": "Tailored resistant cotton",
-                    "tailored_synthetic_and_coloured": "Tailored Synthetic Coloured",
+                    "tailored_resistant_cotton": "Skreddersydd motstandsdyktig bomull",
+                    "tailored_synthetic_and_coloured": "Skreddersydd syntetisk farget",
                     "total_care": "Total Care",
                     "tumbling": "Tumbling",
                     "ultra_fresh": "Ultra Fresh",
-                    "wool": "Wool",
+                    "wool": "Ull",
                     "wool_and_delicates_49": "Wool and Delicates 49'",
                     "wool_dry": "Wool Dry",
-                    "wool_soft_care": "Wool and Soft Care 48'"
+                    "wool_soft_care": "Wool and Soft Care"
                 },
                 "name": "Program"
             },
             "programs_ref": {
                 "state": {
                     "auto_set": "AUTO-SET",
-                    "cheese": "Cheese",
-                    "chiller": "Quick cool",
+                    "cheese": "Ost",
+                    "chiller": "Quick Cool",
                     "cold_drinks": "Soft chill",
-                    "cool_drink": "Cool Drink",
                     "eco": "Eco",
-                    "eco_mode": "Eco mode",
+                    "eco_mode": "Eco-modus",
                     "fruits": "Fruit",
-                    "fruits_and_veg": "Fruit&Veg",
-                    "fruit_and_veg": "Fruit&Veg",
+                    "fruits_and_veg": "Frukt og grønnsaker",
+                    "fruit_and_veg": "Frukt og grønnsaker",
                     "holiday": "HOLIDAY",
                     "keep_fresh": "0°C Fresh",
-                    "milk_and_eggs": "Milk & Eggs",
-                    "no_mode_selected": "No mode selected",
+                    "no_mode_selected": "Ingen modus valgt",
                     "quick_cool": "QUICK COOL",
-                    "quick_set": "Quick Set",
+                    "quick_set": "Hurtigsett",
                     "sea_food": "Ready to cook meal",
-                    "smart_mode": "SMART MODE",
                     "smart_mode_title": "Smart Mode",
                     "soft_frozen": "Soft freezing",
-                    "soft_frozen\n": "Soft freezing",
                     "super_cool": "SUPER COOL",
                     "super_freeze": "SUPER FREEZE",
                     "tea": "Cold Drinks",
@@ -917,178 +820,180 @@
                 "state": {
                     "iot_champagne": "Champagne",
                     "iot_dessert": "Dessert",
-                    "iot_fortified": "Fortified",
+                    "iot_fortified": "Sterkvin",
                     "iot_rose": "Rosé",
                     "iot_whisky": "Whisky",
-                    "red": "Red",
-                    "sparkling": "Sparkling",
-                    "white": "White"
+                    "red": "Rød",
+                    "sparkling": "Musserende",
+                    "white": "Hvit"
                 }
             },
             "dry_time": {
-                "name": "Drying time"
+                "name": "Tørketid"
             },
             "power": {
-                "name": "Power level"
+                "name": "Strømnivå"
             },
             "remaining_time": {
-                "name": "Time remaining"
+                "name": "Gjenstående tid"
             },
             "temperature": {
-                "name": "Temperature"
+                "name": "Temperatur"
             },
             "water_efficiency": {
-                "name": "Water efficiency"
+                "name": "Vanneffektivitet"
             },
             "water_saving": {
-                "name": "Water savings"
+                "name": "Vannbesparelser"
             },
             "duration": {
-                "name": "Duration"
+                "name": "Varighet"
             },
             "target_temperature": {
-                "name": "Target temperature"
+                "name": "Måltemperatur"
             },
             "spin_speed": {
-                "name": "Spin"
+                "name": "Sentrifuge"
             },
             "delay_time": {
-                "name": "Delay Start"
+                "name": "Forsinket start"
             },
             "suggested_load": {
-                "name": "Load capacity"
+                "name": "Vektgrense"
             },
             "energy_label": {
-                "name": "Energy efficiency"
+                "name": "Energieffektivitet"
             },
             "det_dust": {
-                "name": "Powder detergent"
+                "name": "Vaskemiddel som pulver"
             },
             "det_liquid": {
-                "name": "Liquid detergent"
+                "name": "Flytende vaskemiddel"
+            },
+            "errors": {
+                "name": "Feil"
+            },
+            "programs": {
+                "name": "Gjeldende program"
             },
             "room_temperature": {
-                "name": "Room temperature"
+                "name": "Romtemperatur"
             },
             "humidity": {
-                "name": "Humidity"
+                "name": "Luftfuktighet"
             },
             "cycles_total": {
-                "name": "Cycles Total"
+                "name": "Sykluser Totalt"
             },
             "energy_total": {
-                "name": "Energy Consumption Total"
+                "name": "Energiforbruk Totalt"
             },
             "water_total": {
-                "name": "Water efficiency Total"
+                "name": "Vanneffektivitet Totalt"
             },
             "energy_current": {
-                "name": "Energy Consumption Current"
+                "name": "Energiforbruk Nåværende"
             },
             "water_current": {
-                "name": "Water efficiency Current"
+                "name": "Vanneffektivitet Nåværende"
             },
             "freezer_temp": {
-                "name": "Freezer temperature"
+                "name": "Temperatur i fryseren"
             },
             "fridge_temp": {
-                "name": "Fridge temperature"
+                "name": "Kjøleskapstemperatur"
             },
             "voc": {
-                "name": "Gas (VOC)"
+                "name": "Gass (VOC)"
             },
             "filter_cleaning": {
-                "name": "Filter cleaning"
+                "name": "Filterrensing"
             },
             "filter_life": {
-                "name": "Filter life"
+                "name": "Filterlevetid"
             },
             "air_quality": {
-                "name": "Air Quality"
+                "name": "Luftkvalitet"
             },
             "fan_speed": {
-                "name": "Fan speed"
+                "name": "Viftehastighet"
             }
         },
         "select": {
             "dry_levels": {
                 "state": {
-                    "3": "Готови за съхранение",
-                    "12": "Готови за гладене H-1",
-                    "13": "Готови за съхранение H-2",
-                    "14": "Екстра сухо H-3",
-                    "no_dry": "No drying",
-                    "iron_dry": "Iron dry",
-                    "no_dry_iron": "Hang",
-                    "cupboard_dry": "Cupboard",
-                    "extra_dry": "Extra dry",
-                    "ready_to_wear": "Ready to wear"
+                    "no_dry": "Ingen tørking",
+                    "iron_dry": "Stryke",
+                    "no_dry_iron": "Tørk uten stryking",
+                    "cupboard_dry": "Skaptørt",
+                    "extra_dry": "Ekstra tørr",
+                    "ready_to_wear": "Klar til å ha på"
                 },
-                "name": "Drying level"
+                "name": "Tørkenivå"
             },
             "eco_pilot": {
                 "state": {
-                    "touch_off": "Off",
-                    "avoid_touch": "Avoid touch",
-                    "follow_touch": "Follow",
+                    "touch_off": "Av",
+                    "avoid_touch": "Unngå berøring",
+                    "follow_touch": "Følg",
                     "unknown": "unknown"
                 },
-                "name": "Eco pilot"
+                "name": "Eco-pilot"
             },
             "fan_mode": {
                 "state": {
-                    "high": "High",
+                    "high": "Høy",
                     "mid": "Medium",
-                    "low": "Low",
+                    "low": "Lav",
                     "auto": "Auto"
                 }
             },
             "ref_zones": {
                 "state": {
-                    "fridge": "Fridge",
-                    "freezer": "Freezer",
+                    "fridge": "Kjøleskap",
+                    "freezer": "Fryser",
                     "vtroom1": "My Zone",
-                    "fridge_freezer": "Fridge & Freezer"
+                    "fridge_freezer": "Kjøleskap & Fryser"
                 },
-                "name": "Zone"
+                "name": "Sone"
             },
             "steam_level": {
                 "state": {
-                    "no_steam": "No steam",
-                    "cotton": "Cotton",
-                    "delicate": "Delicate",
-                    "synthetic": "Synthetic"
+                    "no_steam": "Ingen damp",
+                    "cotton": "Bomull",
+                    "delicate": "Delikat",
+                    "synthetic": "Syntetisk"
                 },
-                "name": "Steam Level"
+                "name": "Dampnivå"
             },
             "mode": {
                 "state": {
                     "standby": "Standby",
-                    "sleep": "Sleep",
+                    "sleep": "Hvil",
                     "auto": "Auto",
-                    "allergens": "Allergens",
-                    "max": "Max"
+                    "allergens": "Allergener",
+                    "max": "Maks"
                 },
-                "name": "Mode"
+                "name": "Modus"
             },
             "diffuser": {
                 "state": {
-                    "off": "Off",
-                    "soft": "Soft",
-                    "mid": "Mid",
+                    "off": "Av",
+                    "soft": "Myk",
+                    "mid": "Middels",
                     "h_biotics": "H-BIOTICS",
-                    "custom": "Customise"
+                    "custom": "Tilpass"
                 },
-                "name": "Diffuser"
+                "name": "Diffusor"
             },
             "dirt_level": {
                 "state": {
-                    "little": "Little",
+                    "little": "Litt",
                     "normal": "Normal",
-                    "very": "Very",
+                    "very": "Veldig",
                     "unknown": "unknown"
                 },
-                "name": "Dirt level"
+                "name": "Smussnivå"
             },
             "stain_type": {
                 "state": {
@@ -1134,50 +1039,45 @@
             },
             "fan_horizontal": {
                 "state": {
-                    "position_1": "Fixed - Position 1",
-                    "position_2": "Fixed - Position 2",
-                    "position_3": "Fixed - Position 3",
-                    "position_4": "Fixed - Position 4",
-                    "position_5": "Fixed - Position 5",
-                    "swing": "Swing"
+                    "position_1": "Fast - Plassering 1",
+                    "position_2": "Fast - Plassering 2",
+                    "position_3": "Fast - Plassering 3",
+                    "position_4": "Fast - Plassering 4",
+                    "position_5": "Fast - Plassering 5",
+                    "swing": "Sving"
                 },
-                "name": "Fan direction Horizontal"
+                "name": "Vifteretning Horisontal"
             },
             "fan_vertical": {
                 "state": {
-                    "position_1": "Fixed - Position 1",
-                    "position_2": "Fixed - Position 2",
-                    "position_3": "Fixed - Position 3",
-                    "position_4": "Fixed - Position 4",
-                    "position_5": "Fixed - Position 5",
-                    "swing": "Swing"
+                    "position_1": "Fast - Plassering 1",
+                    "position_2": "Fast - Plassering 2",
+                    "position_3": "Fast - Plassering 3",
+                    "position_4": "Fast - Plassering 4",
+                    "position_5": "Fast - Plassering 5",
+                    "swing": "Sving"
                 },
-                "name": "Fan direction Vertical"
+                "name": "Vifteretning Vertikal"
             },
             "programs_ac": {
                 "state": {
-                    "iot_10_heating": "10°C Heating function",
+                    "iot_10_heating": "10°C oppvarmingsfunksjon",
                     "iot_auto": "Auto",
-                    "iot_cool": "Cool",
-                    "iot_dry": "Dry",
-                    "iot_dry_summer": "Dry summer",
-                    "iot_dry_winter": "Dry winter",
-                    "iot_fan": "Fan",
-                    "iot_heat": "Heat",
-                    "iot_humid_summer": "Humid summer",
+                    "iot_cool": "Kjølig",
+                    "iot_dry": "Tørr",
+                    "iot_fan": "Vifte",
+                    "iot_heat": "Varme",
                     "iot_nano_aqua": "Nano Aqua",
-                    "iot_purify": "Self-purify",
-                    "iot_rainy_winter": "Rainy winter",
-                    "iot_self_clean": "Self-clean",
+                    "iot_purify": "Selvrensende",
+                    "iot_self_clean": "Selvvask",
                     "iot_self_clean_56": "Steri-Clean 56°C",
-                    "iot_simple_start": "Start now",
+                    "iot_simple_start": "Start",
                     "iot_uv": "UV",
                     "iot_uv_and_auto": "UV + Auto",
-                    "iot_uv_and_cool": "UV + Cold",
-                    "iot_uv_and_dry": "UV + Dehumidifier",
-                    "iot_uv_and_fan": "UV + Fan",
-                    "iot_uv_and_heat": "UV + Heat",
-                    "iot_warm_spring": "Warm spring"
+                    "iot_uv_and_cool": "UV + kald",
+                    "iot_uv_and_dry": "UV + Avfukter",
+                    "iot_uv_and_fan": "UV + vifte",
+                    "iot_uv_and_heat": "UV + varme"
                 },
                 "name": "Program"
             },
@@ -1186,49 +1086,45 @@
                     "59_min": "Rapid 59'",
                     "auto_care": "Auto Care",
                     "auto_care_soil": "Auto Care",
-                    "auto_hygiene": "Auto Hygiene",
                     "auto_plus": "AutoPlus",
-                    "auto_plus_soil": "Auto Plus",
-                    "auto_rapid": "Auto Rapid",
-                    "auto_rapid_soil": "Auto Rapid",
+                    "auto_plus_soil": "Auto Plus Soil",
+                    "auto_rapid_soil": "Auto Rapid Soil",
                     "auto_sensor": "Auto Sensor",
                     "auto_sensor_soil": "Auto Sensor",
-                    "auto_universal": "Auto Universal 50-60°C",
-                    "auto_universal_plus": "Auto Universal Plus 65-75°C",
-                    "auto_universal_plus_soil": "Auto Universal Plus 65-75°C",
-                    "auto_universal_soil": "Auto Universal 50-60°C",
-                    "auto_wash": "Auto Wash",
-                    "auto_wash_soil": "Auto Wash",
-                    "classe_a_59": "A Wash 59' 65°C",
-                    "delicate": "Delicate 45°C",
-                    "dishwasher_care": "Limescale cleaning",
-                    "eco": "Eco 45°C",
+                    "auto_universal": "Auto Universal 50 - 60°C",
+                    "auto_universal_plus": "Auto Universal+ 65 - 75°C",
+                    "auto_universal_plus_soil": "Auto Universal+ 65 - 75°C",
+                    "auto_universal_soil": "Auto Universal 50 - 60°C",
+                    "auto_wash": "Autovask",
+                    "auto_wash_soil": "Autovask",
+                    "classe_a_59": "En Vask 59' 65°C",
+                    "delicate": "Delikat 45°C",
+                    "dishwasher_care": "Kalkrengjøring",
+                    "eco": "Eco",
                     "eco_asynch": "Eco 45°C",
                     "eco_bldc": "Eco 45°C",
                     "eco_synch": "Eco 45°C",
-                    "eco_voice": "Eco",
-                    "gentle_wash": "Gentle wash",
+                    "gentle_wash": "Skånsom vask",
                     "glass": "Glass",
-                    "glassware": "Glassware 45°C",
-                    "glass_care": "Glass Care",
+                    "glassware": "Glass 45°C",
+                    "glass_care": "Glasspleie",
                     "hygiene": "Hygiene",
-                    "hygiene_plus": "Hygiene Plus 75°C",
-                    "intensive": "Intensive",
+                    "hygiene_plus": "Hygiene+ 75°C",
+                    "intensive": "Intensiv",
                     "intensive_rapid": "Intensive Rapid",
-                    "intensive_voice": "Intensive",
                     "iot_auto_sensor": "Auto Sensor",
-                    "iot_auto_universal_soil": "Auto Universal 50-60°C",
-                    "iot_auto_wash_soil": "Auto Wash",
+                    "iot_auto_universal_soil": "Auto Universal 50 - 60°C",
+                    "iot_auto_wash_soil": "Autovask",
                     "iot_baby_care": "Baby Care",
                     "iot_breakfast": "Breakfast",
                     "iot_checkup": "Check-Up",
-                    "iot_china_crystals": "Crystals",
+                    "iot_china_crystals": "China Crystals",
                     "iot_classe_a_59": "Rapid 59'",
-                    "iot_cocktail_glasses": "Coktail Glasses",
-                    "iot_cocktail_glasses_soil": "Coktail Glasses",
+                    "iot_cocktail_glasses": "Cocktailglass",
+                    "iot_cocktail_glasses_soil": "Cocktailglass",
                     "iot_daily_care": "Daily Care",
                     "iot_daily_care_soil": "Daily Care",
-                    "iot_delicate": "Delicate 45°C",
+                    "iot_delicate": "Delikat 45°C",
                     "iot_dinner_for_two": "Dinner for 2",
                     "iot_dinner_for_two_soil": "Dinner for 2",
                     "iot_dreft_quick_cycle": "Dreft Quick",
@@ -1236,49 +1132,47 @@
                     "iot_eco_bldc": "Eco 45°C",
                     "iot_eco_synch": "Eco 45°C",
                     "iot_extra_hygiene": "Extra Hygiene",
-                    "iot_fairy_quick_cycle": "Fairy Quick",
+                    "iot_fairy_quick_cycle": "Fairy Short",
                     "iot_happy_hour": "Happy Hour",
                     "iot_jar_quick_cycle": "Jar Quick",
                     "iot_party": "Party",
                     "iot_party_soil": "Party",
-                    "iot_pet_bowls_toys": "Pet Bowls and Toys",
                     "iot_pizza_menu": "Pizza Menu",
                     "iot_pizza_menu_soil": "Pizza Menu",
                     "iot_plastic_tupperware": "Plastic & Tupperware",
-                    "iot_porcelain": "Porcelain",
+                    "iot_porcelain": "Porselen",
                     "iot_power_mix_wash": "Power Mix Wash",
                     "iot_power_mix_wash_soil": "Power Mix Wash",
-                    "iot_prewash": "Pre-wash",
-                    "iot_pyrex_and_glassware": "Pyrex & Glassware",
+                    "iot_prewash": "Forvask",
+                    "iot_pyrex_and_glassware": "Pyrex og glass",
                     "iot_rapid_29": "Rapid 29'",
                     "iot_rapid_39": "Rapid 39' 60°C",
-                    "iot_single": "Single",
+                    "iot_single": "Enkelt",
                     "iot_steam": "Steam 75°C",
                     "iot_super_flash": "Super Flash",
                     "iot_super_wash": "Super Wash",
                     "iot_turbopower": "TurboPower",
                     "iot_universal": "Universal 60°C",
                     "iot_voice_automatic": "Automatic",
-                    "iot_voice_delicate": "Delicate 45°C",
+                    "iot_voice_delicate": "Delikat 45°C",
                     "iot_voice_eco": "Eco 45°C",
-                    "iot_voice_eco_bldc": "Eco 45°C",
-                    "iot_voice_intensive": "Intensive 75°C",
-                    "iot_voice_prewash": "Pre-wash",
+                    "iot_voice_intensive": "Intensiv 75°C",
+                    "iot_voice_prewash": "Forvask",
                     "iot_voice_rapid_59": "Rapid 59'",
                     "iot_voice_universal": "Universal 60°C",
                     "iot_wok_grids_maxi_pans": "Special Pans (Wok, Grids & Maxi Pans)",
                     "iot_wok_grids_maxi_pans_soil": "Special Pans (Wok, Grids & Maxi Pans)",
                     "iot_yes_quick_cycle": "Yes Quick",
                     "night": "Night 55°C",
-                    "prewash": "Pre-wash",
+                    "prewash": "Forvask",
                     "rapid_20": "Rapid 20'",
                     "rapid_24": "Rapid 24'",
                     "rapid_29": "Rapid 29' 50°C",
-                    "rapid_35": "Wash&Dry 35'",
+                    "rapid_35": "Vask og tørk 35'",
                     "rapid_39": "Rapid 39' 60°C",
                     "rapid_49": "Rapid 49'",
                     "rapid_59": "Rapid 59'",
-                    "sanitising": "Sanitising",
+                    "sanitising": "Sanering",
                     "silence": "Silence",
                     "silent": "Silent",
                     "silent_care": "Silent Care",
@@ -1288,8 +1182,8 @@
                     "smart_ai_rapid": "Smart AI Rapid",
                     "smart_ai_rapid_soil": "Smart AI Rapid",
                     "smart_ai_soil": "Smart AI",
-                    "special": "Special",
-                    "special_pw_prz": "Special",
+                    "special": "Spesiell",
+                    "special_pw_prz": "Spesiell",
                     "steam": "Steam 75°C",
                     "steam_plus": "Steam Plus 75°C",
                     "total_care": "Total Care 50°C",
@@ -1304,124 +1198,119 @@
             },
             "programs_ih": {
                 "state": {
-                    "iot_special_ash_brown": "Ash brown",
-                    "iot_special_beef_fillet": "Beef fillet",
-                    "iot_special_beef_veal_stew": "Beef and veal stew",
-                    "iot_special_boiled_rice": "Boiled rice",
-                    "iot_special_chicken_breast": "Chicken breast",
-                    "iot_special_chicken_legs": "Chicken legs",
-                    "iot_special_chocolate_pudding": "Chocolate pudding",
+                    "iot_special_ash_brown": "Askebrun",
+                    "iot_special_beef_fillet": "Oksefilet",
+                    "iot_special_beef_veal_stew": "Okse- og kalvegryte",
+                    "iot_special_boiled_rice": "Kokt ris",
+                    "iot_special_chicken_breast": "Kyllingbryst",
+                    "iot_special_chicken_legs": "Kyllinglår",
+                    "iot_special_chocolate_pudding": "Sjokolade pudding",
                     "iot_special_entrecote": "Entrecote",
-                    "iot_special_fresh_tuna": "Fresh tuna",
-                    "iot_special_grilled_vegetables": "Grilled vegetables",
-                    "iot_special_lamb_cutlet": "Lamb cutle",
-                    "iot_special_meatballs": "Meatballs",
+                    "iot_special_fresh_tuna": "Fersk tunfisk",
+                    "iot_special_grilled_vegetables": "Grillede grønnsaker",
+                    "iot_special_lamb_cutlet": "Lammekotelett",
+                    "iot_special_meatballs": "Kjøttboller",
                     "iot_special_minestrone": "Minestrone",
-                    "iot_special_mussels": "Mussels",
-                    "iot_special_omelette": "Omelette",
-                    "iot_special_pancakes": "Pancakes",
-                    "iot_special_paris_style_peas": "Paris style peas",
-                    "iot_special_poached_eggs": "Poached eggs",
-                    "iot_special_pork_fillet": "Pork fillet",
-                    "iot_special_pork_ribs": "Pork ribs",
-                    "iot_special_prawns": "Prawns",
+                    "iot_special_mussels": "Blåskjell",
+                    "iot_special_omelette": "Omelett",
+                    "iot_special_pancakes": "Pannekaker",
+                    "iot_special_paris_style_peas": "Erter, Paris-stil",
+                    "iot_special_poached_eggs": "Posjerte egg",
+                    "iot_special_pork_fillet": "Svinefilet",
+                    "iot_special_pork_ribs": "Ribbe",
+                    "iot_special_prawns": "Reker",
                     "iot_special_quinoa": "Quinoa",
                     "iot_special_ratatouille": "Ratatouille",
-                    "iot_special_salmon_fillet": "Salmon fillet",
-                    "iot_special_saute_potatoes": "Saute potatoes",
-                    "iot_special_scallops": "Scallops",
-                    "iot_special_scrambled_eggs": "Scrambled eggs",
+                    "iot_special_salmon_fillet": "Laksefilet",
+                    "iot_special_saute_potatoes": "Stek poteter",
+                    "iot_special_scallops": "Kamskjell",
+                    "iot_special_scrambled_eggs": "Eggerøre",
                     "iot_special_spelt": "Spelt",
-                    "iot_special_veggy_noodles": "Veggy noodles",
-                    "iot_special_white_fish_fillet": "White fish fillet",
-                    "iot_standard_boiling": "Boiling",
-                    "iot_standard_frying": "Frying",
-                    "iot_standard_keep_warm": "Keep Warm",
-                    "iot_standard_melting": "Melting",
-                    "iot_standard_simmering": "Simmering"
+                    "iot_special_veggy_noodles": "Grønnsaknudler",
+                    "iot_special_white_fish_fillet": "Hvit fiskefilet",
+                    "iot_standard_boiling": "Koking",
+                    "iot_standard_frying": "Steking",
+                    "iot_standard_keep_warm": "Hold varm",
+                    "iot_standard_melting": "Smelting",
+                    "iot_standard_simmering": "Småkoking"
                 },
                 "name": "Program"
             },
             "programs_ov": {
                 "state": {
-                    "bakery": "Pasta and Bakery",
-                    "bakery_steam": "Steam oven",
-                    "bottom_heating": "Bottom Heating",
-                    "bottom_heating_fan": "Bottom Heating + Fan",
-                    "bread": "Bread",
-                    "bread_steam": "Steam baked bread",
+                    "bakery": "Bakeri",
+                    "bakery_steam": "Bakeridamp",
+                    "bottom_heating": "Bunnvarming",
+                    "bottom_heating_fan": "Bunnvarming + Vifte",
+                    "bread": "Brød",
+                    "bread_steam": "Brøddamp",
                     "combi": "Combi",
-                    "convection_fan": "Convection + Fan",
-                    "convection_fan_turnspit": "Convection + Fan + Turnspit",
-                    "conventional": "Conventional",
-                    "conventional_turnspit": "Convection + Turnspit",
-                    "defrost": "Defrosting",
-                    "descaling": "Descaling",
-                    "fish": "Fish",
-                    "fish_steam": "Steamed fish",
+                    "convection_fan": "Konveksjon + vifte",
+                    "convection_fan_turnspit": "Konveksjonsvifte, grillspidd",
+                    "conventional": "Konvensjonell",
+                    "conventional_turnspit": "Konvensjonelt grillspidd",
+                    "defrost": "Avriming",
+                    "descaling": "Avkalkning",
+                    "fish": "Fisk",
+                    "fish_steam": "Fiskedamp",
                     "grill_cata": "Grill",
-                    "grill_fan_cata": "Grill fan",
-                    "grill_fan_pyro": "Grill + Fan",
+                    "grill_fan_cata": "Grill + vifte",
+                    "grill_fan_pyro": "Grill + vifte",
                     "grill_pyro": "Grill",
                     "h20_clean": "H2O-Clean",
-                    "iot_bread": "Bread",
-                    "iot_h20_clean": "h2O clean",
+                    "iot_bread": "Brød",
+                    "iot_h20_clean": "h2O-Clean",
                     "leavening": "Leavening",
-                    "light_fan": "Light Fan",
-                    "light_fan\n": "Light Fan",
-                    "low_temp_cooking": "Low Temperature Cooking",
-                    "low_temp_cooking_fish": "Low Temperature Cooking - Fish",
-                    "low_temp_cooking_fish_steam": "Low Temperature Cooking - Steamed fish",
-                    "low_temp_cooking_meat": "Low Temperature Cooking - Meat",
-                    "low_temp_cooking_meat_steam": "Low Temperature Cooking - Steamed meat",
-                    "low_temp_cooking_steam": "Low Temperature Steam Cooking",
-                    "meat": "Meat",
-                    "meat_steam": "Steamed meat",
-                    "multi_level": "Multi-Level",
+                    "low_temp_cooking": "Matlaging på lav temperatur",
+                    "low_temp_cooking_fish": "Matlaging på lav temperatur, fisk",
+                    "low_temp_cooking_fish_steam": "Matlaging på lav temperatur, fiskedamping",
+                    "low_temp_cooking_meat": "Matlaging på lav temperatur, kjøtt",
+                    "low_temp_cooking_meat_steam": "Matlaging på lav temperatur, kjøttdamping",
+                    "low_temp_cooking_steam": "Matlaging på lav temperatur, damp",
+                    "meat": "Kjøtt",
+                    "meat_steam": "Kjøtt, damp",
+                    "multi_level": "Multinivå",
                     "paella": "Paella",
-                    "pasta_and_bakery": "Pasta and Bakery",
+                    "pasta_and_bakery": "Pasta og bakverk",
                     "pizza": "Pizza",
-                    "pyrolysis": "Pyrolysis",
-                    "pyrolysis_plus": "Pyrolysis +",
-                    "red_meat": "Red Meat",
-                    "red_meat_steam": "Steamed red meat",
-                    "regenerate": "Regenerate",
+                    "pyrolysis": "Pyrolyse",
+                    "pyrolysis_plus": "Pyrolyse +",
+                    "red_meat": "Rødt kjøtt",
+                    "red_meat_steam": "Rødt kjøtt, damp",
+                    "regenerate": "Regenerer",
                     "soft_plus": "Soft+",
                     "super_grill": "Super Grill",
                     "tailor_bake": "Tailor bake",
                     "tailor_bake_cata": "Tailor Bake",
                     "tailor_bake_pyro": "Tailor Bake",
-                    "vegetables": "Vegetables",
-                    "vegetables_cata": "Vegetables",
-                    "vegetables_pyro": "Vegetables",
-                    "water_discharge": "Water Discharge",
-                    "white_meat": "White Meat",
-                    "white_meat_steam": "Steamed white meat"
+                    "vegetables": "Grønnsaker",
+                    "vegetables_cata": "Grønnsaker",
+                    "vegetables_pyro": "Grønnsaker",
+                    "water_discharge": "Vannutslipp",
+                    "white_meat": "Hvitt kjøtt",
+                    "white_meat_steam": "Hvitt kjøtt, damp"
                 },
                 "name": "Program"
             },
             "programs_td": {
                 "state": {
                     "active_dry": "Active Dry",
-                    "allergy_care": "Anti-allergy",
+                    "allergy_care": "Anti-allergi",
                     "all_in_one": "All in One",
-                    "antiallergy": "Anti-allergy",
-                    "anti_odours": "Anti-odours",
+                    "antiallergy": "Anti-allergi",
+                    "anti_odours": "Lukftfritt",
                     "auto_care": "Auto Care",
                     "baby": "Baby",
-                    "babycare": "Babycare",
                     "bed_quilt": "Bed Quilt",
-                    "bulky": "Bulky",
                     "care_30": "Care 30",
                     "care_45": "Care 45",
                     "care_59": "Care 59",
-                    "coloured": "Colored",
-                    "daily_45_min": "Daily 45'",
+                    "coloured": "Farget",
+                    "daily_45_min": "Daglig 45'",
                     "daily_perfect_59_min": "Daily Perfect 59'",
                     "darks_and_coloured": "Darks & Colored",
-                    "delicates": "Delicates",
-                    "down": "Down",
-                    "duvet": "Duvet",
+                    "delicates": "Finvask",
+                    "duvet": "Dyne",
                     "eco": "Eco Cotton",
                     "ecospeed_cottons": "Ecospeed Cottons",
                     "ecospeed_delicates": "Ecospeed Delicates",
@@ -1436,93 +1325,90 @@
                     "hqd_bulky": "Bulky Items",
                     "hqd_casual": "Casual",
                     "hqd_checkup": "Check-Up",
-                    "hqd_cold_wind_30": "Cool Breeze 30m",
-                    "hqd_cold_wind_timing": "Cold Air",
-                    "hqd_cotton": "Cotton",
-                    "hqd_curtain": "Curtains",
-                    "hqd_delicate": "Delicates",
+                    "hqd_cold_wind_30": "Cool Breeze 30 minutter",
+                    "hqd_cold_wind_timing": "Cool Breeze",
+                    "hqd_cotton": "Bomull",
+                    "hqd_curtain": "Gardiner",
+                    "hqd_delicate": "Finvask",
                     "hqd_diaper": "Diapers",
-                    "hqd_duvet": "Synthetic fibre quilted jacket",
+                    "hqd_duvet": "Dyne",
                     "hqd_eco": "Eco",
-                    "hqd_feather": "Natural fibre quilted jacket",
-                    "hqd_hot_wind_timing": "Warm Embrace",
+                    "hqd_feather": "Down Jackets",
+                    "hqd_hot_wind_timing": "Varm luft",
                     "hqd_hygienic": "Hygienising",
                     "hqd_i_refresh": "I-Refresh",
                     "hqd_i_refresh_pro": "I-Refresh Pro",
-                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro Babycare",
-                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro Bulky",
-                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro Delicates",
-                    "hqd_i_refresh_pro_down": "I-Refresh Pro Down",
-                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro Shirt",
-                    "hqd_i_refresh_pro_towel": "I-Refresh Pro Towel",
-                    "hqd_i_refresh_pro_wool": "I-Refresh Pro Wool",
+                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro-babypleie",
+                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro-bulkete",
+                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro-finvask",
+                    "hqd_i_refresh_pro_down": "I-Refresh Pro-ned",
+                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro-skjorte",
+                    "hqd_i_refresh_pro_towel": "I-Refresh Pro-håndkle",
+                    "hqd_i_refresh_pro_wool": "I-Refresh Pro-ull",
                     "hqd_jacket": "Jackets",
                     "hqd_jeans": "Jeans",
                     "hqd_luxury": "Luxury",
-                    "hqd_mix": "Mixed",
-                    "hqd_night_dry": "Overnight drying",
-                    "hqd_outdoor": "Outdoor",
+                    "hqd_mix": "Blandet",
+                    "hqd_night_dry": "Tørking over natten",
+                    "hqd_outdoor": "Utendørs",
                     "hqd_precious_cure": "Precious Cure",
-                    "hqd_quick_20": "Quick 20m",
-                    "hqd_quick_30": "Quick 30'",
-                    "hqd_quick_dry": "30' automatic quick drying",
+                    "hqd_quick_20": "Quick 20",
+                    "hqd_quick_30": "Quick 30",
+                    "hqd_quick_dry": "Hurtigtørk",
                     "hqd_quilt": "Quilts",
-                    "hqd_refresh": "Refresh",
+                    "hqd_refresh": "Oppdater",
                     "hqd_school_uniform": "School Uniform",
-                    "hqd_shirt": "Shirts",
+                    "hqd_shirt": "Skjorter",
                     "hqd_shoes": "Shoes",
-                    "hqd_silk": "Silk",
-                    "hqd_smart": "HQD SMART",
-                    "hqd_sports": "Sports",
-                    "hqd_synthetics": "Synthetics",
-                    "hqd_timer": "Timed",
+                    "hqd_silk": "Silke",
+                    "hqd_sports": "Sport",
+                    "hqd_synthetics": "Syntetiske stoffer",
+                    "hqd_timer": "TIMER",
                     "hqd_towel": "Towels",
-                    "hqd_underwear": "Underwear",
+                    "hqd_underwear": "Undertøy",
                     "hqd_warm_up": "Warm up",
-                    "hqd_wool": "Wool",
+                    "hqd_wool": "Ull",
                     "hqd_working_suit": "Workwear",
                     "hygiene": "Hygiene",
                     "iot_checkup": "Check-Up",
-                    "iot_dry_anti_mites": "Anti-mites",
+                    "iot_dry_anti_mites": "Antimidd",
                     "iot_dry_baby": "Baby",
-                    "iot_dry_backpacks": "Backpacks",
-                    "iot_dry_bathrobe": "Bathrobe",
+                    "iot_dry_backpacks": "Ryggsekker",
+                    "iot_dry_bathrobe": "Badekåpe",
                     "iot_dry_bed_linen": "Bed Linen",
                     "iot_dry_bed_quilt": "Bed Quilt",
-                    "iot_dry_cotton": "Cotton",
+                    "iot_dry_cotton": "Bomull",
                     "iot_dry_cuddly_toys": "Cuddly Toys",
-                    "iot_dry_curtains": "Curtains",
+                    "iot_dry_curtains": "Gardiner",
                     "iot_dry_dehumidifier": "Humidity Remover",
-                    "iot_dry_delicates": "Delicates",
+                    "iot_dry_delicates": "Finvask",
                     "iot_dry_delicate_tablecloths": "Delicate Tablecloths",
                     "iot_dry_denim_jeans": "Denim - Jeans",
                     "iot_dry_down_jacket": "Jacket",
-                    "iot_dry_duvet": "Duvet",
+                    "iot_dry_duvet": "Dyne",
                     "iot_dry_easy_iron_cotton": "Super Easy Iron",
                     "iot_dry_easy_iron_synthetics": "Super Easy Iron Synthetics",
                     "iot_dry_gym_fit": "Gym fit - Fitness",
-                    "iot_dry_lingerie": "Lingerie",
-                    "iot_dry_mixed": "Mixed",
-                    "iot_dry_pet_accessories": "Pet Accessories",
-                    "iot_dry_pet_hair_removal": "Pet hair removal (pre-washing)",
+                    "iot_dry_lingerie": "Undertøy",
+                    "iot_dry_mixed": "Blandet",
                     "iot_dry_playsuits": "Playsuits",
-                    "iot_dry_rapid_30": "Rapid 30'",
+                    "iot_dry_rapid_30": "Rapid 30",
                     "iot_dry_rapid_59": "Rapid 59'",
-                    "iot_dry_refresh": "Refresh",
+                    "iot_dry_refresh": "Oppdater",
                     "iot_dry_regenerates_waterproof": "Regenerates Waterproof",
                     "iot_dry_relax_creases": "Relax Creases",
-                    "iot_dry_shirts": "Shirts",
+                    "iot_dry_shirts": "Skjorter",
                     "iot_dry_small_load": "Small Load",
-                    "iot_dry_swimsuits_and_bikinis": "Swimsuits and Bikinis",
-                    "iot_dry_synthetics": "Synthetics",
+                    "iot_dry_swimsuits_and_bikinis": "Badedrakter og bikinier",
+                    "iot_dry_synthetics": "Syntetiske stoffer",
                     "iot_dry_synthetic_dry": "Synthetic Dry",
-                    "iot_dry_tablecloths": "Tablecloths",
+                    "iot_dry_tablecloths": "Duker",
                     "iot_dry_technical_fabrics": "Technical Fabrics",
                     "iot_dry_warm_embrace": "Warm Embrace",
-                    "iot_dry_wool": "Wool Dry",
+                    "iot_dry_wool": "Ull",
                     "jeans": "Jeans",
                     "mix_and_dry": "Mix&Dry",
-                    "pets": "Pets",
+                    "pets": "Kjæledyr",
                     "pre_iron": "Pre-Iron",
                     "rapid_30": "Rapid 30",
                     "rapid_45": "Rapid 45 min",
@@ -1530,7 +1416,7 @@
                     "refresh": "Refresh",
                     "relax_creases": "Relax Creases",
                     "saving_30_min": "Saving 30'",
-                    "shirts": "Shirts",
+                    "shirts": "Skjorter",
                     "shoes": "Shoes",
                     "small_load": "Small Load",
                     "soft_care": "Soft Care",
@@ -1546,7 +1432,7 @@
                     "waterproof_revitalize": "Waterproof Revitalize",
                     "whites": "Whites",
                     "wool": "Dry Wool",
-                    "woolmark": "Wool",
+                    "woolmark": "Ull",
                     "xxl_load": "XXL Load",
                     "zoom_59": "Zoom 59"
                 },
@@ -1554,18 +1440,18 @@
             },
             "programs_wm": {
                 "state": {
-                    "20_degrees_coloured_cottons": "20° Colored and Cottons",
+                    "20_degrees_coloured_cottons": "20° farget og bomull",
                     "20_degrees_new_energy_label": "20°C",
-                    "active_steam": "Steam 29'",
-                    "active_wash": "Active Wash 20'",
-                    "active_wash_steam": "Active Wash 20' + Steam",
+                    "active_steam": "Damp",
+                    "active_wash": "Active Wash",
+                    "active_wash_steam": "Active Wash + Steam",
                     "allergy_care": "Allergy Care",
                     "allergy_care_pro": "Allergy Care Pro",
                     "all_in_one_49": "All in One 49'",
                     "all_in_one_59": "All in One 59'",
-                    "all_in_one_59_steam": "All in One 59' + Steam",
+                    "all_in_one_59_steam": "Active Wash + Steam",
                     "autocare": "Autocare",
-                    "autoclean": "Drum cleaning and descaling",
+                    "autoclean": "Trommelrengjøring",
                     "baby_60": "All Baby 60°C",
                     "care_14": "Rapid Care 14'",
                     "care_30": "Rapid Care 30'",
@@ -1573,41 +1459,39 @@
                     "checkup": "Check-Up",
                     "colour_59": "Colored 59'",
                     "colour_59_steam": "Colored 59' + Steam",
-                    "cottons": "Cotton",
+                    "cottons": "Bomull",
                     "cottons_prewash": "Cottons + Prewash",
                     "cottons_steam": "Cotton + Steam",
                     "cotton_care_59": "Cotton Care 59'",
-                    "crystals": "Crystals 45°C",
-                    "cycle_ended": "Cycle ended",
+                    "cycle_ended": "Syklus avsluttet",
                     "delicate_59": "Delicate 59'",
-                    "delicate_silk": "Delicate and Silk 59'",
+                    "delicate_silk": "Delicate and Silk",
                     "delicate_silk_steam": "Delicate and Silk + Steam",
                     "delicati_59": "Delicate 59'",
-                    "delicati_59_steam": "Delicate 59' + Steam",
+                    "delicati_59_steam": "Delikat 59' + Steam",
                     "drain_spin": "Drain + Spin",
-                    "easy_iron": "Easy Iron 39'",
-                    "easy_iron_pro": "Easy Iron 39'",
+                    "easy_iron": "Easy Iron",
                     "eco_40_60_new_energy_label": "Eco 40-60",
                     "extra_care": "Extra Care",
                     "fitness": "Fitness Care",
                     "fitness_care": "Fitness Care",
-                    "fresh_care": "Fresh Care 59'",
+                    "fresh_care": "Fresh Care",
                     "fresh_care_steam": "Fresh Care + Steam",
-                    "handwash_wool": "Hand Wash + Wool 48'",
+                    "handwash_wool": "Hand Wash + Wool",
                     "high_dry": "High Heat Dry",
                     "hqd_20_degrees": "Cotton 20℃",
                     "hqd_allergy": "Allergy Care",
-                    "hqd_autoclean": "Drum Cleaning",
+                    "hqd_autoclean": "Trommelrengjøring",
                     "hqd_babycare": "Baby Care",
                     "hqd_checkup": "Check-Up",
-                    "hqd_cottons": "Cotton",
-                    "hqd_delicate": "Delicate 50'",
-                    "hqd_delicate_cradle": "Delicate",
+                    "hqd_cottons": "Bomull",
+                    "hqd_delicate": "Delikat",
+                    "hqd_delicate_cradle": "Delikat",
                     "hqd_dry": "Cotton Dry",
                     "hqd_dry_synthetics": "Low Heat Dry",
-                    "hqd_duvet": "Duvet",
+                    "hqd_duvet": "Dyne",
                     "hqd_eco_40_60_degrees": "Eco 40-60",
-                    "hqd_handwash_wool": "Wool 40'",
+                    "hqd_handwash_wool": "Ull",
                     "hqd_i_refresh": "i-Refresh",
                     "hqd_mix": "Mix",
                     "hqd_quick_15": "Quick 15'",
@@ -1615,12 +1499,12 @@
                     "hqd_rapid_wash_and_dry": "Wash and dry",
                     "hqd_refresh": "Refresh",
                     "hqd_rinse": "Rinses",
-                    "hqd_shirts": "Shirts",
+                    "hqd_shirts": "Skjorter",
                     "hqd_smart": "Smart A.I.",
-                    "hqd_spin": "Spin",
-                    "hqd_sport": "Sport 25'",
+                    "hqd_spin": "Sentrifuge",
+                    "hqd_sport": "Sport",
                     "hqd_super_fast": "Super Fast 39'",
-                    "hqd_synthetic_and_coloured": "Synthetics",
+                    "hqd_synthetic_and_coloured": "Syntetiske stoffer",
                     "hygiene_59": "Hygiene Plus 59'",
                     "hygiene_60": "Hygiene 60°C",
                     "hygiene_plus_59": "Hygiene Plus 59'",
@@ -1629,16 +1513,16 @@
                     "hygiene_pro_steam": "Hygiene Pro + Steam",
                     "intensive_40": "Intensive 40°C",
                     "intensive_40_steam": "Intensive 40°C + Steam",
-                    "iot_active_steam": "Steam 29'",
-                    "iot_active_wash_steam": "Active Wash 20' + Steam",
+                    "iot_active_steam": "Damp",
+                    "iot_active_wash_steam": "Active Wash + Steam",
                     "iot_allergy_care_pro": "Allergy Care Pro",
-                    "iot_all_in_one_59_steam": "All in One 59' + Steam",
+                    "iot_all_in_one_59_steam": "Active Wash + Steam",
                     "iot_baby_60_steam": "All Baby 60°C + Steam",
                     "iot_checkup": "Check-Up",
                     "iot_colour_59_steam": "Colored 59' + Steam",
                     "iot_cottons_steam": "Cotton + Steam",
                     "iot_delicate_silk_steam": "Delicate and Silk + Steam",
-                    "iot_delicati_59_steam": "Delicate 59' + Steam",
+                    "iot_delicati_59_steam": "Delikat 59' + Steam",
                     "iot_dry_air_refresh": "Air Refresh",
                     "iot_dry_anti_mites": "Anti-mite",
                     "iot_dry_baby": "Baby",
@@ -1649,45 +1533,41 @@
                     "iot_dry_cuddly_toys": "Cuddly Toys",
                     "iot_dry_curtains": "Curtains",
                     "iot_dry_dehumidifier": "Humidity Remover",
-                    "iot_dry_delicates_antiallergy": "DelicatesAnti-allergy",
+                    "iot_dry_delicates_antiallergy": "Delicates Anti-allergy",
                     "iot_dry_delicate_tablecloths": "Delicate Tablecloths",
                     "iot_dry_denim_jeans": "Denim - Jeans",
                     "iot_dry_easy_iron_cotton": "Easy Iron - Cotton",
                     "iot_dry_easy_iron_synthetics": "Easy Iron - Synthetics",
                     "iot_dry_gym_fit": "Gym fit - Fitness",
-                    "iot_dry_lingerie": "Lingerie",
+                    "iot_dry_lingerie": "Undertøy",
                     "iot_dry_mixed_dry": "Mixed Dry",
                     "iot_dry_rapid_60_min_delicates": "Rapid 60' - Delicates",
-                    "iot_dry_shirts": "Shirts",
-                    "iot_dry_swimsuits_and_bikinis": "Swimsuits and Bikinis",
+                    "iot_dry_shirts": "Skjorter",
+                    "iot_dry_swimsuits_and_bikinis": "Badedrakter og bikinier",
                     "iot_dry_synthetics": "Synthetic Dry",
                     "iot_dry_synthetic_dry": "Synthetic Dry",
-                    "iot_dry_tablecloths": "Tablecloths",
+                    "iot_dry_tablecloths": "Duker",
                     "iot_dry_technical_fabrics": "Technical Fabrics",
                     "iot_dry_warm_embrace": "Warm Embrace",
                     "iot_dry_wool_dry": "Wool Dry",
-                    "iot_easy_iron": "Easy Iron 39'",
+                    "iot_easy_iron": "Easy Iron",
                     "iot_fresh_care_steam": "Fresh Care + Steam",
                     "iot_hygiene_pro_steam": "Hygiene Pro + Steam",
                     "iot_intensive_40_steam": "Intensive 40°C + Steam",
-                    "iot_jeans_60_steam": "Jeans + Steam",
-                    "iot_jeans_steam": "Jeans + Steam",
                     "iot_mixed_steam": "Mixed + Steam",
                     "iot_mix_and_colour_59_steam": "Mixed and Coloured 59' + Steam",
                     "iot_perfect_cotton_59_steam": "Perfect Cotton 59' + Steam",
                     "iot_rapid_a_class_60_steam": "Rapid 59' A Class + Steam",
                     "iot_resistant_cotton_steam": "Resistant Cotton + Steam",
                     "iot_shirts_steam": "Shirts + Steam",
-                    "iot_single_item_steam": "Single Item 20' + Steam",
+                    "iot_single_item_steam": "Single Item + Steam",
                     "iot_smart_wash": "Smart Wash",
                     "iot_soft_care_steam": "Soft Care + Steam",
                     "iot_special_39_full_load_steam": "Special 39' + Steam",
                     "iot_steam_hygiene_plus": "Hygiene Plus + Steam",
                     "iot_synthetic_and_coloured_steam": "Synthetic and Coloured + Steam",
-                    "iot_wash_100_custom_wash": "100% Custom Wash",
-                    "iot_wash_100_custom_wash_steam": "100% Custom Wash + Steam",
                     "iot_wash_and_dry": "Wash and dry",
-                    "iot_wash_anti_mites": "Anti-mites",
+                    "iot_wash_anti_mites": "Antimidd",
                     "iot_wash_anti_odor": "Anti-odour",
                     "iot_wash_ariel_clean_cycle": "Ariel Ultimate Clean",
                     "iot_wash_ariel_cold_cycle": "Ariel Cold Clean",
@@ -1704,7 +1584,7 @@
                     "iot_wash_big_single_load": "Big single load",
                     "iot_wash_bleaching": "Bleaching",
                     "iot_wash_blood_stains": "Bloodstains",
-                    "iot_wash_cashmere": "Cashmere",
+                    "iot_wash_cashmere": "Kasjmir",
                     "iot_wash_chocolate_stains": "Chocolate stains",
                     "iot_wash_cold_wash": "Cold Wash",
                     "iot_wash_colored": "Colored",
@@ -1714,12 +1594,12 @@
                     "iot_wash_coloured_bed_linen": "Colored Bed Linen",
                     "iot_wash_coloured_bed_linen_steam": "Coloured Bed Linen + Steam",
                     "iot_wash_coloured_curtains": "Colored Curtains",
-                    "iot_wash_coloured_shirts": "Colored Shirts 59'",
+                    "iot_wash_coloured_shirts": "Colored Shirts",
                     "iot_wash_coloured_shirts_steam": "Colored Shirts + Steam",
                     "iot_wash_coloured_steam": "Colored + Steam",
                     "iot_wash_coloured_tableclothes": "Colored Tableclothes",
                     "iot_wash_coloured_tableclothes_steam": "Coloured Tablecloths + Steam",
-                    "iot_wash_cotton": "Cotton",
+                    "iot_wash_cotton": "Bomull",
                     "iot_wash_cotton_steam": "Cotton + Steam",
                     "iot_wash_cuddly_toys": "Cuddly Toys",
                     "iot_wash_curtains": "Curtains",
@@ -1733,7 +1613,7 @@
                     "iot_wash_dash_clean_cycle": "Dash Ultimate Clean",
                     "iot_wash_dash_cold_cycle": "Dash Cold Clean",
                     "iot_wash_dash_fresh_cycle": "Dash Fresh Clean",
-                    "iot_wash_delicate": "Delicates",
+                    "iot_wash_delicate": "Finvask",
                     "iot_wash_delicate_antiallergy": "Delicate Anti-Allergy",
                     "iot_wash_delicate_antiallergy_steam": "Delicate Anti-Allergy + Steam",
                     "iot_wash_delicate_antiallergy_zelig": "Delicate Anti-Allergy",
@@ -1749,19 +1629,19 @@
                     "iot_wash_diving_suits_zelig": "Diving Suits",
                     "iot_wash_down_jackets": "Down Jackets",
                     "iot_wash_down_jackets_zelig": "Down Jackets",
-                    "iot_wash_duvet": "Duvet",
+                    "iot_wash_duvet": "Dyne",
                     "iot_wash_fruit_stains": "Fruit stains",
-                    "iot_wash_gym_fit": "Gym Fit - Fitness 59'",
+                    "iot_wash_gym_fit": "Gym Fit - Fitness",
                     "iot_wash_handwash": "Handwash",
                     "iot_wash_handwash_colored": "Handwash Colored",
                     "iot_wash_handwash_dark": "Handwash Darks",
-                    "iot_wash_lingerie": "Lingerie",
+                    "iot_wash_lingerie": "Undertøy",
                     "iot_wash_masks_refresh": "Masks Refresh",
                     "iot_wash_masks_sanification": "Masks Sanitization",
-                    "iot_wash_masks_sanification_steam": "Mask Sanitisation + Steam",
+                    "iot_wash_masks_sanification_steam": "Mask Sanitization + Steam",
                     "iot_wash_mats": "Mats",
                     "iot_wash_men_s_trousers": "Trousers",
-                    "iot_wash_mixed": "Mixed",
+                    "iot_wash_mixed": "Blandet",
                     "iot_wash_mixed_steam": "Mixed + Steam",
                     "iot_wash_mix_and_coloured_44": "Mix and Colored 44'",
                     "iot_wash_mix_and_coloured_59": "Mix and Colored 59'",
@@ -1786,21 +1666,21 @@
                     "iot_wash_resistant_dark": "Resistant Darks",
                     "iot_wash_resistant_whites": "Resistant Whites",
                     "iot_wash_rinse": "Rinses",
-                    "iot_wash_shirts": "Shirts",
+                    "iot_wash_shirts": "Skjorter",
                     "iot_wash_shirts_steam": "Shirts + Steam",
-                    "iot_wash_silk": "Silk",
+                    "iot_wash_silk": "Silke",
                     "iot_wash_ski_suit": "Ski Suit",
                     "iot_wash_ski_suit_zelig": "Ski Suit",
-                    "iot_wash_spin": "Spin",
+                    "iot_wash_spin": "Sentrifuge",
                     "iot_wash_sport": "Sport",
                     "iot_wash_sport_anti_odor": "Anti-odour Sportswear",
                     "iot_wash_sport_anti_odor_zelig": "Anti-odour Sportswear",
                     "iot_wash_stains_remover": "Stain Remover",
                     "iot_wash_super_saving": "Super Saving 49'",
-                    "iot_wash_swimsuits_and_bikinis": "Swimsuits and Bikinis",
-                    "iot_wash_synthetic": "Synthetics",
+                    "iot_wash_swimsuits_and_bikinis": "Badedrakter og bikinier",
+                    "iot_wash_synthetic": "Syntetiske stoffer",
                     "iot_wash_synthetic_steam": "Synthetics + Steam",
-                    "iot_wash_tablecloths": "Tablecloths",
+                    "iot_wash_tablecloths": "Duker",
                     "iot_wash_tablecloths_steam": "Tablecloths + Steam",
                     "iot_wash_technical_fabrics": "Technical Fabrics",
                     "iot_wash_technical_fabrics_zelig": "Technical Fabrics",
@@ -1812,10 +1692,9 @@
                     "iot_wash_whites_59": "Whites 59'",
                     "iot_wash_whites_xl": "Whites XL",
                     "iot_wash_wine_stains": "Wine Stains",
-                    "iot_wash_wool": "Wool",
+                    "iot_wash_wool": "Ull",
                     "jeans": "Jeans",
                     "jeans_60": "Jeans",
-                    "jeans_60_steam": "Jeans + Steam",
                     "low_dry": "Low Heat Dry",
                     "mixed": "Mixed",
                     "mixed_and_colored_59": "Mixed and Colored 59'",
@@ -1836,10 +1715,10 @@
                     "rapid_wash_and_dry_59_min": "Wash and Dry 59'",
                     "resistant_cotton": "Resistant Cotton",
                     "resistant_cotton_steam": "Resistant Cotton + Steam",
-                    "rinse": "Rinse",
+                    "rinse": "Skyll",
                     "shirts_steam": "Shirts + Steam",
                     "silent_night": "Silent Night",
-                    "single_item": "Single Item 20'",
+                    "single_item": "Single Item",
                     "single_item_steam": "Single Item + Steam",
                     "smart_wash": "Smart Wash",
                     "soft_care": "Soft Care",
@@ -1853,50 +1732,45 @@
                     "sport_plus_29": "Sport Plus 29\"",
                     "sport_plus_39": "Sport Plus 39'",
                     "steam_39": "Steam 39'",
-                    "steam_care": "Steam Care Pro",
                     "steam_care_pro": "Steam Care Pro",
                     "steam_care_pro_cotton": "Steam Care Pro - Cottons",
-                    "steam_care_pro_delicates": "Steam Care Pro - Delicates 16'",
-                    "steam_care_pro_synthetic": "Steam Care Pro - Synthetics 20'",
+                    "steam_care_pro_delicates": "Steam Care Pro - Delicates",
+                    "steam_care_pro_synthetic": "Steam Care Pro - Synthetics",
                     "steam_hygiene_plus": "Hygiene Plus + Steam",
-                    "synthetics": "Synthetics",
+                    "synthetics": "Syntetiske stoffer",
                     "synthetic_and_coloured": "Synthetic and Colored",
                     "synthetic_and_coloured_steam": "Synthetic and Coloured + Steam",
-                    "tailored_resistant_cotton": "Tailored resistant cotton",
-                    "tailored_synthetic_and_coloured": "Tailored Synthetic Coloured",
+                    "tailored_resistant_cotton": "Skreddersydd motstandsdyktig bomull",
+                    "tailored_synthetic_and_coloured": "Skreddersydd syntetisk farget",
                     "total_care": "Total Care",
                     "tumbling": "Tumbling",
                     "ultra_fresh": "Ultra Fresh",
-                    "wool": "Wool",
+                    "wool": "Ull",
                     "wool_and_delicates_49": "Wool and Delicates 49'",
                     "wool_dry": "Wool Dry",
-                    "wool_soft_care": "Wool and Soft Care 48'"
+                    "wool_soft_care": "Wool and Soft Care"
                 },
                 "name": "Program"
             },
             "programs_ref": {
                 "state": {
                     "auto_set": "AUTO-SET",
-                    "cheese": "Cheese",
-                    "chiller": "Quick cool",
+                    "cheese": "Ost",
+                    "chiller": "Quick Cool",
                     "cold_drinks": "Soft chill",
-                    "cool_drink": "Cool Drink",
                     "eco": "Eco",
-                    "eco_mode": "Eco mode",
+                    "eco_mode": "Eco-modus",
                     "fruits": "Fruit",
-                    "fruits_and_veg": "Fruit&Veg",
-                    "fruit_and_veg": "Fruit&Veg",
+                    "fruits_and_veg": "Frukt og grønnsaker",
+                    "fruit_and_veg": "Frukt og grønnsaker",
                     "holiday": "HOLIDAY",
                     "keep_fresh": "0°C Fresh",
-                    "milk_and_eggs": "Milk & Eggs",
-                    "no_mode_selected": "No mode selected",
+                    "no_mode_selected": "Ingen modus valgt",
                     "quick_cool": "QUICK COOL",
-                    "quick_set": "Quick Set",
+                    "quick_set": "Hurtigsett",
                     "sea_food": "Ready to cook meal",
-                    "smart_mode": "SMART MODE",
                     "smart_mode_title": "Smart Mode",
                     "soft_frozen": "Soft freezing",
-                    "soft_frozen\n": "Soft freezing",
                     "super_cool": "SUPER COOL",
                     "super_freeze": "SUPER FREEZE",
                     "tea": "Cold Drinks",
@@ -1906,108 +1780,108 @@
                 "name": "Program"
             },
             "dry_time": {
-                "name": "Drying time"
+                "name": "Tørketid"
             },
             "spin_speed": {
-                "name": "Spin"
+                "name": "Sentrifuge"
             },
             "temperature": {
-                "name": "Temperature"
+                "name": "Temperatur"
             },
             "remaining_time": {
-                "name": "Time remaining"
+                "name": "Gjenstående tid"
             }
         },
         "switch": {
             "anti_crease": {
-                "name": "Anticrease"
+                "name": "Antikrøll"
             },
             "add_dish": {
-                "name": "Add dishes"
+                "name": "Legg til retter"
             },
             "eco_express": {
                 "name": "Eco"
             },
             "extra_dry": {
-                "name": "Extra dry"
+                "name": "Ekstra tørr"
             },
             "half_load": {
-                "name": "Half load"
+                "name": "Halv last"
             },
             "open_door": {
-                "name": "Open door"
+                "name": "Åpne dør"
             },
             "three_in_one": {
-                "name": "3 in 1"
+                "name": "3 i 1"
             },
             "preheat": {
-                "name": "Preheat"
+                "name": "Forvarm"
             },
             "dish_washer": {
-                "name": "Dish washer"
+                "name": "Oppvaskmaskin"
             },
             "tumble_dryer": {
-                "name": "Tumble dryer"
+                "name": "Tørketrommel"
             },
             "washing_machine": {
-                "name": "Washing machine"
+                "name": "Vaskemaskin"
             },
             "washer_dryer": {
-                "name": "Washer dryer"
+                "name": "Vaskemaskin og tørketrommel"
             },
             "oven": {
-                "name": "Oven"
+                "name": "Ovn"
             },
             "prewash": {
-                "name": "Pre-wash"
+                "name": "Forvask"
             },
             "pause": {
-                "name": "Pause"
+                "name": "Pause programmet"
             },
             "keep_fresh": {
                 "name": "Keep Fresh"
             },
             "delay_time": {
-                "name": "Delay Start"
+                "name": "Forsinket start"
             },
             "rapid_mode": {
-                "name": "Rapid mode"
+                "name": "Rask modus"
             },
             "eco_mode": {
-                "name": "ECO mode"
+                "name": "Eco-modus"
             },
             "10_degree_heating": {
-                "name": "10°C Heating function"
+                "name": "10°C oppvarmingsfunksjon"
             },
             "self_clean": {
-                "name": "Self-clean"
+                "name": "Selvvask"
             },
             "self_clean_56": {
                 "name": "Steri-Clean 56°C"
             },
             "silent_mode": {
-                "name": "Silent mode"
+                "name": "Stillemodus"
             },
             "night_mode": {
-                "name": "Night mode"
+                "name": "Nattmodus"
             },
             "extra_rinse_1": {
-                "name": "+1 Rinse"
+                "name": "+1 Skyll"
             },
             "extra_rinse_2": {
-                "name": "+2 Rinses"
+                "name": "+2 Skyllinger"
             },
             "extra_rinse_3": {
-                "name": "+3 Rinses"
+                "name": "+3 Skyllinger"
             },
             "acqua_plus": {
                 "name": "Acquaplus"
             },
             "auto_dose_softener": {
-                "name": "Autodose Softener"
+                "name": "Autodose Mykner"
             },
             "auto_dose_detergent": {
-                "name": "Autodose Detergent"
+                "name": "Autodose Vaskemiddel"
             },
             "good_night": {
                 "name": "Good Night"
@@ -2022,75 +1896,75 @@
                 "name": "Super Freeze"
             },
             "refrigerator": {
-                "name": "Refrigerator"
+                "name": "Kjøleskap"
             },
             "touch_tone": {
-                "name": "Touch tone volume"
+                "name": "Berøringstonevolum"
             },
             "hygiene": {
-                "name": "Hygiene plus"
+                "name": "Hygiene pluss"
             },
             "hood": {
-                "name": "Hood"
+                "name": "Avtrekksvifte"
             }
         },
         "binary_sensor": {
             "door_lock": {
-                "name": "Door lock"
+                "name": "Dørlås"
             },
             "extra_rinse_1": {
-                "name": "+1 Rinse"
+                "name": "+1 Skyll"
             },
             "extra_rinse_2": {
-                "name": "+2 Rinses"
+                "name": "+2 Skyllinger"
             },
             "extra_rinse_3": {
-                "name": "+3 Rinses"
+                "name": "+3 Skyllinger"
             },
             "good_night": {
                 "name": "Good Night"
             },
             "anti_crease": {
-                "name": "Anticrease"
+                "name": "Antikrøll"
             },
             "acqua_plus": {
                 "name": "Acquaplus"
             },
             "spin_speed": {
-                "name": "Spin"
+                "name": "Sentrifuge"
             },
             "still_hot": {
-                "name": "Still hot"
+                "name": "Fortsatt varm"
             },
             "pan_status": {
-                "name": "Pan"
+                "name": "Panne"
             },
             "remote_control": {
-                "name": "Remote control"
+                "name": "Fjernkontroll"
             },
             "rinse_aid": {
-                "name": "Rinse Aid level"
+                "name": "Nivå for skyllemiddel"
             },
             "salt_level": {
-                "name": "Salt level"
+                "name": "Saltnivå"
             },
             "door_open": {
-                "name": "Door open"
+                "name": "Dør åpen"
             },
             "connection": {
-                "name": "Appliance connection"
+                "name": "Apparattilkobling"
             },
             "child_lock": {
-                "name": "Child Lock"
+                "name": "Barnesikring"
             },
             "on": {
-                "name": "On"
+                "name": "På"
             },
             "prewash": {
-                "name": "Pre-wash"
+                "name": "Forvask"
             },
             "buzzer": {
-                "name": "Cycle end chime"
+                "name": "Avslutningslyd for syklus"
             },
             "holiday_mode": {
                 "name": "Holiday Mode"
@@ -2105,18 +1979,18 @@
                 "name": "Super Freeze"
             },
             "freezer_door": {
-                "name": "Door open Freezer"
+                "name": "Dør åpen Fryser"
             },
             "fridge_door": {
-                "name": "Door open Fridge"
+                "name": "Dør åpen Kjøleskap"
             },
             "filter_replacement": {
-                "name": "Filter replacement"
+                "name": "Filterbytte"
             }
         },
         "button": {
             "induction_hob": {
-                "name": "Induction Hob"
+                "name": "Induksjonstopp"
             },
             "start_program": {
                 "name": "Program Start"
@@ -2127,170 +2001,163 @@
         },
         "number": {
             "power_management": {
-                "name": "Power management"
+                "name": "Strømstyring"
             },
             "temperature": {
-                "name": "Temperature"
+                "name": "Temperatur"
             },
             "delay_time": {
-                "name": "Delay Start"
+                "name": "Forsinket start"
             },
             "water_hard": {
-                "name": "Water hardness"
+                "name": "Vannhardhet"
             },
             "program_duration": {
-                "name": "Program duration"
+                "name": "Programvarighet"
             },
             "target_temperature": {
-                "name": "Target temperature"
+                "name": "Måltemperatur"
             },
             "rinse_iterations": {
-                "name": "Number of rinses"
+                "name": "Antall skyllinger"
             },
             "wash_time": {
-                "name": "Washing intensity"
+                "name": "Vaskeintensitet"
             },
             "dry_time": {
-                "name": "Drying time"
+                "name": "Tørketid"
             },
             "freezer_temp_sel": {
-                "name": "Target temperature Freezer"
+                "name": "Måltemperatur Fryser"
             },
             "fridge_temp_sel": {
-                "name": "Target temperature Fridge"
+                "name": "Måltemperatur Kjøleskap"
             },
             "my_zone_temp_sel": {
-                "name": "Target temperature My Zone"
+                "name": "Måltemperatur My Zone"
             },
             "pollen_level": {
-                "name": "Pollen level"
+                "name": "Pollennivå"
             },
             "aroma_time_on": {
-                "name": "Diffuser (ON)"
+                "name": "Diffusor (PÅ)"
             },
             "aroma_time_off": {
-                "name": "Diffuser (OFF)"
+                "name": "Diffusor (AV)"
             }
         },
         "climate": {
             "air_conditioner": {
-                "name": "Air conditioner",
+                "name": "Klimaanlegg",
                 "state_attributes": {
                     "preset_mode": {
-                        "name": "Programs",
+                        "name": "Programmer",
                         "state": {
-                            "iot_10_heating": "10°C Heating function",
+                            "iot_10_heating": "10°C oppvarmingsfunksjon",
                             "iot_auto": "Auto",
-                            "iot_cool": "Cool",
-                            "iot_dry": "Dry",
-                            "iot_dry_summer": "Dry summer",
-                            "iot_dry_winter": "Dry winter",
-                            "iot_fan": "Fan",
-                            "iot_heat": "Heat",
-                            "iot_humid_summer": "Humid summer",
+                            "iot_cool": "Kjølig",
+                            "iot_dry": "Tørr",
+                            "iot_fan": "Vifte",
+                            "iot_heat": "Varme",
                             "iot_nano_aqua": "Nano Aqua",
-                            "iot_purify": "Self-purify",
-                            "iot_rainy_winter": "Rainy winter",
-                            "iot_self_clean": "Self-clean",
+                            "iot_purify": "Selvrensende",
+                            "iot_self_clean": "Selvvask",
                             "iot_self_clean_56": "Steri-Clean 56°C",
-                            "iot_simple_start": "Start now",
+                            "iot_simple_start": "Start",
                             "iot_uv": "UV",
                             "iot_uv_and_auto": "UV + Auto",
-                            "iot_uv_and_cool": "UV + Cold",
-                            "iot_uv_and_dry": "UV + Dehumidifier",
-                            "iot_uv_and_fan": "UV + Fan",
-                            "iot_uv_and_heat": "UV + Heat",
-                            "iot_warm_spring": "Warm spring"
+                            "iot_uv_and_cool": "UV + kald",
+                            "iot_uv_and_dry": "UV + Avfukter",
+                            "iot_uv_and_fan": "UV + vifte",
+                            "iot_uv_and_heat": "UV + varme"
                         }
                     }
                 }
             },
             "fridge": {
-                "name": "Fridge",
+                "name": "Kjøleskap",
                 "state_attributes": {
                     "preset_mode": {
-                        "name": "Fridge modes",
+                        "name": "Kjøleskapsmodus",
                         "state": {
                             "auto_set": "Auto-Set",
                             "super_cool": "Super Cool",
                             "holiday": "Holiday",
-                            "no_mode": "No mode selected"
+                            "no_mode": "Ingen modus valgt"
                         }
                     }
                 }
             },
             "freezer": {
-                "name": "Freezer",
+                "name": "Fryser",
                 "state_attributes": {
                     "preset_mode": {
-                        "name": "Freezer modes",
+                        "name": "Frysermoduser",
                         "state": {
                             "auto_set": "Auto-Set",
                             "super_freeze": "Super Freeze",
-                            "no_mode": "No mode selected"
+                            "no_mode": "Ingen modus valgt"
                         }
                     }
                 }
             },
             "oven": {
-                "name": "Oven",
+                "name": "Ovn",
                 "state_attributes": {
                     "preset_mode": {
-                        "name": "Programs",
+                        "name": "Programmer",
                         "state": {
-                            "bakery": "Pasta and Bakery",
-                            "bakery_steam": "Steam oven",
-                            "bottom_heating": "Bottom Heating",
-                            "bottom_heating_fan": "Bottom Heating + Fan",
-                            "bread": "Bread",
-                            "bread_steam": "Steam baked bread",
+                            "bakery": "Bakeri",
+                            "bakery_steam": "Bakeridamp",
+                            "bottom_heating": "Bunnvarming",
+                            "bottom_heating_fan": "Bunnvarming + Vifte",
+                            "bread": "Brød",
+                            "bread_steam": "Brøddamp",
                             "combi": "Combi",
-                            "convection_fan": "Convection + Fan",
-                            "convection_fan_turnspit": "Convection + Fan + Turnspit",
-                            "conventional": "Conventional",
-                            "conventional_turnspit": "Convection + Turnspit",
-                            "defrost": "Defrosting",
-                            "descaling": "Descaling",
-                            "fish": "Fish",
-                            "fish_steam": "Steamed fish",
+                            "convection_fan": "Konveksjon + vifte",
+                            "convection_fan_turnspit": "Konveksjonsvifte, grillspidd",
+                            "conventional": "Konvensjonell",
+                            "conventional_turnspit": "Konvensjonelt grillspidd",
+                            "defrost": "Avriming",
+                            "descaling": "Avkalkning",
+                            "fish": "Fisk",
+                            "fish_steam": "Fiskedamp",
                             "grill_cata": "Grill",
-                            "grill_fan_cata": "Grill fan",
-                            "grill_fan_pyro": "Grill + Fan",
+                            "grill_fan_cata": "Grill + vifte",
+                            "grill_fan_pyro": "Grill + vifte",
                             "grill_pyro": "Grill",
                             "h20_clean": "H2O-Clean",
-                            "iot_bread": "Bread",
-                            "iot_h20_clean": "h2O clean",
+                            "iot_bread": "Brød",
+                            "iot_h20_clean": "h2O-Clean",
                             "leavening": "Leavening",
-                            "light_fan": "Light Fan",
-                            "light_fan\n": "Light Fan",
-                            "low_temp_cooking": "Low Temperature Cooking",
-                            "low_temp_cooking_fish": "Low Temperature Cooking - Fish",
-                            "low_temp_cooking_fish_steam": "Low Temperature Cooking - Steamed fish",
-                            "low_temp_cooking_meat": "Low Temperature Cooking - Meat",
-                            "low_temp_cooking_meat_steam": "Low Temperature Cooking - Steamed meat",
-                            "low_temp_cooking_steam": "Low Temperature Steam Cooking",
-                            "meat": "Meat",
-                            "meat_steam": "Steamed meat",
-                            "multi_level": "Multi-Level",
+                            "low_temp_cooking": "Matlaging på lav temperatur",
+                            "low_temp_cooking_fish": "Matlaging på lav temperatur, fisk",
+                            "low_temp_cooking_fish_steam": "Matlaging på lav temperatur, fiskedamping",
+                            "low_temp_cooking_meat": "Matlaging på lav temperatur, kjøtt",
+                            "low_temp_cooking_meat_steam": "Matlaging på lav temperatur, kjøttdamping",
+                            "low_temp_cooking_steam": "Matlaging på lav temperatur, damp",
+                            "meat": "Kjøtt",
+                            "meat_steam": "Kjøtt, damp",
+                            "multi_level": "Multinivå",
                             "paella": "Paella",
-                            "pasta_and_bakery": "Pasta and Bakery",
+                            "pasta_and_bakery": "Pasta og bakverk",
                             "pizza": "Pizza",
-                            "pyrolysis": "Pyrolysis",
-                            "pyrolysis_plus": "Pyrolysis +",
-                            "red_meat": "Red Meat",
-                            "red_meat_steam": "Steamed red meat",
-                            "regenerate": "Regenerate",
+                            "pyrolysis": "Pyrolyse",
+                            "pyrolysis_plus": "Pyrolyse +",
+                            "red_meat": "Rødt kjøtt",
+                            "red_meat_steam": "Rødt kjøtt, damp",
+                            "regenerate": "Regenerer",
                             "soft_plus": "Soft+",
                             "super_grill": "Super Grill",
                             "tailor_bake": "Tailor bake",
                             "tailor_bake_cata": "Tailor Bake",
                             "tailor_bake_pyro": "Tailor Bake",
-                            "vegetables": "Vegetables",
-                            "vegetables_cata": "Vegetables",
-                            "vegetables_pyro": "Vegetables",
-                            "water_discharge": "Water Discharge",
-                            "white_meat": "White Meat",
-                            "white_meat_steam": "Steamed white meat"
+                            "vegetables": "Grønnsaker",
+                            "vegetables_cata": "Grønnsaker",
+                            "vegetables_pyro": "Grønnsaker",
+                            "water_discharge": "Vannutslipp",
+                            "white_meat": "Hvitt kjøtt",
+                            "white_meat_steam": "Hvitt kjøtt, damp"
                         }
                     }
                 }
@@ -2301,16 +2168,16 @@
             "wine": {
                 "state_attributes": {
                     "preset_mode": {
-                        "name": "Wine Cellar",
+                        "name": "Vinkjeller",
                         "state": {
                             "iot_champagne": "Champagne",
                             "iot_dessert": "Dessert",
-                            "iot_fortified": "Fortified",
+                            "iot_fortified": "Sterkvin",
                             "iot_rose": "Rosé",
                             "iot_whisky": "Whisky",
-                            "red": "Red",
-                            "sparkling": "Sparkling",
-                            "white": "White"
+                            "red": "Rød",
+                            "sparkling": "Musserende",
+                            "white": "Hvit"
                         }
                     }
                 }
@@ -2318,12 +2185,23 @@
         },
         "fan": {
             "air_extraction": {
-                "name": "Air extraction"
+                "name": "Luftavtrekk"
             }
         },
         "light": {
             "light": {
-                "name": "Light"
+                "name": "Lys"
+            }
+        }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Gjennomfør påloggingen",
+                "data": {
+                    "email": "E-post",
+                    "password": "Passord"
+                }
             }
         }
     }
