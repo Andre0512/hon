@@ -855,8 +855,14 @@
             "delay_time": {
                 "name": "Odložené spuštění"
             },
-            "suggested_load": {
-                "name": "Kapacita náplně"
+            "suggested_load_wash": {
+                "name": "Doporučená náplň praní"
+            },
+            "suggested_load_dry": {
+                "name": "Doporučená náplň sušení"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Doporučená náplň praní a sušení"
             },
             "energy_label": {
                 "name": "Energetická účinnost"

@@ -855,8 +855,14 @@
             "delay_time": {
                 "name": "Καθυστερημένη έναρξη"
             },
-            "suggested_load": {
-                "name": "Χωρητικότητα φορτίου"
+            "suggested_load_wash": {
+                "name": "Προτεινόμενο φορτίο πλύσης"
+            },
+            "suggested_load_dry": {
+                "name": "Προτεινόμενο φορτίο στεγνώματος"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Προτεινόμενο φορτίο πλύσης και στεγνώματος"
             },
             "energy_label": {
                 "name": "Ενεργειακή απόδοση"

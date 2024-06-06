@@ -859,8 +859,14 @@
             "delay_time": {
                 "name": "Utilizzo nelle ore notturne"
             },
-            "suggested_load": {
-                "name": "Capacità di carico"
+            "suggested_load_wash": {
+                "name": "Carico consigliato lavaggio"
+            },
+            "suggested_load_dry": {
+                "name":  "Carico consigliato asciugatura"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Carico consigliato lavaggio/asciugatura"
             },
             "energy_label": {
                 "name": "Efficienza energetica"

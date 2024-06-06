@@ -855,8 +855,14 @@
             "delay_time": {
                 "name": "Odgoda početka"
             },
-            "suggested_load": {
-                "name": "Kapacitet rublja"
+            "suggested_load_wash": {
+                "name": "Preporučeno punjenje za pranje"
+            },
+            "suggested_load_dry": {
+                "name": "Preporučeno punjenje za sušenje"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Preporučeno punjenje za pranje i sušenje"
             },
             "energy_label": {
                 "name": "Energetska učinkovitost"

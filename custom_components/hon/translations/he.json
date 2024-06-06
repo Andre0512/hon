@@ -372,8 +372,14 @@
             "delay_time": {
                 "name": "Delay Start"
             },
-            "suggested_load": {
-                "name": "יכולת עומס"
+            "suggested_load_wash": {
+                "name": "משקל מומלץ לכביסה"
+            },
+            "suggested_load_dry": {
+                "name": "משקל מומלץ לייבוש"
+            },
+            "suggested_load_wash_dry": {
+                "name": "משקל מומלץ לכביסה וייבוש"
             },
             "energy_label": {
                 "name": "חסכון באנרגיה"

@@ -855,8 +855,14 @@
             "delay_time": {
                 "name": "Opóźniony Start"
             },
-            "suggested_load": {
-                "name": "Ładowność"
+            "suggested_load_wash": {
+                "name": "Sugerowana ilość prania"
+            },
+            "suggested_load_dry": {
+                "name": "Sugerowana ilość suszenia"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Sugerowana ilość prania i suszenia"
             },
             "energy_label": {
                 "name": "Efektywność energetyczna"

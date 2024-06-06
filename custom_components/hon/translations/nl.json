@@ -855,8 +855,14 @@
             "delay_time": {
                 "name": "Vertraag Start"
             },
-            "suggested_load": {
-                "name": "Laadvermogen"
+            "suggested_load_wash": {
+                "name": "Laadvermogen wasgoed"
+            },
+            "suggested_load_dry": {
+                "name": "Laadvermogen drogen"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Laadvermogen wassen en drogen"
             },
             "energy_label": {
                 "name": "Energie-efficiëntie"
