@@ -21,10 +21,9 @@ from homeassistant.const import (
     UnitOfTime,
     UnitOfTemperature,
 )
-from homeassistant.core import callback
+from homeassistant.core import callback, HomeAssistant
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.typing import HomeAssistantType
 
 from . import const
 from .const import DOMAIN
@@ -808,7 +807,7 @@ SENSORS["WD"] = unique_entities(SENSORS["WM"], SENSORS["TD"])
 
 
 async def async_setup_entry(
-    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+    hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities = []
     entity: HonSensorEntity | HonConfigSensorEntity
