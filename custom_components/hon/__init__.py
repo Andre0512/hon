@@ -48,15 +48,13 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     coordinator: DataUpdateCoordinator[dict[str, Any]] = DataUpdateCoordinator(
         hass, _LOGGER, name=DOMAIN
     )
-    hon.subscribe_updates(coordinator.async_set_updated_data)
+    hon.subscribe_updates(lambda: hass.add_job(coordinator.async_update_listeners))
 
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.unique_id] = {"hon": hon, "coordinator": coordinator}
 
-    for platform in PLATFORMS:
-        hass.async_create_task(
-            hass.config_entries.async_forward_entry_setup(entry, platform)
-        )
+    await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
+    
     return True
 
 
