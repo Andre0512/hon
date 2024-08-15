@@ -1,6 +1,6 @@
 {
-    "name": "Haier hOn csg",
+    "name": "Haier hOn",
     "homeassistant": "2024.2.0",
-    "zip_release": false,
+    "zip_release": true,
     "filename": "haier_hon.zip"
 }
