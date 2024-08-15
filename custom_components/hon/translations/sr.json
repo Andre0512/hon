@@ -855,8 +855,14 @@
             "delay_time": {
                 "name": "Odloženi start"
             },
-            "suggested_load": {
-                "name": "Kapacitet punjenja"
+            "suggested_load_wash": {
+                "name": "Kapacitet pranja"
+            },
+            "suggested_load_dry": {
+                "name": "Kapacitet sušenja"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Kapacitet pranja i sušenja"
             },
             "energy_label": {
                 "name": "Energetska efikasnost"

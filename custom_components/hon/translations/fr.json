@@ -855,8 +855,14 @@
             "delay_time": {
                 "name": "Démarrage Différé"
             },
-            "suggested_load": {
-                "name": "Capacité de charge"
+            "suggested_load_wash": {
+                "name": "Charge recommandée (lavage)"
+            },
+            "suggested_load_dry": {
+                "name": "Charge recommandée (séchage)"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Charge recommandée (lavage et séchage)"
             },
             "energy_label": {
                 "name": "Efficacité énergétique"

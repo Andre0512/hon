@@ -855,8 +855,14 @@
             "delay_time": {
                 "name": "Odložený štart"
             },
-            "suggested_load": {
-                "name": "Kapacita naplnenia"
+            "suggested_load_wash": {
+                "name": "Kapacita prania"
+            },
+            "suggested_load_dry": {
+                "name": "Kapacita sušenia"
+            },
+            "suggested_load_wash_dry": {
+                "name": "Kapacita prania a sušenia"
             },
             "energy_label": {
                 "name": "Energetická účinnosť"
