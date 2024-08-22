@@ -1,0 +1,2076 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "ready": "استعداد",
+                    "running": "تشغيل البرنامج",
+                    "pause": "إيقاف مؤقت",
+                    "scheduled": "المقرر",
+                    "error": "خطأ",
+                    "test": "Test",
+                    "ending": "دورة الإيقاف ..."
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Auto",
+                    "cool": "Cool",
+                    "dry": "Dry",
+                    "heat": "Heat",
+                    "fan": "Fan"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "ready": "استعداد",
+                    "spin": "غزل",
+                    "rinse": "شطف",
+                    "drying": "تجفيف",
+                    "steam": "بخار",
+                    "weighting": "وزن",
+                    "scheduled": "المقرر",
+                    "tumbling": "Keep Fresh",
+                    "refresh": "تجديد",
+                    "heating": "التسخين",
+                    "washing": "غسل"
+                },
+                "name": "مرحلة"
+            },
+            "program_phases_td": {
+                "state": {
+                    "ready": "استعداد",
+                    "heat_stroke": "تجفيف",
+                    "drying": "تجفيف",
+                    "cooldown": "فترة التهدئة",
+                    "unknown": "unknown",
+                    "tumbling": "Keep Fresh"
+                },
+                "name": "مرحلة"
+            },
+            "program_phases_dw": {
+                "state": {
+                    "ready": "استعداد",
+                    "prewash": "النقع",
+                    "washing": "غسل",
+                    "rinse": "شطف",
+                    "drying": "تجفيف",
+                    "hot_rinse": "يشطف بالماء الساخن"
+                },
+                "name": "مرحلة"
+            },
+            "dry_levels": {
+                "state": {
+                    "no_dry": "لا تجفيف",
+                    "iron_dry": "حديد",
+                    "no_dry_iron": "جاف بدون حديد",
+                    "cupboard_dry": "خزانة تجفيف",
+                    "extra_dry": "تجفيف إضافي",
+                    "ready_to_wear": "جاهز للبس"
+                },
+                "name": "مستوى التجفيف"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "القليل",
+                    "normal": "عادي",
+                    "very": "جداً",
+                    "unknown": "unknown"
+                },
+                "name": "مستوى الأوساخ"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "بدون بخار",
+                    "cotton": "قطن",
+                    "delicate": "حساس",
+                    "synthetic": "اصطناعي"
+                },
+                "name": "مستوى البخار"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "منخفض",
+                    "mid": "متوسط",
+                    "high": "عالٍ"
+                },
+                "name": "Humidity level"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_simple_start": "بدء الآن"
+                },
+                "name": "Program"
+            },
+            "programs_dw": {
+                "state": {
+                    "59_min": "سريع 59 دقيقة",
+                    "auto_care": "العناية التلقائية",
+                    "auto_care_soil": "العناية التلقائية",
+                    "auto_hygiene": "النظافة التلقائية",
+                    "auto_plus": "AutoPlus",
+                    "auto_plus_soil": "تلطيخ تلقائي زائد",
+                    "auto_rapid": "السرعة التلقائية",
+                    "auto_rapid_soil": "تلطيخ سريع تلقائي",
+                    "auto_sensor": "مستشعر تلقائي",
+                    "auto_sensor_soil": "مستشعر تلقائي",
+                    "auto_universal": "شامل تلقائي 50-60 درجة مئوية",
+                    "auto_universal_plus": "شامل تلقائي+ 65 - 75 درجة مئوية",
+                    "auto_universal_plus_soil": "شامل تلقائي+ 65 - 75 درجة مئوية",
+                    "auto_universal_soil": "شامل تلقائي 50-60 درجة مئوية",
+                    "auto_wash": "غسيل تلقائي",
+                    "auto_wash_soil": "غسيل تلقائي",
+                    "classe_a_59": "غسل عند 59 دقيقة 65 درجة مئوية",
+                    "delicate": "حساس عند 45 درجة مئوية",
+                    "dishwasher_care": "تنظيف الترسبات الكلسية",
+                    "eco": "وضع التوفير عند 45 درجة مئوية",
+                    "eco_asynch": "وضع التوفير عند 45 درجة مئوية",
+                    "eco_bldc": "وضع التوفير عند 45 درجة مئوية",
+                    "eco_synch": "وضع التوفير عند 45 درجة مئوية",
+                    "eco_voice": "Eco",
+                    "gentle_wash": "Gentle wash",
+                    "glass": "الكؤوس الزجاجية",
+                    "glassware": "الأواني الزجاجية 45 درجة مئوية",
+                    "glass_care": "العناية بالكؤوس الزجاجية",
+                    "hygiene": "النظافة العامة",
+                    "hygiene_plus": "النظافة + 75 درجة مئوية",
+                    "intensive": "مكثف",
+                    "intensive_rapid": "كثيف سريع",
+                    "intensive_voice": "مكثف",
+                    "iot_auto_sensor": "مستشعر تلقائي",
+                    "iot_auto_universal_soil": "شامل تلقائي 50-60 درجة مئوية",
+                    "iot_auto_wash_soil": "غسيل تلقائي",
+                    "iot_baby_care": "عناية الطفل",
+                    "iot_breakfast": "إفطار",
+                    "iot_checkup": "فحص",
+                    "iot_china_crystals": "بلورات صينية",
+                    "iot_classe_a_59": "سريع 59 دقيقة",
+                    "iot_cocktail_glasses": "كؤوس المشروب (الكوكتيل)",
+                    "iot_cocktail_glasses_soil": "كؤوس المشروب (الكوكتيل)",
+                    "iot_daily_care": "العناية اليومية",
+                    "iot_daily_care_soil": "العناية اليومية",
+                    "iot_delicate": "حساس عند 45 درجة مئوية",
+                    "iot_dinner_for_two": "عشاء لشخصين",
+                    "iot_dinner_for_two_soil": "عشاء لشخصين",
+                    "iot_dreft_quick_cycle": "Dreft Quick",
+                    "iot_eco_asynch": "وضع التوفير عند 45 درجة مئوية",
+                    "iot_eco_bldc": "وضع التوفير عند 45 درجة مئوية",
+                    "iot_eco_synch": "وضع التوفير عند 45 درجة مئوية",
+                    "iot_extra_hygiene": "نظافة إضافية",
+                    "iot_fairy_quick_cycle": "Fairy Quick",
+                    "iot_happy_hour": "ساعة سعيدة",
+                    "iot_jar_quick_cycle": "Jar Quick",
+                    "iot_party": "حفلة",
+                    "iot_party_soil": "حفلة",
+                    "iot_pizza_menu": "قائمة البيتزا",
+                    "iot_pizza_menu_soil": "قائمة البيتزا",
+                    "iot_plastic_tupperware": "العُلب البلاستيكية وعُلب الطعام",
+                    "iot_porcelain": "الأطباق البورسلين",
+                    "iot_power_mix_wash": "غسيل بالطاقة المعززة",
+                    "iot_power_mix_wash_soil": "غسيل بالطاقة المعززة",
+                    "iot_prewash": "النقع",
+                    "iot_pyrex_and_glassware": "البايركس والأواني الزجاجية",
+                    "iot_rapid_29": "سريع 29 دقيقة",
+                    "iot_rapid_39": "سريع 39 دقيقة عند 60 درجة مئوية",
+                    "iot_single": "أعزب",
+                    "iot_steam": "بخار عند 75 درجة مئوية",
+                    "iot_super_flash": "فائق السرعة",
+                    "iot_super_wash": "الغسيل الفائق",
+                    "iot_turbopower": "TurboPower",
+                    "iot_universal": "عالمي 60 درجة مئوية",
+                    "iot_voice_automatic": "مستشعر تلقائي",
+                    "iot_voice_delicate": "حساس عند 45 درجة مئوية",
+                    "iot_voice_eco": "وضع التوفير عند 45 درجة مئوية",
+                    "iot_voice_intensive": "مكثف",
+                    "iot_voice_prewash": "النقع",
+                    "iot_voice_rapid_59": "سريع 59 دقيقة",
+                    "iot_voice_universal": "عالمي 60 درجة مئوية",
+                    "iot_wok_grids_maxi_pans": "مقالي خاصة (مقالي ووك ومقالي الشبكات ومقالي كبيرة)",
+                    "iot_wok_grids_maxi_pans_soil": "مقالي خاصة (مقالي ووك ومقالي الشبكات ومقالي كبيرة)",
+                    "iot_yes_quick_cycle": "Yes Quick",
+                    "night": "ليلي عند 55 درجة مئوية",
+                    "prewash": "النقع",
+                    "rapid_20": "سريع 20 دقيقة",
+                    "rapid_24": "سريع 24 دقيقة",
+                    "rapid_29": "سريع 29 دقيقة و50 درجة مئوية",
+                    "rapid_35": "غسيل وتجفيف 35 دقيقة",
+                    "rapid_39": "سريع 39 دقيقة عند 60 درجة مئوية",
+                    "rapid_49": "سريع 49 دقيقة",
+                    "rapid_59": "سريع 59 دقيقة",
+                    "sanitising": "التطهير",
+                    "silence": "الصمت",
+                    "silent": "هادئة",
+                    "silent_care": "العناية الهادئة",
+                    "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI السريع",
+                    "smart_ai_rapid_soil": "Smart AI السريع",
+                    "smart_ai_soil": "Smart AI",
+                    "special": "خاص",
+                    "special_pw_prz": "خاص",
+                    "steam": "بخار عند 75 درجة مئوية",
+                    "steam_plus": "بخار Plus عند 75 درجة مئوية",
+                    "total_care": "العناية الكاملة عند 50 درجة مئوية",
+                    "ultra_silence": "هادئ للغاية عند 55 درجة مئوية",
+                    "ultra_silent": "هادئ للغاية عند 55 درجة مئوية",
+                    "universal": "عالمي 60 درجة مئوية",
+                    "universal_plus": "Universal Plus عند 70 درجة مئوية",
+                    "zone_wash": "Flex Zone Wash",
+                    "zoom_39": "تكبير 39 دقيقة"
+                },
+                "name": "Program"
+            },
+            "programs_ih": {
+                "state": {
+                    "iot_special_ash_brown": "Ash brown",
+                    "iot_special_beef_fillet": "Beef fillet",
+                    "iot_special_beef_veal_stew": "Beef and veal stew",
+                    "iot_special_boiled_rice": "Boiled rice",
+                    "iot_special_chicken_breast": "Chicken breast",
+                    "iot_special_chicken_legs": "Chicken legs",
+                    "iot_special_chocolate_pudding": "Chocolate pudding",
+                    "iot_special_entrecote": "Entrecote",
+                    "iot_special_fresh_tuna": "Fresh tuna",
+                    "iot_special_grilled_vegetables": "Grilled vegetables",
+                    "iot_special_lamb_cutlet": "Lamb cutle",
+                    "iot_special_meatballs": "Meatballs",
+                    "iot_special_minestrone": "Minestrone",
+                    "iot_special_mussels": "Mussels",
+                    "iot_special_omelette": "Omelette",
+                    "iot_special_pancakes": "Pancakes",
+                    "iot_special_paris_style_peas": "Paris style peas",
+                    "iot_special_poached_eggs": "Poached eggs",
+                    "iot_special_pork_fillet": "Pork fillet",
+                    "iot_special_pork_ribs": "Pork ribs",
+                    "iot_special_prawns": "Prawns",
+                    "iot_special_quinoa": "Quinoa",
+                    "iot_special_ratatouille": "Ratatouille",
+                    "iot_special_salmon_fillet": "Salmon fillet",
+                    "iot_special_saute_potatoes": "Saute potatoes",
+                    "iot_special_scallops": "Scallops",
+                    "iot_special_scrambled_eggs": "Scrambled eggs",
+                    "iot_special_spelt": "Spelt",
+                    "iot_special_veggy_noodles": "Veggy noodles",
+                    "iot_special_white_fish_fillet": "White fish fillet",
+                    "iot_standard_boiling": "Boiling",
+                    "iot_standard_frying": "Frying",
+                    "iot_standard_keep_warm": "Keep Warm",
+                    "iot_standard_melting": "Melting",
+                    "iot_standard_simmering": "Simmering"
+                },
+                "name": "Program"
+            },
+            "programs_ov": {
+                "state": {
+                    "bakery": "Pasta and Bakery",
+                    "bottom_heating": "Bottom Heating",
+                    "bottom_heating_fan": "Bottom Heating + Fan",
+                    "bread": "Bread",
+                    "combi": "كومبي",
+                    "convection_fan": "Convection + Fan",
+                    "conventional": "Conventional",
+                    "defrost": "Defrost",
+                    "fish": "Fish",
+                    "grill_cata": "Grill cata",
+                    "grill_fan_cata": "Grill fan cata",
+                    "grill_fan_pyro": "Grill + Fan",
+                    "grill_pyro": "Grill",
+                    "h20_clean": "H2O-Clean",
+                    "iot_bread": "Bread",
+                    "iot_h20_clean": "Iot h20 clean",
+                    "leavening": "Leavening",
+                    "meat": "Meat",
+                    "multi_level": "Multi-Level",
+                    "paella": "Paella",
+                    "pasta_and_bakery": "Pasta and Bakery",
+                    "pizza": "Pizza",
+                    "pyrolysis": "Pyrolysis",
+                    "soft_plus": "Soft+",
+                    "tailor_bake": "Tailor bake",
+                    "tailor_bake_cata": "Tailor Bake",
+                    "tailor_bake_pyro": "Tailor Bake",
+                    "vegetables_cata": "Vegetables",
+                    "vegetables_pyro": "Vegetables"
+                },
+                "name": "Program"
+            },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Active Dry (التجفيف النشط)",
+                    "allergy_care": "مضاد للحساسية",
+                    "all_in_one": "الكل في واحد",
+                    "antiallergy": "مضاد للحساسية",
+                    "anti_odours": "مضاد للروائح",
+                    "auto_care": "العناية التلقائية",
+                    "baby": "طفل",
+                    "bed_quilt": "غطاء السرير",
+                    "care_30": "العناية 30",
+                    "care_45": "العناية 45",
+                    "care_59": "العناية 59",
+                    "coloured": "ملون",
+                    "daily_45_min": "الغسل اليومي لمدة 45 دقيقة",
+                    "daily_perfect_59_min": "مناسب للغسل اليومي لمدة 59 دقيقة",
+                    "darks_and_coloured": "الملابس الداكنة والملونة",
+                    "delicates": "الملابس الرقيقة",
+                    "duvet": "لحاف",
+                    "eco": "برنامج الأقطان بوضع التوفير",
+                    "ecospeed_cottons": "برنامج الأقطان بوضع التوفير السريع",
+                    "ecospeed_delicates": "برنامج الملابس الرقيقة بوضع التوفير السريع",
+                    "ecospeed_mixed": "برنامج الملابس المختلطة بوضع التوفير السريع",
+                    "extra_hygiene": "نظافة إضافية",
+                    "fitness": "اللياقة البدنية",
+                    "fresh_care": "الملابس الحساسة",
+                    "genius": "Genius",
+                    "hqd_baby_care": "عناية الطفل",
+                    "hqd_bath_towel": "مناشف",
+                    "hqd_bed_sheets": "شراشف السرير",
+                    "hqd_bulky": "المواد كبيرة الحجم",
+                    "hqd_casual": "الملابس غير الرسمية",
+                    "hqd_checkup": "فحص",
+                    "hqd_cold_wind_30": "نسيم بارد لمدة 30 دقيقة",
+                    "hqd_cold_wind_timing": "هواء بارد",
+                    "hqd_cotton": "قطن",
+                    "hqd_curtain": "ستائر",
+                    "hqd_delicate": "الملابس الرقيقة",
+                    "hqd_diaper": "الحفاضات",
+                    "hqd_duvet": "جاكيت مبطن بالألياف الاصطناعية",
+                    "hqd_eco": "وضع التوفير",
+                    "hqd_feather": "جاكيت مبطن بالألياف الطبيعية",
+                    "hqd_hot_wind_timing": "عناق حار",
+                    "hqd_hygienic": "النظافة الصحية",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro لعناصر الأطفال",
+                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro للعناصر الكبيرة",
+                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro للعناصر الرقيقة",
+                    "hqd_i_refresh_pro_down": "I-Refresh Pro للأسفل",
+                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro للأقمصة",
+                    "hqd_i_refresh_pro_towel": "I-Refresh Pro للمناشف",
+                    "hqd_i_refresh_pro_wool": "I-Refresh Pro للصوف",
+                    "hqd_jacket": "سترات",
+                    "hqd_jeans": "جينز",
+                    "hqd_luxury": "رفاهية",
+                    "hqd_mix": "ملابس مختلطة",
+                    "hqd_night_dry": "تجفيف ليلًا",
+                    "hqd_outdoor": "في الهواء الطلق",
+                    "hqd_precious_cure": "مداواة الأقمشة الثمينة",
+                    "hqd_quick_20": "سريع 20",
+                    "hqd_quick_30": "سريع 30",
+                    "hqd_quick_dry": "تجفيف سريع أوتوماتيكي لمدة 30 دقيقة",
+                    "hqd_quilt": "أغطية الأسرة",
+                    "hqd_refresh": "إنعاش",
+                    "hqd_school_uniform": "زي مدرسي",
+                    "hqd_shirt": "قمصان",
+                    "hqd_shoes": "الأحذية",
+                    "hqd_silk": "حرير",
+                    "hqd_sports": "رياضات",
+                    "hqd_synthetics": "الألياف الصناعية",
+                    "hqd_timer": "مؤقت",
+                    "hqd_towel": "مناشف",
+                    "hqd_underwear": "ثياب داخلية",
+                    "hqd_warm_up": "تسخين",
+                    "hqd_wool": "صوف",
+                    "hqd_working_suit": "ملابس العمل",
+                    "hygiene": "النظافة",
+                    "iot_checkup": "فحص",
+                    "iot_dry_anti_mites": "مضادات العث",
+                    "iot_dry_baby": "ملابس الطفل",
+                    "iot_dry_backpacks": "حقائب ظهر",
+                    "iot_dry_bathrobe": "رداء الحمام",
+                    "iot_dry_bed_linen": "أغطية السرير",
+                    "iot_dry_bed_quilt": "غطاء السرير",
+                    "iot_dry_cotton": "قطن",
+                    "iot_dry_cuddly_toys": "اللعب المحشوة",
+                    "iot_dry_curtains": "ستائر",
+                    "iot_dry_dehumidifier": "مزيل الرطوبة",
+                    "iot_dry_delicates": "الملابس الرقيقة",
+                    "iot_dry_delicate_tablecloths": "مفارش المائدة الرقيقة",
+                    "iot_dry_denim_jeans": "الأقمشة الزرقاء - الجينز",
+                    "iot_dry_down_jacket": "السترة",
+                    "iot_dry_duvet": "لحاف",
+                    "iot_dry_easy_iron_cotton": "الكي بسهولة فائقة",
+                    "iot_dry_easy_iron_synthetics": "الكي الألياف الصناعية بسهولة فائقة",
+                    "iot_dry_gym_fit": "جيم فيت - لياقة بدنية",
+                    "iot_dry_lingerie": "الملابس الداخلية",
+                    "iot_dry_mixed": "ملابس مختلطة",
+                    "iot_dry_pet_accessories": "ملحقات الحيوانات الأليفة",
+                    "iot_dry_pet_hair_removal": "إزالة شعر الحيوانات الأليفة (الغسيل المسبق)",
+                    "iot_dry_playsuits": "فستان بسروال قصير",
+                    "iot_dry_rapid_30": "سريع 30",
+                    "iot_dry_rapid_59": "سريع 59 دقيقة",
+                    "iot_dry_refresh": "إنعاش",
+                    "iot_dry_regenerates_waterproof": "تجديد الأقمشة المقاومة للماء",
+                    "iot_dry_relax_creases": "قم بإزالة التجاعيد",
+                    "iot_dry_shirts": "قمصان",
+                    "iot_dry_small_load": "حمل الصغيرة",
+                    "iot_dry_swimsuits_and_bikinis": "المايوه والبيكيني",
+                    "iot_dry_synthetics": "الألياف الصناعية",
+                    "iot_dry_synthetic_dry": "اصطناعي جاف",
+                    "iot_dry_tablecloths": "مفارش المائدة",
+                    "iot_dry_technical_fabrics": "أقمشة تقنية",
+                    "iot_dry_warm_embrace": "عناق حار",
+                    "iot_dry_wool": "صوف",
+                    "jeans": "جينز",
+                    "mix_and_dry": "امزج وجفف",
+                    "pets": "حيوانات أليفة",
+                    "pre_iron": "الكي المسبق",
+                    "rapid_30": "سريع 30",
+                    "rapid_45": "سريع 45 دقيقة",
+                    "rapid_59": "سرعة مثالية 59 دقيقة",
+                    "refresh": "إنعاش",
+                    "relax_creases": "قم بإزالة التجاعيد",
+                    "saving_30_min": "دورة التوفير لمدة 30 دقيقة",
+                    "shirts": "قمصان",
+                    "shoes": "الأحذية",
+                    "small_load": "حمل الصغيرة",
+                    "soft_care": "الرعاية الناعمة",
+                    "sport_plus": "عناية إضافية بالملابس الرياضية",
+                    "super_easy_iron_misti": "كي الملابس المختلطة بسهولة فائقة",
+                    "super_easy_iron_xxl": "كي حمل ضخم بسهولة فائقة",
+                    "super_fast_cottons": "الملابس القطنية بسرعة فائقة",
+                    "super_fast_delicates": "الملابس الرقيقة فائقة السرعة",
+                    "synthetics": "الأقمشة الصناعية",
+                    "total_care": "رعاية كاملة",
+                    "trainers": "المدربون",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "تنشيط مقاوم للماء",
+                    "whites": "الملابس البيضاء",
+                    "wool": "الصوف المجفف",
+                    "woolmark": "صوف",
+                    "xxl_load": "حمل ضخم",
+                    "zoom_59": "تكبير/تصغير 59"
+                },
+                "name": "Program"
+            },
+            "programs_wm": {
+                "state": {
+                    "20_degrees_coloured_cottons": "20 ° ملون وقطن",
+                    "20_degrees_new_energy_label": "20 درجة مئوية",
+                    "active_steam": "بخار '29",
+                    "active_wash": "غسيل نشط '20",
+                    "active_wash_steam": "غسيل نشط '20+ بخار",
+                    "allergy_care": "العناية بالحساسية",
+                    "allergy_care_pro": "العناية الاحترافية بالحساسية",
+                    "all_in_one_49": "الكل في واحد 49 دقيقة",
+                    "all_in_one_59": "الكل في واحد 59 دقيقة",
+                    "all_in_one_59_steam": "الكل في واحد 59 دقيقة + بخار",
+                    "autocare": "أوتوكير",
+                    "autoclean": "تنظيف البرميل",
+                    "baby_60": "كل الأطفال 60 درجة مئوية",
+                    "care_14": "العناية السريعة 14 دقيقة",
+                    "care_30": "العناية السريعة 30 دقيقة",
+                    "care_44": "العناية السريعة 44 دقيقة",
+                    "checkup": "فحص",
+                    "colour_59": "ملون 59 دقيقة",
+                    "colour_59_steam": "ملابس ملونة '59' + بخار",
+                    "cottons": "قطن",
+                    "cottons_prewash": "قطن + غسيل أولي",
+                    "cottons_steam": "قطن + بخار",
+                    "cotton_care_59": "العناية بالقطن 59 دقيقة",
+                    "cycle_ended": "انتهت الدورة",
+                    "delicate_59": "حساس",
+                    "delicate_silk": "الحرير الناعم '59",
+                    "delicate_silk_steam": "الحرير الناعم + بخار",
+                    "delicati_59": "حساس",
+                    "delicati_59_steam": "حساس",
+                    "drain_spin": "استنزاف + تدور",
+                    "easy_iron": "الكي السهل '39",
+                    "eco_40_60_new_energy_label": "وضع التوفير 40-60",
+                    "extra_care": "رعاية إضافية",
+                    "fitness": "العناية بالرشاقة",
+                    "fitness_care": "العناية بالرشاقة",
+                    "fresh_care": "الملابس الحساسة '59",
+                    "fresh_care_steam": "الملابس الحساسة + بخار",
+                    "handwash_wool": "غسيل يدوي + صوف '48",
+                    "high_dry": "حرارة تجفيف عالية",
+                    "hqd_20_degrees": "قطن 20 ℃",
+                    "hqd_allergy": "العناية بالحساسية",
+                    "hqd_autoclean": "تنظيف البرميل",
+                    "hqd_babycare": "عناية الطفل",
+                    "hqd_checkup": "فحص",
+                    "hqd_cottons": "قطن",
+                    "hqd_delicate": "حساس '50",
+                    "hqd_delicate_cradle": "حساس",
+                    "hqd_dry": "قطن جاف",
+                    "hqd_dry_synthetics": "تجفيف منخفض الحرارة",
+                    "hqd_duvet": "لحاف",
+                    "hqd_eco_40_60_degrees": "وضع التوفير 40-60",
+                    "hqd_handwash_wool": "صوف '40",
+                    "hqd_i_refresh": "i-Refresh",
+                    "hqd_mix": "مزج",
+                    "hqd_quick_15": "سريع '15",
+                    "hqd_quick_wash_57": "غسيل سريع 57 دقيقة",
+                    "hqd_rapid_wash_and_dry": "غسل جاف",
+                    "hqd_refresh": "تجديد",
+                    "hqd_rinse": "شطف",
+                    "hqd_shirts": "قمصان",
+                    "hqd_smart": "الذكاء الاصطناعي",
+                    "hqd_spin": "غزل",
+                    "hqd_sport": "رياضة '25",
+                    "hqd_super_fast": "سريع للغاية 39 دقيقة",
+                    "hqd_synthetic_and_coloured": "الألياف الصناعية",
+                    "hygiene_59": "Hygiene Plus 59'",
+                    "hygiene_60": "النظافة 60 درجة مئوية",
+                    "hygiene_plus_59": "Hygiene Plus 59'",
+                    "hygiene_plus_59_min": "Hygiene Plus 59'",
+                    "hygiene_pro_49_min": "Hygiene Pro 49 دقيقة",
+                    "hygiene_pro_steam": "Hygiene Pro + بخار",
+                    "intensive_40": "مكثف 40 درجة مئوية",
+                    "intensive_40_steam": "مكثف 40°C + بخار",
+                    "iot_active_steam": "بخار '29",
+                    "iot_active_wash_steam": "غسيل نشط '20+ بخار",
+                    "iot_allergy_care_pro": "العناية الاحترافية بالحساسية",
+                    "iot_all_in_one_59_steam": "الكل في واحد 59 دقيقة + بخار",
+                    "iot_baby_60_steam": "كل الأطفال 60 درجة مئوية + بخار",
+                    "iot_checkup": "فحص",
+                    "iot_colour_59_steam": "ملابس ملونة '59' + بخار",
+                    "iot_cottons_steam": "قطن + بخار",
+                    "iot_delicate_silk_steam": "الحرير الناعم + بخار",
+                    "iot_delicati_59_steam": "حساس",
+                    "iot_dry_air_refresh": "تحديث الهواء",
+                    "iot_dry_anti_mites": "مكافحة العث",
+                    "iot_dry_baby": "طفل",
+                    "iot_dry_backpacks": "حقائب ظهر",
+                    "iot_dry_bathrobe": "أرواب حمام",
+                    "iot_dry_bed_linen": "أغطية السرير",
+                    "iot_dry_cotton_dry": "قطن جاف",
+                    "iot_dry_cuddly_toys": "اللعب محبوب",
+                    "iot_dry_curtains": "ستائر",
+                    "iot_dry_dehumidifier": "مزيل الرطوبة",
+                    "iot_dry_delicates_antiallergy": "الملابس الرقيقة المضادة للحساسية",
+                    "iot_dry_delicate_tablecloths": "مفارش المائدة الحساسة",
+                    "iot_dry_denim_jeans": "الدينيم - الجينز",
+                    "iot_dry_easy_iron_cotton": "سهل الكي - قطن",
+                    "iot_dry_easy_iron_synthetics": "سهل الكي - مواد صناعية",
+                    "iot_dry_gym_fit": "جيم صالح - لياقة",
+                    "iot_dry_lingerie": "الملابس الداخلية",
+                    "iot_dry_mixed_dry": "مختلط جاف",
+                    "iot_dry_rapid_60_min_delicates": "سريع 60 دقيقة - الملابس الرقيقة",
+                    "iot_dry_shirts": "قمصان",
+                    "iot_dry_swimsuits_and_bikinis": "المايوه والبيكيني",
+                    "iot_dry_synthetics": "اصطناعي جاف",
+                    "iot_dry_synthetic_dry": "اصطناعي جاف",
+                    "iot_dry_tablecloths": "مفارش المائدة",
+                    "iot_dry_technical_fabrics": "أقمشة تقنية",
+                    "iot_dry_warm_embrace": "عناق دافئ",
+                    "iot_dry_wool_dry": "صوف جاف",
+                    "iot_easy_iron": "الكي السهل '39",
+                    "iot_fresh_care_steam": "الملابس الحساسة + بخار",
+                    "iot_hygiene_pro_steam": "Hygiene Pro + بخار",
+                    "iot_intensive_40_steam": "مكثف 40°C + بخار",
+                    "iot_jeans_60_steam": "جينز + بخار",
+                    "iot_jeans_steam": "جينز + بخار",
+                    "iot_mixed_steam": "مختلط + بخار",
+                    "iot_mix_and_colour_59_steam": "الملابس المختلطة والملونة 59 دقيقة + بخار",
+                    "iot_perfect_cotton_59_steam": "قطن مثالي 59 دقيقة",
+                    "iot_rapid_a_class_60_steam": "Rapid Class A 60 + بخار",
+                    "iot_resistant_cotton_steam": "قطن + بخار",
+                    "iot_shirts_steam": "قمصان + بخار",
+                    "iot_single_item_steam": "عنصر واحد '20 + بخار",
+                    "iot_smart_wash": "الغسيل الذكي",
+                    "iot_soft_care_steam": "Soft Care + Steam",
+                    "iot_special_39_full_load_steam": "دورة خاصة 39 دقيقة + بخار",
+                    "iot_steam_hygiene_plus": "Hygiene Plus Steam",
+                    "iot_synthetic_and_coloured_steam": "الألياف الصناعية والألوان + بخار",
+                    "iot_wash_and_dry": "غسل جاف",
+                    "iot_wash_anti_mites": "مضادات العث",
+                    "iot_wash_anti_odor": "مضاد للرائحة",
+                    "iot_wash_ariel_clean_cycle": "Ariel Ultimate Clean",
+                    "iot_wash_ariel_cold_cycle": "Ariel Cold Clean",
+                    "iot_wash_ariel_fresh_cycle": "Ariel Fresh Clean",
+                    "iot_wash_baby_sanitizer": "المطهر",
+                    "iot_wash_baby_sanitizer_steam": "معقم أطفال + بخار",
+                    "iot_wash_backpacks": "حقائب ظهر",
+                    "iot_wash_backpacks_zelig": "حقائب ظهر",
+                    "iot_wash_bathrobe": "أرواب الحمام والمناشف",
+                    "iot_wash_bathrobe_steam": "روب حمام + بخار",
+                    "iot_wash_bed_linen": "بياضات السرير",
+                    "iot_wash_bed_linen_steam": "بياضات السرير + بخار",
+                    "iot_wash_bed_linen_zelig": "بياضات السرير",
+                    "iot_wash_big_single_load": "حمولة واحدة كبيرة",
+                    "iot_wash_bleaching": "تبيض",
+                    "iot_wash_blood_stains": "بقع الدم",
+                    "iot_wash_cashmere": "الكشمير",
+                    "iot_wash_chocolate_stains": "بقع الشوكولاتة",
+                    "iot_wash_cold_wash": "غسيل بارد",
+                    "iot_wash_colored": "ملون",
+                    "iot_wash_colored_anti_stain": "مضاد للبقع الملونة",
+                    "iot_wash_colored_delicate": "حساسة ملونة",
+                    "iot_wash_coloured": "ملون",
+                    "iot_wash_coloured_bed_linen": "بياضات سرير ملونة",
+                    "iot_wash_coloured_bed_linen_steam": "بياضات سرير ملونة + بخار",
+                    "iot_wash_coloured_curtains": "ستائر ملونة",
+                    "iot_wash_coloured_shirts": "قمصان ملونة '59",
+                    "iot_wash_coloured_shirts_steam": "قمصان ملونة + بخار",
+                    "iot_wash_coloured_steam": "ملابس ملونة + بخار",
+                    "iot_wash_coloured_tableclothes": "مفارش المائدة الملونة",
+                    "iot_wash_coloured_tableclothes_steam": "مفارش المائدة الملونة + بخار",
+                    "iot_wash_cotton": "قطن",
+                    "iot_wash_cotton_steam": "قطن + بخار",
+                    "iot_wash_cuddly_toys": "اللعب محبوب",
+                    "iot_wash_curtains": "ستائر",
+                    "iot_wash_curtains_steam": "ستائر + بخار",
+                    "iot_wash_curtains_zelig": "ستائر",
+                    "iot_wash_dark": "داكن",
+                    "iot_wash_darks_and_coloured_44": "الملابس الغامقة والملونة 44 دقيقة",
+                    "iot_wash_darks_and_coloured_59": "الملابس الغامقة والملونة 59 دقيقة",
+                    "iot_wash_darks_and_coloured_xl": "داركس وملون XL",
+                    "iot_wash_dark_steam": "عناصر غامقة + بخار",
+                    "iot_wash_dash_clean_cycle": "Dash Ultimate Clean",
+                    "iot_wash_dash_cold_cycle": "Dash Cold Clean",
+                    "iot_wash_dash_fresh_cycle": "Dash Fresh Clean",
+                    "iot_wash_delicate": "الملابس المصنوعة من أنسجة رقيقة",
+                    "iot_wash_delicate_antiallergy": "مضاد للحساسية حساس",
+                    "iot_wash_delicate_antiallergy_steam": "ملابس ناعمة مضادة للحساسية + بخار",
+                    "iot_wash_delicate_antiallergy_zelig": "مضاد للحساسية حساس",
+                    "iot_wash_delicate_colors": "حساسة ملونة",
+                    "iot_wash_delicate_colors_steam": "ملابس ملونة + بخار",
+                    "iot_wash_delicate_dark": "رقيق غامق",
+                    "iot_wash_delicate_steam": "ملابس ناعمة + بخار",
+                    "iot_wash_delicate_tablecloths": "مفارش المائدة الحساسة",
+                    "iot_wash_delicate_tablecloths_steam": "مفارش مائدة ناعمة + بخار",
+                    "iot_wash_delicate_whites": "بياض رقيق",
+                    "iot_wash_denim_jeans": "الدينيم - الجينز",
+                    "iot_wash_diving_suits": "بدلات الغوص",
+                    "iot_wash_diving_suits_zelig": "بدلات الغوص",
+                    "iot_wash_down_jackets": "السترات أسفل",
+                    "iot_wash_down_jackets_zelig": "السترات أسفل",
+                    "iot_wash_duvet": "لحاف",
+                    "iot_wash_fruit_stains": "بقع الفاكهة",
+                    "iot_wash_gym_fit": "جيم فيت - لياقة بدنية '59",
+                    "iot_wash_handwash": "غسل اليد",
+                    "iot_wash_handwash_colored": "غسيل يدوي ملون",
+                    "iot_wash_handwash_dark": "غسيل يدوي غامق",
+                    "iot_wash_lingerie": "الملابس الداخلية",
+                    "iot_wash_masks_refresh": "تحديث الأقنعة",
+                    "iot_wash_masks_sanification": "تطهير الأقنعة",
+                    "iot_wash_masks_sanification_steam": "قناع تطهير + بخار",
+                    "iot_wash_mats": "ماتس",
+                    "iot_wash_men_s_trousers": "بنطلون",
+                    "iot_wash_mixed": "مخلوط",
+                    "iot_wash_mixed_steam": "مختلط + بخار",
+                    "iot_wash_mix_and_coloured_44": "مختلط وملون 44 دقيقة",
+                    "iot_wash_mix_and_coloured_59": "مختلط وملون 59 دقيقة",
+                    "iot_wash_mix_and_coloured_xl": "مزيج وملون XL",
+                    "iot_wash_new_clothes": "ملابس جديدة",
+                    "iot_wash_perfect_white": "أبيض مثالي",
+                    "iot_wash_perfect_white_steam": "ملابس بيضاء تمامًا + بخار",
+                    "iot_wash_pets": "اكسسوارات الحيوانات الأليفة",
+                    "iot_wash_pets_hair_removal": "التخلص من شعر الحيوانات الأليفة",
+                    "iot_wash_pets_odours_stains_removal": "التخلص من الروائح الكريهة للحيوانات الأليفة والبقع",
+                    "iot_wash_pets_steam": "اكسسوارات الحيوانات الأليفة",
+                    "iot_wash_playsuits": "بذلات",
+                    "iot_wash_playsuits_steam": "بذلات + بخار",
+                    "iot_wash_quick_drum_cleaner": "منظِّف سريع للحلة",
+                    "iot_wash_rapid_14": "سريع 14 دقيقة",
+                    "iot_wash_rapid_30": "سريع 30 دقيقة",
+                    "iot_wash_rapid_44": "سريع 44 دقيقة",
+                    "iot_wash_rapid_59": "سريع 59 دقيقة",
+                    "iot_wash_rapid_59_steam": "Rapid 59' + بخار",
+                    "iot_wash_refresh_14_min": "تحديث 14 دقيقة",
+                    "iot_wash_resistant_colored": "ملابس ملونة مقاومة للهب",
+                    "iot_wash_resistant_dark": "الملابس الداكنة المقاومة للهب",
+                    "iot_wash_resistant_whites": "ملابس بيضاء مقاومة للهب",
+                    "iot_wash_rinse": "شطف",
+                    "iot_wash_shirts": "قمصان",
+                    "iot_wash_shirts_steam": "قمصان + بخار",
+                    "iot_wash_silk": "حرير",
+                    "iot_wash_ski_suit": "بدلة تزلج",
+                    "iot_wash_ski_suit_zelig": "بدلة تزلج",
+                    "iot_wash_spin": "غزل",
+                    "iot_wash_sport": "رياضة",
+                    "iot_wash_sport_anti_odor": "ملابس رياضية مضادة للرائحة",
+                    "iot_wash_sport_anti_odor_zelig": "ملابس رياضية مضادة للرائحة",
+                    "iot_wash_stains_remover": "مزيل البقع",
+                    "iot_wash_super_saving": "التوفير الفائق 49'",
+                    "iot_wash_swimsuits_and_bikinis": "المايوه والبيكيني",
+                    "iot_wash_synthetic": "الألياف الصناعية",
+                    "iot_wash_synthetic_steam": "ألياف صناعية + بخار",
+                    "iot_wash_tablecloths": "مفارش المائدة",
+                    "iot_wash_tablecloths_steam": "مفارش المائدة + بخار",
+                    "iot_wash_technical_fabrics": "أقمشة تقنية",
+                    "iot_wash_technical_fabrics_zelig": "أقمشة تقنية",
+                    "iot_wash_technical_jackets": "السترات التقنية",
+                    "iot_wash_technical_jackets_zelig": "السترات التقنية",
+                    "iot_wash_trainers": "المدربون",
+                    "iot_wash_whites": "الملابس البيضاء",
+                    "iot_wash_whites_44": "الملابس البيضاء",
+                    "iot_wash_whites_59": "الملابس البيضاء",
+                    "iot_wash_whites_xl": "بياض XL",
+                    "iot_wash_wine_stains": "بقع النبيذ",
+                    "iot_wash_wool": "صوف",
+                    "jeans": "جينز",
+                    "jeans_60": "جينز",
+                    "jeans_60_steam": "جينز + بخار",
+                    "low_dry": "تجفيف منخفض الحرارة",
+                    "mixed": "مختلط",
+                    "mixed_and_colored_59": "مختلط وملون 59 دقيقة",
+                    "mixed_steam": "مختلط + بخار",
+                    "mix_and_colour_59": "مختلط وملون 59 دقيقة",
+                    "mix_and_colour_59_steam": "الملابس المختلطة والملونة 59 دقيقة + بخار",
+                    "night_and_day": "ليل ونهار",
+                    "night_wash": "غسيل ليلي",
+                    "perfect_59": "مثالي 59 دقيقة",
+                    "perfect_cotton_59": "قطن مثالي 59 دقيقة",
+                    "perfect_cotton_59_steam": "قطن مثالي 59 دقيقة",
+                    "perfect_whites_59": "أبيض مثالي 59 دقيقة",
+                    "rapid_14_min": "السرعة 14 دقيقة",
+                    "rapid_30_min": "السرعة 30 دقيقة",
+                    "rapid_44_min": "السرعة 44 دقيقة",
+                    "rapid_a_class_60": "Rapid Class A 60",
+                    "rapid_a_class_60_steam": "Rapid Class A 60 + بخار",
+                    "rapid_wash_and_dry_59_min": "غسل وتجفيف 59 دقيقة",
+                    "resistant_cotton": "قطن",
+                    "resistant_cotton_steam": "قطن + بخار",
+                    "rinse": "شطف",
+                    "shirts_steam": "قمصان + بخار",
+                    "silent_night": "ليلة هادئة",
+                    "single_item": "عنصر واحد '20",
+                    "single_item_steam": "عنصر واحد + بخار",
+                    "smart_wash": "الغسيل الذكي",
+                    "soft_care": "الرعاية الناعمة",
+                    "soft_care_steam": "Soft Care + Steam",
+                    "soft_care_steam_title": "Soft Care + Steam",
+                    "special_39": "خاص 39 دقيقة",
+                    "special_39_full_load": "خاص 39 دقيقة",
+                    "special_39_full_load_steam": "دورة خاصة 39 دقيقة + بخار",
+                    "special_49": "خاص",
+                    "sport_39": "ملابس رياضية 39 دقيقة",
+                    "sport_plus_29": "عناية إضافية بالملابس الرياضية 29\"",
+                    "sport_plus_39": "عناية إضافية بالملابس الرياضية 39\"",
+                    "steam_39": "بخار 39 دقيقة",
+                    "steam_care_pro": "عناية البخار الاحترافية",
+                    "steam_care_pro_cotton": "Steam Care Pro - الملابس القطنية",
+                    "steam_care_pro_delicates": "Steam Care Pro - الملابس الناعمة '16",
+                    "steam_care_pro_synthetic": "Steam Care Pro - الألياف الصناعية '20",
+                    "steam_hygiene_plus": "Hygiene Plus Steam",
+                    "synthetics": "الألياف الصناعية",
+                    "synthetic_and_coloured": "الاصطناعية والملونة",
+                    "synthetic_and_coloured_steam": "الألياف الصناعية والألوان + بخار",
+                    "tailored_resistant_cotton": "Tailored Resistant Cotton",
+                    "tailored_synthetic_and_coloured": "Tailored Synthetic Colored",
+                    "total_care": "رعاية كاملة",
+                    "tumbling": "هبوط",
+                    "ultra_fresh": "Ultra Fresh",
+                    "wool": "صوف",
+                    "wool_and_delicates_49": "الصوف والأقمشة الدقيقة 49 دقيقة",
+                    "wool_dry": "صوف جاف",
+                    "wool_soft_care": "الصوف والعناية الناعمة '48"
+                },
+                "name": "Program"
+            },
+            "programs_ref": {
+                "state": {
+                    "cold_drinks": "Soft chill",
+                    "cool_drink": "Cool Drink",
+                    "fruits": "Fruit",
+                    "fruit_and_veg": "Fruit & Veg",
+                    "keep_fresh": "0°C Fresh",
+                    "milk_and_eggs": "Milk & Eggs",
+                    "quick_set": "الضبط السريع",
+                    "sea_food": "Ready to cook meal",
+                    "smart_mode_title": "Smart Mode",
+                    "soft_frozen": "Soft freezing",
+                    "tea": "Cold Drinks",
+                    "vegetables": "Vegetable",
+                    "zero_fresh": "0°C Fresh"
+                },
+                "name": "Program"
+            },
+            "programs_wc": {
+                "state": {}
+            },
+            "dry_time": {
+                "name": "وقت التجفيف"
+            },
+            "power": {
+                "name": "Power level"
+            },
+            "remaining_time": {
+                "name": "الوقت المتبقي"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
+            "water_efficiency": {
+                "name": "كفاءة استخدام المياه"
+            },
+            "water_saving": {
+                "name": "توفير المياه"
+            },
+            "duration": {
+                "name": "المدة"
+            },
+            "target_temperature": {
+                "name": "Target temperature"
+            },
+            "spin_speed": {
+                "name": "غزل"
+            },
+            "delay_time": {
+                "name": "تأخير البدء"
+            },
+            "suggested_load": {
+                "name": "سعة التحميل"
+            },
+            "energy_label": {
+                "name": "كفاءة الطاقة"
+            },
+            "det_dust": {
+                "name": "المسحوق"
+            },
+            "det_liquid": {
+                "name": "السائل"
+            },
+            "errors": {
+                "name": "Error"
+            },
+            "programs": {
+                "name": "Current program"
+            },
+            "room_temperature": {
+                "name": "درجة حرارة الغرفة"
+            },
+            "humidity": {
+                "name": "Humidity"
+            },
+            "cycles_total": {
+                "name": "دورات Total"
+            },
+            "energy_total": {
+                "name": "استهلاك الطاقة Total"
+            },
+            "water_total": {
+                "name": "كفاءة استخدام المياه Total"
+            },
+            "energy_current": {
+                "name": "استهلاك الطاقة Current"
+            },
+            "water_current": {
+                "name": "كفاءة استخدام المياه Current"
+            },
+            "freezer_temp": {
+                "name": "Freezer temperature"
+            },
+            "fridge_temp": {
+                "name": "Fridge temperature"
+            },
+            "voc": {
+                "name": "Gas (VOC)"
+            },
+            "filter_cleaning": {
+                "name": "Filter cleaning"
+            },
+            "filter_life": {
+                "name": "Filter life"
+            },
+            "air_quality": {
+                "name": "Air Quality"
+            },
+            "fan_speed": {
+                "name": "Fan speed"
+            }
+        },
+        "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "لا تجفيف",
+                    "iron_dry": "حديد",
+                    "no_dry_iron": "جاف بدون حديد",
+                    "cupboard_dry": "خزانة تجفيف",
+                    "extra_dry": "تجفيف إضافي",
+                    "ready_to_wear": "جاهز للبس"
+                },
+                "name": "مستوى التجفيف"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Off",
+                    "avoid_touch": "Avoid touch",
+                    "follow_touch": "Follow",
+                    "unknown": "unknown"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "High",
+                    "mid": "Medium",
+                    "low": "Low",
+                    "auto": "Auto"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Fridge",
+                    "freezer": "Freezer",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Fridge & Freezer"
+                },
+                "name": "Zone"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "بدون بخار",
+                    "cotton": "قطن",
+                    "delicate": "حساس",
+                    "synthetic": "اصطناعي"
+                },
+                "name": "مستوى البخار"
+            },
+            "mode": {
+                "state": {
+                    "standby": "Standby",
+                    "sleep": "Sleep",
+                    "auto": "Auto",
+                    "allergens": "Allergens",
+                    "max": "Max"
+                },
+                "name": "Mode"
+            },
+            "diffuser": {
+                "state": {
+                    "off": "إيقاف التشغيل",
+                    "soft": "Soft",
+                    "mid": "Mid",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Customise"
+                },
+                "name": "Diffuser"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "القليل",
+                    "normal": "عادي",
+                    "very": "جداً",
+                    "unknown": "unknown"
+                },
+                "name": "مستوى الأوساخ"
+            },
+            "stain_type": {
+                "state": {
+                    "baby_food": "أغذية الأطفال",
+                    "bean_paste": "حساء الفاصولياء",
+                    "blood": "دم",
+                    "blueberry": "توت",
+                    "blue_ink": "حبر أزرق",
+                    "butter": "زبدة",
+                    "chili_oil": "زيت حار",
+                    "chili_sauce": "صلصة الفلفل الحار",
+                    "chocolate": "شوكولاتة",
+                    "coffe": "قهوة",
+                    "coffee": "قهوة",
+                    "color_pencil": "قلم",
+                    "cooking_oil": "زيت الطهي",
+                    "curry": "كاري",
+                    "deodorant": "مزيل عرق",
+                    "egg": "بيض",
+                    "fruit": "فاكهة",
+                    "glue": "صمغ",
+                    "grass": "عشب",
+                    "ice_cream": "الآيس كريم",
+                    "ketchup": "كاتشب",
+                    "lip_gloss": "ملمع شفاه",
+                    "mayonnaise": "مايونيز",
+                    "mech_grease": "شحم ميكانيكي",
+                    "milk": "لبن",
+                    "milk_tea": "شاي بالحليب",
+                    "oil": "زيت",
+                    "oil_pastel": "أقلام ملونة زيتية",
+                    "perfume": "عطر",
+                    "rust": "الصدأ",
+                    "shoe_cream": "كريم تلميع الأحذية",
+                    "soil": "تربة",
+                    "soy_sauce": "صلصة الصويا",
+                    "sweat": "يعرق",
+                    "tea": "شاي",
+                    "wine": "نبيذ",
+                    "unknown": "unknown"
+                },
+                "name": "مستوى البقع"
+            },
+            "fan_horizontal": {
+                "state": {
+                    "position_1": "Fixed - Position 1",
+                    "position_2": "Fixed - Position 2",
+                    "position_3": "Fixed - Position 3",
+                    "position_4": "Fixed - Position 4",
+                    "position_5": "Fixed - Position 5",
+                    "swing": "Swing"
+                },
+                "name": "Fan direction Horizontal"
+            },
+            "fan_vertical": {
+                "state": {
+                    "position_1": "Fixed - Position 1",
+                    "position_2": "Fixed - Position 2",
+                    "position_3": "Fixed - Position 3",
+                    "position_4": "Fixed - Position 4",
+                    "position_5": "Fixed - Position 5",
+                    "swing": "Swing"
+                },
+                "name": "Fan direction Vertical"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_simple_start": "بدء الآن"
+                },
+                "name": "Program"
+            },
+            "programs_dw": {
+                "state": {
+                    "59_min": "سريع 59 دقيقة",
+                    "auto_care": "العناية التلقائية",
+                    "auto_care_soil": "العناية التلقائية",
+                    "auto_hygiene": "النظافة التلقائية",
+                    "auto_plus": "AutoPlus",
+                    "auto_plus_soil": "تلطيخ تلقائي زائد",
+                    "auto_rapid": "السرعة التلقائية",
+                    "auto_rapid_soil": "تلطيخ سريع تلقائي",
+                    "auto_sensor": "مستشعر تلقائي",
+                    "auto_sensor_soil": "مستشعر تلقائي",
+                    "auto_universal": "شامل تلقائي 50-60 درجة مئوية",
+                    "auto_universal_plus": "شامل تلقائي+ 65 - 75 درجة مئوية",
+                    "auto_universal_plus_soil": "شامل تلقائي+ 65 - 75 درجة مئوية",
+                    "auto_universal_soil": "شامل تلقائي 50-60 درجة مئوية",
+                    "auto_wash": "غسيل تلقائي",
+                    "auto_wash_soil": "غسيل تلقائي",
+                    "classe_a_59": "غسل عند 59 دقيقة 65 درجة مئوية",
+                    "delicate": "حساس عند 45 درجة مئوية",
+                    "dishwasher_care": "تنظيف الترسبات الكلسية",
+                    "eco": "وضع التوفير عند 45 درجة مئوية",
+                    "eco_asynch": "وضع التوفير عند 45 درجة مئوية",
+                    "eco_bldc": "وضع التوفير عند 45 درجة مئوية",
+                    "eco_synch": "وضع التوفير عند 45 درجة مئوية",
+                    "eco_voice": "Eco",
+                    "gentle_wash": "Gentle wash",
+                    "glass": "الكؤوس الزجاجية",
+                    "glassware": "الأواني الزجاجية 45 درجة مئوية",
+                    "glass_care": "العناية بالكؤوس الزجاجية",
+                    "hygiene": "النظافة العامة",
+                    "hygiene_plus": "النظافة + 75 درجة مئوية",
+                    "intensive": "مكثف",
+                    "intensive_rapid": "كثيف سريع",
+                    "intensive_voice": "مكثف",
+                    "iot_auto_sensor": "مستشعر تلقائي",
+                    "iot_auto_universal_soil": "شامل تلقائي 50-60 درجة مئوية",
+                    "iot_auto_wash_soil": "غسيل تلقائي",
+                    "iot_baby_care": "عناية الطفل",
+                    "iot_breakfast": "إفطار",
+                    "iot_checkup": "فحص",
+                    "iot_china_crystals": "بلورات صينية",
+                    "iot_classe_a_59": "سريع 59 دقيقة",
+                    "iot_cocktail_glasses": "كؤوس المشروب (الكوكتيل)",
+                    "iot_cocktail_glasses_soil": "كؤوس المشروب (الكوكتيل)",
+                    "iot_daily_care": "العناية اليومية",
+                    "iot_daily_care_soil": "العناية اليومية",
+                    "iot_delicate": "حساس عند 45 درجة مئوية",
+                    "iot_dinner_for_two": "عشاء لشخصين",
+                    "iot_dinner_for_two_soil": "عشاء لشخصين",
+                    "iot_dreft_quick_cycle": "Dreft Quick",
+                    "iot_eco_asynch": "وضع التوفير عند 45 درجة مئوية",
+                    "iot_eco_bldc": "وضع التوفير عند 45 درجة مئوية",
+                    "iot_eco_synch": "وضع التوفير عند 45 درجة مئوية",
+                    "iot_extra_hygiene": "نظافة إضافية",
+                    "iot_fairy_quick_cycle": "Fairy Quick",
+                    "iot_happy_hour": "ساعة سعيدة",
+                    "iot_jar_quick_cycle": "Jar Quick",
+                    "iot_party": "حفلة",
+                    "iot_party_soil": "حفلة",
+                    "iot_pizza_menu": "قائمة البيتزا",
+                    "iot_pizza_menu_soil": "قائمة البيتزا",
+                    "iot_plastic_tupperware": "العُلب البلاستيكية وعُلب الطعام",
+                    "iot_porcelain": "الأطباق البورسلين",
+                    "iot_power_mix_wash": "غسيل بالطاقة المعززة",
+                    "iot_power_mix_wash_soil": "غسيل بالطاقة المعززة",
+                    "iot_prewash": "النقع",
+                    "iot_pyrex_and_glassware": "البايركس والأواني الزجاجية",
+                    "iot_rapid_29": "سريع 29 دقيقة",
+                    "iot_rapid_39": "سريع 39 دقيقة عند 60 درجة مئوية",
+                    "iot_single": "أعزب",
+                    "iot_steam": "بخار عند 75 درجة مئوية",
+                    "iot_super_flash": "فائق السرعة",
+                    "iot_super_wash": "الغسيل الفائق",
+                    "iot_turbopower": "TurboPower",
+                    "iot_universal": "عالمي 60 درجة مئوية",
+                    "iot_voice_automatic": "مستشعر تلقائي",
+                    "iot_voice_delicate": "حساس عند 45 درجة مئوية",
+                    "iot_voice_eco": "وضع التوفير عند 45 درجة مئوية",
+                    "iot_voice_intensive": "مكثف",
+                    "iot_voice_prewash": "النقع",
+                    "iot_voice_rapid_59": "سريع 59 دقيقة",
+                    "iot_voice_universal": "عالمي 60 درجة مئوية",
+                    "iot_wok_grids_maxi_pans": "مقالي خاصة (مقالي ووك ومقالي الشبكات ومقالي كبيرة)",
+                    "iot_wok_grids_maxi_pans_soil": "مقالي خاصة (مقالي ووك ومقالي الشبكات ومقالي كبيرة)",
+                    "iot_yes_quick_cycle": "Yes Quick",
+                    "night": "ليلي عند 55 درجة مئوية",
+                    "prewash": "النقع",
+                    "rapid_20": "سريع 20 دقيقة",
+                    "rapid_24": "سريع 24 دقيقة",
+                    "rapid_29": "سريع 29 دقيقة و50 درجة مئوية",
+                    "rapid_35": "غسيل وتجفيف 35 دقيقة",
+                    "rapid_39": "سريع 39 دقيقة عند 60 درجة مئوية",
+                    "rapid_49": "سريع 49 دقيقة",
+                    "rapid_59": "سريع 59 دقيقة",
+                    "sanitising": "التطهير",
+                    "silence": "الصمت",
+                    "silent": "هادئة",
+                    "silent_care": "العناية الهادئة",
+                    "smart_ai": "Smart AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI السريع",
+                    "smart_ai_rapid_soil": "Smart AI السريع",
+                    "smart_ai_soil": "Smart AI",
+                    "special": "خاص",
+                    "special_pw_prz": "خاص",
+                    "steam": "بخار عند 75 درجة مئوية",
+                    "steam_plus": "بخار Plus عند 75 درجة مئوية",
+                    "total_care": "العناية الكاملة عند 50 درجة مئوية",
+                    "ultra_silence": "هادئ للغاية عند 55 درجة مئوية",
+                    "ultra_silent": "هادئ للغاية عند 55 درجة مئوية",
+                    "universal": "عالمي 60 درجة مئوية",
+                    "universal_plus": "Universal Plus عند 70 درجة مئوية",
+                    "zone_wash": "Flex Zone Wash",
+                    "zoom_39": "تكبير 39 دقيقة"
+                },
+                "name": "Program"
+            },
+            "programs_ih": {
+                "state": {
+                    "iot_special_ash_brown": "Ash brown",
+                    "iot_special_beef_fillet": "Beef fillet",
+                    "iot_special_beef_veal_stew": "Beef and veal stew",
+                    "iot_special_boiled_rice": "Boiled rice",
+                    "iot_special_chicken_breast": "Chicken breast",
+                    "iot_special_chicken_legs": "Chicken legs",
+                    "iot_special_chocolate_pudding": "Chocolate pudding",
+                    "iot_special_entrecote": "Entrecote",
+                    "iot_special_fresh_tuna": "Fresh tuna",
+                    "iot_special_grilled_vegetables": "Grilled vegetables",
+                    "iot_special_lamb_cutlet": "Lamb cutle",
+                    "iot_special_meatballs": "Meatballs",
+                    "iot_special_minestrone": "Minestrone",
+                    "iot_special_mussels": "Mussels",
+                    "iot_special_omelette": "Omelette",
+                    "iot_special_pancakes": "Pancakes",
+                    "iot_special_paris_style_peas": "Paris style peas",
+                    "iot_special_poached_eggs": "Poached eggs",
+                    "iot_special_pork_fillet": "Pork fillet",
+                    "iot_special_pork_ribs": "Pork ribs",
+                    "iot_special_prawns": "Prawns",
+                    "iot_special_quinoa": "Quinoa",
+                    "iot_special_ratatouille": "Ratatouille",
+                    "iot_special_salmon_fillet": "Salmon fillet",
+                    "iot_special_saute_potatoes": "Saute potatoes",
+                    "iot_special_scallops": "Scallops",
+                    "iot_special_scrambled_eggs": "Scrambled eggs",
+                    "iot_special_spelt": "Spelt",
+                    "iot_special_veggy_noodles": "Veggy noodles",
+                    "iot_special_white_fish_fillet": "White fish fillet",
+                    "iot_standard_boiling": "Boiling",
+                    "iot_standard_frying": "Frying",
+                    "iot_standard_keep_warm": "Keep Warm",
+                    "iot_standard_melting": "Melting",
+                    "iot_standard_simmering": "Simmering"
+                },
+                "name": "Program"
+            },
+            "programs_ov": {
+                "state": {
+                    "bakery": "Pasta and Bakery",
+                    "bottom_heating": "Bottom Heating",
+                    "bottom_heating_fan": "Bottom Heating + Fan",
+                    "bread": "Bread",
+                    "combi": "كومبي",
+                    "convection_fan": "Convection + Fan",
+                    "conventional": "Conventional",
+                    "defrost": "Defrost",
+                    "fish": "Fish",
+                    "grill_cata": "Grill cata",
+                    "grill_fan_cata": "Grill fan cata",
+                    "grill_fan_pyro": "Grill + Fan",
+                    "grill_pyro": "Grill",
+                    "h20_clean": "H2O-Clean",
+                    "iot_bread": "Bread",
+                    "iot_h20_clean": "Iot h20 clean",
+                    "leavening": "Leavening",
+                    "meat": "Meat",
+                    "multi_level": "Multi-Level",
+                    "paella": "Paella",
+                    "pasta_and_bakery": "Pasta and Bakery",
+                    "pizza": "Pizza",
+                    "pyrolysis": "Pyrolysis",
+                    "soft_plus": "Soft+",
+                    "tailor_bake": "Tailor bake",
+                    "tailor_bake_cata": "Tailor Bake",
+                    "tailor_bake_pyro": "Tailor Bake",
+                    "vegetables_cata": "Vegetables",
+                    "vegetables_pyro": "Vegetables"
+                },
+                "name": "Program"
+            },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Active Dry (التجفيف النشط)",
+                    "allergy_care": "مضاد للحساسية",
+                    "all_in_one": "الكل في واحد",
+                    "antiallergy": "مضاد للحساسية",
+                    "anti_odours": "مضاد للروائح",
+                    "auto_care": "العناية التلقائية",
+                    "baby": "طفل",
+                    "bed_quilt": "غطاء السرير",
+                    "care_30": "العناية 30",
+                    "care_45": "العناية 45",
+                    "care_59": "العناية 59",
+                    "coloured": "ملون",
+                    "daily_45_min": "الغسل اليومي لمدة 45 دقيقة",
+                    "daily_perfect_59_min": "مناسب للغسل اليومي لمدة 59 دقيقة",
+                    "darks_and_coloured": "الملابس الداكنة والملونة",
+                    "delicates": "الملابس الرقيقة",
+                    "duvet": "لحاف",
+                    "eco": "برنامج الأقطان بوضع التوفير",
+                    "ecospeed_cottons": "برنامج الأقطان بوضع التوفير السريع",
+                    "ecospeed_delicates": "برنامج الملابس الرقيقة بوضع التوفير السريع",
+                    "ecospeed_mixed": "برنامج الملابس المختلطة بوضع التوفير السريع",
+                    "extra_hygiene": "نظافة إضافية",
+                    "fitness": "اللياقة البدنية",
+                    "fresh_care": "الملابس الحساسة",
+                    "genius": "Genius",
+                    "hqd_baby_care": "عناية الطفل",
+                    "hqd_bath_towel": "مناشف",
+                    "hqd_bed_sheets": "شراشف السرير",
+                    "hqd_bulky": "المواد كبيرة الحجم",
+                    "hqd_casual": "الملابس غير الرسمية",
+                    "hqd_checkup": "فحص",
+                    "hqd_cold_wind_30": "نسيم بارد لمدة 30 دقيقة",
+                    "hqd_cold_wind_timing": "هواء بارد",
+                    "hqd_cotton": "قطن",
+                    "hqd_curtain": "ستائر",
+                    "hqd_delicate": "الملابس الرقيقة",
+                    "hqd_diaper": "الحفاضات",
+                    "hqd_duvet": "جاكيت مبطن بالألياف الاصطناعية",
+                    "hqd_eco": "وضع التوفير",
+                    "hqd_feather": "جاكيت مبطن بالألياف الطبيعية",
+                    "hqd_hot_wind_timing": "عناق حار",
+                    "hqd_hygienic": "النظافة الصحية",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro لعناصر الأطفال",
+                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro للعناصر الكبيرة",
+                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro للعناصر الرقيقة",
+                    "hqd_i_refresh_pro_down": "I-Refresh Pro للأسفل",
+                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro للأقمصة",
+                    "hqd_i_refresh_pro_towel": "I-Refresh Pro للمناشف",
+                    "hqd_i_refresh_pro_wool": "I-Refresh Pro للصوف",
+                    "hqd_jacket": "سترات",
+                    "hqd_jeans": "جينز",
+                    "hqd_luxury": "رفاهية",
+                    "hqd_mix": "ملابس مختلطة",
+                    "hqd_night_dry": "تجفيف ليلًا",
+                    "hqd_outdoor": "في الهواء الطلق",
+                    "hqd_precious_cure": "مداواة الأقمشة الثمينة",
+                    "hqd_quick_20": "سريع 20",
+                    "hqd_quick_30": "سريع 30",
+                    "hqd_quick_dry": "تجفيف سريع أوتوماتيكي لمدة 30 دقيقة",
+                    "hqd_quilt": "أغطية الأسرة",
+                    "hqd_refresh": "إنعاش",
+                    "hqd_school_uniform": "زي مدرسي",
+                    "hqd_shirt": "قمصان",
+                    "hqd_shoes": "الأحذية",
+                    "hqd_silk": "حرير",
+                    "hqd_sports": "رياضات",
+                    "hqd_synthetics": "الألياف الصناعية",
+                    "hqd_timer": "مؤقت",
+                    "hqd_towel": "مناشف",
+                    "hqd_underwear": "ثياب داخلية",
+                    "hqd_warm_up": "تسخين",
+                    "hqd_wool": "صوف",
+                    "hqd_working_suit": "ملابس العمل",
+                    "hygiene": "النظافة",
+                    "iot_checkup": "فحص",
+                    "iot_dry_anti_mites": "مضادات العث",
+                    "iot_dry_baby": "ملابس الطفل",
+                    "iot_dry_backpacks": "حقائب ظهر",
+                    "iot_dry_bathrobe": "رداء الحمام",
+                    "iot_dry_bed_linen": "أغطية السرير",
+                    "iot_dry_bed_quilt": "غطاء السرير",
+                    "iot_dry_cotton": "قطن",
+                    "iot_dry_cuddly_toys": "اللعب المحشوة",
+                    "iot_dry_curtains": "ستائر",
+                    "iot_dry_dehumidifier": "مزيل الرطوبة",
+                    "iot_dry_delicates": "الملابس الرقيقة",
+                    "iot_dry_delicate_tablecloths": "مفارش المائدة الرقيقة",
+                    "iot_dry_denim_jeans": "الأقمشة الزرقاء - الجينز",
+                    "iot_dry_down_jacket": "السترة",
+                    "iot_dry_duvet": "لحاف",
+                    "iot_dry_easy_iron_cotton": "الكي بسهولة فائقة",
+                    "iot_dry_easy_iron_synthetics": "الكي الألياف الصناعية بسهولة فائقة",
+                    "iot_dry_gym_fit": "جيم فيت - لياقة بدنية",
+                    "iot_dry_lingerie": "الملابس الداخلية",
+                    "iot_dry_mixed": "ملابس مختلطة",
+                    "iot_dry_pet_accessories": "ملحقات الحيوانات الأليفة",
+                    "iot_dry_pet_hair_removal": "إزالة شعر الحيوانات الأليفة (الغسيل المسبق)",
+                    "iot_dry_playsuits": "فستان بسروال قصير",
+                    "iot_dry_rapid_30": "سريع 30",
+                    "iot_dry_rapid_59": "سريع 59 دقيقة",
+                    "iot_dry_refresh": "إنعاش",
+                    "iot_dry_regenerates_waterproof": "تجديد الأقمشة المقاومة للماء",
+                    "iot_dry_relax_creases": "قم بإزالة التجاعيد",
+                    "iot_dry_shirts": "قمصان",
+                    "iot_dry_small_load": "حمل الصغيرة",
+                    "iot_dry_swimsuits_and_bikinis": "المايوه والبيكيني",
+                    "iot_dry_synthetics": "الألياف الصناعية",
+                    "iot_dry_synthetic_dry": "اصطناعي جاف",
+                    "iot_dry_tablecloths": "مفارش المائدة",
+                    "iot_dry_technical_fabrics": "أقمشة تقنية",
+                    "iot_dry_warm_embrace": "عناق حار",
+                    "iot_dry_wool": "صوف",
+                    "jeans": "جينز",
+                    "mix_and_dry": "امزج وجفف",
+                    "pets": "حيوانات أليفة",
+                    "pre_iron": "الكي المسبق",
+                    "rapid_30": "سريع 30",
+                    "rapid_45": "سريع 45 دقيقة",
+                    "rapid_59": "سرعة مثالية 59 دقيقة",
+                    "refresh": "إنعاش",
+                    "relax_creases": "قم بإزالة التجاعيد",
+                    "saving_30_min": "دورة التوفير لمدة 30 دقيقة",
+                    "shirts": "قمصان",
+                    "shoes": "الأحذية",
+                    "small_load": "حمل الصغيرة",
+                    "soft_care": "الرعاية الناعمة",
+                    "sport_plus": "عناية إضافية بالملابس الرياضية",
+                    "super_easy_iron_misti": "كي الملابس المختلطة بسهولة فائقة",
+                    "super_easy_iron_xxl": "كي حمل ضخم بسهولة فائقة",
+                    "super_fast_cottons": "الملابس القطنية بسرعة فائقة",
+                    "super_fast_delicates": "الملابس الرقيقة فائقة السرعة",
+                    "synthetics": "الأقمشة الصناعية",
+                    "total_care": "رعاية كاملة",
+                    "trainers": "المدربون",
+                    "ultra_care": "Ultra Care",
+                    "waterproof_revitalize": "تنشيط مقاوم للماء",
+                    "whites": "الملابس البيضاء",
+                    "wool": "الصوف المجفف",
+                    "woolmark": "صوف",
+                    "xxl_load": "حمل ضخم",
+                    "zoom_59": "تكبير/تصغير 59"
+                },
+                "name": "Program"
+            },
+            "programs_wm": {
+                "state": {
+                    "20_degrees_coloured_cottons": "20 ° ملون وقطن",
+                    "20_degrees_new_energy_label": "20 درجة مئوية",
+                    "active_steam": "بخار '29",
+                    "active_wash": "غسيل نشط '20",
+                    "active_wash_steam": "غسيل نشط '20+ بخار",
+                    "allergy_care": "العناية بالحساسية",
+                    "allergy_care_pro": "العناية الاحترافية بالحساسية",
+                    "all_in_one_49": "الكل في واحد 49 دقيقة",
+                    "all_in_one_59": "الكل في واحد 59 دقيقة",
+                    "all_in_one_59_steam": "الكل في واحد 59 دقيقة + بخار",
+                    "autocare": "أوتوكير",
+                    "autoclean": "تنظيف البرميل",
+                    "baby_60": "كل الأطفال 60 درجة مئوية",
+                    "care_14": "العناية السريعة 14 دقيقة",
+                    "care_30": "العناية السريعة 30 دقيقة",
+                    "care_44": "العناية السريعة 44 دقيقة",
+                    "checkup": "فحص",
+                    "colour_59": "ملون 59 دقيقة",
+                    "colour_59_steam": "ملابس ملونة '59' + بخار",
+                    "cottons": "قطن",
+                    "cottons_prewash": "قطن + غسيل أولي",
+                    "cottons_steam": "قطن + بخار",
+                    "cotton_care_59": "العناية بالقطن 59 دقيقة",
+                    "cycle_ended": "انتهت الدورة",
+                    "delicate_59": "حساس",
+                    "delicate_silk": "الحرير الناعم '59",
+                    "delicate_silk_steam": "الحرير الناعم + بخار",
+                    "delicati_59": "حساس",
+                    "delicati_59_steam": "حساس",
+                    "drain_spin": "استنزاف + تدور",
+                    "easy_iron": "الكي السهل '39",
+                    "eco_40_60_new_energy_label": "وضع التوفير 40-60",
+                    "extra_care": "رعاية إضافية",
+                    "fitness": "العناية بالرشاقة",
+                    "fitness_care": "العناية بالرشاقة",
+                    "fresh_care": "الملابس الحساسة '59",
+                    "fresh_care_steam": "الملابس الحساسة + بخار",
+                    "handwash_wool": "غسيل يدوي + صوف '48",
+                    "high_dry": "حرارة تجفيف عالية",
+                    "hqd_20_degrees": "قطن 20 ℃",
+                    "hqd_allergy": "العناية بالحساسية",
+                    "hqd_autoclean": "تنظيف البرميل",
+                    "hqd_babycare": "عناية الطفل",
+                    "hqd_checkup": "فحص",
+                    "hqd_cottons": "قطن",
+                    "hqd_delicate": "حساس '50",
+                    "hqd_delicate_cradle": "حساس",
+                    "hqd_dry": "قطن جاف",
+                    "hqd_dry_synthetics": "تجفيف منخفض الحرارة",
+                    "hqd_duvet": "لحاف",
+                    "hqd_eco_40_60_degrees": "وضع التوفير 40-60",
+                    "hqd_handwash_wool": "صوف '40",
+                    "hqd_i_refresh": "i-Refresh",
+                    "hqd_mix": "مزج",
+                    "hqd_quick_15": "سريع '15",
+                    "hqd_quick_wash_57": "غسيل سريع 57 دقيقة",
+                    "hqd_rapid_wash_and_dry": "غسل جاف",
+                    "hqd_refresh": "تجديد",
+                    "hqd_rinse": "شطف",
+                    "hqd_shirts": "قمصان",
+                    "hqd_smart": "الذكاء الاصطناعي",
+                    "hqd_spin": "غزل",
+                    "hqd_sport": "رياضة '25",
+                    "hqd_super_fast": "سريع للغاية 39 دقيقة",
+                    "hqd_synthetic_and_coloured": "الألياف الصناعية",
+                    "hygiene_59": "Hygiene Plus 59'",
+                    "hygiene_60": "النظافة 60 درجة مئوية",
+                    "hygiene_plus_59": "Hygiene Plus 59'",
+                    "hygiene_plus_59_min": "Hygiene Plus 59'",
+                    "hygiene_pro_49_min": "Hygiene Pro 49 دقيقة",
+                    "hygiene_pro_steam": "Hygiene Pro + بخار",
+                    "intensive_40": "مكثف 40 درجة مئوية",
+                    "intensive_40_steam": "مكثف 40°C + بخار",
+                    "iot_active_steam": "بخار '29",
+                    "iot_active_wash_steam": "غسيل نشط '20+ بخار",
+                    "iot_allergy_care_pro": "العناية الاحترافية بالحساسية",
+                    "iot_all_in_one_59_steam": "الكل في واحد 59 دقيقة + بخار",
+                    "iot_baby_60_steam": "كل الأطفال 60 درجة مئوية + بخار",
+                    "iot_checkup": "فحص",
+                    "iot_colour_59_steam": "ملابس ملونة '59' + بخار",
+                    "iot_cottons_steam": "قطن + بخار",
+                    "iot_delicate_silk_steam": "الحرير الناعم + بخار",
+                    "iot_delicati_59_steam": "حساس",
+                    "iot_dry_air_refresh": "تحديث الهواء",
+                    "iot_dry_anti_mites": "مكافحة العث",
+                    "iot_dry_baby": "طفل",
+                    "iot_dry_backpacks": "حقائب ظهر",
+                    "iot_dry_bathrobe": "أرواب حمام",
+                    "iot_dry_bed_linen": "أغطية السرير",
+                    "iot_dry_cotton_dry": "قطن جاف",
+                    "iot_dry_cuddly_toys": "اللعب محبوب",
+                    "iot_dry_curtains": "ستائر",
+                    "iot_dry_dehumidifier": "مزيل الرطوبة",
+                    "iot_dry_delicates_antiallergy": "الملابس الرقيقة المضادة للحساسية",
+                    "iot_dry_delicate_tablecloths": "مفارش المائدة الحساسة",
+                    "iot_dry_denim_jeans": "الدينيم - الجينز",
+                    "iot_dry_easy_iron_cotton": "سهل الكي - قطن",
+                    "iot_dry_easy_iron_synthetics": "سهل الكي - مواد صناعية",
+                    "iot_dry_gym_fit": "جيم صالح - لياقة",
+                    "iot_dry_lingerie": "الملابس الداخلية",
+                    "iot_dry_mixed_dry": "مختلط جاف",
+                    "iot_dry_rapid_60_min_delicates": "سريع 60 دقيقة - الملابس الرقيقة",
+                    "iot_dry_shirts": "قمصان",
+                    "iot_dry_swimsuits_and_bikinis": "المايوه والبيكيني",
+                    "iot_dry_synthetics": "اصطناعي جاف",
+                    "iot_dry_synthetic_dry": "اصطناعي جاف",
+                    "iot_dry_tablecloths": "مفارش المائدة",
+                    "iot_dry_technical_fabrics": "أقمشة تقنية",
+                    "iot_dry_warm_embrace": "عناق دافئ",
+                    "iot_dry_wool_dry": "صوف جاف",
+                    "iot_easy_iron": "الكي السهل '39",
+                    "iot_fresh_care_steam": "الملابس الحساسة + بخار",
+                    "iot_hygiene_pro_steam": "Hygiene Pro + بخار",
+                    "iot_intensive_40_steam": "مكثف 40°C + بخار",
+                    "iot_jeans_60_steam": "جينز + بخار",
+                    "iot_jeans_steam": "جينز + بخار",
+                    "iot_mixed_steam": "مختلط + بخار",
+                    "iot_mix_and_colour_59_steam": "الملابس المختلطة والملونة 59 دقيقة + بخار",
+                    "iot_perfect_cotton_59_steam": "قطن مثالي 59 دقيقة",
+                    "iot_rapid_a_class_60_steam": "Rapid Class A 60 + بخار",
+                    "iot_resistant_cotton_steam": "قطن + بخار",
+                    "iot_shirts_steam": "قمصان + بخار",
+                    "iot_single_item_steam": "عنصر واحد '20 + بخار",
+                    "iot_smart_wash": "الغسيل الذكي",
+                    "iot_soft_care_steam": "Soft Care + Steam",
+                    "iot_special_39_full_load_steam": "دورة خاصة 39 دقيقة + بخار",
+                    "iot_steam_hygiene_plus": "Hygiene Plus Steam",
+                    "iot_synthetic_and_coloured_steam": "الألياف الصناعية والألوان + بخار",
+                    "iot_wash_and_dry": "غسل جاف",
+                    "iot_wash_anti_mites": "مضادات العث",
+                    "iot_wash_anti_odor": "مضاد للرائحة",
+                    "iot_wash_ariel_clean_cycle": "Ariel Ultimate Clean",
+                    "iot_wash_ariel_cold_cycle": "Ariel Cold Clean",
+                    "iot_wash_ariel_fresh_cycle": "Ariel Fresh Clean",
+                    "iot_wash_baby_sanitizer": "المطهر",
+                    "iot_wash_baby_sanitizer_steam": "معقم أطفال + بخار",
+                    "iot_wash_backpacks": "حقائب ظهر",
+                    "iot_wash_backpacks_zelig": "حقائب ظهر",
+                    "iot_wash_bathrobe": "أرواب الحمام والمناشف",
+                    "iot_wash_bathrobe_steam": "روب حمام + بخار",
+                    "iot_wash_bed_linen": "بياضات السرير",
+                    "iot_wash_bed_linen_steam": "بياضات السرير + بخار",
+                    "iot_wash_bed_linen_zelig": "بياضات السرير",
+                    "iot_wash_big_single_load": "حمولة واحدة كبيرة",
+                    "iot_wash_bleaching": "تبيض",
+                    "iot_wash_blood_stains": "بقع الدم",
+                    "iot_wash_cashmere": "الكشمير",
+                    "iot_wash_chocolate_stains": "بقع الشوكولاتة",
+                    "iot_wash_cold_wash": "غسيل بارد",
+                    "iot_wash_colored": "ملون",
+                    "iot_wash_colored_anti_stain": "مضاد للبقع الملونة",
+                    "iot_wash_colored_delicate": "حساسة ملونة",
+                    "iot_wash_coloured": "ملون",
+                    "iot_wash_coloured_bed_linen": "بياضات سرير ملونة",
+                    "iot_wash_coloured_bed_linen_steam": "بياضات سرير ملونة + بخار",
+                    "iot_wash_coloured_curtains": "ستائر ملونة",
+                    "iot_wash_coloured_shirts": "قمصان ملونة '59",
+                    "iot_wash_coloured_shirts_steam": "قمصان ملونة + بخار",
+                    "iot_wash_coloured_steam": "ملابس ملونة + بخار",
+                    "iot_wash_coloured_tableclothes": "مفارش المائدة الملونة",
+                    "iot_wash_coloured_tableclothes_steam": "مفارش المائدة الملونة + بخار",
+                    "iot_wash_cotton": "قطن",
+                    "iot_wash_cotton_steam": "قطن + بخار",
+                    "iot_wash_cuddly_toys": "اللعب محبوب",
+                    "iot_wash_curtains": "ستائر",
+                    "iot_wash_curtains_steam": "ستائر + بخار",
+                    "iot_wash_curtains_zelig": "ستائر",
+                    "iot_wash_dark": "داكن",
+                    "iot_wash_darks_and_coloured_44": "الملابس الغامقة والملونة 44 دقيقة",
+                    "iot_wash_darks_and_coloured_59": "الملابس الغامقة والملونة 59 دقيقة",
+                    "iot_wash_darks_and_coloured_xl": "داركس وملون XL",
+                    "iot_wash_dark_steam": "عناصر غامقة + بخار",
+                    "iot_wash_dash_clean_cycle": "Dash Ultimate Clean",
+                    "iot_wash_dash_cold_cycle": "Dash Cold Clean",
+                    "iot_wash_dash_fresh_cycle": "Dash Fresh Clean",
+                    "iot_wash_delicate": "الملابس المصنوعة من أنسجة رقيقة",
+                    "iot_wash_delicate_antiallergy": "مضاد للحساسية حساس",
+                    "iot_wash_delicate_antiallergy_steam": "ملابس ناعمة مضادة للحساسية + بخار",
+                    "iot_wash_delicate_antiallergy_zelig": "مضاد للحساسية حساس",
+                    "iot_wash_delicate_colors": "حساسة ملونة",
+                    "iot_wash_delicate_colors_steam": "ملابس ملونة + بخار",
+                    "iot_wash_delicate_dark": "رقيق غامق",
+                    "iot_wash_delicate_steam": "ملابس ناعمة + بخار",
+                    "iot_wash_delicate_tablecloths": "مفارش المائدة الحساسة",
+                    "iot_wash_delicate_tablecloths_steam": "مفارش مائدة ناعمة + بخار",
+                    "iot_wash_delicate_whites": "بياض رقيق",
+                    "iot_wash_denim_jeans": "الدينيم - الجينز",
+                    "iot_wash_diving_suits": "بدلات الغوص",
+                    "iot_wash_diving_suits_zelig": "بدلات الغوص",
+                    "iot_wash_down_jackets": "السترات أسفل",
+                    "iot_wash_down_jackets_zelig": "السترات أسفل",
+                    "iot_wash_duvet": "لحاف",
+                    "iot_wash_fruit_stains": "بقع الفاكهة",
+                    "iot_wash_gym_fit": "جيم فيت - لياقة بدنية '59",
+                    "iot_wash_handwash": "غسل اليد",
+                    "iot_wash_handwash_colored": "غسيل يدوي ملون",
+                    "iot_wash_handwash_dark": "غسيل يدوي غامق",
+                    "iot_wash_lingerie": "الملابس الداخلية",
+                    "iot_wash_masks_refresh": "تحديث الأقنعة",
+                    "iot_wash_masks_sanification": "تطهير الأقنعة",
+                    "iot_wash_masks_sanification_steam": "قناع تطهير + بخار",
+                    "iot_wash_mats": "ماتس",
+                    "iot_wash_men_s_trousers": "بنطلون",
+                    "iot_wash_mixed": "مخلوط",
+                    "iot_wash_mixed_steam": "مختلط + بخار",
+                    "iot_wash_mix_and_coloured_44": "مختلط وملون 44 دقيقة",
+                    "iot_wash_mix_and_coloured_59": "مختلط وملون 59 دقيقة",
+                    "iot_wash_mix_and_coloured_xl": "مزيج وملون XL",
+                    "iot_wash_new_clothes": "ملابس جديدة",
+                    "iot_wash_perfect_white": "أبيض مثالي",
+                    "iot_wash_perfect_white_steam": "ملابس بيضاء تمامًا + بخار",
+                    "iot_wash_pets": "اكسسوارات الحيوانات الأليفة",
+                    "iot_wash_pets_hair_removal": "التخلص من شعر الحيوانات الأليفة",
+                    "iot_wash_pets_odours_stains_removal": "التخلص من الروائح الكريهة للحيوانات الأليفة والبقع",
+                    "iot_wash_pets_steam": "اكسسوارات الحيوانات الأليفة",
+                    "iot_wash_playsuits": "بذلات",
+                    "iot_wash_playsuits_steam": "بذلات + بخار",
+                    "iot_wash_quick_drum_cleaner": "منظِّف سريع للحلة",
+                    "iot_wash_rapid_14": "سريع 14 دقيقة",
+                    "iot_wash_rapid_30": "سريع 30 دقيقة",
+                    "iot_wash_rapid_44": "سريع 44 دقيقة",
+                    "iot_wash_rapid_59": "سريع 59 دقيقة",
+                    "iot_wash_rapid_59_steam": "Rapid 59' + بخار",
+                    "iot_wash_refresh_14_min": "تحديث 14 دقيقة",
+                    "iot_wash_resistant_colored": "ملابس ملونة مقاومة للهب",
+                    "iot_wash_resistant_dark": "الملابس الداكنة المقاومة للهب",
+                    "iot_wash_resistant_whites": "ملابس بيضاء مقاومة للهب",
+                    "iot_wash_rinse": "شطف",
+                    "iot_wash_shirts": "قمصان",
+                    "iot_wash_shirts_steam": "قمصان + بخار",
+                    "iot_wash_silk": "حرير",
+                    "iot_wash_ski_suit": "بدلة تزلج",
+                    "iot_wash_ski_suit_zelig": "بدلة تزلج",
+                    "iot_wash_spin": "غزل",
+                    "iot_wash_sport": "رياضة",
+                    "iot_wash_sport_anti_odor": "ملابس رياضية مضادة للرائحة",
+                    "iot_wash_sport_anti_odor_zelig": "ملابس رياضية مضادة للرائحة",
+                    "iot_wash_stains_remover": "مزيل البقع",
+                    "iot_wash_super_saving": "التوفير الفائق 49'",
+                    "iot_wash_swimsuits_and_bikinis": "المايوه والبيكيني",
+                    "iot_wash_synthetic": "الألياف الصناعية",
+                    "iot_wash_synthetic_steam": "ألياف صناعية + بخار",
+                    "iot_wash_tablecloths": "مفارش المائدة",
+                    "iot_wash_tablecloths_steam": "مفارش المائدة + بخار",
+                    "iot_wash_technical_fabrics": "أقمشة تقنية",
+                    "iot_wash_technical_fabrics_zelig": "أقمشة تقنية",
+                    "iot_wash_technical_jackets": "السترات التقنية",
+                    "iot_wash_technical_jackets_zelig": "السترات التقنية",
+                    "iot_wash_trainers": "المدربون",
+                    "iot_wash_whites": "الملابس البيضاء",
+                    "iot_wash_whites_44": "الملابس البيضاء",
+                    "iot_wash_whites_59": "الملابس البيضاء",
+                    "iot_wash_whites_xl": "بياض XL",
+                    "iot_wash_wine_stains": "بقع النبيذ",
+                    "iot_wash_wool": "صوف",
+                    "jeans": "جينز",
+                    "jeans_60": "جينز",
+                    "jeans_60_steam": "جينز + بخار",
+                    "low_dry": "تجفيف منخفض الحرارة",
+                    "mixed": "مختلط",
+                    "mixed_and_colored_59": "مختلط وملون 59 دقيقة",
+                    "mixed_steam": "مختلط + بخار",
+                    "mix_and_colour_59": "مختلط وملون 59 دقيقة",
+                    "mix_and_colour_59_steam": "الملابس المختلطة والملونة 59 دقيقة + بخار",
+                    "night_and_day": "ليل ونهار",
+                    "night_wash": "غسيل ليلي",
+                    "perfect_59": "مثالي 59 دقيقة",
+                    "perfect_cotton_59": "قطن مثالي 59 دقيقة",
+                    "perfect_cotton_59_steam": "قطن مثالي 59 دقيقة",
+                    "perfect_whites_59": "أبيض مثالي 59 دقيقة",
+                    "rapid_14_min": "السرعة 14 دقيقة",
+                    "rapid_30_min": "السرعة 30 دقيقة",
+                    "rapid_44_min": "السرعة 44 دقيقة",
+                    "rapid_a_class_60": "Rapid Class A 60",
+                    "rapid_a_class_60_steam": "Rapid Class A 60 + بخار",
+                    "rapid_wash_and_dry_59_min": "غسل وتجفيف 59 دقيقة",
+                    "resistant_cotton": "قطن",
+                    "resistant_cotton_steam": "قطن + بخار",
+                    "rinse": "شطف",
+                    "shirts_steam": "قمصان + بخار",
+                    "silent_night": "ليلة هادئة",
+                    "single_item": "عنصر واحد '20",
+                    "single_item_steam": "عنصر واحد + بخار",
+                    "smart_wash": "الغسيل الذكي",
+                    "soft_care": "الرعاية الناعمة",
+                    "soft_care_steam": "Soft Care + Steam",
+                    "soft_care_steam_title": "Soft Care + Steam",
+                    "special_39": "خاص 39 دقيقة",
+                    "special_39_full_load": "خاص 39 دقيقة",
+                    "special_39_full_load_steam": "دورة خاصة 39 دقيقة + بخار",
+                    "special_49": "خاص",
+                    "sport_39": "ملابس رياضية 39 دقيقة",
+                    "sport_plus_29": "عناية إضافية بالملابس الرياضية 29\"",
+                    "sport_plus_39": "عناية إضافية بالملابس الرياضية 39\"",
+                    "steam_39": "بخار 39 دقيقة",
+                    "steam_care_pro": "عناية البخار الاحترافية",
+                    "steam_care_pro_cotton": "Steam Care Pro - الملابس القطنية",
+                    "steam_care_pro_delicates": "Steam Care Pro - الملابس الناعمة '16",
+                    "steam_care_pro_synthetic": "Steam Care Pro - الألياف الصناعية '20",
+                    "steam_hygiene_plus": "Hygiene Plus Steam",
+                    "synthetics": "الألياف الصناعية",
+                    "synthetic_and_coloured": "الاصطناعية والملونة",
+                    "synthetic_and_coloured_steam": "الألياف الصناعية والألوان + بخار",
+                    "tailored_resistant_cotton": "Tailored Resistant Cotton",
+                    "tailored_synthetic_and_coloured": "Tailored Synthetic Colored",
+                    "total_care": "رعاية كاملة",
+                    "tumbling": "هبوط",
+                    "ultra_fresh": "Ultra Fresh",
+                    "wool": "صوف",
+                    "wool_and_delicates_49": "الصوف والأقمشة الدقيقة 49 دقيقة",
+                    "wool_dry": "صوف جاف",
+                    "wool_soft_care": "الصوف والعناية الناعمة '48"
+                },
+                "name": "Program"
+            },
+            "programs_ref": {
+                "state": {
+                    "cold_drinks": "Soft chill",
+                    "cool_drink": "Cool Drink",
+                    "fruits": "Fruit",
+                    "fruit_and_veg": "Fruit & Veg",
+                    "keep_fresh": "0°C Fresh",
+                    "milk_and_eggs": "Milk & Eggs",
+                    "quick_set": "الضبط السريع",
+                    "sea_food": "Ready to cook meal",
+                    "smart_mode_title": "Smart Mode",
+                    "soft_frozen": "Soft freezing",
+                    "tea": "Cold Drinks",
+                    "vegetables": "Vegetable",
+                    "zero_fresh": "0°C Fresh"
+                },
+                "name": "Program"
+            },
+            "dry_time": {
+                "name": "وقت التجفيف"
+            },
+            "spin_speed": {
+                "name": "غزل"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
+            "remaining_time": {
+                "name": "الوقت المتبقي"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "منع التجعد"
+            },
+            "add_dish": {
+                "name": "أضف الأطباق"
+            },
+            "eco_express": {
+                "name": "وضع التوفير"
+            },
+            "extra_dry": {
+                "name": "تجفيف إضافي"
+            },
+            "half_load": {
+                "name": "نصف حمولة"
+            },
+            "open_door": {
+                "name": "فتح الباب"
+            },
+            "three_in_one": {
+                "name": "3 في 1"
+            },
+            "preheat": {
+                "name": "Preheat"
+            },
+            "dish_washer": {
+                "name": "غسالة الأواني"
+            },
+            "tumble_dryer": {
+                "name": "مجفف ملابس"
+            },
+            "washing_machine": {
+                "name": "غسالة"
+            },
+            "washer_dryer": {
+                "name": "مجفف غسالة"
+            },
+            "oven": {
+                "name": "Oven"
+            },
+            "prewash": {
+                "name": "النقع"
+            },
+            "pause": {
+                "name": "إيقاف مؤقت"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "تأخير البدء"
+            },
+            "rapid_mode": {
+                "name": "Rapid mode"
+            },
+            "eco_mode": {
+                "name": "وضع ECO «توفير»"
+            },
+            "10_degree_heating": {
+                "name": "10°C Heating function"
+            },
+            "self_clean": {
+                "name": "Self-clean"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Silent mode"
+            },
+            "night_mode": {
+                "name": "Night mode"
+            },
+            "extra_rinse_1": {
+                "name": "+1 شطف"
+            },
+            "extra_rinse_2": {
+                "name": "+2 شطف"
+            },
+            "extra_rinse_3": {
+                "name": "+3 شطف"
+            },
+            "acqua_plus": {
+                "name": "أكوابلس"
+            },
+            "auto_dose_softener": {
+                "name": "جرعة تلقائية المنعّم"
+            },
+            "auto_dose_detergent": {
+                "name": "جرعة تلقائية مُطهِّر"
+            },
+            "good_night": {
+                "name": "طاب مساؤك"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Refrigerator"
+            },
+            "touch_tone": {
+                "name": "Touch tone volume"
+            },
+            "hygiene": {
+                "name": "Hygiene plus"
+            },
+            "hood": {
+                "name": "شفّاط"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "قفل الباب"
+            },
+            "extra_rinse_1": {
+                "name": "+1 شطف"
+            },
+            "extra_rinse_2": {
+                "name": "+2 شطف"
+            },
+            "extra_rinse_3": {
+                "name": "+3 شطف"
+            },
+            "good_night": {
+                "name": "طاب مساؤك"
+            },
+            "anti_crease": {
+                "name": "منع التجعد"
+            },
+            "acqua_plus": {
+                "name": "أكوابلس"
+            },
+            "spin_speed": {
+                "name": "غزل"
+            },
+            "still_hot": {
+                "name": "Still hot"
+            },
+            "pan_status": {
+                "name": "Pan"
+            },
+            "remote_control": {
+                "name": "جهاز التحكم"
+            },
+            "rinse_aid": {
+                "name": "مستوى مساعد الشطف"
+            },
+            "salt_level": {
+                "name": "مستوى الملح"
+            },
+            "door_open": {
+                "name": "الباب مفتوح"
+            },
+            "connection": {
+                "name": "توصيل الجهاز"
+            },
+            "child_lock": {
+                "name": "Child Lock"
+            },
+            "on": {
+                "name": "تشغيل"
+            },
+            "prewash": {
+                "name": "النقع"
+            },
+            "buzzer": {
+                "name": "رنين نهاية الدورة"
+            },
+            "holiday_mode": {
+                "name": "Holiday Mode"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "الباب مفتوح Freezer"
+            },
+            "fridge_door": {
+                "name": "الباب مفتوح Fridge"
+            },
+            "filter_replacement": {
+                "name": "Filter replacement"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "موقد حثي"
+            },
+            "start_program": {
+                "name": "Program البدء"
+            },
+            "stop_program": {
+                "name": "Program إيقاف"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "إدارة الطاقة"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
+            "delay_time": {
+                "name": "تأخير البدء"
+            },
+            "water_hard": {
+                "name": "عُسر الماء"
+            },
+            "program_duration": {
+                "name": "Program duration"
+            },
+            "target_temperature": {
+                "name": "Target temperature"
+            },
+            "rinse_iterations": {
+                "name": "عدد مرات الشطف"
+            },
+            "wash_time": {
+                "name": "كثافة الغسيل"
+            },
+            "dry_time": {
+                "name": "وقت التجفيف"
+            },
+            "freezer_temp_sel": {
+                "name": "Target temperature Freezer"
+            },
+            "fridge_temp_sel": {
+                "name": "Target temperature Fridge"
+            },
+            "my_zone_temp_sel": {
+                "name": "Target temperature My Zone"
+            },
+            "pollen_level": {
+                "name": "Pollen level"
+            },
+            "aroma_time_on": {
+                "name": "Diffuser (ON)"
+            },
+            "aroma_time_off": {
+                "name": "Diffuser (OFF)"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "مكيف الهواء",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programs",
+                        "state": {
+                            "iot_simple_start": "بدء الآن"
+                        }
+                    }
+                }
+            },
+            "fridge": {
+                "name": "Fridge",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Fridge modes",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "No mode selected"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Freezer",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Freezer modes",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "No mode selected"
+                        }
+                    }
+                }
+            },
+            "oven": {
+                "name": "Oven",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programs",
+                        "state": {
+                            "bakery": "Pasta and Bakery",
+                            "bottom_heating": "Bottom Heating",
+                            "bottom_heating_fan": "Bottom Heating + Fan",
+                            "bread": "Bread",
+                            "combi": "كومبي",
+                            "convection_fan": "Convection + Fan",
+                            "conventional": "Conventional",
+                            "defrost": "Defrost",
+                            "fish": "Fish",
+                            "grill_cata": "Grill cata",
+                            "grill_fan_cata": "Grill fan cata",
+                            "grill_fan_pyro": "Grill + Fan",
+                            "grill_pyro": "Grill",
+                            "h20_clean": "H2O-Clean",
+                            "iot_bread": "Bread",
+                            "iot_h20_clean": "Iot h20 clean",
+                            "leavening": "Leavening",
+                            "meat": "Meat",
+                            "multi_level": "Multi-Level",
+                            "paella": "Paella",
+                            "pasta_and_bakery": "Pasta and Bakery",
+                            "pizza": "Pizza",
+                            "pyrolysis": "Pyrolysis",
+                            "soft_plus": "Soft+",
+                            "tailor_bake": "Tailor bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables_cata": "Vegetables",
+                            "vegetables_pyro": "Vegetables"
+                        }
+                    }
+                }
+            },
+            "my_zone": {
+                "name": "My Zone"
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "مخزن النبيذ",
+                        "state": {}
+                    }
+                }
+            }
+        },
+        "fan": {
+            "air_extraction": {
+                "name": "Air extraction"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Light"
+            }
+        }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Do the login",
+                "data": {
+                    "email": "البريد الإلكتروني",
+                    "password": "Password"
+                }
+            }
+        }
+    }
+}

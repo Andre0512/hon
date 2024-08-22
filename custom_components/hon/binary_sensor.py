@@ -12,7 +12,8 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import HomeAssistantType
 
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities
+from .entity import HonEntity
+from .util import unique_entities
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -294,6 +295,32 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             translation_key="power-state",
         ),
     ),
+    "FRE": (
+        HonBinarySensorEntityDescription(
+            key="quickModeZ1",
+            name="Super Cool",
+            icon="mdi:snowflake",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value=1,
+            translation_key="super_cool",
+        ),
+        HonBinarySensorEntityDescription(
+            key="quickModeZ2",
+            name="Super Freeze",
+            icon="mdi:snowflake-variant",
+            device_class=BinarySensorDeviceClass.RUNNING,
+            on_value=1,
+            translation_key="super_freeze",
+        ),
+        HonBinarySensorEntityDescription(
+            key="doorStatusZ2",
+            name="Door Status",
+            icon="mdi:fridge",
+            device_class=BinarySensorDeviceClass.DOOR,
+            on_value=1,
+            translation_key="door_open",
+        ),
+    ),
 }
 
 BINARY_SENSORS["WD"] = unique_entities(BINARY_SENSORS["WM"], BINARY_SENSORS["TD"])
@@ -303,12 +330,11 @@ async def async_setup_entry(
     hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities = []
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in BINARY_SENSORS.get(device.appliance_type, []):
             if device.get(description.key) is None:
                 continue
             entity = HonBinarySensorEntity(hass, entry, device, description)
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
     async_add_entities(entities)
 

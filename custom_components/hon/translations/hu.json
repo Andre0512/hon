@@ -1,0 +1,736 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "ready": "Ready",
+                    "running": "Program running",
+                    "pause": "Pause",
+                    "scheduled": "Scheduled",
+                    "error": "Error",
+                    "test": "Test",
+                    "ending": "Stopping cycle…"
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Auto",
+                    "cool": "Cool",
+                    "dry": "Dry",
+                    "heat": "Heat",
+                    "fan": "Fan"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "ready": "Ready",
+                    "spin": "Spin",
+                    "rinse": "Rinse",
+                    "drying": "Drying",
+                    "steam": "Steam",
+                    "weighting": "Weighing",
+                    "scheduled": "Scheduled",
+                    "tumbling": "Keep Fresh",
+                    "refresh": "Refresh",
+                    "heating": "Heating",
+                    "washing": "Wash"
+                },
+                "name": "Phase"
+            },
+            "program_phases_td": {
+                "state": {
+                    "ready": "Ready",
+                    "heat_stroke": "Drying",
+                    "drying": "Drying",
+                    "cooldown": "Cooldown",
+                    "unknown": "unknown",
+                    "tumbling": "Keep Fresh"
+                },
+                "name": "Phase"
+            },
+            "program_phases_dw": {
+                "state": {
+                    "ready": "Ready",
+                    "prewash": "Prewash",
+                    "washing": "Wash",
+                    "rinse": "Rinse",
+                    "drying": "Drying",
+                    "hot_rinse": "Hot rinse"
+                },
+                "name": "Phase"
+            },
+            "dry_levels": {
+                "state": {
+                    "no_dry": "No drying",
+                    "iron_dry": "Iron dry",
+                    "no_dry_iron": "Hang",
+                    "cupboard_dry": "Cupboard",
+                    "extra_dry": "Extra dry",
+                    "ready_to_wear": "Ready to wear"
+                },
+                "name": "Drying level"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Little",
+                    "normal": "Normal",
+                    "very": "Very",
+                    "unknown": "unknown"
+                },
+                "name": "Dirt level"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "No steam",
+                    "cotton": "Cotton",
+                    "delicate": "Delicate",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Steam Level"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Low",
+                    "mid": "Medium",
+                    "high": "High"
+                },
+                "name": "Humidity level"
+            },
+            "programs_ac": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_dw": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_ih": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_ov": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_td": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_wm": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_ref": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_wc": {
+                "state": {}
+            },
+            "dry_time": {
+                "name": "Drying time"
+            },
+            "power": {
+                "name": "Power level"
+            },
+            "remaining_time": {
+                "name": "Time remaining"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
+            "water_efficiency": {
+                "name": "Water efficiency"
+            },
+            "water_saving": {
+                "name": "Water savings"
+            },
+            "duration": {
+                "name": "Duration"
+            },
+            "target_temperature": {
+                "name": "Target temperature"
+            },
+            "spin_speed": {
+                "name": "Spin"
+            },
+            "delay_time": {
+                "name": "Delay Start"
+            },
+            "suggested_load": {
+                "name": "Load capacity"
+            },
+            "energy_label": {
+                "name": "Energy efficiency"
+            },
+            "det_dust": {
+                "name": "Powder detergent"
+            },
+            "det_liquid": {
+                "name": "Liquid detergent"
+            },
+            "errors": {
+                "name": "Error"
+            },
+            "programs": {
+                "name": "Current program"
+            },
+            "room_temperature": {
+                "name": "Room temperature"
+            },
+            "humidity": {
+                "name": "Humidity"
+            },
+            "cycles_total": {
+                "name": "Cycles Total"
+            },
+            "energy_total": {
+                "name": "Energy Consumption Total"
+            },
+            "water_total": {
+                "name": "Water efficiency Total"
+            },
+            "energy_current": {
+                "name": "Energy Consumption Current"
+            },
+            "water_current": {
+                "name": "Water efficiency Current"
+            },
+            "freezer_temp": {
+                "name": "Freezer temperature"
+            },
+            "fridge_temp": {
+                "name": "Fridge temperature"
+            },
+            "voc": {
+                "name": "Gas (VOC)"
+            },
+            "filter_cleaning": {
+                "name": "Filter cleaning"
+            },
+            "filter_life": {
+                "name": "Filter life"
+            },
+            "air_quality": {
+                "name": "Air Quality"
+            },
+            "fan_speed": {
+                "name": "Fan speed"
+            }
+        },
+        "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "No drying",
+                    "iron_dry": "Iron dry",
+                    "no_dry_iron": "Hang",
+                    "cupboard_dry": "Cupboard",
+                    "extra_dry": "Extra dry",
+                    "ready_to_wear": "Ready to wear"
+                },
+                "name": "Drying level"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Off",
+                    "avoid_touch": "Avoid touch",
+                    "follow_touch": "Follow",
+                    "unknown": "unknown"
+                },
+                "name": "Eco pilot"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "High",
+                    "mid": "Medium",
+                    "low": "Low",
+                    "auto": "Auto"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Fridge",
+                    "freezer": "Freezer",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Fridge & Freezer"
+                },
+                "name": "Zone"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "No steam",
+                    "cotton": "Cotton",
+                    "delicate": "Delicate",
+                    "synthetic": "Synthetic"
+                },
+                "name": "Steam Level"
+            },
+            "mode": {
+                "state": {
+                    "standby": "Standby",
+                    "sleep": "Sleep",
+                    "auto": "Auto",
+                    "allergens": "Allergens",
+                    "max": "Max"
+                },
+                "name": "Mode"
+            },
+            "diffuser": {
+                "state": {
+                    "off": "Off",
+                    "soft": "Soft",
+                    "mid": "Mid",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Customise"
+                },
+                "name": "Diffuser"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Little",
+                    "normal": "Normal",
+                    "very": "Very",
+                    "unknown": "unknown"
+                },
+                "name": "Dirt level"
+            },
+            "stain_type": {
+                "state": {
+                    "baby_food": "Baby food",
+                    "bean_paste": "Bean soup",
+                    "blood": "Blood",
+                    "blueberry": "Blueberry",
+                    "blue_ink": "Blue ink",
+                    "butter": "Butter",
+                    "chili_oil": "Chili oil",
+                    "chili_sauce": "Chili sauce",
+                    "chocolate": "Chocolate",
+                    "coffe": "Coffee",
+                    "coffee": "Coffee",
+                    "color_pencil": "Pencil",
+                    "cooking_oil": "Cooking oil",
+                    "curry": "Curry",
+                    "deodorant": "Deodorant",
+                    "egg": "Egg",
+                    "fruit": "Fruit",
+                    "glue": "Glue",
+                    "grass": "Grass",
+                    "ice_cream": "Ice cream",
+                    "ketchup": "Ketchup",
+                    "lip_gloss": "Lip gloss",
+                    "mayonnaise": "Mayonnaise",
+                    "mech_grease": "Mech grease",
+                    "milk": "Milk",
+                    "milk_tea": "Milk tea",
+                    "oil": "Oil",
+                    "oil_pastel": "Oil pastel",
+                    "perfume": "Perfume",
+                    "rust": "Rust",
+                    "shoe_cream": "Shoe cream",
+                    "soil": "Soil",
+                    "soy_sauce": "Soy sauce",
+                    "sweat": "Sweat",
+                    "tea": "Tea",
+                    "wine": "Wine",
+                    "unknown": "unknown"
+                },
+                "name": "Stain level"
+            },
+            "fan_horizontal": {
+                "state": {
+                    "position_1": "Fixed - Position 1",
+                    "position_2": "Fixed - Position 2",
+                    "position_3": "Fixed - Position 3",
+                    "position_4": "Fixed - Position 4",
+                    "position_5": "Fixed - Position 5",
+                    "swing": "Swing"
+                },
+                "name": "Fan direction Horizontal"
+            },
+            "fan_vertical": {
+                "state": {
+                    "position_1": "Fixed - Position 1",
+                    "position_2": "Fixed - Position 2",
+                    "position_3": "Fixed - Position 3",
+                    "position_4": "Fixed - Position 4",
+                    "position_5": "Fixed - Position 5",
+                    "swing": "Swing"
+                },
+                "name": "Fan direction Vertical"
+            },
+            "programs_ac": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_dw": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_ih": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_ov": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_td": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_wm": {
+                "state": {},
+                "name": "Program"
+            },
+            "programs_ref": {
+                "state": {},
+                "name": "Program"
+            },
+            "dry_time": {
+                "name": "Drying time"
+            },
+            "spin_speed": {
+                "name": "Spin"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
+            "remaining_time": {
+                "name": "Time remaining"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Anticrease"
+            },
+            "add_dish": {
+                "name": "Add dishes"
+            },
+            "eco_express": {
+                "name": "Eco"
+            },
+            "extra_dry": {
+                "name": "Extra dry"
+            },
+            "half_load": {
+                "name": "Half load"
+            },
+            "open_door": {
+                "name": "Open door"
+            },
+            "three_in_one": {
+                "name": "3 in 1"
+            },
+            "preheat": {
+                "name": "Preheat"
+            },
+            "dish_washer": {
+                "name": "Dish washer"
+            },
+            "tumble_dryer": {
+                "name": "Tumble dryer"
+            },
+            "washing_machine": {
+                "name": "Washing machine"
+            },
+            "washer_dryer": {
+                "name": "Washer dryer"
+            },
+            "oven": {
+                "name": "Oven"
+            },
+            "prewash": {
+                "name": "Pre-wash"
+            },
+            "pause": {
+                "name": "Pause"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Delay Start"
+            },
+            "rapid_mode": {
+                "name": "Rapid mode"
+            },
+            "eco_mode": {
+                "name": "ECO mode"
+            },
+            "10_degree_heating": {
+                "name": "10°C Heating function"
+            },
+            "self_clean": {
+                "name": "Self-clean"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Silent mode"
+            },
+            "night_mode": {
+                "name": "Night mode"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Rinse"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Rinses"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Rinses"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "auto_dose_softener": {
+                "name": "Autodose Softener"
+            },
+            "auto_dose_detergent": {
+                "name": "Autodose Detergent"
+            },
+            "good_night": {
+                "name": "Good Night"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "refrigerator": {
+                "name": "Refrigerator"
+            },
+            "touch_tone": {
+                "name": "Touch tone volume"
+            },
+            "hygiene": {
+                "name": "Hygiene plus"
+            },
+            "hood": {
+                "name": "Hood"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Door lock"
+            },
+            "extra_rinse_1": {
+                "name": "+1 Rinse"
+            },
+            "extra_rinse_2": {
+                "name": "+2 Rinses"
+            },
+            "extra_rinse_3": {
+                "name": "+3 Rinses"
+            },
+            "good_night": {
+                "name": "Good Night"
+            },
+            "anti_crease": {
+                "name": "Anticrease"
+            },
+            "acqua_plus": {
+                "name": "Acquaplus"
+            },
+            "spin_speed": {
+                "name": "Spin"
+            },
+            "still_hot": {
+                "name": "Still hot"
+            },
+            "pan_status": {
+                "name": "Pan"
+            },
+            "remote_control": {
+                "name": "Remote control"
+            },
+            "rinse_aid": {
+                "name": "Rinse Aid level"
+            },
+            "salt_level": {
+                "name": "Salt level"
+            },
+            "door_open": {
+                "name": "Door open"
+            },
+            "connection": {
+                "name": "Appliance connection"
+            },
+            "child_lock": {
+                "name": "Child Lock"
+            },
+            "on": {
+                "name": "On"
+            },
+            "prewash": {
+                "name": "Pre-wash"
+            },
+            "buzzer": {
+                "name": "Cycle end chime"
+            },
+            "holiday_mode": {
+                "name": "Holiday Mode"
+            },
+            "auto_set": {
+                "name": "Auto-Set"
+            },
+            "super_cool": {
+                "name": "Super Cool"
+            },
+            "super_freeze": {
+                "name": "Super Freeze"
+            },
+            "freezer_door": {
+                "name": "Door open Freezer"
+            },
+            "fridge_door": {
+                "name": "Door open Fridge"
+            },
+            "filter_replacement": {
+                "name": "Filter replacement"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Induction Hob"
+            },
+            "start_program": {
+                "name": "Program Start"
+            },
+            "stop_program": {
+                "name": "Program Stop"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Power management"
+            },
+            "temperature": {
+                "name": "Temperature"
+            },
+            "delay_time": {
+                "name": "Delay Start"
+            },
+            "water_hard": {
+                "name": "Water hardness"
+            },
+            "program_duration": {
+                "name": "Program duration"
+            },
+            "target_temperature": {
+                "name": "Target temperature"
+            },
+            "rinse_iterations": {
+                "name": "Number of rinses"
+            },
+            "wash_time": {
+                "name": "Washing intensity"
+            },
+            "dry_time": {
+                "name": "Drying time"
+            },
+            "freezer_temp_sel": {
+                "name": "Target temperature Freezer"
+            },
+            "fridge_temp_sel": {
+                "name": "Target temperature Fridge"
+            },
+            "my_zone_temp_sel": {
+                "name": "Target temperature My Zone"
+            },
+            "pollen_level": {
+                "name": "Pollen level"
+            },
+            "aroma_time_on": {
+                "name": "Diffuser (ON)"
+            },
+            "aroma_time_off": {
+                "name": "Diffuser (OFF)"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Air conditioner",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programs",
+                        "state": {}
+                    }
+                }
+            },
+            "fridge": {
+                "name": "Fridge",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Fridge modes",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_cool": "Super Cool",
+                            "holiday": "Holiday",
+                            "no_mode": "No mode selected"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Freezer",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Freezer modes",
+                        "state": {
+                            "auto_set": "Auto-Set",
+                            "super_freeze": "Super Freeze",
+                            "no_mode": "No mode selected"
+                        }
+                    }
+                }
+            },
+            "oven": {
+                "name": "Oven",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Programs",
+                        "state": {}
+                    }
+                }
+            },
+            "my_zone": {
+                "name": "My Zone"
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Wine Cellar",
+                        "state": {}
+                    }
+                }
+            }
+        },
+        "fan": {
+            "air_extraction": {
+                "name": "Air extraction"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Light"
+            }
+        }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Do the login",
+                "data": {
+                    "email": "Email",
+                    "password": "Password"
+                }
+            }
+        }
+    }
+}

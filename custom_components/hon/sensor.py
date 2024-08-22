@@ -18,7 +18,6 @@ from homeassistant.const import (
     UnitOfEnergy,
     UnitOfVolume,
     UnitOfMass,
-    UnitOfPower,
     UnitOfTime,
     UnitOfTemperature,
 )
@@ -29,7 +28,8 @@ from homeassistant.helpers.typing import HomeAssistantType
 
 from . import const
 from .const import DOMAIN
-from .hon import HonEntity, unique_entities, get_readable
+from .entity import HonEntity
+from .util import unique_entities, get_readable
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -83,7 +83,7 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Current Electricity Used",
             state_class=SensorStateClass.MEASUREMENT,
             device_class=SensorDeviceClass.POWER,
-            native_unit_of_measurement=UnitOfPower.KILO_WATT,
+            native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
             icon="mdi:lightning-bolt",
             translation_key="energy_current",
         ),
@@ -837,6 +837,29 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             name="Heating Status",
         ),
     ),
+    "FRE": (
+        HonSensorEntityDescription(
+            key="tempEnv",
+            name="Room Temperature",
+            icon="mdi:home-thermometer-outline",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="room_temperature",
+        ),
+        HonSensorEntityDescription(
+            key="tempSelZ3",
+            name="Temperature",
+            icon="mdi:snowflake-thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
+        ),
+        HonSensorEntityDescription(
+            key="errors", name="Error", icon="mdi:math-log", translation_key="errors"
+        ),
+    ),
 }
 SENSORS["WD"] = unique_entities(SENSORS["WM"], SENSORS["TD"])
 
@@ -846,7 +869,7 @@ async def async_setup_entry(
 ) -> None:
     entities = []
     entity: HonSensorEntity | HonConfigSensorEntity
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in SENSORS.get(device.appliance_type, []):
             if isinstance(description, HonSensorEntityDescription):
                 if device.get(description.key) is None:
@@ -858,7 +881,6 @@ async def async_setup_entry(
                 entity = HonConfigSensorEntity(hass, entry, device, description)
             else:
                 continue
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
 
     async_add_entities(entities)

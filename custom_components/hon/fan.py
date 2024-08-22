@@ -19,7 +19,7 @@ from pyhon.appliance import HonAppliance
 from pyhon.parameter.range import HonParameterRange
 
 from .const import DOMAIN
-from .hon import HonEntity
+from .entity import HonEntity
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -39,7 +39,7 @@ async def async_setup_entry(
     hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities = []
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in FANS.get(device.appliance_type, []):
             if (
                 description.key not in device.available_settings
@@ -47,7 +47,6 @@ async def async_setup_entry(
             ):
                 continue
             entity = HonFanEntity(hass, entry, device, description)
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
     async_add_entities(entities)
 

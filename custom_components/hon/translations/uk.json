@@ -1,0 +1,2173 @@
+{
+    "entity": {
+        "sensor": {
+            "washing_modes": {
+                "state": {
+                    "ready": "Готовий",
+                    "running": "Запущена програма",
+                    "pause": "Пауза",
+                    "scheduled": "Заплановано",
+                    "error": "Помилка",
+                    "test": "Test",
+                    "ending": "Зупинка циклу..."
+                }
+            },
+            "mach_modes_ac": {
+                "state": {
+                    "auto": "Авто",
+                    "cool": "Охолодження",
+                    "dry": "Осушення",
+                    "heat": "Обігрів",
+                    "fan": "Вентиляція"
+                }
+            },
+            "program_phases_wm": {
+                "state": {
+                    "ready": "Готовий",
+                    "spin": "Віджим",
+                    "rinse": "Полоскати",
+                    "drying": "Сушіння",
+                    "steam": "Пара",
+                    "weighting": "Зважування",
+                    "scheduled": "Заплановано",
+                    "tumbling": "Підтримання свіжості",
+                    "refresh": "Оновити",
+                    "heating": "Обігрів",
+                    "washing": "Прати"
+                },
+                "name": "Фаза"
+            },
+            "program_phases_td": {
+                "state": {
+                    "ready": "Готовий",
+                    "heat_stroke": "Сушіння",
+                    "drying": "Сушіння",
+                    "cooldown": "Охолодження",
+                    "unknown": "unknown",
+                    "tumbling": "Підтримання свіжості"
+                },
+                "name": "Фаза"
+            },
+            "program_phases_dw": {
+                "state": {
+                    "ready": "Готовий",
+                    "prewash": "Попереднє прання",
+                    "washing": "Прати",
+                    "rinse": "Полоскати",
+                    "drying": "Сушіння",
+                    "hot_rinse": "Гаряче полоскання"
+                },
+                "name": "Фаза"
+            },
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Без сушіння",
+                    "iron_dry": "Праска",
+                    "no_dry_iron": "Сушіння без праски",
+                    "cupboard_dry": "Сушарка для одягу",
+                    "extra_dry": "Екстра сухий",
+                    "ready_to_wear": "Готовий до носіння"
+                },
+                "name": "Рівень сушіння"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Малий",
+                    "normal": "Звичайний",
+                    "very": "Дуже",
+                    "unknown": "unknown"
+                },
+                "name": "Рівень забруднення"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Без пари",
+                    "cotton": "Бавовна",
+                    "delicate": "Делікатний",
+                    "synthetic": "Синтетика"
+                },
+                "name": "Рівень пари"
+            },
+            "humidity_level": {
+                "state": {
+                    "low": "Низький",
+                    "mid": "Середній",
+                    "high": "Високий"
+                },
+                "name": "Рівень вологості"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Функція нагріву при температурі 10°C",
+                    "iot_auto": "Авто",
+                    "iot_cool": "Охолодження",
+                    "iot_dry": "Осушення",
+                    "iot_fan": "Вентиляція",
+                    "iot_heat": "Обігрів",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Самоочищення",
+                    "iot_self_clean": "Самоочищення",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Запустити",
+                    "iot_uv": "Ультрафіолет",
+                    "iot_uv_and_auto": "УФ + Авто",
+                    "iot_uv_and_cool": "УФ + Холод",
+                    "iot_uv_and_dry": "УФ + осушувач повітря",
+                    "iot_uv_and_fan": "УФ + вентилятор",
+                    "iot_uv_and_heat": "УФ + тепло"
+                },
+                "name": "Програма"
+            },
+            "programs_dw": {
+                "state": {
+                    "59_min": "59 хв",
+                    "auto_care": "Автодогляд",
+                    "auto_care_soil": "Автодогляд",
+                    "auto_hygiene": "Автогігієна",
+                    "auto_plus": "АвтоПлюс",
+                    "auto_plus_soil": "Авто плюс забруднення",
+                    "auto_rapid": "Автоматичне швидке",
+                    "auto_rapid_soil": "Авто швидке забруднення",
+                    "auto_sensor": "Автоматичний датчик",
+                    "auto_sensor_soil": "Автоматичний датчик",
+                    "auto_universal": "Авто Універсальний цикл 50-60°C",
+                    "auto_universal_plus": "Авто Універсальний цикл + 65-75°C",
+                    "auto_universal_plus_soil": "Авто Універсальний цикл + 65-75°C",
+                    "auto_universal_soil": "Авто Універсальний цикл 50-60°C",
+                    "auto_wash": "Автоматичне миття",
+                    "auto_wash_soil": "Автоматичне миття",
+                    "classe_a_59": "А Миття 59' 65°C",
+                    "delicate": "Делікатний 45°C",
+                    "dishwasher_care": "Очищення від вапняного нальоту",
+                    "eco": "Еко 45°C",
+                    "eco_asynch": "Еко 45°C",
+                    "eco_bldc": "Еко 45°C",
+                    "eco_synch": "Еко 45°C",
+                    "eco_voice": "Eco",
+                    "gentle_wash": "Дбайливе миття",
+                    "glass": "Келихи",
+                    "glassware": "Скляний посуд 45°C",
+                    "glass_care": "Догляд за келихами",
+                    "hygiene": "Гігієна",
+                    "hygiene_plus": "Гігієна + 75°C",
+                    "intensive": "Інтенсивний",
+                    "intensive_rapid": "Інтенсивний Швидкий",
+                    "intensive_voice": "Інтенсивний",
+                    "iot_auto_sensor": "Автоматичний датчик",
+                    "iot_auto_universal_soil": "Авто Універсальне 50-60°C",
+                    "iot_auto_wash_soil": "Автоматичне миття",
+                    "iot_baby_care": "Догляд за дитиною",
+                    "iot_breakfast": "Сніданок",
+                    "iot_checkup": "Перевірка",
+                    "iot_china_crystals": "Китайський кришталь",
+                    "iot_classe_a_59": "Швидкий 59'",
+                    "iot_cocktail_glasses": "Коктейльний келих",
+                    "iot_cocktail_glasses_soil": "Коктейльний келих",
+                    "iot_daily_care": "Щоденний догляд",
+                    "iot_daily_care_soil": "Щоденний догляд",
+                    "iot_delicate": "Делікатний 45°C",
+                    "iot_dinner_for_two": "Вечеря на 2 персони",
+                    "iot_dinner_for_two_soil": "Вечеря на 2 персони",
+                    "iot_dreft_quick_cycle": "Dreft Quick",
+                    "iot_eco_asynch": "Еко 45°C",
+                    "iot_eco_bldc": "Еко 45°C",
+                    "iot_eco_synch": "Еко 45°C",
+                    "iot_extra_hygiene": "Додаткова гігієна",
+                    "iot_fairy_quick_cycle": "Fairy Quick",
+                    "iot_happy_hour": "Щаслива година",
+                    "iot_jar_quick_cycle": "Jar Quick",
+                    "iot_party": "Вечірка",
+                    "iot_party_soil": "Вечірка",
+                    "iot_pizza_menu": "Меню піци",
+                    "iot_pizza_menu_soil": "Меню піци",
+                    "iot_plastic_tupperware": "Пластик і пластиковий посуд",
+                    "iot_porcelain": "Порцеляна",
+                    "iot_power_mix_wash": "Power Mix Wash",
+                    "iot_power_mix_wash_soil": "Power Mix Wash",
+                    "iot_prewash": "Попереднє миття",
+                    "iot_pyrex_and_glassware": "Пірекс і скляний посуд",
+                    "iot_rapid_29": "Швидкий 29'",
+                    "iot_rapid_39": "Швидкий 39' 60°C",
+                    "iot_single": "Одинокий",
+                    "iot_steam": "Пара 75°C",
+                    "iot_super_flash": "Супер швидкий",
+                    "iot_super_wash": "Супер миття",
+                    "iot_turbopower": "Турбошвидкість",
+                    "iot_universal": "Універсальний 60°C",
+                    "iot_voice_automatic": "Автоматичний",
+                    "iot_voice_delicate": "Делікатний 45°C",
+                    "iot_voice_eco": "Еко 45°C",
+                    "iot_voice_intensive": "Інтенсивний 75°C",
+                    "iot_voice_prewash": "Попереднє миття",
+                    "iot_voice_rapid_59": "Швидкий 59'",
+                    "iot_voice_universal": "Універсальний 60°C",
+                    "iot_wok_grids_maxi_pans": "Спеціальні сковороди (вок, решітки та максі-сковорідки)",
+                    "iot_wok_grids_maxi_pans_soil": "Спеціальні сковороди (вок, решітки та максі-сковорідки)",
+                    "iot_yes_quick_cycle": "Так Швидко",
+                    "night": "Нічний 55°C",
+                    "prewash": "Попереднє миття",
+                    "rapid_20": "Швидкий 20'",
+                    "rapid_24": "Швидкий 24'",
+                    "rapid_29": "Швидкий 29' 50°C",
+                    "rapid_35": "Вимийте і висушіть 35'",
+                    "rapid_39": "Швидкий 39' 60°C",
+                    "rapid_49": "Швидкий 49'",
+                    "rapid_59": "Швидкий 59'",
+                    "sanitising": "Дезінфекція",
+                    "silence": "Тихий",
+                    "silent": "Безшумний",
+                    "silent_care": "Безшумний догляд",
+                    "smart_ai": "Розумний AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Розумний AI",
+                    "special": "Спеціальний",
+                    "special_pw_prz": "Спеціальний",
+                    "steam": "Пара 75°C",
+                    "steam_plus": "Пара Плюс 75°C",
+                    "total_care": "Загальний догляд 50°C",
+                    "ultra_silence": "Ультратихий 55°C",
+                    "ultra_silent": "Ультратихий 55°C",
+                    "universal": "Універсальний 60°C",
+                    "universal_plus": "Універсальний Плюс 70°C",
+                    "zone_wash": "Flex Zone Wash",
+                    "zoom_39": "Zoom 39 хв"
+                },
+                "name": "Програма"
+            },
+            "programs_ih": {
+                "state": {
+                    "iot_special_ash_brown": "Попелясто-коричневий",
+                    "iot_special_beef_fillet": "Яловиче філе",
+                    "iot_special_beef_veal_stew": "Рагу з яловичини і телятини",
+                    "iot_special_boiled_rice": "Відварений рис",
+                    "iot_special_chicken_breast": "Куряча грудка",
+                    "iot_special_chicken_legs": "Курячі ніжки",
+                    "iot_special_chocolate_pudding": "Шоколадний пудинг",
+                    "iot_special_entrecote": "Антрекот",
+                    "iot_special_fresh_tuna": "Свіжий тунець",
+                    "iot_special_grilled_vegetables": "Овочі на грилі",
+                    "iot_special_lamb_cutlet": "Котлета з баранини",
+                    "iot_special_meatballs": "Мітболи",
+                    "iot_special_minestrone": "Мінестроне",
+                    "iot_special_mussels": "Молюски",
+                    "iot_special_omelette": "Омлет",
+                    "iot_special_pancakes": "Млинці",
+                    "iot_special_paris_style_peas": "Горошок по-паризьки",
+                    "iot_special_poached_eggs": "Яйця пашот",
+                    "iot_special_pork_fillet": "Філе свинини",
+                    "iot_special_pork_ribs": "Свинячі реберця",
+                    "iot_special_prawns": "Креветки",
+                    "iot_special_quinoa": "Кіноа",
+                    "iot_special_ratatouille": "Рататуй",
+                    "iot_special_salmon_fillet": "Філе лосося",
+                    "iot_special_saute_potatoes": "Смажена картопля",
+                    "iot_special_scallops": "Морські гребінці",
+                    "iot_special_scrambled_eggs": "Яєчний скрамбл",
+                    "iot_special_spelt": "Спельта",
+                    "iot_special_veggy_noodles": "Овочева лапша",
+                    "iot_special_white_fish_fillet": "Філе білої риби",
+                    "iot_standard_boiling": "Кипіння",
+                    "iot_standard_frying": "Смаження",
+                    "iot_standard_keep_warm": "Підтримувати тепло",
+                    "iot_standard_melting": "Розтоплення",
+                    "iot_standard_simmering": "Варіння на повільному вогні"
+                },
+                "name": "Програма"
+            },
+            "programs_ov": {
+                "state": {
+                    "bakery": "Макаронні та хлібобулочні вироби",
+                    "bakery_steam": "Духова шафа",
+                    "bottom_heating": "Нижній нагрів",
+                    "bottom_heating_fan": "Нижній нагрів + вентилятор",
+                    "bread": "Хліб",
+                    "bread_steam": "Хліб, випечений на парі",
+                    "convection_fan": "Конвекція + вентилятор",
+                    "convection_fan_turnspit": "Конвекція + вентилятор + рожен",
+                    "conventional": "Конвекція",
+                    "conventional_turnspit": "Конвекція + рожен",
+                    "defrost": "Розморожування",
+                    "descaling": "Видалення накипу",
+                    "fish": "Риба",
+                    "fish_steam": "Риба на парі",
+                    "grill_cata": "Гриль",
+                    "grill_fan_cata": "Гриль + вентилятор",
+                    "grill_fan_pyro": "Гриль + вентилятор",
+                    "grill_pyro": "Гриль",
+                    "h20_clean": "H2O Clean",
+                    "iot_bread": "Хліб",
+                    "iot_h20_clean": "H2O очищення",
+                    "leavening": "Розпушування",
+                    "low_temp_cooking": "Приготування за низької температури",
+                    "low_temp_cooking_fish": "Приготування за низької температури — риба",
+                    "low_temp_cooking_fish_steam": "Приготування за низької температури — риба на парі",
+                    "low_temp_cooking_meat": "Приготування за низької температури — м’ясо",
+                    "low_temp_cooking_meat_steam": "Приготування за низької температури — м’ясо на парі",
+                    "low_temp_cooking_steam": "Приготування на парі за низької температури",
+                    "meat": "М’ясо",
+                    "meat_steam": "М’ясо на парі",
+                    "multi_level": "Багаторівневе приготування",
+                    "paella": "Паелья",
+                    "pasta_and_bakery": "Макаронні та хлібобулочні вироби",
+                    "pizza": "Піца",
+                    "pyrolysis": "Піроліз",
+                    "pyrolysis_plus": "Піроліз +",
+                    "red_meat": "Червоне м’ясо",
+                    "red_meat_steam": "Червоне м’ясо на парі",
+                    "regenerate": "Регенерувати",
+                    "soft_plus": "Soft+",
+                    "super_grill": "Super Grill",
+                    "tailor_bake": "Tailor Bake",
+                    "tailor_bake_cata": "Tailor Bake",
+                    "tailor_bake_pyro": "Tailor Bake",
+                    "vegetables": "Овочі",
+                    "vegetables_cata": "Овочі",
+                    "vegetables_pyro": "Овочі",
+                    "water_discharge": "Зливання води",
+                    "white_meat": "Біле м’ясо",
+                    "white_meat_steam": "Біле м’ясо на парі"
+                },
+                "name": "Програма"
+            },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Активне сушіння",
+                    "allergy_care": "Антиалергенний",
+                    "all_in_one": "Все в одному",
+                    "antiallergy": "Антиалергенний",
+                    "anti_odours": "Проти неприємних запахів",
+                    "auto_care": "Автодогляд",
+                    "baby": "Дитячі речі",
+                    "bed_quilt": "Стьобана ковдра",
+                    "care_30": "Догляд 30",
+                    "care_45": "Догляд 45",
+                    "care_59": "Догляд 59",
+                    "coloured": "Кольорове",
+                    "daily_45_min": "Щоденне 45'",
+                    "daily_perfect_59_min": "Щоденне для ідеальних результатів 59'",
+                    "darks_and_coloured": "Темні і кольорові",
+                    "delicates": "Делікатні речі",
+                    "duvet": "Ковдра",
+                    "eco": "Еко бавовна",
+                    "ecospeed_cottons": "Екошвидкість для бавовни",
+                    "ecospeed_delicates": "Екошвидкість для делікатних речей",
+                    "ecospeed_mixed": "Екошвидкість для змішаних речей",
+                    "extra_hygiene": "Додаткова гігієна",
+                    "fitness": "Фітнес",
+                    "fresh_care": "Освіжаючий догляд",
+                    "genius": "Геній",
+                    "hqd_baby_care": "Догляд за дитячими речами",
+                    "hqd_bath_towel": "Рушники",
+                    "hqd_bed_sheets": "Простирадла",
+                    "hqd_bulky": "Громіздкі речі",
+                    "hqd_casual": "Повсякденний",
+                    "hqd_checkup": "Перевірка",
+                    "hqd_cold_wind_30": "Прохолодний бриз 30 хвилин",
+                    "hqd_cold_wind_timing": "Холодне повітря",
+                    "hqd_cotton": "Бавовна",
+                    "hqd_curtain": "Штори",
+                    "hqd_delicate": "Делікатні речі",
+                    "hqd_diaper": "Підгузки",
+                    "hqd_duvet": "Стьобана куртка зі синтетичного волокна",
+                    "hqd_eco": "Еко",
+                    "hqd_feather": "Стьобана куртка з натурального волокна",
+                    "hqd_hot_wind_timing": "Теплі відчуття",
+                    "hqd_hygienic": "Гігієнічна обробка",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro Дитячий одяг",
+                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro Об'ємні речі",
+                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro Делікатні речі",
+                    "hqd_i_refresh_pro_down": "I-Refresh Pro Пух",
+                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro Сорочка",
+                    "hqd_i_refresh_pro_towel": "I-Refresh Pro Рушник",
+                    "hqd_i_refresh_pro_wool": "I-Refresh Pro Вовна",
+                    "hqd_jacket": "Куртки",
+                    "hqd_jeans": "Джинси",
+                    "hqd_luxury": "Дорогоцінні речі",
+                    "hqd_mix": "Змішані речі",
+                    "hqd_night_dry": "Нічне сушіння",
+                    "hqd_outdoor": "Верхній одяг",
+                    "hqd_precious_cure": "Догляд за цінними речами",
+                    "hqd_quick_20": "Швидка 20",
+                    "hqd_quick_30": "Швидка 30",
+                    "hqd_quick_dry": "30-хвилинне автоматичне швидке сушіння",
+                    "hqd_quilt": "Стьобані вироби",
+                    "hqd_refresh": "Освіження",
+                    "hqd_school_uniform": "Шкільна форма",
+                    "hqd_shirt": "Сорочки",
+                    "hqd_shoes": "Взуття",
+                    "hqd_silk": "Шовк",
+                    "hqd_sports": "Спортивні речі",
+                    "hqd_synthetics": "Синтетика",
+                    "hqd_timer": "ТАЙМЕР",
+                    "hqd_towel": "Рушники",
+                    "hqd_underwear": "Спідня білизна",
+                    "hqd_warm_up": "Підігрів",
+                    "hqd_wool": "Вовна",
+                    "hqd_working_suit": "Спецодяг",
+                    "hygiene": "Гігієна",
+                    "iot_checkup": "Перевірка",
+                    "iot_dry_anti_mites": "Анти-кліщи",
+                    "iot_dry_baby": "Дитячі речі",
+                    "iot_dry_backpacks": "Рюкзаки",
+                    "iot_dry_bathrobe": "Банний халат",
+                    "iot_dry_bed_linen": "Постільна білизна",
+                    "iot_dry_bed_quilt": "Стьобана ковдра",
+                    "iot_dry_cotton": "Бавовна",
+                    "iot_dry_cuddly_toys": "М'які іграшки",
+                    "iot_dry_curtains": "Штори",
+                    "iot_dry_dehumidifier": "Видалення вологи",
+                    "iot_dry_delicates": "Делікатні речі",
+                    "iot_dry_delicate_tablecloths": "Делікатні скатертини",
+                    "iot_dry_denim_jeans": "Джинсові тканини - Джинси",
+                    "iot_dry_down_jacket": "Куртка",
+                    "iot_dry_duvet": "Ковдра",
+                    "iot_dry_easy_iron_cotton": "Суперлегке прасування",
+                    "iot_dry_easy_iron_synthetics": "Суперлегке прасування - Синтетика",
+                    "iot_dry_gym_fit": "Спортивний одяг - Фітнес",
+                    "iot_dry_lingerie": "Жіноча білизна",
+                    "iot_dry_mixed": "Змішані речі",
+                    "iot_dry_pet_accessories": "Аксесуари для домашніх тварин",
+                    "iot_dry_pet_hair_removal": "Видалення шерсті домашніх тварин (попереднє миття)",
+                    "iot_dry_playsuits": "Комбінезони",
+                    "iot_dry_rapid_30": "Швидкий 30 хвилин",
+                    "iot_dry_rapid_59": "Швидкий 59'",
+                    "iot_dry_refresh": "Refresh",
+                    "iot_dry_regenerates_waterproof": "Відновлення водонепроникності",
+                    "iot_dry_relax_creases": "Розгладжування складок",
+                    "iot_dry_shirts": "Сорочки",
+                    "iot_dry_small_load": "Невелике завантаження",
+                    "iot_dry_swimsuits_and_bikinis": "Купальники та бікіні",
+                    "iot_dry_synthetics": "Синтетика",
+                    "iot_dry_synthetic_dry": "Сушіння синтетики",
+                    "iot_dry_tablecloths": "Скатертини",
+                    "iot_dry_technical_fabrics": "Технічні тканини",
+                    "iot_dry_warm_embrace": "Теплі відчуття",
+                    "iot_dry_wool": "Вовна",
+                    "jeans": "Джинси",
+                    "mix_and_dry": "Сушіння змішаного одягу",
+                    "pets": "Домашні тварини",
+                    "pre_iron": "Попереднє прасування",
+                    "rapid_30": "Швидкий 30 хвилин",
+                    "rapid_45": "Швидкий 45 хвилин",
+                    "rapid_59": "Ідеальний швидкий 59 хвилин",
+                    "refresh": "Refresh",
+                    "relax_creases": "Розгладжування складок",
+                    "saving_30_min": "Економія 30'",
+                    "shirts": "Сорочки",
+                    "shoes": "Взуття",
+                    "small_load": "Невелике завантаження",
+                    "soft_care": "М'який догляд",
+                    "sport_plus": "Спорт Плюс",
+                    "super_easy_iron_misti": "Суперлегке прасування - Змішані тканини",
+                    "super_easy_iron_xxl": "Суперлегке прасування - XXL",
+                    "super_fast_cottons": "Надшвидкий - Бавовна",
+                    "super_fast_delicates": "Надшвидкий - Делікатні речі",
+                    "synthetics": "Синтетика",
+                    "total_care": "Повна турбота",
+                    "trainers": "Кросівки",
+                    "ultra_care": "Ультра догляд",
+                    "waterproof_revitalize": "Відновлення водостійкості",
+                    "whites": "Білі речі",
+                    "wool": "сушіння вовни",
+                    "woolmark": "Вовна",
+                    "xxl_load": "Завантаження XXL",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Програма"
+            },
+            "programs_wm": {
+                "state": {
+                    "20_degrees_coloured_cottons": "20° кольорові та бавовняні речі",
+                    "20_degrees_new_energy_label": "20°C",
+                    "active_steam": "Пара 29'",
+                    "active_wash": "Активне прання 20'",
+                    "active_wash_steam": "Активне прання 20' + Пара",
+                    "allergy_care": "Антиалергенний",
+                    "allergy_care_pro": "Антиалергенний Про",
+                    "all_in_one_49": "Все в одному 49'",
+                    "all_in_one_59": "Все в одному 59'",
+                    "all_in_one_59_steam": "Все в одному 59' + Пара",
+                    "autocare": "Автоматичний догляд",
+                    "autoclean": "Очищення барабана",
+                    "baby_60": "Всі дитячі речі 60°C",
+                    "care_14": "Швидкий догляд 14'",
+                    "care_30": "Швидкий догляд 30'",
+                    "care_44": "Швидкий догляд 44'",
+                    "checkup": "Перевірка",
+                    "colour_59": "Кольорові речі 59'",
+                    "colour_59_steam": "Кольорові речі 59 ' + Пара",
+                    "cottons": "Бавовна",
+                    "cottons_prewash": "Бавовна + Попереднє прання",
+                    "cottons_steam": "Бавовна + Пара",
+                    "cotton_care_59": "Догляд за бавовною 59'",
+                    "cycle_ended": "Цикл завершено",
+                    "delicate_59": "Делікатний 59'",
+                    "delicate_silk": "Делікатні речі та шовк 59'",
+                    "delicate_silk_steam": "Делікатні речі та шовк + Пара",
+                    "delicati_59": "Делікатний 59'",
+                    "delicati_59_steam": "Делікатний 59' + Пара",
+                    "drain_spin": "Злив + Віджим",
+                    "easy_iron": "Легке прасування 39'",
+                    "eco_40_60_new_energy_label": "Еко 40-60",
+                    "extra_care": "Додатковий догляд",
+                    "fitness": "Фітнес-догляд",
+                    "fitness_care": "Фітнес-догляд",
+                    "fresh_care": "Освіжаючий догляд 59'",
+                    "fresh_care_steam": "Освіжаючий догляд + Пара",
+                    "handwash_wool": "Ручне прання + Вовна 48'",
+                    "high_dry": "Високотемпературне сушіння",
+                    "hqd_20_degrees": "Бавовна 20℃",
+                    "hqd_allergy": "Антиалергенний",
+                    "hqd_autoclean": "Очищення барабана",
+                    "hqd_babycare": "Догляд за дитячими речами",
+                    "hqd_checkup": "Перевірка",
+                    "hqd_cottons": "Бавовна",
+                    "hqd_delicate": "Делікатний 50'",
+                    "hqd_delicate_cradle": "Делікатний",
+                    "hqd_dry": "Сушіння бавовни",
+                    "hqd_dry_synthetics": "Низькотемпературне сушіння",
+                    "hqd_duvet": "Ковдра",
+                    "hqd_eco_40_60_degrees": "Еко 40-60",
+                    "hqd_handwash_wool": "Вовна 40'",
+                    "hqd_i_refresh": "i-Refresh",
+                    "hqd_mix": "Змішаний",
+                    "hqd_quick_15": "Швидкий 15'",
+                    "hqd_quick_wash_57": "Швидке прання 57'",
+                    "hqd_rapid_wash_and_dry": "Прання та сушіння",
+                    "hqd_refresh": "Refresh",
+                    "hqd_rinse": "Полоскання",
+                    "hqd_shirts": "Сорочки",
+                    "hqd_smart": "Штучний інтелект",
+                    "hqd_spin": "Віджим",
+                    "hqd_sport": "Спортивний 25'",
+                    "hqd_super_fast": "Надшвидкий - 39'",
+                    "hqd_synthetic_and_coloured": "Синтетика",
+                    "hygiene_59": "Гігієна Плюс 59'",
+                    "hygiene_60": "Гігієна 60°C",
+                    "hygiene_plus_59": "Гігієна Плюс 59'",
+                    "hygiene_plus_59_min": "Гігієна Плюс 59'",
+                    "hygiene_pro_49_min": "Гігієна Про 49'",
+                    "hygiene_pro_steam": "Гігієна Про + Пара",
+                    "intensive_40": "Інтенсивний 40°C",
+                    "intensive_40_steam": "Інтенсивний 40°C + Пара",
+                    "iot_active_wash_steam": "Активне прання 20' + Пара",
+                    "iot_all_in_one_59_steam": "Все в одному 59' + Пара",
+                    "iot_baby_60_steam": "Всі дитячі речі 60°C + пара",
+                    "iot_checkup": "Перевірка",
+                    "iot_dry_air_refresh": "Миттєве освіження",
+                    "iot_dry_anti_mites": "Анти-кліщи",
+                    "iot_dry_baby": "Дитячі речі",
+                    "iot_dry_backpacks": "Рюкзаки",
+                    "iot_dry_bathrobe": "Банні халати",
+                    "iot_dry_bed_linen": "Постільна білизна",
+                    "iot_dry_cotton_dry": "Сушіння бавовни",
+                    "iot_dry_cuddly_toys": "М'які іграшки",
+                    "iot_dry_curtains": "Штори",
+                    "iot_dry_dehumidifier": "Видалення вологи",
+                    "iot_dry_delicates_antiallergy": "Антиалергенний для делікатних речей",
+                    "iot_dry_delicate_tablecloths": "Делікатні скатертини",
+                    "iot_dry_denim_jeans": "Джинсові тканини - Джинси",
+                    "iot_dry_easy_iron_cotton": "Легке прасування - Бавовна",
+                    "iot_dry_easy_iron_synthetics": "Легке прасування - Синтетика",
+                    "iot_dry_gym_fit": "Спортивний одяг - Фітнес",
+                    "iot_dry_lingerie": "Жіноча білизна",
+                    "iot_dry_mixed_dry": "Сушіння змішаного одягу",
+                    "iot_dry_rapid_60_min_delicates": "Швидкий 60' - Делікатні речі",
+                    "iot_dry_shirts": "Сорочки",
+                    "iot_dry_swimsuits_and_bikinis": "Купальники та бікіні",
+                    "iot_dry_synthetics": "Сушіння синтетики",
+                    "iot_dry_synthetic_dry": "Сушіння синтетики",
+                    "iot_dry_tablecloths": "Скатертини",
+                    "iot_dry_technical_fabrics": "Технічні тканини",
+                    "iot_dry_warm_embrace": "Теплі обійми",
+                    "iot_dry_wool_dry": "Сушіння вовни",
+                    "iot_easy_iron": "Легке прасування 39'",
+                    "iot_jeans_60_steam": "Джинси + пара",
+                    "iot_jeans_steam": "Джинси + пара",
+                    "iot_wash_and_dry": "Прання та сушіння",
+                    "iot_wash_anti_mites": "Анти-кліщи",
+                    "iot_wash_anti_odor": "Проти неприємних запахів",
+                    "iot_wash_baby_sanitizer": "Дезінфекція",
+                    "iot_wash_baby_sanitizer_steam": "Дезінфекція + Пара",
+                    "iot_wash_backpacks": "Рюкзаки",
+                    "iot_wash_backpacks_zelig": "Рюкзаки",
+                    "iot_wash_bathrobe": "Халати та рушники",
+                    "iot_wash_bathrobe_steam": "Халати та рушники + Пара",
+                    "iot_wash_bed_linen": "Постільна білизна",
+                    "iot_wash_bed_linen_steam": "Постільна білизна + Пара",
+                    "iot_wash_bed_linen_zelig": "Постільна білизна",
+                    "iot_wash_big_single_load": "Велике разове завантаження",
+                    "iot_wash_bleaching": "Відбілювання",
+                    "iot_wash_blood_stains": "Плями крові",
+                    "iot_wash_cashmere": "Кашемір",
+                    "iot_wash_chocolate_stains": "Шоколадні плями",
+                    "iot_wash_cold_wash": "Холодне прання",
+                    "iot_wash_colored": "Кольорове",
+                    "iot_wash_colored_anti_stain": "Видалення плям для кольорових речей",
+                    "iot_wash_colored_delicate": "Кольорові делікатні речі",
+                    "iot_wash_coloured": "Кольорове",
+                    "iot_wash_coloured_bed_linen": "Кольорова постільна білизна",
+                    "iot_wash_coloured_bed_linen_steam": "Кольорова постільна білизна + Пара",
+                    "iot_wash_coloured_curtains": "Кольорові штори",
+                    "iot_wash_coloured_shirts": "Кольорові сорочки 59'",
+                    "iot_wash_coloured_shirts_steam": "Кольорові сорочки + Пара",
+                    "iot_wash_coloured_steam": "Кольорові речі + Парова",
+                    "iot_wash_coloured_tableclothes": "Кольорові скатертини",
+                    "iot_wash_coloured_tableclothes_steam": "Кольорові скатертини + Пара",
+                    "iot_wash_cotton": "Бавовна",
+                    "iot_wash_cotton_steam": "Бавовна + Пара",
+                    "iot_wash_cuddly_toys": "М'які іграшки",
+                    "iot_wash_curtains": "Штори",
+                    "iot_wash_curtains_steam": "Штори + Пара",
+                    "iot_wash_curtains_zelig": "Штори",
+                    "iot_wash_dark": "Темний",
+                    "iot_wash_darks_and_coloured_44": "Темні та кольорові речі 44'",
+                    "iot_wash_darks_and_coloured_59": "Темні та кольорові речі 59'",
+                    "iot_wash_darks_and_coloured_xl": "Темні та кольорові речі XL",
+                    "iot_wash_dark_steam": "Темні речі + Пара",
+                    "iot_wash_delicate": "Делікатні речі",
+                    "iot_wash_delicate_antiallergy": "Антиалергенний для делікатних речей",
+                    "iot_wash_delicate_antiallergy_steam": "Антиалергенний для делікатних речей + Пара",
+                    "iot_wash_delicate_antiallergy_zelig": "Антиалергенний для делікатних речей",
+                    "iot_wash_delicate_colors": "Делікатні кольорові речі",
+                    "iot_wash_delicate_colors_steam": "Делікатні кольорові речі + Пара",
+                    "iot_wash_delicate_dark": "Делікатні темні речі",
+                    "iot_wash_delicate_steam": "Делікатні речі + Пара",
+                    "iot_wash_delicate_tablecloths": "Делікатні скатертини",
+                    "iot_wash_delicate_tablecloths_steam": "Делікатні скатертини + Пара",
+                    "iot_wash_delicate_whites": "Делікатні білі речі",
+                    "iot_wash_denim_jeans": "Джинсові тканини - Джинси",
+                    "iot_wash_diving_suits": "Водолазні костюми",
+                    "iot_wash_diving_suits_zelig": "Водолазні костюми",
+                    "iot_wash_down_jackets": "Пуховики",
+                    "iot_wash_down_jackets_zelig": "Пуховики",
+                    "iot_wash_duvet": "Ковдра",
+                    "iot_wash_fruit_stains": "Плями від фруктів",
+                    "iot_wash_gym_fit": "Спортивний одяг - Фітнес 59'",
+                    "iot_wash_handwash": "Ручне прання",
+                    "iot_wash_handwash_colored": "Ручне прання для кольорових речей",
+                    "iot_wash_handwash_dark": "Ручне прання для темних речей",
+                    "iot_wash_lingerie": "Жіноча білизна",
+                    "iot_wash_masks_refresh": "Освіження масок",
+                    "iot_wash_masks_sanification": "Дезінфекція масок",
+                    "iot_wash_masks_sanification_steam": "Дезінфекція масок + Пара",
+                    "iot_wash_mats": "Килимки",
+                    "iot_wash_men_s_trousers": "Штани",
+                    "iot_wash_mixed": "Змішані речі",
+                    "iot_wash_mixed_steam": "Змішані речі + Пара",
+                    "iot_wash_mix_and_coloured_44": "Змішані та кольорові речі 44'",
+                    "iot_wash_mix_and_coloured_59": "Змішані та кольорові речі 59'",
+                    "iot_wash_mix_and_coloured_xl": "Змішані та кольорові речі XL",
+                    "iot_wash_new_clothes": "Новий одяг",
+                    "iot_wash_perfect_white": "Ідеальний білий",
+                    "iot_wash_perfect_white_steam": "Ідеальний білий + Пара",
+                    "iot_wash_pets": "Аксесуари для домашніх тварин",
+                    "iot_wash_pets_hair_removal": "Видалення шерсті домашніх тварин",
+                    "iot_wash_pets_odours_stains_removal": "Видалення запахів і плям від домашніх тварин",
+                    "iot_wash_pets_steam": "Аксесуари для домашніх тварин + Пара",
+                    "iot_wash_playsuits": "Комбінезони",
+                    "iot_wash_playsuits_steam": "Комбінезони + Пара",
+                    "iot_wash_quick_drum_cleaner": "Швидке очищення барабана",
+                    "iot_wash_rapid_14": "Швидкий 14'",
+                    "iot_wash_rapid_30": "Швидкий 30'",
+                    "iot_wash_rapid_44": "Швидкий 44'",
+                    "iot_wash_rapid_59": "Швидкий 59'",
+                    "iot_wash_rapid_59_steam": "Швидкий 59' + Пара",
+                    "iot_wash_refresh_14_min": "Освіження 14'",
+                    "iot_wash_resistant_colored": "Стійкі кольорові",
+                    "iot_wash_resistant_dark": "Зносостійкі темні речі",
+                    "iot_wash_resistant_whites": "Стійкі білі речі",
+                    "iot_wash_rinse": "Полоскання",
+                    "iot_wash_shirts": "Сорочки",
+                    "iot_wash_shirts_steam": "Сорочки + Пара",
+                    "iot_wash_silk": "Шовк",
+                    "iot_wash_ski_suit": "Лижні костюми",
+                    "iot_wash_ski_suit_zelig": "Лижні костюми",
+                    "iot_wash_spin": "Віджим",
+                    "iot_wash_sport": "Спортивний",
+                    "iot_wash_sport_anti_odor": "Проти неприємних запахів спортивного одягу",
+                    "iot_wash_sport_anti_odor_zelig": "Проти неприємних запахів спортивного одягу",
+                    "iot_wash_stains_remover": "Виведення плям",
+                    "iot_wash_super_saving": "Супер економічна 49 хв.",
+                    "iot_wash_swimsuits_and_bikinis": "Купальники та бікіні",
+                    "iot_wash_synthetic": "Синтетика",
+                    "iot_wash_synthetic_steam": "Синтетика + Пара",
+                    "iot_wash_tablecloths": "Скатертини",
+                    "iot_wash_tablecloths_steam": "Скатертини + Пара",
+                    "iot_wash_technical_fabrics": "Технічні тканини",
+                    "iot_wash_technical_fabrics_zelig": "Технічні тканини",
+                    "iot_wash_technical_jackets": "Технічні куртки",
+                    "iot_wash_technical_jackets_zelig": "Технічні куртки",
+                    "iot_wash_trainers": "Кросівки",
+                    "iot_wash_whites": "Білі речі",
+                    "iot_wash_whites_44": "Білі речі 44'",
+                    "iot_wash_whites_59": "Білі речі 59'",
+                    "iot_wash_whites_xl": "Білі речі XL",
+                    "iot_wash_wine_stains": "Плями від вина",
+                    "iot_wash_wool": "Вовна",
+                    "jeans": "Джинси",
+                    "jeans_60": "Джинси",
+                    "jeans_60_steam": "Джинси + пара",
+                    "low_dry": "Низькотемпературне сушіння",
+                    "mixed": "Змішані речі",
+                    "mixed_and_colored_59": "Змішані та кольорові речі 59'",
+                    "mixed_steam": "Змішані речі + Пара",
+                    "mix_and_colour_59": "Змішані та кольорові речі 59'",
+                    "mix_and_colour_59_steam": "Змішані та кольорові речі 59' + Пара",
+                    "night_and_day": "Ніч і день",
+                    "night_wash": "Нічне прання",
+                    "perfect_59": "Ідеальний 59'",
+                    "perfect_cotton_59": "Ідеальний - Бавовна 59'",
+                    "perfect_cotton_59_steam": "Ідеальний - Бавовна 59' + Пара",
+                    "perfect_whites_59": "Ідеальний - Білі речі 59'",
+                    "rapid_14_min": "Швидкий 14'",
+                    "rapid_30_min": "Швидкий 30'",
+                    "rapid_44_min": "Швидкий 44'",
+                    "rapid_a_class_60": "Швидкий 59' Клас А",
+                    "rapid_a_class_60_steam": "Швидкий 59' Клас А + Пара",
+                    "rapid_wash_and_dry_59_min": "Прання та сушіння 59'",
+                    "resistant_cotton": "Зносостійка бавовна",
+                    "resistant_cotton_steam": "Зносостійка бавовна + Пара",
+                    "rinse": "Полоскати",
+                    "shirts_steam": "Сорочки + Пара",
+                    "silent_night": "Тиха ніч",
+                    "single_item": "Один предмет 20'",
+                    "single_item_steam": "Один предмет + Пара",
+                    "smart_wash": "Розумне прання",
+                    "soft_care": "М'який догляд",
+                    "soft_care_steam": "М'який догляд + Пара",
+                    "soft_care_steam_title": "М'який догляд + Пара",
+                    "special_39": "Спеціальний 39'",
+                    "special_39_full_load": "Спеціальний 39'",
+                    "special_39_full_load_steam": "Спеціальний 39' + Пара",
+                    "special_49": "Спеціальний 49'",
+                    "sport_39": "Спорт 39'",
+                    "sport_plus_29": "Спорт Плюс 29\"",
+                    "sport_plus_39": "Спорт Плюс 39'",
+                    "steam_39": "Пара 39'",
+                    "steam_care_pro": "Догляд парою Про",
+                    "steam_care_pro_cotton": "Догляд парою Про - Бавовна",
+                    "steam_care_pro_delicates": "Догляд парою Про - Делікатні речі 16'",
+                    "steam_care_pro_synthetic": "Догляд парою Про - Синтетика 20'",
+                    "steam_hygiene_plus": "Гігієна Плюс + Пара",
+                    "synthetics": "Синтетика",
+                    "synthetic_and_coloured": "Синтетичні та кольорові речі",
+                    "synthetic_and_coloured_steam": "Синтетичні та кольорові речі + Пара",
+                    "tailored_resistant_cotton": "Зносостійка бавовна, адаптований",
+                    "tailored_synthetic_and_coloured": "Синтетичні кольорові речі, адаптований",
+                    "total_care": "Повна турбота",
+                    "tumbling": "Машинне сушіння",
+                    "ultra_fresh": "Ultra Fresh",
+                    "wool": "Вовна",
+                    "wool_and_delicates_49": "Вовна і делікатні речі 49'",
+                    "wool_dry": "Сушіння вовни",
+                    "wool_soft_care": "Вовна та м'який догляд 48'"
+                },
+                "name": "Програма"
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "АВТО-НАЛАШТУВАННЯ",
+                    "cheese": "Сир",
+                    "chiller": "Швидке охолодження",
+                    "cold_drinks": "М'яке охолодження",
+                    "cool_drink": "Cool Drink",
+                    "eco": "Еко",
+                    "eco_mode": "Еко-режим",
+                    "fruits": "Fruit",
+                    "fruits_and_veg": "Фрукти та овочі",
+                    "fruit_and_veg": "Фрукти та овочі",
+                    "holiday": "ВІДПУСТКА",
+                    "keep_fresh": "0°C Fresh",
+                    "milk_and_eggs": "Milk & Eggs",
+                    "no_mode_selected": "Режим не вибрано",
+                    "quick_cool": "ШВИДКЕ ОХОЛОДЖЕННЯ",
+                    "quick_set": "Швидке налаштування",
+                    "sea_food": "Готова до приготування страва",
+                    "smart_mode_title": "Smart Mode",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "СУПЕРОХОЛОДЖЕННЯ",
+                    "super_freeze": "СУПЕРЗАМОРОЖУВАННЯ",
+                    "tea": "Cold Drinks",
+                    "vegetables": "Vegetable",
+                    "zero_fresh": "0°C Fresh"
+                },
+                "name": "Програма"
+            },
+            "programs_wc": {
+                "state": {
+                    "iot_champagne": "Шампанське",
+                    "iot_dessert": "Десерт",
+                    "iot_fortified": "Кріплене",
+                    "iot_rose": "Рожеве",
+                    "iot_whisky": "Віскі",
+                    "red": "Червоне",
+                    "sparkling": "Ігристе",
+                    "white": "Біле"
+                }
+            },
+            "dry_time": {
+                "name": "Час сушіння"
+            },
+            "power": {
+                "name": "Рівень потужності"
+            },
+            "remaining_time": {
+                "name": "Час, що залишився"
+            },
+            "temperature": {
+                "name": "Температура"
+            },
+            "water_efficiency": {
+                "name": "Ефективність використання води"
+            },
+            "water_saving": {
+                "name": "Економія води"
+            },
+            "duration": {
+                "name": "Тривалість"
+            },
+            "target_temperature": {
+                "name": "Задана температура"
+            },
+            "spin_speed": {
+                "name": "Віджим"
+            },
+            "delay_time": {
+                "name": "Відкладення запуску"
+            },
+            "suggested_load": {
+                "name": "Максимальне завантаження"
+            },
+            "energy_label": {
+                "name": "Енергоефективність"
+            },
+            "det_dust": {
+                "name": "Порошок"
+            },
+            "det_liquid": {
+                "name": "Рідина"
+            },
+            "errors": {
+                "name": "Помилка"
+            },
+            "programs": {
+                "name": "Поточна програма"
+            },
+            "room_temperature": {
+                "name": "Кімнатна температура"
+            },
+            "humidity": {
+                "name": "Вологість"
+            },
+            "cycles_total": {
+                "name": "Цикл Всього"
+            },
+            "energy_total": {
+                "name": "Energy Consumption Всього"
+            },
+            "water_total": {
+                "name": "Ефективність використання води Всього"
+            },
+            "energy_current": {
+                "name": "Energy Consumption Поточна"
+            },
+            "water_current": {
+                "name": "Ефективність використання води Поточна"
+            },
+            "freezer_temp": {
+                "name": "Температура морозильної камери"
+            },
+            "fridge_temp": {
+                "name": "Температура в холодильнику"
+            },
+            "voc": {
+                "name": "Газ (ЛОС)"
+            },
+            "filter_cleaning": {
+                "name": "Очищення фільтра"
+            },
+            "filter_life": {
+                "name": "Термін служби фільтра"
+            },
+            "air_quality": {
+                "name": "Якість повітря"
+            },
+            "fan_speed": {
+                "name": "Швидкість вентилятора"
+            }
+        },
+        "select": {
+            "dry_levels": {
+                "state": {
+                    "no_dry": "Без сушіння",
+                    "iron_dry": "Праска",
+                    "no_dry_iron": "Сушіння без праски",
+                    "cupboard_dry": "Сушарка для одягу",
+                    "extra_dry": "Екстра сухий",
+                    "ready_to_wear": "Готовий до носіння"
+                },
+                "name": "Рівень сушіння"
+            },
+            "eco_pilot": {
+                "state": {
+                    "touch_off": "Вимкнути",
+                    "avoid_touch": "Уникати дотику",
+                    "follow_touch": "Слідкуй за мною",
+                    "unknown": "unknown"
+                },
+                "name": "Еко-пілот"
+            },
+            "fan_mode": {
+                "state": {
+                    "high": "Високий",
+                    "mid": "Середній",
+                    "low": "Низький",
+                    "auto": "Авто"
+                }
+            },
+            "ref_zones": {
+                "state": {
+                    "fridge": "Холодильник",
+                    "freezer": "Морозильна камера",
+                    "vtroom1": "My Zone",
+                    "fridge_freezer": "Холодильник & Морозильна камера"
+                },
+                "name": "Зона"
+            },
+            "steam_level": {
+                "state": {
+                    "no_steam": "Без пари",
+                    "cotton": "Бавовна",
+                    "delicate": "Делікатний",
+                    "synthetic": "Синтетика"
+                },
+                "name": "Рівень пари"
+            },
+            "mode": {
+                "state": {
+                    "standby": "Режим очікування",
+                    "sleep": "Сон",
+                    "auto": "Авто",
+                    "allergens": "Алергени",
+                    "max": "Макс."
+                },
+                "name": "Режим"
+            },
+            "diffuser": {
+                "state": {
+                    "off": "Вимкнути",
+                    "soft": "М'яка",
+                    "mid": "Середній",
+                    "h_biotics": "H-BIOTICS",
+                    "custom": "Налаштувати"
+                },
+                "name": "Дифузор"
+            },
+            "dirt_level": {
+                "state": {
+                    "little": "Малий",
+                    "normal": "Звичайний",
+                    "very": "Дуже",
+                    "unknown": "unknown"
+                },
+                "name": "Рівень забруднення"
+            },
+            "stain_type": {
+                "state": {
+                    "baby_food": "Дитяче харчування",
+                    "bean_paste": "Квасоляний суп",
+                    "blood": "Кров",
+                    "blueberry": "Чорниця",
+                    "blue_ink": "Сині чорнила",
+                    "butter": "Вершкове масло",
+                    "chili_oil": "Олія чилі",
+                    "chili_sauce": "Соус чилі",
+                    "chocolate": "Шоколад",
+                    "coffe": "Кава",
+                    "coffee": "Кава",
+                    "color_pencil": "Олівець",
+                    "cooking_oil": "Олія для приготування їжі",
+                    "curry": "Карі",
+                    "deodorant": "Дезодорант",
+                    "egg": "Яйце",
+                    "fruit": "Fruit",
+                    "glue": "Клей",
+                    "grass": "Трава",
+                    "ice_cream": "Морозиво",
+                    "ketchup": "Кетчуп",
+                    "lip_gloss": "Блиск для губ",
+                    "mayonnaise": "Майонез",
+                    "mech_grease": "Механічне мастило",
+                    "milk": "Молоко",
+                    "milk_tea": "Чай молочний",
+                    "oil": "Олія",
+                    "oil_pastel": "Олійна пастель",
+                    "perfume": "Парфуми",
+                    "rust": "Іржа",
+                    "shoe_cream": "Крем для взуття",
+                    "soil": "Ґрунт",
+                    "soy_sauce": "Соєвий соус",
+                    "sweat": "Піт",
+                    "tea": "Чай",
+                    "wine": "Вино",
+                    "unknown": "unknown"
+                },
+                "name": "Рівень забруднення"
+            },
+            "fan_horizontal": {
+                "state": {
+                    "position_1": "Фіксований - Позиція 1",
+                    "position_2": "Фіксований - Позиція 2",
+                    "position_3": "Фіксований - Позиція 3",
+                    "position_4": "Фіксований - Позиція 4",
+                    "position_5": "Фіксований - Позиція 5",
+                    "swing": "Коливання"
+                },
+                "name": "Напрямок вентилятора Горизонтальний"
+            },
+            "fan_vertical": {
+                "state": {
+                    "position_1": "Фіксований - Позиція 1",
+                    "position_2": "Фіксований - Позиція 2",
+                    "position_3": "Фіксований - Позиція 3",
+                    "position_4": "Фіксований - Позиція 4",
+                    "position_5": "Фіксований - Позиція 5",
+                    "swing": "Коливання"
+                },
+                "name": "Напрямок вентилятора Вертикальний"
+            },
+            "programs_ac": {
+                "state": {
+                    "iot_10_heating": "Функція нагріву при температурі 10°C",
+                    "iot_auto": "Авто",
+                    "iot_cool": "Охолодження",
+                    "iot_dry": "Осушення",
+                    "iot_fan": "Вентиляція",
+                    "iot_heat": "Обігрів",
+                    "iot_nano_aqua": "Nano Aqua",
+                    "iot_purify": "Самоочищення",
+                    "iot_self_clean": "Самоочищення",
+                    "iot_self_clean_56": "Steri-Clean 56°C",
+                    "iot_simple_start": "Запустити",
+                    "iot_uv": "Ультрафіолет",
+                    "iot_uv_and_auto": "УФ + Авто",
+                    "iot_uv_and_cool": "УФ + Холод",
+                    "iot_uv_and_dry": "УФ + осушувач повітря",
+                    "iot_uv_and_fan": "УФ + вентилятор",
+                    "iot_uv_and_heat": "УФ + тепло"
+                },
+                "name": "Програма"
+            },
+            "programs_dw": {
+                "state": {
+                    "59_min": "59 хв",
+                    "auto_care": "Автодогляд",
+                    "auto_care_soil": "Автодогляд",
+                    "auto_hygiene": "Автогігієна",
+                    "auto_plus": "АвтоПлюс",
+                    "auto_plus_soil": "Авто плюс забруднення",
+                    "auto_rapid": "Автоматичне швидке",
+                    "auto_rapid_soil": "Авто швидке забруднення",
+                    "auto_sensor": "Автоматичний датчик",
+                    "auto_sensor_soil": "Автоматичний датчик",
+                    "auto_universal": "Авто Універсальний цикл 50-60°C",
+                    "auto_universal_plus": "Авто Універсальний цикл + 65-75°C",
+                    "auto_universal_plus_soil": "Авто Універсальний цикл + 65-75°C",
+                    "auto_universal_soil": "Авто Універсальний цикл 50-60°C",
+                    "auto_wash": "Автоматичне миття",
+                    "auto_wash_soil": "Автоматичне миття",
+                    "classe_a_59": "А Миття 59' 65°C",
+                    "delicate": "Делікатний 45°C",
+                    "dishwasher_care": "Очищення від вапняного нальоту",
+                    "eco": "Еко 45°C",
+                    "eco_asynch": "Еко 45°C",
+                    "eco_bldc": "Еко 45°C",
+                    "eco_synch": "Еко 45°C",
+                    "eco_voice": "Eco",
+                    "gentle_wash": "Дбайливе миття",
+                    "glass": "Келихи",
+                    "glassware": "Скляний посуд 45°C",
+                    "glass_care": "Догляд за келихами",
+                    "hygiene": "Гігієна",
+                    "hygiene_plus": "Гігієна + 75°C",
+                    "intensive": "Інтенсивний",
+                    "intensive_rapid": "Інтенсивний Швидкий",
+                    "intensive_voice": "Інтенсивний",
+                    "iot_auto_sensor": "Автоматичний датчик",
+                    "iot_auto_universal_soil": "Авто Універсальне 50-60°C",
+                    "iot_auto_wash_soil": "Автоматичне миття",
+                    "iot_baby_care": "Догляд за дитиною",
+                    "iot_breakfast": "Сніданок",
+                    "iot_checkup": "Перевірка",
+                    "iot_china_crystals": "Китайський кришталь",
+                    "iot_classe_a_59": "Швидкий 59'",
+                    "iot_cocktail_glasses": "Коктейльний келих",
+                    "iot_cocktail_glasses_soil": "Коктейльний келих",
+                    "iot_daily_care": "Щоденний догляд",
+                    "iot_daily_care_soil": "Щоденний догляд",
+                    "iot_delicate": "Делікатний 45°C",
+                    "iot_dinner_for_two": "Вечеря на 2 персони",
+                    "iot_dinner_for_two_soil": "Вечеря на 2 персони",
+                    "iot_dreft_quick_cycle": "Dreft Quick",
+                    "iot_eco_asynch": "Еко 45°C",
+                    "iot_eco_bldc": "Еко 45°C",
+                    "iot_eco_synch": "Еко 45°C",
+                    "iot_extra_hygiene": "Додаткова гігієна",
+                    "iot_fairy_quick_cycle": "Fairy Quick",
+                    "iot_happy_hour": "Щаслива година",
+                    "iot_jar_quick_cycle": "Jar Quick",
+                    "iot_party": "Вечірка",
+                    "iot_party_soil": "Вечірка",
+                    "iot_pizza_menu": "Меню піци",
+                    "iot_pizza_menu_soil": "Меню піци",
+                    "iot_plastic_tupperware": "Пластик і пластиковий посуд",
+                    "iot_porcelain": "Порцеляна",
+                    "iot_power_mix_wash": "Power Mix Wash",
+                    "iot_power_mix_wash_soil": "Power Mix Wash",
+                    "iot_prewash": "Попереднє миття",
+                    "iot_pyrex_and_glassware": "Пірекс і скляний посуд",
+                    "iot_rapid_29": "Швидкий 29'",
+                    "iot_rapid_39": "Швидкий 39' 60°C",
+                    "iot_single": "Одинокий",
+                    "iot_steam": "Пара 75°C",
+                    "iot_super_flash": "Супер швидкий",
+                    "iot_super_wash": "Супер миття",
+                    "iot_turbopower": "Турбошвидкість",
+                    "iot_universal": "Універсальний 60°C",
+                    "iot_voice_automatic": "Автоматичний",
+                    "iot_voice_delicate": "Делікатний 45°C",
+                    "iot_voice_eco": "Еко 45°C",
+                    "iot_voice_intensive": "Інтенсивний 75°C",
+                    "iot_voice_prewash": "Попереднє миття",
+                    "iot_voice_rapid_59": "Швидкий 59'",
+                    "iot_voice_universal": "Універсальний 60°C",
+                    "iot_wok_grids_maxi_pans": "Спеціальні сковороди (вок, решітки та максі-сковорідки)",
+                    "iot_wok_grids_maxi_pans_soil": "Спеціальні сковороди (вок, решітки та максі-сковорідки)",
+                    "iot_yes_quick_cycle": "Так Швидко",
+                    "night": "Нічний 55°C",
+                    "prewash": "Попереднє миття",
+                    "rapid_20": "Швидкий 20'",
+                    "rapid_24": "Швидкий 24'",
+                    "rapid_29": "Швидкий 29' 50°C",
+                    "rapid_35": "Вимийте і висушіть 35'",
+                    "rapid_39": "Швидкий 39' 60°C",
+                    "rapid_49": "Швидкий 49'",
+                    "rapid_59": "Швидкий 59'",
+                    "sanitising": "Дезінфекція",
+                    "silence": "Тихий",
+                    "silent": "Безшумний",
+                    "silent_care": "Безшумний догляд",
+                    "smart_ai": "Розумний AI",
+                    "smart_ai_pro": "Smart AI Pro",
+                    "smart_ai_pro_soil": "Smart AI Pro",
+                    "smart_ai_rapid": "Smart AI Rapid",
+                    "smart_ai_rapid_soil": "Smart AI Rapid",
+                    "smart_ai_soil": "Розумний AI",
+                    "special": "Спеціальний",
+                    "special_pw_prz": "Спеціальний",
+                    "steam": "Пара 75°C",
+                    "steam_plus": "Пара Плюс 75°C",
+                    "total_care": "Загальний догляд 50°C",
+                    "ultra_silence": "Ультратихий 55°C",
+                    "ultra_silent": "Ультратихий 55°C",
+                    "universal": "Універсальний 60°C",
+                    "universal_plus": "Універсальний Плюс 70°C",
+                    "zone_wash": "Flex Zone Wash",
+                    "zoom_39": "Zoom 39 хв"
+                },
+                "name": "Програма"
+            },
+            "programs_ih": {
+                "state": {
+                    "iot_special_ash_brown": "Попелясто-коричневий",
+                    "iot_special_beef_fillet": "Яловиче філе",
+                    "iot_special_beef_veal_stew": "Рагу з яловичини і телятини",
+                    "iot_special_boiled_rice": "Відварений рис",
+                    "iot_special_chicken_breast": "Куряча грудка",
+                    "iot_special_chicken_legs": "Курячі ніжки",
+                    "iot_special_chocolate_pudding": "Шоколадний пудинг",
+                    "iot_special_entrecote": "Антрекот",
+                    "iot_special_fresh_tuna": "Свіжий тунець",
+                    "iot_special_grilled_vegetables": "Овочі на грилі",
+                    "iot_special_lamb_cutlet": "Котлета з баранини",
+                    "iot_special_meatballs": "Мітболи",
+                    "iot_special_minestrone": "Мінестроне",
+                    "iot_special_mussels": "Молюски",
+                    "iot_special_omelette": "Омлет",
+                    "iot_special_pancakes": "Млинці",
+                    "iot_special_paris_style_peas": "Горошок по-паризьки",
+                    "iot_special_poached_eggs": "Яйця пашот",
+                    "iot_special_pork_fillet": "Філе свинини",
+                    "iot_special_pork_ribs": "Свинячі реберця",
+                    "iot_special_prawns": "Креветки",
+                    "iot_special_quinoa": "Кіноа",
+                    "iot_special_ratatouille": "Рататуй",
+                    "iot_special_salmon_fillet": "Філе лосося",
+                    "iot_special_saute_potatoes": "Смажена картопля",
+                    "iot_special_scallops": "Морські гребінці",
+                    "iot_special_scrambled_eggs": "Яєчний скрамбл",
+                    "iot_special_spelt": "Спельта",
+                    "iot_special_veggy_noodles": "Овочева лапша",
+                    "iot_special_white_fish_fillet": "Філе білої риби",
+                    "iot_standard_boiling": "Кипіння",
+                    "iot_standard_frying": "Смаження",
+                    "iot_standard_keep_warm": "Підтримувати тепло",
+                    "iot_standard_melting": "Розтоплення",
+                    "iot_standard_simmering": "Варіння на повільному вогні"
+                },
+                "name": "Програма"
+            },
+            "programs_ov": {
+                "state": {
+                    "bakery": "Макаронні та хлібобулочні вироби",
+                    "bakery_steam": "Духова шафа",
+                    "bottom_heating": "Нижній нагрів",
+                    "bottom_heating_fan": "Нижній нагрів + вентилятор",
+                    "bread": "Хліб",
+                    "bread_steam": "Хліб, випечений на парі",
+                    "convection_fan": "Конвекція + вентилятор",
+                    "convection_fan_turnspit": "Конвекція + вентилятор + рожен",
+                    "conventional": "Конвекція",
+                    "conventional_turnspit": "Конвекція + рожен",
+                    "defrost": "Розморожування",
+                    "descaling": "Видалення накипу",
+                    "fish": "Риба",
+                    "fish_steam": "Риба на парі",
+                    "grill_cata": "Гриль",
+                    "grill_fan_cata": "Гриль + вентилятор",
+                    "grill_fan_pyro": "Гриль + вентилятор",
+                    "grill_pyro": "Гриль",
+                    "h20_clean": "H2O Clean",
+                    "iot_bread": "Хліб",
+                    "iot_h20_clean": "H2O очищення",
+                    "leavening": "Розпушування",
+                    "low_temp_cooking": "Приготування за низької температури",
+                    "low_temp_cooking_fish": "Приготування за низької температури — риба",
+                    "low_temp_cooking_fish_steam": "Приготування за низької температури — риба на парі",
+                    "low_temp_cooking_meat": "Приготування за низької температури — м’ясо",
+                    "low_temp_cooking_meat_steam": "Приготування за низької температури — м’ясо на парі",
+                    "low_temp_cooking_steam": "Приготування на парі за низької температури",
+                    "meat": "М’ясо",
+                    "meat_steam": "М’ясо на парі",
+                    "multi_level": "Багаторівневе приготування",
+                    "paella": "Паелья",
+                    "pasta_and_bakery": "Макаронні та хлібобулочні вироби",
+                    "pizza": "Піца",
+                    "pyrolysis": "Піроліз",
+                    "pyrolysis_plus": "Піроліз +",
+                    "red_meat": "Червоне м’ясо",
+                    "red_meat_steam": "Червоне м’ясо на парі",
+                    "regenerate": "Регенерувати",
+                    "soft_plus": "Soft+",
+                    "super_grill": "Super Grill",
+                    "tailor_bake": "Tailor Bake",
+                    "tailor_bake_cata": "Tailor Bake",
+                    "tailor_bake_pyro": "Tailor Bake",
+                    "vegetables": "Овочі",
+                    "vegetables_cata": "Овочі",
+                    "vegetables_pyro": "Овочі",
+                    "water_discharge": "Зливання води",
+                    "white_meat": "Біле м’ясо",
+                    "white_meat_steam": "Біле м’ясо на парі"
+                },
+                "name": "Програма"
+            },
+            "programs_td": {
+                "state": {
+                    "active_dry": "Активне сушіння",
+                    "allergy_care": "Антиалергенний",
+                    "all_in_one": "Все в одному",
+                    "antiallergy": "Антиалергенний",
+                    "anti_odours": "Проти неприємних запахів",
+                    "auto_care": "Автодогляд",
+                    "baby": "Дитячі речі",
+                    "bed_quilt": "Стьобана ковдра",
+                    "care_30": "Догляд 30",
+                    "care_45": "Догляд 45",
+                    "care_59": "Догляд 59",
+                    "coloured": "Кольорове",
+                    "daily_45_min": "Щоденне 45'",
+                    "daily_perfect_59_min": "Щоденне для ідеальних результатів 59'",
+                    "darks_and_coloured": "Темні і кольорові",
+                    "delicates": "Делікатні речі",
+                    "duvet": "Ковдра",
+                    "eco": "Еко бавовна",
+                    "ecospeed_cottons": "Екошвидкість для бавовни",
+                    "ecospeed_delicates": "Екошвидкість для делікатних речей",
+                    "ecospeed_mixed": "Екошвидкість для змішаних речей",
+                    "extra_hygiene": "Додаткова гігієна",
+                    "fitness": "Фітнес",
+                    "fresh_care": "Освіжаючий догляд",
+                    "genius": "Геній",
+                    "hqd_baby_care": "Догляд за дитячими речами",
+                    "hqd_bath_towel": "Рушники",
+                    "hqd_bed_sheets": "Простирадла",
+                    "hqd_bulky": "Громіздкі речі",
+                    "hqd_casual": "Повсякденний",
+                    "hqd_checkup": "Перевірка",
+                    "hqd_cold_wind_30": "Прохолодний бриз 30 хвилин",
+                    "hqd_cold_wind_timing": "Холодне повітря",
+                    "hqd_cotton": "Бавовна",
+                    "hqd_curtain": "Штори",
+                    "hqd_delicate": "Делікатні речі",
+                    "hqd_diaper": "Підгузки",
+                    "hqd_duvet": "Стьобана куртка зі синтетичного волокна",
+                    "hqd_eco": "Еко",
+                    "hqd_feather": "Стьобана куртка з натурального волокна",
+                    "hqd_hot_wind_timing": "Теплі відчуття",
+                    "hqd_hygienic": "Гігієнічна обробка",
+                    "hqd_i_refresh": "I-Refresh",
+                    "hqd_i_refresh_pro": "I-Refresh Pro",
+                    "hqd_i_refresh_pro_babycare": "I-Refresh Pro Дитячий одяг",
+                    "hqd_i_refresh_pro_bulky": "I-Refresh Pro Об'ємні речі",
+                    "hqd_i_refresh_pro_delicates": "I-Refresh Pro Делікатні речі",
+                    "hqd_i_refresh_pro_down": "I-Refresh Pro Пух",
+                    "hqd_i_refresh_pro_shirt": "I-Refresh Pro Сорочка",
+                    "hqd_i_refresh_pro_towel": "I-Refresh Pro Рушник",
+                    "hqd_i_refresh_pro_wool": "I-Refresh Pro Вовна",
+                    "hqd_jacket": "Куртки",
+                    "hqd_jeans": "Джинси",
+                    "hqd_luxury": "Дорогоцінні речі",
+                    "hqd_mix": "Змішані речі",
+                    "hqd_night_dry": "Нічне сушіння",
+                    "hqd_outdoor": "Верхній одяг",
+                    "hqd_precious_cure": "Догляд за цінними речами",
+                    "hqd_quick_20": "Швидка 20",
+                    "hqd_quick_30": "Швидка 30",
+                    "hqd_quick_dry": "30-хвилинне автоматичне швидке сушіння",
+                    "hqd_quilt": "Стьобані вироби",
+                    "hqd_refresh": "Освіження",
+                    "hqd_school_uniform": "Шкільна форма",
+                    "hqd_shirt": "Сорочки",
+                    "hqd_shoes": "Взуття",
+                    "hqd_silk": "Шовк",
+                    "hqd_sports": "Спортивні речі",
+                    "hqd_synthetics": "Синтетика",
+                    "hqd_timer": "ТАЙМЕР",
+                    "hqd_towel": "Рушники",
+                    "hqd_underwear": "Спідня білизна",
+                    "hqd_warm_up": "Підігрів",
+                    "hqd_wool": "Вовна",
+                    "hqd_working_suit": "Спецодяг",
+                    "hygiene": "Гігієна",
+                    "iot_checkup": "Перевірка",
+                    "iot_dry_anti_mites": "Анти-кліщи",
+                    "iot_dry_baby": "Дитячі речі",
+                    "iot_dry_backpacks": "Рюкзаки",
+                    "iot_dry_bathrobe": "Банний халат",
+                    "iot_dry_bed_linen": "Постільна білизна",
+                    "iot_dry_bed_quilt": "Стьобана ковдра",
+                    "iot_dry_cotton": "Бавовна",
+                    "iot_dry_cuddly_toys": "М'які іграшки",
+                    "iot_dry_curtains": "Штори",
+                    "iot_dry_dehumidifier": "Видалення вологи",
+                    "iot_dry_delicates": "Делікатні речі",
+                    "iot_dry_delicate_tablecloths": "Делікатні скатертини",
+                    "iot_dry_denim_jeans": "Джинсові тканини - Джинси",
+                    "iot_dry_down_jacket": "Куртка",
+                    "iot_dry_duvet": "Ковдра",
+                    "iot_dry_easy_iron_cotton": "Суперлегке прасування",
+                    "iot_dry_easy_iron_synthetics": "Суперлегке прасування - Синтетика",
+                    "iot_dry_gym_fit": "Спортивний одяг - Фітнес",
+                    "iot_dry_lingerie": "Жіноча білизна",
+                    "iot_dry_mixed": "Змішані речі",
+                    "iot_dry_pet_accessories": "Аксесуари для домашніх тварин",
+                    "iot_dry_pet_hair_removal": "Видалення шерсті домашніх тварин (попереднє миття)",
+                    "iot_dry_playsuits": "Комбінезони",
+                    "iot_dry_rapid_30": "Швидкий 30 хвилин",
+                    "iot_dry_rapid_59": "Швидкий 59'",
+                    "iot_dry_refresh": "Refresh",
+                    "iot_dry_regenerates_waterproof": "Відновлення водонепроникності",
+                    "iot_dry_relax_creases": "Розгладжування складок",
+                    "iot_dry_shirts": "Сорочки",
+                    "iot_dry_small_load": "Невелике завантаження",
+                    "iot_dry_swimsuits_and_bikinis": "Купальники та бікіні",
+                    "iot_dry_synthetics": "Синтетика",
+                    "iot_dry_synthetic_dry": "Сушіння синтетики",
+                    "iot_dry_tablecloths": "Скатертини",
+                    "iot_dry_technical_fabrics": "Технічні тканини",
+                    "iot_dry_warm_embrace": "Теплі відчуття",
+                    "iot_dry_wool": "Вовна",
+                    "jeans": "Джинси",
+                    "mix_and_dry": "Сушіння змішаного одягу",
+                    "pets": "Домашні тварини",
+                    "pre_iron": "Попереднє прасування",
+                    "rapid_30": "Швидкий 30 хвилин",
+                    "rapid_45": "Швидкий 45 хвилин",
+                    "rapid_59": "Ідеальний швидкий 59 хвилин",
+                    "refresh": "Refresh",
+                    "relax_creases": "Розгладжування складок",
+                    "saving_30_min": "Економія 30'",
+                    "shirts": "Сорочки",
+                    "shoes": "Взуття",
+                    "small_load": "Невелике завантаження",
+                    "soft_care": "М'який догляд",
+                    "sport_plus": "Спорт Плюс",
+                    "super_easy_iron_misti": "Суперлегке прасування - Змішані тканини",
+                    "super_easy_iron_xxl": "Суперлегке прасування - XXL",
+                    "super_fast_cottons": "Надшвидкий - Бавовна",
+                    "super_fast_delicates": "Надшвидкий - Делікатні речі",
+                    "synthetics": "Синтетика",
+                    "total_care": "Повна турбота",
+                    "trainers": "Кросівки",
+                    "ultra_care": "Ультра догляд",
+                    "waterproof_revitalize": "Відновлення водостійкості",
+                    "whites": "Білі речі",
+                    "wool": "сушіння вовни",
+                    "woolmark": "Вовна",
+                    "xxl_load": "Завантаження XXL",
+                    "zoom_59": "Zoom 59"
+                },
+                "name": "Програма"
+            },
+            "programs_wm": {
+                "state": {
+                    "20_degrees_coloured_cottons": "20° кольорові та бавовняні речі",
+                    "20_degrees_new_energy_label": "20°C",
+                    "active_steam": "Пара 29'",
+                    "active_wash": "Активне прання 20'",
+                    "active_wash_steam": "Активне прання 20' + Пара",
+                    "allergy_care": "Антиалергенний",
+                    "allergy_care_pro": "Антиалергенний Про",
+                    "all_in_one_49": "Все в одному 49'",
+                    "all_in_one_59": "Все в одному 59'",
+                    "all_in_one_59_steam": "Все в одному 59' + Пара",
+                    "autocare": "Автоматичний догляд",
+                    "autoclean": "Очищення барабана",
+                    "baby_60": "Всі дитячі речі 60°C",
+                    "care_14": "Швидкий догляд 14'",
+                    "care_30": "Швидкий догляд 30'",
+                    "care_44": "Швидкий догляд 44'",
+                    "checkup": "Перевірка",
+                    "colour_59": "Кольорові речі 59'",
+                    "colour_59_steam": "Кольорові речі 59 ' + Пара",
+                    "cottons": "Бавовна",
+                    "cottons_prewash": "Бавовна + Попереднє прання",
+                    "cottons_steam": "Бавовна + Пара",
+                    "cotton_care_59": "Догляд за бавовною 59'",
+                    "cycle_ended": "Цикл завершено",
+                    "delicate_59": "Делікатний 59'",
+                    "delicate_silk": "Делікатні речі та шовк 59'",
+                    "delicate_silk_steam": "Делікатні речі та шовк + Пара",
+                    "delicati_59": "Делікатний 59'",
+                    "delicati_59_steam": "Делікатний 59' + Пара",
+                    "drain_spin": "Злив + Віджим",
+                    "easy_iron": "Легке прасування 39'",
+                    "eco_40_60_new_energy_label": "Еко 40-60",
+                    "extra_care": "Додатковий догляд",
+                    "fitness": "Фітнес-догляд",
+                    "fitness_care": "Фітнес-догляд",
+                    "fresh_care": "Освіжаючий догляд 59'",
+                    "fresh_care_steam": "Освіжаючий догляд + Пара",
+                    "handwash_wool": "Ручне прання + Вовна 48'",
+                    "high_dry": "Високотемпературне сушіння",
+                    "hqd_20_degrees": "Бавовна 20℃",
+                    "hqd_allergy": "Антиалергенний",
+                    "hqd_autoclean": "Очищення барабана",
+                    "hqd_babycare": "Догляд за дитячими речами",
+                    "hqd_checkup": "Перевірка",
+                    "hqd_cottons": "Бавовна",
+                    "hqd_delicate": "Делікатний 50'",
+                    "hqd_delicate_cradle": "Делікатний",
+                    "hqd_dry": "Сушіння бавовни",
+                    "hqd_dry_synthetics": "Низькотемпературне сушіння",
+                    "hqd_duvet": "Ковдра",
+                    "hqd_eco_40_60_degrees": "Еко 40-60",
+                    "hqd_handwash_wool": "Вовна 40'",
+                    "hqd_i_refresh": "i-Refresh",
+                    "hqd_mix": "Змішаний",
+                    "hqd_quick_15": "Швидкий 15'",
+                    "hqd_quick_wash_57": "Швидке прання 57'",
+                    "hqd_rapid_wash_and_dry": "Прання та сушіння",
+                    "hqd_refresh": "Refresh",
+                    "hqd_rinse": "Полоскання",
+                    "hqd_shirts": "Сорочки",
+                    "hqd_smart": "Штучний інтелект",
+                    "hqd_spin": "Віджим",
+                    "hqd_sport": "Спортивний 25'",
+                    "hqd_super_fast": "Надшвидкий - 39'",
+                    "hqd_synthetic_and_coloured": "Синтетика",
+                    "hygiene_59": "Гігієна Плюс 59'",
+                    "hygiene_60": "Гігієна 60°C",
+                    "hygiene_plus_59": "Гігієна Плюс 59'",
+                    "hygiene_plus_59_min": "Гігієна Плюс 59'",
+                    "hygiene_pro_49_min": "Гігієна Про 49'",
+                    "hygiene_pro_steam": "Гігієна Про + Пара",
+                    "intensive_40": "Інтенсивний 40°C",
+                    "intensive_40_steam": "Інтенсивний 40°C + Пара",
+                    "iot_active_wash_steam": "Активне прання 20' + Пара",
+                    "iot_all_in_one_59_steam": "Все в одному 59' + Пара",
+                    "iot_baby_60_steam": "Всі дитячі речі 60°C + пара",
+                    "iot_checkup": "Перевірка",
+                    "iot_dry_air_refresh": "Миттєве освіження",
+                    "iot_dry_anti_mites": "Анти-кліщи",
+                    "iot_dry_baby": "Дитячі речі",
+                    "iot_dry_backpacks": "Рюкзаки",
+                    "iot_dry_bathrobe": "Банні халати",
+                    "iot_dry_bed_linen": "Постільна білизна",
+                    "iot_dry_cotton_dry": "Сушіння бавовни",
+                    "iot_dry_cuddly_toys": "М'які іграшки",
+                    "iot_dry_curtains": "Штори",
+                    "iot_dry_dehumidifier": "Видалення вологи",
+                    "iot_dry_delicates_antiallergy": "Антиалергенний для делікатних речей",
+                    "iot_dry_delicate_tablecloths": "Делікатні скатертини",
+                    "iot_dry_denim_jeans": "Джинсові тканини - Джинси",
+                    "iot_dry_easy_iron_cotton": "Легке прасування - Бавовна",
+                    "iot_dry_easy_iron_synthetics": "Легке прасування - Синтетика",
+                    "iot_dry_gym_fit": "Спортивний одяг - Фітнес",
+                    "iot_dry_lingerie": "Жіноча білизна",
+                    "iot_dry_mixed_dry": "Сушіння змішаного одягу",
+                    "iot_dry_rapid_60_min_delicates": "Швидкий 60' - Делікатні речі",
+                    "iot_dry_shirts": "Сорочки",
+                    "iot_dry_swimsuits_and_bikinis": "Купальники та бікіні",
+                    "iot_dry_synthetics": "Сушіння синтетики",
+                    "iot_dry_synthetic_dry": "Сушіння синтетики",
+                    "iot_dry_tablecloths": "Скатертини",
+                    "iot_dry_technical_fabrics": "Технічні тканини",
+                    "iot_dry_warm_embrace": "Теплі обійми",
+                    "iot_dry_wool_dry": "Сушіння вовни",
+                    "iot_easy_iron": "Легке прасування 39'",
+                    "iot_jeans_60_steam": "Джинси + пара",
+                    "iot_jeans_steam": "Джинси + пара",
+                    "iot_wash_and_dry": "Прання та сушіння",
+                    "iot_wash_anti_mites": "Анти-кліщи",
+                    "iot_wash_anti_odor": "Проти неприємних запахів",
+                    "iot_wash_baby_sanitizer": "Дезінфекція",
+                    "iot_wash_baby_sanitizer_steam": "Дезінфекція + Пара",
+                    "iot_wash_backpacks": "Рюкзаки",
+                    "iot_wash_backpacks_zelig": "Рюкзаки",
+                    "iot_wash_bathrobe": "Халати та рушники",
+                    "iot_wash_bathrobe_steam": "Халати та рушники + Пара",
+                    "iot_wash_bed_linen": "Постільна білизна",
+                    "iot_wash_bed_linen_steam": "Постільна білизна + Пара",
+                    "iot_wash_bed_linen_zelig": "Постільна білизна",
+                    "iot_wash_big_single_load": "Велике разове завантаження",
+                    "iot_wash_bleaching": "Відбілювання",
+                    "iot_wash_blood_stains": "Плями крові",
+                    "iot_wash_cashmere": "Кашемір",
+                    "iot_wash_chocolate_stains": "Шоколадні плями",
+                    "iot_wash_cold_wash": "Холодне прання",
+                    "iot_wash_colored": "Кольорове",
+                    "iot_wash_colored_anti_stain": "Видалення плям для кольорових речей",
+                    "iot_wash_colored_delicate": "Кольорові делікатні речі",
+                    "iot_wash_coloured": "Кольорове",
+                    "iot_wash_coloured_bed_linen": "Кольорова постільна білизна",
+                    "iot_wash_coloured_bed_linen_steam": "Кольорова постільна білизна + Пара",
+                    "iot_wash_coloured_curtains": "Кольорові штори",
+                    "iot_wash_coloured_shirts": "Кольорові сорочки 59'",
+                    "iot_wash_coloured_shirts_steam": "Кольорові сорочки + Пара",
+                    "iot_wash_coloured_steam": "Кольорові речі + Парова",
+                    "iot_wash_coloured_tableclothes": "Кольорові скатертини",
+                    "iot_wash_coloured_tableclothes_steam": "Кольорові скатертини + Пара",
+                    "iot_wash_cotton": "Бавовна",
+                    "iot_wash_cotton_steam": "Бавовна + Пара",
+                    "iot_wash_cuddly_toys": "М'які іграшки",
+                    "iot_wash_curtains": "Штори",
+                    "iot_wash_curtains_steam": "Штори + Пара",
+                    "iot_wash_curtains_zelig": "Штори",
+                    "iot_wash_dark": "Темний",
+                    "iot_wash_darks_and_coloured_44": "Темні та кольорові речі 44'",
+                    "iot_wash_darks_and_coloured_59": "Темні та кольорові речі 59'",
+                    "iot_wash_darks_and_coloured_xl": "Темні та кольорові речі XL",
+                    "iot_wash_dark_steam": "Темні речі + Пара",
+                    "iot_wash_delicate": "Делікатні речі",
+                    "iot_wash_delicate_antiallergy": "Антиалергенний для делікатних речей",
+                    "iot_wash_delicate_antiallergy_steam": "Антиалергенний для делікатних речей + Пара",
+                    "iot_wash_delicate_antiallergy_zelig": "Антиалергенний для делікатних речей",
+                    "iot_wash_delicate_colors": "Делікатні кольорові речі",
+                    "iot_wash_delicate_colors_steam": "Делікатні кольорові речі + Пара",
+                    "iot_wash_delicate_dark": "Делікатні темні речі",
+                    "iot_wash_delicate_steam": "Делікатні речі + Пара",
+                    "iot_wash_delicate_tablecloths": "Делікатні скатертини",
+                    "iot_wash_delicate_tablecloths_steam": "Делікатні скатертини + Пара",
+                    "iot_wash_delicate_whites": "Делікатні білі речі",
+                    "iot_wash_denim_jeans": "Джинсові тканини - Джинси",
+                    "iot_wash_diving_suits": "Водолазні костюми",
+                    "iot_wash_diving_suits_zelig": "Водолазні костюми",
+                    "iot_wash_down_jackets": "Пуховики",
+                    "iot_wash_down_jackets_zelig": "Пуховики",
+                    "iot_wash_duvet": "Ковдра",
+                    "iot_wash_fruit_stains": "Плями від фруктів",
+                    "iot_wash_gym_fit": "Спортивний одяг - Фітнес 59'",
+                    "iot_wash_handwash": "Ручне прання",
+                    "iot_wash_handwash_colored": "Ручне прання для кольорових речей",
+                    "iot_wash_handwash_dark": "Ручне прання для темних речей",
+                    "iot_wash_lingerie": "Жіноча білизна",
+                    "iot_wash_masks_refresh": "Освіження масок",
+                    "iot_wash_masks_sanification": "Дезінфекція масок",
+                    "iot_wash_masks_sanification_steam": "Дезінфекція масок + Пара",
+                    "iot_wash_mats": "Килимки",
+                    "iot_wash_men_s_trousers": "Штани",
+                    "iot_wash_mixed": "Змішані речі",
+                    "iot_wash_mixed_steam": "Змішані речі + Пара",
+                    "iot_wash_mix_and_coloured_44": "Змішані та кольорові речі 44'",
+                    "iot_wash_mix_and_coloured_59": "Змішані та кольорові речі 59'",
+                    "iot_wash_mix_and_coloured_xl": "Змішані та кольорові речі XL",
+                    "iot_wash_new_clothes": "Новий одяг",
+                    "iot_wash_perfect_white": "Ідеальний білий",
+                    "iot_wash_perfect_white_steam": "Ідеальний білий + Пара",
+                    "iot_wash_pets": "Аксесуари для домашніх тварин",
+                    "iot_wash_pets_hair_removal": "Видалення шерсті домашніх тварин",
+                    "iot_wash_pets_odours_stains_removal": "Видалення запахів і плям від домашніх тварин",
+                    "iot_wash_pets_steam": "Аксесуари для домашніх тварин + Пара",
+                    "iot_wash_playsuits": "Комбінезони",
+                    "iot_wash_playsuits_steam": "Комбінезони + Пара",
+                    "iot_wash_quick_drum_cleaner": "Швидке очищення барабана",
+                    "iot_wash_rapid_14": "Швидкий 14'",
+                    "iot_wash_rapid_30": "Швидкий 30'",
+                    "iot_wash_rapid_44": "Швидкий 44'",
+                    "iot_wash_rapid_59": "Швидкий 59'",
+                    "iot_wash_rapid_59_steam": "Швидкий 59' + Пара",
+                    "iot_wash_refresh_14_min": "Освіження 14'",
+                    "iot_wash_resistant_colored": "Стійкі кольорові",
+                    "iot_wash_resistant_dark": "Зносостійкі темні речі",
+                    "iot_wash_resistant_whites": "Стійкі білі речі",
+                    "iot_wash_rinse": "Полоскання",
+                    "iot_wash_shirts": "Сорочки",
+                    "iot_wash_shirts_steam": "Сорочки + Пара",
+                    "iot_wash_silk": "Шовк",
+                    "iot_wash_ski_suit": "Лижні костюми",
+                    "iot_wash_ski_suit_zelig": "Лижні костюми",
+                    "iot_wash_spin": "Віджим",
+                    "iot_wash_sport": "Спортивний",
+                    "iot_wash_sport_anti_odor": "Проти неприємних запахів спортивного одягу",
+                    "iot_wash_sport_anti_odor_zelig": "Проти неприємних запахів спортивного одягу",
+                    "iot_wash_stains_remover": "Виведення плям",
+                    "iot_wash_super_saving": "Супер економічна 49 хв.",
+                    "iot_wash_swimsuits_and_bikinis": "Купальники та бікіні",
+                    "iot_wash_synthetic": "Синтетика",
+                    "iot_wash_synthetic_steam": "Синтетика + Пара",
+                    "iot_wash_tablecloths": "Скатертини",
+                    "iot_wash_tablecloths_steam": "Скатертини + Пара",
+                    "iot_wash_technical_fabrics": "Технічні тканини",
+                    "iot_wash_technical_fabrics_zelig": "Технічні тканини",
+                    "iot_wash_technical_jackets": "Технічні куртки",
+                    "iot_wash_technical_jackets_zelig": "Технічні куртки",
+                    "iot_wash_trainers": "Кросівки",
+                    "iot_wash_whites": "Білі речі",
+                    "iot_wash_whites_44": "Білі речі 44'",
+                    "iot_wash_whites_59": "Білі речі 59'",
+                    "iot_wash_whites_xl": "Білі речі XL",
+                    "iot_wash_wine_stains": "Плями від вина",
+                    "iot_wash_wool": "Вовна",
+                    "jeans": "Джинси",
+                    "jeans_60": "Джинси",
+                    "jeans_60_steam": "Джинси + пара",
+                    "low_dry": "Низькотемпературне сушіння",
+                    "mixed": "Змішані речі",
+                    "mixed_and_colored_59": "Змішані та кольорові речі 59'",
+                    "mixed_steam": "Змішані речі + Пара",
+                    "mix_and_colour_59": "Змішані та кольорові речі 59'",
+                    "mix_and_colour_59_steam": "Змішані та кольорові речі 59' + Пара",
+                    "night_and_day": "Ніч і день",
+                    "night_wash": "Нічне прання",
+                    "perfect_59": "Ідеальний 59'",
+                    "perfect_cotton_59": "Ідеальний - Бавовна 59'",
+                    "perfect_cotton_59_steam": "Ідеальний - Бавовна 59' + Пара",
+                    "perfect_whites_59": "Ідеальний - Білі речі 59'",
+                    "rapid_14_min": "Швидкий 14'",
+                    "rapid_30_min": "Швидкий 30'",
+                    "rapid_44_min": "Швидкий 44'",
+                    "rapid_a_class_60": "Швидкий 59' Клас А",
+                    "rapid_a_class_60_steam": "Швидкий 59' Клас А + Пара",
+                    "rapid_wash_and_dry_59_min": "Прання та сушіння 59'",
+                    "resistant_cotton": "Зносостійка бавовна",
+                    "resistant_cotton_steam": "Зносостійка бавовна + Пара",
+                    "rinse": "Полоскати",
+                    "shirts_steam": "Сорочки + Пара",
+                    "silent_night": "Тиха ніч",
+                    "single_item": "Один предмет 20'",
+                    "single_item_steam": "Один предмет + Пара",
+                    "smart_wash": "Розумне прання",
+                    "soft_care": "М'який догляд",
+                    "soft_care_steam": "М'який догляд + Пара",
+                    "soft_care_steam_title": "М'який догляд + Пара",
+                    "special_39": "Спеціальний 39'",
+                    "special_39_full_load": "Спеціальний 39'",
+                    "special_39_full_load_steam": "Спеціальний 39' + Пара",
+                    "special_49": "Спеціальний 49'",
+                    "sport_39": "Спорт 39'",
+                    "sport_plus_29": "Спорт Плюс 29\"",
+                    "sport_plus_39": "Спорт Плюс 39'",
+                    "steam_39": "Пара 39'",
+                    "steam_care_pro": "Догляд парою Про",
+                    "steam_care_pro_cotton": "Догляд парою Про - Бавовна",
+                    "steam_care_pro_delicates": "Догляд парою Про - Делікатні речі 16'",
+                    "steam_care_pro_synthetic": "Догляд парою Про - Синтетика 20'",
+                    "steam_hygiene_plus": "Гігієна Плюс + Пара",
+                    "synthetics": "Синтетика",
+                    "synthetic_and_coloured": "Синтетичні та кольорові речі",
+                    "synthetic_and_coloured_steam": "Синтетичні та кольорові речі + Пара",
+                    "tailored_resistant_cotton": "Зносостійка бавовна, адаптований",
+                    "tailored_synthetic_and_coloured": "Синтетичні кольорові речі, адаптований",
+                    "total_care": "Повна турбота",
+                    "tumbling": "Машинне сушіння",
+                    "ultra_fresh": "Ultra Fresh",
+                    "wool": "Вовна",
+                    "wool_and_delicates_49": "Вовна і делікатні речі 49'",
+                    "wool_dry": "Сушіння вовни",
+                    "wool_soft_care": "Вовна та м'який догляд 48'"
+                },
+                "name": "Програма"
+            },
+            "programs_ref": {
+                "state": {
+                    "auto_set": "АВТО-НАЛАШТУВАННЯ",
+                    "cheese": "Сир",
+                    "chiller": "Швидке охолодження",
+                    "cold_drinks": "М'яке охолодження",
+                    "cool_drink": "Cool Drink",
+                    "eco": "Еко",
+                    "eco_mode": "Еко-режим",
+                    "fruits": "Fruit",
+                    "fruits_and_veg": "Фрукти та овочі",
+                    "fruit_and_veg": "Фрукти та овочі",
+                    "holiday": "ВІДПУСТКА",
+                    "keep_fresh": "0°C Fresh",
+                    "milk_and_eggs": "Milk & Eggs",
+                    "no_mode_selected": "Режим не вибрано",
+                    "quick_cool": "ШВИДКЕ ОХОЛОДЖЕННЯ",
+                    "quick_set": "Швидке налаштування",
+                    "sea_food": "Готова до приготування страва",
+                    "smart_mode_title": "Smart Mode",
+                    "soft_frozen": "Soft freezing",
+                    "super_cool": "СУПЕРОХОЛОДЖЕННЯ",
+                    "super_freeze": "СУПЕРЗАМОРОЖУВАННЯ",
+                    "tea": "Cold Drinks",
+                    "vegetables": "Vegetable",
+                    "zero_fresh": "0°C Fresh"
+                },
+                "name": "Програма"
+            },
+            "dry_time": {
+                "name": "Час сушіння"
+            },
+            "spin_speed": {
+                "name": "Віджим"
+            },
+            "temperature": {
+                "name": "Температура"
+            },
+            "remaining_time": {
+                "name": "Час, що залишився"
+            }
+        },
+        "switch": {
+            "anti_crease": {
+                "name": "Захист від складок"
+            },
+            "add_dish": {
+                "name": "Додати посуд"
+            },
+            "eco_express": {
+                "name": "Еко"
+            },
+            "extra_dry": {
+                "name": "Екстра сухий"
+            },
+            "half_load": {
+                "name": "Половинне завантаження"
+            },
+            "open_door": {
+                "name": "Відчиніть дверцята"
+            },
+            "three_in_one": {
+                "name": "3 in 1"
+            },
+            "preheat": {
+                "name": "Попереднє нагрівання"
+            },
+            "dish_washer": {
+                "name": "Посудомийна машина"
+            },
+            "tumble_dryer": {
+                "name": "Сушарка"
+            },
+            "washing_machine": {
+                "name": "Пральна машина"
+            },
+            "washer_dryer": {
+                "name": "Пральна машина з сушаркою"
+            },
+            "oven": {
+                "name": "Духова шафа"
+            },
+            "prewash": {
+                "name": "Попереднє миття"
+            },
+            "pause": {
+                "name": "Pause"
+            },
+            "keep_fresh": {
+                "name": "Keep Fresh"
+            },
+            "delay_time": {
+                "name": "Відкладення запуску"
+            },
+            "rapid_mode": {
+                "name": "Режим швидкий"
+            },
+            "eco_mode": {
+                "name": "ECO mode"
+            },
+            "10_degree_heating": {
+                "name": "Функція нагріву при температурі 10°C"
+            },
+            "self_clean": {
+                "name": "Самоочищення"
+            },
+            "self_clean_56": {
+                "name": "Steri-Clean 56°C"
+            },
+            "silent_mode": {
+                "name": "Режим Тихий"
+            },
+            "night_mode": {
+                "name": "Нічний режим"
+            },
+            "extra_rinse_1": {
+                "name": "+ 1 полоскання"
+            },
+            "extra_rinse_2": {
+                "name": "+ 2 полоскання"
+            },
+            "extra_rinse_3": {
+                "name": "+ 3 полоскання"
+            },
+            "acqua_plus": {
+                "name": "Акваплюс"
+            },
+            "auto_dose_softener": {
+                "name": "Автодозування Пом'якшувач"
+            },
+            "auto_dose_detergent": {
+                "name": "Автодозування Миючий засіб"
+            },
+            "good_night": {
+                "name": "На добраніч"
+            },
+            "auto_set": {
+                "name": "АВТО-НАЛАШТУВАННЯ"
+            },
+            "super_cool": {
+                "name": "Суперохолодження"
+            },
+            "super_freeze": {
+                "name": "Суперзаморожування"
+            },
+            "refrigerator": {
+                "name": "Холодильник"
+            },
+            "touch_tone": {
+                "name": "Гучність натискання"
+            },
+            "hygiene": {
+                "name": "Гігієна плюс"
+            },
+            "hood": {
+                "name": "Витяжка"
+            }
+        },
+        "binary_sensor": {
+            "door_lock": {
+                "name": "Блокування дверцят"
+            },
+            "extra_rinse_1": {
+                "name": "+ 1 полоскання"
+            },
+            "extra_rinse_2": {
+                "name": "+ 2 полоскання"
+            },
+            "extra_rinse_3": {
+                "name": "+ 3 полоскання"
+            },
+            "good_night": {
+                "name": "На добраніч"
+            },
+            "anti_crease": {
+                "name": "Захист від складок"
+            },
+            "acqua_plus": {
+                "name": "Акваплюс"
+            },
+            "spin_speed": {
+                "name": "Віджим"
+            },
+            "still_hot": {
+                "name": "Все ще гарячий"
+            },
+            "pan_status": {
+                "name": "Сковорода"
+            },
+            "remote_control": {
+                "name": "Controllo remoto"
+            },
+            "rinse_aid": {
+                "name": "Рівень ополіскувача"
+            },
+            "salt_level": {
+                "name": "Рівень солі"
+            },
+            "door_open": {
+                "name": "Дверцята відчинені"
+            },
+            "connection": {
+                "name": "З'єднання з приладом"
+            },
+            "child_lock": {
+                "name": "Блокування від дітей"
+            },
+            "on": {
+                "name": "Увімкнути"
+            },
+            "prewash": {
+                "name": "Попереднє миття"
+            },
+            "buzzer": {
+                "name": "Звуковий сигнал закінчення циклу"
+            },
+            "holiday_mode": {
+                "name": "Святковий режим"
+            },
+            "auto_set": {
+                "name": "АВТО-НАЛАШТУВАННЯ"
+            },
+            "super_cool": {
+                "name": "Суперохолодження"
+            },
+            "super_freeze": {
+                "name": "Суперзаморожування"
+            },
+            "freezer_door": {
+                "name": "Дверцята відчинені Морозильна камера"
+            },
+            "fridge_door": {
+                "name": "Дверцята відчинені Холодильник"
+            },
+            "filter_replacement": {
+                "name": "Заміна фільтра"
+            }
+        },
+        "button": {
+            "induction_hob": {
+                "name": "Індукційна варильна панель"
+            },
+            "start_program": {
+                "name": "Програма Запустити"
+            },
+            "stop_program": {
+                "name": "Програма Зупинити"
+            }
+        },
+        "number": {
+            "power_management": {
+                "name": "Управління живленням"
+            },
+            "temperature": {
+                "name": "Температура"
+            },
+            "delay_time": {
+                "name": "Відкладення запуску"
+            },
+            "water_hard": {
+                "name": "Жорсткість води"
+            },
+            "program_duration": {
+                "name": "Тривалість програми"
+            },
+            "target_temperature": {
+                "name": "Задана температура"
+            },
+            "rinse_iterations": {
+                "name": "Кількість полоскань"
+            },
+            "wash_time": {
+                "name": "Інтенсивність прання"
+            },
+            "dry_time": {
+                "name": "Час сушіння"
+            },
+            "freezer_temp_sel": {
+                "name": "Задана температура Морозильна камера"
+            },
+            "fridge_temp_sel": {
+                "name": "Задана температура Холодильник"
+            },
+            "my_zone_temp_sel": {
+                "name": "Задана температура My Zone"
+            },
+            "pollen_level": {
+                "name": "Рівень пилку"
+            },
+            "aroma_time_on": {
+                "name": "Дифузор (ON)"
+            },
+            "aroma_time_off": {
+                "name": "Дифузор (OFF)"
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "name": "Кондиціонер",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Програма",
+                        "state": {
+                            "iot_10_heating": "Функція нагріву при температурі 10°C",
+                            "iot_auto": "Авто",
+                            "iot_cool": "Охолодження",
+                            "iot_dry": "Осушення",
+                            "iot_fan": "Вентиляція",
+                            "iot_heat": "Обігрів",
+                            "iot_nano_aqua": "Nano Aqua",
+                            "iot_purify": "Самоочищення",
+                            "iot_self_clean": "Самоочищення",
+                            "iot_self_clean_56": "Steri-Clean 56°C",
+                            "iot_simple_start": "Запустити",
+                            "iot_uv": "Ультрафіолет",
+                            "iot_uv_and_auto": "УФ + Авто",
+                            "iot_uv_and_cool": "УФ + Холод",
+                            "iot_uv_and_dry": "УФ + осушувач повітря",
+                            "iot_uv_and_fan": "УФ + вентилятор",
+                            "iot_uv_and_heat": "УФ + тепло"
+                        }
+                    }
+                }
+            },
+            "fridge": {
+                "name": "Холодильник",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Режими роботи холодильника",
+                        "state": {
+                            "auto_set": "АВТО-НАЛАШТУВАННЯ",
+                            "super_cool": "Суперохолодження",
+                            "holiday": "Відпустка",
+                            "no_mode": "Режим не вибрано"
+                        }
+                    }
+                }
+            },
+            "freezer": {
+                "name": "Морозильна камера",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Режими заморожування",
+                        "state": {
+                            "auto_set": "АВТО-НАЛАШТУВАННЯ",
+                            "super_freeze": "Суперзаморожування",
+                            "no_mode": "Режим не вибрано"
+                        }
+                    }
+                }
+            },
+            "oven": {
+                "name": "Духова шафа",
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Програма",
+                        "state": {
+                            "bakery": "Макаронні та хлібобулочні вироби",
+                            "bakery_steam": "Духова шафа",
+                            "bottom_heating": "Нижній нагрів",
+                            "bottom_heating_fan": "Нижній нагрів + вентилятор",
+                            "bread": "Хліб",
+                            "bread_steam": "Хліб, випечений на парі",
+                            "convection_fan": "Конвекція + вентилятор",
+                            "convection_fan_turnspit": "Конвекція + вентилятор + рожен",
+                            "conventional": "Конвекція",
+                            "conventional_turnspit": "Конвекція + рожен",
+                            "defrost": "Розморожування",
+                            "descaling": "Видалення накипу",
+                            "fish": "Риба",
+                            "fish_steam": "Риба на парі",
+                            "grill_cata": "Гриль",
+                            "grill_fan_cata": "Гриль + вентилятор",
+                            "grill_fan_pyro": "Гриль + вентилятор",
+                            "grill_pyro": "Гриль",
+                            "h20_clean": "H2O Clean",
+                            "iot_bread": "Хліб",
+                            "iot_h20_clean": "H2O очищення",
+                            "leavening": "Розпушування",
+                            "low_temp_cooking": "Приготування за низької температури",
+                            "low_temp_cooking_fish": "Приготування за низької температури — риба",
+                            "low_temp_cooking_fish_steam": "Приготування за низької температури — риба на парі",
+                            "low_temp_cooking_meat": "Приготування за низької температури — м’ясо",
+                            "low_temp_cooking_meat_steam": "Приготування за низької температури — м’ясо на парі",
+                            "low_temp_cooking_steam": "Приготування на парі за низької температури",
+                            "meat": "М’ясо",
+                            "meat_steam": "М’ясо на парі",
+                            "multi_level": "Багаторівневе приготування",
+                            "paella": "Паелья",
+                            "pasta_and_bakery": "Макаронні та хлібобулочні вироби",
+                            "pizza": "Піца",
+                            "pyrolysis": "Піроліз",
+                            "pyrolysis_plus": "Піроліз +",
+                            "red_meat": "Червоне м’ясо",
+                            "red_meat_steam": "Червоне м’ясо на парі",
+                            "regenerate": "Регенерувати",
+                            "soft_plus": "Soft+",
+                            "super_grill": "Super Grill",
+                            "tailor_bake": "Tailor Bake",
+                            "tailor_bake_cata": "Tailor Bake",
+                            "tailor_bake_pyro": "Tailor Bake",
+                            "vegetables": "Овочі",
+                            "vegetables_cata": "Овочі",
+                            "vegetables_pyro": "Овочі",
+                            "water_discharge": "Зливання води",
+                            "white_meat": "Біле м’ясо",
+                            "white_meat_steam": "Біле м’ясо на парі"
+                        }
+                    }
+                }
+            },
+            "my_zone": {
+                "name": "My Zone"
+            },
+            "wine": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Винна шафа",
+                        "state": {
+                            "iot_champagne": "Шампанське",
+                            "iot_dessert": "Десерт",
+                            "iot_fortified": "Кріплене",
+                            "iot_rose": "Рожеве",
+                            "iot_whisky": "Віскі",
+                            "red": "Червоне",
+                            "sparkling": "Ігристе",
+                            "white": "Біле"
+                        }
+                    }
+                }
+            }
+        },
+        "fan": {
+            "air_extraction": {
+                "name": "Витяжка повітря"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Світло"
+            }
+        }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "description": "Авторизуйтеся",
+                "data": {
+                    "email": "Email",
+                    "password": "Пароль"
+                }
+            }
+        }
+    }
+}

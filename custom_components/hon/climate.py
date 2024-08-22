@@ -26,7 +26,7 @@ from pyhon.appliance import HonAppliance
 from pyhon.parameter.range import HonParameterRange
 
 from .const import HON_HVAC_MODE, HON_FAN, DOMAIN, HON_HVAC_PROGRAM
-from .hon import HonEntity
+from .entity import HonEntity
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -108,7 +108,7 @@ async def async_setup_entry(
 ) -> None:
     entities = []
     entity: HonClimateEntity | HonACClimateEntity
-    for device in hass.data[DOMAIN][entry.unique_id].appliances:
+    for device in hass.data[DOMAIN][entry.unique_id]["hon"].appliances:
         for description in CLIMATES.get(device.appliance_type, []):
             if isinstance(description, HonACClimateEntityDescription):
                 if description.key not in list(device.commands):
@@ -120,13 +120,13 @@ async def async_setup_entry(
                 entity = HonClimateEntity(hass, entry, device, description)
             else:
                 continue  # type: ignore[unreachable]
-            await entity.coordinator.async_config_entry_first_refresh()
             entities.append(entity)
     async_add_entities(entities)
 
 
 class HonACClimateEntity(HonEntity, ClimateEntity):
     entity_description: HonACClimateEntityDescription
+    _enable_turn_on_off_backwards_compatibility = False
 
     def __init__(
         self,
@@ -153,7 +153,9 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
             SWING_BOTH,
         ]
         self._attr_supported_features = (
-            ClimateEntityFeature.TARGET_TEMPERATURE
+            ClimateEntityFeature.TURN_ON
+            | ClimateEntityFeature.TURN_OFF
+            | ClimateEntityFeature.TARGET_TEMPERATURE
             | ClimateEntityFeature.FAN_MODE
             | ClimateEntityFeature.SWING_MODE
             | ClimateEntityFeature.PRESET_MODE
@@ -210,6 +212,14 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
             await self._device.commands["settings"].send()
         self.async_write_ha_state()
 
+    async def async_turn_on(self, **kwargs: Any) -> None:
+        await self._device.commands["startProgram"].send()
+        self._device.sync_command("startProgram", "settings")
+
+    async def async_turn_off(self, **kwargs: Any) -> None:
+        await self._device.commands["stopProgram"].send()
+        self._device.sync_command("stopProgram", "settings")
+
     @property
     def preset_mode(self) -> str | None:
         """Return the current Preset for this channel."""
@@ -222,7 +232,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         self._device.sync_command("startProgram", "settings")
         self._set_temperature_bound()
         self._handle_coordinator_update(update=False)
-        await self.coordinator.async_refresh()
+        self.coordinator.async_set_updated_data({})
         self._attr_preset_mode = preset_mode
         await self._device.commands["startProgram"].send()
         self.async_write_ha_state()
@@ -285,6 +295,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
 
 class HonClimateEntity(HonEntity, ClimateEntity):
     entity_description: HonClimateEntityDescription
+    _enable_turn_on_off_backwards_compatibility = False
 
     def __init__(
         self,
@@ -295,11 +306,16 @@ class HonClimateEntity(HonEntity, ClimateEntity):
     ) -> None:
         super().__init__(hass, entry, device, description)
 
+        self._attr_supported_features = (
+            ClimateEntityFeature.TURN_ON | ClimateEntityFeature.TARGET_TEMPERATURE
+        )
+
         self._attr_temperature_unit = UnitOfTemperature.CELSIUS
         self._set_temperature_bound()
 
         self._attr_hvac_modes = [description.mode]
         if "stopProgram" in device.commands:
+            self._attr_supported_features |= ClimateEntityFeature.TURN_OFF
             self._attr_hvac_modes += [HVACMode.OFF]
             modes = []
         else:
@@ -317,13 +333,8 @@ class HonClimateEntity(HonEntity, ClimateEntity):
                 modes.append(mode)
 
         if modes:
-            self._attr_supported_features = (
-                ClimateEntityFeature.TARGET_TEMPERATURE
-                | ClimateEntityFeature.PRESET_MODE
-            )
+            self._attr_supported_features |= ClimateEntityFeature.PRESET_MODE
             self._attr_preset_modes = modes
-        else:
-            self._attr_supported_features = ClimateEntityFeature.TARGET_TEMPERATURE
 
         self._handle_coordinator_update(update=False)
 
@@ -362,6 +373,14 @@ class HonClimateEntity(HonEntity, ClimateEntity):
         self._attr_hvac_mode = hvac_mode
         self.async_write_ha_state()
 
+    async def async_turn_on(self) -> None:
+        """Set the HVAC State to on."""
+        await self._device.commands["startProgram"].send()
+
+    async def async_turn_off(self) -> None:
+        """Set the HVAC State to off."""
+        await self._device.commands["stopProgram"].send()
+
     @property
     def preset_mode(self) -> str | None:
         """Return the current Preset for this channel."""
@@ -389,7 +408,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
         self._device.sync_command(command, "settings")
         self._set_temperature_bound()
         self._attr_preset_mode = preset_mode
-        await self.coordinator.async_refresh()
+        self.coordinator.async_set_updated_data({})
         await self._device.commands[command].send()
         self.async_write_ha_state()
 
