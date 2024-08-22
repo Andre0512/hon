@@ -23,6 +23,10 @@ _LOGGER = logging.getLogger(__name__)
 class HonControlSwitchEntityDescription(SwitchEntityDescription):
     turn_on_key: str = ""
     turn_off_key: str = ""
+    only_mandatory_parameters: bool = False
+    on_value: bool | float = True
+    off_value: bool | float = False
+    to_sync: bool = False
 
 
 @dataclass(frozen=True)
@@ -382,6 +386,20 @@ SWITCHES: dict[str, tuple[SwitchEntityDescription, ...]] = {
             translation_key="touch_tone",
         ),
     ),
+    "WH": (
+        HonControlSwitchEntityDescription(
+            key="onOffStatus",
+            name="Power",
+            icon="mdi:power-standby",
+            turn_on_key="startProgram",
+            turn_off_key="stopProgram",
+            translation_key="power",
+            only_mandatory_parameters=True,
+            on_value=1,
+            off_value=0,
+            to_sync=True,
+        ),
+    ),
     "FRE": (
         HonSwitchEntityDescription(
             key="quickModeZ2",
@@ -485,20 +503,26 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
     @property
     def is_on(self) -> bool | None:
         """Return True if entity is on."""
-        return self._device.get(self.entity_description.key, False)
+        on_value = self.entity_description.on_value
+        off_value = self.entity_description.off_value
+        return self._device.get(self.entity_description.key, off_value) == on_value
 
     async def async_turn_on(self, **kwargs: Any) -> None:
-        self._device.sync_command(self.entity_description.turn_on_key, "settings")
+        desc = self.entity_description
+        self._device.sync_command(desc.turn_on_key, "settings", desc.to_sync)
         self.coordinator.async_set_updated_data({})
-        await self._device.commands[self.entity_description.turn_on_key].send()
-        self._device.attributes[self.entity_description.key] = True
+        command = self._device.commands[desc.turn_on_key]
+        await command.send(desc.only_mandatory_parameters)
+        self._device.attributes[desc.key] = desc.on_value
         self.async_write_ha_state()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
-        self._device.sync_command(self.entity_description.turn_off_key, "settings")
+        desc = self.entity_description
+        self._device.sync_command(desc.turn_off_key, "settings", desc.to_sync)
         self.coordinator.async_set_updated_data({})
-        await self._device.commands[self.entity_description.turn_off_key].send()
-        self._device.attributes[self.entity_description.key] = False
+        command = self._device.commands[desc.turn_off_key]
+        await command.send(desc.only_mandatory_parameters)
+        self._device.attributes[desc.key] = desc.off_value
         self.async_write_ha_state()
 
     @property

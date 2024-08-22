@@ -294,3 +294,9 @@ AC_POSITION_VERTICAL = {
     7: "position_5",
     8: "swing",
 }
+
+WH_MACH_MODE: dict[int, str] = {
+    1: "eco",
+    2: "max",
+    3: "bps",
+}

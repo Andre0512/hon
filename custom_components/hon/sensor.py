@@ -780,6 +780,63 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             translation_key="air_quality",
         ),
     ),
+    "WH": (
+        HonSensorEntityDescription(
+            key="temp",
+            name="Temperature",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
+        ),
+        HonSensorEntityDescription(
+            key="tempZ1",
+            name="Temp Z1",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        HonSensorEntityDescription(
+            key="tempZ2",
+            name="Temp Z2",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        HonSensorEntityDescription(
+            key="tempSel",
+            name="Target Temperature",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="target_temperature",
+        ),
+        HonSensorEntityDescription(
+            key="machMode",
+            name="Mode",
+            icon="mdi:information",
+            device_class=SensorDeviceClass.ENUM,
+            option_list=const.WH_MACH_MODE,
+            translation_key="mach_modes_wh",
+        ),
+        HonSensorEntityDescription(
+            key="smartTestStatus",
+            name="Smart Test Status",
+        ),
+        HonSensorEntityDescription(
+            key="anodeMaintenanceStatus",
+            name="Anode Maintenance Status",
+        ),
+        HonSensorEntityDescription(
+            key="tankMaintenanceStatus",
+            name="Tank Maintenance Status",
+        ),
+        HonSensorEntityDescription(
+            key="heatingStatus",
+            name="Heating Status",
+        ),
+    ),
     "FRE": (
         HonSensorEntityDescription(
             key="tempEnv",

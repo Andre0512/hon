@@ -924,6 +924,13 @@
                     "high": "高"
                 },
                 "name": "湿度水平"
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "select": {
@@ -1802,6 +1809,13 @@
                     "position_5": "固定 - 位置 5",
                     "swing": "摆动"
                 }
+            },
+            "mach_modes_wh": {
+                "state": {
+                    "eco": "Eco",
+                    "max": "Max",
+                    "bps": "BPS"
+                }
             }
         },
         "switch": {
@@ -2001,6 +2015,9 @@
             },
             "filter_replacement": {
                 "name": "更换过滤器"
+            },
+            "power-state": {
+                "name": "Power State"
             }
         },
         "button": {

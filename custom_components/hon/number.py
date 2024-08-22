@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from homeassistant.components.number import (
     NumberEntity,
     NumberEntityDescription,
+    NumberDeviceClass,
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTime, UnitOfTemperature
@@ -27,7 +28,7 @@ class HonConfigNumberEntityDescription(NumberEntityDescription):
 
 @dataclass(frozen=True)
 class HonNumberEntityDescription(NumberEntityDescription):
-    pass
+    send_key_only: bool = False
 
 
 NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
@@ -201,6 +202,17 @@ NUMBERS: dict[str, tuple[NumberEntityDescription, ...]] = {
             translation_key="pollen_level",
         ),
     ),
+    "WH": (
+        HonNumberEntityDescription(
+            key="settings.tempSel",
+            name="Target Temperature",
+            icon="mdi:thermometer",
+            device_class=NumberDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="target_temperature",
+            send_key_only=True,
+        ),
+    ),
 }
 
 NUMBERS["WD"] = unique_entities(NUMBERS["WM"], NUMBERS["TD"])
@@ -253,8 +265,12 @@ class HonNumberEntity(HonEntity, NumberEntity):
         setting = self._device.settings[self.entity_description.key]
         if isinstance(setting, HonParameterRange):
             setting.value = value
-        command = self.entity_description.key.split(".")[0]
-        await self._device.commands[command].send()
+        key_parts = self.entity_description.key.split(".")
+        command = key_parts[0]
+        if self.entity_description.send_key_only:
+            await self._device.commands[command].send_specific([key_parts[1]])
+        else:
+            await self._device.commands[command].send()
         if command != "settings":
             self._device.sync_command(command, "settings")
         self.coordinator.async_set_updated_data({})

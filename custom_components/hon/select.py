@@ -22,6 +22,7 @@ _LOGGER = logging.getLogger(__name__)
 @dataclass(frozen=True)
 class HonSelectEntityDescription(SelectEntityDescription):
     option_list: dict[int, str] | None = None
+    send_key_only: bool = False
 
 
 @dataclass(frozen=True)
@@ -185,6 +186,24 @@ SELECTS: dict[str, tuple[SelectEntityDescription, ...]] = {
             translation_key="mode",
         ),
     ),
+    "WH": (
+        HonSelectEntityDescription(
+            key="settings.tempSel",
+            name="Target Temperature",
+            icon="mdi:thermometer",
+            unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="target_temperature",
+            send_key_only=True,
+        ),
+        HonSelectEntityDescription(
+            key="settings.machMode",
+            name="Mode",
+            send_key_only=True,
+            icon="mdi:information",
+            option_list=const.WH_MACH_MODE,
+            translation_key="mach_modes_wh",
+          ),
+    ),
     "FRE": (
         HonConfigSelectEntityDescription(
             key="startProgram.program",
@@ -313,8 +332,12 @@ class HonSelectEntity(HonEntity, SelectEntity):
     async def async_select_option(self, option: str) -> None:
         setting = self._device.settings[self.entity_description.key]
         setting.value = self._option_to_number(option, setting.values)
-        command = self.entity_description.key.split(".")[0]
-        await self._device.commands[command].send()
+        key_parts = self.entity_description.key.split(".")
+        command = key_parts[0]
+        if self.entity_description.send_key_only:
+            await self._device.commands[command].send_specific([key_parts[1]])
+        else:
+            await self._device.commands[command].send()
         if command != "settings":
             self._device.sync_command(command, "settings")
         self.coordinator.async_set_updated_data({})

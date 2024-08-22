@@ -285,6 +285,16 @@ BINARY_SENSORS: dict[str, tuple[HonBinarySensorEntityDescription, ...]] = {
             translation_key="on",
         ),
     ),
+    "WH": (
+        HonBinarySensorEntityDescription(
+            key="onOffStatus",
+            name="Power State",
+            icon="mdi:power-standby",
+            device_class=BinarySensorDeviceClass.POWER,
+            on_value=1,
+            translation_key="power-state",
+        ),
+    ),
     "FRE": (
         HonBinarySensorEntityDescription(
             key="quickModeZ1",
