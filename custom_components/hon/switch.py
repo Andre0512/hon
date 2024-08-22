@@ -510,7 +510,6 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
     async def async_turn_on(self, **kwargs: Any) -> None:
         desc = self.entity_description
         self._device.sync_command(desc.turn_on_key, "settings", desc.to_sync)
-        //await self.coordinator.async_refresh()
         self.coordinator.async_set_updated_data({})
         command = self._device.commands[desc.turn_on_key]
         await command.send(desc.only_mandatory_parameters)
@@ -520,7 +519,6 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
     async def async_turn_off(self, **kwargs: Any) -> None:
         desc = self.entity_description
         self._device.sync_command(desc.turn_off_key, "settings", desc.to_sync)
-        //await self.coordinator.async_refresh()
         self.coordinator.async_set_updated_data({})
         command = self._device.commands[desc.turn_off_key]
         await command.send(desc.only_mandatory_parameters)
