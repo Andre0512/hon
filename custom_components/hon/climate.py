@@ -19,9 +19,8 @@ from homeassistant.const import (
     ATTR_TEMPERATURE,
     UnitOfTemperature,
 )
-from homeassistant.core import callback
+from homeassistant.core import callback, HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.typing import HomeAssistantType
 from pyhon.appliance import HonAppliance
 from pyhon.parameter.range import HonParameterRange
 
@@ -104,7 +103,7 @@ CLIMATES: dict[
 
 
 async def async_setup_entry(
-    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+    hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities = []
     entity: HonClimateEntity | HonACClimateEntity
@@ -130,7 +129,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
 
     def __init__(
         self,
-        hass: HomeAssistantType,
+        hass: HomeAssistant,
         entry: ConfigEntry,
         device: HonAppliance,
         description: HonACClimateEntityDescription,
@@ -199,7 +198,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         self._attr_hvac_mode = hvac_mode
         if hvac_mode == HVACMode.OFF:
             await self._device.commands["stopProgram"].send()
-            self._device.sync_command("stopProgram", "settings")
+            self._device.settings["settings.onOffStatus"].value = "2"
         else:
             self._device.settings["settings.onOffStatus"].value = "1"
             setting = self._device.settings["settings.machMode"]
@@ -217,6 +216,10 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         self._device.sync_command("startProgram", "settings")
 
     async def async_turn_off(self, **kwargs: Any) -> None:
+        fix_param = self._device.commands["stopProgram"].parameters.get("windDirectionVerticalPositionSequence")
+        if fix_param and fix_param.value == "0":
+            fix_param.value = "2"
+        _LOGGER.warning("🔧 Patched 'windDirectionVerticalPositionSequence' from '0' to '2'")
         await self._device.commands["stopProgram"].send()
         self._device.sync_command("stopProgram", "settings")
 
@@ -282,7 +285,7 @@ class HonACClimateEntity(HonEntity, ClimateEntity):
         if swing_mode in [SWING_OFF, SWING_HORIZONTAL] and vertical.value == "8":
             vertical.value = "5"
         if swing_mode in [SWING_OFF, SWING_VERTICAL] and horizontal.value == "7":
-            horizontal.value = "0"
+            horizontal.value = "2"
         self._attr_swing_mode = swing_mode
         await self._device.commands["settings"].send()
         self.async_write_ha_state()
@@ -299,7 +302,7 @@ class HonClimateEntity(HonEntity, ClimateEntity):
 
     def __init__(
         self,
-        hass: HomeAssistantType,
+        hass: HomeAssistant,
         entry: ConfigEntry,
         device: HonAppliance,
         description: HonClimateEntityDescription,
