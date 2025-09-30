@@ -52,6 +52,32 @@ BUTTONS: dict[str, tuple[ButtonEntityDescription, ...]] = {
             translation_key="stop_program",
         ),
     ),
+    "WM": (
+        ButtonEntityDescription(
+            key="startProgram",
+            name="Program Start",
+            icon="mdi:play",
+            translation_key="start_program",
+        ),
+        ButtonEntityDescription(
+            key="stopProgram",
+            name="Program Stop",
+            icon="mdi:stop",
+            translation_key="stop_program",
+        ),
+        ButtonEntityDescription(
+            key="pauseProgram",
+            name="Pause Program",
+            icon="mdi:pause",
+            translation_key="pause_program",
+        ),
+        ButtonEntityDescription(
+            key="resumeProgram",
+            name="Resume Program",
+            icon="mdi:play-pause",
+            translation_key="resume_program",
+        ),
+    ),
 }
 
 
