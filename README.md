@@ -735,11 +735,11 @@ Support has been confirmed for these **44 models**, but many more will work. Ple
 
 
 ## Installation
-**Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Andre0512&repository=hon&category=integration)
+**Method 1:** [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=camiewwatman&repository=hon&category=integration)
 
 **Method 2:** [HACS](https://hacs.xyz/) > Integrations > Add Integration > **Haier hOn** > Install  
 
-**Method 3:** Manually copy `hon` folder from [latest release](https://github.com/Andre0512/hon/releases/latest) to `config/custom_components` folder.
+**Method 3:** Manually copy `hon` folder from [latest release](https://github.com/camiewwatman/hon/releases/latest) to `config/custom_components` folder.
 
 _Restart Home Assistant_
 
