@@ -8,7 +8,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.typing import HomeAssistantType
+from homeassistant.core import HomeAssistant
 from pyhon.parameter.base import HonParameter
 from pyhon.parameter.range import HonParameterRange
 
@@ -23,6 +23,10 @@ _LOGGER = logging.getLogger(__name__)
 class HonControlSwitchEntityDescription(SwitchEntityDescription):
     turn_on_key: str = ""
     turn_off_key: str = ""
+    only_mandatory_parameters: bool = False
+    on_value: bool | float = True
+    off_value: bool | float = False
+    to_sync: bool = False
 
 
 @dataclass(frozen=True)
@@ -382,6 +386,20 @@ SWITCHES: dict[str, tuple[SwitchEntityDescription, ...]] = {
             translation_key="touch_tone",
         ),
     ),
+    "WH": (
+        HonControlSwitchEntityDescription(
+            key="onOffStatus",
+            name="Power",
+            icon="mdi:power-standby",
+            turn_on_key="startProgram",
+            turn_off_key="stopProgram",
+            translation_key="power",
+            only_mandatory_parameters=False,
+            on_value=1,
+            off_value=0,
+            to_sync=True,
+        ),
+    ),
     "FRE": (
         HonSwitchEntityDescription(
             key="quickModeZ2",
@@ -403,7 +421,7 @@ SWITCHES["WD"] = unique_entities(SWITCHES["WD"], SWITCHES["TD"])
 
 
 async def async_setup_entry(
-    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+    hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities = []
     entity: HonConfigSwitchEntity | HonControlSwitchEntity | HonSwitchEntity
@@ -476,7 +494,7 @@ class HonSwitchEntity(HonEntity, SwitchEntity):
     def _handle_coordinator_update(self, update: bool = True) -> None:
         self._attr_is_on = self.is_on
         if update:
-            self.async_write_ha_state()
+            self.schedule_update_ha_state()
 
 
 class HonControlSwitchEntity(HonEntity, SwitchEntity):
@@ -485,21 +503,31 @@ class HonControlSwitchEntity(HonEntity, SwitchEntity):
     @property
     def is_on(self) -> bool | None:
         """Return True if entity is on."""
-        return self._device.get(self.entity_description.key, False)
+        on_value = self.entity_description.on_value
+        off_value = self.entity_description.off_value
+        return self._device.get(self.entity_description.key, off_value) == on_value
 
     async def async_turn_on(self, **kwargs: Any) -> None:
-        self._device.sync_command(self.entity_description.turn_on_key, "settings")
+        desc = self.entity_description
+        self._device.sync_command(desc.turn_on_key, "settings", desc.to_sync)
         self.coordinator.async_set_updated_data({})
-        await self._device.commands[self.entity_description.turn_on_key].send()
-        self._device.attributes[self.entity_description.key] = True
-        self.async_write_ha_state()
+        command = self._device.commands[desc.turn_on_key]
+        if self._device.appliance_type == "WH":
+            command.settings["machMode"].value = self._device.get("machMode", "")
+            command.settings["tempSel"].value = self._device.get("tempSel", "")
+
+        await command.send(desc.only_mandatory_parameters)
+        self._device.attributes[desc.key] = desc.on_value
+        self.schedule_update_ha_state()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
-        self._device.sync_command(self.entity_description.turn_off_key, "settings")
+        desc = self.entity_description
+        self._device.sync_command(desc.turn_off_key, "settings", desc.to_sync)
         self.coordinator.async_set_updated_data({})
-        await self._device.commands[self.entity_description.turn_off_key].send()
-        self._device.attributes[self.entity_description.key] = False
-        self.async_write_ha_state()
+        command = self._device.commands[desc.turn_off_key]
+        await command.send(desc.only_mandatory_parameters)
+        self._device.attributes[desc.key] = desc.off_value
+        self.schedule_update_ha_state()
 
     @property
     def available(self) -> bool:
@@ -542,7 +570,7 @@ class HonConfigSwitchEntity(HonEntity, SwitchEntity):
             return
         setting.value = setting.max if isinstance(setting, HonParameterRange) else "1"
         self.coordinator.async_set_updated_data({})
-        self.async_write_ha_state()
+        self.schedule_update_ha_state()
 
     async def async_turn_off(self, **kwargs: Any) -> None:
         setting = self._device.settings[self.entity_description.key]
@@ -550,10 +578,10 @@ class HonConfigSwitchEntity(HonEntity, SwitchEntity):
             return
         setting.value = setting.min if isinstance(setting, HonParameterRange) else "0"
         self.coordinator.async_set_updated_data({})
-        self.async_write_ha_state()
+        self.schedule_update_ha_state()
 
     @callback
     def _handle_coordinator_update(self, update: bool = True) -> None:
         self._attr_is_on = self.is_on
         if update:
-            self.async_write_ha_state()
+            self.schedule_update_ha_state()

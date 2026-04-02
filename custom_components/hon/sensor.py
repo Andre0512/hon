@@ -21,10 +21,10 @@ from homeassistant.const import (
     UnitOfTime,
     UnitOfTemperature,
 )
-from homeassistant.core import callback
+from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.typing import HomeAssistantType
+from pyhon.attributes import HonAttribute
 
 from . import const
 from .const import DOMAIN
@@ -780,6 +780,63 @@ SENSORS: dict[str, tuple[SensorEntityDescription, ...]] = {
             translation_key="air_quality",
         ),
     ),
+    "WH": (
+        HonSensorEntityDescription(
+            key="temp",
+            name="Temperature",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="temperature",
+        ),
+        HonSensorEntityDescription(
+            key="tempZ1",
+            name="Temp Z1",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        HonSensorEntityDescription(
+            key="tempZ2",
+            name="Temp Z2",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        ),
+        HonSensorEntityDescription(
+            key="tempSel",
+            name="Target Temperature",
+            icon="mdi:thermometer",
+            state_class=SensorStateClass.MEASUREMENT,
+            device_class=SensorDeviceClass.TEMPERATURE,
+            native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+            translation_key="target_temperature",
+        ),
+        HonSensorEntityDescription(
+            key="machMode",
+            name="Mode",
+            icon="mdi:information",
+            device_class=SensorDeviceClass.ENUM,
+            option_list=const.WH_MACH_MODE,
+            translation_key="mach_modes_wh",
+        ),
+        HonSensorEntityDescription(
+            key="smartTestStatus",
+            name="Smart Test Status",
+        ),
+        HonSensorEntityDescription(
+            key="anodeMaintenanceStatus",
+            name="Anode Maintenance Status",
+        ),
+        HonSensorEntityDescription(
+            key="tankMaintenanceStatus",
+            name="Tank Maintenance Status",
+        ),
+        HonSensorEntityDescription(
+            key="heatingStatus",
+            name="Heating Status",
+        ),
+    ),
     "FRE": (
         HonSensorEntityDescription(
             key="tempEnv",
@@ -808,7 +865,7 @@ SENSORS["WD"] = unique_entities(SENSORS["WM"], SENSORS["TD"])
 
 
 async def async_setup_entry(
-    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+    hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities = []
     entity: HonSensorEntity | HonConfigSensorEntity
@@ -846,7 +903,7 @@ class HonSensorEntity(HonEntity, SensorEntity):
             self._attr_native_value = 0
         self._attr_native_value = value
         if update:
-            self.async_write_ha_state()
+            self.schedule_update_ha_state()
 
 
 class HonConfigSensorEntity(HonEntity, SensorEntity):
@@ -874,4 +931,4 @@ class HonConfigSensorEntity(HonEntity, SensorEntity):
             value = get_readable(self.entity_description, value)
         self._attr_native_value = value
         if update:
-            self.async_write_ha_state()
+            self.schedule_update_ha_state()

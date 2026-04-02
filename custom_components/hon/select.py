@@ -6,10 +6,9 @@ from dataclasses import dataclass
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import UnitOfTemperature, UnitOfTime, REVOLUTIONS_PER_MINUTE
-from homeassistant.core import callback
+from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.typing import HomeAssistantType
 
 from . import const
 from .const import DOMAIN
@@ -22,6 +21,7 @@ _LOGGER = logging.getLogger(__name__)
 @dataclass(frozen=True)
 class HonSelectEntityDescription(SelectEntityDescription):
     option_list: dict[int, str] | None = None
+    send_key_only: bool = False
 
 
 @dataclass(frozen=True)
@@ -185,6 +185,16 @@ SELECTS: dict[str, tuple[SelectEntityDescription, ...]] = {
             translation_key="mode",
         ),
     ),
+    "WH": (
+        HonSelectEntityDescription(
+            key="settings.machMode",
+            name="Mode",
+            send_key_only=True,
+            icon="mdi:information",
+            option_list=const.WH_MACH_MODE,
+            translation_key="mach_modes_wh",
+        ),
+    ),
     "FRE": (
         HonConfigSelectEntityDescription(
             key="startProgram.program",
@@ -211,7 +221,7 @@ SELECTS["WD"] = unique_entities(SELECTS["WM"], SELECTS["TD"])
 
 
 async def async_setup_entry(
-    hass: HomeAssistantType, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
+    hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
 ) -> None:
     entities = []
     entity: HonSelectEntity | HonConfigSelectEntity
@@ -284,9 +294,16 @@ class HonSelectEntity(HonEntity, SelectEntity):
 
     @property
     def current_option(self) -> str | None:
-        if not (setting := self._device.settings.get(self.entity_description.key)):
-            return None
-        value = get_readable(self.entity_description, setting.value)
+        key = self.entity_description.key
+        if self.entity_description.send_key_only:
+            key = key.split('.')[1]
+            value = self._device.get(key, "")
+            value = get_readable(self.entity_description, value)
+        else:
+            if not (setting := self._device.settings.get(self.entity_description.key)):
+                return None
+            value = get_readable(self.entity_description, setting.value)
+
         if value not in self._attr_options:
             return None
         return str(value)
@@ -313,8 +330,12 @@ class HonSelectEntity(HonEntity, SelectEntity):
     async def async_select_option(self, option: str) -> None:
         setting = self._device.settings[self.entity_description.key]
         setting.value = self._option_to_number(option, setting.values)
-        command = self.entity_description.key.split(".")[0]
-        await self._device.commands[command].send()
+        key_parts = self.entity_description.key.split(".")
+        command = key_parts[0]
+        if self.entity_description.send_key_only:
+            await self._device.commands[command].send_specific([key_parts[1]])
+        else:
+            await self._device.commands[command].send()
         if command != "settings":
             self._device.sync_command(command, "settings")
         self.coordinator.async_set_updated_data({})
@@ -334,4 +355,4 @@ class HonSelectEntity(HonEntity, SelectEntity):
         self._attr_options = self.options
         self._attr_current_option = self.current_option
         if update:
-            self.async_write_ha_state()
+            self.schedule_update_ha_state()
