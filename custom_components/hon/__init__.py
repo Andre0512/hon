@@ -6,7 +6,7 @@ import voluptuous as vol  # type: ignore[import-untyped]
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_EMAIL, CONF_PASSWORD
 from homeassistant.helpers import config_validation as cv, aiohttp_client
-from homeassistant.helpers.typing import HomeAssistantType
+from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from pyhon import Hon
 
@@ -27,7 +27,7 @@ CONFIG_SCHEMA = vol.Schema(
 )
 
 
-async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry) -> bool:
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     session = aiohttp_client.async_get_clientsession(hass)
     if (config_dir := hass.config.config_dir) is None:
         raise ValueError("Missing Config Dir")
@@ -48,19 +48,20 @@ async def async_setup_entry(hass: HomeAssistantType, entry: ConfigEntry) -> bool
     coordinator: DataUpdateCoordinator[dict[str, Any]] = DataUpdateCoordinator(
         hass, _LOGGER, name=DOMAIN
     )
-    hon.subscribe_updates(coordinator.async_set_updated_data)
+    def make_threadsafe_callback(hass, callback):
+        def wrapper(*args, **kwargs):
+            hass.loop.call_soon_threadsafe(callback, *args, **kwargs)
+        return wrapper
+    hon.subscribe_updates(make_threadsafe_callback(hass, coordinator.async_set_updated_data))
 
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.unique_id] = {"hon": hon, "coordinator": coordinator}
 
-    for platform in PLATFORMS:
-        hass.async_create_task(
-            hass.config_entries.async_forward_entry_setup(entry, platform)
-        )
+    await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
 
 
-async def async_unload_entry(hass: HomeAssistantType, entry: ConfigEntry) -> bool:
+async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     refresh_token = hass.data[DOMAIN][entry.unique_id]["hon"].api.auth.refresh_token
 
     hass.config_entries.async_update_entry(
